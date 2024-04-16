@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- 헤더 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="고려저축은행" />
+<meta name="description" content="딴딴해서 믿을 수 있는 예가람저축은행, 예금, 적금, 신용부금, 논스톱 자동대출 등 예금, 대출금융상품 안내" />
+<meta name="viewport" content="width=device-width">
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta property="og:image" content="https://www.yegaramsb.co.kr/resources/normal/images/main/meta-img-square_new.jpg">   
+<link rel="shortcut icon" type="image/x-icon" href="../../../resources/favicon.ico" />
+<link href="../../../resources/normal/css/jquery.bxslider.css" rel="stylesheet" />
+<link href="../../../resources/normal/css/default.css" rel="stylesheet" />
+<link href="../../../resources/normal/css/layout.css" rel="stylesheet" />
+<link href="../../../resources/normal/css/contents.css" rel="stylesheet" />    
+<link href="../../../resources/normal/css/jquery-ui.css" rel="stylesheet" />  
+<script src="../../../resources/normal/js/jquery-1.11.3.min.js"></script>
+<script src="../../../resources/normal/js/TweenMax.min.js"></script>
+<script src="../../../resources/normal/js/jquery.bxslider.min.js"></script>
+<script src="../../../resources/normal/js/placeholders.js"></script> 
+<!--     jquery-ui.js가 default.js보다 먼저 선언되어야 함 -->
+<script src="../../../resources/normal/js/jquery-ui.js" type="text/javascript"></script>        
+<script src="../../../resources/normal/js/default.js"></script>
+<script src="../../../resources/normal/js/ui.js"></script>
+<script src="../../../resources/normal/pub_js/ui_pub.js"></script>
+<script type="text/javascript" src="../../../resources/normal/js/jquery.form.min.js"></script> 
+<script type="text/javascript" src="../../../resources/normal/js/common_ajax.js"></script>
+<script type="text/javascript" src="../../../resources/normal/js/common_bank_calc_util.js"></script> 
+<script type="text/javascript" src="../../../resources/normal/js/common_bank_map_util.js"></script> 
+<script type="text/javascript" src="../../../resources/normal/js/common_layer.js"></script> 
+<script type="text/javascript" src="../../../resources/normal/js/common_pagevalidate.js"></script>
+<script type="text/javascript" src="../../../resources/normal/js/common_util.js"></script> 
+<script type="text/javascript" src="../../../resources/normal/js/iscroll.js"></script> 
+<script type="text/javascript" src="../../../resources/normal/js/jquery.animateSprite.min.js"></script>  
+<script src="../../../resources/normal/js/common_bank_calc_util.js" type="text/javascript"></script>
+<script src="../../../resources/normal/js/hp_common.js" type="text/javascript"></script>
+<script src="../../../resources/normal/js/calculator.js"></script>    
+<script src="../../../resources/normal/js/streamdocs/adapter.js"></script>  	
+<!--     scrap -->
+<!-- <link href="/resources/scrap/css/process_manager.css" rel="stylesheet" /> -->
+<!--     <script src="/resources/scrap/js/jquery-1.9.1.min.js"></script> -->
+  
+</head>
+<body>
+<!-- <body class="color-type2"> 타입별 -->
+    <!-- ********** Include ********** -->
+    <!-- s:skipnavi -->
+    <div id="skipnavi">
+        <script>
+		$(document).ready(function(){
+			$("#skipnavi").load("../include/inc_body_skipnavi.html");
+		});
+		</script>
+    </div>
+    <!-- ********** //Include ********** -->
+    <!-- //e:skipnavi -->
+
+    <!-- s:wrap -->
+    <div id="wrap">
+   
+       <!-- ********** Include ********** -->
+        <!-- s:header -->
+        <div id="headerWrap">
+           <script>
+			$(document).ready(function(){
+				$("#headerWrap").load("../include/inc_body_header.html");
+			});
+			</script>
+        </div>
+        <!-- //e:header -->
+
+        <!-- s:sitemapWrap -->
+        <div id="sitemapWrap" class="layerpopup sitemap-layer" tabindex="0" data-tooltip-con="sitemap-layer" data-focus="sitemap-layer" data-focus-prev="btn-menu-close">
+			<script>
+			$(document).ready(function(){
+				$("#sitemapWrap").load("../include/inc_body_sitemapWrap.html");
+			});
+			</script>
+        </div>
+        <!-- //e:sitemapWrap -->
+        <!-- ********** //Include ********** -->
+
+       <!-- s contentsWrap -->
+        <div id="contentsWrap">
+        
+            <!-- s:subVisualWrap -->
+            <div id="subVisualWrap" class="sub-type03">
+				<div>
+					<div class="breadcrumb">
+						<a href="/" class="home ir">홈</a>
+						<a href="/deposit/submain" class="depth1">예금상품</a>
+						<a href="/deposit/register" class="depth2">보호금융상품등록부</a>
+						
+					</div>
+					<div class="tit-wrap">
+						<div class="sub-tit">
+							<h2>보호금융상품등록부</h2>
+							<p class="desc">예금자보호법에 의해 보호받는 상품안내</p>
+						</div>
+					</div>
+				</div>
+			</div>
+            <!-- //e:subVisualWrap -->
+            <!-- s:contents -->
+           <div class="contents default-wrap">
+                <div class="prod-register-wrap">
+                    <div class="tab-wrap tab-page">
+                        <ul>
+							<li class="active">
+								<a href="#none">보호금융상품등록부</a>
+								<!-- s:디자인현행화 -->
+								<div id="H000100001" class="contents-area" style="display: block;">
+								<!-- e:디자인현행화 -->
+									 <!-- s:2023-07-14 수정 -->
+									 <div class="cts-box type2">
+									 <!-- e:2023-07-14 수정 -->
+										<!-- s:2023-07-16 수정 -->
+										<p class="box-txt">본 금융회사가 취급하는 금융상품 중 예금보험공사가 예금자보호법에 의하여 보호하는 금융상품의 종류는 붙임과 같습니다.</p>
+										<p class="box-txt accent2 fw-bold">붙임1 : 보호금융의 목록</p>
+										<p class="box-txt accent2 fw-bold mt0">붙임 2. 타 금융회사 보호금융상품 취급 목록</p>
+										<!-- e:2023-07-16 수정 -->
+										<div class="line-box mb20">
+											<p class="box-txt">예금자보호제도에 관한 자세한 내용은 영업점에 비치된 예금자보호 안내책자 등을 참고하시거나<br> 	
+											<!-- s:2023-07-16 수정 -->
+											<span class="accent fw-bold">예금보험공사</span>로 문의하시기 바랍니다.</p>
+											<!-- e:2023-07-16 수정 -->
+											<!--s:디자인현행화-->
+											<p class="box-txt fc-black">
+												<span >※&nbsp;</span>연락처 : 1588-0037<br><span>※&nbsp;</span>홈페이지 : <a href="http://www.kdic.or.kr" target="_self" class="link">www.kdic.or.kr</a>
+											</p>
+											<p class="box-desc">※ 정부, 지방자치단체, 한국은행, 금융감독원, 예금보험공사, 부보금융회사가 가입한 금융상품은 보호되지 않습니다.</p>
+											<p class="box-desc">※ 보험상품은 보험계약자 및 보험료납부자가 법인이면 보호되지 않습니다. 그러나 확정기여형퇴직연금보험은 그러하지 않습니다.</p>
+											<!--e:디자인현행화-->
+										</div>
+									</div>
+									<div class="prod-date">
+										<!--s:디자인현행화-->
+										<span class="date">기준일 : 2023년 04월 01일</span>
+										<span class="compliance">(주)고려저축은행</span>
+										<!--e:디자인현행화-->
+									</div>
+								</div>
+			                </li>
+						
+                            <li>
+                                <a href="#none">보호금융상품의 목록</a>
+                                <div  id="H000100003" class="contents-area">
+									<!-- s:디자인현행화 -->
+									<div class="list-tit">보호금융상품의 목록</div>
+									<!-- e:디자인현행화 -->
+                                    <div class="cts-box type2">
+                                       <div class="table-wrap">
+											<table class="table-style all-c __se_tbl_ext">
+												<caption class="sr-only">보호금융상품목록안내표이며 계정과목, 금융상품명, 판 매중단일, 비고 항목이 있습니다.</caption>
+												<colgroup>
+													<col>
+													<col>
+													<col>
+													<col>
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col">계정과목</th>
+														<th scope="col">금융상품명</th>
+														<th scope="col">판매중단일</th>
+														<th scope="col">비고</th>
+													</tr>
+												</thead>
+												<!--s:기획현행화 (날짜 .으로 변경)-->
+												<tbody>
+													<tr>
+														<td>가계장기저축</td>
+														<td>가계장기저축</td>
+														<td>1998.12.31</td>
+														<td>&nbsp;</td>
+													</tr>
+													<tr>
+														<td>기업자유예금</td>
+														<td>기업자유예금</td>
+														<td>&nbsp;</td>
+														<td>&nbsp;</td>
+													</tr>
+													<tr>
+														<td>근로자우대저축</td>
+														<td>근로자우대저축</td>
+														<td>2002.12.31</td>
+														<td>&nbsp;</td>
+													</tr>
+													<tr>
+														<td>근로자장기저축</td>
+														<td>근로자장기저축</td>
+														<td>2003.06.30</td>
+														<td>&nbsp;</td>
+													</tr>
+													<tr>
+														<td>보통예금</td>
+														<td>보통예금</td>
+														<td>&nbsp;</td>
+														<td>&nbsp;</td>
+													</tr>
+													<tr>
+														<td>자유적립예금</td>
+														<td>자유적립예금</td>
+														<td>&nbsp;</td>
+														<td>&nbsp;</td>
+													</tr>
+													<tr>
+														<td>장기주택마련저축</td>
+														<td>장기주택마련저축</td>
+														<td>2012.12.31</td>
+														<td>&nbsp;</td>
+													</tr>
+													<tr>
+														<td>정기적금</td>
+														<td>일반정기적금</td>
+														<td>&nbsp;</td>
+														<td>&nbsp;</td>
+													</tr>
+													<tr>
+														<td>정기적금</td>
+														<td>가계우대정기적금</td>
+														<td>2001.06.10</td>
+														<td>&nbsp;</td>
+													</tr>
+													<tr>
+														<td>정기적금</td>
+														<td>응답하라2030정기적금</td>
+														<td>&nbsp;</td>
+														<td>&nbsp;</td>
+													</tr>
+													<tr>
+														<td>정기적금</td>
+														<td>씨앗정기적금</td>
+														<td>&nbsp;</td>
+														<td>&nbsp;</td>
+													</tr>
+													<tr>
+														<td>정기예금</td>
+														<td>일반정기예금</td>
+														<td>&nbsp;</td>
+														<td>&nbsp;</td>
+													</tr>
+													<tr>
+														<td>정기예금</td>
+														<td>복리정기예금</td>
+														<td>&nbsp;</td>
+														<td>&nbsp;</td>
+													</tr>
+													<tr>
+														<td>정기예금</td>
+														<td>회전정기예금</td>
+														<td>&nbsp;</td>
+														<td>&nbsp;</td>
+													</tr>
+													<tr>
+														<td>정기예금</td>
+														<td>퇴직연금정기예금(DC/IRP형)</td>
+														<td>&nbsp;</td>
+														<td>퇴직연금 전용</td>
+													</tr>
+													<tr>
+														<td>표지어음</td>
+														<td>표지어음(선취)</td>
+														<td>2000.12.31</td>
+														<td>&nbsp;</td>
+													</tr>
+													<tr>
+														<td>정기적금</td>
+														<td>ISA정기적금</td>
+														<td>&nbsp;</td>
+														<td>우리은행 제공</td>
+													</tr>
+													<tr>
+														<td>정기예금</td>
+														<td>(특판)GO BANK 정기예금</td>
+														<td>2022-02-28</td>
+														<td>앱전용</td>
+													</tr>
+													<tr>
+														<td>정기적금</td>
+														<td>(특판)GO BANK 정기적금</td>
+														<td>2022.02.28</td>
+														<td>앱전용</td>
+													</tr>
+													<tr>
+														<td>정기적금</td>
+														<td>보고파 정기적금</td>
+														<td>&nbsp;</td>
+														<td>비대면 전용</td>
+													</tr>
+													<tr>
+														<td>저축예금</td>
+														<td>보고파 파킹통장 개인</td>
+														<td>&nbsp;</td>
+														<td>&nbsp;</td>
+													</tr>
+													<tr>
+														<td>기업자유예금</td>
+														<td>보고파 기업파킹통장(대면/개인사업자)</td>
+														<td>&nbsp;</td>
+														<td>&nbsp;</td>
+													</tr>
+													<tr>
+														<td>기업자유예금</td>
+														<td>보고파 기업파킹통장(대면/법인사업자)</td>
+														<td>&nbsp;</td>
+														<td>&nbsp;</td>
+													</tr>
+												</tbody>
+												<!--e:기획현행화 (날짜 .으로 변경)-->
+											</table>
+										</div>
+                                    </div>
+									<!-- s:2023-07-13 클래스 추가 -->
+									<ul class="list type1 fs-16">
+										<li>변액보험상품의 경우 본 보호금융상품 목록에는 포함되지 않으나, 약관에서 보험회사가 최저보증하는 보험금에 한하여 보호됩니다. (보험사가 아닌 경우 생략)</li>
+									</ul>
+									<!-- e:2023-07-13 클래스 추가 -->
+
+                                    <div class="prod-date">
+										<!--s:기획현행화-->
+                                        <span class="date">기준일 : 2023년 04월 01일</span>
+										<!--e:기획현행화-->
+                                        <span class="compliance">(주)고려저축은행</span>
+                                    </div>
+                                </div>
+                            </li>
+							
+							<!--s:기획현행화 (삭제요청)-->
+							<li>
+                                <a href="#none">타 금융회사 보호금융상품 취급 목록</a>
+                                <div class="contents-area">
+									<div class="list-tit">타 금융회사 보호금융상품 취급 목록</div>
+                                    <div class="cts-box2">
+                                        <div class="table-wrap">
+											<table class="table-style">
+												<caption>타 금융회사 보호금융상품 취급 목록</caption>
+												<colgroup>
+													<col style="width:10%">
+													<col style="width:35%">
+													<col style="width:35%">
+													<col style="width:*">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col">구분</th>
+														<th scope="col">금융회사명</th>
+														<th scope="col">금융상품명</th>
+														<th scope="col">비고</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<th colspan="4" class="ta-l">□ (상품종류)</th>
+													</tr>
+													<tr>
+														<th colspan="4"><p class="nodata">해당사항 없음</p></th>
+													</tr>
+													<tr>
+														<th colspan="4" class="ta-l">□ 보험</th>
+													</tr>
+													<tr>
+														<th colspan="4"><p class="nodata">해당사항 없음</p></th>
+													</tr>
+													<tr>
+														<th colspan="4" class="ta-l">□ 퇴직연금제도</th>
+													</tr>
+													<tr>
+														<th>1</th>
+														<td>국민은행</td>
+														<td rowspan="15">퇴직연금정기예금(DC형, IRP-개인형, 기업형)</td>
+														<td></td>
+													</tr>
+													<tr>
+														<th>2</th>
+														<td>농협은행</td>
+														<td></td>
+													</tr>
+													<tr>
+														<th>3</th>
+														<td>부산은행</td>
+														<td></td>
+													</tr>
+													<tr>
+														<th>4</th>
+														<td>신한은행</td>
+														<td></td>
+													</tr>
+													<tr>
+														<th>5</th>
+														<td>우리은행</td>
+														<td></td>
+													</tr>
+													<tr>
+														<th>6</th>
+														<td>하나은행</td>
+														<td></td>
+													</tr>
+													<tr>
+														<th>7</th>
+														<td>NH투자증권</td>
+														<td></td>
+													</tr>
+													<tr>
+														<th>8</th>
+														<td>대신증권</td>
+														<td></td>
+													</tr>
+													<tr>
+														<th>9</th>
+														<td>미래에셋대우증권</td>
+														<td></td>
+													</tr>
+													<tr>
+														<th>10</th>
+														<td>신한투자증권</td>
+														<td></td>
+													</tr>
+													<tr>
+														<th>11</th>
+														<td>하이투자증권</td>
+														<td></td>
+													</tr>
+													<tr>
+														<th>12</th>
+														<td>한국투자증권</td>
+														<td></td>
+													</tr>
+													<tr>
+														<th>13</th>
+														<td>현대차증권</td>
+														<td></td>
+													</tr>
+													<tr>
+														<th>14</th>
+														<td>교보생명</td>
+														<td></td>
+													</tr>
+													<tr>
+														<th>15</th>
+														<td>미래에셋생명보험</td>
+														<td></td>
+													</tr>
+													<tr >
+														<th colspan="4" class="ta-l">□ 개인종합자산관리계좌(ISA)</th>
+													</tr>
+													<tr>
+														<th>1</th>
+														<td>우리은행</td>
+														<td>ISA정기적금</td>
+														<td></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+                                    </div>
+									<ul class="list type1">
+										<li>변액보험상품의 경우 본 보호금융상품 목록에는 포함되지 않으나, 약관에서 보험회사가 최저보증하는 보험금에 한하여 보호됩니다. (보험사가 아닌 경우 생략)</li>
+									</ul>
+
+                                    <div class="prod-date">
+                                        <span class="date">(2023년 04월 01일)</span>
+                                        <span class="compliance"> (주)고려저축은행</span>
+                                    </div>
+                                </div>
+                            </li>
+							<!-- e:기획현행화 (삭제요청)-->
+							
+                         </ul>
+                    </div>
+                </div>
+            </div>
+        <!-- //e: contentsWrap -->
+
+       <!-- ********** Include ********** -->
+        <!-- s footerWrap -->
+        <div id="footerWrap">
+            <script>
+			$(document).ready(function(){
+				$("#footerWrap").load("../include/inc_body_footer.html");
+			});
+			</script>
+        </div>
+        <!-- //e:footerWrap -->
+        <!-- ********** //Include ********** -->
+
+    </div>
+    <!-- //e:wrap -->
+</body>
+</html>

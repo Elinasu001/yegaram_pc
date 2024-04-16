@@ -1,0 +1,3661 @@
+ <!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>프로젝트명 IA기능정의서</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keyword" content="">
+<meta name="description" content="ia, worklist">
+<meta name="author" content="kys">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<link rel="stylesheet" type="text/css" href="./asset/css/worklist.css"/>
+<script src="./asset/js/jquery.min.js"></script>
+<!-- <script src="./asset/js/common.js"></script> -->
+</head>
+<body>
+	
+	<div class="wrapper pc">
+		<section class="ifr_view">
+			<iframe id="iframe" width="100%" height="100%" src="./button.html"></iframe>
+		</section>
+		<section class="container">
+			
+			<div class="header">
+				<h1>JT친애저축은행 리뉴얼 IA(Information Architecture)</h1>
+				<ul>
+					<li>프로젝트 기간 : 2023.03.01 ~ </li>
+					<li><span id="delCnt"></span> / <span id="compCnt"></span> (loan / renewal)</li>
+					<li><span id="wipCnt"></span> (남은 화면 수)</li>
+					<li><span id="totCnt"></span> (총 본수)</li>
+					<!--
+					<li>총 <span id="totCnt"></span>개</li>
+					<li>작업중 <span id="wipCnt"></span>개</li>
+					<li>완료 <span id="compCnt"></span>개</li>
+					-->
+				</ul>
+				<div class="progressArea"><span></span></div>
+				<ul>
+					<li><a href="#none" data-url="#none"></a></li>
+				</ul>
+				<ul>
+					<!-- <li>
+						<a href="./guide/html/main/index.html" target="_blank">JT친애저축은행 가이드</a>
+					</li> -->
+					<li>
+						<a href="./html/prod/allProdList.html" target="_blank">main01</a>
+					</li>
+					<li>
+						<a href="./html/test/test_07.html" target="_blank">main02</a>
+					</li>
+					<li>
+						<a href="./html/test/test_06.html" target="_blank">main03</a>
+					</li>
+				</ul>
+				<dl>
+					<dt>메모사항</dt>
+					<dd>* 2023-03-27 : 전체적인 서브화면 구조수정(메인타이틀. 푸터, 서브푸터, 모바일gnb, 퀙메뉴)</dd>
+					<dd>* 2023-04-02 : 반응형 및 기존 loan css 수정 (ul, common,inqu,serv,membership,memb )</dd>
+				</dl>
+
+			</div>
+			
+			<div class="cont">
+				<h3 class="tit">메인</h3>
+				<table>
+					<summary></summary>
+					<caption></caption>
+					<colgroup>
+						<col width="8%"><col width="8%"><col width="8%"><col width="6%">
+						<col width="6%"><col width="10%"><col width="8%"><col width="4%">
+						<col width="6%"><col width="6%"><col width="4%"><col width="*">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">Level1</th>
+							<th scope="col">Level2</th>
+							<th scope="col">Level3</th>
+							<th scope="col">Level4</th>
+							<th scope="col">Level5</th>
+							<th scope="col" class="fileName">화면ID</th>
+							<th scope="col">형태</th>
+							<th scope="col">담당</th>
+							<th scope="col">시작일자</th>
+							<th scope="col">종료일자</th>
+							<th scope="col">상태</th>
+							<th scope="col">비고</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>공통</td>
+							<td>메인</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/main/index.html" data-url="./html/main/index.html" target="_blank">/main/index.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>윤은정</td>
+							<td class="fromDate">2023-02-21</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>0410 금융서비스 버튼영역 메뉴 확정 필요</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<h3 class="tit">서브</h3>
+				<table>
+					<summary></summary>
+					<caption></caption>
+					<colgroup>
+						<col width="8%"><col width="8%"><col width="8%"><col width="4%">
+						<col width="4%"><col width="10%"><col width="6%"><col width="4%">
+						<col width="6%"><col width="6%"><col width="3%"><col width="8%">
+						<col width="*"><col width="8%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">Level1</th>
+							<th scope="col">Level2</th>
+							<th scope="col">Level3</th>
+							<th scope="col">Level4</th>
+							<th scope="col">Level5</th>
+							<th scope="col" class="fileName">화면ID</th>
+							<th scope="col">형태</th>
+							<th scope="col">담당</th>
+							<th scope="col">시작일자</th>
+							<th scope="col">종료일자</th>
+							<th scope="col">상태</th>
+							<th scope="col">css</th>
+							<th scope="col">비고</th>
+							<th scope="col">이슈사항</th>
+						</tr>
+					</thead>
+					<tbody>
+
+						<!-- s: 대출상품공시 ----------------------------------------------------------------------------------------------------->
+						<tr>
+							<td rowspan="10">대출상품공시</td>
+							<td>전체상품</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>조아름</td>
+							<td class="fromDate">2023-03-07</td>
+							<td class="toDate">2023-04-04</td>
+							<td class="state"></td>
+							<td>prod</td>
+							<td>기존대출화면사용예정</td>
+			 				<td></td>
+						</tr>
+						<tr class="Non">
+							<td rowspan="4">신용대출</td>
+							<td>신용대출 상품 공시</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-14</td>
+							<td class="toDate">2023-03-27</td>
+							<td class="state"></td>
+							<td>common</td>
+							<td>기존대출화면사용예정</td>
+							<td>모바일 사이즈 확인필요</td>
+						</tr>
+						<tr class="Non">
+							<td>[MO]원더풀 J Plus론</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-07</td>
+							<td class="toDate">2023-04-04</td>
+							<td class="state"></td>
+							<td>common</td>
+							<td></td>
+							<td>prodDetail으로 파일명 동일 개발 확인 필요</td>
+						</tr>
+						<tr class="Non">
+							<td>[MO]원더풀 WOW론</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-07</td>
+							<td class="toDate">2023-03-07</td>
+							<td class="state"></td>
+							<td>common</td>
+							<td></td>
+							<td>prodDetail으로 파일명 동일 개발 확인 필요</td>
+						</tr>
+						<tr class="Non">
+							<td>[MO]원더풀 채무통합론</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-07</td>
+							<td class="toDate">2023-03-07</td>
+							<td class="state"></td>
+							<td>common</td>
+							<td></td>
+							<td>prodDetail으로 파일명 동일 개발 확인 필요</td>
+						</tr>
+						<tr class="Non">
+							<td rowspan="4">담보대출</td>
+							<td>담보대출 상품 공시</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-14</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common</td>
+							<td></td>
+							<td>모바일 사이즈 확인 필요</td>
+						</tr>
+						<tr class="Non">
+							<td>[MO]예적금 담보대출</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-07</td>
+							<td class="toDate">2023-03-07</td>
+							<td class="state"></td>
+							<td>common</td>
+							<td></td>
+							<td>prodDetail으로 파일명 동일 개발 확인 필요</td>
+						</tr>
+						<tr class="Non">
+							<td>[MO]원더풀 부동산담보대출</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-07</td>
+							<td class="toDate">2023-03-07</td>
+							<td class="state"></td>
+							<td>common</td>
+							<td></td>
+							<td>prodDetail으로 파일명 동일 개발 확인 필요</td>
+						</tr>
+						<tr class="Non">
+							<td>[MO]원더풀 사업자부동산담보대출</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-07</td>
+							<td class="toDate">2023-03-07</td>
+							<td class="state"></td>
+							<td>common</td>
+							<td></td>
+							<td>prodDetail으로 파일명 동일 개발 확인 필요</td>
+						</tr>
+						<tr class="Non">
+							<td>[MO]햇살론</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-07</td>
+							<td class="toDate">2023-03-07</td>
+							<td class="state"></td>
+							<td>common</td>
+							<td></td>
+							<td>prodDetail으로 파일명 동일 개발 확인 필요</td>
+						</tr>
+						<!-- e: 대출상품공시 ----------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+						<!-- s: 대출서비스 ----------------------------------------------------------------------------------------------------->
+						<tr class="Non">
+							<td rowspan="15">대출서비스</td>
+							<td rowspan="4">[MO]한도조회</td>
+							<td rowspan="2">간편한도조회</td>
+							<td>간편한도조회</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김승희</td>
+							<td class="fromDate">2023-03-09</td>
+							<td class="toDate">2023-04-04</td>
+							<td class="state"></td>
+							<td>common,inqu</td>
+							<td>기존대출화면사용예정</td>
+							<td>기존에도 미확인·확인 라벨 깨짐</td>
+						</tr>
+						<tr class="Non">
+							<td>완료/실패</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>조아름</td>
+							<td class="fromDate">2023-04-02</td>
+							<td class="toDate">2023-04-04</td>
+							<td class="state"></td>
+							<td>common,inqu</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td rowspan="2">햇살론한도조회</td>
+							<td>간편한도조회</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김승희</td>
+							<td class="fromDate">2023-03-10</td>
+							<td class="toDate">2023-04-04</td>
+							<td class="state"></td>
+							<td>common,inqu</td>
+							<td>기존대출화면사용예정</td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td>완료/실패</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>조아름</td>
+							<td class="fromDate">2023-04-02</td>
+							<td class="toDate">2023-04-04</td>
+							<td class="state"></td>
+							<td>common,inqu</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td rowspan="11">대출신청</td>
+							<td>[MO]대출신청절차안내</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>조아름</td>
+							<td class="fromDate">2023-03-17</td>
+							<td class="toDate">2023-04-04</td>
+							<td class="state"></td>
+							<td>기본3,appl</td>
+							<td></td>
+							<td>지점찾기 버튼 반응형으로인하 위치 수정(현업확인필요)</td>
+						</tr>
+						<tr class="Non">
+							<td rowspan="3">[MO]대출신청</td>
+							<td>대출신청</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김승희</td>
+							<td class="fromDate">2023-03-10</td>
+							<td class="toDate">2023-03-27</td>
+							<td class="state"></td>
+							<td>cust,appl</td>
+							<td>기존대출화면사용예정</td>
+							<td>약관 자세히보기 링크 수정 필요</td>
+						</tr>
+						<tr class="Non">
+							<td>적합성/적정성</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>팝업(P)</td>
+							<td>박수현</td>
+							<td class="fromDate">2023-04-03</td>
+							<td class="toDate">2023-04-03</td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td>신청결과</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>박수현</td>
+							<td class="fromDate">2023-04-04</td>
+							<td class="toDate">2023-04-04</td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td rowspan="2">[MO]담보대출신청</td>
+							<td>상담신청</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김승희</td>
+							<td class="fromDate">2023-03-13</td>
+							<td class="toDate">2023-03-27</td>
+							<td class="state"></td>
+							<td>cust,appl</td>
+							<td>기존대출화면사용예정</td>
+							<td>약관 자세히보기 링크 수정 필요</td>
+						</tr>
+						<tr class="Non">
+							<td>상담신청완료</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김승희</td>
+							<td class="fromDate">2023-03-13</td>
+							<td class="toDate">2023-03-27</td>
+							<td class="state"></td>
+							<td>appl,inqu</td>
+							<td>기존대출화면사용예정</td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td rowspan="2">[MO]다이렉트콜서비스</td>
+							<td>상담신청</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김승희</td>
+							<td class="fromDate">2023-03-13</td>
+							<td class="toDate">2023-03-27</td>
+							<td class="state"></td>
+							<td>calendar,serv</td>
+							<td>기존대출화면사용예정</td>
+							<td>자세히보기 링크 수정 필요</td>
+						</tr>
+						<tr class="Non">
+							<td>상담신청완료</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>박수현</td>
+							<td class="fromDate">2023-04-04</td>
+							<td class="toDate">2023-04-04</td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td rowspan="3">[MO]사전조회동의</td>
+							<td>기본정보</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-16</td>
+							<td class="toDate">2023-03-27</td>
+							<td class="state"></td>
+							<td>appl,cust</td>
+							<td>기존대출화면사용예정</td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td>정보동의</td>
+							<td></td>
+							<td class="fileName"><a href="" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>박수현</td>
+							<td class="fromDate">2023-04-04</td>
+							<td class="toDate">2023-04-04</td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td>신청완료</td>
+							<td></td>
+							<td class="fileName"><a href="" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>박수현</td>
+							<td class="fromDate">2023-04-04</td>
+							<td class="toDate">2023-04-04</td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<!-- e: 대출서비스 ----------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+						<!-- s: 예금상품공시 ----------------------------------------------------------------------------------------------------->
+						<tr class="Ok">
+							<td rowspan="26">[MO]예금상품공시</td>
+							<td>전체상품</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/deposit/product.html" data-url="./html/deposit/product.html" target="_blank">/deposit/product.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>조아름,김난희</td>
+							<td class="fromDate">2023.03.07</td>
+							<td class="toDate">2023.04.10</td>
+							<td class="state"></td>
+							<td>common,depo</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Ok">
+							<td rowspan="8">입출금자유예금</td>
+							<td>[MO]비대면보통예금</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/deposit/nonFace/ordinaryDeposit.html" data-url="./html/deposit/nonFace/ordinaryDeposit.html" target="_blank">/deposit/nonFace/ordinaryDeposit.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>조아름</td>
+							<td class="fromDate">2023.02.24</td>
+							<td class="toDate">2023.04.10</td>
+							<td class="state"></td>
+							<td>common,depo</td>
+							<td>0411 예금자보호 굵은 글씨 표기,위법계약 해지권 항목 "." 특수기호 삽입, 탭 배경색 클래스 수정</td>
+							<td></td>
+						</tr>
+						<tr class="Ok">
+							<td>[MO]보통예금</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/deposit/ordinaryDeposit.html" data-url="./html/deposit/ordinaryDeposit.html" target="_blank">/deposit/ordinaryDeposit.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>조아름</td>
+							<td class="fromDate">2023.02.24</td>
+							<td class="toDate">2023.04.10</td>
+							<td class="state"></td>
+							<td>common,depo</td>
+							<td>0410 tag-junbub 숫자 텍스트 수정<br />0411 예금자보호 굵은 글씨 표기,위법계약 해지권/세제혜택 항목 "."특수기호 삽입.구조수정, 탭 배경색 클래스 수정</td>
+							<td></td>
+						</tr>
+						<tr class="Ok">
+							<td>[MO]기업자유예금</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/deposit/companyFreeDeposit.html" data-url="./html/deposit/companyFreeDeposit.html" target="_blank">/deposit/companyFreeDeposit.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>조아름</td>
+							<td class="fromDate">2023.02.24</td>
+							<td class="toDate">2023.04.10</td>
+							<td class="state"></td>
+							<td>common,depo</td>
+							<td>0410 tag-junbub 숫자 텍스트 수정/0411 table-scroll 삭제 후 width 수정<br />0411 예금자보호 굵은 글씨 표기,위법계약 해지권 항목 "." 특수기호 삽입, 탭 배경색 클래스 수정</td>
+							<td></td>
+						</tr>									
+						<tr class="Ok">
+							<td>[MO]비대면저축예금</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/deposit/nonFace/saveDeposit.html" data-url="./html/deposit/nonFace/saveDeposit.html" target="_blank">/deposit/nonFace/saveDeposit.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>조아름</td>
+							<td class="fromDate">2023.02.24</td>
+							<td class="toDate">2023.04.10</td>
+							<td class="state"></td>
+							<td>common,depo</td>
+							<td>0410 적용이율(연3.00% -> 연 2.50%)수정,분할해지-불가 삭제,tag-junbub 숫자 텍스트 수정<br />0411 예금자보호 굵은 글씨 표기,위법계약 해지권 항목 "." 특수기호 삽입/table-scroll 삭제, 탭 배경색 클래스 수정</td>
+							<td></td>
+						</tr>
+						<tr class="Ok">
+							<td>[MO]저축예금</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/deposit/saveDeposit.html" data-url="./html/deposit/saveDeposit.html" target="_blank">/deposit/saveDeposit.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023.03.06</td>
+							<td class="toDate">2023.04.10</td>
+							<td class="state"></td>
+							<td>common,depo</td>
+							<td>0410 적용이율(연3.00% -> 연 2.50%)수정,tag-junbub 숫자 텍스트 수정<br />0411 예금자보호 굵은 글씨 표기,위법계약 해지권/세제혜택 항목 "."특수기호 삽입.구조수정/table-scroll 삭제, 탭 배경색 클래스 수정</td>
+							<td></td>
+						</tr>
+						<tr class="Ok">
+							<td>[MO]비대면플러스입출금통장</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/deposit/nonFace/plusDeposit.html" data-url="./html/deposit/nonFace/plusDeposit.html" target="_blank">/deposit/nonFace/plusDeposit.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김영선,이솔</td>
+							<td class="fromDate">2023.03.06</td>
+							<td class="toDate">2023.04.10</td>
+							<td class="state"></td>
+							<td>common,depo</td>
+							<td>0410 제한사항-질권 설정을 "불가능"으로 변경,적용이율(연3.30% -> 연 3.00%)수정,tag-junbub 숫자 텍스트 수정<br />0411 예금자보호 굵은 글씨 표기,위법계약 해지권 항목 "." 특수기호 삽입/table-scroll 삭제, 탭 배경색 클래스 수정</td>
+							<td>하단 버튼 확인 필요</td>
+						</tr>
+						<tr class="Ok">
+							<td>[MO]플러스입출금통장</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/deposit/plusDeposit.html" data-url="./html/deposit/plusDeposit.html" target="_blank">/deposit/plusDeposit.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023.03.06</td>
+							<td class="toDate">2023.04.10</td>
+							<td class="state"></td>
+							<td>common,depo</td>
+							<td>0410 제한사항-질권 설정을 "불가능"으로 변경,적용이율(연3.30% -> 연 3.00%)수정,tag-junbub 숫자 텍스트 수정<br />0411 예금자보호 굵은 글씨 표기,위법계약 해지권/세제혜택 항목 "." 특수기호 삽입.구조수정/table-scroll 삭제, 탭 배경색 클래스 수정</td>
+							<td></td>
+						</tr>
+						<tr class="Ok">
+							<td>[MO]플러스법인통장</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/deposit/plusCorporation.html" data-url="./html/deposit/plusCorporation.html" target="_blank">/deposit/plusCorporation.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023.03.06</td>
+							<td class="toDate">2023.04.10</td>
+							<td class="state"></td>
+							<td>common,depo</td>
+							<td>0410 적용이율( 연3.30% -> 연 3.00%)수정,tag-junbub 숫자 텍스트 수정<br />0411 예금자보호 굵은 글씨 표기,-위법계약 해지권 항목 "." 특수기호 삽입/table-scroll 삭제, 탭 배경색 클래스 수정</td>
+							<td></td>
+						</tr>
+						<tr class="Ok">
+							<td rowspan="5">목돈마련상품</td>
+							<td>[MO]비대면정기적금</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/deposit/nonFace/periodicalInstallment.html" data-url="./html/deposit/nonFace/periodicalInstallment.html" target="_blank">/deposit/nonFace/periodicalInstallment.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>조아름</td>
+							<td class="fromDate">2023.02.24</td>
+							<td class="toDate">2023.04.10</td>
+							<td class="state"></td>
+							<td>common,depo</td>
+							<td>0410 이자율-"본 상품의 금리는 시장상황에 따라 변동될 수 있습니다." 삭제,이자율-만기후/중도해지이율 문장 앞에 ※,· 추가,만기이자 계산방법/중도해지이율/위법계약 해지권 내용 추가,만기 앞당김 해지 두번째 문장 앞에 ※추가,tag-junbub 숫자 텍스트 변경<br />0411 예금자보호 굵은 글씨 표기,-세제혜택 항목 "."특수기호 삽입/table-scroll 삭제, 탭 배경색 클래스 수정</td>
+							<td></td>
+						</tr>
+						<tr class="Ok">
+							<td>[MO]자유적립예금</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/deposit/freeDeposit.html" data-url="./html/deposit/freeDeposit.html" target="_blank">/deposit/freeDeposit.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김난희</td>
+							<td class="fromDate">2023.03.07</td>
+							<td class="toDate">2023.04.10</td>
+							<td class="state"></td>
+							<td>common,depo</td>
+							<td>0411 예금자보호 굵은 글씨 표기,-위법계약 해지권/세제혜택 항목 "." 특수기호 삽입.구조수정, 탭 배경색 클래스 수정</td>
+							<td></td>
+						</tr>
+						<tr class="Ok">
+							<td>[MO]정기적금</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/deposit/periodicalInstallment.html" data-url="./html/deposit/periodicalInstallment.html" target="_blank">/deposit/periodicalInstallment.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김난희</td>
+							<td class="fromDate">2023.03.07</td>
+							<td class="toDate">2023.04.10</td>
+							<td class="state"></td>
+							<td>common,depo</td>
+							<td>0410 .ico01 dd 텍스트 수정, .list-desc03 가입금액-"10,000원 이상" 쉼표 위치수정, 이자율-만기후/중도해지이율 ※/· 추가, 위법계약 해지권 ul에 bul-dot클래스 추가하고 두세번째 li합치고 br 추가<br />0411 예금자보호 굵은 글씨 표기,세제혜택 항목 "." 특수기호 삽입/table-scroll 삭제, 탭 배경색 클래스 수정</td>
+							<td></td>
+						</tr>
+						<tr class="Ok">
+							<td>[MO]JT쩜피플러스 정기적금</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/deposit/jumpyPlusInstallment.html" data-url="./html/deposit/jumpyPlusInstallment.html" target="_blank">/deposit/jumpyPlusInstallment.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김난희</td>
+							<td class="fromDate">2023.03.07</td>
+							<td class="toDate">2023.04.10</td>
+							<td class="state"></td>
+							<td>common,depo</td>
+							<td>0410 .ico01 dd 텍스트 수정, 적용이율(연 4.10% -> 연2.70% / 연4.00% -> 연3.70%) 수정,위법계약 해지권 ul에 bul-dot클래스 추가하고 두세번째 li합치고 br 추가,tag-junbub 숫자 텍스트<br />0411 예금자보호 굵은 글씨 표기,이자율>만기후/중도해지이율/만기 앞당김 해지 "※,·" 특수기호 삽입,세제혜택 항목 "." 특수기호 삽입/table-scroll 삭제, 탭 배경색 클래스 수정</td>
+							<td></td>
+						</tr>
+						<tr class="Ok">
+							<td>[MO]ISA 정기적금</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/deposit/ISAInstallment.html" data-url="./html/deposit/ISAInstallment.html" target="_blank">/deposit/ISAInstallment.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김난희</td>
+							<td class="fromDate">2023.03.07</td>
+							<td class="toDate">2023.04.10</td>
+							<td class="state"></td>
+							<td>common,depo</td>
+							<td>0410 txt-ellip td에 ul li구조 추가<br />0411 예금자보호 굵은 글씨 표기, 탭 배경색 클래스 수정</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td rowspan="6">목돈굴리기상품</td>
+							<td>[MO]비대면정기예금</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/deposit/nonFace/fixedDeposit.html" data-url="./html/deposit/nonFace/fixedDeposit.html" target="_blank">/deposit/nonFace/fixedDeposit.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김난희</td>
+							<td class="fromDate">2023-03-07</td>
+							<td class="toDate">2023.04.10</td>
+							<td class="state"></td>
+							<td>common,depo</td>
+							<td>0410 만기이자 계산방법 테이블에 class="ta-c" 추가,이자율>만기후/중도해지이율 ※/· 추가,위법계약 해지권 ul에 bul-dot클래스 추가하고 두세번째 li합치고 br 추가,tag-junbub 숫자 텍스트<br />0411 예금자보호 굵은 글씨 표기/table-scroll 삭제   renewal.css 에  table-type td 패딩값 추가, 탭 배경색 클래스 수정</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>[MO]비대면회전식정기예금</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/deposit/nonFace/rotaryDeposit.html" data-url="./html/deposit/nonFace/rotaryDeposit.html" target="_blank">/deposit/nonFace/rotaryDeposit.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김난희</td>
+							<td class="fromDate">2023-03-07</td>
+							<td class="toDate">2023.04.10</td>
+							<td class="state"></td>
+							<td>common,depo</td>
+							<td>0410 .summ-wrap 삭제,이자율 > 만기후 ※/· 추가<br />0411 예금자보호/이자율>기본 굵은 글씨 표기/table-scroll 삭제  후 이자율 , 만기이자 계산방법 테이블 width 수정, 탭 배경색 클래스 수정</td>
+							<td></td>
+						</tr>
+						<tr class="Ok">
+							<td>[MO]정기예금</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/deposit/fixedDeposit.html" data-url="./html/deposit/fixedDeposit.html" target="_blank">/deposit/fixedDeposit.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김난희</td>
+							<td class="fromDate">2023-03-07</td>
+							<td class="toDate">2023.04.10</td>
+							<td class="state"></td>
+							<td>common,depo</td>
+							<td>0410 이자율 > 만기후/중도해지이율 ※/· 추가,만기이자 계산방법 테이블에 class="ta-c" 추가/텍스트 수정,위법계약 해지권 ul에 bul-dot클래스 추가하고 두세번째 li합치고 br추가<br />0411 예금자보호 굵은 글씨 표기<br />예금자보호 굵은 글씨 표기/table-scroll 삭제  이자율 테이블 width 수정, 탭 배경색 클래스 수정</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>[MO]회전식정기예금</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/deposit/rotaryDeposit.html" data-url="./html/deposit/rotaryDeposit.html" target="_blank">/deposit/rotaryDeposit.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김난희</td>
+							<td class="fromDate">2023-03-07</td>
+							<td class="toDate">2023.04.10</td>
+							<td class="state"></td>
+							<td>common,depo</td>
+							<td>0410 이자율 col width="33%"로 변경,이자율>만기후 ※/· 추가,위법계약 해지권 ul에 bul-dot클래스 추가하고 두세번째 li합치고 br추가<br />0411 예금자보호/이자율>기본 굵은 글씨 표기/table-scroll 삭제  이자율 테이블 width 수정, 탭 배경색 클래스 수정</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>[MO]퇴직연금정기예금</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/deposit/retirementDeposit.html" data-url="./html/deposit/retirementDeposit.html" target="_blank">/deposit/retirementDeposit.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김난희</td>
+							<td class="fromDate">2023-03-07</td>
+							<td class="toDate">2023.04.10</td>
+							<td class="state"></td>
+							<td>common,depo</td>
+							<td>0410 이자율-약정이율/수익율 변경,tag-junbub 숫자 텍스트/0411 table-scroll 삭제, 탭 배경색 클래스 수정</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>[MO]ISA 정기예금</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/deposit/ISADeposit.html" data-url="./html/deposit/ISADeposit.html" target="_blank">/deposit/ISADeposit.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김난희</td>
+							<td class="fromDate">2023-03-08</td>
+							<td class="toDate">2023.04.10</td>
+							<td class="state"></td>
+							<td>common,depo</td>
+							<td>0410 특별중도해지 txt-ellip td에 br추가<br />0411 예금자보호 굵은 글씨 표기,자동재예치 주석 수정/table-scroll 삭제 후 이자율 테이블 width 수정 중도해지 이율 테이블 모바일 추, 탭 배경색 클래스 수정</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td rowspan="5">예금가이드</td>
+							<td>[MO]신규가입안내</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/deposit/newRegistration.html" data-url="./html/deposit/newRegistration.html" target="_blank">/deposit/newRegistration.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김난희</td>
+							<td class="fromDate">2023-03-09</td>
+							<td class="toDate">2023.04.11</td>
+							<td class="state"></td>
+							<td>common,depo</td>
+							<td>0411 모바일버전 테이블 추가(visible-xs/mo-none)</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>[MO]예금이율안내</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/deposit/depositRate.html" data-url="./html/deposit/depositRate.html" target="_blank">/deposit/depositRate.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김난희</td>
+							<td class="fromDate">2023-03-09</td>
+							<td class="toDate">2023-04-11</td>
+							<td class="state"></td>
+							<td>common,depo</td>
+							<td>0411 탭크기 조정,a 태그 양쪽 패딩 삭제,tabs-item,contab-item 분리(renewal.css 수정),보통예금/플러스법인통장/저축예금/플러스입출금통장:tag-junbub 숫자 텍스트 수정,플러스법인통장/저축예금/플러스입출금통장/jp쩜피플러스 정기적금/비대면 저축예금-적용이율 수정,예금자보호법 굵은 글씨 표기(탭마다 있음)/table-srcoll 삭제</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>[MO]예금거래 기본약관</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/deposit/basicTerms_2.html" data-url="./html/deposit/basicTerms_2.html" target="_blank">/deposit/basicTerms_2.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>조아름</td>
+							<td class="fromDate">2023-03-13</td>
+							<td class="toDate">2023.04.11</td>
+							<td class="state"></td>
+							<td>common,depo</td>
+							<td>basicTerms.html 파일 450에러로 인해 basicTerms_2.html로 수정하였습니다</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>[MO]보호금융상품등록부</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/deposit/protectFinance.html" data-url="./html/deposit/protectFinance.html" target="_blank">/deposit/protectFinance.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-09</td>
+							<td class="toDate">2023.04.11</td>
+							<td class="state"></td>
+							<td>common,depo</td>
+							<td>0411 tbody에 ta-c클래스명 추가,보호금융상품 목록 표 tbody 안에 텍스트 수정,보호금융상품등록부 변동내역(추가된 신상품의 목록)표 안에 내용 수정/추가,tag-junbub 날짜 수정,해당사항 없음 가운데 정렬,하단 글 굵은 글씨 표기</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>[MO]비대면 상품 이용안내</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/deposit/nonFaceDeposit.html" data-url="./html/deposit/nonFaceDeposit.html" target="_blank">/deposit/nonFaceDeposit.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-09</td>
+							<td class="toDate">2023.04.11</td>
+							<td class="state"></td>
+							<td>common,depo</td>
+							<td></td>
+							<td>IR사이트 메뉴명 및 메뉴구조 변경(2023.03.09) 메뉴명 : '비대면 예금상품안내' 에서 '비대면 상품 이용안내' 로 변경 <br/>메뉴구조 : 2개의 tab '비대면 뱅킹 이용안내', 비대면 계좌개설 서비스 안내' 에서 'tab' 구조 삭제</td>
+						</tr>
+
+						<tr>
+							<td>[MO]골드바 상품</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/deposit/goldBar.html" data-url="./html/deposit/goldBar.html" target="_blank">/deposit/goldBar.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-14</td>
+							<td class="toDate">2023.04.11</td>
+							<td class="state"></td>
+							<td>common,depo</td>
+							<td>0411 매매가격 table 세로형에서 가로형으로 수정, 탭 배경색 클래스 수정</td>
+							<td></td>
+						</tr>
+						<!-- e: 예금상품공시 ----------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+						<!-- s: 금융서비스 ----------------------------------------------------------------------------------------------------->
+						<tr class="Non bor">
+							<td rowspan="21">금융서비스</td>
+							<td>JT친애서비스맵</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>현업요청삭제</td>
+							<td>탭페이지(T)</td>
+							<td>김승희</td>
+							<td class="fromDate">2023-03-07</td>
+							<td class="toDate">2023-03-07</td>
+							<td class="state"></td>
+							<td>common,cust,serv</td>
+							<td></td>
+							<td>3/7 현엽요청삭제</td>
+						</tr>
+						<tr class="Ok">
+							<td>[MO]체크카드 사용안내</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/fin/checkCard.html" data-url="./html/fin/checkCard.html" target="_blank">/fin/checkCard.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-09</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td>common,cust,serv</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td rowspan="3">금융계산기</td>
+							<td>[MO]대출계산기</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-16</td>
+							<td class="toDate">2023-04-06</td>
+							<td class="state"></td>
+							<td>common,serv</td>
+							<td>기존대출화면사용예정</td>
+							<td>탭부분 확인필요</td>
+						</tr>
+						<tr class="Non">
+							<td>[MO]예금계산기</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-16</td>
+							<td class="toDate">2023-04-06</td>
+							<td class="state"></td>
+							<td>common,serv</td>
+							<td>기존대출화면사용예정</td>
+							<td>탭부분 확인필요</td>
+						</tr>
+						<tr class="Non">
+							<td>[MO]적금계산기</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-16</td>
+							<td class="toDate">2023-04-06</td>
+							<td class="state"></td>
+							<td>common,serv</td>
+							<td>기존대출화면사용예정</td>
+							<td>탭부분 확인필요</td>
+						</tr>
+						<tr class="Non">
+							<td>CMS서비스</td>
+							<td>본인확인 정보입력</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-16</td>
+							<td class="toDate">2023-04-05</td>
+							<td class="state"></td>
+							<td>common,serv</td>
+							<td>기존대출화면사용예정</td>
+							<td>개인(신용)정보관련동의 자세히보기버튼 padding값 확인 필요</td>
+						</tr>
+						<tr class="Non">
+							<td rowspan="2">발급서비스</td>
+							<td>정보동의</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-16</td>
+							<td class="toDate">2023-04-05</td>
+							<td class="state"></td>
+							<td>common,mypa</td>
+							<td>기존대출화면사용예정</td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td>발급 서류 목록</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김난희</td>
+							<td class="fromDate">2023-03-27</td>
+							<td class="toDate">2023-04-05</td>
+							<td class="state"></td>
+							<td>common,mypa</td>
+							<td>0411 달력 이미지 추가</td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td rowspan="4">계약서 열람 및 출력</td>
+							<td rowspan="2">여신거래약정서 출력</td>
+							<td>본인확인 정보입력</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-16</td>
+							<td class="toDate">2023-04-05</td>
+							<td class="state"></td>
+							<td>common,cust</td>
+							<td>기존대출화면사용예정</td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td>여신거래약정서 목록</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td rowspan="2">가계대출상품설명서 출력</td>
+							<td>본인확인 정보입력</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-16</td>
+							<td class="toDate">2023-04-05</td>
+							<td class="state"></td>
+							<td>common,cust</td>
+							<td>기존대출화면사용예정</td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td>가계대출상품설명서 목록</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td>개인신용정보 이용제공 사실통지요청</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-16</td>
+							<td class="toDate">2023-04-05</td>
+							<td class="state"></td>
+							<td>common,cust</td>
+							<td>기존대출화면사용예정</td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td rowspan="4">서식 및 약관안내</td>
+							<td rowspan="2">서식</td>
+							<td>list</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>탭페이지(T)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-17</td>
+							<td class="toDate">2023-04-06</td>
+							<td class="state"></td>
+							<td>common, serv, cust</td>
+							<td>기존대출화면사용예정</td>
+							<td>LOAN:제목클릭시-팝업으로약관노출, 다운로드클릭시PDF새창열기 <br/>/ IR:제목클륵시:동작없음, 다운로드클릭시 PDF파일다운</td>
+						</tr>
+						<tr class="Non">
+							<td>view</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>팝업(P)/새창열기PDF</td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td rowspan="2">약관</td>
+							<td>list</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>탭페이지(T)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-17</td>
+							<td class="toDate">2023-04-06</td>
+							<td class="state"></td>
+							<td>common, serv, cust</td>
+							<td>기존대출화면사용예정</td>
+							<td>LOAN:제목클릭시-팝업으로약관노출, 다운로드클릭시PDF새창열기 <br/>/ IR:제목클륵시:동작없음, 다운로드클릭시 PDF파일다운</td>
+						</tr>
+						<tr class="Non">
+							<td>view</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>팝업(P)/새창열기PDF</td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Ok">
+							<td>금융용어사전</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/fin/termDicList.html" data-url="./html/fin/termDicList.html" target="_blank">/fin/termDicList.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>조아름</td>
+							<td class="fromDate">2023-03-17</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td>cust,serv</td>
+							<td>0413 색인 영역, 가나다라 버튼, 검색영역 placeholder, 검색영역 버튼 추가 수정<br/>0410 page-numbox 1/25수정 /페이지네이션 구조 수정</td>
+							<td>검색아이콘 잘림, 디자인팀수정요청필요</td>
+						</tr>
+						<tr class="Ok">
+							<td rowspan="2">부동산매각정보</td>
+							<td>list</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/fin/realEstateList.html" data-url="./html/fin/realEstateList.html" target="_blank">/fin/realEstateList.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김승희</td>
+							<td class="fromDate">2023-03-17</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td>cust,serv</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Ok">
+							<td>view</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/fin/realEstateViewForm.html" data-url="./html/fin/realEstateViewForm.html" target="_blank">/fin/realEstateViewForm.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김영선,이솔</td>
+							<td class="fromDate">2023-04-07</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Ok">
+							<td>대출모집인모집수수료율</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/fin/loanConsultant.html" data-url="./html/fin/loanConsultant.html" target="_blank">/fin/loanConsultant.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김승희</td>
+							<td class="fromDate">2023-03-08</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td>common,cust,serv</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<!-- e: 금융서비스 ----------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+						<!-- s: 금융소비자보호 ----------------------------------------------------------------------------------------------------->
+						<tr class="Ok">
+							<td rowspan="25">금융소비자보호</td>
+							<td rowspan="4">금융소비자보호 체계</td>
+							<td>[MO]금융소비자보호부 안내</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/fin/customerProtect.html" data-url="./html/fin/customerProtect.html" target="_blank">/fin/customerProtect.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김승희</td>
+							<td class="fromDate">2023-03-17</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td>cust,serv</td>
+							<td>0410 금융소비자 보호부 내용 수정</td>
+							<td></td>
+						</tr>
+
+						<tr class="Ok">
+							<td>[MO]상품개발,기획준칙</td>
+							<td>list, view</td>
+							<td></td>
+							<td class="fileName"><a href="./html/fin/customerProtect_2.html" data-url="./html/fin/customerProtect_2.html" target="_blank">/fin/customerProtect_2.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김승희</td>
+							<td class="fromDate">2023-03-17</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td>cust,serv</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Ok">
+							<td>[MO]상품판매준칙</td>
+							<td>list, view</td>
+							<td></td>
+							<td class="fileName"><a href="./html/fin/customerProtect_3.html" data-url="./html/fin/customerProtect_3.html" target="_blank">/fin/customerProtect_3.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김승희</td>
+							<td class="fromDate">2023-03-20</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td>cust,serv</td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						<!-- 수정 이전
+						<tr>
+							<td rowspan="2">[MO]상품개발,기획준칙</td>
+							<td>list</td>
+							<td></td>
+							<td class="fileName"><a href="./html/fin/customerProtect_2.html" data-url="./html/fin/customerProtect_2.html" target="_blank">/fin/customerProtect_2.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김승희</td>
+							<td class="fromDate">2023-03-17</td>
+							<td class="toDate">2023-03-27</td>
+							<td class="state"></td>
+							<td>cust,serv</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>view</td>
+							<td></td>
+							<td class="fileName"><a href="./html/fin/customerProtect_2.html" data-url="./html/fin/customerProtect_2.html" target="_blank">/fin/customerProtect_2.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김승희</td>
+							<td class="fromDate">2023-03-17</td>
+							<td class="toDate">2023-03-27</td>
+							<td class="state"></td>
+							<td>cust,serv</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td rowspan="2">[MO]상품판매준칙</td>
+							<td>list</td>
+							<td></td>
+							<td class="fileName"><a href="./html/fin/customerProtect_3.html" data-url="./html/fin/customerProtect_3.html" target="_blank">/fin/customerProtect_3.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김승희</td>
+							<td class="fromDate">2023-03-20</td>
+							<td class="toDate">2023-03-27</td>
+							<td class="state"></td>
+							<td>cust,serv</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>view</td>
+							<td></td>
+							<td class="fileName"><a href="./html/fin/customerProtect_3.html" data-url="./html/fin/customerProtect_3.html" target="_blank">/fin/customerProtect_3.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김승희</td>
+							<td class="fromDate">2023-03-20</td>
+							<td class="toDate">2023-03-27</td>
+							<td class="state"></td>
+							<td>cust,serv</td>
+							<td></td>
+							<td></td>
+						</tr>-->
+
+						<tr class="Ok">
+							<td>[MO]금융소비자 권익보호헌장</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/fin/customerProtect_4.html" data-url="./html/fin/customerProtect_4.html" target="_blank">/fin/customerProtect_4.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-20</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td>common,cust,serv</td>
+							<td>0413 오타 수정</td>
+							<td></td>
+						</tr>
+						<tr class="Ok">
+							<td>[MO]민원현황</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/customer/complaintReport.html" data-url="./html/customer/complaintReport.html" target="_blank">/customer/complaintReport.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김난희</td>
+							<td class="fromDate">2023-03-16</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td>common,cust,serv</td>
+							<td>0410 txt-red css수정/ &#8251;추가/ 민원건수, 유형별 민원 건수 수정/0411 전체 테이블 table-scroll 삭제 후 모바잉ㄹ 테이블 추가</td>
+							<td>민원사무편람 > 민원처리프로세스 >신청절차 아이콘 디자인 요청 필요 / 전체 공통 수정은 완료됐으나 디자인 시안 아직 안나와서 추후 디자인 수정 필요<br/>0413 각주 class txt-tit06, txt-top 추가, 글씨 굵기 클래스 fw-bold 추가</td>
+						</tr>
+						<tr class="Ok">
+							<td rowspan="2">[MO]실태평가 결과</td>
+							<td>list</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/customer/assessResult.html" data-url="./html/customer/assessResult.html" target="_blank">/customer/assessResult.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>조아름</td>
+							<td class="fromDate">2023-03-17</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td>common,cust,serv</td>
+							<td>0410 페이지네이션 구조 수정/0411 테이블 table-scroll 삭제<br/>0413 글씨 굵기 클래스 fw-bold 추가</td>
+							<td></td>
+						</tr>
+						<tr class="Ok">
+							<td>view</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/customer/assessResultViewForm.html" data-url="./html/customer/assessResultViewForm.html" target="_blank">/customer/assessResultViewForm.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>조아름</td>
+							<td class="fromDate">2023-03-20</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td>common,cust,serv</td>
+							<td></td>
+							<td>헌재 div구조로 dl구조로 수정해야될수도있음</td>
+						</tr>
+						<tr class="Ok">
+							<td rowspan="3">금융소비자 정보</td>
+							<td>[MO]소비자보호우수사례</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/fin/customerInfo_1.html" data-url="./html/fin/customerInfo_1.html" target="_blank">/fin/customerInfo_1.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-14</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td>common,cust,serv</td>
+							<td>0410 페이지네이션 구조 수정</td>
+							<td>탭영역 확인필요</td>
+						</tr>
+						<tr class="Ok">
+							<td>[MO]금융생활안내</td>
+							<td>list</td>
+							<td></td>
+							<td class="fileName"><a href="./html/fin/customerInfo_2.html" data-url="./html/fin/customerInfo_2.html" target="_blank">/fin/customerInfo_2.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-14</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td>common,cust,serv</td>
+							<td>0411 테이블 table-scroll 삭제  후  모바일 테이블 추가 </td>
+							<td>탭영역 확인필요</td>
+						</tr>
+						<tr class="Ok">
+							<td>[MO]금융감독원 법규정보/소비자경보</td>
+							<td>list</td>
+							<td></td>
+							<td class="fileName"><a href="./html/fin/customerInfo_3.html" data-url="./html/fin/customerInfo_3.html" target="_blank">/fin/customerInfo_3.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-14</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td>common,cust,serv</td>
+							<td></td>
+							<td>탭영역 확인필요</td>
+						</tr>
+						<tr class="Ok">
+							<td rowspan="5">금융소비자 권리안내</td>
+							<td>[MO]위법계약해지권</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/fin/customerRightsInfo.html" data-url="./html/fin/customerRightsInfo.html" target="_blank">/fin/customerRightsInfo.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>조아름</td>
+							<td class="fromDate">2023-03-08</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Ok">
+							<td>[MO]청약철회권</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/fin/customerRightsInfo_2.html" data-url="./html/fin/customerRightsInfo_2.html" target="_blank">/fin/customerRightsInfo_2.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김난희</td>
+							<td class="fromDate">2023-03-16</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td></td>
+							<td>0411 테이블 table-scroll 삭제  후  모바일 테이블 추가</td>
+							<td></td>
+						</tr>
+						<tr class="Ok">
+							<td>[MO]금리인하요구권</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/fin/customerRightsInfo_3.html" data-url="./html/fin/customerRightsInfo_3.html" target="_blank">/fin/customerRightsInfo_3.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김난희</td>
+							<td class="fromDate">2023-03-16</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td></td>
+							<td>0410 APP(모바일 어플) 내용 수정/0411 테이블 table-scroll 삭제</td>
+							<td></td>
+						</tr>
+						<tr class="Ok">
+							<td>[MO]자료열람요구권</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/fin/customerRightsInfo_4.html" data-url="./html/fin/customerRightsInfo_4.html" target="_blank">/fin/customerRightsInfo_4.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김난희</td>
+							<td class="fromDate">2023-03-20</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Ok">
+							<td>[MO]채무조정제도</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/fin/customerRightsInfo_5.html" data-url="./html/fin/customerRightsInfo_5.html" target="_blank">/fin/customerRightsInfo_5.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김난희</td>
+							<td class="fromDate">2023-03-16</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td></td>
+							<td>0410 신청 요건  li 에 - 추가</td>
+							<td></td>
+						</tr>
+						
+						<tr class="Ok">
+							<td>[MO]채권추심업무 처리절차</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/customer/creditCollection.html" data-url="./html/customer/creditCollection.html" target="_blank">/customer/creditCollection.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김승희</td>
+							<td class="fromDate">2023-03-17</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td>cust,serv</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Ok">
+							<td>[MO]불법채권추심 대응요령</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/customer/illegal.html" data-url="./html/customer/illegal.html" target="_blank">/customer/illegal.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-20</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td>common,cust,serv</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Ok">
+							<td>[MO]소멸시효 완성채권 추심 관련 금융소비자 유의사항</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/customer/customerNote.html" data-url="./html/customer/customerNote.html" target="_blank">/customer/customerNote.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-20</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td>common, cust, serv</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Ok">
+							<td>[MO]금융소비자보호 로드맵</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/customer/portal.html" data-url="./html/customer/portal.html" target="_blank">/customer/portal.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김승희</td>
+							<td class="fromDate">2023-03-10</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td>링크 재수정 필요</td>
+						</tr>
+						<tr class="Ok">
+							<td rowspan="4">[MO]금융소비자보호 내부통제기준</td>
+							<td rowspan="2">금융소비자보호 내부통제기준</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/customer/customerProtectInner.html" data-url="./html/customer/customerProtectInner.html" target="_blank">/customer/customerProtectInner.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-14</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td>common,cust,serv</td>
+							<td></td>
+							<td>금융소비자보호기준과 탭으로 링크이동</td>
+						</tr>
+						<tr class="Ok">
+							<td>금융소비자보호 내부통제기준 비교표</td>
+							<td></td>
+							<td class="fileName"><a href="./html/protect/customerProtectInner_20210925.html" data-url="./html/protect/customerProtectInner_20210925.html" target="_blank">/protect/customerProtectInner_20210925.html</a></td>
+							<td>팝업(P)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-04-13</td>
+							<td class="toDate">2023-04-13</td>
+							<td class="state"></td>
+							<td>common,depo</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Ok">
+							<td rowspan="2">금융소비자보호 기준</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/customer/customerProtectStandard.html" data-url="./html/customer/customerProtectStandard.html" target="_blank">/customer/customerProtectStandard.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-14</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td>common,cust,serv</td>
+							<td></td>
+							<td>금융소비자보호 내부통제기준과 탭으로 링크이동</td>
+						</tr>
+						<tr class="Ok">
+							<td>금융소비자보호 기준 비교표</td>
+							<td></td>
+							<td class="fileName"><a href="./html/protect/customerProtectStandard_2.html" data-url="./html/protect/customerProtectStandard_2.html" target="_blank">/protect/customerProtectStandard_2.html</a></td>
+							<td>팝업(P)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-04-13</td>
+							<td class="toDate">2023-04-13</td>
+							<td class="state"></td>
+							<td>common,depo</td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						
+						<tr class="Ok">
+							<td rowspan="2">[MO]금융소비자보호 기준</td>
+							<td>금융소비자보호 내부통제기준</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/customer/customerProtectStandard.html" data-url="./html/customer/customerProtectStandard.html" target="_blank">/customer/customerProtectStandard.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-14</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td>common,cust,serv</td>
+							<td></td>
+							<td>금융소비자보호 내부통제기준과 탭으로 링크이동</td>
+						</tr>
+						
+						<tr class="Ok">
+							<td>금융소비자보호 기준</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/customer/customerProtectStandard.html" data-url="./html/customer/customerProtectStandard.html" target="_blank">/customer/customerProtectStandard.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-14</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td>common,cust,serv</td>
+							<td></td>
+							<td>금융소비자보호 내부통제기준과 탭으로 링크이동</td>
+						</tr>
+
+						<!-- 수정 이전
+						<tr>
+							<td>[MO]금융소비자보호 내부통제기준</td>
+							<td>금융소비자보호 내부통제기준</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/customer/customerProtectInner.html" data-url="./html/customer/customerProtectInner.html" target="_blank">/customer/customerProtectInner.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-14</td>
+							<td class="toDate">2023-03-27</td>
+							<td class="state"></td>
+							<td>common,cust,serv</td>
+							<td></td>
+							<td>금융소비자보호기준과 탭으로 링크이동</td>
+						</tr>
+						<tr>
+							<td>[MO]금융소비자보호 기준</td>
+							<td>금융소비자보호 내부통제기준</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/customer/customerProtectStandard.html" data-url="./html/customer/customerProtectStandard.html" target="_blank">/customer/customerProtectStandard.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-14</td>
+							<td class="toDate">2023-03-27</td>
+							<td class="state"></td>
+							<td>common,cust,serv</td>
+							<td></td>
+							<td>금융소비자보호 내부통제기준과 탭으로 링크이동</td>
+						</tr>-->
+						<!-- e: 금융소비자보호 ----------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+						<!-- s: 고객센터 ----------------------------------------------------------------------------------------------------->
+<!-- 						<tr class="ex">
+							<td rowspan="18">고객센터</td>
+							<td rowspan="7">이용안내</td>
+							<td>체크카드 사용안내</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/guide/check.html" data-url="./html/guide/check.html" target="_blank">/guide/check.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td>2023.03.08 금융서비스에서 노출하기로 결정 </td>
+						</tr> -->
+						<tr class="Non">
+							<td rowspan="19">고객센터</td>
+							<td rowspan="5">이용안내</td>
+							<td>[MO]이용시간 안내</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김승희</td>
+							<td class="fromDate">2023-03-09</td>
+							<td class="toDate">2023-04-05</td>
+							<td class="state"></td>
+							<td>cust</td>
+							<td>기존대출화면사용예정</td>
+							<td>기존엔 폴더 분류가 안되어있으나 임의로 guide 폴더에 넣었습니다</td>
+						</tr>
+						<tr class="Non">
+							<td>[MO]ARS 이용안내</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>조아름</td>
+							<td class="fromDate">2023-03-20</td>
+							<td class="toDate">2023-04-05</td>
+							<td class="state"></td>
+							<td>3, cust</td>
+							<td>기존대출화면사용예정</td>
+							<td>기존엔 폴더 분류가 안되어있으나 임의로 guide 폴더에 넣었습니다</td>
+						</tr>
+						<tr class="Non">
+							<td>인터넷뱅킹 이용안내</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-10</td>
+							<td class="toDate">2023-04-05</td>
+							<td class="state"></td>
+							<td>common,cust</td>
+							<td>기존대출화면사용예정</td>
+							<td>신규퍼블진행본 존재</td>
+						</tr>
+						<tr class="Non">
+							<td>모바일 금융서비스</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>조아름</td>
+							<td class="fromDate">2023-03-20</td>
+							<td class="toDate">2023-04-05</td>
+							<td class="state"></td>
+							<td>3,cust</td>
+							<td>기존대출화면사용예정</td>
+							<td>ASIS-모바일반응형CSS없음</td>
+						</tr>
+						<tr class="Non">
+							<td>유용한 사이트</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-20</td>
+							<td class="toDate">2023-04-06</td>
+							<td class="state"></td>
+							<td>common,cust</td>
+							<td>기존대출화면사용예정</td>
+							<td></td>
+						</tr>
+						
+						<tr class="Non">
+							<td rowspan="7">고객의소리</td>
+							<td>[MO]자주묻는질문</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김승희</td>
+							<td class="fromDate">2023-03-22</td>
+							<td class="toDate">2023-04-06</td>
+							<td class="state"></td>
+							<td>appl,cust,main,prod</td>
+							<td><b>0411 자주찾는질문 에서 자주묻는질문 으로 수정</b><br />0410 모바일일때 탭메뉴(.mobile-list) 링크 수정, 모바일일때 BEST,FAQ 내용 추가</td>
+							<td>2023.03.13 현재 위치로 메뉴 확정(IR 내용 Loan 사이트에 추가)</td>
+						</tr>
+						<tr class="Non">
+							<td rowspan="2">1:1 문의하기</td>
+							<td>회원접수</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>박수현</td>
+							<td class="fromDate">2023-03-27</td>
+							<td class="toDate">2023-04-05</td>
+							<td class="state"></td>
+							<td></td>
+							<td><b>0411 자주찾는질문 에서 자주묻는질문 으로 수정</b></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td>비회원접수</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>박수현</td>
+							<td class="fromDate">2023-03-27</td>
+							<td class="toDate">2023-04-05</td>
+							<td class="state"></td>
+							<td></td>
+							<td><b>0411 자주찾는질문 에서 자주묻는질문 으로 수정</b></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td rowspan="2">고객의 소리 접수</td>
+							<td>회원접수</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>박수현</td>
+							<td class="fromDate">2023-03-27</td>
+							<td class="toDate">2023-04-05</td>
+							<td class="state"></td>
+							<td></td>
+							<td><b>0411 자주찾는질문 에서 자주묻는질문 으로 수정</b></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td>비회원접수</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>박수현</td>
+							<td class="fromDate">2023-03-27</td>
+							<td class="toDate">2023-04-05</td>
+							<td class="state"></td>
+							<td></td>
+							<td><b>0411 자주찾는질문 에서 자주묻는질문 으로 수정</b></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td rowspan="2">칭찬/제안(소비자참여코너)</td>
+							<td>칭찬하기</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>박수현</td>
+							<td class="fromDate">2023-03-27</td>
+							<td class="toDate">2023-04-05</td>
+							<td class="state"></td>
+							<td></td>
+							<td><b>0411 자주찾는질문 에서 자주묻는질문 으로 수정</b><br />0410 버튼영역 수정(cust.css)</td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td>제안하기</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						<tr class="Non">
+							<td rowspan="2">[MO]이벤트</td>
+							<td>list</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-21</td>
+							<td class="toDate">2023-04-05</td>
+							<td class="state"></td>
+							<td>common,cust</td>
+							<td>기존대출화면사용예정</td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td>[MO]view</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-21</td>
+							<td class="toDate">2023-04-05</td>
+							<td class="state"></td>
+							<td>common,cust</td>
+							<td>기존대출화면사용예정</td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td rowspan="5">개인신용평가결과 조회</td>
+							<td rowspan="3">개인신용평가결과 설명요청서</td>
+							<td>정보입력</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>탭페이지(T)</td>
+							<td>이솔</td>
+							<td class="fromDate">2023-03-27</td>
+							<td class="toDate">2023-04-05</td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td>인증번호 요청</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>탭페이지(T),팝업(P)</td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td>목록 화면</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>탭페이지(T)</td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td rowspan="2">기초정보 정정,삭제 및 개인신용평가결과 재산출 요청서</td>
+							<td>재산출 요청서 작성</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>탭페이지(T)</td>
+							<td>이솔</td>
+							<td class="fromDate">2023-03-27</td>
+							<td class="toDate">2023-04-05</td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td>완료</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>탭페이지(T)</td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<!-- e: 고객센터 ----------------------------------------------------------------------------------------------------->
+
+
+						<!-- s: 은행소개 ----------------------------------------------------------------------------------------------------->
+						<tr>
+							<td rowspan="32">은행소개</td>
+							<td rowspan="11">은행소개</td>
+							<td rowspan="2">기업이념</td>
+							<td>영문(English page)</td>
+							<td></td>
+							<td class="fileName"><a href="./html/bank/companyIdea_eng.html" data-url="./html/bank/companyIdea_eng.html" target="_blank">/bank/companyIdea_eng.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>조아름</td>
+							<td class="fromDate">2023-03-27</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common,bank</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>한글(Korean page)</td>
+							<td></td>
+							<td class="fileName"><a href="./html/bank/companyIdea.html" data-url="./html/bank/companyIdea.html" target="_blank">/bank/companyIdea.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-02-24</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common,bank</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>대표이사 인사말</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/bank/ceo.html" data-url="./html/bank/ceo.html" target="_blank">/bank/ceo.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-02-27</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common,bank</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td rowspan="2">기업개요</td>
+							<td>영문(English page)</td>
+							<td></td>
+							<td class="fileName"><a href="./html/bank/overview_eng.html" data-url="./html/bank/overview_eng.html" target="_blank">/bank/overview_eng.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김승희</td>
+							<td class="fromDate">2023-03-21</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common,bank</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>한글(Korean page)</td>
+							<td></td>
+							<td class="fileName"><a href="./html/bank/overview.html" data-url="./html/bank/overview.html" target="_blank">/bank/overview.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-02-27</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common,bank</td>
+							<td></td>
+							<td>영업지점 링크(한글 버전에만 적용)<br/>1.선택 시, '은행소개>지점안내' 페이지로 리디렉션 <br/>2.선택한 지역의 영업점 테이블로 자동 스크롤</td>
+						</tr>
+						<tr>
+							<td rowspan="2">기업통치</td>
+							<td>영문(English page)</td>
+							<td></td>
+							<td class="fileName"><a href="./html/bank/rule_eng.html" data-url="./html/bank/rule_eng.html" target="_blank">/bank/rule_eng.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김승희</td>
+							<td class="fromDate">2023-03-21</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common,bank</td>
+							<td>영문이미지 추가 예정</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>한글(Korean page)</td>
+							<td></td>
+							<td class="fileName"><a href="./html/bank/rule.html" data-url="./html/bank/rule.html" target="_blank">/bank/rule.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-03</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common,bank</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td rowspan="2">연혁</td>
+							<td>영문(English page)</td>
+							<td></td>
+							<td class="fileName"><a href="./html/bank/history_eng.html" data-url="./html/bank/history_eng.html" target="_blank">/bank/history_eng.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>조아름</td>
+							<td class="fromDate">2023-03-27</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>한글(Korean page)</td>
+							<td></td>
+							<td class="fileName"><a href="./html/bank/history.html" data-url="./html/bank/history.html" target="_blank">/bank/history.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>조아름</td>
+							<td class="fromDate">2023-03-27</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td rowspan="2">조직도</td>
+							<td>영문(English page)</td>
+							<td></td>
+							<td class="fileName"><a href="./html/bank/chart_eng.html" data-url="./html/bank/chart_eng.html" target="_blank">/bank/chart_eng.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>조아름</td>
+							<td class="fromDate">2023-02-27</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>한글(Korean page)</td>
+							<td></td>
+							<td class="fileName"><a href="./html/bank/chart.html" data-url="./html/bank/chart.html" target="_blank">/bank/chart.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-02-24</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common,bank</td>
+							<td></td>
+							<td>영문이미지교체필요</td>
+						</tr>
+
+						<tr>
+							<td rowspan="2">윤리경영</td>
+							<td>윤리강령</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/bank/moral.html" data-url="./html/bank/moral.html" target="_blank">/bank/moral.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김승희</td>
+							<td class="fromDate">2023-03-21</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common,bank</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>임 &middot; 직원행동지침</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/bank/actionGuide.html" data-url="./html/bank/actionGuide.html" target="_blank">/bank/actionGuide.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김승희</td>
+							<td class="fromDate">2023-03-21</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common,bank</td>
+							<td></td>
+							<td></td>
+						</tr>
+						
+						<tr>
+							<td rowspan="4">경영공시</td>
+							<td rowspan="2">요약공시</td>
+							<td>영문(English page)</td>
+							<td></td>
+							<td class="fileName"><a href="./html/bank/summaryOffical_eng.html" data-url="./html/bank/summaryOffical_eng.html" target="_blank">/bank/summaryOffical_eng.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-27</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td>0413 korean english 부분 html 수정</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>한글(Korean page)</td>
+							<td></td>
+							<td class="fileName"><a href="./html/bank/summaryOffical.html" data-url="./html/bank/summaryOffical.html" target="_blank">/bank/summaryOffical.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김난희</td>
+							<td class="fromDate">2023-03-21</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common,bank</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>정기공시</td>
+							<td>list/view</td>
+							<td></td>
+							<td class="fileName"><a href="./html/bank/managementInfoList.html" data-url="./html/bank/managementInfoList.html" target="_blank">/bank/managementInfoList.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김난희</td>
+							<td class="fromDate">2023-03-22</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common,bank</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>수시공시</td>
+							<td>list/view</td>
+							<td></td>
+							<td class="fileName"><a href="./html/bank/managementInfoList_2.html" data-url="./html/bank/managementInfoList_2.html" target="_blank">/bank/managementInfoList_2.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김난희</td>
+							<td class="fromDate">2023-03-22</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common,bank</td>
+							<td></td>
+							<td></td>
+						</tr>
+						
+						<tr>
+							<td rowspan="2">JT친애뉴스</td>
+							<td>list</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/bank/newsList.html" data-url="./html/bank/newsList.html" target="_blank">/bank/newsList.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-22</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common,bank</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>view</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/bank/newsViewForm.html" data-url="./html/bank/newsViewForm.html" target="_blank">/bank/newsViewForm.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-22</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common,bank</td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						<tr>
+							<td rowspan="4">인재채용</td>
+							<td>인사제도</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/bank/human.html" data-url="./html/bank/human.html" target="_blank">/bank/human.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-10</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common,bank</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td rowspan="3">채용안내</td>
+							<td rowspan="2">모집요강</td>
+							<td>list</td>
+							<td class="fileName"><a href="./html/bank/recruitList.html" data-url="./html/bank/recruitList.html" target="_blank">/bank/recruitList.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김영선,김승희</td>
+							<td class="fromDate">2023-03-10</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common<!--bank--></td>
+							<td>모집공고의 상단 스테퍼 아이콘 수정 예정</td>
+							<td>탭 부분 확인 필요</td>
+						</tr>
+						<tr>
+							<td>view</td>
+							<td class="fileName"><a href="./html/bank/recruitViewForm.html" data-url="./html/bank/recruitViewForm.html" target="_blank">/bank/recruitViewForm.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-27</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common<!--bank--></td>
+							<td>모바일 깨지는 부분 수정 필요</td>
+							<td>탭 부분 확인 필요</td>
+						</tr>
+						<tr>
+							<td>채용FAQ</td>
+							<td>list</td>
+							<td class="fileName"><a href="./html/bank/recruitList_2.html" data-url="./html/bank/recruitList_2.html" target="_blank">/bank/recruitList_2.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김영선,김승희</td>
+							<td class="fromDate">2023-03-10</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common<!--bank--></td>
+							<td>모집공고의 상단 스테퍼 아이콘 수정 예정</td>
+							<td>탭 부분 확인 필요</td>
+						</tr>
+
+						<!-- 수정 이전
+						<tr>
+							<td>채용안내</td>
+							<td>모집요강</td>
+							<td>list</td>
+							<td class="fileName"><a href="./html/bank/recruitList.html" data-url="./html/bank/recruitList.html" target="_blank">/bank/recruitList.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김영선,김승희</td>
+							<td class="fromDate">2023-03-10</td>
+							<td class="toDate">2023-04-04</td>
+							<td class="state"></td>
+							<td>common</td>
+							<td>모집공고의 상단 스테퍼 아이콘 수정 예정</td>
+							<td>탭 부분 확인 필요</td>
+						</tr>
+						<tr>
+							<td>채용안내</td>
+							<td>채용FAQ</td>
+							<td>list</td>
+							<td class="fileName"><a href="./html/bank/recruitList_2.html" data-url="./html/bank/recruitList_2.html" target="_blank">/bank/recruitList_2.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김영선,김승희</td>
+							<td class="fromDate">2023-03-10</td>
+							<td class="toDate">2023-04-04</td>
+							<td class="state"></td>
+							<td>common</td>
+							<td>모집공고의 상단 스테퍼 아이콘 수정 예정</td>
+							<td>탭 부분 확인 필요</td>
+						</tr>
+						<tr>
+							<td>채용안내</td>
+							<td>모집요강/채용FAQ</td>
+							<td>view</td>
+							<td class="fileName"><a href="./html/bank/recruitViewForm.html" data-url="./html/bank/recruitViewForm.html" target="_blank">/bank/recruitViewForm.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-27</td>
+							<td class="toDate">2023-04-04</td>
+							<td class="state"></td>
+							<td>common</td>
+							<td>모바일 깨지는 부분 수정 필요</td>
+							<td>탭 부분 확인 필요</td>
+						</tr>-->
+
+						<tr>
+							<td rowspan="3">사이버홍보실</td>
+							<td rowspan="2">CI/BI</td>
+							<td>CI</td>
+							<td></td>
+							<td class="fileName"><a href="./html/bank/cibi_1.html" data-url="./html/bank/cibi_1.html" target="_blank">/bank/cibi_1.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-21</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common,bank</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>BI</td>
+							<td></td>
+							<td class="fileName"><a href="./html/bank/cibi_2.html" data-url="./html/bank/cibi_2.html" target="_blank">/bank/cibi_2.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-21</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common,bank</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>광고</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/bank/adList.html" data-url="./html/bank/adList.html" target="_blank">./html/bank/adList.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>조아름</td>
+							<td class="fromDate">2023-03-27</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						<tr>
+							<td rowspan="2">사회공헌</td>
+							<td>list</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/bank/contributionList.html" data-url="./html/bank/contributionList.html" target="_blank">/bank/contributionList.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>조아름</td>
+							<td class="fromDate">2023-03-21</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common,bank</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>view</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/bank/contributionViewForm.html" data-url="./html/bank/contributionViewForm.html" target="_blank">/bank/contributionViewForm.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>조아름</td>
+							<td class="fromDate">2023-03-21</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common,bank</td>
+							<td></td>
+							<td>게시판기존내용넣으면 살짝씩 깨짐, 확인필요</td>
+						</tr>
+
+
+						<tr>
+							<td>지점안내</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/bank/branch_IR.html" data-url="./html/bank/branch_IR.html" target="_blank">/bank/branch_IR.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김영선,김승희</td>
+							<td class="fromDate">2023-03-10</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td>230401 기존 지도 api는 JT친애 도메인에서만 사용 가능하여 기존 스크립트 주석처리 후 임의로 작업하였습니다.<br />230330 지도보기 확인 필요<br />
+							230411 < s: 2023-04-11 개발현행화 > 폰트 굵기변경  class="fw-bold" 추가<br />
+							지도바로가기 링크 색상 확인 필요</td>
+							<td>230331 기존 branch_IR.html에서 지도보기는 드롭다운 방식으로 진행<br />디자인 미확정으로 brach_IR.html버전과 branch.l.html 버전 두가지로 만들어져 있음</td>
+						</tr>
+						<tr>
+							<td rowspan="3">그룹사소개</td>
+							<td>JT Trust 소개</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/group/jTrust.html" data-url="./html/group/jTrust.html" target="_blank">/bank/jTrust.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-02-27</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common,grou</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>기업이념, 행동이념</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/group/idea.html" data-url="./html/group/idea.html" target="_blank">/group/idea.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김승희</td>
+							<td class="fromDate">2023-03-03</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common,grou</td>
+							<td>230411 < s: 2023-04-11 개발현행화 > 주석확인, 띄어쓰기 및 텍스트 수정</td>
+							<td>value-inner span 모바일 위치 수정필요</td>
+						</tr>
+						<tr>
+							<td>그룹사체계도</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/group/map.html" data-url="./html/group/map.html" target="_blank">/group/map.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김승희</td>
+							<td class="fromDate">2023-03-06</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common,grou</td>
+							<td>230412  이미지 크기 변경<br/>
+							경로 : asset/img/sub ( j_trust_global_logo.png, nexus_card_logo.png, nihon_hoshou_logo.png, partir_logo.png  )</td>
+							<td></td>
+						</tr>					
+						<!-- e: 은행소개 ----------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+						<!-- s: 마이페이지 ----------------------------------------------------------------------------------------------------->
+						<tr class="Non">
+							<td rowspan="16">마이페이지</td>
+							<td>대출이용내역</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>이솔</td>
+							<td class="fromDate">2023-03-31</td>
+							<td class="toDate">2023-04-04</td>
+							<td class="state"></td>
+							<td>prod,mypa,appl</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td rowspan="15">멤버십</td>
+							<td rowspan="2">이용혜택</td>
+							<td>수수료 면제</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>박수현</td>
+							<td class="fromDate">2023-04-04</td>
+							<td class="toDate">2023-04-04</td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td>이벤트 우선 안내</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td></td>
+							<td class="fromDate">2023-04-04</td>
+							<td class="toDate">2023-04-04</td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td>멤버십 회원정보 관리</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>박수현</td>
+							<td class="fromDate">2023-04-04</td>
+							<td class="toDate">2023-04-04</td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td>기존에도 주소 입력부분 깨짐</td>
+						</tr>
+						<tr class="Non">
+							<td>멤버십 이벤트</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>박수현</td>
+							<td class="fromDate">2023-04-04</td>
+							<td class="toDate">2023-04-04</td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td rowspan="3">멤버십 쿠폰북</td>
+							<td>view</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>박수현</td>
+							<td class="fromDate">2023.04.04</td>
+							<td class="toDate">2023-04-04</td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td>detail</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>이솔</td>
+							<td class="fromDate">2023.04.06</td>
+							<td class="toDate">2023.04.06</td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td>서비스 이용절차</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>팝업(P)</td>
+							<td>이솔</td>
+							<td class="fromDate">2023.04.06</td>
+							<td class="toDate">2023.04.06</td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td rowspan="4">멤버십 로그인</td>
+							<td>멤버십 로그인</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>조아름</td>
+							<td class="fromDate">2023-04-05</td>
+							<td class="toDate">2023-04-05</td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td>아이디 찾기</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>이솔</td>
+							<td class="fromDate">2023-04-05</td>
+							<td class="toDate">2023-04-05</td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td>비밀번호 찾기</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>이솔</td>
+							<td class="fromDate">2023-04-05</td>
+							<td class="toDate">2023-04-05</td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td>멤버십 소개</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>조아름</td>
+							<td class="fromDate">2023-04-06</td>
+							<td class="toDate">2023-04-06</td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td rowspan="4">멤버십 회원가입</td>
+							<td>안내</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>이솔</td>
+							<td class="fromDate">2023.04.06</td>
+							<td class="toDate">2023.04.06</td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td>가입</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>이솔</td>
+							<td class="fromDate">2023.04.06</td>
+							<td class="toDate">2023.04.06</td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td>완료</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>이솔</td>
+							<td class="fromDate">2023.04.06</td>
+							<td class="toDate">2023.04.06</td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td>탈퇴</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>이솔</td>
+							<td class="fromDate">2023.04.06</td>
+							<td class="toDate">2023.04.06</td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td>조회서비스</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td>김난희</td>
+							<td class="fromDate">2023-03-27</td>
+							<td class="toDate">2023-04-04</td>
+							<td class="state"></td>
+							<td>prod,mypa,appl</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<!-- e: 마이페이지 ----------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+						<!-- s: 모바일만 존재하는 화면 ----------------------------------------------------------------------------------------------------->
+						<tr>
+							<td>고객센터</td>
+							<td>[MO]JT친애뉴스</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a>기존화면파악을 위한 테스트용 화면으로 업무 외 화면들은 링크 삭제 처리하였습니다</td>
+							<td>싱글페이지(S)</td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td>0411 클래스 table-scroll 삭제</td>
+							<td>모바일만 존재하는 화면</td>
+						</tr>
+						<tr>
+							<td>고객센터</td>
+							<td>[MO]모바일팩스</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/mobile/mobile_fax.html" data-url="./html/mobile/mobile_fax.html" target="_blank">/mobile/mobile_fax.html</a></td>
+							<td>싱글페이지(S)</td>
+							<td>김승희</td>
+							<td class="fromDate">2023-04-10</td>
+							<td class="toDate">2023-04-13</td>
+							<td class="state"></td>
+							<td>cust</td>
+							<td>0411 ui.css 수정</td>
+							<td>모바일만 존재하는 화면, 모바일 팩스 서비스 실행 버튼 안드로이드에서 확인 필요</td>
+						</tr>
+					</tbody>
+				</table>
+										
+				<h3 class="tit">footer</h3>
+				<table>
+					<summary></summary>
+					<caption></caption>
+					<colgroup>
+						<col width="8%"><col width="8%"><col width="8%"><col width="6%">
+						<col width="6%"><col width="10%"><col width="8%"><col width="4%">
+						<col width="6%"><col width="6%"><col width="3%"><col width="8%">
+						<col width="8%"><col width="*">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">Level1</th>
+							<th scope="col">Level2</th>
+							<th scope="col">Level3</th>
+							<th scope="col">Level4</th>
+							<th scope="col">Level5</th>
+							<th scope="col" class="fileName">화면ID</th>
+							<th scope="col">형태</th>
+							<th scope="col">담당</th>
+							<th scope="col">시작일자</th>
+							<th scope="col">종료일자</th>
+							<th scope="col">상태</th>
+							<th scope="col">css</th>
+							<th scope="col">비고</th>
+							<th scope="col">비고</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="Non">
+							<td rowspan="56">footer</td>
+							<td>sub-footer</td>
+							<td>가까운 지점 찾기</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/bank/branchPop.html" data-url="./html/bank/branchPop.html" target="_blank">/bank/branchPop.html</a></td>
+							<td>팝업(P)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-04-03</td>
+							<td class="toDate">2023-04-04</td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td>금융감독원</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a></td>
+							<td>링크이동</td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td>'금융감독원' 웹사이트로 리디렉션(https://www.fss.or.kr/fss/main/main.do)</td>
+						</tr>
+						<tr class="Non">
+							<td>예금보험공사</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a></td>
+							<td>링크이동</td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td>'예금보험공사' 웹사이트로 리디렉션(https://www.kdic.or.kr/main.do)</td>
+						</tr>
+						<tr class="Non">
+							<td>저축은행중앙회</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a></td>
+							<td>링크이동</td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td>'저축은행중앙회' 웹사이트로 리디렉션(https://www.fsb.or.kr/index.act)</td>
+						</tr>
+						<tr class="Non">
+							<td>서민금융 1332</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a></td>
+							<td>링크이동</td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td>'서민금융 1332' 웹사이트로 리디렉션(https://www.fss.or.kr/s1332/)</td>
+						</tr>
+						<tr class="Non">
+							<td>신용회복위원회</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a></td>
+							<td>링크이동</td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td>'신용회복위원회' 웹사이트로 리디렉션(https://cyber.ccrs.or.kr)</td>
+						</tr>
+						<tr class="Non">
+							<td>저축은행비리신고</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a></td>
+							<td>링크이동</td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td>'금융감독원>저축은행위법행위 신고' 컨텐츠로 리디렉션(https://www.fss.or.kr/fss/main/contents.do?menuNo=200334)</td>
+						</tr>
+						<tr class="Non">
+							<td>은행소개</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/" data-url="./html/" target="_blank"></a></td>
+							<td></td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>이용안내</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/etc/guide.html" data-url="./html/etc/guide.html" target="_blank">/etc/guide.html</a></td>
+							<td>팝업(P)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-31</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common2(IR)</td>
+							<td></td>
+							<td>추후 디자인나오면 수정 필요</td>
+						</tr>
+						<tr>
+							<td rowspan="2">이용약관</td>
+							<td>[MO]수신 약관안내</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/etc/agreement.html" data-url="./html/etc/agreement.html" target="_blank">/etc/agreement.html</a></td>
+							<td>팝업(P),탭페이지(T)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-31</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common2(IR)</td>
+							<td></td>
+							<td>'as-is : IR사이트의 팝업 호출 / to-be : LOAN사이트 팝업 노출</td>
+						</tr>
+						<tr>
+							<td>[MO]여신 약관안내</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/etc/agreement.html" data-url="./html/etc/agreement.html" target="_blank">/etc/agreement.html</a></td>
+							<td>팝업(P),탭페이지(T)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-03-31</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common2(IR)</td>
+							<td></td>
+							<td>'as-is : IR사이트의 팝업 호출 / to-be : LOAN사이트 팝업 노출</td>
+						</tr>
+						
+						<tr>
+							<td rowspan="20">개인정보처리방침</td>
+							<td rowspan="8">[MO]개인정보처리방침</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/etc/privacy.html" data-url="./html/etc/privacy.html" target="_blank">/etc/privacy.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김난희</td>
+							<td class="fromDate">2023-03-24</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td>common, etc</td>
+							<td>0410 셀렉트 박스 수정</td>
+							<td>탭 8분할 영역 크기확인 필요</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/etc/privacy01.html" data-url="./html/etc/privacy01.html" target="_blank">/etc/privacy01.html</a></td>
+							<td>팝업(P)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-04-10</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td>common, etc</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/etc/privacy02.html" data-url="./html/etc/privacy02.html" target="_blank">/etc/privacy02.html</a></td>
+							<td>팝업(P)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-04-10</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td>common, etc</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/etc/privacy03.html" data-url="./html/etc/privacy03.html" target="_blank">/etc/privacy03.html</a></td>
+							<td>팝업(P)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-04-10</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td>common, etc</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/etc/privacy04.html" data-url="./html/etc/privacy04.html" target="_blank">/etc/privacy04.html</a></td>
+							<td>팝업(P)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-04-10</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td>common, etc</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/etc/privacy05.html" data-url="./html/etc/privacy05.html" target="_blank">/etc/privacy05.html</a></td>
+							<td>팝업(P)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-04-10</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td>common, etc</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/etc/privacy06.html" data-url="./html/etc/privacy06.html" target="_blank">/etc/privacy06.html</a></td>
+							<td>팝업(P)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-04-10</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td>common, etc</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/etc/privacy07.html" data-url="./html/etc/privacy07.html" target="_blank">/etc/privacy07.html</a></td>
+							<td>팝업(P)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-04-10</td>
+							<td class="toDate">2023-04-10</td>
+							<td class="state"></td>
+							<td>common, etc</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>[MO]고객권리안내</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/etc/privacy_2.html" data-url="./html/etc/privacy_2.html" target="_blank">/etc/privacy_2.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김난희</td>
+							<td class="fromDate">2023-03-24</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common, etc</td>
+							<td></td>
+							<td>탭 8분할 영역 크기확인 필요</td>
+						</tr>
+						<tr>
+							<td rowspan="2">[MO]위수탁업체 현황</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/etc/privacy_3.html" data-url="./html/etc/privacy_3.html" target="_blank">/etc/privacy_3.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김난희</td>
+							<td class="fromDate">2023-03-24</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common, etc</td>
+							<td></td>
+							<td>'DSR명단 유의,탭 8분할 영역 크기확인 필요</td>
+						</tr>
+						<tr>
+							<td>DSR명단 팝업</td>
+							<td></td>
+							<td class="fileName"><a href="./html/etc/mojib_list.html" data-url="./html/etc/mojib_list.html" target="_blank">/etc/mojib_list.html</a></td>
+							<td>팝업(P)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-04-13</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common, etc</td>
+							<td></td>
+							<td>임의로 etc 폴더 안에 넣음</td>
+						</tr>
+						<tr>
+							<td>[MO]가명정보 처리현황</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/etc/privacy_4.html" data-url="./html/etc/privacy_4.html" target="_blank">/etc/privacy_4.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김난희</td>
+							<td class="fromDate">2023-03-24</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common, etc</td>
+							<td></td>
+							<td>탭 8분할 영역 크기확인 필요</td>
+						</tr>
+						<tr>
+							<td>[MO]신용정보 활용체제의 공시</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/etc/privacy_5.html" data-url="./html/etc/privacy_5.html" target="_blank">/etc/privacy_5.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김난희</td>
+							<td class="fromDate">2023-03-27</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common, etc</td>
+							<td></td>
+							<td>탭 8분할 영역 크기확인 필요</td>
+						</tr>
+						<tr>
+							<td>[MO]영상정보처리기기운영방침</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/etc/privacy_6.html" data-url="./html/etc/privacy_6.html" target="_blank">/etc/privacy_6.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김난희</td>
+							<td class="fromDate">2023-03-27</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common, etc</td>
+							<td></td>
+							<td>탭 8분할 영역 크기확인 필요</td>
+						</tr>
+						<tr>
+							<td>[MO]자동화(개인신용)평가 결과 안내</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/etc/privacy_7.html" data-url="./html/etc/privacy_7.html" target="_blank">/etc/privacy_7.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김난희</td>
+							<td class="fromDate">2023-03-27</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common, etc</td>
+							<td></td>
+							<td>탭 8분할 영역 크기확인 필요</td>
+						</tr>
+						<tr>
+							<td rowspan="5">[MO]신용정보주체의 권리</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/etc/privacy_8.html" data-url="./html/etc/privacy_8.html" target="_blank">/etc/privacy_8.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김난희</td>
+							<td class="fromDate">2023-03-27</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common, etc</td>
+							<td></td>
+							<td>탭 8분할 영역 크기확인 필요</td>
+						</tr>
+						<tr>
+							<td>신용정보활용체제의 공시</td>
+							<td></td>
+							<td class="fileName"><a href="./html/etc/credit01.html" data-url="./html/etc/credit01.html" target="_blank">/etc/credit01.html</a></td>
+							<td>팝업(P)</td>
+							<td>조아름</td>
+							<td class="fromDate">2023-04-13</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common, etc</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>신용정보활용체제의 공시</td>
+							<td></td>
+							<td class="fileName"><a href="./html/etc/credit02.html" data-url="./html/etc/credit02.html" target="_blank">/etc/credit02.html</a></td>
+							<td>팝업(P)</td>
+							<td>조아름</td>
+							<td class="fromDate">2023-04-13</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common, etc</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>신용정보활용체제의 공시</td>
+							<td></td>
+							<td class="fileName"><a href="./html/etc/credit03.html" data-url="./html/etc/credit03.html" target="_blank">/etc/credit03.html</a></td>
+							<td>팝업(P)</td>
+							<td>조아름</td>
+							<td class="fromDate">2023-04-13</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common, etc</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>신용정보활용체제의 공시</td>
+							<td></td>
+							<td class="fileName"><a href="./html/etc/credit04.html" data-url="./html/etc/credit04.html" target="_blank">/etc/credit04.html</a></td>
+							<td>팝업(P)</td>
+							<td>조아름</td>
+							<td class="fromDate">2023-04-13</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td>common, etc</td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						<tr class="Non">
+							<td>보호금융 상품등록부</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/deposit/protectFinance.html" data-url="./html/deposit/protectFinance.html" target="_blank">/deposit/protectFinance.html</a></td>
+							<td>링크이동</td>
+							<td></td>
+							<td class="fromDate">2023-04-04</td>
+							<td class="toDate">2023-04-04</td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td>'선택 시, '예금상품공시>예금가이드>보호금융상품등록부' 페이지로 리디렉션</td>
+						</tr>
+						<tr class="Non">
+							<td>[MO]고객권리안내문</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a></td>
+							<td>링크이동</td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td>'선택 시, '개인정보처리방침>고객권리안내' 컨텐츠로 리디렉션</td>
+						</tr>
+						<tr class="Non">
+							<td rowspan="7">상품공시실</td>
+							<td>상품공시 이용안내</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="./html/etc/publicAnnounce1.html" data-url="./html/etc/publicAnnounce1.html" target="_blank">/etc/publicAnnounce1.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-04-11</td>
+							<td class="toDate">2023-04-11</td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="Non">
+							<td rowspan="6">예금상품</td>
+							<td>입출금자유예금</td>
+							<td></td>
+							<td class="fileName"><a href="./html/etc/publicAnnounce21.html" data-url="./html/etc/publicAnnounce21.html" target="_blank">/etc/publicAnnounce21.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-04-11</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td>상품쪽 수정 이후 붙여넣을 예정</td>
+						</tr>
+						<tr class="Non">
+							<td>목돈마련상품</td>
+							<td></td>
+							<td class="fileName"><a href="./html/etc/publicAnnounce22.html" data-url="./html/etc/publicAnnounce22.html" target="_blank">/etc/publicAnnounce22.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-04-11</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td>상품쪽 수정 이후 붙여넣을 예정</td>
+						</tr>
+						<tr class="Non">
+							<td>목돈굴리기상품</td>
+							<td></td>
+							<td class="fileName"><a href="./html/etc/publicAnnounce23.html" data-url="./html/etc/publicAnnounce23.html" target="_blank">/etc/publicAnnounce23.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-04-11</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td>상품쪽 수정 이후 붙여넣을 예정</td>
+						</tr>
+						<tr class="Non">
+							<td>예금이율안내</td>
+							<td></td>
+							<td class="fileName"><a href="./html/etc/publicAnnounce24.html" data-url="./html/etc/publicAnnounce24.html" target="_blank">/etc/publicAnnounce24.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-04-11</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td>상품쪽 수정 이후 붙여넣을 예정</td>
+						</tr>
+						<tr class="Non">
+							<td>예금거래 기본약관</td>
+							<td></td>
+							<td class="fileName"><a href="./html/etc/publicAnnounce25.html" data-url="./html/etc/publicAnnounce25.html" target="_blank">/etc/publicAnnounce25.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-04-11</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td>상품쪽 수정 이후 붙여넣을 예정</td>
+						</tr>
+						<tr class="Non">
+							<td>예금부대비용</td>
+							<td></td>
+							<td class="fileName"><a href="./html/etc/publicAnnounce26.html" data-url="./html/etc/publicAnnounce26.html" target="_blank">/etc/publicAnnounce26.html</a></td>
+							<td>탭페이지(T)</td>
+							<td>김영선</td>
+							<td class="fromDate">2023-04-11</td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td>상품쪽 수정 이후 붙여넣을 예정</td>
+						</tr>
+						<tr class="Non bor">
+							<td>JT친애저축은행 블로그(네이버)</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a></td>
+							<td>링크이동</td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td>'2023.03.08 삭제 결정 </td>
+						</tr>
+
+						
+					</tbody>
+				</table>
+
+				<!-- <h3 class="tit">퀵메뉴</h3>
+				<table>
+					<summary></summary>
+					<caption></caption>
+					<colgroup>
+						<col width="8%"><col width="8%"><col width="8%"><col width="6%">
+						<col width="6%"><col width="10%"><col width="8%"><col width="4%">
+						<col width="6%"><col width="6%"><col width="3%"><col width="8%">
+						<col width="8%"><col width="*">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">Level1</th>
+							<th scope="col">Level2</th>
+							<th scope="col">Level3</th>
+							<th scope="col">Level4</th>
+							<th scope="col">Level5</th>
+							<th scope="col" class="fileName">화면ID</th>
+							<th scope="col">형태</th>
+							<th scope="col">담당</th>
+							<th scope="col">시작일자</th>
+							<th scope="col">종료일자</th>
+							<th scope="col">상태</th>
+							<th scope="col">css</th>
+							<th scope="col">비고</th>
+							<th scope="col">비고</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td rowspan="15">퀵메뉴</td>
+							<td>오늘본상품</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a></td>
+							<td></td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>다이렉트콜서비스</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a></td>
+							<td></td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>간편한도조회</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a></td>
+							<td></td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>금융계산기</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a></td>
+							<td></td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>지점안내</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a></td>
+							<td></td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td rowspan="8">상품공시실</td>
+							<td>상품 공시 이용안내</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a></td>
+							<td></td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td>as-is : IR사이트의 선택 시, '상품공시실>상품 공시 이용안내' 팝업 호출 / to-be : 통합사이트 화면 호출</td>
+							<td>https://www.jtchinae-bank.co.kr/etc/publicAnnounce1.do</td>
+						</tr>
+						<tr>
+							<td rowspan="6">예금상품</td>
+							<td>입출금자유예금</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a></td>
+							<td></td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>목돈마련상품</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a></td>
+							<td></td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>목돈굴리기상품</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a></td>
+							<td></td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>예금이율안내</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a></td>
+							<td></td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>예금거래기본약관</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a></td>
+							<td></td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>예금부대비용</td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a></td>
+							<td></td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td>https://www.jtchinae-bank.co.kr/etc/publicAnnounce26.do</td>
+						</tr>
+						<tr>
+							<td>대출상품</td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a></td>
+							<td></td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td>as-is : 이용안내에서 대출상품 클릭시 LOAN사이트의 전체상품화면으로 이동 / to-be : 대출 전체상품화면으로 이동 </td>
+							<td>loan사이트 전체상품으로 새창이동 http://loan.jtchinae-bank.co.kr/prod/allProdList.do</td>
+						</tr>
+						<tr>
+							<td>앱  QR코드(안드로이드)</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a></td>
+							<td></td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td>2023.03.08 기준 삽입여부 유관부서 결정 필요</td>
+						</tr>
+						<tr>
+							<td>앱 QR코드(IOS)</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="fileName"><a href="#none" data-url="#none" target="_blank"></a></td>
+							<td></td>
+							<td></td>
+							<td class="fromDate"></td>
+							<td class="toDate"></td>
+							<td class="state"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table> -->
+
+			</div>
+		</section>
+	</div>
+
+<script>
+
+$(document).ready(function(){
+
+	var fromDate = [],
+		toDate = [],
+		dateGap = [];
+
+	var totCnt, wipCnt = 0, compCnt = 0;
+
+	pjState();
+
+	var headerH = $(".container .header").outerHeight();
+
+	//alert(headerH);
+	$(".container .cont").css("margin-top", headerH + "px");
+	
+
+function pjState(){ 
+	$("table tbody tr").each(function(i, e){
+			fromDate[i] = new Date( $(".fromDate").eq(i).text() );
+			toDate[i] = new Date( $(".toDate").eq(i).text() );
+			dateGap[i] = Math.ceil( (toDate[i].getTime() - fromDate[i].getTime()) / (1000 * 3600 * 24 ));
+			
+			dateGap[i] >= 0 ? $(".state").eq(i).text("완료").closest("tr").addClass("comp") : $(".state").eq(i).text("");
+
+			($(".state").eq(i).text() == "완료") ? compCnt++ : wipCnt++; 
+			
+		});
+		
+		var allpage = $("table tbody tr").length; //전체
+		var Nonpage = $('tr.Non').length; //제외
+		var Okpage = $('tr.Ok').length; //완료
+		totCnt = $("table tbody tr").length; 
+
+		compCnt = Okpage; //완료본수
+		test = allpage - Nonpage; //실질적인화면수
+		wipCnt = totCnt - compCnt - Nonpage; //남은본수
+
+		$("#totCnt").text(totCnt); //전체
+		$("#wipCnt").text(wipCnt);  //남은본수
+		$("#compCnt").text(compCnt); //완료
+		$("#delCnt").text(Nonpage); //제외
+
+		$(".progressArea > span").animate({ "width" : (compCnt / test) * 100 + "%" }, 1500);
+		$(".progressArea > span").after("종합 진척률 : " + Math.floor((compCnt / test) * 100) + "%");
+	}
+
+	
+	
+});
+
+</script>
+</body>
+</html>

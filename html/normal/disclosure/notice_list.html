@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 헤더 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>예가람저축은행</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="keywords" content="예가람저축은행">
+    <meta name="description" content="딴딴해서 믿을 수 있는 고려저축은행, 예금, 적금, 신용부금, 논스톱 자동대출 등 예금, 대출금융상품 안내">
+    <meta name="viewport" content="width=device-width">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta property="og:image" content="https://www.yegaramsb.co.kr/resources/normal/images/main/meta-img-square_new.jpg">   
+    <link rel="shortcut icon" type="image/x-icon" href="../../../resources/favicon.ico">
+    <link href="../../../resources/normal/css/jquery.bxslider.css" rel="stylesheet">
+    <link href="../../../resources/normal/css/default.css" rel="stylesheet">
+    <link href="../../../resources/normal/css/layout.css" rel="stylesheet">
+    <link href="../../../resources/normal/css/contents.css" rel="stylesheet">
+    <link href="../../../resources/normal/css/jquery-ui.css" rel="stylesheet">
+    <script src="../../../resources/normal/js/jquery-1.11.3.min.js"></script>
+    <script src="../../../resources/normal/js/TweenMax.min.js"></script>
+    <script src="../../../resources/normal/js/jquery.bxslider.min.js"></script>
+    <script src="../../../resources/normal/js/placeholders.js"></script>
+    <!--     jquery-ui.js가 default.js보다 먼저 선언되어야 함 -->
+    <script src="../../../resources/normal/js/jquery-ui.js" type="text/javascript"></script>
+    <script src="../../../resources/normal/js/default.js"></script>
+    <script src="../../../resources/normal/js/ui.js"></script>
+    <script src="../../../resources/normal/pub_js/ui_pub.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/jquery.form.min.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/common_ajax.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/common_bank_calc_util.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/common_bank_map_util.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/common_layer.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/common_pagevalidate.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/common_util.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/iscroll.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/jquery.animateSprite.min.js"></script>
+    <script src="../../../resources/normal/js/common_bank_calc_util.js" type="text/javascript"></script>
+    <script src="../../../resources/normal/js/hp_common.js" type="text/javascript"></script>
+    <script src="../../../resources/normal/js/calculator.js"></script>
+    <script src="../../../resources/normal/js/streamdocs/adapter.js"></script>
+    <!--     scrap -->
+    <!-- <link href="/resources/scrap/css/process_manager.css" rel="stylesheet" /> -->
+    <!--     <script src="/resources/scrap/js/jquery-1.9.1.min.js"></script> -->
+
+</head>
+
+<body>
+    <!-- <body class="color-type2"> 타입별 -->
+    <!-- ********** Include ********** -->
+    <!-- s:skipnavi -->
+    <div id="skipnavi">
+        <script>
+            $(document).ready(function () {
+                $("#skipnavi").load("../include/inc_body_skipnavi.html");
+            });
+        </script>
+    </div>
+    <!-- ********** //Include ********** -->
+    <!-- //e:skipnavi -->
+
+    <!-- s:wrap -->
+    <div id="wrap">
+
+        <!-- ********** Include ********** -->
+        <!-- s:header -->
+        <div id="headerWrap">
+            <script>
+                $(document).ready(function () {
+                    $("#headerWrap").load("../include/inc_body_header.html");
+                });
+            </script>
+        </div>
+        <!-- //e:header -->
+
+        <!-- s:sitemapWrap -->
+        <div id="sitemapWrap" class="layerpopup sitemap-layer" tabindex="0" data-tooltip-con="sitemap-layer"
+            data-focus="sitemap-layer" data-focus-prev="btn-menu-close">
+            <script>
+                $(document).ready(function () {
+                    $("#sitemapWrap").load("../include/inc_body_sitemapWrap.html");
+                });
+            </script>
+        </div>
+        <!-- //e:sitemapWrap -->
+        <!-- ********** //Include ********** -->
+
+        <!-- s contentsWrap -->
+        <div id="contentsWrap">
+            <!-- s:subVisualWrap -->
+            <div id="subVisualWrap" class="sub-type03">
+				<div>
+					<div class="breadcrumb">
+						<a href="#none" class="home ir">홈</a>
+						<a href="#none" class="depth2">공지사항</a>
+					</div>
+					<div class="tit-wrap">
+						<div class="sub-tit">
+							<h2>공지사항</h2>
+                            <!--s:기획현행화-->
+                            <p class="desc">고려저축은행의 공지사항 및 이벤트 안내입니다.</p>
+                            <!--e:기획현행화-->
+                        </div>
+					</div>
+				</div>
+			</div>
+            <!-- //e:subVisualWrap -->
+            <!-- s:contents -->
+            <div class="contents default-wrap">
+                <div class="board-list-wrap">
+                    <!--s:기획현행화(추가)-->
+                    <div class="tab-wrap">
+                        <ul>
+                            <li class="active"><a href="../disclosure/notice_list.html">공지사항</a></li>
+                            <li><a href="../disclosure/event_list.html">이벤트</a></li>
+                        </ul>
+                    </div>
+                    <!--e:기획현행화(추가)-->
+                    <div class="search-wrap">
+                        <div class="select-wrap">
+                            <select id="searchType" title="검색어 분류선택">
+                                <option value="all">전체</option>
+                                <option value="title">제목</option>
+                                <option value="contents">내용</option>
+                            </select>
+                        </div>
+                        <input type="text" id="searchKeyword" placeholder="검색어를 입력해주세요" title="검색어 입력">
+                        <button type="button" name="button" onclick="pageFunc.selectNoticeList()" class="btn-normal form"><span>검색</span></button>
+                    </div>
+                    <table class="table-style all-c list type2">
+                        <caption>공지사항 - 리스트</caption>
+                        <colgroup>
+                            <col style="width:8%;">
+                            <col style="width:10%;">
+                            <col style="*">
+                            <col style="width:16%;">
+                            <col style="width:10%;">
+                            <col style="width:12%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">구분</th>
+                                <th scope="col" class="title">제목</th>
+                                <th scope="col">첨부파일</th>
+                                <th scope="col">등록일</th>
+                                <th scope="col">조회수</th>
+                            </tr>
+                        </thead>
+                        <tbody id="notice_tbody">
+                            <tr>
+                                <td>1</td>
+                                <td><strong>진행</strong></td>
+                                <td class="title"><a href="/center/notice_view/1231">표준약관 제정 및 시행 안내(대출이동시스템을 통한 대환대출서비스 이용약관)</a></td><td class="file"><a href="/common/download/PPIlmiHiFvZxTswFUaNK9Q%3D%3D" title="대출이동시스템을 통한 대환대출서비스 이용약관 제정 전문.hwp">다운로드</a></td>
+                                <td>2023/05/31</td>
+                                <td>19</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><strong>진행</strong></td>
+                                <td class="title"><a href="/center/notice_view/1229">2023년 2분기 NPL 매각대상 개인(신용)정보 제공 사실 공지</a></td>
+                                <td class="file"></td>
+                                <td>2023/05/30</td>
+                                <td>18</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><strong>진행</strong></td>
+                                <td class="title"><a href="/center/notice_view/1180">소멸시효 완성 대상 채무면제 통지</a></td>
+                                <td class="file"></td>
+                                <td>2023/05/30</td>
+                                <td>111</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><strong>진행</strong></td>
+                                <td class="title"><a href="/center/notice_view/1198">신종사기 수법(아파트 재건축 조합 사칭) 및 유의사항 안내</a></td>
+                                <td class="file"><a href="/common/download/le%2Bo7W2ojMuKg3ilQSwtBA%3D%3D" title="(첨부) 신종사기 수법 및 유의사항 관련 금융감독원 안내사항.pdf">다운로드</a></td>
+                                <td>2023/04/18</td>
+                                <td>78</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><strong>진행</strong></td>
+                                <td class="title"><a href="/center/notice_view/1173">표준약관 개정 및 시행 안내(전자금융,오픈뱅킹, 여신)</a></td>
+                                <td class="file"><a href="/common/download/N4%252FT7es%252FGo%252Frv4t%252FKZoG%252Fw%3D%3D" title="2._표준약관_개정(안)_신구조문대비표.hwp">다운로드</a>
+                                    <a href="/common/download/XkngNzwdk0CKs02lT0QfLQ%3D%3D" title="3._표준약관_개정(안)_전문_.hwp">다운로드</a>
+                                </td>
+                                <td>2023/03/16</td>
+                                <td>9440</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td><strong>진행</strong></td>
+                                <td class="title"><a href="/center/notice_view/1174">표준 추가약정서 개정 시행 안내</a></td>
+                                <td class="file"><a href="/common/download/UAJ%2BFtKoNpad7ZVeFAd4gQ%3D%3D" title="2._여신거래_관련_표준_추가약정서_개정_신ㆍ구조문대비표.hwp">다운로드</a><a href="/common/download/bZUFZKTU%2B%252FwDpHtCdLZbdA%3D%3D" title="3._여신거래_관련_표준_추가약정서_개정_전문_.hwp">다운로드</a></td>
+                                <td>2023/03/16</td>
+                                <td>309</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td><strong>진행</strong></td>
+                                <td class="title"><a href="/center/notice_view/1172">E-RUN 파킹통장 이율 변경 안내</a></td>
+                                <td class="file"></td>
+                                <td>2023/03/06</td>
+                                <td>106</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td><strong>진행</strong></td>
+                                <td class="title"><a href="/center/notice_view/1168">표준약관 개정 및 시행 안내(수신)</a></td>
+                                <td class="file"><a href="/common/download/t98k%252F7SOc1NCw8lZYDBmig%3D%3D" title="(수신) 표준약관 개정 신구조문 대비표.hwp">다운로드</a>
+                                    <a href="/common/download/A%2BWjhYSWtlYzL9joB0l9Vw%3D%3D" title="(수신) 표준약관 개정 전문.hwp">다운로드</a>
+                                </td>
+                                <td>2023/02/28</td>
+                                <td>90</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td><strong>진행</strong></td>
+                                <td class="title"><a href="/center/notice_view/1169">표준약관 개정 및 시행 안내(여신)</a></td>
+                                <td class="file"><a href="/common/download/HEgXGOSIiAWTGwV4juNc2g%3D%3D" title="(여신) 표준약관 개정 신구조문 대비표.hwp">다운로드</a>
+                                    <a href="/common/download/gR0nYVfXE%252FGdEvVm5vlawg%3D%3D" title="(여신) 표준약관 개정 전문.hwp">다운로드</a>
+                                </td>
+                                <td>2023/02/28</td>
+                                <td>68</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td><strong>진행</strong></td>
+                                <td class="title"><a href="/center/notice_view/1170">표준약관 개정 및 시행 안내(전자금융)</a></td>
+                                <td class="file"><a href="/common/download/Wkman0q%252FC4lfUpNGGQz3DQ%3D%3D" title="(전자금융) 표준약관 개정 신구조문 대비표.hwp">다운로드</a>
+                                    <a href="/common/download/NzIMs%2BYGHMXjiZnJLkfcWA%3D%3D" title="(전자금융) 표준약관 개정 신구조문 대비표.hwp">다운로드</a>
+                                </td>
+                                <td>2023/02/28</td>
+                                <td>52</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td><strong>진행</strong></td>
+                                <td class="title"><a href="/center/notice_view/1123">표준약관 개정 안내</a></td>
+                                <td class="file"><a href="/common/download/F5Ar3BhF1WDmla2PTvooGQ%3D%3D" title="1. 계좌통합관리서비스이용약관 개정 신구조문대비표.hwp">다운로드</a>
+                                    <a href="/common/download/Lphx7rcMrCNmBGtuuovVgg%3D%3D" title="2. 계좌통합관리서비스이용약관 개정 전문.hwp">다운로드</a>
+                                </td>
+                                <td>2022/11/28</td>
+                                <td>577</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td><strong>진행</strong></td>
+                                <td class="title"><a href="/center/notice_view/885">금융소비자보호 내부통제기준 및 금용소비자보호기준 제정 안내</a></td>
+                                <td class="file"><a href="/common/download/EBoOl7iySehGo2W%252F2B%2BCmQ%3D%3D" title="첨부1) 금융소비자보호 내부통제기준.pdf">다운로드</a><a href="/common/download/1pt7GL0dFCkedDY9EiE21w%3D%3D" title="첨부2) 금융소비자보호기준.pdf">다운로드</a></td>
+                                <td>2021/09/24</td>
+                                <td>1083</td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td><strong>진행</strong></td>
+                                <td class="title"><a href="/center/notice_view/728">채무조정제도 안내</a></td>
+                                <td class="file"></td>
+                                <td>2021/01/05</td>
+                                <td>959</td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td><strong>진행</strong></td>
+                                <td class="title"><a href="/center/notice_view/594">가계대출 휴일 상환제도 안내 </a></td>
+                                <td class="file"></td>
+                                <td>2020/07/03</td>
+                                <td>1008</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td><strong>진행</strong></td>
+                                <td class="title"><a href="/center/notice_view/532">고려저축은행 멤버십 회원 약관 개정안내</a></td>
+                                <td class="file"><a href="/common/download/U39pSYgkXHgsDfS1wkA%252FsQ%3D%3D" title="[첨부 2] 신ㆍ구조문대비표_멤버십 회원 약관개정.hwp">다운로드</a>
+                                    <a href="/common/download/JDAyjpi4Ss3C2HGA5HbeiQ%3D%3D" title="[첨부 1] 멤버십서비스_신청서_약관_200206(발송용_서식).pdf">다운로드</a>
+                                </td>
+                                <td>2020/01/20</td>
+                                <td>2429</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div id="paging_div" class="pagination-wrap">
+                        <div class="pagination">
+                            <a href="#" class="btn-circle prev nb ir">이전</a>
+                            <ul>
+                                <li><a href="#" class="btn-circle nb active">1</a></li>
+                                <li><a href="#" class="btn-circle nb">2</a></li>
+                                <li><a href="#" class="btn-circle nb">3</a></li>
+                                <li><a href="#" class="btn-circle nb">4</a></li>
+                                <li><a href="#" class="btn-circle nb">5</a></li>
+                                <li><a href="#" class="btn-circle nb">6</a></li>
+                                <li><a href="#" class="btn-circle nb">7</a></li>
+                                <li><a href="#" class="btn-circle nb">8</a></li>
+                                <li><a href="#" class="btn-circle nb">9</a></li>
+                                <li><a href="#" class="btn-circle nb">10</a></li>
+                            </ul>
+                            <a href="#" class="btn-circle next nb ir">다음</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //e:contents -->
+            <button type="button" name="button" class="btn-circle top ir btn-top">위로</button>
+        </div>
+        <!-- //e: contentsWrap -->
+
+        <!-- ********** Include ********** -->
+        <!-- s footerWrap -->
+        <div id="footerWrap">
+            <script>
+                $(document).ready(function () {
+                    $("#footerWrap").load("../include/inc_body_footer.html");
+                });
+            </script>
+        </div>
+        <!-- //e:footerWrap -->
+        <!-- ********** //Include ********** -->
+
+    </div>
+    <!-- //e:wrap -->
+</body>
+
+</html>

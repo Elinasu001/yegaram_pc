@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<!-- 헤더 -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>예가람저축은행</title>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+		<meta http-equiv="Content-Style-Type" content="text/css">
+		<meta name="keywords" content="예가람저축은행" />
+		<meta name="description" content="딴딴해서 믿을 수 있는 예가람저축은행, 예금, 적금, 신용부금, 논스톱 자동대출 등 예금, 대출금융상품 안내" />
+		<meta name="viewport" content="width=device-width">
+		<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta property="og:image" content="https://www.yegaramsb.co.kr/resources/normal/images/main/meta-img-square_new.jpg">   
+		<link rel="shortcut icon" type="image/x-icon" href="../resources/favicon.ico" />
+		<link href="../resources/normal/css/jquery.bxslider.css" rel="stylesheet"f />
+		<link href="../resources/normal/css/default.css" rel="stylesheet" />
+		<link href="../resources/normal/css/layout.css" rel="stylesheet" />
+		<link href="../resources/normal/css/contents.css" rel="stylesheet" />
+		<link href="../resources/normal/css/jquery-ui.css" rel="stylesheet" />
+		<script src="../resources/normal/js/jquery-1.11.3.min.js"></script>
+		<script src="../resources/normal/js/TweenMax.min.js"></script>
+		<script src="../resources/normal/js/jquery.bxslider.min.js"></script>
+		<script src="../resources/normal/js/placeholders.js"></script>
+		<!--     jquery-ui.js가 default.js보다 먼저 선언되어야 함 -->
+		<script src="../resources/normal/js/jquery-ui.js" type="text/javascript"></script>
+		<script src="../resources/normal/js/default.js"></script>
+		<script src="../resources/normal/js/ui.js"></script>
+		<script src="../resources/normal/pub_js/ui_pub.js"></script>
+		<script type="text/javascript" src="../resources/normal/js/jquery.form.min.js"></script> 
+		<script type="text/javascript" src="../resources/normal/js/common_ajax.js"></script>
+		<script type="text/javascript" src="../resources/normal/js/common_bank_calc_util.js"></script> 
+		<script type="text/javascript" src="../resources/normal/js/common_bank_map_util.js"></script> 
+		<script type="text/javascript" src="../resources/normal/js/common_layer.js"></script> 
+		<script type="text/javascript" src="../resources/normal/js/common_pagevalidate.js"></script>
+		<script type="text/javascript" src="../resources/normal/js/common_util.js"></script> 
+		<script type="text/javascript" src="../resources/normal/js/iscroll.js"></script> 
+		<script type="text/javascript" src="../resources/normal/js/jquery.animateSprite.min.js"></script>  
+		<script src="../resources/normal/js/common_bank_calc_util.js" type="text/javascript"></script>
+		<script src="../resources/normal/js/hp_common.js" type="text/javascript"></script>
+		<script src="../resources/normal/js/calculator.js"></script>    
+		<script src="../resources/normal/js/streamdocs/adapter.js"></script>  	
+		<style>
+			/* 화면 확인용 */
+			.guide > h2 { position:relative; margin:30px 0; font-size:1.2rem; font-weight:bold; }
+			.guide > section { margin-bottom:100px; padding-bottom:100px; border-bottom:dotted 2px #ccc; }
+			.guide > section > p { position:relative; margin-bottom:20px; padding-left:15px; font-size:24px; font-weight:600; }
+			.guide > section > p::before { position:absolute; top:10px; left:0; width:5px; height:5px; border-radius:3px; background:#666; content:""; }
+			.guide > section > p > a { color:blue; }
+			.guide-wrap { min-height:unset; /* border-bottom:dotted 2px #ccc;  */ }
+			.guide-wrap header,
+			.guide-wrap .fixed-btn-wrap,
+			.guide-wrap .bottom-menu-area,
+			.guide-wrap .pop-header { position:sticky!important; }
+			.guide-wrap .btn-layer-close { position:absolute!important; } 
+			.guide-wrap .layerpopup { display:block; position:sticky!important; }
+	
+		</style>
+	
+	
+	
+	</head>
+<body>
+<!-- <body class="color-type2"> 타입별 -->
+    <!-- ********** Include ********** -->
+    <!-- s:skipnavi -->
+    <div id="skipnavi">
+        <script>
+		$(document).ready(function(){
+			$("#skipnavi").load("../include/inc_body_skipnavi.html");
+		});
+		</script>
+    </div>
+    <!-- ********** //Include ********** -->
+    <!-- //e:skipnavi -->
+
+    <!-- s:wrap -->
+    <div id="wrap">
+
+       <!-- s contentsWrap -->
+        <div id="contentsWrap">
+
+			<div class="contents default-wrap guide">
+                <h2>table & list</h2>
+                <section>
+                    <div class="guide-wrap">
+						<p>계좌조회 - <a href="../html/normal/my/account_list.html" target="_blank">account_list.html</a></p>
+
+						<div class="table-scroll">
+							<table class="table-style caption-tit">
+								<caption>대출계좌현황</caption>
+								<colgroup>
+									<col>
+									<col style="width:12%">
+									<col style="width:9%">
+									<col style="width:9%">
+									<col style="width:9%">
+									<col style="width:9%">
+									<col style="width:9%">
+									<col style="width:9%">
+									<col style="width:9%">
+									<col style="width:110px;">
+								</colgroup>
+								<thead>
+									<tr><th class="ta-c" scope="col" style="padding:12px 3px !important;">계좌번호</th>
+									<th class="ta-c" scope="col" style="padding:12px 3px !important;">상품명</th>
+									<th class="ta-c" scope="col" style="padding:12px 3px !important;">대출원금</th>
+									<th class="ta-c" scope="col" style="padding:12px 3px !important;">대출잔액</th>
+									<th class="ta-c" scope="col" style="padding:12px 3px !important;">대출상태</th>
+									<th class="ta-c" scope="col" style="padding:12px 3px !important;">실행일자</th>
+									<th class="ta-c" scope="col" style="padding:12px 3px !important;">만기일자</th>
+									<th class="ta-c" scope="col" style="padding:12px 3px !important;">추가한도</th>
+									<th class="ta-c" scope="col" style="padding:12px 3px !important;">적용금리</th>
+									<th class="ta-c" scope="col" style="padding:12px 3px !important;">신청</th>
+								</tr></thead>
+								<tbody id="bank_list_body">
+								</tbody>
+							</table>
+						</div>
+
+						<p>대출신청상태 - <a href="../html/normal/my/account_view.html" target="_blank">account_view.html</a></p>
+
+						<table class="table-style">
+							<caption>신청목록 - 번호, 대출상품명, 신청일자, 신청번호, 신청상태 구성</caption>
+							<colgroup>
+								<col style="width:20%">
+								<col style="width:20%">
+								<col style="width:20%">
+								<col style="width:20%">
+								<col style="width:20%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th class="ta-c">번호</th>
+									<th class="ta-c">대출상품명</th>
+									<th class="ta-c">신청일자</th>
+									<th class="ta-c">신청번호</th>
+									<th class="ta-c">신청상태</th>
+								</tr>
+							</thead>
+							<tbody id="account_view_table">
+							</tbody>
+						</table>
+
+						<p>인증센터 - <a href="../html/normal/center/certificate.html" target="_blank">certificate.html</a></p>
+						<ul class="define-list ta-l type2">
+							<li>
+								<span class="de-tit">설명</span> 
+								<div class="de-cts">
+									종류 :  범용개인 인증서 <br>
+									발급대상 : 개인뱅킹 가입고객 <br>
+									용도 : 인증서가 필요한 모든거래
+								</div>
+							</li>
+							<li>
+								<span class="de-tit">기업고객</span>
+								<div class="de-cts">
+									종류 :  저축은행용<br>
+									발급대상 : 기업뱅킹 가입고객<br>
+									용도 : 저축은행 인터넷뱅킹 거래용
+								</div>
+							</li>
+						</ul>
+
+						<p>금융소비자보호 체계 - <a href="../html/normal/portal/operation_status.html" target="_blank">operation_status.html</a></p>
+						<table class="table-style">
+							<caption>민원접수 채널 - 분류, 안내로 구성</caption>
+							<colgroup>
+								<col style="width:30%">
+								<col style="width:*">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">분류</th>
+									<th scope="col">안내</th>
+								</tr>
+							</thead>
+							<tbody><tr>
+									<th class="ta-c">전화 민원접수
+									</th><td>대표번호 1877-9900 / 접수가능시간(평일 09:00 ~ 18:00)(토, 일, 공휴일 휴무)</td>
+								</tr>
+								<tr>
+									<th class="ta-c">인터넷 민원접수
+									</th><td>고려저축은행 홈페이지 고객센터 전자민원접수 <button type="button" name="button" class="btn-popup tiny ml10" onclick="javascript:PageFunc.addButtonEvent();">바로가기</button></td>
+								</tr>
+								<tr>
+									<th class="ta-c">우편(또는 지점방문) 민원접수
+									</th><td> 부산광역시 동구 중앙대로 244 흥국생명빌딩 3F 준법지원팀 민원담당자</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<p>민원센터 > 온라인상담센터 - <a href="../html/normal/portal/online_const.html" target="_blank">online_const.html</a></p>
+						<table class="table-style caption-tit">
+							<caption class="list-tit">상담센터 및 처리기간 안내</caption>
+							<colgroup>
+								<col>
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">상담센터 연락처</th>
+									<th scope="col">처리기간</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr><!--//D: 2023-07-13 구조변경-->
+									<th>대표번호 1877-9900<br>
+										(상담가능시간 : 평일 09:00 ~ 18:00 / 토, 일 공휴일 휴무)</th>
+									<td>접수일로부터 5영업일 이내</td>
+								</tr><!--D: 2023-07-13 구조변경//-->
+							</tbody>
+						</table>
+
+						<p>민원센터 > 전자민원신청 - <a href="../html/normal/portal/civil_apply.html" target="_blank">civil_apply.html</a></p>
+						<table class="table-style caption-tit">
+							<caption class="list-tit">민원센터 및 처리기간 안내</caption>
+							<colgroup>
+								<col>
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">민원센터 연락처</th>
+									<th scope="col">처리기간</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>준법지원팀  051-640-9105</th>
+									<td>접수일로부터 14영업일 이내</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<p>민원센터 > 신청내역조회/취하 - <a href="../html/normal/portal/civil_apply_list.html" target="_blank">civil_apply_list.html</a></p>
+						<table class="table-style list type2 all-c" id="examList">
+							<caption>신청내역 - 리스트</caption>
+							<colgroup>
+								<col style="width:10%;">
+								<col style="width:10%;">
+								<col style="width:15%;">
+								<col style="width:45%;">
+								<col style="width:10%;">
+								<col style="width:10%;">
+							</colgroup>
+							<thead>
+								<tr><th scope="col">선택</th>
+									<th scope="col">문의구분</th>
+									<th scope="col">진행상태</th>
+									<th scope="col" class="title">제목</th>
+									<th scope="col">접수일</th>
+									<th scope="col">처리일</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!-- s: 2023-07-17 , 신청내역이 없을경우 구조추가 -->
+								<tr>
+									<td colspan="6"><p class="no-result">신청내역이 없습니다.</p></td>
+								</tr>
+								<!-- e: 2023-07-17 , 신청내역이 없을경우 구조추가 //-->
+
+								<tr>
+									<td onclick="fn_chkBoxEvt(this)">
+										 <label for="222" class="check">
+											<input type="checkbox" name="222">
+										</label>
+									</td>
+									<td></td>
+									<td><strong>접수</strong></td>
+									<td class="title"><a href="#none">회원가입하고 싶어요</a></td>
+									<td><input type="hidden" id="222" value="H000300002"></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td onclick="fn_chkBoxEvt(this)">
+										<label for="333" class="check">
+											<input type="checkbox" name="333">
+										</label>
+									</td>
+									<td></td>
+									<td><strong>처리중</strong></td>
+									<td class="title"><a href="#none">결제됐는지 확인은 어디서 해요?</a></td>
+									<td><input type="hidden" id="333" value="H000300002"></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td onclick="fn_chkBoxEvt(this)">
+										<label for="444" class="check">
+											<input type="checkbox" name="444">
+										</label>
+									</td>
+									<td></td>
+									<td><strong>완료</strong></td>
+									<td class="title"><a href="#none">결제대금을 결제계좌 자동이체 이외의 방법으로 결제하고 싶습니다.</a></td>
+									<td><input type="hidden" id="444" value="H000300001"></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+
+						<p>민원센터 > 민원사무편람 - <a href="../html/normal/portal/affairs_manual.html" target="_blank">affairs_manual.html</a></p>
+						<div class="table-wrap">
+							<table class="table-style type3">
+								<caption>민원사무편람</caption>
+								<!-- s: 20180725 am - 캡션 상세화 -->
+								<caption>민원사무편람 - 구분, 내용으로 구성</caption>
+								<!-- //e: 20180725 am - 캡션 상세화 -->
+								<colgroup>
+									<col style="width:30%">
+									<col style="width:*">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">구분</th>
+										<th scope="col">내용</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">Ⅰ. 민원이란?</th>
+										<td>
+											<ol class="list type2">
+												<li>① 당저축은행과 관련된 업무처리에 대한 이의신청, 진정, 건의, 질의 및 기타 특정행위를 요하는 의사표시를 하는 것을 민원이라 합니다. 민원의 종류에는 금융민원과 기타민원이 있습니다.
+													<ol>
+														<li>1.금융민원</li>
+														<li>당행 금융업무와 관련하여, 고객 및 기타 이해관계인으로부터 제기되는 이의신청, 진정사항, 요청 등에 관한 사무</li>
+													</ol>
+													<ol>
+														<li>2.기타민원</li>
+														<li>당행의 업무와 관련하여 단순한 질의, 건의 및 기타 회사에 특정한 행위를 요구하는 것으로 금융 민원에 해당되지 않는 사무</li>
+													</ol>
+												</li>
+											</ol>
+											<ol class="list type2">
+												<li>② 다음 중 어느 하나라도 해당하는 경우에는 민원으로 처리하지 않습니다.
+													<ol>
+														<li>당저축은행과 사법(私法)상의 계약을 체결하고자 하는 자 또는 계약관계에 있는 자가 사법(司法)적 효과를 얻기 위하여 특정한 행위를 요구하는 경우</li>
+														<li>법원판결에 의하여 확정된 사항, 재판에 계류중인 사항, 금융감독원이 처리중인 사항 및 수사기관에서 수사중인 사항에 대하여 특정한 행위를 요구하는 경우</li>
+														<li>민원사항이 막연하여 취급할 수 없는 경우</li>
+														<li>성명, 주소 등이 분명하지 아니하거나 대리인 입증이 불명한 자가 회사에 특정한 행위를 요구하는 경우</li>
+													</ol>
+												</li>
+											</ol>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">Ⅱ. 민원신청절차</th>
+										<td>
+											<ol class="list type2">
+												<li>① 신청/첨부 서류
+													<ol>
+														<li>민원 신청시에는 각 영업점 민원안내 창구 및 전자민원창구에 비치된 민원 신청서를 이용해야 합니다.</li>
+														<li>인터넷을 이용한 전자민원창구를 통하여 민원을 접수하거나 별지 양식을 이용하지 않을 경우에는 아래 사항을 명기해야 합니다
+															<ol>
+																<li>- 본인 및 대리인의 성명, 주민등록번호(사업자번호), 주소, 전화번호(휴대전화)</li>
+																<li>- 신청취지(요구사항)</li>
+																<li>- 신청사유 (6하 원칙에 따라 기술)</li>
+															</ol>
+														</li>
+														<li>민원신청과 관련하여 당사자, 이해관계인 및 사실관계를 입증하는 첨부서류는 다음 각호와 같습니다.
+															<ol>
+																<li>- 본인인 경우 본인 실명확인증표 사본</li>
+																<li>- 대리인이 신청하는 경우 본인의 위임장 및 인감증명서</li>
+																<li>- 기타 사실 관계를 입증하는 서류 사본</li>
+															</ol>
+														</li>
+													</ol>
+												</li>
+												<li>② 신청방법
+													<ol>
+														<li>당행은 고객의 민원 및 각종 문의, 불편사항을 신속히 해결하기 위하여 각 영업점에 민원상담창구를 운영하고 있으며, 민원상담 책임자 및 각 민원처리부서 연락처가 명기된 민원사무편람을 배치하고 있습니다.</li>
+														<li>당행 인터넷 홈페이지(http://www.goryosb.co.kr) 를 통하여 민원 및 불편사항을 접수할 수 있습니다.</li>
+													</ol>
+												</li>
+												<li>③ 홈페이지 전자민원창구 안내
+													<ol>
+														<li>1. 고려저축은행 홈페이지에 접속하세요</li>
+														<li>2. 고객센터-&gt;전자민원실-&gt;민원신청</li>
+														<li>3. 민원 및 불편사항을 접수할수 있습니다.</li>
+													</ol>
+												</li>
+											</ol>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">Ⅲ. 민원접수 및 처리</th>
+										<td>
+											<ol class="list type2">
+												<li>① 민원접수
+													<ol>
+														<li>민원은 문서, 모사전송, 인터넷 등 입증이 가능한 방법으로 접수합니다. 민원의 의사표시를 문서로 증명할 필요가 없는 경우, 직접 구술 또는 전화로 접수할 수 있으며, 전자민원상담창구 또한 이용 가능합니다.</li>
+														<li>민원서류에 중대한 흠결이 있거나 관련서류가 누락되고 있다고 판단되는 경우 업무전담자가 상당한 기간을 정해 민원인에게 보완을 요구할 수 있습니다.</li>
+														<li>민원인은 민원사무의 처리가 종결되기 전에 그 신청 내용을 변경할 수 있으며 신청을 철회 또는 취하할 수 있습니다.</li>
+														<li>업무 담당자는 민원이 처리되는 즉시 민원접수 사실, 민원처리담당자명, 전화번호 등을 민원인에게 문서, 모사전송, 전자우편, 문자메세지, 녹취전화 등 입증이 가능한 방법으로 통지합니다.</li>
+													</ol>
+												</li>
+												<li>② 민원처리
+													<ol>
+														<li>민원관리책임자는 접수된 민원내용을 기초로 하여 사실관계를 확인하고 분류합니다.</li>
+														<li>민원은 접수일로 부터 <span class="em">14영업일 이내에 처리</span>를 원칙으로 합니다.(민원인의 귀책사유로 민원처리가 지연 / 민원서류 보완 or 보정소요 / 검사, 조사 및 외부 기관 질의 등에 소요되는 기간은 산입되지 않습니다.)</li>
+														<li>민원인의 요청이 있는 경우 동 사실을 민원인에게 민원처리진행상황 통지서에 따라 문서, 모사전송, 전자우편 또는 녹취전화 등으로 통지해 드립니다.</li>
+														<li>민원인이 동일한 내용의 민원서류를 정당한 사유없이 3회 이상 반복하여 제출한 경우에는 2회이상 그 처리 결과를 통지합니다.</li>
+														<li>민원처리를 종결한 경우 그 결과를 지체 없이 민원인에게 통지하고 통지사항에는 민원의 처리결과, 처리근거, 이의신청 안내 등을 포함합니다.(민원인의 소재지나 연락처가 분명하지 아니하여 보완 또는 보정의 요구가 2회에 걸쳐 반송된 때에는 민원을 철회한 것으로 보아 내부적으로 종결 처리할 수 있습니다.)</li>
+													
+												
+												<li>③ 민원인은 다음 각호에 해당하는 사유가 있는 경우 당행의 민원의 재심을 청구할 수 있습니다.
+													<ol>
+														<li>민원처리 과정 중에 제출되지 아니한 것으로서 민원의 처리결과에 중대한 영향을 미치는 새로운 사실이 나타난 경우</li>
+														<li>민원의 증거로 된 문서, 증인의 증언, 참고인의 진술 등의 자료가 위조 또는 변조된 것이거나 허위임이 밝혀진 경우</li>
+														<li>민원처리 결과에 영향을 미칠 중요한 사항에 대하여 판단하지 아니한 경우</li>
+														<li>기타민원의 기초가 관련법령, 판결 등이 변경된 경우</li>
+													</ol>
+												</li>
+											</ol>
+										</li></ol></td>
+									</tr>
+									<tr>
+										<th scope="row">Ⅲ. 민원접수 및 처리</th>
+										<td>
+											<ol class="list type2">
+												<!--//D:2023-07-13구조변경-->
+												<li>1. 민원신청서
+													<button type="button" name="button" class="btn-normal tiny" onclick="">다운로드</button>
+												</li>
+												<li>2. 위임장
+													<button type="button" name="button" class="btn-normal tiny" onclick="">다운로드</button>
+												</li>
+												<li>3. 개인정보수집∙이용∙제공 동의
+													<button type="button" name="button" class="btn-normal tiny" onclick="">다운로드</button>
+												</li>
+												<li>4. 민원처리 진행상황 통지서
+													<button type="button" name="button" class="btn-normal tiny" onclick="">다운로드</button>
+												</li>
+												<li>5. 민원취하서
+													<button type="button" name="button" class="btn-normal tiny" onclick="">다운로드</button>
+												</li>
+												<!--D:2023-07-13구조변경//-->
+											</ol>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<p>금융소비자보호 우수사례 - <a href="../html/normal/portal/civil_apply_exam.html" target="_blank">civil_apply_exam.html</a></p>
+						<table class="table-style all-c list type2" id="examList">
+                            <caption>전자민원모범사례 - 리스트</caption>
+                            <colgroup>
+                                <col style="width:8%;">
+                                <col style="width:;%">
+                                <col style="width:21%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+									<th scope="col">번호</th>
+									<th scope="col">제목</th>
+									<th scope="col">등록일</th>
+								</tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>2</th>
+                                    <td class="title"><a href="#none">보이스피싱 예방 우수사례</a></td>
+                                    <td>2019/09/27</td>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <td class="title"><a href="#none">1사1교 금융교육 실시</a></td>
+                                    <td>2019/09/27</td>
+                                </tr>
+                            </tbody>
+                        </table>
+						<div class="pagination-wrap">
+                            <div class="pagination">
+                                <ul>
+                                    <li><a href="#" class="btn-circle nb active" title="현재페이지">1</a></li>
+                                    <li><a href="#" class="btn-circle nb" onclick="PageFunc.selectExamList(2);return false;">2</a></li>
+                                </ul><a href="#" class="btn-circle next nb ir" onclick="PageFunc.selectExamList(11);return false;">다음</a>
+                            </div>
+                        </div>
+
+						<p>금융소비자 권리 > 위법계약 해지권 - <a href="../html/normal/portal/illegal_contract_cancel.html" target="_blank">illegal_contract_cancel.html</a></p>
+						<ul class="define-list">
+							<li>
+								<span class="de-tit">설명</span> <!-- 180706 am 텍스트 수정 -->
+								<div class="de-cts">금융회사가 판매원칙을 위반하여 금융상품 계약을 체결한 경우 금융소비자가 해당 계약의 해지를 요구할 수 있는 제도입니다.</div>
+							</li>
+							<li>
+								<span class="de-tit">적용상품</span>
+								<div class="de-cts">
+									금융회사가 판매원칙을 위반하여 금융상품 계약을 체결한 경우 금융소비자가 해당 계약의 해지를 요구할 수 있는 제도입니다.금융소비자와 계속적 거래가 이루어지고 금융소비자가 해지시 재산상 불이익이 발생하는 금융상품 중 다음금융상품을 제외 한 상품
+									<p>- '온라인투자연계금옹업 및 이용자보호에 관한 법률'에 따른 온라인투자연계금융업자와 체결하는 계약</p>
+									<p>- '자본시장과 금융투자업에 관한 법률'에 따른 원화로 표시된 양도성 예금증서</p>
+									<p>- '자본시장과 금융투자업에 관한 법률 시행령'에 따른 표지어음</p>
+								</div>
+							</li>
+							<li>
+								<span class="de-tit">행사기간</span>
+								<div class="de-cts">
+									금융소비자가 계약 체결에 대한 위반사항을 안 날로부터 1년 이내 (이 경우 해당 기간은 계약체결일로부터 5년 이내의 범위에 있어야 함)
+								</div>
+							</li>
+							<li>
+								<span class="de-tit">위법계약 해지요구 신청방법</span>
+								<div class="de-cts">
+									"위법계약 해지 요구서"를 작성하시어 당사에 제출해야 합니다.
+									<br>
+									· 이메일 : / <br>
+									· 팩스 : 
+								</div>
+							</li>
+							<li>
+								<span class="de-tit">전화안내</span>
+								<div class="de-cts">위법계약해지권에 대한 상세한 안내를 원하시면, 고려저축은행 고객센터 1877-9900으로 연락바랍니다.</div>
+							</li>
+
+						</ul>
+
+						<p>금융소비자 권리 > 청약철회권 - <a href="../html/normal/portal/withdrawal.html" target="_blank">withdrawal.html</a></p>
+						<ul class="define-list">
+							<li>
+								<!-- <span class="de-tit">내용설명</span> -->
+								<span class="de-tit">설명</span> <!-- 180706 am 텍스트 수정 -->
+								<div class="de-cts">금융소비자가 대출계약에 대한 숙려기간 동안 불이익 없이 대출계약을 철회할 수 있는 권리를 보장해주는 제도입니다.</div>
+							</li>
+							<li>
+								<span class="de-tit">적용대상</span>
+								<div class="de-cts">
+									일반금융소비자
+									<p><small class="accent3">* 개인 및 개인사업자, 상시근로자 5인 미만의 법인 등 단체 또는 그 단체 중 일반금융소비자로 취급 요청한 단체 등</small></p>
+								</div>
+							</li>
+							<li>
+								<span class="de-tit">적용상품</span>
+								<div class="de-cts">전 대출상품
+									<p><small class="accent3">* 단. 한국주택금융공사 유동화 대상 대출 대출 제외</small></p>
+								</div>
+							</li>
+							<li>
+								<span class="de-tit">행사절차</span>
+								<div class="de-cts">
+									대출계약 후 14일이내<span class="accent3">*</span> 철회의 의사표시**를 하고 원리금 등을 상환함으로써 계약으로부터 탈퇴
+									<p><small class="accent3">* 계약서 또는 대출금 수령일 중 나중에 발생한 날부터 기산</small></p>
+									<p><small class="accent3">** 행사수단 : 서면, 전화, 컴퓨터통신 등</small></p>
+								</div>
+							</li>
+							<li>
+								<span class="de-tit">행사요건</span>
+								<div class="de-cts">
+									원리금 상환 + 부대비용<span class="accent3">*</span> 반환
+									<p><small class="accent3">* [소비자] 담보대출의 경우 근저당권 설정 관련 수수료, 세금 등<br><span class="ml10">[금융회사] 한도약정대출(마이너스 대출)의 경우 한도약정수수료 등</span></small></p>
+								</div>
+							</li>
+
+							<!-- 180706 am 추가 -->
+							<li>
+								<span class="de-tit">접수안내</span>
+								<div class="de-cts">홈페이지. 앱 또는 전화접수(1877-9900)로 접수 가능합니다.</div>
+							</li>
+							<!-- //180706 am 추가 -->
+
+						</ul>
+
+						<p>금융소비자 권리 > 금리인하요구권 - <a href="../html/normal/portal/ratecut_info.html" target="_blank">ratecut_info.html</a></p>
+						<ul class="define-list">
+							<li>
+								<span class="de-tit">설명</span>
+								<div class="de-cts">
+									대출 등을 이용하는 금융소비자가 재산 증가, 개인신용평점 상승 등 신용상태가 개선되는 경우 약정금리 인하를 요구할 수 있는 상호저축은행법상 권리
+								</div>
+							</li>
+							<li>
+								<span class="de-tit">금리인하요구권 적용대상</span>
+								<div class="de-cts">차주의 신용상태가 금리에 영향을 주지 않은 대출을 제외한 모든 대출 상품</div>
+							</li>
+							<li>
+								<span class="de-tit">금리인하 요구사유</span>
+								<div class="de-cts">
+									금리인하 요구사유는 다음과 같습니다.
+									<div class="table-wrap">
+										<table class="table-style">
+											<caption>금리인하 요구사유</caption>
+											<thead>
+												<tr>
+													<th scope="col">가계대출</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th>
+														<ol class="list type4">
+															<li>1. 소득 증가 (취업, 승진, 이직, 전문자격 취득 등) 또는 재산 증가(자산 증가, 부채 감소) 등 재무 상태 개선</li>
+															<li>2. 개인신용평점 상승</li>
+															<li>3. 기타 차주가 신용상태 개선으로 판단하는 사항</li>
+														</ol>
+													</th>
+												</tr>
+											</tbody>
+										</table>
+
+										<table class="table-style">
+											<caption>금리인하 요구사유</caption>
+											<thead>
+												<tr>
+													<th scope="col">기업대출</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th>
+														<ol class="list type4">
+															<li>1. 재무상태 개선(이익증가, 부채 감소 등)</li>
+															<li>2. 신용도 상승(회사채 등급상승, 추가담보 제공, 특허권 취득 등)
+																</li><li>- 개인사업자는 개인신용펑점 상승</li>
+															
+															<li>3. 기타 차주가 신용상태 개선으로 판단하는 사항</li>
+														</ol>
+													</th>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</li>
+							<li>
+								<span class="de-tit">신청방법</span>
+								<div class="de-cts">
+									<ul class="list type2">
+										<li>① 모바일앱(예스뱅킹) &gt; 고객센터 &gt; 금리인하요구권</li>
+										<li>② 홈페이지 &gt; 소비자정보포털 &gt; 금융소비자 권리 &gt; 금리인하요구권</li>
+										<li>③ 전화(1877-9900) 및 영업점 방문</li>
+										<li>④ 저축은행중앙회 앱 &gt; 메인화면 우측 하단 금리인하요구권</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<span class="de-tit">접수 및 통보절차</span>
+								<div class="de-cts">
+									<ul class="list type2">
+										<li>① 차주의 금리인하 요구가 있을 때에는 금리인하요구 신청서 및 행사요건을 입증할 수 있는 증빙자료 등을 징구하여야 한다.</li>
+										<li>② 신청 접수일로부터 10영업일 이내에 처리 결과를 본인에게 유선(통화내용 기록), 우편, 휴대폰 문자메시지, 이메일 등으로 통지한다</li>
+										<li>③ 심사결과 금리인하요구가 적정하다고 인정되는 경우에는 차주와 여신조건변경 계약을 체결하여야 한다.</li>
+										<li>④ 금리인하요구권 접수, 심사결과 등 관련 기록을 보관·관리하여야 한다.</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<span class="de-tit">금리인하 요구절차</span>
+								<div class="de-cts">
+									금리인하 요구절차는 다음과 같습니다.
+									<p class="noti">※ 금리인하 심사는 행사요건을 증빙할 수 있는 증빙서류 제출 시 확인 가능합니다.<br>(전화접수 및 영업점 방문시 본인확인서류 필수)</p>
+									<img src="../../../resources/normal/images/page/img_ratecut_info.png" alt="금리인하요구권 - 요구절차 / 자세한 설명은 아래 내용 참고" class="mt20">
+									<div class="blind">
+										  <ol>
+											  <li>1.고객:신청서 및 증빙자료 제출</li>
+											  <li>2.저축은행:금리인하 적정여부 심사</li>
+											  <li>3.저축은행:결과통지</li>
+										  </ol>
+									</div>
+								</div>
+							</li>
+							<li>
+								<span class="de-tit">유의사항</span>
+								<div class="de-cts">
+									<ul class="list type2">
+										<li>① 금리인하 요구 사유에 따라 신용정보조회가 진행 될 수 있습니다.</li>
+										<li>② 금리인하 신청요건, 심사를 통해 수용 또는 불수용 될 수 있습니다.</li>
+										<li>③ 신용상태개선이 금리 산정에 영향을 주지 않는 경우 금리인하요구가 거절될 수 있습니다.</li>
+										<li>④ 신용상태 개선이 발생한 경우 신청횟수, 신청시점에 관계없이 금리인하요구 가능합니다.</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<span class="de-tit">금리인하요구 결과통지</span>
+								<div class="de-cts">
+									<ul class="list type2">
+										<li>신청서류 및 관련 서류 접수일로부터 10영업일 이내에 유선 및 문자로 개별 통지합니다.</li>
+										<li class="noti">* 휴대폰인증이 어려운 경우 상담원과의 전화 통화로 접수하실 수 있습니다.</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+
+						<p>금융소비자 권리 > 자료열람요구권 - <a href="../html/normal/portal/view_data_req.html" target="_blank">view_data_req.html</a></p>
+						<ul class="define-list">
+							<li>
+								<!-- <span class="de-tit">내용설명</span> -->
+								<span class="de-tit">설명</span> <!-- 180706 am 텍스트 수정 -->
+								<div class="de-cts">금융소비자가 「금융소비자 보호에 관한 법률」 제28조 제3항에 따라 분쟁의 조정(「금융소비자 보호에 관한 법률」제36조에 따른 분쟁의 조정) 또는 소송의 수행 등 권리구제를 위한 목적으로 금융회사가 기록 및 유지·관리하는 자료의 열람(사본제공 또는 청취)을 요구할 수 있는 제도입니다.</div>
+							</li>
+							<li>
+								<span class="de-tit">자료열람요구 <br>신청방법</span>
+								<div class="de-cts">
+									"자료 열람 요구서"를 작성하시어 당사에 제출해야 합니다.
+									<br>
+									· 이메일 : /<br>
+									· 팩스 : 
+								</div>
+							</li>
+							<li>
+								<span class="de-tit">자료의 열람 및 <br>열람 연기</span>
+								<div class="de-cts">
+									금융회사는 "자료 열람 요구서" 수령일로부터 8일 이내에 고객 앞 처리결과 통지 및 해당 자료를 열람할 수 있도록 해야 합니다 이 경우 해당 기간 내에 열람할 수 없는 정당한 사유가 있을 때에는 금융소비자에게 그 결과를 알리고 열람을 연기할 수 있으며, 그 사유가 소멸하면 지체없이 열람하게 해야 합니다.
+								</div>
+							</li>
+
+							<li>
+								<span class="de-tit">열람의 제한 <br>또는 거절</span>
+								<div class="de-cts">
+									금융회사는 다음의 어느 하나에 해당하는 경우에는 금융소비자에게 그 사유를 알리고 열람을 제한하거나 거절할 수 있습니다(「금융소비자 보호에 관한 법률」 제28조 제5항 및 「금융소비자 보호에 관한 법률 시행령」 제26조 제6항). 
+									<br>
+									· 법령에 따라 열람을 제한하거나 거절할 수 있는 경우<br>
+									· 다른 사람의 생명·신체를 해칠 우려가 있거나 다른 사람의 재산과 그 밖의 이익을 부당하게 침해할 우려가 있는 경우<br>
+									· 금융회사의 영업비밀을 현저히 침해할 우려가 있는 경우<br>
+									· 개인정보의 공개로 인해 사생활의 비밀 또는 자유를 부당하게 침해할 우려가 있는 경우<br>
+									· 열람하려는 자료가 열람목적과 관련이 없다는 사실이 명백한 경우<br>
+									· 법령 등에서 정한 보존기한 만료로 인해 자료가 삭제된 경우
+								</div>
+							</li>
+							<li>
+								<span class="de-tit">수수료 또는 <br>우송료 청구</span>
+								<div class="de-cts">금융회사는 금융소비자가 자료의 열람을 요구하는 경우 실비를 기준으로 수수료와 우송료(사본의 우송을 청구하는 경우만 해당)를 청구할 수 있습니다 (「금융소비자 보호에 관한 법률」  제28조 제6항 및 「금융소비자 보호에 관한 법률 시행령」 제26조 제7항). </div>
+							</li>
+							<li>
+								<span class="de-tit">전화안내</span>
+								<div class="de-cts">자료열람요구권에 대한 상세한 안내를 원하시면, 고려저축은행 고객센터 1877-9900으로 연락바랍니다.</div>
+							</li>
+
+						</ul>
+
+						<p>금융소비자보호 공시 > 민원공시 - <a href="../html/normal/portal/disclosure_civil_complaints.html" target="_blank">disclosure_civil_complaints.html</a></p>
+						<table class="table-style all-c list type2">
+							<caption>민원공시 - 리스트</caption>
+							<colgroup>
+								<col style="width:8%;">
+								<col style="width:10%;">
+								<col style="*">
+								<col style="width:16%;">
+								<col style="width:16%;">
+								<col style="width:12%;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">번호</th>
+									<th scope="col">구분</th>
+									<th scope="col" class="title">제목</th>
+									<th scope="col">게시일</th>
+									<th scope="col">기준일</th>
+									<th scope="col">첨부파일</th>
+								</tr>
+							</thead>
+							<tbody id="notice_tbody">
+								<tr>
+									<td>1</td>
+									<td><strong>민원공시</strong></td>
+									<td class="title">
+										<a href="/portal/disclosure_civil_complaints_view/8">2023년 1분기 민원발생건수</a>
+									</td>
+									<td>2023/04/28</td>
+									<td>2023/03/31</td>
+									<td class="file">
+										<a href="/common/download/SJqQosyeQFppQD%252FGRRfzbg%3D%3D" title="민원발생건수 공시(2023년 1분기).pdf">다운로드</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>
+										<strong>민원공시</strong>
+									</td>
+									<td class="title">
+										<a href="/portal/disclosure_civil_complaints_view/7">2022년 4분기 민원발생건수</a>
+									</td>
+									<td>2023/01/31</td>
+									<td>2022/12/31</td>
+									<td class="file">
+										<a href="/common/download/NN%2BPnH299hC4ICtgoZx3WQ%3D%3D" title="민원발생건수 공시(2022년 4분기).pdf">다운로드</a>
+									</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td><strong>민원공시</strong></td>
+									<td class="title">
+										<a href="/portal/disclosure_civil_complaints_view/6">2022년 3분기 민원발생건수</a>
+									</td>
+									<td>2022/10/31</td>
+									<td>2022/09/30</td>
+									<td class="file">
+										<a href="/common/download/EewO%252Fvuhpnpx0RBAIA40yw%3D%3D" title="민원발생건수 공시(2022년 3분기).pdf">다운로드</a>
+									</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td><strong>민원공시</strong></td>
+									<td class="title">
+										<a href="/portal/disclosure_civil_complaints_view/5">2022년 2분기 민원발생건수</a>
+									</td>
+									<td>2022/07/27</td>
+									<td>2022/06/30</td>
+									<td class="file">
+										<a href="/common/download/8hVQEv1Oi3p9S6g0QL2pYw%3D%3D" title="민원발생건수 공시(2022년 2분기).pdf">다운로드</a>
+									</td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td><strong>민원공시</strong></td>
+									<td class="title">
+										<a href="/portal/disclosure_civil_complaints_view/4">2022년 1분기 민원발생건수</a>
+									</td>
+									<td>2022/04/25</td>
+									<td>2022/03/31</td>
+									<td class="file">
+										<a href="/common/download/2gLHyuc6oC9jVbqfendJSw%3D%3D" title="2022년 1분기 민원발생건수.pdf">다운로드</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<p>금융소비자보호 공시 > 금융소비자보호 실태평가 - <a href="../html/normal/portal/evaluation_result_list.html" target="_blank">evaluation_result_list.html</a></p>
+						<table class="table-style all-c list type2">
+							<caption>금융소비자보호 실태평가 - 리스트</caption>
+							<colgroup>
+								<col style="width:8%;">
+								<col style="width:10%;">
+								<col style="*">
+								<col style="width:16%;">
+								<col style="width:16%;">
+								<col style="width:12%;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">번호</th>
+									<th scope="col">구분</th>
+									<th scope="col" class="title">제목</th>
+									<th scope="col">게시일</th>
+									<th scope="col">기준일</th>
+									<th scope="col">첨부파일</th>
+								</tr>
+							</thead>
+							<tbody id="notice_tbody">
+								<tr>
+									<td colspan="6">
+										<p class="nodata">검색결과가 없습니다.</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						
+						<p>금융소비자보호 공시 > 지급정지관련 공시 - <a href="../html/normal/portal/payment_stop_list.html" target="_blank">payment_stop_list.html</a></p>
+						<table class="table-style all-c list type2">
+							<caption>전기통신금융사기공시 - 리스트</caption>
+							<colgroup>
+								<col style="width:8%;">
+								<col style="width:18%;">
+								<col style="width:10%;">
+								<col style="width:16%;">
+								<col style="width:16%;">
+								<col style="width:16%;">
+								<col style="width:16%;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">번호</th>
+									<th scope="col">계좌번호</th>
+									<th scope="col" class="title">예금종류</th>
+									<th scope="col">지급정지 지점</th>
+									<th scope="col">지급정지 일시</th>
+									<th scope="col">지급정지 금액</th>
+									<th scope="col">지급정지 사유</th>
+								</tr>
+							</thead>
+							<tbody id="notice_tbody">
+								<tr>
+									<td colspan="7">
+										<p class="nodata">검색결과가 없습니다.</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<p>금융소비자보호 공시 > 채권소멸관련 공시 - <a href="../html/normal/portal/bond_extinction_list.html" target="_blank">bond_extinction_list.html</a></p>
+						<table class="table-style all-c list type2">
+							<caption>민원공시 - 리스트</caption>
+							<colgroup>
+								<col style="width:8%;">
+								<col style="*">
+								<col style="width:13%;">
+								<col style="width:25%;">
+								<col style="width:16%;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">번호</th>
+									<th scope="col">계좌번호</th>
+									<th scope="col" class="title">명의인</th>
+									<th scope="col">소멸되는 채권금액</th>
+									<th scope="col">채권소멸일</th>
+								</tr>
+							</thead>
+							<tbody id="notice_tbody">
+								<tr>
+									<td colspan="5">
+										<p class="nodata">검색결과가 없습니다.</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<p>채용공고 - <a href="../html/normal/intro/talent02.html" target="_blank">talent02.html</a></p>
+						<table class="table-style all-c list">
+							<caption>결산공시 - 리스트</caption>
+							<colgroup>
+								<col style="width:8%;">
+								<col style="*">
+								<col style="width:20%;">
+								<col style="width:18%;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">번호</th>
+									<th scope="col" class="title">공고명</th>
+									<th scope="col">지원기간</th>
+									<th scope="col">지원서 다운로드</th>
+								</tr>
+							</thead>
+							<tbody id="list_tbody">
+								<tr>
+									<th scope="col">01
+									</th><td class="title"><a href="#none">고려저축은행 신입/경력사원 모집</a></td>
+									<td><a href="#none">2021.11.11~2021.11.21</a></td>
+									<td class="file"><a href="#none" title="민원발생건수 공시(2023년 1분기).pdf">다운로드</a></td>
+								</tr>
+								
+							</tbody>
+						</table>
+						<div class="pagination-wrap">
+							<div class="pagination">
+								<ul>
+									<li>
+										<a href="#" onclick="pageFunc.selectNoticeList(1)" class="btn-circle nb active" title="현재페이지">1</a></li>
+								</ul>
+								<a class="btn-circle next nb ir" href="javascript:pageFunc.selectNoticeList(2)">다음</a>
+							</div>
+						</div>
+
+						<p>예금상품 - <a href="../html/normal/deposit/submain.html" target="_blank">submain.html</a></p>
+						<ul class="prod-main prod-txt">
+							<li>
+								<h3>e-정기예금 단리</h3>
+								<p class="desc">정기예금 단리(인터넷)일정금액을 일정기간동안 예치하여 안전한 수익을 목적으로 하는 정기예금 단리식 상품입니다.</p>
+								<div class="rate"><div><span>금리안내</span><p>12개월 연<strong>4.07</strong>%</p></div></div>
+								<a href="#" class="prod-more">상품 자세히보기</a>
+							</li>
+							<li>
+								<!-- s:디자인 현행화 -->
+								<h3>e-회전식정기예금 단리(회전주기별 일시 지급식)</h3>
+								<!-- e:디자인 현행화 -->
+								<p class="desc">약정한 회전주기별(12개월) 이자율이 변동되는 정기예금 단리식 상품입니다.</p>
+								<div class="rate"><div><span>금리안내</span><p>12개월 연<strong>4.10</strong>%</p></div></div>
+								<a href="#" class="prod-more">상품 자세히보기</a>
+							</li>
+							<li>
+								<h3>e-정기예금 복리</h3>
+								<p class="desc">일정금액을 일정기간동안 예치하여 안전한 수익을 목적으로 하는 정기예금 복리식 상품입니다.</p>
+								<div class="rate"><div><span>금리안내</span><p>12개월 연<strong>4.07</strong>%</p></div></div>
+								<a href="#" class="prod-more">상품 자세히보기</a>
+							</li>
+							<li>
+								<h3>e-회전식정기예금 복리(회전주기별 일시 지급식)</h3>
+								<p class="desc">약정한 회전주기별(12개월) 이자율이 변동되는 정기예금 복리식 상품입니다.</p>
+								<div class="rate"><div><span>금리안내</span><p>12개월 연<strong>4.17</strong>%</p></div></div>
+								<a href="#" class="prod-more">상품 자세히보기</a>
+							</li>
+						</ul>
+
+						<p>e-정기예금 단리 - <a href="../html/normal/deposit/product.html" target="_blank">product.html</a></p>
+						<ul class="define-list">
+							<li>
+								<span class="de-tit">약정이율</span>
+								<div class="de-cts">3.55% ~ 4.00% (확정금리)(세전)</div>
+							</li>
+							<li>
+								<span class="de-tit">금리</span>
+								<div id="rateDiv" class="de-cts">
+									<p align="right" style="text-align: right;">(2023.05.30 기준,연, 세전)</p>
+									<div class="table-wrap01">
+										<table class="table-style all-c __se_tbl_ext">
+											<caption class="sr-only">금리정보표이며 기간, 약정이율 항목이 있습니다.</caption>
+											<thead>
+												<tr>
+													<th scope="col">기간</th>
+													<th scope="col">단리식(약정이율)</th>
+													<th scope="col">복리식(연평균수익률)</th>
+												</tr>
+											</thead>
+											<tbody class="bdl-none"> 
+												<tr>
+													<td>1개월</td>
+													<td>1.30%</td>
+													<td>1.30%</td>
+												</tr>
+												<tr>
+													<td>3개월</td>
+													<td>2.10%</td>
+													<td>2.10%</td>
+												</tr>
+												<tr>
+													<td>6개월</td>
+													<td>3.40%</td>
+													<td>3.42%</td>
+												</tr>
+												<tr>
+													<td>12개월</td>
+													<td>4.00%</td>
+													<td>4.07%</td>
+												</tr>
+
+												<tr>
+													<td>24개월</td>
+													<td>3.55%</td>
+													<td>3.67%</td>
+												</tr>
+												<tr>
+													<td>36개월</td>
+													<td>3.55%</td>
+													<td>3.74%</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+
+							</li>
+							<li>
+								<span class="de-tit">우대조건</span>
+								<div class="de-cts">-</div>
+							</li>
+
+							<li>
+								<span class="de-tit">이자지급 시기 및 방법</span>
+								<div class="de-cts">
+									<p>단리식 : 매월 이자 지급</p>
+									<p>복리식 : 매월 발생하는 이자가 원금에 포함 복리 계산되어 만기에 한번에 지급</p>
+								</div>
+							</li>
+							<li>
+								<span class="de-tit">이자지급 제한 사유</span>
+								<div class="de-cts">사고신고 및 출금정지 등</div>
+							</li>
+						</ul>
+						<ul class="define-list mt20">
+							<li>
+								<span class="de-tit">세금우대상품[비과세 종합저축]</span>
+								<div class="de-cts">
+									<ul class="list type1">
+										<li>가입대상 : 만65세 이상의 거주자, 장애인복지법에 의하여 등록한 장애인, 독립유공자와 그 유족 또는 가족, 국가유공자에 의한 상이자, 기초생활보장수급자, 고엽제후유의증 환자, 5.18민주화운동 부상자</li>
+										<li>20.1.1 이후 가입(자동재예치) 분부터 직전 3개년도 과세기간 내 1회이상 금융소득 종합과세 대상자(금융소득 연간 합계액 2천만원 초과)에 해당되는 경우 추후 검증을 통해 가입대상에서 제외되며, 이후 관련 법령에서 정하는 절차에 따라 일반과세로 전환될 수 있음</li>
+										<li>관련세법이 개정될 경우 세율이 변경되거나 세금이 부과될 수 있으며, 계약기간 만료일 이후의 이자는 과세됨</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<span class="de-tit">예금자보호안내</span>
+								<div class="de-cts">
+									<div id="depositProAll" class="mark-kdic">
+										 <p><img src="../../../resources/normal/images/page/img_kdic.jpg" alt="예금보험공사  보호금융상품 1인당 최고 5천만원 (예금보험공사  보호금융상품 마크)"></p>
+										  <p>이 예금은 예금자보호법에 따라 예금보험공사가 보호하되, 보호 한도는 본 상호저축은행에 있는 귀하의 모든 예금보호 대상 금융상품의 원금과 소정의 이자를 합하여 1인당 "최고 5천만원"이며, 5천만원을 초과하는 나머지 금액은 보호하지 않습니다.</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+
+						<p>예금자보호법 - <a href="../html/normal/deposit/protect.html" target="_blank">protect.html</a></p>
+						<ul class="define-list">
+							<li>
+								<span class="de-tit tl-l">예금지급불능 상태를 방지</span>
+								<div class="de-cts">금융기관이 영업정지나 파산 등으로 고객의 예금을 지급하지 못하게 될 경우 해당 예금자는 물론 전체 금융제도의 안정성도 큰 타격을 입게 됩니다. 이러한 사태를 방지하기 위하여 우리나라에서는 예금자보호법을 제정하여 고객들의 예금을 보호하는 제도를 갖추어 놓고 있는데, 이를 ‘예금보험제도’라고 합니다.</div>
+							</li>
+							<li>
+								<span class="de-tit tl-l">보험의 원리를 이용하여 <br>예금자 보호</span>
+								<div class="de-cts">예금보험은 그 명칭에서 알 수 있듯이 “동일한 종류의 위험을 가진 사람들이 평소에 기금을 적립하여 만약의 사고에 대비한다”는 보험의 원리를 이용하여 예금자를 보호하는 제도입니다. 즉, 예금자보호법에 의해 설립된 예금보험공사가 평소에 금융기관으로부터 보험료(예금보험료)를 받아 기금(예금보험기금)을 적립한 후, 금융기관이 예금을 지급할 수 없게 되면 금융기관을 대신하여 예금을 지급하게 됩니다.</div>
+							</li>
+							<li>
+								<span class="de-tit tl-l">법에 의해 운영되는<br> 공적자금</span>
+								<div class="de-cts">예금보험은 예금자를 보호하기 위한 목적으로 법에 의해 운영되는 공적보험이기 때문에 예금을 대신 지급할 재원이 금융기관이 납부한 예금보험료만으로도 부족할 경우에는 예금보험공사가 직접 채권(예금보험기금채권)을 발행하는 등의 방법을 통해 재원을 조성하게 됩니다.</div>
+							</li>
+							<li>
+								<span class="de-tit tl-l">예금자보호법의<br>적용 범위</span>
+								<div class="de-cts">
+									<!-- s:2023-07-13 수정 -->
+									<p class="dot fc-black">보호금융상품의 경우</p>
+									<ul class="sub-list">
+										<li>이 예금은 예금자보호법에 따라 예금보험공사가 보호하되, 보호한도는 본 상호저축은행에 있는 귀하의 모든 예금보호 대상 금융상품의 원금과 소정의 이자를 합하여 1인당 "최고 5천만원"이며, 5천만원을 초과하는 나머지 금액은 보호하지 않습니다.</li>
+									</ul>
+
+									<p class="dot mt20 fc-black">비보호금융상품의 경우</p>
+									<ul class="sub-list">
+										<li>이 금융상품은 예금자보호법에 따라 예금보험공사가 보호하지 않습니다.</li>
+									</ul>
+
+									<p class="dot mt20 fc-black">후순위사채의 경우 본 사채는 예금자보호법에 따라 예금보험공사가 보호하지 않습니다.</p>
+
+									<p class="dot mt20 fc-black">예금한 금융기관으로부터 대출을 받은 경우에는 대출 채무액을 차감한 후 1인당 보호한도가 적용됩니다.</p>
+
+									<p class="dot mt20 fc-black">예금보험금은 ‘금융실명거래 및 비밀보장에 관한 법률’에 따라 실명 확인절차를 거친 예금 명의인에게 지급합니다.</p>
+									<ul class="sub-list">
+										<li>보호한도를 초과하는 예금은 예금채권자로서 파산절차 참여를 통해 일부 금액을 배당 받으실 수 있습니다.</li>
+										<li>보호금융상품 여부는 통장 등에 인자되는 보호여부 문구 또는 창구에 비치된 ‘보호금융상품등록부’를 통하여 확인하실 수 있습니다.</li>
+									</ul>
+
+									<p class="dot mt20 fc-black">소정의 이자 : 약정이자와 예금보험공사가 정하는 이자(부보금융회사의 1년 만기 정기예금 또는 이에 준하는 금융상품의 평균이자율을 고려하여 결정)중 적은 금액</p>
+									<!-- e:2023-07-13 수정 -->
+								</div>
+							</li>
+						</ul>
+
+						<p>모집인수수료율 - <a href="../html/normal/disclosure/recruitment_rate.html" target="_blank">recruitment_rate.html</a></p>
+						<table class="table-style caption-tit mt30">
+							<caption>모집인수수료율</caption>
+							<colgroup>
+								<col style="width:14%;">
+								<col style="width:20%;">
+								<col style="width:20%;">
+								<col style="width:*;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col" colspan="2">상품구분</th>
+									<th scope="col">대출금액(건별)</th>
+									<th scope="col">대출금액(건별)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="col" rowspan="3">신용대출
+									</th><td>모집법인</td>
+									<td>500만원 이하</td>
+									<td>대출금액의 3%</td>
+								</tr>
+								<tr>
+									<td>모집법인</td>
+									<td>500만원 초과</td>
+									<td>500만원을 초과하는 대출금액의 2.25% + 15만원</td>
+								</tr>
+								<tr>
+									<td>혁신금융사업자</td>
+									<td>대출금액기준</td>
+									<td>
+										<p class="dot">핀다 : 대출금액의 2.0% 이내(대출실행금리별 차등적용)</p>
+										<p class="dot">깃플 : 대출금액의 1.8% 이내(대출실행금리별 차등적용)</p>
+										<p class="dot">핀마트 : 대출금액의 1.9% 이내</p>
+										<p class="dot">카카오페이 : 대출금액의 1.7% 이내</p>
+										<p class="dot">SK 플래닛 : 대출금액의 1.7% 이내</p>
+										<p class="dot">팀윙크 : 대출금액의 1.7% 이내</p>
+										<p class="dot">뱅크샐러드 : 대출금액의 2.0% 이내</p>
+										<p class="dot">토스 : 대출금액의 1.7% 이내</p>
+										<p class="dot">핀크 : 대출금액의 2.0% 이내</p>
+										<p class="dot">키움 : 대출금액의 1.7% 이내</p>
+										<p class="dot">뱅크몰 : 대출금액의 1.7% 이내</p>
+										<p class="dot">피플펀드 : 대출금액의 1.8% 이내</p>
+										<p class="dot">네이버파이낸셜 : 대출금액의 2.0% 이내(대출실행금리별 차등적용)</p>
+										<p class="dot">현대캐피탈 : 대출금액의 1.7% 이내(대출실행금리별 차등적용)</p>
+
+										<p class="mt20">[대환대출]</p>
+										<p class="dot">네이버파이낸셜 : 대출금액의 0.8% 이내</p>
+										<p class="dot">토스 : 대출금액의 1.0% 이내</p>
+										<p class="dot">카카오페이 : 대출금액의 1.0% 이내</p>
+									</td>
+								</tr>
+
+								<tr>
+									<th scope="col" rowspan="3">보증부대출<br>(햇살론)
+									</th><td rowspan="2">모집법인</td>
+									<td rowspan="3">대출금액기준</td>
+									<td>대출금액의 1.5%</td>
+								</tr>
+								<tr>
+									<td>500만원을 초과하는 대출금액의 2.25%+15만원</td>
+								</tr>
+								<tr>
+									<td>혁신금융사업자</td>
+									<td>
+										<p class="dot">핀다 : 대출금액의 1.9% 이내(대출실행금리별 차등적용)</p>
+										<p class="dot">깃플 : 대출금액의 1.0% 이내</p>
+										<p class="dot">핀마트 : 대출금액의 1.4% 이내</p>
+										<p class="dot">SK플래닛 : 대출금액의 1.2% 이내</p>
+										<p class="dot">팀윙크 : 대출금액의 1.2% 이내</p>
+										<p class="dot">뱅크샐러드 : 대출금액의 1.0% 이내</p>
+										<p class="dot">토스 : 대출금액의 1.7% 이내</p>
+										<p class="dot">핀크 : 대출금액의 1.43% 이내</p>
+										<p class="dot">키움 : 대출금액의 1.0% 이내</p>
+										<p class="dot">뱅크몰 : 대출금액의 1.7% 이내</p>
+										<p class="dot">네이버파이낸셜 : 대출금액의 1.9% 이내(대출실행금리별 차등적용)</p>
+									</td>
+								</tr>
+
+								<tr>
+									<th scope="col" rowspan="3">담보대출<br>(부동산대출/후순위담보대출)
+									</th><td>모집법인</td>
+									<td rowspan="2">대출금액기준</td>
+									<td>대출금액의 1.5%</td>
+								</tr>
+								<tr>
+									<td>혁신금융사업자</td>
+									<td>
+										<p class="dot">담비 : 대출금액의 1.0% 이내</p>
+										<p class="dot">뱅크몰 : 대출금액의 1.0% 이내</p>
+										<p class="dot">뱅크샐러드 : 1.0% 이내</p>
+									</td>
+								</tr>
+
+							</tbody>
+						</table>
+
+						<p>온라인 서류 제출 - <a href="../html/normal/center/online_comp.html" target="_blank">online_comp.html</a></p>
+						<div id="isSUCCESS_div" class="table-wrap">
+							<h3 class="tit">증빙서류 제출 목록 (성공)</h3>
+							<table class="table-style mt0">
+								<caption>증빙서류 제출 목록</caption>
+								<colgroup>
+									<col style="width:50%;">
+									<col style="width:50%;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" colspan="2">증빙서류 제출 목록</th>
+									</tr>
+								</thead>
+								<tbody id="isSUCCESS">
+								</tbody>
+							</table>
+						</div>
+						<div id="isFAIL_div" class="table-wrap">
+							<h3 class="tit">증빙서류 제출 목록 (실패)</h3>
+							<div class="txt-box">
+								<p>아래와 같은 사유로 온라인 서류제출에 실패하였습니다.<br>실패사유를 참고하여, 관련기관 사이트 접속 및 문제 해결 후 다시 한번 온라인 서류제출을 시도해주세요.</p>
+							</div>
+							<table class="table-style mt0">
+								<caption>선택 프로그램</caption>
+								<colgroup>
+									<col style="width:30%;">
+									<col style="width:*;">
+									<col style="width:18%;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">기관 및 서류명</th>
+										<th scope="col">실패 사유</th>
+										<th scope="col">조회기관 바로가기</th>
+									</tr>
+								</thead>
+								<tbody id="isFAIL">
+								</tbody>
+							</table>
+						</div>
+
+						<p>보안프로그램 설치 - <a href="../html/normal/center/security_install.html" target="_blank">security_install.html</a></p>
+						<div class="table-wrap">
+							<table class="table-style caption-tit all-c">
+								
+								<caption>필수 프로그램 - 프로그램명, 기능, 구분, 설치현황, 다운로드로 구성</caption>
+								<colgroup>
+									<col style="width:22%;"><!-- 180622 pm 수정 -->
+									<col style="width:*;">
+									<col style="width:10%;">
+									<col style="width:12%;">
+									<col style="width:14%;"><!-- 180622 pm 수정 -->
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">프로그램명</th>
+										<th scope="col">기능</th>
+										<th scope="col">구분</th>
+										<th scope="col">설치현황</th>
+										<th scope="col">다운로드</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>고려 통합설치 프로그램<br>(VeraPort 3.0)</th>
+										<td class="td-l">고려에서&nbsp;제공하는&nbsp;보안프로그램을&nbsp;한번에&nbsp;다운받기&nbsp;위한&nbsp;프로그램입니다. </td>
+										<td>필수</td>
+										<!-- <td>설치완료</td>
+										<td>&nbsp;</td> -->
+										<td id="object_status_Veraport"><span class="install_yes">설치됨</span></td>
+										<td class="ta-c va-m">
+											<button id="object_download_Veraport" class="btn-normal tiny" onclick="javascript:fn_download_Veraport('');">설치하기</button>
+											<span id="status_installed_Veraport"></span>
+											<span id="status_unsupported_Veraport"></span>
+											<span id="status_checking_Veraport"></span>
+										</td>
+									</tr>
+									<tr>
+										<th>공동인증서 보안<br>(WizIN-Delfino G3)</th>
+										<td class="td-l">공동인증서&nbsp;로그인과&nbsp;거래내역에&nbsp;대한&nbsp;전자서명을&nbsp;위한&nbsp;프로그램입니다. </td>
+										<td>필수</td>
+										<!-- <td>미설치</td>
+										<td><button type="button" name="button" class="btn-normal tiny">설치하기</button></td> -->
+										<td id="object_status_DelfinoG3">설치됨</td>
+										<td class="ta-c va-m">
+											<button id="object_download_DelfinoG3" class="btn-normal tiny" onclick="javascript:fn_download_DelfinoG3('');">설치하기</button>
+											<span id="status_installed_DelfinoG3"></span>
+											<span id="status_unsupported_DelfinoG3"></span>
+											<span id="status_checking_DelfinoG3"></span>
+										</td>
+									</tr>
+									<tr>
+										<th>키보드보안&nbsp;/&nbsp;개인PC방화벽<br>(Ahnlab Safe Transaction)</th>
+										<td class="td-l">키보드로&nbsp;입력되는&nbsp;정보가&nbsp;유출되거나&nbsp;변조되지&nbsp;않도록&nbsp;보호하고&nbsp;비인가된&nbsp;접근&nbsp;차단&nbsp;및&nbsp;바이러스를&nbsp;검색하여&nbsp;치료해&nbsp;주는&nbsp;프로그램입니다.</td>
+										<td>필수</td>
+										<!-- <td>미설치</td>
+										<td><button type="button" name="button" class="btn-normal tiny">설치하기</button></td> -->
+										<td id="object_status_ASTx">설치됨</td>
+										<td class="ta-c va-m">
+											<button id="object_download_ASTx" class="btn-normal tiny" onclick="javascript:fn_download_ASTx('');">설치하기</button>
+											<span id="status_installed_ASTx"></span>
+											<span id="status_unsupported_ASTx"></span>
+											<span id="status_checking_ASTx"></span>
+										</td>
+									</tr>
+									<tr>
+										<th>스크래핑<br>(i-SAS 2.0)</th>
+										<td class="td-l">국민건강보험공단,국세청,민원24,은행에 접속하여 자격득실여부, 소득증명, 각종 민원서류, 계좌 거래내역을 자동 조회할 수 있는 프로그램(금리인하요구권신청, 온라인서류제출을 위해서는 필수 설치입니다.)</td>
+										<td>필수</td>
+										<!-- <td>미설치</td>
+										<td><button type="button" name="button" class="btn-normal tiny">설치하기</button></td> -->
+										<td id="object_status_NXiBASE">설치됨</td>
+										<td class="ta-c va-m">
+											<button id="object_download_NXiBASE" class="btn-normal tiny" onclick="javascript:fn_download_NXiBASE('');">설치하기</button>
+											<span id="status_installed_NXiBASE"></span>
+											<span id="status_unsupported_NXiBASE"></span>
+											<span id="status_checking_NXiBASE"></span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<table class="table-style caption-tit all-c">
+								<!-- s: 20180725 am - 캡션 상세화 -->
+								<caption>선택 프로그램 - 프로그램명, 기능, 구분, 다운로드로 구성</caption>
+								<!-- //e: 20180725 am - 캡션 상세화 -->
+								<colgroup>
+									<col style="width:22%;"><!-- 180622 pm 수정 -->
+									<col style="width:*;">
+									<col style="width:10%;">
+									<col style="width:14%;"><!-- 180622 pm 수정 -->
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">프로그램명</th>
+										<th scope="col">기능</th>
+										<th scope="col">구분</th>
+										<th scope="col">다운로드</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>아크로뱃리더 뷰어</th>
+										<td class="td-l">
+											PDF문서는 문자나 그래프, 이미지를 원본형태로 담을 수 있는 파일 형식입니다.<br>
+											Adobe Acrobat Reader란 프로그램을 설치하면 인터넷 상에서도 PDF첨부파일을 그대로 보거나 출력할 수 있습니다. 한번 설치한 이후, 한번의 클릭으로 PDF파일을 바로 이용할 수 있습니다.
+										</td>
+										<td>선택</td>
+										<td><button type="button" name="button" class="btn-normal tiny" onclick="javascript:fn_download_PDF_Viewer('');">설치하기</button></td>
+									</tr>
+								</tbody>
+							</table>
+							<p class="tbl-txt">고려저축은행 ☎ 1877-9900 ( 상담시간 : 평일 09:00 ~ 18:00 )</p>
+						</div>
+
+						<p>경영공시(위 테이블들과 동일) - <a href="../html/normal/intro/busi_summary.html" target="_blank">busi_summary.html</a></p>
+						<p>영업점안내(위 테이블들과 동일) - <a href="../html/normal/intro/branchHeadOffice.html" target="_blank">branchHeadOffice.html</a></p>
+						<p>보호금융상품등록부(위 테이블들과 동일) - <a href="../html/normal/deposit/register.html" target="_blank">register.html</a></p>
+						<p>개인정보보호(위 테이블들과 동일) - <a href="../html/normal/center/privacy_video_manage.html" target="_blank">privacy_video_manage.html</a></p>
+						<p>전자금융안내(위 테이블들과 동일) - <a href="../html/normal/center/electric_internetbanking.html" target="_blank">electric_internetbanking.html</a></p>
+						<p>비금융거래정보 등록제도(위 테이블들과 동일) - <a href="../html/normal/center/credit_reg.html" target="_blank">credit_reg.html</a></p>
+						<p>제증명서 발급신청(위 테이블들과 동일) - <a href="../html/normal/center/certificate_apply.html" target="_blank">certificate_apply.html</a></p>
+						<p>서식 및 약관 자료실(위 테이블들과 동일) - <a href="../html/normal/center/forms_list.html" target="_blank">forms_list.html</a></p>
+						<p>공지사항(위 테이블들과 동일) - <a href="../html/normal/disclosure/notice_list.html" target="_blank">notice_list.html</a></p>
+
+
+
+			
+                </section>
+            </div>
+
+
+		</div>
+        <!-- //e: contentsWrap -->
+    </div>
+    <!-- //e:wrap -->
+</body>
+</html>

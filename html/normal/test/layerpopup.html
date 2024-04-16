@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 헤더 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>예가람저축은행</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="keywords" content="예가람저축은행">
+    <meta name="description" content="딴딴해서 믿을 수 있는 고려저축은행, 예금, 적금, 신용부금, 논스톱 자동대출 등 예금, 대출금융상품 안내">
+    <meta name="viewport" content="width=device-width">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta property="og:image"
+        content="https://www.yegaramsb.co.kr/resources/normal/images/main/meta-img-square_new.jpg">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../resources/favicon.ico">
+    <link href="../../../resources/normal/css/jquery.bxslider.css" rel="stylesheet">
+    <link href="../../../resources/normal/css/default.css" rel="stylesheet">
+    <link href="../../../resources/normal/css/layout.css" rel="stylesheet">
+    <link href="../../../resources/normal/css/contents.css" rel="stylesheet">
+    <link href="../../../resources/normal/css/jquery-ui.css" rel="stylesheet">
+    <script src="../../../resources/normal/js/jquery-1.11.3.min.js"></script>
+    <script src="../../../resources/normal/js/TweenMax.min.js"></script>
+    <script src="../../../resources/normal/js/jquery.bxslider.min.js"></script>
+    <script src="../../../resources/normal/js/placeholders.js"></script>
+    <!--     jquery-ui.js가 default.js보다 먼저 선언되어야 함 -->
+    <script src="../../../resources/normal/js/jquery-ui.js" type="text/javascript"></script>
+    <script src="../../../resources/normal/js/default.js"></script>
+    <script src="../../../resources/normal/js/ui.js"></script>
+    <script src="../../../resources/normal/pub_js/ui_pub.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/jquery.form.min.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/common_ajax.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/common_bank_calc_util.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/common_bank_map_util.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/common_layer.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/common_pagevalidate.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/common_util.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/iscroll.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/jquery.animateSprite.min.js"></script>
+    <script src="../../../resources/normal/js/common_bank_calc_util.js" type="text/javascript"></script>
+    <script src="../../../resources/normal/js/hp_common.js" type="text/javascript"></script>
+    <script src="../../../resources/normal/js/calculator.js"></script>
+    <script src="../../../resources/normal/js/streamdocs/adapter.js"></script>
+    <!--     scrap -->
+    <!-- <link href="/resources/scrap/css/process_manager.css" rel="stylesheet" /> -->
+    <!--     <script src="/resources/scrap/js/jquery-1.9.1.min.js"></script> -->
+
+</head>
+
+<body>
+    <!-- <body class="color-type2"> 타입별 -->
+    <!-- ********** Include ********** -->
+    <!-- s:skipnavi -->
+    <div id="skipnavi">
+        <script>
+            $(document).ready(function () {
+                $("#skipnavi").load("../include/inc_body_skipnavi.html");
+            });
+        </script>
+    </div>
+    <!-- ********** //Include ********** -->
+    <!-- //e:skipnavi -->
+
+    <!-- s:wrap -->
+
+    <div id="wrap">
+
+        <!-- ********** Include ********** -->
+        <!-- s:header -->
+        <div id="headerWrap">
+            <script>
+                $(document).ready(function () {
+                    $("#headerWrap").load("../include/inc_body_header.html");
+                });
+            </script>
+        </div>
+        <!-- //e:header -->
+
+        <!-- s:sitemapWrap -->
+        <div id="sitemapWrap" class="layerpopup sitemap-layer" tabindex="0" data-tooltip-con="sitemap-layer"
+            data-focus="sitemap-layer" data-focus-prev="btn-menu-close">
+            <script>
+                $(document).ready(function () {
+                    $("#sitemapWrap").load("../include/inc_body_sitemapWrap.html");
+                });
+            </script>
+        </div>
+        <!-- //e:sitemapWrap -->
+        <!-- ********** //Include ********** -->
+
+        <!-- s contentsWrap -->
+        <div id="contentsWrap">
+            <!-- s:subVisualWrap -->
+            <div id="subVisualWrap" class="sub-type03">
+                <div>
+                    <div class="breadcrumb">
+                        <a href="#none" class="home ir">홈</a>
+                        <a href="#none" class="depth1">고객센터</a>
+                        <a href="#none" class="depth2">개인정보처리방침</a>
+                    </div>
+                    <div class="tit-wrap">
+                        <div class="sub-tit">
+                            <h2>개인정보보호</h2>
+                            <p class="desc">고려저축은행의 개인정보보호 안내입니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //e:subVisualWrap -->
+            <!-- s:contents -->
+            <div class="contents default-wrap">
+                <div class="privacy-wrap">
+                    <div class="tab-wrap">
+                        <ul>
+                            <li><a href="../center/privacy_credit_protect.html">개인신용정보관리 및 보호</a></li>
+                            <li><a href="../center/privacy_credit_policy.html">고객권리 안내문</a></li>
+                            <li><a href="../center/privacy_credit_system.html">개인신용정보관리보호정책</a></li>
+                            <li class="active"><a href="../center/privacy_info_policy.html">개인정보처리방침</a></li>
+                            <li><a href="../center/privacy_right_guide.html">신용정보활용체제</a></li>
+                            <li><a href="../center/privacy_video_manage.html">영상정보처리기기 운영관리방침</a></li>
+                        </ul>
+                    </div>
+                    <div class="terms-txt em-txt">
+                        <!--S:개발:DB불러오기 -->
+                        <div class="terms-dv">
+                            <dl>
+                                <dt>예가람저축은행(이하 '회사')는 ‘개인정보보호법’ 및 ‘정보통신망 이용촉진 및 정보보호 등에 관한 법률’에 따라 이용자의 개인정보 보호 및 권익을
+                                    보호하고 개인정보와 관련한 이용자의 고충을 원활하게 처리할 수 있도록 다음과 같은 개인정보처리방침을 두고 있습니다. </dt><br>
+                                <dt>제 1조 개인정보의 처리 목적</dt>
+                                <dd> 당 행은 개인정보를 다음의 목적을 위해 처리합니다. <br>처리한 개인정보는 다음의 목적이외의 용도로는 사용되지 않으며 이용 목적이 변경될 시에는
+                                    사전 동의를 구할 예정입니다.<br>
+                                    <ol class="list type4">
+                                        <li>1. 금융거래 관계 관련 <ol class="list type3">
+                                                <li>가. 금융거래와 관련한 본인확인</li>
+                                                <li>나. 금융거래와 관련하여 신용조회회사 또는 신용정보집중기관에 대한 개인신용정보의 조회, 금융거래 관계의
+                                                    설정ㆍ유지ㆍ이행ㆍ관리</li>
+                                                <li>다. 금융사고 조사, 분쟁 해결, 민원 처리 및 법령상 의무이행 등</li>
+                                                <li>라. 온라인 거래와 관련하여 전자금융거래법 제21조, 제22조에 의해 전자금융거래의 내용 추적 및 검색, 보안정책 수립용
+                                                    통계 자료로의 활용</li>
+                                            </ol>* 금융거래라 함은 여신, 수신, 내ㆍ외국환 등과 관련된 거래를 의미합니다. </li>
+                                        <li>2. 상품 및 서비스 홍보 및 판매 권유<br> 고객 만족도 조사를 통한 신규 서비스 개발 및 맞춤 서비스 제공, 인구통계학적 특성에
+                                            따른 서비스 제공 및 광고의 게재, 서비스의 유효성 확인, 경품지급, 사은행사 등 고객의 편의 및 참여기회 제공, 접속빈도 파악, 회원의
+                                            서비스이용에 대한 통계 등의 목적으로 개인정보를 처리합니다. </li>
+                                        <li>3. 홈페이지 회원가입 및 관리<br> 회원제 서비스 이용, 제한적 본인확인제 시행에 따른 본인확인, 개인식별, 부정이용방지, 비인가
+                                            사용방지, 만14세 미만 아동 개인정보 수집 시 법정대리인 동의여부 확인, 추후 법정 대리인 본인확인, 사고조사, 분쟁해결, 민원처리 및
+                                            고지사항 전달, 회원자격 유지ㆍ관리 등의 목적으로 개인정보를 처리합니다. </li>
+                                        <li>4. 관계 법령에서 동의 없이 수집ㆍ이용할 수 있도록 정해진 경우</li>
+                                        <li>5. 직원채용ㆍ인사관리 및 금융기관 임직원 정보교류 등<br> 직원채용ㆍ인사관리, 전직금융인 재취업지원 및 금융기관간 임직원 정보교류
+                                            등을 목적으로 개인정보를 처리합니다. </li>
+                                    </ol>
+                                </dd>
+                                <dt>제 2조 개인정보의 처리 및 보유 기간</dt>
+                                <dd>
+                                    <ol class="list type4">
+                                        <li>1. (금융)거래관련 개인(신용)정보는 개인(신용)정보의 수집ㆍ이용에 관한 동의일로부터 (금융)거래 종료일까지 위 이용목적을 위하여
+                                            보유ㆍ이용됩니다. 단, (금융)거래 종료일 이후에는 금융사고 조사, 분쟁 해결, 민원처리, 법령상 의무이행 및 당행의 리스크 관리업무만을
+                                            위하여 보유ㆍ이용됩니다</li>
+                                        <li>2. 조회목적의 개인(신용)정보는 개인(신용)정보의 수집ㆍ이용에 관한 동의일로부터 고객에 대한 신용정보의 제공ㆍ조회 동의의 효력 기간까지
+                                            보유ㆍ이용됩니다. 단, 신용정보 제공ㆍ조회 동의의 효력 기간 종료 후에는 금융사고 조사, 분쟁, 해결, 민원처리 및 법령상 의무이행만을
+                                            위하여 보유ㆍ이용됩니다.</li>
+                                        <li>3. 상품 및 서비스 홍보 및 판매 권유 등과 관련한 개인(신용)정보는 수집ㆍ이용에 관한 동의일로부터 동의 철회일까지 보유ㆍ이용됩니다.
+                                            단, 동의 철회일 후에는 제1조의 목적과 관련된 사고 조사, 분쟁 해결, 민원처리, 법령상 의무이행만을 위하여 보유ㆍ이용됩니다.</li>
+                                        <li>4. 회원 가입 및 관리 목적으로 수집된 개인(신용)정보는 고객의 회원 가입일로부터 회원 탈퇴일까지 보유ㆍ이용됩니다. 단 회원 탈퇴일
+                                            후에는 제1조의 목적과 관련된 사고 조사, 분쟁 해결, 민원처리, 법령상 의무이행 만을 위하여 보유ㆍ이용됩니다.</li>
+                                        <li>5. 당행 임직원 등의 개인정보는 퇴직 후에도 사고 예방ㆍ조사, 분쟁 해결, 민원처리, 법령상 의무이행만을 위하여 보유ㆍ이용됩니다.
+                                        </li>
+                                        <li>6. 온라인 거래 관련한 개인(신용)정보는 전자금융거래법 시행령 제12조에서 정하는 기간까지 보유ㆍ이용됩니다.</li>
+                                    </ol>
+                                </dd>
+                                <dt>제 3조 처리하는 개인정보의 항목</dt>
+                                <dd> 당 행은 다음과 같이 제1조 개인정보의 처리 목적에 필요한 최소한의 개인정보를 수집하고 있습니다. <ul>
+                                        <li>&lt;보유현황&gt; <ol class="list type4">
+                                                <li>1. 필수적 정보 <ol class="list type3">
+                                                        <li>가. 공통정보 : 성명, 고유식별정보, 주소, 연락처, 직업군, 국적</li>
+                                                        <li>나. 신용평가를 위한 정보(신용평가를 실시하는 대출에 한함. 예적금담보대출 취급시 제외) : 거주정보,
+                                                            연소득정보, 재직(회사),정보, 세금 체납 정보, 신용능력 정보, 공공정보 등</li>
+                                                        <li>다. (금융)거래정보 : 상품종류, 거래조건(이자율, 만기 등), 거래일시, 금액 등 거래 설정ㆍ내역 정보
+                                                            및 (금융)거래의 설정ㆍ유지ㆍ이행ㆍ관리를 위한 상담 등을 통해 생성되는 정보</li>
+                                                        <li>라. 전자금융거래 : 고객ID, 접속일시, IP주소, 이용 전화번호 등 전자금융거래법에 따른 수집 정보
+                                                        </li>
+                                                    </ol>* 본 동의 이전에 발생한 개인정보도 포함됩니다. </li>
+                                                <li>2. 선택적 정보 <ol class="list type3">
+                                                        <li>가. 필수적정보 외에 거래신청서에 기재된 정보 또는 고객이 제공한 정보 <p>• 가족사항, 세대구성, 결혼
+                                                                여부 등</p>
+                                                        </li>
+                                                    </ol>
+                                                </li>
+                                                <li>3. 인터넷 서비스 이용과정에서 아래 개인정보 항목이 자동으로 생성되어 수집될 수 있습니다.<br> : IP주소, 쿠키,
+                                                    MAC주소, 서비스 이용기록, 방문기록, 불량 이용기록 등 </li>
+                                            </ol>
+                                        </li>
+                                        <li>&lt;수집방법&gt; <ol>
+                                                <li>1. 당 행 영업점에 내방한 고객으로부터 직접 수집</li>
+                                                <li>2. 홈페이지, 팩스, 전화, 이메일 등으로부터 수집</li>
+                                                <li>3. 온라인 상 수집 툴을 이용한 수집</li>
+                                                <li>4. 고객센터의 문의사항을 통한 수집</li>
+                                            </ol>
+                                        </li>
+                                    </ul>
+                                </dd>
+                                <dt>제 4조 개인정보의 제3자 제공에 관한 사항</dt>
+                                <dd>
+                                    <ol class="list type4">
+                                        <li>1. 당행은 원칙적으로 이용자의 개인정보를 제1조에서 명시한 목적 범위 내에서 처리하며, 이용자의 사전 동의 없이는 본래의 범위를
+                                            초과하여 처리하거나 제3자에게 제공하지 않습니다. 단, 다음의 각 호의 경우에는 이용자 또는 제3자의 부당하게 침해할 우려가 있을 때를
+                                            제외하고는 개인정보를 목적 외의 용도로 이용하거나 이를 제3자에게 제공할 수 있습니다. <ol class="list type3">
+                                                <li>가. 이용자가 사전에 제3자 제공 및 공개에 동의한 경우</li>
+                                                <li>나. 다른 법률에 특별한 규정이 있는 경우</li>
+                                                <li>다. 이용자 또는 그 법정대리인이 의사표시를 할 수 없는 상태에 있거나 주소불명등으로 사전 동의를 받을 수 없는 경우로서
+                                                    명백히 이용자 또는 제3자의 급박한 생명, 신체, 재산의 이익을 위하여 필요하다고 인정되는 경우</li>
+                                                <li>라. 통계작성 및 학술연구 등의 목적을 위하여 필요한 경우로서 특정 개인을 알아볼 수 없는 형태로 개인정보를 제공하는 경우
+                                                </li>
+                                                <li>마. 범죄의 수사와 공소의 제기 및 유지를 위하여 필요한 경우</li>
+                                                <li>바. 법원의 재판업무 수행을 위하여 필요한 경우</li>
+                                                <li>사. 형(形) 및 감호, 보호처분의 집행을 위하여 필요한 경우</li>
+                                            </ol>
+                                        </li>
+                                        <li>2. 당 행은 다음과 같이 개인정보를 제3자에게 제공하고 있습니다. <div class="table-scroll">
+                                                <table class="table-style __se_tbl_ext">
+                                                    <caption>개인정보 제3자 제공 관련 사항</caption>
+                                                    <colgroup>
+                                                        <col style="width: 25%;">
+                                                        <col style="width: 25%;">
+                                                        <col style="width: 25%;">
+                                                        <col style="width: 25%;">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">제공받는 자</th>
+                                                            <th scope="col">이용목적</th>
+                                                            <th scope="col">제공정보</th>
+                                                            <th scope="col">보유 및 이용 기간</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="va-m">한국신용정보원</td>
+                                                            <td class="va-m">신용정보 집중기관</td>
+                                                            <td class="va-m">개인식별정보<br> 금융거래정보<br> 개인신용정보 </td>
+                                                            <td class="va-m" rowspan="4">개인(신용)정보가 제공 된<br>날로부터 동의 철회 시
+                                                                또는<br>제공된 목적을 달성할 때까지 </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="va-m">NICE평가정보<br>코리아크레딧뷰로</td>
+                                                            <td class="va-m">신용 조회회사</td>
+                                                            <td class="va-m">개인식별정보</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="va-m">금융결제원</td>
+                                                            <td class="va-m">지로, 전자금융, 자기앞 수표, CD공동망, CMS, 타행환, 내국환업무
+                                                            </td>
+                                                            <td class="va-m">개인식별정보<br>금융거래정보</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="va-m">한국은행</td>
+                                                            <td class="va-m">국고납부업무</td>
+                                                            <td class="va-m">개인식별정보</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </dd>
+                                <dt>제 5조 개인정보처리 위탁에 관한 사항</dt>
+                                <dd>
+                                    <ol class="list type4">
+                                        <li>1. 당행은 개인정보의 처리 위탁계약 시 개인정보보호 관련 법규의 준수, 개인정보에 관한 제3자 제공 금지 및 책임부담 등을 명확히
+                                            규정하고, 당해 계약내용을 서면 또는 전자 보관하고 있으며, 위탁업무의 내용이나 수탁자가 변경 될 경우에는 본 개인정보 처리방침을 통하여
+                                            공개하도록 하겠습니다.
+                                            <a class="accent2"
+                                                href="https://fpadmin.yegaramsb.co.kr/resources/smarteditor/smart_editor2_inputarea.html"
+                                                target="_blank" data-tooltip="popup-layer">☞ 제휴업체 및 수탁업체 현황</a>
+                                        </li>
+                                    </ol>
+                                </dd>
+                                <dt>제 6조 개인정보의 파기 절차 및 방법에 관한 사항</dt>
+                                <dd>
+                                    <ol class="list type4">
+                                        <li>1. 당 행은 개인정보의 보유기간이 경과된 경우, 다음 각 호의 사유가 없는 한 보유기간의 종료일로부터 5영업일 이내에 그 개인정보를
+                                            파기하며, 개인정보의 처리목적 달성, 해당 서비스의 폐지, 사업의 종료 등 그 개인정보가 불필요하게 되었을 때에 다음 각 호의 사유가
+                                            없는 한 개인정보의 처리가 불필요한 것으로 인정되는 날로부터 5영업일 이내에 그 개인정보를 파기합니다. <ol
+                                                class="list type3">
+                                                <li>가. 신용정보집중기관 또는 신용조회회사가 신용정보의 집중관리ㆍ활용 또는 개인의 신용도 등을 평가하기 위한 목적으로
+                                                    개인신용정보를 보유하는 경우(보유기간에 한함)</li>
+                                                <li>나. 신용정보회사 등이 민ㆍ형사상의 책임 또는 시효가 지속되거나 분쟁의 입증자료로서 개인신용정보를 보유하는 경우</li>
+                                                <li>다. 상법 제33조 등 법령에 따라 보존하여야 하는 경우</li>
+                                                <li>라. 기타 이와 유사한 정당한 사유가 있는 경우</li>
+                                            </ol>
+                                        </li>
+                                        <li>2. 개인정보가 기록된 출력물, 서면 등은 파쇄 또는 소각의 방법으로 파기하고, 전자적 파일형태의 개인정보는 복원이 불가능한 방법으로
+                                            영구 삭제하는 방법으로 파기합니다.</li>
+                                    </ol>
+                                </dd>
+                                <dt>제 7조 정보주체와 법정대리인의 권리․의무 및 행사방법에 관한 사항</dt>
+                                <dd>
+                                    <ol class="list type4">
+                                        <li>1. 고객은 당행이 처리하는 자신 및 14세 미만 아동(법정대리인만 해당)의 개인정보의 열람을 요구할 수 있습니다.</li>
+                                        <li>2. 권리 행사는 당행에 대해 개인정보보호법 시행령 제41조 제1항에 따라 서면, 전화, 전자우편, 인터넷, 모사전송(FAX)등을 통하여
+                                            하실수 있으며, 당행은 이에 대해 지체없이 조치하겠습니다.</li>
+                                        <li>3. 당행은 정보주체 권리에 다른 열람의 요구, 정정․삭제의 요구, 처리정지의 요구 시 열람등 요구를 한 자가 본인이거나 정당한
+                                            대리인인지를 확인합니다.</li>
+                                        <li>4. 고객은 당행에 대하여 자신의 개인정보 처리의 정지를 요구할 수 있습니다. 다만 다음 각 호의 어느 하나에 해당하는 경우에는 당행은
+                                            해당 사유를 고객에게 알리고, 처리정지 요구를 거절할 수 있습니다. <ol class="list type3">
+                                                <li>가. 법률에 특별한 규정이 있거나 법령상 의무를 준수하기 위하여 불가피한 경우</li>
+                                                <li>나. 다른 사람의 생명ㆍ신체를 해할 우려가 있거나 다른 사람의 재산과 그 밖의 이익을 부당하게 침해할우려가 있는 경우
+                                                </li>
+                                                <li>다. 개인정보를 처리하지 아니하면 고객과 약정한 서비스를 제공하지 못하는 등 계약의 이행이 곤란한 경우로서 고객이 그
+                                                    계약의 해지 의사를 명확하게 밝히지 아니한 경우</li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </dd>
+                                <dt>제 8조 개인정보의 안전성 확보조치에 관한 사항</dt>
+                                <dd> 당 행은 개인정보보호법 제29조에 따라 다음과 같이 안전성 확보에 필요한 기술적/관리적 및 물리적 조치를 하고 있습니다. <ol
+                                        class="list type4">
+                                        <li>1. 개인정보 취급 직원의 최소화 및 교육<br> 개인정보를 취급하는 직원을 지정하고 담당자에 한정시켜 최소화 하여 개인정보를 관리하는
+                                            대책을 시행하고 있습니다. </li>
+                                        <li>2. 내부관리계획의 수립 및 시행<br> 개인정보의 안전한 처리를 위하여 내부관리계획을 수립하고 시행하고 있습니다. </li>
+                                        <li>3. 개인정보의 암호화<br>이용자의 비밀번호는 암호화 되어 저장 및 관리되고 있어, 본인만이 알 수 있으며 중요한 데이터는 파일 및
+                                            전송 데이터를 암호화 하거나 파일 잠금 기능을 사용하는 등의 별도 보안기능을 사용하고 있습니다. </li>
+                                        <li>4. 해킹 등에 대비한 기술적 대책<br> 당 행은 해킹이나 컴퓨터 바이러스 등에 의한 개인정보 유출 및 훼손을 막기 위하여
+                                            보안프로그램을 설치하고 주기적인 갱신ㆍ점검을 하며 외부로부터 접근이 통제된 구역에 시스템을 설치하고 기술적/물리적으로 감시 및 차단하고
+                                            있습니다. </li>
+                                        <li>5. 개인정보에 대한 접근 제한<br> 개인정보를 처리하는 데이터베이스시스템에 대한 접근권한의 부여ㆍ변경ㆍ말소를 통하여 개인정보에 대한
+                                            접근통제를 위하여 필요한 조치를 하고 있으며 침입차단시스템을 이용하여 외부로부터의 무단 접근을 통제하고 있습니다. </li>
+                                        <li>6. 접속기록의 보관 및 위변조 방지<br> 개인정보처리시스템에 접속한 기록을 최소 6개월 이상 보관, 관리하고 있으며, 접속 기록이
+                                            위변조 및 도난, 분실되지 않도록 보안기능 사용하고 있습니다. </li>
+                                        <li>7. 문서보안을 위한 잠금장치 사용<br> 개인정보가 포함된 서류, 보조저장매체 등을 잠금장치가 있는 안전한 장소에 보관하고 있습니다.
+                                        </li>
+                                        <li>8. 비인가자에 대한 출입 통제<br> 개인정보를 보관하고 있는 물리적 보관 장소를 별도로 두고 이에 대해 출입통제 절차를 수립,
+                                            운영하고 있습니다. </li>
+                                    </ol>
+                                </dd>
+                                <dt>제 9조 개인정보를 자동으로 수집하는 장비의 설치ㆍ운영 및 그 거부에 관한 사항</dt>
+                                <dd>
+                                    <ol class="list type4">
+                                        <li>1. 당행 홈페이지는 이용자의 정보를 수시로 저장하고 불러오는 ‘쿠키(cookie)’를 운용합니다.<br> * 쿠키(Cookie)란
+                                            회사의 웹사이트를 운영하는데 이용되는 서버가 이용자의 컴퓨터 브라우저에 보내는 아주 작은 텍스트 파일이며 이용자의 컴퓨터 하드 디스크에
+                                            저장되기도 합니다. <ol class="list type3">
+                                                <li>가. 쿠키(Cookie) 사용 목적<br> 수집목적 : 고객 편의 제공<br> 수집항목 : 접속빈도, 방문시간, 웹사이트
+                                                    이용내역 정보 등 정보<br> 보유기간 : 웹서비스 종료시까지<br></li>
+                                                <li>나. 쿠키(Cookie)의 설치ㆍ운영 및 거부<br> 고객님은 쿠키의 설치에 대한 선택권을 가지고 있습니다. 따라서 고객은
+                                                    웹 브라우저 또는 모바일앱에서 옵션을 설정함으로써 모든 쿠키를 허용하거나, 쿠키가 저장될 때 마다 확인을 거치거나, 아니면
+                                                    모든 저장을 거부할 수 도 있습니다. 단, 쿠키 및 광고ID 저장을 거부할 경우에는 회사의 일부 서비스를 이용하는데
+                                                    어려움이 있을 수 있습니다. </li>
+                                                <li>다. 쿠키(Cookie)의 설치ㆍ허용 여부 지정 방법<br>A. PC<br> &nbsp;&nbsp;(가) Microsoft
+                                                    Edge : [설정]-[쿠키 및 사이트 권한]-[쿠키 및 사이트 데이터 관리 및 삭제]-[사이트에서 쿠키 데이터를 저장하고
+                                                    읽도록 허용]<br> &nbsp;&nbsp;(나) Chrome : [설정]-[개인정보 및 보안]-[쿠키 및 기타 사이트
+                                                    데이터]-[모든 쿠키 허용]<br>B. 모바일<br>&nbsp;&nbsp;(가) 안드로이드폰 : 구글설정→광고→광고 ID
+                                                    재설정<br>&nbsp;&nbsp;(나) 아이폰 : 아이폰설정→개인정보보호→광고→광고 식별자 재설정<br></li>
+                                            </ol>
+                                        </li>
+                                        <li>2. 당행은 Google, Inc.(이하 “Google”이라 합니다)가 제공하는 서비스인 Google Analytics를 이용해 고객의
+                                            홈페이지 이용을 분석합니다. 은행은 고객의 IP주소의 마지막 옥텟을 제거하고 비식별 조치 후 미국 내 Google 서버로 전송합니다.
+                                            Google은 은행을 대신해 정보를 처리하여 고객의 홈페이지 사용을 분석합니다. Google은 이 과정에서 개인 식별이 가능한 어떠한
+                                            정보도 처리하지 않습니다. Google의 정보 처리를 원하지 않는 경우 tools.google.com/dlpage/gaoptout에서
+                                            현재 고객의 웹 브라우저에 대한 부가 기능을 다운로드 및 설치하여 Google의 정보 처리를 거부할 수 있습니다. Google의 정보
+                                            처리에 관한 보다 자세한 내용은 www.google.com/analytics/learn/privacy.html을 참고하시기 바랍니다.
+                                        </li>
+                                    </ol>
+                                </dd>
+                                <dt>제10조 행태정보의 수집ㆍ이용ㆍ제공 및 거부 등에 관한 사항</dt>
+                                <dd>
+                                    <ol class="list type4">
+                                        <li>1. 당행은 상품ㆍ서비스 개발 및 고객 분석, 마케팅 등에 활용하기 위해 행태정보를 수집ㆍ이용하고 있습니다. 형태정보란 앱 사용 이력,
+                                            구매 및 검색 이력 등 고객 및 회원의 관심, 성향 등을 파악하고 분석할 수 있는 온라인 상의 이용자 활동정보를 말합니다. <ol
+                                                class="list type3">
+                                                <li>가. 행태정보의 사용 목적<br> 수집목적 : 상품ㆍ서비스 개발 고객분석, 마케팅<br> 수집항목 :
+                                                    광고식별정보(ADID/IDFA), 앱정보, 디바이스정보, 서비스이용기록<br> 보유기간 : 수집일로부터 3년간
+                                                    보유ㆍ이용<br></li>
+                                                <li>나. 행태정보의 설치ㆍ운영 및 거부<br> 고객님은 아래와 같은 설정을 통해 행태정보를 이용한 광고의 수신을 거부할 수
+                                                    있습니다.<br>A.안드로이드폰 : 구글설정 &gt; 광고 &gt; 광고 맞춤 설정 선택 또는 해제<br>B.아이폰 :
+                                                    아이폰설정 &gt; 개인정보보호 &gt; 광고 &gt; 광고추적제한<br></li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </dd>
+                                <dt>제11조 개인정보 보호책임자에 관한 사항</dt>
+                                <dd>
+                                    <ol class="list type4">
+                                        <li>1. 개인정보보호법 제31조 제1항에 따른 당행의 개인정보책임자는 다음과 같습니다. <ul class="list type4">
+                                                <li>▶ 개인정보 보호책임자(CPO)<br>- 권대윤<br>- 전화번호 : 02-6906-7082 </li>
+                                                <li>▶ 개인정보 보호 담당부서<br>- IT 팀<br>- 전화번호 : 02-6906-7076 </li>
+                                            </ul>
+                                        </li>
+                                        <li>2. 고객은 당 행의 서비스(또는 사업)을 이용하시면서 발생한 모든 개인정보 보호 관련 문의, 불만처리, 피해구제 등에 관한 사항을
+                                            개인정보 보호책임자 및 담당부서로 문의하실 수 있습니다. 당 행은 정보주체의 문의에 대해 지체 없이 답변 및 처리해드릴 것입니다.
+                                        </li>
+                                    </ol>
+                                </dd>
+                                <dt>제 12조 정보주체의 권익침해에 대한 구제방법</dt>
+                                <dd> 정보주체는 아래의 기관에 대해 개인정보 침해에 대한 피해구제, 상담 등을 문의하실 수 있습니다. &lt; 아래의 기관은 당 행 과는 별개의
+                                    기관으로서, 당 행의 자체적인 개인정보 불만처리, 피해구제 결과에 만족하지 못하시거나 보다 자세한 도움이 필요하시면 문의하여 주시기 바랍니다.&gt;
+                                    <ol class="list type4">
+                                        <li>1. 개인정보분쟁조정위원회 (<a href="http://www.kopico.go.kr/">www.kopico.go.kr</a> ☎
+                                            국번없이 1833-6972) </li>
+                                        <li>2. 개인정보침해신고센터 (<a href="http://privacy.kisa.or.kr/">privacy.kisa.or.kr</a> ☎
+                                            국번없이 118)</li>
+                                        <li>3. 대검찰청 사이버수사과 (<a href="http://www.spo.go.kr/">www.spo.go.kr</a> ☎ 1301)
+                                        </li>
+                                        <li>4. 경찰청 사이버수사과 (<a href="http://ecm.cyber.go.kr/">ecm.cyber.go.kr</a> ☎ 국번없이
+                                            182)</li>
+                                    </ol>
+                                </dd>
+                                <dt>제 13조 개인정보 처리방침의 변경에 관한 사항</dt>
+                                <dd>당 행이 개인정보 처리방침을 변경하는 경우에는 변경 및 시행의 시기, 변경된 내용을 지속적으로 공개하여 변경된 내용을 고객이 쉽게 확인할 수 있도록
+                                    변경 전ㆍ후를 비교하여 공개합니다.</dd>
+                                <dt>부 칙</dt>
+                                <dd>• 개인정보처리방침 버전번호 : V7.0</dd>
+                                <dd>• 개인정보처리방침 시행일자 : 2023.01.11</dd>
+                            </dl>
+                        </div>
+                        <!--E:개발:DB불러오기 -->
+                        <div tabindex="0" class="layerpopup" id="popupLayer" data-focus-prev="btn-menu-close" data-focus="popup-layer" data-tooltip-con="popup-layer" style="max-height: 782px; position: fixed; top: 55px; left: 278.5px;">
+                            <!-- 180710 pm 팝업 내용 감싸는 div추가 <div class="pop-wrap"> </div> -->
+                            <div class="pop-wrap" style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+                                <!-- s:con -->
+                                <div class="pop-cts">
+                                    <div class="table-wrap">
+                                        <table class="table-style __se_tbl_ext">
+                                            <caption>제휴업체 및 수탁업체 현황</caption>
+                                            <colgroup>
+                                                <col style="width: 50%;">
+                                                <col style="width: 50%;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">업체명</th>
+                                                    <th scope="col">위탁업무</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="va-m">A&amp;D신용정보㈜</td>
+                                                    <td class="va-m">자서대행</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">BNK캐피탈㈜</td>
+                                                    <td class="va-m">연계대출 업무</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">NICE신용정보㈜</td>
+                                                    <td class="va-m">자서대행</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">NICE평가정보㈜</td>
+                                                    <td class="va-m">신용정보서비스 / 본인확인 서비스 / 대출모집업무 위탁계약</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">SK플래닛㈜</td>
+                                                    <td class="va-m">대출모집업무 위탁계약</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">나이스신용평가정보㈜</td>
+                                                    <td class="va-m">신용정보조회 / 본인확인 서비스</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">미래신용정보㈜</td>
+                                                    <td class="va-m">자서대행</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">서민금융진흥원</td>
+                                                    <td class="va-m">대출모집 위탁업무</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">신한카드㈜</td>
+                                                    <td class="va-m">대출모집업무 위탁계약</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">웰컴저축은행㈜</td>
+                                                    <td class="va-m">대출모집업무 위탁계약 / 여신광고 제휴</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">저축은행중앙회</td>
+                                                    <td class="va-m">대출모집업무 위탁계약</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">㈜KTB신용정보</td>
+                                                    <td class="va-m">자서대행</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">㈜LG CNS</td>
+                                                    <td class="va-m">카카오 알림톡</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">㈜네이버파이낸셜</td>
+                                                    <td class="va-m">대출모집업무 위탁계약</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">㈜로운모기지</td>
+                                                    <td class="va-m">대출모집업무 위탁계약</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">㈜뱅크샐러드</td>
+                                                    <td class="va-m">대출모집업무 위탁계약</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">㈜비바리퍼블리카</td>
+                                                    <td class="va-m">대출모집업무 위탁계약 / 여신광고 제휴</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">㈜상승플러스</td>
+                                                    <td class="va-m">대출모집업무 위탁계약</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">㈜에스엘케이 솔루션</td>
+                                                    <td class="va-m">인터넷 자동차 공매</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">㈜에스티에스 컴퍼니</td>
+                                                    <td class="va-m">인터넷 자동차 공매</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">㈜엠포스</td>
+                                                    <td class="va-m">여, 수신 광고대행</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">㈜오토클릭서비스</td>
+                                                    <td class="va-m">자동차 온라인 담보 설정 업무</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">㈜와이포커스</td>
+                                                    <td class="va-m">대출모집업무 위탁계약</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">㈜은가람</td>
+                                                    <td class="va-m">대출모집업무 위탁계약</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">㈜준민파트너스</td>
+                                                    <td class="va-m">대출모집업무 위탁계약</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">㈜카카오페이</td>
+                                                    <td class="va-m">대출모집업무 위탁계약</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">㈜케이모기지</td>
+                                                    <td class="va-m">대출모집업무 위탁계약</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">㈜쿠콘</td>
+                                                    <td class="va-m">대출한도 및 금리조회 정보중계</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">㈜피플펀드</td>
+                                                    <td class="va-m">대출모집업무 위탁계약</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">㈜핀다</td>
+                                                    <td class="va-m">대출모집업무 위탁계약 / 여신광고 제휴</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">㈜핀마트</td>
+                                                    <td class="va-m">대출모집업무 위탁계약</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">㈜핀크</td>
+                                                    <td class="va-m">대출모집업무 위탁계약</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">코리아크레딧뷰로㈜</td>
+                                                    <td class="va-m">신용정보서비스 / 본인확인 서비스</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">크레파스플러스㈜</td>
+                                                    <td class="va-m">여신광고 제휴</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">키움증권㈜</td>
+                                                    <td class="va-m">대출모집업무 위탁계약</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">팀윙크㈜</td>
+                                                    <td class="va-m">대출모집업무 위탁계약 / 여신광고 제휴</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">현대캐피탈㈜</td>
+                                                    <td class="va-m">대출모집업무 위탁계약</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">흥국생명보험㈜</td>
+                                                    <td class="va-m">연계대출 업무</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">흥국화재해상보험㈜</td>
+                                                    <td class="va-m">연계대출 업무</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">교보생명</td>
+                                                    <td class="va-m">퇴직연금정기예금계약</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">국민은행</td>
+                                                    <td class="va-m">퇴직연금정기예금계약</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">농협은행</td>
+                                                    <td class="va-m">퇴직연금정기예금계약</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">대구은행</td>
+                                                    <td class="va-m">대출모집업무 위탁계약</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">대신증권</td>
+                                                    <td class="va-m">퇴직연금정기예금계약 / 신탁정기예금계약</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">대주회계법인</td>
+                                                    <td class="va-m">IFRS 회계</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">미래에셋대우</td>
+                                                    <td class="va-m">퇴직연금정기예금계약</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">미래에셋생명</td>
+                                                    <td class="va-m">퇴직연금정기예금계약</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">법무사 김성일 사무소</td>
+                                                    <td class="va-m">법조치 및 등기관련 업무</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">법무사 김성호 사무소</td>
+                                                    <td class="va-m">법조치 및 등기관련 업무</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">법무사 박을진 사무소</td>
+                                                    <td class="va-m">법조치 및 등기관련 업무</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">법무사 이재원 사무소</td>
+                                                    <td class="va-m">법조치 및 등기관련 업무</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">법무사 최대익 사무소</td>
+                                                    <td class="va-m">법조치 및 등기관련 업무</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">법무사 황영태 사무소</td>
+                                                    <td class="va-m">법조치 및 등기관련 업무</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">법무법인 리더스</td>
+                                                    <td class="va-m">법조치 및 등기관련 업무</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">수협은행</td>
+                                                    <td class="va-m">대출모집업무 위탁계약</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">신한은행</td>
+                                                    <td class="va-m">퇴직연금정기예금계약</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">에스원</td>
+                                                    <td class="va-m">경비용역업무</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">우리은행</td>
+                                                    <td class="va-m">대출모집업무위탁계약 / 퇴직연금정기예금계약 / ISA정기예금계약</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">전북은행</td>
+                                                    <td class="va-m">대출모집업무 위탁계약</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">㈜슈어엠</td>
+                                                    <td class="va-m">SMS/MMS 서비스</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">㈜스마트솔루션</td>
+                                                    <td class="va-m">본인인증 서비스(홈페이지, 모바일앱, 모집인)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">㈜티시스 아이티</td>
+                                                    <td class="va-m">고객센터 및 미화 도급 업무</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">고려신용정보(주)</td>
+                                                    <td class="va-m">채권추심 및 PDS 운영</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">㈜엔투소프트</td>
+                                                    <td class="va-m">IT시스템개발, 운영 및 관리</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">㈜티시스 아이티</td>
+                                                    <td class="va-m">IT시스템개발, 운영 및 관리, 녹취, 전화(IP-PBX) 유지보수</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">㈜한국케이블텔레콤</td>
+                                                    <td class="va-m">SMS/MMS 및 080 수신거부 서비스</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">중앙감정평가법인</td>
+                                                    <td class="va-m">감정평가</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">통인안전보관㈜</td>
+                                                    <td class="va-m">문서파기</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">하나은행</td>
+                                                    <td class="va-m">대출모집업무 위탁계약 / 퇴직연금정기예금계약</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="va-m">현대차증권</td>
+                                                    <td class="va-m">퇴직연금정기예금계약</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="btn-wrap">
+                                        <button name="button" class="btn-normal tooltip-close" type="button">닫기</button>
+                                    </div>
+                                </div>
+                                <!-- //e:con -->
+                                <button name="button" class="btn-menu-close tooltip-close" type="button" data-focus="btn-menu-close" data-focus-next="popup-layer">닫기</button>
+                            </div>
+                            <!-- //180710 pm 팝업 내용 감싸는 div추가 <div class="pop-wrap"></div> -->
+                            <div class="iScrollVerticalScrollbar iScrollLoneScrollbar" >
+                                <div class="iScrollIndicator" style="box-sizing: border-box; position: absolute; background: rgb(211, 211, 211); border: 1px solid rgba(255, 255, 255, 0.9); border-radius: 3px; width: 100%; transition-duration: 0ms; display: block; height: 185px; transform: translate(0px, 0px) translateZ(0px); transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1);"></div>
+                            </div>
+                            <div class="iScrollVerticalScrollbar iScrollLoneScrollbar" style="position: absolute; z-index: 9999; width: 15px; bottom: 2px; top: 0px; right: 0px; background: rgb(236, 236, 236); overflow: hidden;">
+                                <div class="iScrollIndicator" style="box-sizing: border-box; position: absolute; background: rgb(211, 211, 211); border: 1px solid rgba(255, 255, 255, 0.9); border-radius: 3px; width: 100%; transition-duration: 0ms; display: block; height: 185px; transform: translate(0px, 0px) translateZ(0px); transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1);"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="select-wrap">
+                        <select name="" id="selectbox" title="개인정보 처리방침 버전 선택" class="privacy04" style="display: none;">
+                            <option value="8.0">[개인정보처리방침 버전정보 8.0]</option>
+                            <option value="7.0">[개인정보처리방침 버전정보 7.0]</option>
+                            <option value="6.0">[개인정보처리방침 버전정보 6.0]</option>
+                            <option value="5.0">[개인정보처리방침 버전정보 5.0]</option>
+                            <option value="4.0">[개인정보처리방침 버전정보 4.0]</option>
+                            <option value="3.0">[개인정보처리방침 버전정보 3.0]</option>
+                            <option value="2.0">[개인정보처리방침 버전정보 2.0]</option>
+                            <option value="1.0">[개인정보처리방침 버전정보 1.0]</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- //e:contents -->
+            <button type="button" name="button" class="btn-circle top ir btn-top">위로</button>
+        </div>
+        <!-- //e: contentsWrap -->
+
+        <!-- ********** Include ********** -->
+        <!-- s footerWrap -->
+        <div id="footerWrap">
+            <script>
+                $(document).ready(function () {
+                    $("#footerWrap").load("../include/inc_body_footer.html");
+                });
+            </script>
+        </div>
+        <!-- //e:footerWrap -->
+        <!-- ********** //Include ********** -->
+
+    </div>
+    <!-- //e:wrap -->
+
+</body>
+
+</html>

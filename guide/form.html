@@ -1,0 +1,2022 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<!-- 헤더 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>예가람저축은행</title>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta name="keywords" content="예가람저축은행" />
+	<meta name="description" content="딴딴해서 믿을 수 있는 예가람저축은행, 예금, 적금, 신용부금, 논스톱 자동대출 등 예금, 대출금융상품 안내" />
+	<meta name="viewport" content="width=device-width">
+	<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta property="og:image" content="https://www.yegaramsb.co.kr/resources/normal/images/main/meta-img-square_new.jpg">   
+	<link rel="shortcut icon" type="image/x-icon" href="../resources/favicon.ico" />
+	<link href="../resources/normal/css/jquery.bxslider.css" rel="stylesheet"f />
+	<link href="../resources/normal/css/default.css" rel="stylesheet" />
+	<link href="../resources/normal/css/layout.css" rel="stylesheet" />
+	<link href="../resources/normal/css/contents.css" rel="stylesheet" />
+	<link href="../resources/normal/css/jquery-ui.css" rel="stylesheet" />
+	<script src="../resources/normal/js/jquery-1.11.3.min.js"></script>
+	<script src="../resources/normal/js/TweenMax.min.js"></script>
+	<script src="../resources/normal/js/jquery.bxslider.min.js"></script>
+	<script src="../resources/normal/js/placeholders.js"></script>
+	<!--     jquery-ui.js가 default.js보다 먼저 선언되어야 함 -->
+	<script src="../resources/normal/js/jquery-ui.js" type="text/javascript"></script>
+	<script src="../resources/normal/js/default.js"></script>
+	<script src="../resources/normal/js/ui.js"></script>
+	<script src="../resources/normal/pub_js/ui_pub.js"></script>
+	<script type="text/javascript" src="../resources/normal/js/jquery.form.min.js"></script> 
+	<script type="text/javascript" src="../resources/normal/js/common_ajax.js"></script>
+	<script type="text/javascript" src="../resources/normal/js/common_bank_calc_util.js"></script> 
+	<script type="text/javascript" src="../resources/normal/js/common_bank_map_util.js"></script> 
+	<script type="text/javascript" src="../resources/normal/js/common_layer.js"></script> 
+	<script type="text/javascript" src="../resources/normal/js/common_pagevalidate.js"></script>
+	<script type="text/javascript" src="../resources/normal/js/common_util.js"></script> 
+	<script type="text/javascript" src="../resources/normal/js/iscroll.js"></script> 
+	<script type="text/javascript" src="../resources/normal/js/jquery.animateSprite.min.js"></script>  
+	<script src="../resources/normal/js/common_bank_calc_util.js" type="text/javascript"></script>
+	<script src="../resources/normal/js/hp_common.js" type="text/javascript"></script>
+	<script src="../resources/normal/js/calculator.js"></script>    
+	<script src="../resources/normal/js/streamdocs/adapter.js"></script>  	
+	<style>
+		/* 화면 확인용 */
+		.guide > h2 { position:relative; margin:30px 0; font-size:1.2rem; font-weight:bold; }
+		.guide > section { margin-bottom:100px; padding-bottom:100px; border-bottom:dotted 2px #ccc; }
+		.guide > section > p { position:relative; margin-bottom:20px; padding-left:15px; font-size:24px; font-weight:600; }
+		.guide > section > p::before { position:absolute; top:10px; left:0; width:5px; height:5px; border-radius:3px; background:#666; content:""; }
+		.guide > section > p > a { color:blue; }
+		.guide-wrap { min-height:unset; /* border-bottom:dotted 2px #ccc;  */ }
+		.guide-wrap header,
+		.guide-wrap .fixed-btn-wrap,
+		.guide-wrap .bottom-menu-area,
+		.guide-wrap .pop-header { position:sticky!important; }
+		.guide-wrap .btn-layer-close { position:absolute!important; } 
+		.guide-wrap .layerpopup { display:block; position:sticky!important; }
+
+	</style>
+
+
+
+</head>
+<body>
+<!-- <body class="color-type2"> 타입별 -->
+    <!-- ********** Include ********** -->
+    <!-- s:skipnavi -->
+    <div id="skipnavi">
+        <script>
+		$(document).ready(function(){
+			$("#skipnavi").load("../include/inc_body_skipnavi.html");
+		});
+		</script>
+    </div>
+    <!-- ********** //Include ********** -->
+    <!-- //e:skipnavi -->
+
+    <!-- s:wrap -->
+    <div id="wrap">
+
+       <!-- s contentsWrap -->
+        <div id="contentsWrap">
+
+			<div class="contents default-wrap guide">
+                <h2>form</h2>
+                <section>
+                    <!-- <p>대출신청 - <a href="../html/normal/loan/loan_input.html" target="_blank" title="">loan_input.html</a></p> -->
+					<div class="guide-wrap">
+						<form id="frm1" name="frm1" >
+							<div class="input-wrap">
+								<div class="grid-wrap">
+									
+									<div class="grid2">
+										<div class="form-wrap" id="prod_form">
+											<label for="loan_prod" class="inp-tit req">대출상품</label>
+											<div class="select-wrap disabled"><!--D: disabled 클래스 추가-->
+												 <select name="" class="" id="loan_prod"  title="대출상품 선택">
+													<option value="">대출상품을 선택하세요</option>
+													<option value="">부동산담보대출</option>
+													<option value="">전세보증금담보대출</option>
+													<option value="">공공임대아파트보증금담보대출</option>
+													<option value="">유가증권담보대출</option>
+													<option value="">예적금담보대출</option>
+													<option value="">햇살론</option>
+												</select>
+											</div>
+										</div>
+										
+									</div>
+
+									<div class="grid2">
+										<div class="form-wrap" id="prod_form">
+											<label for="loan_prod" class="inp-tit req">대출상품</label>
+											<div class="select-wrap">
+												 <select name="" class="" id="loan_prod"  title="대출상품 선택">
+													<option value="">대출상품을 선택하세요</option>
+													<option value="">부동산담보대출</option>
+													<option value="">전세보증금담보대출</option>
+													<option value="">공공임대아파트보증금담보대출</option>
+													<option value="">유가증권담보대출</option>
+													<option value="">예적금담보대출</option>
+													<option value="">햇살론</option>
+												</select>
+											</div>
+										</div>
+										
+									</div>
+
+									<div class="grid2">
+										<div class="form-wrap" id="hp_form">
+											<label for="phone" class="inp-tit req">핸드폰번호</label>
+											<div class="phone-area">
+												<div class="select-wrap agency disabled"><!--D: disabled 클래스 추가-->
+													<select name="" class="" id="phone" title="핸드폰 통신사 선택">
+														<option selected="selected" value="">통신사</option>
+													</select>
+												</div>
+												<div class="select-wrap phone-fst">
+													<select name="" class="" title="핸드폰번호 앞자리 선택" id="phone_front" >
+														<option value="">010</option>
+													</select>
+												</div>
+												<span class="hyphen">-</span>
+												<input type="text" name="" value=""  id="phone1" placeholder="" title="핸드폰번호 가운데자리" maxlength="4">
+												<span class="hyphen">-</span>
+												<input type="text" name="" value=""  id="phone2" placeholder="" title="핸드폰번호 뒷자리" maxlength="4">
+												<input type="hidden" id="phone_hidden" name=""/>
+											</div>
+										</div>
+										<div class="form-wrap">
+											<label for="niceAuthNum" class="inp-tit req">인증번호</label>
+											<div class="nice-auth-num-area">
+												<input type="hidden" id="niceAuthNumIntervalId" value="">
+												<input type="text" id="niceAuthNum" value="" numberonly="" placeholder="" maxlength="5">
+												<button type="button" class="btn-normal form btn-nice-auth-num" id="sendBtn">인증번호요청</button>
+												<button type="button" class="btn-normal form btn-nice-auth-num" id="reSendBtn" style="display:none">재요청</button>
+												<button type="button" class="btn-normal form btn-nice-auth-num" id="confirmBtn">확인</button>
+											</div>
+										</div>
+									</div>
+									<!-- e:2023-07-17 수정 -->
+									<div class="grid2">
+										<div class="form-wrap" id="cust_name_form">
+											<label for="name" class="inp-tit req">성명</label>
+											<input type="text" name="CUST_NM" value=""  id="name" placeholder="고객실명 입력" option="" title="성명 입력" maxlength="10" disabled>
+										</div>
+										<div class="form-wrap" id="ssn_form">
+											<label for="jumin1" class="inp-tit req">주민등록번호</label>
+											<div class="jumin-area">
+												<input type="text" name="SSN1" value="" id="jumin1" placeholder="" title="주민등록번호 앞자리" maxlength="6">
+												<span class="hyphen">-</span>
+												<input type="password" name="SSN2" value="" id="SSN2" placeholder="" title="주민등록번호 뒷자리" maxlength="7"><!-- 임시처리 -->
+												<p class="rice">당 저축은행은 신용정보의 이용 및 보호에 관한 법률 시행령 제37조의2에 의거하여 주민등록번호를 수집합니다.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="grid-wrap">
+									<div class="grid2">
+										<div class="form-wrap" style="display: block;">
+											<label for="incom_annual_format" class="inp-tit req">연소득</label>
+											<input type="text" class="incom_annual_format" id="incom_annual_format" value="" placeholder="만원 단위로 입력하세요" title="연소득" maxlength="7">
+											<div class="unit-txt">만원</div>
+										</div>
+										<div class="form-wrap" style="display: block;">
+											<label for="car_yn" class="inp-tit req">차량보유여부</label>
+											<div class="select-wrap">
+												<select name="CAR_YN" id="car_yn"  title="차량보유여부 선택">
+													<option selected="selected" value="">차량보유여부를 선택하세요.</option>
+													<option value="Y">예</option>
+													<option value="N">아니오</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="grid2">
+										<div class="form-wrap" style="display: block;">
+											<label for="req_amt" class="inp-tit req">대출신청금액</label>
+											<input type="text" class="incom_annual_format" id="req_amt" value="" placeholder="만원 단위로 입력하세요" title="대출신청금액" maxlength="7" required>
+											<div class="unit-txt" id="req_amt_unit">만원</div>
+										</div>
+										<div class="form-wrap" style="display: block;">
+											<label for="req_amt" class="inp-tit req">대출신청금액</label>
+											<input type="text" class="incom_annual_format" id="req_amt" value="" placeholder="만원 단위로 입력하세요" title="대출신청금액" maxlength="7">
+											<div class="unit-txt" id="req_amt_unit">만원</div>
+										</div>
+									</div>
+									<div class="grid2">
+										<div class="form-wrap" style="display: block;">
+											<label for="job_cd_1" class="inp-tit req">직장구분</label>
+											<div class="select-wrap">
+												<select class="job_type0" name="job" id="job_cd_1"  title="직장구분 선택">
+													<option selected="selected" value="">선택</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="grid2">
+										<div class="form-wrap" style="display: block;">
+											<label for="job_medical" class="inp-tit req">직장의료보험구분</label>
+											<div class="select-wrap">
+												<select name="JOB_MEDICAL_INSURANCE_CD" id="job_medical"  title="직장의료보험구분 선택"> 
+													<option selected="selected" value="">의료보험구분을 선택하세요</option>
+												</select>
+											</div>
+										</div>
+									</div>
+	
+								</div>
+							</div>
+						</form>
+					</div>
+                </section>
+
+				<section>
+                    <!-- <p>확인서 - <a href="../html/normal/loan/loan_input.html" target="_blank" title="">loan_input.html</a></p> -->
+					<div class="guide-wrap">
+                        <div class="line-box">
+							<div class="agree-wrap mt0">
+								<p class="tit-txt">대출신청을 위한 약관에 동의하시겠습니까?</p>
+								<div class="agree-area bor-line-gray">
+									<div class="agree-cts">
+									 <div class="all-agree">
+											<span class="ctm-check">
+												<input type="checkbox" name="check" id="all-check" value="">
+												<label for="all-check">아래의 다음 필수약관에 모두 동의합니다.</label>
+											</span>
+											<button type="button" name="button" id="btnAgreemenAll" class="btn-normal tiny hide" data-tooltip="agreementall-layer">자세히보기</button>
+										</div>
+										<div class="items-wrap">
+			                            	<div class="mt20 mb10 fc-black">※열람하실 동의서 유형을 선택해 주시기 바랍니다.</div>
+											<span class="radio-area">
+												<label for="agr_dtl_yn_1" class="radio r-on mr10"><input type="radio" name="agr_dtl_yn" id="agr_dtl_yn_1" value="N" checked="checked">요약동의서</label>
+												<label for="agr_dtl_yn_2" class="radio"><input type="radio" name="agr_dtl_yn" id="agr_dtl_yn_2" value="Y">상세동의서</label>
+											</span>
+										</div>
+										<div class="agree-box">
+											<div class="items-wrap" id='agreementLayer1'><!--<div class="items-wrap" id='${CODE_T000800001}'>-->
+												<div class="items">
+													<div class="item-check">
+														<div>
+															<span class="ctm-check">
+																<input type="checkbox" name="check" id="agree1" value="">
+																<!-- <label for="agree1"></label> -->
+																<label for="agree1">[필수] 개인(신용)정보 조회 동의서</label>
+															</span>
+															<p class="item-tit">
+																<!-- <label for="agree1"><span class="chk_span">[필수] 개인(신용)정보 조회 동의서</span></label> -->
+																<button type="button" name="button" id="btnAgree1" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="items-wrap" id='agreementLayer2'><!--<div class="items-wrap" id='${CODE_T000800002}'>-->
+												<div class="items">
+													<div class="item-check">
+														<div>
+															<span class="ctm-check">
+																<input type="checkbox" name="check" id="agree5" value="">
+																<!-- <label for="agree5"></label> -->
+																<label for="agree5">[필수] 개인(신용)정보 수집·이용·제공 동의서(여신 금융 거래)</label>
+															</span>
+															<p class="item-tit">
+																<!-- <label for="agree5"> <span class="chk_span">[필수] 개인(신용)정보 수집·이용·제공 동의서(여신 금융 거래)</span></label>  -->
+																<button type="button" name="button" id="btnAgree2" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="items-wrap" id='manualLayer01'><!--<div class="items-wrap" id='${CODE_T000800004}'>-->
+												<div class="items">
+													<div class="item-check">
+														<div>
+															<span class="ctm-check">
+																<input type="checkbox" name="check" id="agree9" value="">
+																<!-- <label for="agree9"></label> -->
+																<label for="agree9"><span class="chk_span">[필수] 상품설명서(신용대출용)</span></label>
+															</span>
+															<p class="item-tit">
+																<!-- <label for="agree9"><span class="chk_span">[필수] 상품설명서(신용대출용)</span></label> -->
+																<!-- <span class="chk_span"></span> --><button type="button" name="button" id="btnAgree9" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+														</div>
+													</div>
+												</div>
+												<div class="subcheck-area guide-means add_class2">
+			                                    	<div class="sub-box">
+			                                    		<div>
+			                                    			<span class="ctm-check checked">
+																<input type="checkbox" name="check" id="prod_terms_agree0" class="prod_terms_agree0" value="" checked disabled="disabled">
+																<label for="prod_terms_agree0">금리인하요구권에 대한 상기의 설명을 확인하였습니다.</label>
+															</span>
+			                                    		</div>
+														<div>
+															<p class="check-tit">대출거절사유 고지신청서 <br>
+															<span class="radio-area">
+																<span class="ctm-radio">
+																	<input type="radio" name="prod_terms_agree4" id="prod_terms_agree4_1" value="Y">
+																	<label for="prod_terms_agree4_1">신청</label>
+																</span>
+																<span class="ctm-radio checked">
+																	<input type="radio" name="prod_terms_agree4" id="prod_terms_agree4_2" value="N" checked>
+																	<label for="prod_terms_agree4_2">신청하지 않음</label>
+																</span>
+															</span>
+														</div>
+														<div>	
+															<p class="check-tit">대학생·청년층확인서 <br>
+															<span class="radio-area">
+																<span class="ctm-radio">
+																	<input type="radio" name="prod_terms_agree5" id="prod_terms_agree5_1" value="Y" disabled="disabled">
+																	<label for="prod_terms_agree5_1">설명 받았음</label>
+																</span>
+																<span class="ctm-radio">
+																	<input type="radio" name="prod_terms_agree5" id="prod_terms_agree5_2" value="N" disabled="disabled">
+																	<label for="prod_terms_agree5_2">설명 받지 않았음</label>
+																</span>
+															</span>
+														</div>
+				                                    </div>
+			                                    </div>
+											</div>
+											<div class="items-wrap" id='manualLayer02'><!--<div class="items-wrap" id='${CODE_T000800005}'>-->
+												<div class="items">
+													<div class="item-check">
+														<div>
+															<span class="ctm-check">
+																<input type="checkbox" name="check" id="agree19" value="">
+																<!-- <label for="agree19"></label> -->
+																<label for="agree19"><span class="chk_span">[필수] 상품설명서(리테일대출용)</span></label>
+															</span>
+															<p class="item-tit">
+																<!-- <label for="agree19"><span class="chk_span">[필수] 상품설명서(리테일대출용)</span></label> -->
+																<button type="button" name="button" id="btnAgree19" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+														</div>
+													</div>
+												</div>
+												<div class="subcheck-area guide-means add_class_2">
+			                                    	<div class="sub-box">
+			                                    		<div>
+			                                    			<span class="ctm-check checked">
+																<input type="checkbox" name="check" id="prod_terms_agree0" class="prod_terms_agree0" value="" checked disabled="disabled">
+																<label for="prod_terms_agree0">금리인하요구권에 대한 상기의 설명을 확인하였습니다.</label>
+															</span>
+			                                    		</div>
+														<div>
+															<p class="check-tit">대출거절사유 고지신청서 <br>
+															<span class="radio-area">
+																<span class="ctm-radio">
+																	<input type="radio" name="prod_terms_agree7" id="prod_terms_agree7_1" value="Y">
+																	<label for="prod_terms_agree7_1">신청</label>
+																</span>
+																<span class="ctm-radio checked">
+																	<input type="radio" name="prod_terms_agree7" id="prod_terms_agree7_2" value="N" checked>
+																	<label for="prod_terms_agree7_2">신청하지 않음</label>
+																</span>
+															</span>
+														</div>
+				                                    </div>
+			                                    </div>
+											</div>
+											<div class="items-wrap" id='agreementLayer5'><!--<div class="items-wrap" id='${CODE_T000800006}'>-->
+												<div class="items">
+													<div class="item-check">
+														<div>
+															<span class="ctm-check">
+																<input type="checkbox" name="check" id="agree13" value="" >
+																<!-- <label for="agree13"></label> -->
+																<label for="agree13"><span class="chk_span">[필수] 개인(신용)정보 조회동의서(서민금융진흥원)</span></label>
+															</span>
+															<p class="item-tit">
+																<!-- <label for="agree13"><span class="chk_span">[필수] 개인(신용)정보 조회동의서(서민금융진흥원)</span></label> -->
+																<button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="items-wrap" id='agreementLayer6'><!--<div class="items-wrap" id='${CODE_T000800007}'>-->
+												<div class="items">
+													<div class="item-check">
+														<div>
+															<span class="ctm-check">
+																<input type="checkbox" name="check" id="agree16" value="" >
+																<!-- <label for="agree16"></label> -->
+																<label for="agree16"><span class="chk_span">[필수] 개인(신용)정보 수집·이용·제공 동의서(서민금융진흥원)</span></label>
+															</span>
+
+															<p class="item-tit">
+																<!-- <label for="agree16"><span class="chk_span">[필수] 개인(신용)정보 수집·이용·제공 동의서(서민금융진흥원)</span></label> -->
+																<button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="items-wrap" id='agreementLayer7'><!--<div class="items-wrap" id='${CODE_T000800008}'>-->
+												<div class="items">
+													<div class="item-check">
+														<div>
+															<span class="ctm-check">
+																<input type="checkbox" name="check" id="agree21" value="" >
+																<!-- <label for="agree21"></label> -->
+																<label for="agree21"><span class="chk_span">[필수] 개인(신용)정보 및 기업(신용)정보 조회·수집·이용·제공과 행정·정보공동이용, 전자금융거래확인서 발급을 위한 동의서</span></label>
+															</span>
+
+															<p class="item-tit">
+																<!-- <label for="agree21"><span class="chk_span">[필수] 개인(신용)정보 및 기업(신용)정보 조회·수집·이용·제공과 행정·정보공동이용, 전자금융거래확인서 발급을 위한 동의서</span></label> -->
+																<button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="items-wrap" id='agreementLayer8'><!--<div class="items-wrap" id='${CODE_T000800009}'>-->
+												<div class="items">
+													<div class="item-check">
+														<div>
+															<span class="ctm-check">
+																<input type="checkbox" name="check" id="agree24" value="" >
+																<!-- <label for="agree24"></label> -->
+																<label for="agree24"><span class="chk_span">[필수] 계약 체결 · 이행 등을 위한 필수 동의서(개인금융성 신용보험용)</span></label>
+															</span>
+
+															<p class="item-tit">
+																<!-- <label for="agree24"><span class="chk_span">[필수] 계약 체결 · 이행 등을 위한 필수 동의서(개인금융성 신용보험용)</span></label> -->
+																<button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+														</div>
+													</div>
+												</div>
+												<p class="rice accent3">상기 사항에 동의 시, 저금리 정책 상품의 결과조회 및 취급이 가능하며 동의에 의한 개인(신용)정보 조회는 귀하의 신용등급에 영향을 미치지 않습니다. 단, 당행의 신용평가시스템 및 해당 정책상품 실행기관의 심사기준과 개인의 신용도에 따라 대출여부가 결정됩니다.</p>
+											</div>
+											<div class="items-wrap" id='agreementLayer4'><!--<div class="items-wrap" id='${CODE_T000800010}'>-->
+												<div class="items">
+													<div class="item-check">
+														<div>
+															<span class="ctm-check">
+																<input type="checkbox" name="check" id="agree11" value="">
+																<!-- <label for="agree11"></label> -->
+																class="chk_label" [필수] CMS 출금이체 동의
+															</span>
+
+															<p class="item-tit">
+																<!-- <label for="agree11"><span class="chk_span">[필수] CMS 출금이체 동의</span></label> -->
+																<button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="items-group"style="border-bottom:0;">
+											<div class="all-chAgree all-agree">
+												<span class="ctm-check">
+													<input type="checkbox" name="check" id="all-ch-check" value="">
+													<label for="all-ch-check">아래의 다음 선택약관에 모두 동의합니다.</label>
+												</span>
+												<button type="button" name="button" id="btnAgreemenChall" class="btn-normal tiny hide" data-tooltip="agreementChall-layer">자세히보기</button>
+											</div><br>
+												<div class="items-wrap" id='agreementLayer3'><!--<div class="items-wrap" id='${CODE_T000800003}'>-->
+													<div class="items">
+														<div class="item-check">
+															<div>
+																<span class="ctm-check">
+																	<input type="checkbox" name="check" id="agree6" value="">
+																	<!-- <label for="agree6"></label> -->
+																	<label for="agree6"><span class="chk_span">[선택] 개인(신용)정보 수집·이용·제공 동의서(상품서비스 안내)</span></label>
+																</span>
+
+																<p class="item-tit">
+																	<!-- <label for="agree6"><span class="chk_span">[선택] 개인(신용)정보 수집·이용·제공 동의서(상품서비스 안내)</span></label> -->
+																	<button type="button" name="button" id="btnAgree3" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+
+															</div>
+														</div>
+													</div>
+													<div class="guide-means" id="means_sub">
+														<div>
+															<div style="margin-top:0px !important;">
+																<div>
+																	<span class="ctm-check">
+																		<input type="checkbox" name="check" id="agree37" class="agree37" value="">
+																		<label for="agree37">위 개인(신용)정보 수집·이용에 동의하십니까?&nbsp;&nbsp;<img style="width:30px; height: 20px; float: right;" src="../../../resources/normal/images/common/T000800003_icon_1.gif" alt="수집, 이용에 관한사항  평가등급 보통"/></label>
+																	</span><br>
+																	<span class="ctm-check">
+																		<input type="checkbox" name="check" id="agree7" class="agree7" value="">
+																		<label for="agree7">전자적 전송매체를 통한 광고성 정보의 수신을 동의하십니까?</label>
+																	</span><br>
+																	<div style="margin-left:25px;">
+																		<strong>상품서비스 안내수단</strong><br>
+																		<span class="ctm-check">
+																			<input type="checkbox" name="guide" id="guide-all" class="guide-all" value="">
+																			<label for="guide-all">전체</label>
+																		</span><br>
+																		<div class="type">
+																			<span class="ctm-check checked">
+																				<input type="checkbox" name="guide" id="guide1" value="" checked>
+																				<label for="guide1">문자메시지</label>
+																			</span>
+																			<span class="ctm-check">
+																				<input type="checkbox" name="guide" id="guide2" value="">
+																				<label for="guide2">이메일</label>
+																			</span>
+																			<span class="ctm-check">
+																				<input type="checkbox" name="guide" id="guide3" value="">
+																				<label for="guide3">전화</label>
+																			</span>
+																			<span class="ctm-check">
+																				<input type="checkbox" name="guide" id="guide4" value="">
+																				<label for="guide4">DM</label>
+																			</span>
+																		</div>
+																		<input type="hidden" name="guide" id="guide5" value="N"><!-- 20210608 전체선택 체크를 위해 자리이동 -->
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="">
+															<div style="margin-top:0px !important;">
+																<span class="ctm-check">
+																	<input type="checkbox" name="check" id="agree8" class="agree8" value="">
+																	<label for="agree8">제공 항목에 관한 개인(신용)정보 제공 동의여부</label>
+																</span><br>
+																<div style="margin-left:25px;">
+																	<div>
+																		<span class="ctm-check">
+																			<input type="checkbox" name="guide" id="agree12" class="agree12" value="">
+																			<label for="agree12">위 개인신용정보 제공에 동의하십니까?&nbsp;&nbsp;<img style="width:60px; height: 20px; float: right;" src="../../../resources/normal/images/common/T000800003_icon_3.gif" alt="제공에 관한 사항 평가등급 다소안심"/></label>
+																		</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!--S// 20220331 -->
+												<div class="items-wrap" id='agreementLayer17'><!-- <div class="items-wrap" id='${CODE_T000800022}'> -->
+													<div class="items">
+														<div class="item-check">
+															<div>
+																<span class="ctm-check">
+																	<input type="checkbox" name="check" id="agree29" value="">
+																	<!-- <label for="agree29"></label> -->
+																	<label for="agree29"><span class="chk_span">[선택] 개인(신용)정보 수집·이용·제공 동의서 [맞춤형 상품 제공](요약동의서)</span></label>
+																</span>
+
+																<p class="item-tit">
+																	<!-- <label for="agree29"><span class="chk_span">[선택] 개인(신용)정보 수집·이용·제공 동의서 [맞춤형 상품 제공](요약동의서)</span></label> -->
+																	<button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+
+															</div>
+														</div>
+													</div>
+													<div class="guide-means" id="means_sub3">
+														<div class="">
+															<div style="margin-top:0px !important;">
+																<div>
+																	<span class="ctm-check">
+																		<input type="checkbox" name="check" id="agree45" class="agree45" value="">
+																		<label for="agree45">개인(신용)정보 수집·이용에 동의하십니까?</label>
+																	</span><br>
+																	<span class="ctm-check">
+																		<input type="checkbox" name="check" id="agree46" class="agree45" value="">
+																		<label for="agree45">개인(신용)정보 제공에 동의하십니까?</label>
+																	</span><br>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!--E// 20220331 -->
+												<div class="items-wrap" id='agreementLayer16'><!--<div class="items-wrap" id='${CODE_T000800016}'>-->
+													<div class="items">
+														<div class="item-check">
+															<div>
+																<span class="ctm-check">
+																	<input type="checkbox" name="check" id="agree26" value="">
+																	<!-- <label for="agree26"></label> -->
+																	<label for="agree26"><span class="chk_span">[선택] 개인(신용)정보 수집·이용 동의서(보증료 우대 서비스)</span></label>
+																</span>
+																<p class="item-tit">
+																	<!-- <label for="agree26"><span class="chk_span">[선택] 개인(신용)정보 수집·이용 동의서(보증료 우대 서비스)</span></label> -->
+																	<button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+															</div>
+														</div>
+													</div>
+													<div class="guide-means" id="means_sub1">
+														<div class="">
+															<div style="margin-top:0px !important;">
+																<div>
+																	<span class="ctm-check">
+																		<input type="checkbox" name="check" id="agree40" class="agree40" value="">
+																		<label for="agree40">고유식별정보 수집·이용에 동의하십니까?</label>
+																	</span><br>
+																	<span class="ctm-check">
+																		<input type="checkbox" name="check" id="agree41" class="agree40" value="">
+																		<label for="agree40">개인(신용)정보 수집·이용에 동의하십니까?&nbsp;&nbsp;<img style="width:30px; height: 20px; float: right;" src="../../../resources/normal/images/common/T000800003_icon_2.gif" alt="일반 개인정보 수집,이용에 관한 사항 평가등급 안심"/></label>
+																	</span><br>
+																	<span class="ctm-check">
+																		<input type="checkbox" name="check" id="agree42" class="agree40" value="">
+																		<label for="agree40">개인정보 수집·이용에 동의하십니까?&nbsp;&nbsp;<img style="width:30px; height: 20px; float: right;" src="../../../resources/normal/images/common/T000800003_icon_2.gif" alt="건강정보 수집,이용에 관한 사항 평가등급 안심"/></label>
+																	</span><br>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="items-wrap" id='agreementLayer17'><!-- <div class="items-wrap" id='${CODE_T000800017}'> -->
+													<div class="items">
+														<div class="item-check">
+															<div>
+																<span class="ctm-check">
+																	<input type="checkbox" name="check" id="agree27" value="">
+																	<!-- <label for="agree27"></label> -->
+																	<!-- <label for="agree27"><span class="chk_span">[선택] 개인(신용)정보 수집·이용 동의서(상품서비스 안내 등)</span></label> -->
+																</span>
+																<p class="item-tit">
+																	<!-- <label for="agree27"><span class="chk_span">[선택] 개인(신용)정보 수집·이용 동의서(상품서비스 안내 등)</span></label> -->
+																	<button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+															</div>
+														</div>
+													</div>
+													<div class="guide-means" id="means_sub2">
+														<div class="">
+															<div style="margin-top:0px !important;">
+																<div>
+																	<span class="ctm-check">
+																		<input type="checkbox" name="check" id="agree43" class="agree43" value="">
+																		<label for="agree43">개인(신용)정보 수집·이용에 동의하십니까?&nbsp;&nbsp;<img style="width:30px; height: 20px; float: right;" src="../../../resources/normal/images/common/T000800003_icon_1.gif" alt="일반 개인정보 수집,이용에 관한 사항 평가등급 보통"/></label>
+																	</span><br>
+																	<span class="ctm-check">
+																		<input type="checkbox" name="check" id="agree44" class="agree43" value="">
+																		<label for="agree43">광고성 정보의 수신을 동의 하시겠습니까?</label>
+																	</span><br>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="items-wrap" id='agreementLayer25'><!-- <div class="items-wrap" id='${CODE_T001000002}'> -->
+													<div class="items">
+														<div class="item-check">
+															<div>
+																<span class="ctm-check">
+																	<input type="checkbox" name="check" id="agree50" value="">
+																	<!-- <label for="agree50"></label> -->
+																	<label for="agree50"><span class="chk_span">[선택] 개인(신용)정보 수집·이용·제공·조회 동의서 [멤버십 회원가입 동의]</span></label>
+																</span>
+																<p class="item-tit">
+																	<!-- <label for="agree50"><span class="chk_span">[선택] 개인(신용)정보 수집·이용·제공·조회 동의서 [멤버십 회원가입 동의]</span></label> -->
+																	<button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+															</div>
+														</div>
+													</div>
+													<div class="guide-means" id="means_sub4">
+														<div class="">
+															<div style="margin-top:0px !important;">
+																<div>
+																	<span class="ctm-check">
+																		<input type="checkbox" name="check" id="agree51" class="agree51" value="">
+																		<label for="agree51">고려저축은행 멤버십 회원 약관&nbsp;&nbsp;<button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></label>
+																	</span><br>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="btn-wrap">
+									<button type="button" name="button" class="btn-big navy" >대출신청 완료</button>
+									<button type="button" name="button" class="btn-big prod-more">새로고침</button>
+								</div>
+							</div>
+						</div>
+
+                    </div>
+                </section>
+
+				<section>
+                    <!-- <p>확인서 - <a href="../html/normal/loan/loan_input.html" target="_blank" title="">loan_input.html</a></p> -->
+					<div class="guide-wrap">
+                        <div class="line-box">
+                        	<div class="question-wrap">
+	                        	<div class="required-wrap">
+			                        <span class="box-txt fw-bold">* 대출신청 전에 아래사항을 꼭 체크하세요.</span>
+			                    </div>
+			                    <div class="question-list bor-line-gray">
+			                        <ol>
+			                            <li>
+			                                <span class="num">1.</span>
+			                                <span class="cont">혹시 지금 진행하시는 대출이, 금융회사직원이라며 전화나 문자를 받아진행하고 계신가요?</span>
+			                                <span class="radio-area">
+			                                	<span class="ctm-radio">
+			                                		<input type="radio" name="radio1" id="radio1Y" value="Y">
+			                                    	<label for="radio1Y">예</label>
+			                                    </span>
+			                                    <span class="ctm-radio">
+			                                    	<input type="radio" name="radio1" id="radio1N" value="N">
+			                                    	<label for="radio1N">아니오</label>
+			                                    </span>
+			                                </span>
+			                            </li>
+			                            <li>
+			                                <span class="num">2.</span>
+			                                <span class="cont">햇살론 등 저금리의 서민지원대출로 바꿔준다고 해서 대출을 받으라고 하던가요?</span>
+			                                <span class="radio-area">
+			                                	<span class="ctm-radio">
+			                                		<input type="radio" name="radio2" id="radio2Y" value="Y">
+			                                    	<label for="radio2Y">예</label>
+			                                    </span>
+			                                    <span class="ctm-radio">
+			                                    	<input type="radio" name="radio2" id="radio2N" value="N">
+			                                    	<label for="radio2N">아니오</label>
+			                                    </span>
+			                                </span>
+			                            </li>
+			                            <li>
+			                                <span class="num">3.</span>
+			                                <span class="cont">혹시 대출을 받고 바로 상환하면 신용등급이 올라 저금리로 대출이 가능하다고 하던가요?</span>
+			                                <span class="radio-area">
+			                                	<span class="ctm-radio">
+			                                		<input type="radio" name="radio3" id="radio3Y" value="Y">
+			                                    	<label for="radio3Y">예</label>
+			                                    </span>
+			                                    <span class="ctm-radio">
+			                                    	<input type="radio" name="radio3" id="radio3N" value="N">
+			                                    	<label for="radio3N">아니오</label>
+			                                    </span>
+			                                </span>
+			                            </li>
+			                            <li>
+			                                <span class="num">4.</span>
+			                                <span class="cont">출처가 불분명한 어플리케이션을 설치하셨습니까?</span>
+			                                <span class="radio-area">
+			                                	<span class="ctm-radio">
+			                                		<input type="radio" name="radio4" id="radio4Y" value="Y">
+			                                    	<label for="radio4Y">예</label>
+			                                    </span>
+			                                    <span class="ctm-radio">
+			                                    	<input type="radio" name="radio4" id="radio4N" value="N">
+			                                    	<label for="radio4N">아니오</label>
+			                                    </span>
+			                                </span>
+			                            </li>
+			                            <li>
+			                                <span class="num">5.</span>
+			                                <span class="cont">검찰 등을 사칭하는 자에게 개인정보를 제공하셨습니까?</span>
+			                                <span class="radio-area">
+			                                	<span class="ctm-radio">
+			                                		<input type="radio" name="radio5" id="radio5Y" value="Y">
+			                                    	<label for="radio5Y">예</label>
+			                                    </span>
+			                                    <span class="ctm-radio">
+			                                    	<input type="radio" name="radio5" id="radio5N" value="N">
+			                                    	<label for="radio5N">아니오</label>
+			                                    </span>
+			                                </span>
+			                            </li>
+			                        </ol>
+			                    </div>
+
+			                    <div class="cts-box">
+			                    	<p class="box-info fw-bold">보이스피싱 피해신고</p>
+									<ul class="boxline-wrap">
+										<li>
+											<p class="box-line"><span class="pb20">금융감독원 콜센터</span><strong>1332</strong></p>
+										</li>
+										<li>
+											<p class="box-line"><span class="pb20">경찰청</span><strong>112</strong></p>
+										</li>
+									</ul>
+									<p class="box-txt">위의 항목 중 단 하나라도 해당이 된다면 금융사기(보이스피싱)가 의심됩니다.<br>금융사기 예방을 위해 주변 지인에게 금융사기(보이스피싱) 여부를 확인받거나<br>당행 대표번호(1877-9900)로 연락하여 직원에게 상담을 요청하거나</p>
+									<div class="sign-area cts-txt-big">
+										<p class="fw-bold">위 연락처로 문의주세요.</p>
+									</div>
+			                    </div>
+			                    <div class="sign-area cts-txt-big">
+			                        <p class="fc-black">상기 보이스피싱 예방 문진 내용을 읽어보고 해당사항이 있는지 여부를 직접 입력하였음을 확인합니다.</p>
+									<p class="sign-input">
+										<span class="date fc-black">2018년 02월 26일</span>
+									</p>
+			                    </div>
+	                        </div>
+                        </div>
+                    </div>
+                </section>
+
+				<section>
+                    <!-- <p>확인서 - <a href="../html/normal/loan/loan_input.html" target="_blank" title="">loan_input.html</a></p> -->
+					<div class="guide-wrap">
+                        <div class="line-box agr-terms">
+                        	<div>
+                        		<p class="tit-txt">적합성·적정성원칙 확인서</p>
+                        	</div>
+                        	<div class="cust_terms_contents">
+                                <div class="class_cust_terms">
+                                    <div class="sign-area">
+                                        <p>본 확인서는 금융소비자 보호에 대한 법률 제 17조(적합성원칙) 및 제 18조(적정성원칙)에 따라 <span class="area_cust">귀하의 연령</span><span class="area_corp" style="display:none;">귀 법인의 업력</span>, 재산상황, 대출계약의 목적 등을 파악하여 대출계약자에게 가장 적합한 대출계약 체결을 권유하기
+                                        위한 기초자료로 활용됩니다. 허위 또는 불성실한 답변을 하시는 경우 부적합한 대출계약을 권유하게 될 수 있으며, 이로 인해 발생하는 모든 손해는 계약자 본인에게 귀속되오니 유념하여 주시기 바랍니다.</p>
+                                    </div>
+                                    <div class="" id="div_redio_area">
+                                        <table class="table-style type2 th-vt" id="table_title">
+                                            <caption>적합성·적정성원칙 확인서</caption>
+                                            <colgroup>
+                                                <col style="width:25%;">
+                                                <col style="width:*;">
+                                            </colgroup>
+                                
+                                            <tbody>
+                                                <tr>
+                                                    <th class="fc-black"><span class="cust_terms_accent">Q </span>소비자 구분</th>
+                                                    <td scope="row" style="text-align: left;padding: 20px;">
+                                                        <span class="radio-area">
+                                                            <span class="ctm-radio">
+                                                                <input type="radio" name="cust_term_radio1" id="cust_term_radio1_1" value="C008600001">
+                                                                <label for="cust_term_radio1_1">일반금융소비자</label>
+                                                            </span>
+                                                            <span class="ctm-radio">
+                                                                <input type="radio" name="cust_term_radio1" id="cust_term_radio1_2" value="C008600002" disabled="disabled">
+                                                                <label for="cust_term_radio1_2">전문금융소비자</label>
+                                                            </span>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="fc-black"><span class="cust_terms_accent">Q </span>대출용도</th>
+                                                    <td scope="row" style="text-align: left;padding: 20px;">
+                                                 
+                                                            <div class="">
+                                                            <span class="ctm-radio">
+                                                                <input type="radio" name="cust_term_radio3" id="cust_term_radio3_1" value="C008900001">
+                                                                <label for="cust_term_radio3_1">가계자금</label>
+                                                            </span>
+                                                            <span class="ctm-radio">
+                                                                <input type="radio" name="cust_term_radio3" id="cust_term_radio3_2" value="C008900002">
+                                                                <label for="cust_term_radio3_2">사업자금</label>
+                                                            </span>
+                                                            <span class="ctm-radio">
+                                                                <input type="radio" name="cust_term_radio3" id="cust_term_radio3_3" value="C008900003">
+                                                                <label for="cust_term_radio3_3">주택자금</label>
+                                                            </span>
+                                                            </div>
+                                                            <div class="mt10">
+                                                            <span class="ctm-radio">
+                                                                <input type="radio" name="cust_term_radio3" id="cust_term_radio3_4" value="C008900004">
+                                                                <label for="cust_term_radio3_4">타 기관 대출금 상환</label>
+                                                            </span>
+                                                            <span class="ctm-radio">
+                                                                <input type="radio" name="cust_term_radio3" id="cust_term_radio3_5" value="C008900005">
+                                                                <label for="cust_term_radio3_5">의료비</label>
+                                                            </span>
+                                                            <span class="ctm-radio">
+                                                                <input type="radio" name="cust_term_radio3" id="cust_term_radio3_6" value="C008900006">
+                                                                <label for="cust_term_radio3_6">교육비</label>
+                                                            </span>
+                                                            </div>
+                                                        <!-- </span> -->
+                                                        <div class="mt10">
+                                                        <span class="ctm-radio">
+                                                            <input type="radio" name="cust_term_radio3" id="cust_term_radio3_7" value="C008900007">
+                                                            <label for="cust_term_radio3_7">기타</label>
+                                                        </span>
+                                                        <!-- 2021.08.20 웹접근성 수정(title 추가) -->
+                                                        <input type="text" id="LOAN_AIM_TEXT_CUST" maxlength="30" disabled="" title="기타">
+                                                    </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="fc-black"><span class="cust_terms_accent">Q </span>연간소득</th>
+                                                    <td scope="row">
+                                                        <!-- <span class="radio-area"> -->
+                                                            <span class="ctm-radio">
+                                                                <input type="radio" name="cust_term_radio4" id="cust_term_radio4_1" value="C009000001">
+                                                                <label for="cust_term_radio4_1">6백만원 이상 5천만원 미만</label>
+                                                            </span>
+                                                            <span class="ctm-radio">
+                                                                <input type="radio" name="cust_term_radio4" id="cust_term_radio4_2" value="C009000002">
+                                                                <label for="cust_term_radio4_2">5천만원 이상 1억원 미만</label>
+                                                            </span>
+                                                            
+                                                        <!-- </span> -->
+                                                        <div class="mt10">
+                                                            <span class="ctm-radio">
+                                                                <input type="radio" name="cust_term_radio4" id="cust_term_radio4_3" value="C009000003">
+                                                                <label for="cust_term_radio4_3">1억원 이상 </label>
+                                                            </span>
+                                                            <span class="ctm-radio">
+                                                                <input type="radio" name="cust_term_radio4" id="cust_term_radio4_4" value="C009000004">
+                                                                <label for="cust_term_radio4_4">해당없음</label>
+                                                            </span>
+                                                            <!-- 2021.08.20 웹접근성 수정(title 추가) -->
+                                                            <input type="text" id="INCOM_ANNUAL_TEXT_CUST" maxlength="30" disabled="" title="해당없음">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="fc-black"><span class="cust_terms_accent">Q </span>총 자산규모(순자산)</th>
+                                                    <td scope="row">
+                                                        <!-- <span class="radio-area"> -->
+                                                        <div class="">
+                                                            <span class="ctm-radio">
+                                                                <input type="radio" name="cust_term_radio5" id="cust_term_radio5_1" value="C009100001">
+                                                                <label for="cust_term_radio5_1">1억원 미만</label>
+                                                            </span>
+                                                            <span class="ctm-radio">
+                                                                <input type="radio" name="cust_term_radio5" id="cust_term_radio5_2" value="C009100002">
+                                                                <label for="cust_term_radio5_2">1억원 이상 5억원 미만</label>
+                                                            </span>
+                                                        </div>
+                                                        <div class="mt10">
+                                                            <span class="ctm-radio">
+                                                                <input type="radio" name="cust_term_radio5" id="cust_term_radio5_3" value="C009100003">
+                                                                <label for="cust_term_radio5_3">5억원 이상 10억원 미만</label>
+                                                            </span>
+                                                        </span>
+                                                        <span class="ctm-radio">
+                                                            <input type="radio" name="cust_term_radio5" id="cust_term_radio5_4" value="C009100004">
+                                                            <label for="cust_term_radio5_4">10억원 이상</label>
+                                                        </span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="fc-black"><span class="cust_terms_accent">Q </span>총부채</th>
+                                                    <td scope="row">
+                                                        <span class="radio-area">
+                                                            <span class="ctm-radio">
+                                                                <input type="radio" name="cust_term_radio6" id="cust_term_radio6_1" value="C009200001">
+                                                                <label for="cust_term_radio6_1">1천만원 미만</label>
+                                                            </span>
+                                                            <span class="ctm-radio">
+                                                                <input type="radio" name="cust_term_radio6" id="cust_term_radio6_2" value="C009200002">
+                                                                <label for="cust_term_radio6_2">1천만원 이상 1억원 미만</label>
+                                                            </span>
+                                                            <span class="ctm-radio">
+                                                                <input type="radio" name="cust_term_radio6" id="cust_term_radio6_3" value="C009200003">
+                                                                <label for="cust_term_radio6_3">1억원 이상</label>
+                                                            </span>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="fc-black"><span class="cust_terms_accent">Q </span>대출상환소득</th>
+                                                    <td scope="row">
+                                                        <span class="radio-area">
+                                                            <span class="ctm-radio">
+                                                                <input type="radio" name="cust_term_radio8" id="cust_term_radio8_1" value="C009400001">
+                                                                <label for="cust_term_radio8_1">근로소득</label>
+                                                            </span>
+                                                            <span class="ctm-radio">
+                                                                <input type="radio" name="cust_term_radio8" id="cust_term_radio8_2" value="C009400002">
+                                                                <label for="cust_term_radio8_2">사업소득</label>
+                                                            </span>
+                                                            <span class="ctm-radio">
+                                                                <input type="radio" name="cust_term_radio8" id="cust_term_radio8_3" value="C009400003">
+                                                                <label for="cust_term_radio8_3">임대소득</label>
+                                                            </span>
+                                                            <span class="ctm-radio">
+                                                                <input type="radio" name="cust_term_radio8" id="cust_term_radio8_4" value="C009400004">
+                                                                <label for="cust_term_radio8_4">연금소득</label>
+                                                            </span>
+                                                        </span>
+                                                        <div class="mt10">
+                                                            <span class="ctm-radio">
+                                                                <input type="radio" name="cust_term_radio8" id="cust_term_radio8_5" value="C009400005">
+                                                                <label for="cust_term_radio8_5">기타</label>
+                                                            </span>
+                                                            <!-- 2021.08.20 웹접근성 수정(title 추가) -->
+                                                            <input type="text" id="LOAN_RM_TEXT_CUST" maxlength="30" title="기타">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="fc-black"><span class="cust_terms_accent">Q </span>고정지출</th>
+                                                    <td scope="row" style="text-align: left;padding: 20px;">
+                                                        <span class="radio-area">
+                                                            <span class="ctm-radio">
+                                                                <input type="radio" name="cust_term_radio11" id="cust_term_radio11_1" value="C009500001">
+                                                                <label for="cust_term_radio11_1">연간 소득을 초과하지 않음</label>
+                                                            </span>
+                                                            <span class="ctm-radio">
+                                                                <input type="radio" name="cust_term_radio11" id="cust_term_radio11_2" value="C009500002">
+                                                                <label for="cust_term_radio11_2">연간 소득을 초과</label>
+                                                            </span>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <br>
+
+                                    <div class="agree-part">
+                                        <strong>♣ 본인은 상기와 같이 제공한 정보의 내용이 정확한 것임을 확인합니다.</strong><br>
+                                        <div>
+                                            1. 본인이 귀행에 제공한 적합성·적정성 관련 정보는 본인의 재산상황, 용도 등의 정보를 정확히 알려드린 것입니다.<br>
+                                            2. 본인이 제공한 정보가 정확하지 않거나, 정보에 변경사항이 발생한 경우에는 적합성·적정성 판단이 달라질수 있으며, 이 경우 대출계약 체결이 어려울 수 있음을 설명받았습니다.<br>
+                                            3. 상기 목적을 위해 본인의 개인(신용)정보 수집, 이용, 제공 및 귀행을 통한 신용정보 점수를 조회하는 것에 동의 합니다.<br>
+                                        </div>
+                                            
+                                        <div class="sub_1 mt30">
+                                            <span class="radio-area">
+                                                <span class="ctm-radio">
+                                                    <input type="radio" name="cust_term_radio14" id="cust_term_radio14_1" value="Y">
+                                                    <label for="cust_term_radio14_1">동의</label>
+                                                </span>
+                                                <span class="ctm-radio">
+                                                    <input type="radio" name="cust_term_radio14" id="cust_term_radio14_2" value="N">
+                                                    <label for="cust_term_radio14_2">동의하지 않음</label>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        
+                                        <div class="tl-r">
+                                            <span class="cust_terms_date">2023년 7월 14일</span>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                        	</div>
+                        </div>
+                    </div>
+                </section>
+
+
+				<section>
+                    <!-- <p>온라인상담센터 - <a href="../html/normal/portal/online_const.html" target="_blank" title="">online_const.html</a></p> -->
+					<div class="guide-wrap">
+                        <div class="complaint-wrap">
+                            <form id="frm1" name="frm1" >
+                            <div class="apply-wrap">
+                                <div class="required-wrap">
+                                    <h3 class="tit">의견접수</h3>
+                                    <span class="required-txt">* 필수 입력항목 입니다.</span>
+                                </div>
+                                <div class="input-wrap">
+                                    <div class="grid-wrap">
+                                            <div class="form-wrap">
+                                                <label for="question" class="inp-tit req">문의구분</label>
+                                                <div class="grid2" id="radioSecletType">
+                                                    <div class="form-wrap">
+                                                        <div class=" radioSeclet">
+                                                            <span class="ctm-radio">
+                                                                <input type="radio" name="seclet" id="seclet0" value="H003600001">
+                                                                <label for="seclet0"><span>칭찬</span></label>
+                                                            </span>
+                                                            <span class="ctm-radio">
+                                                                <input type="radio" name="seclet" id="seclet1" value="H003600002">
+                                                                <label for="seclet1"><span>불만</span></label>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+        
+                                        <div class="grid2">
+                                            <div class="form-wrap">
+                                                <label for="name" class="inp-tit req">성명</label>
+                                                <input type="text" name="CUST_NM" value=""  id="name" placeholder="고객실명 입력" option="onlyKr" title="성명 입력" >
+                                            </div>
+                                            <div class="form-wrap">
+                                                <label for="birth" class="inp-tit req">생년월일</label>
+                                                <input type="text" name="BIRTH_DAY" value="" id="birth" placeholder="ex) 19901212" maxlength="8"  title="생년월일 입력">
+                                            </div>
+                                        </div>
+        
+                                        <div class="grid2">
+                                            <div class="form-wrap">
+                                                <label for="phone" class="inp-tit req">핸드폰번호</label> <!-- 180614 텍스트수정 -->
+                                                <div class="tel-area">
+                                                    <div class="select-wrap">
+                                                        <select name="" class="" id="phone" title="핸드폰번호 앞자리 선택"> <!-- 180614 title값 수정 -->
+                                                            <option value="010" selected="selected">010</option>
+                                                            <option value="011">011</option>
+                                                            <option value="016">016</option>
+                                                            <option value="016">017</option>
+                                                            <option value="016">018</option>
+                                                            <option value="016">019</option>
+                                                        </select>
+                                                    </div>
+                                                    <span class="hyphen">-</span>
+                                                    <input type="text" name="" value=""  id="phone1" placeholder="" title="핸드폰번호 가운데자리" maxlength="4"> <!-- 180614 title값 수정 -->
+                                                    <span class="hyphen">-</span>
+                                                    <input type="text" name="" value=""  id="phone2" placeholder="" title="핸드폰번호 뒷자리" maxlength="4"> <!-- 180614 title값 수정 -->
+        
+                                                    <input type="hidden" id="phone_hidden" name="PHONE_NO" value=""/>
+        
+                                                </div>
+                                                <p class="rice"> 문의주신 내용의 신속하고 원활안 안내를 위하여 고객님이 선택하신 회신방법외 기재하신 연락처로 연락드릴 수 있습니다.</p>
+        
+                                            </div>
+        
+                                            <div class="form-wrap">
+                                                <label for="niceAuthNum" class="inp-tit req">인증번호</label>
+                                                <div class="nice-auth-num-area">
+                                                    <input type="hidden" id="niceAuthNumIntervalId" value="">
+                                                    <input type="text" id="niceAuthNum" value="" numberonly="" placeholder="" maxlength="5">
+                                                    <button type="button" class="btn-normal form btn-nice-auth-num" id="sendBtn">인증번호요청</button>
+                                                    <button type="button" class="btn-normal form btn-nice-auth-num" id="reSendBtn" style="display:none">재요청</button>
+                                                    <button type="button" class="btn-normal form btn-nice-auth-num" id="confirmBtn">확인</button>
+                                                </div>
+                                            </div>
+        
+                                        </div>
+                                        <div class="grid2" id="radioRecvType">
+                                            <div class="form-wrap">
+                                                <span class="inp-tit req">회신방법 선택</span>
+                                                <div class="radiobox-area">
+                                                    <span class="ctm-radio">
+                                                        <input type="radio" name="reply" id="reply0" value="">
+                                                        <label for="reply0"><span>전화</span></label>
+                                                    </span>
+                                                    <span class="ctm-radio">
+                                                        <input type="radio" name="reply" id="reply1" value="">
+                                                        <label for="reply1"><span>이메일</span></label>
+                                                    </span>
+                                                    <span class="ctm-radio">
+                                                        <input type="radio" name="reply" id="reply3" value="">
+                                                        <label for="reply3"><span>SMS</span></label>
+                                                    </span>
+                                                    <span class="ctm-radio">
+                                                        <input type="radio" name="reply" id="reply4" value="">
+                                                        <label for="reply4"><span>미회신</span></label>
+                                                    </span>
+                                                </div>
+                                                <p class="exclam accent5">개인정보관련 정보유출의 우려로 일부 답변이 제한될 수 있습니다.</p>
+                                            </div>
+                                        </div>
+        
+                                        <div class="grid1 email-area">
+                                            <label for="email-id" class="inp-tit req">이메일</label>
+                                            <div class="email-area">
+                                                <input type="text" name="" value="" id="email-id" placeholder="" title="이메일 입력"> <span class="at">@</span>
+                                                <input type="text" class="mailtxt" name="" value="" id="email-domain" placeholder="" title="이메일 도메인 입력">
+                                                <div class="select-wrap">
+                                                    <select name="" class="" id="email" title="이메일 도메인 선택">
+                                                        <option selected="selected" value="">선택</option>
+                                                        <option value="">직접입력</option>
+                                                        <option value="">naver.com</option>
+                                                        <option value="">gmail.com</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <input type="hidden" id="email_hidden" name="EMAIL" value="" />
+                                        </div>
+                                    </div>
+        
+                                    <div class="grid-wrap">
+                                        <div class="grid1">
+                                            <div class="form-wrap">
+                                                <label for="inp-tit" class="inp-tit req">제목</label>
+                                                <input type="text" name="TITLE" value=""  id="inp-tit" placeholder="문의제목을 입력하세요" maxlength="50"  title="제목 입력">
+                                            </div>
+                                        </div>
+                                        <div class="grid1">
+                                            <div class="form-wrap">
+                                                <span><label for="inp-txt" class="inp-tit req">내용</label><div class = "inp-txt_cnt">( 0 / 1000 )</div></span>
+                                                <textarea class = "inputContents" name="CONTENTS" rows="11" cols="80" id="inp-txt" placeholder="상세내용을 입력하세요" maxlength="1000"  title="상담내용"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="grid2">
+                                            <div class="form-wrap">
+                                                <label for="inp-file" class="inp-tit">파일첨부</label>
+                                                <div class="file-wrap">
+                                                    <div class="file-area">
+                                                        <!--D: filde-st 클래스 추가-->
+                                                        <div class="file-st" id="" tabindex="0">파일첨부 내용</div>
+                                                        <input type="file" class="file-hidden" name="" value="" id="">
+                                                        <button type="button" class="btn-normal form btn-file" tabindex="-1">찾아보기</button>
+                                                    </div>
+                                                </div>
+                                                <p class="rice">이미지(jpg, png, gif 등) 파일 또는 PDF 파일만 첨부가 가능합니다.</p>
+                                                <p class="rice">파일 첨부는 5MB이하만 가능합니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="auth-wrap line-box">
+                                    <input type="hidden" name="AUTH_CD" id="auth_cd" />
+                                    <p class="tit-txt">고객의견 진행을 위해서는 본인인증이 필요합니다.<br>아래의 인증 방식 중 하나를 선택해 인증을 진행해주세요.</p>
+                                    <ul class="auth-list">
+                                        <li class="auth1">
+                                            <span class="ctm-radio">
+                                                <input type="radio" name="auth" id="auth1" value="">
+                                                <label for="auth1"><span>휴대폰인증</span></label>
+                                            </span>
+                                        </li>
+                                        <li class="auth3">
+                                            <span class="ctm-radio">
+                                                <input type="radio" name="auth" id="auth3" value="">
+                                                <label for="auth3"><span>아이핀인증</span></label>
+                                            </span>
+                                        </li>
+                                        <li class="auth5">
+                                            <span class="ctm-radio">
+                                                <input type="radio" name="auth" id="auth5" value="">
+                                                <label for="auth5"><span>신용카드인증</span></label>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="agree-wrap">
+                                    <div class="agree-area">
+                                        <div class="agree-cts pda0">
+                                            <div class="agree-box">
+                                                <div class="items-wrap">
+                                                    <p class="item-tit">
+                                                        <span>[필수] 개인(신용)정보 수집·이용 동의서[민원접수 / 고객제안접수 / 고객의견접수 처리용]</span>
+                                                        <label for="detailViewBtn"><span id="labelTremsName"></span></label>
+                                                        <button type="button" name="button" id="detailViewBtn" class="btn-normal tiny fl-r" data-tooltip="manual011-layer" onclick="fn_layerPopOpen(this)">자세히보기</button><!--//D:2023-07-13 구조변경//-->
+                                                    </p>
+                                                    <div class="items">
+                                                        <div class="item-check">
+                                                            <div>
+                                                                <span class="ctm-radio">
+                                                                    <input type="radio" name="agreeRadio" id="agree1" value="N" title="개인정보 취급방침 미동의"><!--  onclick="fn_layerPopOpen();" -->
+                                                                    <label for="agree1">미동의</label>
+                                                                </span>
+                                                                <span class="ctm-radio">
+                                                                    <input type="radio" name="agreeRadio" id="agree2" value="Y" title="개인정보 취급방침 동의"><!--  onclick="fn_layerPopOpen();" -->
+                                                                    <label for="agree2">동의</label>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="rice rice-type2">위 개인(신용)정보의 수집·이용에 관한 동의는 본 서비스를 이용하기 위한 필수사항이므로, 위 사항에 동의하셔야만 고객의견접수가 가능합니다.</p>
+                                        <div class="btn-wrap">
+                                            <button type="button" name="button" class="btn-big navy" >등록하기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" name="MW_TYPE_CD" id="MW_TYPE_CD" value="H000300004">
+                            <input type="hidden" name="TERMS_AGREEMENT_YN" id="TERMS_AGREEMENT_YN" value="Y">
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+				<section>
+                    <p>한도조회 - <a href="../html/normal/loan/limit_input.html" target="_blank" title="">limit_input.html</a></p>
+					<div class="guide-wrap">
+						<form id="frm1" name="frm1" >
+						<div class="input-wrap">
+							<div class="grid-wrap" style="display:none;">
+								<div class="grid2">
+									<div class="form-wrap" id="prod_form">
+										<label for="loan_prod" class="inp-tit req">대출상품</label><!-- 필수 입력항목 class명 "req" 적용 -->
+										<div class="select-wrap">
+											<select name="PROD_CD" class="" id="loan_prod"  title="대출상품 선택">
+												<option selected="selected" value="">대출상품을 선택하세요</option>
+												<option value="">부동산담보대출</option>
+												<option value="">전세보증금담보대출</option>
+												<option value="">공공임대아파트보증금담보대출</option>
+												<option value="">유가증권담보대출</option>
+												<option value="">예적금담보대출</option>
+												<option value="">햇살론</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-wrap" id="hp_form">
+										<label for="phone" class="inp-tit req">핸드폰번호</label>
+										<div class="phone-area">
+											<div class="select-wrap agency" style="display:none;">
+												<select name="TELECOM" class="" id="phone" title="핸드폰 통신사 선택">
+													<option selected="selected" value=""></option>
+													<!-- <option value="">SKT</option>
+													<option value="">KT</option>
+													<option value="">LG U+</option>
+													<option value="">SKT MVNO</option>
+													<option value="">KT MVNO</option>
+													<option value="">LGU MVNO</option> -->
+												</select>
+											</div>
+											<div class="select-wrap phone-fst"  style="width:130px;">
+												<select name="" class="" title="핸드폰번호 앞자리 선택" id="phone_front" >
+													<option value="">010</option><!-- 
+													<option value="">011</option>
+													<option value="">016</option>
+													<option value="">017</option>
+													<option value="">018</option>
+													<option value="">019</option> -->
+												</select>
+											</div>
+											<span class="hyphen">-</span>
+											<input type="text" name="" value=""  id="phone1" placeholder="" title="핸드폰번호 가운데자리" maxlength="4" >
+											<span class="hyphen">-</span>
+											<input type="text" name="" value=""  id="phone2" placeholder="" title="핸드폰번호 뒷자리" maxlength="4" >
+											<input type="hidden" id="phone_hidden" name="PHONE_NO"/>
+										</div>
+									</div>
+								</div>
+								<div class="grid2">
+									<div class="form-wrap" id="cust_name_form">
+										<label for="name" class="inp-tit req">성명</label>
+										<input type="text" name="CUST_NM" value=""  id="name" placeholder="고객실명 입력" option="onlyKr" title="성명 입력" maxlength="10">
+									</div>
+								</div>
+							</div>
+							
+							<div class="grid-wrap">
+							
+								<div class="grid2">
+									<div class="form-wrap" style="display: block;">
+										<label for="incom_annual_format" class="inp-tit req">연소득</label>
+										<input type="text" class="incom_annual_format" id="incom_annual_format" value="" placeholder="만원 단위로 입력하세요" title="연소득" maxlength="7">
+										<div class="unit-txt">만원</div>
+									</div>
+									<div class="form-wrap" style="display: block;">
+										<label for="car_yn" class="inp-tit req">차량보유여부</label>
+										<div class="select-wrap">
+											<select name="CAR_YN" id="car_yn"  title="차량보유여부 선택">
+												<option value="">차량보유여부를 선택하세요.</option>
+												<option value="Y">예</option>
+												<option value="N">아니오</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								
+								<div class="grid2">
+								
+									<div class="form-wrap" style="display: block;">
+										<label for="req_amt" class="inp-tit req">한도조회금액</label>
+										<input type="text" class="incom_annual_format" id="req_amt" value="" placeholder="만원 단위로 입력하세요" title="한도조회금액" maxlength="7">
+										<div class="unit-txt">만원</div>
+									</div>
+
+									
+								</div>
+								
+							</div>
+						
+						</div>
+						
+						</form>
+					</div>
+                </section>
+
+				<!-- <section>
+				                    <p>금융소비자 권리 - <a href="../html/normal/portal/withdrawal_apply.html" target="_blank" title="">withdrawal_apply.html</a></p>
+					<div class="guide-wrap">
+						<div class="select-wrap depth-select">
+							<select name="" title="금융소비자 권리 서브메뉴선택">
+								<option value="1">위법계약 해지권</option>
+								<option selected="selected" value="2">청약철회권</option>
+								<option value="3">금리인하요구권</option>
+								<option value="4">자료열람요구권</option>
+							</select>
+						</div><br>
+					</div>
+				                </section> -->
+
+				<section>
+                    <!-- <p>정약청회권 - <a href="../html/normal/portal/withdrawal.html" target="_blank" title="">withdrawal.html</a></p> -->
+					<div class="guide-wrap">
+						<!--//동의-->
+						<div class="agree-wrap">
+							<div class="agree-area">
+								<div class="agree-cts pda0">
+									<div class="agree-box">
+										<div class="items-wrap">
+											<div class="items">
+												<div class="item-check">
+													<div>
+														<span class="ctm-check">
+															<input type="checkbox" name="check" id="agree5" value="" title="[필수] 개인(신용)정보 수집·이용 동의서[금리인하요구용]">
+															<!-- <label for="agree5"></label> -->
+															<label for="agree5">
+																<span id="labelTremsName">[필수] 개인(신용)정보 수집·이용 동의서[금리인하요구용]</span>
+															</label>
+														</span>
+														<p class="item-tit">
+															<!-- <label for="agree5">
+																<span id="labelTremsName">[필수] 개인(신용)정보 수집·이용 동의서[금리인하요구용]</span>
+															</label> -->
+															<button type="button" name="button" id="detailViewBtn" class="btn-normal tiny" data-tooltip="manual011-layer" data="agree-more" value="T001400001.pdf">자세히보기</button>
+														</p>
+													</div>
+													<div class="sub_agree_5" id="sub_agree_5" style="margin-left: 25px; display: none;">
+														<span class="ctm-check checked">
+															<input type="checkbox" name="check" id="agree_1" class="agree_1_1" value="" disabled="disabled">
+															<label for="agree_1">위 고유식별정보 수집∙이용에 동의하십니까?</label>
+														</span><br>
+													</div>
+													<div class="sub_agree_5" id="sub_agree_6" style="margin-left: 25px; display: none;">
+														<span class="ctm-check checked">
+															<input type="checkbox" name="check" id="agree_2" class="agree_1_1" value="" disabled="disabled">
+															<label for="agree_2">위 개인(신용)정보 수집∙이용에 동의하십니까?</label>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--동의//-->
+					</div>
+                </section>
+
+				<section>
+                    <!-- <p>금리인하요구권 - <a href="../html/normal/portal/ratecut_apply.html" target="_blank" title="">ratecut_apply.html</a></p> -->
+					<div class="guide-wrap">
+						<div class="ratecut-wrap">
+							<div class="apply-wrap ratecut-apply">
+								<h3 class="tit">금리인하요구권 신청서 작성</h3>
+								<table class="table-style caption-tit">
+									<caption class="list-tit type2">계좌정보 확인</caption>
+									<colgroup>
+										<col style="width:*">
+										<col style="width:25%;">
+										<col style="width:30%;">
+										<col style="width:30%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">번호</th>
+											<th scope="col">상품명</th>
+											<th scope="col">계좌번호</th>
+											<th scope="col">계좌상태</th>
+										</tr>
+									</thead>
+									<tbody id="setTbody">
+									</tbody>
+								</table>
+								<div class="required-wrap">
+									<div class="list-tit">신청인 정보입력</div>
+									<span class="required-txt">* 필수 입력항목 입니다.</span>
+								</div>
+								<div class="input-wrap">
+									<form id="callApply" onSubmit="return false;">
+										<input type="hidden"  name="rEQ_REASON_CD" value="" id="rEQ_REASON_CD" >
+										<input type="hidden"  name="sCRAP_LIST" value="" id="sCRAP_LIST" >
+										<div class="grid-wrap">
+											<div class="grid2">
+												<div class="form-wrap">
+													<label for="selectType" class="inp-tit req">직업구분</label>
+													<div class="select-wrap">
+														<select name="" class="" id="selectType"  title="직업구분 선택">
+															<option selected="selected" value="">직업구분을 선택하세요</option>
+															<option value="2">급여소득자</option>
+															<option value="3">자영업자</option>
+															<option value="6">기타</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="grid2 address-area">
+												<div class="form-wrap">
+													<label for="addr_cd" class="inp-tit req">주소</label>
+													<div class="zipcode">
+														<input type="text" name="ZIP_CODE" value="" readonly id="addr_cd" placeholder="우편번호를 입력하세요" title="주소 입력">
+														<a href="#" id="searchAddr" class="btn-normal form" title="새창 열림">우편번호 찾기</a>
+													</div>
+												</div>
+											</div>
+											<div class="grid2 address-detail">
+												<div class="form-wrap">
+													<input type="text" name="ADDR" value="" id="addr" readonly placeholder="주소를 입력하세요" title="주소">
+												</div>
+												<div class="form-wrap">
+													<input type="text" name="ADDR_DETAIL" value="" id="addr2" readonly placeholder="상세주소를 직접 입력하세요" title="주소 - 상세주소">
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="line-box">
+									<div class="required-wrap">
+										<p class="list-tit">신청사유</p>
+										<span class="required-txt">* 해당항목에 체크 바랍니다.</span>
+									</div>
+									<ul class="reason-area reason-list">
+										<li>
+											<span class="ctm-radio">
+												<input type="radio" name="reason" id="individual1" value="">
+												<label for="individual1" >직장 변동이 있는 경우</label>
+											</span>
+										</li>
+										<li>
+											<span class="ctm-radio">
+												<input type="radio" name="reason" id="individual2" value="">
+												<label for="individual2">직위가 상승한 경우</label>
+											</span>
+										</li>
+										<li>
+											<span class="ctm-radio">
+												<input type="radio" name="reason" id="individual3" value="">
+												<label for="individual3">연소득이 증가한 경우</label>
+											</span>
+										</li>
+										<li>
+											<span class="ctm-radio">
+												<input type="radio" name="reason" id="individual4" value="">
+												<label for="individual4">전문자격증을 취득한 경우</label>
+											</span>
+										</li>
+										<li>
+											<span class="ctm-radio">
+												<input type="radio" name="reason" id="individual5" value="">
+												<label for="individual5">신용등급이 향상된 경우</label>
+											</span>
+										</li>
+									</ul>
+									<p class="rice">상기 요건에 부합되지 않을 경우 금리인하가 되지 않을 수 있으며, 신청결과에 대하여 접수일로부터 10영업일 이내에 유선 또는 문자로 안내드립니다.</p>
+								</div>
+								<div class="" id="scrapDiv">
+									<div class="line-box">
+										<div class="list-tit">증빙서류 제출</div>
+										<div class="txt-box">
+											<p>
+												온라인 서류제출시스템을 통해 건강보험납부확인 및 은행거래내역등의 소득 증빙 관련 내역을 조회 하실 수 있습니다.<br>
+												증빙서류 제출을 위해서는 공동인증서 인증이 반드시 필요합니다.<br>
+												<strong>
+													<span style="color:#dc0082;">필수 항목은 아니며, 증빙서류 제출 없이, 금리인하요구권 신청이 가능합니다.<br>
+													(온라인 신청 후 상담원을 통한 서류 징구도 가능합니다.)</span>
+												</strong>
+											</p>
+										</div>
+										<div class="cts-box mt20">
+											<!-- s: 디자인 현행화 -->
+											<p class="tit-txt pb30">소득정보 자동화 조회 목록</p>
+											<!-- e: 디자인 현행화 -->
+
+											<div class="form-wrap evi-list">
+												<span class="ctm-check checked">
+													<input type="checkbox" name="evi-list" id="evi-list1" value="" checked="" disabled="">
+													<label for="evi-list1">건강보험공단-자격득실 확인서</label>
+												</span>
+												<span class="ctm-check checked">
+													<input type="checkbox" name="evi-list" id="evi-list2" value="" checked="" disabled="">
+													<label for="evi-list2">건강보험공단-납부확인서</label>
+												</span>
+												<span class="ctm-check checked">
+													<input type="checkbox" name="evi-list" id="evi-list3" value="" checked="" disabled="">
+													<label for="evi-list3">국세청.소득금액증명</label>
+												</span>
+												<span class="ctm-check checked">
+													<input type="checkbox" name="evi-list" id="evi-list4" value="" checked="" disabled="">
+													<label for="evi-list4">민원24-등초본교부</label>
+												</span>
+												<span class="ctm-check checked">
+													<input type="checkbox" name="evi-list" id="evi-list5" value="" checked="" disabled="">
+													<label for="evi-list5">은행-입출금거래내역</label>
+												</span>
+											</div>
+											<!-- //180620 pm 추가 -->
+
+											<!-- //180614 구조 변경 -->
+											<div class="proc">
+												<p>증빙서류 제출을 진행하시겠습니까?</p>
+												<span class="ctm-radio">
+													<input type="radio" name="agree" id="agree_y" value="Y" onclick="PageFunc.scrapRadio();">
+													<label for="agree_y">예</label>
+												</span>
+												<span class="ctm-radio checked">
+													<input type="radio" name="agree" id="agree_n" value="N" onclick="PageFunc.scrapRadio();" checked="checked">
+													<label for="agree_n">아니요</label>
+												</span>
+											</div>
+										</div>
+										<div class="agree-wrap">
+											<div class="agree-area">
+												<div class="agree-cts pda0 ">
+													<div class="agree-box">
+														<div class="items-wrap">
+															<div class="items">
+																<div class="item-check">
+																	<div>
+																		<span class="ctm-check">
+																			<input type="checkbox" name="check" id="check1" value="" title="[필수] 소득 및 재직서류 제출 자동화(스크래핑)서비스 이용 동의">
+																			<!-- <label for="check1"></label> -->
+																			<label for="check1">
+																				<span id="labelTremsName"> [필수] 소득 및 재직서류 제출 자동화(스크래핑)서비스 이용 동의</span>
+																			</label> 
+																		</span>
+																		<p class="item-tit">
+																			<!-- <label for="check1">
+																				<span id="labelTremsName" style="font-size: 16px;"> [필수] 소득 및 재직서류 제출 자동화(스크래핑)서비스 이용 동의</span>
+																			</label>  -->
+																			<button type="button" name="button" id="detailViewBtn" class="btn-normal tiny" data-tooltip="manual011-layer" value="T000900001.pdf" data="agree-more">자세히보기</button>
+																		</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="line-box account-inp">
+										<div id="juminNoInput">
+											<form name="juminFrm" id="juminFrm">
+												<div class="list-tit">주민등록번호 입력</div>
+												<p class="rice">당 저축은행은 신용정보의 이용 및 보호에 관한 법률 시행령 제 37조의2에 의거하여 주민등록번호를 수집합니다.</p>
+												<div class="grid-wrap">
+													<div class="grid2">
+														<div class="form-wrap">
+															<label for="jumin1" class="inp-tit req">주민등록번호</label>
+															<div class="jumin-area">
+																<input type="text" name="SSN1" value="" id="SSN1" placeholder="" title="주민등록번호 앞자리" min="6" maxlength="6">
+																<span class="hyphen">-</span>
+																<input type="password" name="SSN2" value="" id="SSN2" placeholder="" title="주민등록번호 뒷자리" min="7" maxlength="7">
+															</div>
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+										<div id="accountInput">
+											<div class="list-tit">계좌번호 입력</div>
+											<p class="rice">계좌 이력 정보를 위해 은행명 및 계좌번호를 입력해야 합니다.
+												<br>기업은행의 평생계좌(핸드폰 번호로 구성)는 계좌 조회서비스의 이용이 불가하오니, 일반 계좌번호를 이용하여 주시기 바랍니다.
+											</p>
+											<div class="grid-wrap">
+												<div class="grid2">
+													<div class="form-wrap form-banknum">
+														<label for="getBank" class="inp-tit req">은행명</label>
+														<input type="text" name="" value="" id="getBank"  placeholder="은행명을 선택하세요" readOnly onclick='PageFunc.openBankPopup();' title="은행명 입력">
+														<a href="#" class="btn-normal form no-fl" id="openPopBankList" onclick='PageFunc.openBankPopup();return false;' title="은행선택팝업">은행 선택</a>
+													</div>
+													<div class="form-wrap form-banknum">
+														<label for="account-num" class="inp-tit req">계좌번호</label>
+														<input type="text" name="" value="" id="account-num" placeholder="(-) 없이 숫자만 입력해 주세요"  title="계좌번호 입력">
+														<a href="javascript:PageFunc.chkBankAcctNo();" id="a_bank_acct" class="btn-normal form no-fl">계좌인증</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div id="buziNoInput">
+											<div class="list-tit">사업자등록번호 입력</div>
+											<div class="grid-wrap">
+												<div class="grid2">
+													<div class="form-wrap">
+														<label for="buziNo" class="inp-tit req">사업자등록번호</label>
+														<input type="text" name="" value=""  id="buziNo" placeholder="사업자등록번호 입력" title="사업자등록번호 입력">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<p class="guide-txt">본인은 상기 항목의 내용을 사실대로 기재하였고 귀행의 신용평가 시스템에 따라<br>결과에 이의를 제기하지 않겠습니다.</p>
+								<div class="btn-wrap">
+									<button type="button" name="button" class="btn-big navy" onclick="PageFunc.doSubmit();">확인 및 신청</button>
+								</div>
+							</div>
+						</div>
+					</div>
+                </section>
+
+				<section>
+                    <!-- <p>민원센터-신청내역조회/취하 - <a href="../html/normal/portal/civil_apply_list.html" target="_blank" title="">civil_apply_list.html</a></p> -->
+					<div class="guide-wrap">
+						<div id="board-list-wrap">
+							<div class="board-list-wrap mt15">
+								<h3 class="tit">신청내역</h3>
+						
+								<!-- 신청내역이 있을경우 -->
+								<div class="listDelBtnDiv" style="text-align: right;"> <button id="listDelBtn" type="button" name="button" class="btn-normal tiny pink mb10">신청내역 삭제</button></div>
+								<table class="table-style list type2 all-c" id="examList">
+									<caption>신청내역 - 리스트</caption>
+									<colgroup>
+										<col style="width:10%;">
+										<col style="width:10%;">
+										<col style="width:15%;">
+										<col style="width:45%;">
+										<col style="width:10%;">
+										<col style="width:10%;">
+									</colgroup>
+									<thead>
+										<tr><th scope="col">선택</th>
+											<th scope="col">문의구분</th>
+											<th scope="col">진행상태</th>
+											<th scope="col" class="title">제목</th>
+											<th scope="col">접수일</th>
+											<th scope="col">처리일</th>
+										</tr>
+									</thead>
+									<tbody>
+										<!-- s: 2023-07-17 , 신청내역이 없을경우 구조추가 -->
+										<tr>
+											<td colspan="6"><p class="no-result">신청내역이 없습니다.</p></td>
+										</tr>
+										<!-- e: 2023-07-17 , 신청내역이 없을경우 구조추가 //-->
+
+										<tr>
+											<td onclick="fn_chkBoxEvt(this)">
+												 <label for="222" class="check">
+													<input type="checkbox" name="222"/>
+												</label>
+											</td>
+											<td></td>
+											<td><strong>접수</strong></td>
+											<td class="title"><a href="#none">회원가입하고 싶어요</a></td>
+											<td><input type="hidden" id="222" value="H000300002"/></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td onclick="fn_chkBoxEvt(this)">
+												<label for="333" class="check">
+													<input type="checkbox" name="333"/>
+												</label>
+											</td>
+											<td></td>
+											<td><strong>처리중</strong></td>
+											<td class="title"><a href="#none">결제됐는지 확인은 어디서 해요?</a></td>
+											<td><input type="hidden" id="333" value="H000300002"/></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td onclick="fn_chkBoxEvt(this)">
+												<label for="444" class="check">
+													<input type="checkbox" name="444"/>
+												</label>
+											</td>
+											<td></td>
+											<td><strong>완료</strong></td>
+											<td class="title"><a href="#none">결제대금을 결제계좌 자동이체 이외의 방법으로 결제하고 싶습니다.</a></td>
+											<td><input type="hidden" id="444" value="H000300001"/></td>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<p class="btn-wrap"><button type="button" name="button" class="btn-normal more navy" onclick="PageFunc.selectExamListMore();">더보기</button></p>
+						</div>
+					</div>
+                </section>
+
+				<section>
+                    <!-- <p>온라인서류제출 - <a href="../html/normal/center/online_apply.html" target="_blank" title="">online_apply.html</a></p> -->
+					<div class="guide-wrap">
+						<div class="contents default-wrap">
+							<div class="online-wrap">
+								<ul class="step-wrap">
+									<li class="step01"><span>01.<strong>본인인증</strong></span></li>
+									<li class="step02 active"><span>02.<strong>확인 및 입력</strong></span></li>
+									<li class="step03"><span>03.<strong>제출 완료</strong></span></li> 
+								</ul>
+								<div class="apply-wrap">
+									<div id="scrap_div">
+										<h3 class="tit">증빙서류 목록확인 및 추가정보 입력</h3>
+												
+										<div class="input-wrap"> 
+											<div class="grid-wrap">
+												<div class="required-wrap"><h3 class="tit">증빙서류 목록</h3></div>
+												<div class="grid1 mt10">
+													<div class="form-wrap evi-list">
+														<span class="radio-area">
+															<span class="ctm-radio">
+																<input type="radio" name="cust_term_radio1" id="cust_term_radio1_1" value="">
+																<label for="cust_term_radio1_1">건강보험공단-자격득실 확인서</label>
+															</span>
+															<span class="ctm-radio">
+																<input type="radio" name="cust_term_radio1" id="cust_term_radio1_2" value="">
+																<label for="cust_term_radio1_2">건강보험공단-납부확인서</label>
+															</span>
+															<span class="ctm-radio">
+																<input type="radio" name="cust_term_radio1" id="cust_term_radio1_3" value="">
+																<label for="cust_term_radio1_3">국세청소득금액증명</label>
+															</span>
+															<span class="ctm-radio">
+																<input type="radio" name="cust_term_radio1" id="cust_term_radio1_4" value="">
+																<label for="cust_term_radio1_4">민원24-등초본교부</label>
+															</span>
+															<span class="ctm-radio">
+																<input type="radio" name="cust_term_radio1" id="cust_term_radio1_5" value="">
+																<label for="cust_term_radio1_5">은행-입출금거래내역</label>
+															</span>
+														</span>
+													</div>
+												</div>
+											</div>
+											
+											<div class="grid2 line-box">
+												<div class="form-wrap">
+													<div class="required-wrap"><h3 class="tit">주민등록번호</h3></div>
+													<div class="form-wrap" id="ssn_form">
+														<label for="jumin1" class="inp-tit req">주민등록번호</label>
+														<div class="jumin-area">
+															<input type="text" name="SSN1" value="" id="jumin1" placeholder="" title="주민등록번호 앞자리" maxlength="6">
+															<span class="hyphen">-</span>
+															<input type="password" name="SSN2" value="" id="SSN2" placeholder="" title="주민등록번호 뒷자리" maxlength="7"><!-- 임시처리 -->
+															<p class="rice">당 저축은행은 신용정보의 이용 및 보호에 관한 법률 시행령 제37조의2에 의거하여 주민등록번호를 수집합니다.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+			
+			
+											<div class="grid-wrap" id="buziNoInput">
+												<div class="list-tit">사업자번호 입력</div>
+												<div class="grid2 address-detail">
+													<div class="form-wrap">
+														<input type="text" name="" value="1933200206" id="buziNo" placeholder="사업자번호를 입력하세요" title="사업자번호">
+													</div>
+												</div>
+											</div> 
+																	
+											<div class="grid-wrap" id="addressInput">
+												<div class="list-tit">주소정보 입력</div>
+			
+												<p class="rice">주민등록 등초본 조회를 위해 주소정보 확인이 필요합니다. 주소정보를 입력해주세요.</p>
+			
+												<div class="grid2 address-area">
+													<div class="form-wrap">
+														<label for="getAddr1" class="inp-tit req">시/도</label>
+														<div class="select-wrap">
+															<select name="" id="getAddr1"  title="시/도 선택">
+																<option selected="selected" value="">시/도</option>
+															</select>
+														</div>
+													</div>
+													<div class="form-wrap">
+														<label for="getAddr2" class="inp-tit req">시/군/구</label>
+														<div class="select-wrap">
+															<select name="" id="getAddr2"  title="시/군/구 선택">
+																<option selected="selected" value="">시/군/구</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+										
+											<div class="grid-wrap" id="addressTaxInput">
+												<div class="list-tit">주소정보 입력</div>
+			
+												<p class="rice">지방세 납세 조회를 위해 주소정보 확인이 필요합니다. 주소정보를 입력해주세요.</p>
+			
+												<div class="grid2 address-area">
+													<div class="form-wrap">
+														<label for="addr_cd" class="inp-tit req">주소</label>
+														<div class="zipcode">
+															<input type="text" name="ZIP_CODE" value="" readonly id="addr_cd" placeholder="우편번호를 입력하세요" title="주소 입력">
+															<a href="#" id="searchAddr" class="btn-normal form" title="새창 열림">우편번호 찾기</a>
+														</div>
+													</div>
+												</div>
+												<div class="grid2 address-detail">
+													<div class="form-wrap">
+														<input type="text" name="ADDR" value="" id="addr" readonly placeholder="주소를 입력하세요" title="주소">
+													</div>
+													<div class="form-wrap">
+														<input type="text" name="ADDR_DETAIL" value="" id="addr2" readonly placeholder="상세주소를 직접 입력하세요" title="주소 - 상세주소">
+													</div>
+												</div>
+			
+											</div>
+										
+											<div class="grid-wrap account-num" id="accountInput">
+												<div class="required-wrap">
+													<div class="list-tit">계좌정보 입력</div>
+													<span class="required-txt">* 필수 입력항목 입니다.</span>
+												</div>
+												<p class="rice">계좌 이력 정보 조회를 위해 은행명 및 계좌번호를 입력해야 합니다.
+													<br>기업은행의 평생계좌(핸드폰 번호로 구성)는 계좌 조회서비스의 이용이 불가하오니, 일반 계좌번호를 이용하여 주시기 바랍니다.
+												</p>
+
+												<div class="grid2"  id="divGrid0">
+													<div class="form-wrap form-banknum">
+														<label for="getBank" class="inp-tit req">은행명</label>
+														<input type="text" name="" value="" id="getBank"  placeholder="은행명을 선택하세요" readOnly onclick='' title="은행명 입력">
+														<a href="#none" class="btn-normal form" id="openPopBankList" onclick='' title="은행선택팝업">은행 선택</a>
+													</div>
+													<div class="form-wrap form-banknum">
+														<label for="account-num" class="inp-tit req">계좌번호</label>
+														<input type="text" name="" value="" id="account-num" placeholder="(-) 없이 숫자만 입력해 주세요"  title="계좌번호 입력">
+														<a href="#none" id="a_bank_acct" class="btn-normal form">계좌인증</a>
+													</div>
+													
+													<div class="form-banknum file"><!--D: form-wrap 클래스 삭제-->
+														<button class="file-add" onclick="" title="계좌 추가 인증 추가">+ 추가</button>
+														<button class="file-delete" onclick="" title="계좌 추가 인증 삭제">- 삭제</button>
+													</div>
+												</div>
+
+
+											</div>
+											
+			
+											<div class="grid-wrap" id="div_id_file">
+												<div class="required-wrap">
+													<div class="list-tit">신분증 파일 첨부</div>
+													<span class="required-txt">* 필수 입력항목 입니다.</span>
+												</div>
+												<!--s: 2023-07-19 구조수정-->
+												<div class="grid2 fileUpload_">
+													<div class="form-wrap">
+														<label for="" class="inp-tit">신분증</label>
+														<div class="file-wrap">
+															<div class="file-area">
+																<!--D: filde-st 클래스 추가-->
+																<div class="file-st" id="" tabindex="0">파일첨부 내용</div>
+																<input type="file" class="file-hidden" name="" value="" id=""  onchange="PageFunc.img_preview(this)" tabindex="0" title="파일첨부">
+																<button type="button" class="btn-normal form btn-file" tabindex="-1">찾아보기</button>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!--e: 2023-07-19 구조수정-->
+			
+											</div>
+											
+			
+											<div class="agree-wrap mt70">
+												<p class="tit-txt pb20 ta-l">온라인 서류제출을 위해 본인의 개인(신용)정보를 수집·이용하는것에 동의하시겠습니까?</p>
+			
+												<div class="agree-area">
+													<div class="agree-cts pda0 ">
+														<div class="agree-box mt0">
+															<div class="items-wrap">
+																<p class="item-tit">
+																	<span>[필수] 소득 및 재직서류 제출 자동화(스크래핑)서비스 이용 동의</span>
+																	<button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button>
+																</p>
+																<div class="items">
+																	<div class="item-check" style="margin:0;">
+																		<div>
+																			<span class="ctm-radio">
+																				<input type="radio" name="agreeRadio" id="agree1" value="N" title="개인정보 취급방침 미동의"><!-- onclick="fn_layerPopOpen();" -->
+																				<label for="agree1">미동의</label>
+																			</span>
+																			<span class="ctm-radio">
+																				<input type="radio" name="agreeRadio" id="agree2" value="Y" title="개인정보 취급방침 동의"><!-- onclick="fn_layerPopOpen();" -->
+																				<label for="agree2">동의</label>
+																			</span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									<!-- 180612 추가 -->
+										<form id="callApply" onSubmit="return false;">
+										<div id="attachFiles_div">
+											<h3 class="tit" id="">첨부파일 서류제출</h3>
+											<div class="input-wrap">
+												<div class="grid-wrap">
+													
+													<!--s: 2023-07-19 구조수정-->
+													<div class="grid2 fileUpload_">
+														<div class="form-wrap">
+															<label for="" class="inp-tit">신온라인 파일첨부분증</label>
+															<div class="file-wrap">
+																<div class="file-area">
+																	<!--D: filde-st 클래스 추가-->
+																	<div class="file-st" id="" tabindex="0">파일첨부 내용</div>
+																	<input type="file" class="file-hidden" name="" value="" id="" title="서류첨부1" onchange="PageFunc.img_preview(this,0)">
+																	<button type="button" class="btn-normal form btn-file" tabindex="-1">찾아보기</button>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!--e: 2023-07-19 구조수정-->
+			
+													<!-- 180619 am 위치 이동 -->
+													<p class="rice">증빙서류 조회 뿐만 아니라 온라인 파일 첨부도 가능합니다.(파일 첨부만 이용 가능)</p>
+													<p class="rice">이미지(jpg, png, gif 등) 파일 또는 PDF 파일만 첨부가 가능합니다.</p>
+													<p class="rice">파일 첨부는 5MB이하만 가능합니다.</p>
+													<!-- //180619 am 위치 이동 -->
+												</div>
+												<input type="hidden"  name="tRANS_SEQ" value="${sessionTRANS_SEQ}" id="tRANS_SEQ" > 
+												<input type="hidden"  name="iNSP_NO" value="${sessionINSP_NO}" id="iNSP_NO" > 
+												<input type="hidden"  name="sCRAP_LIST" value="" id="sCRAP_LIST" > 
+											</div>
+											<!-- //180612 추가 -->
+										</div>		
+										</form>
+									
+										<div class="btn-wrap">
+											<button type="button" name="button" class="btn-big navy"  onclick="PageFunc.doSubmit();">서류제출 완료</button>
+											<button type="button" name="button" class="btn-normal prod-more" onclick="location.reload();">초기화</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>	
+					</div>
+                </section>
+
+
+
+
+            </div>
+
+
+		</div>
+        <!-- //e: contentsWrap -->
+    </div>
+    <!-- //e:wrap -->
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <!-- 헤더 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>예가람저축은행</title>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta http-equiv="Content-Style-Type" content="text/css">
+        <meta name="keywords" content="예가람저축은행" />
+        <meta name="description" content="딴딴해서 믿을 수 있는 예가람저축은행, 예금, 적금, 신용부금, 논스톱 자동대출 등 예금, 대출금융상품 안내" />
+        <meta name="viewport" content="width=device-width">
+        <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta property="og:image" content="https://www.yegaramsb.co.kr/resources/normal/images/main/meta-img-square_new.jpg">   
+        <link rel="shortcut icon" type="image/x-icon" href="../resources/favicon.ico" />
+        <link href="../resources/normal/css/jquery.bxslider.css" rel="stylesheet"f />
+        <link href="../resources/normal/css/default.css" rel="stylesheet" />
+        <link href="../resources/normal/css/layout.css" rel="stylesheet" />
+        <link href="../resources/normal/css/contents.css" rel="stylesheet" />
+        <link href="../resources/normal/css/jquery-ui.css" rel="stylesheet" />
+        <script src="../resources/normal/js/jquery-1.11.3.min.js"></script>
+        <script src="../resources/normal/js/TweenMax.min.js"></script>
+        <script src="../resources/normal/js/jquery.bxslider.min.js"></script>
+        <script src="../resources/normal/js/placeholders.js"></script>
+        <!--     jquery-ui.js가 default.js보다 먼저 선언되어야 함 -->
+        <script src="../resources/normal/js/jquery-ui.js" type="text/javascript"></script>
+        <script src="../resources/normal/js/default.js"></script>
+        <script src="../resources/normal/js/ui.js"></script>
+        <script src="../resources/normal/pub_js/ui_pub.js"></script>
+        <script type="text/javascript" src="../resources/normal/js/jquery.form.min.js"></script> 
+        <script type="text/javascript" src="../resources/normal/js/common_ajax.js"></script>
+        <script type="text/javascript" src="../resources/normal/js/common_bank_calc_util.js"></script> 
+        <script type="text/javascript" src="../resources/normal/js/common_bank_map_util.js"></script> 
+        <script type="text/javascript" src="../resources/normal/js/common_layer.js"></script> 
+        <script type="text/javascript" src="../resources/normal/js/common_pagevalidate.js"></script>
+        <script type="text/javascript" src="../resources/normal/js/common_util.js"></script> 
+        <script type="text/javascript" src="../resources/normal/js/iscroll.js"></script> 
+        <script type="text/javascript" src="../resources/normal/js/jquery.animateSprite.min.js"></script>  
+        <script src="../resources/normal/js/common_bank_calc_util.js" type="text/javascript"></script>
+        <script src="../resources/normal/js/hp_common.js" type="text/javascript"></script>
+        <script src="../resources/normal/js/calculator.js"></script>    
+        <script src="../resources/normal/js/streamdocs/adapter.js"></script>  	
+        <style>
+            /* 화면 확인용 */
+            .guide > h2 { position:relative; margin:30px 0; font-size:1.2rem; font-weight:bold; }
+            .guide > section { margin-bottom:100px; padding-bottom:100px; border-bottom:dotted 2px #ccc; }
+            .guide > section > p { position:relative; margin-bottom:20px; padding-left:15px; font-size:24px; font-weight:600; }
+            .guide > section > p::before { position:absolute; top:10px; left:0; width:5px; height:5px; border-radius:3px; background:#666; content:""; }
+            .guide > section > p > a { color:blue; }
+            .guide-wrap { min-height:unset; /* border-bottom:dotted 2px #ccc;  */ }
+            .guide-wrap > p { margin-top:50px; }
+            
+            .guide-wrap > p { margin-bottom:50px; }
+            .guide-wrap > h3 { margin-top:50px; font-weight:500; }
+            .guide-wrap header,
+            .guide-wrap .fixed-btn-wrap,
+            .guide-wrap .bottom-menu-area,
+            .guide-wrap .pop-header { position:sticky!important; }
+            .guide-wrap .btn-layer-close { position:absolute!important; } 
+            .guide-wrap .layerpopup { display:block; position:sticky!important; }
+    
+        </style>
+    
+    
+    
+    </head>
+<body>
+<!-- <body class="color-type2"> 타입별 -->
+    <!-- ********** Include ********** -->
+    <!-- s:skipnavi -->
+    <div id="skipnavi">
+        <script>
+		$(document).ready(function(){
+			$("#skipnavi").load("../include/inc_body_skipnavi.html");
+		});
+		</script>
+    </div>
+    <!-- ********** //Include ********** -->
+    <!-- //e:skipnavi -->
+
+    <!-- s:wrap -->
+    <div id="wrap">
+
+       <!-- s contentsWrap -->
+        <div id="contentsWrap">
+
+			<div class="contents default-wrap guide">
+                <h2>1. 기본</h2>
+                <section>
+                    <div class="guide-wrap">
+						<ul>
+							<li>- .btn-big, .btn-normal 공동사용가능</li>
+							<li>- 케이스에 따라 class 조합하여 사용</li>
+						</ul>
+
+                        <h3 style="margin-top:50px; font-size:25px;">CTA 01 [화면 프로세스 진행 버튼 & 컨텐츠 하단 영역]</h3>
+
+                        <p style="margin-top:50px;">CTA 01 - Default/Hover(Navy)</p>
+                        <div class="btn-wrap">
+                            <button type="button" name="button" class="btn-big navy">버튼명1</button>
+							<button type="button" name="button" class="btn-normal navy">버튼명1</button>
+                        </div>
+
+                        <p style="margin-top:50px;">CTA 01 - Default/Hover - 프로세스 버튼 두개 일 경우 오른쪽 버튼 </p>
+                        <div class="btn-wrap">
+                            <button type="button" name="button" class="btn-big prod-more">버튼명1</button>
+							<button type="button" name="button" class="btn-normal prod-more">버튼명1</button>
+                        </div>
+
+                        <p style="margin-top:50px;">CTA 01 - Default/Hover(gray)</p>
+                        <div class="btn-wrap">
+                            <button type="button" name="button" class="btn-big">버튼명2</button>
+							<button type="button" name="button" class="btn-normal">버튼명2</button>
+                        </div>
+
+                        <p style="margin-top:50px;">CTA 01 - Disabled(Navy/gray)</p>
+                        <div class="btn-wrap">
+                            <button type="button" name="button" class="btn-big disabled">등록하기</button>
+							<button type="button" name="button" class="btn-normal disabled">등록하기</button>
+                        </div>
+
+                        <h3 style="margin-top:50px; font-size:25px;">CTA 02 [상품 상세 페이지 상단 영역]</h3>
+
+                        <p style="margin-top:50px;">CTA 02 - Default/Hover</p>
+                        <div class="btn-wrap multi">
+                            <a href="#none" class="btn-normal navy">한도조회</a>
+                            <a href="#none" class="btn-normal prod-more">상담신청</a>
+                            <a href="#none" class="btn-normal prod-more">대출신청</a>
+                        </div>
+						
+
+                    </div>
+                </section>
+            </div>
+
+
+            <div class="contents default-wrap guide">
+                <h2>2. 팝업</h2>
+                <section>
+					<div class="guide-wrap">
+                        <p>팝업닫기 - .btn-normal.tooltip-close</p>
+                        <div class="btn-wrap">
+                            <button type="button" name="button" class="btn-normal tooltip-close">닫기</button>
+                        </div>						
+                    </div>	
+                </section>
+            </div>
+
+            <div class="contents default-wrap guide">
+                <h2>2. form 버튼</h2>
+                <section>
+					<div class="guide-wrap">
+                        <p>Input Button</p>
+                        <div class="btn-wrap">
+                            <button type="button" name="button" class="btn-normal form">우편번호 찾기</button>
+                        </div>
+
+						<p>금액버튼 - 디자인 미정</p>
+                        <div class="input-wrap">
+							<div class="grid-wrap">
+								<div class="grid2">
+									<div class="form-wrap">
+										<p class="inp-tit">예치금액</p>
+										<div class="calculator">
+											
+											<p class="money-btn-wrap">
+												
+												<!-- s : 2023-07-14 , 위치 수정 -->
+												<button type="button" name="button" class="btn-normal tiny" data="1000000" gubun="2">+100만</button>
+												<button type="button" name="button" class="btn-normal tiny" data="5000000" gubun="2">+500만</button>
+												<button type="button" name="button" class="btn-normal tiny" data="10000000" gubun="2">+1000만</button>
+												<button type="button" name="button" class="btn-normal tiny" data="50000000" gubun="2">+5000만</button>
+												<button type="button" name="button" class="btn-normal tiny dark">정정</button>
+												 <!-- s : 2023-07-14 , 위치 수정 //-->
+											</p>
+
+										</div>
+									</div>
+									<div class="form-wrap">
+										<p class="inp-tit">예치기간</p>
+										<div class="calculator">
+											
+											<p class="money-btn-wrap">
+												
+												 <!-- s : 2023-07-14 , 위치 수정 -->
+												<button type="button" name="button" class="btn-normal tiny" data="6" gubun="1">6개월</button>
+												<button type="button" name="button" class="btn-normal tiny" data="12" gubun="1">12개월</button>
+												<button type="button" name="button" class="btn-normal tiny" data="24" gubun="1">24개월</button>
+												<button type="button" name="button" class="btn-normal tiny" data="30" gubun="1">30개월</button>
+												<button type="button" name="button" class="btn-normal tiny" data="36" gubun="1">36개월</button>
+
+												<button type="button" name="button" class="btn-normal tiny dark">정정</button>
+												 <!-- s : 2023-07-14 , 위치 수정 //-->
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				
+						<p>팝업호출 및 바로가기 - btn-popup, .btn-normal.tiny 공동사용 - 자세히보기 버튼 디자인 미정</p>
+						<div class="agree-wrap">
+							<div class="agree-area">	
+								<div class="agree-cts">
+									<div class="agree-box">									
+										<div class="items-wrap" id="${CODE_T001300002}">
+											<p class="item-tit"><label>[필수] 개인정보 제3자 제공 동의 </label><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer" data="agree-more">자세히보기</button></p>
+											<div class="items">
+												<div class="item-check">
+													<div>
+														<span class="ctm-check">
+															<input type="checkbox" name="check" id="agree2" value="">
+															<label for="agree2">개인정보 제3자 제공에 동의합니다.</label>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>							
+									</div>
+								</div>								
+							</div>							
+						</div>
+						<button type="button" name="button" class="btn-popup" onclick="">바로가기</button>
+
+                       	<p>Select Button</p>
+                        <div class="privacy-wrap">
+                            <div class="select-wrap">
+                                <select name="" id="selectbox" title="신용정보활용체제 버전 선택" class="privacy04" style="display: none;">
+                                    <option value="2.0">[신용정보활용체제 버전정보 2.0]</option>
+                                    <option value="1.0">[신용정보활용체제 버전정보 1.0]</option>
+                                    <option value="0.1">[신용정보활용체제 버전정보 0.1]</option>
+                                </select>
+                            </div>
+                            <div class="btn-wrap sel-view">
+                                <button type="button" class="btn-normal tiny" data-tooltip="manual011-layer">개정사항 비교표보기</button>
+                            </div>
+                        </div>				
+					</div>
+                </section>
+            </div>
+            
+           
+
+            <div class="contents default-wrap guide">
+                <h2>4. 기타</h2>
+                <section>
+                    <div class="guide-wrap">
+                        <p>검색영역 - .search-wrap .btn-normal.form</p>
+                        <div class="search-wrap">
+                            <div class="select-wrap">
+                                <select id="searchType" title="검색어 분류선택">
+                                    <option value="all">전체</option>
+                                    <option value="title">제목</option>
+                                    <option value="contents">내용</option>
+                                </select>
+                            </div>
+                            <input type="text" id="searchKeyword" placeholder="검색어를 입력해주세요" title="검색어 입력">
+                            <button type="button" name="button" onclick="pageFunc.selectNoticeList()" class="btn-normal form"><span>검색</span></button>
+                        </div>
+
+						<p>상품소개 - .btn-wrap.multi .navy / .btn-wrap.multi .prod-more</p>
+                        <div class="btn-wrap multi">
+                            <a href="#none" class="btn-normal navy">한도조회</a>
+                            <a href="#none" class="btn-normal prod-more">상담신청</a>
+                            <a href="#none" class="btn-normal prod-more">대출신청</a>
+                        </div>
+
+						<p>Pagination</p>
+                        <div class="pagination-wrap">
+                            <div class="pagination">
+                                <a href="#nones" class="btn-circle prev nb ir">이전</a>
+                                <ul>
+                                    <li><a href="#none" class="btn-circle nb active" title="현재페이지">1</a></li>
+                                    <li><a href="#none" class="btn-circle nb">2</a></li>
+                                </ul>
+                                <a href="#none" class="btn-circle next nb ir">다음</a>
+                            </div>
+                        </div>
+
+                        <p>흥보 다운로드 버튼 및 테이블 첨부파일 - .file a</p>
+                        <div class="pr-more file">
+                            <ul>
+                                <li>브로슈어 고용량<a href="#none" title="브로슈어 고용량">다운로드</a></li>
+                                <li>브로슈어 모바일<a href="#none" title="브로슈어 모바일">다운로드</a></li>
+                                <li>흥보영상<a href="#none" title="흥보영상">다운로드</a></li>
+                            </ul>
+                        </div>
+
+                        <table class="table-style all-c list type2">
+                            <caption>공지사항 - 리스트</caption>
+                            <colgroup>
+                                <col style="width:8%;">
+                                <col style="width:10%;">
+                                <col style="*">
+                                <col style="width:16%;">
+                                <col style="width:10%;">
+                                <col style="width:12%;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">번호</th>
+                                    <th scope="col">구분</th>
+                                    <th scope="col" class="title">제목</th>
+                                    <th scope="col">첨부파일</th>
+                                    <th scope="col">등록일</th>
+                                    <th scope="col">조회수</th>
+                                </tr>
+                            </thead>
+                            <tbody id="notice_tbody">
+                                <tr>
+                                    <td>15</td>
+                                    <td><strong>진행</strong></td>
+                                    <td class="title"><a href="/center/notice_view/532">고려저축은행 멤버십 회원 약관 개정안내</a></td>
+                                    <td class="file"><a href="/common/download/U39pSYgkXHgsDfS1wkA%252FsQ%3D%3D" title="[첨부 2] 신ㆍ구조문대비표_멤버십 회원 약관개정.hwp">다운로드</a></td>
+                                    <td>2020/01/20</td>
+                                    <td>2429</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+
+            <div class="contents default-wrap guide">
+                <h2>4. Top Button</h2>
+                <section>
+                    <div class="guide-wrap">
+                        <button type="button" name="button" class="btn-circle top ir btn-top btnbtm">위로</button>
+                    </div>
+                </section>
+            </div>
+
+            
+		</div>
+        <!-- //e: contentsWrap -->
+    </div>
+    <!-- //e:wrap -->
+</body>
+</html>

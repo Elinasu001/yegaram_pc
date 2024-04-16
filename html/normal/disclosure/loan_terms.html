@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- 헤더 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="고려저축은행" />
+<meta name="description" content="딴딴해서 믿을 수 있는 예가람저축은행, 예금, 적금, 신용부금, 논스톱 자동대출 등 예금, 대출금융상품 안내" />
+<meta name="viewport" content="width=device-width">
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta property="og:image" content="https://www.yegaramsb.co.kr/resources/normal/images/main/meta-img-square_new.jpg">   
+<link rel="shortcut icon" type="image/x-icon" href="../../../resources/favicon.ico" />
+<link href="../../../resources/normal/css/jquery.bxslider.css" rel="stylesheet" />
+<link href="../../../resources/normal/css/default.css" rel="stylesheet" />
+<link href="../../../resources/normal/css/layout.css" rel="stylesheet" />
+<link href="../../../resources/normal/css/contents.css" rel="stylesheet" />    
+<link href="../../../resources/normal/css/jquery-ui.css" rel="stylesheet" />  
+<script src="../../../resources/normal/js/jquery-1.11.3.min.js"></script>
+<script src="../../../resources/normal/js/TweenMax.min.js"></script>
+<script src="../../../resources/normal/js/jquery.bxslider.min.js"></script>
+<script src="../../../resources/normal/js/placeholders.js"></script> 
+<!--     jquery-ui.js가 default.js보다 먼저 선언되어야 함 -->
+<script src="../../../resources/normal/js/jquery-ui.js" type="text/javascript"></script>        
+<script src="../../../resources/normal/js/default.js"></script>
+<script src="../../../resources/normal/js/ui.js"></script>
+<script src="../../../resources/normal/pub_js/ui_pub.js"></script>
+<script type="text/javascript" src="../../../resources/normal/js/jquery.form.min.js"></script> 
+<script type="text/javascript" src="../../../resources/normal/js/common_ajax.js"></script>
+<script type="text/javascript" src="../../../resources/normal/js/common_bank_calc_util.js"></script> 
+<script type="text/javascript" src="../../../resources/normal/js/common_bank_map_util.js"></script> 
+<script type="text/javascript" src="../../../resources/normal/js/common_layer.js"></script> 
+<script type="text/javascript" src="../../../resources/normal/js/common_pagevalidate.js"></script>
+<script type="text/javascript" src="../../../resources/normal/js/common_util.js"></script> 
+<script type="text/javascript" src="../../../resources/normal/js/iscroll.js"></script> 
+<script type="text/javascript" src="../../../resources/normal/js/jquery.animateSprite.min.js"></script>  
+<script src="../../../resources/normal/js/common_bank_calc_util.js" type="text/javascript"></script>
+<script src="../../../resources/normal/js/hp_common.js" type="text/javascript"></script>
+<script src="../../../resources/normal/js/calculator.js"></script>    
+<script src="../../../resources/normal/js/streamdocs/adapter.js"></script>  	
+<!--     scrap -->
+<!-- <link href="/resources/scrap/css/process_manager.css" rel="stylesheet" /> -->
+<!--     <script src="/resources/scrap/js/jquery-1.9.1.min.js"></script> -->
+</head>
+<body>
+<!-- <body class="color-type2"> 타입별 -->
+    <!-- ********** Include ********** -->
+    <!-- s:skipnavi -->
+    <div id="skipnavi">
+        <script>
+		$(document).ready(function(){
+			$("#skipnavi").load("../include/inc_body_skipnavi.html");
+		});
+		</script>
+    </div>
+    <!-- ********** //Include ********** -->
+    <!-- //e:skipnavi -->
+
+    <!-- s:wrap -->
+    <div id="wrap">
+
+        <!-- ********** Include ********** -->
+        <!-- s:header -->
+        <div id="headerWrap">
+           <script>
+			$(document).ready(function(){
+				$("#headerWrap").load("../include/inc_body_header.html");
+			});
+			</script>
+        </div>
+        <!-- //e:header -->
+
+        <!-- s:sitemapWrap -->
+        <div id="sitemapWrap" class="layerpopup sitemap-layer" tabindex="0" data-tooltip-con="sitemap-layer" data-focus="sitemap-layer" data-focus-prev="btn-menu-close">
+			<script>
+			$(document).ready(function(){
+				$("#sitemapWrap").load("../include/inc_body_sitemapWrap.html");
+			});
+			</script>
+        </div>
+        <!-- //e:sitemapWrap -->
+        <!-- ********** //Include ********** -->
+
+        <!-- s contentsWrap -->
+        <div id="contentsWrap">
+        	
+            <!-- s:subVisualWrap -->
+			<div id="subVisualWrap" class="sub-type03">
+				<div>
+					<div class="breadcrumb">
+						<a href="#" class="home ir">홈</a>
+						<a href="#" class="depth1">금융상품공시실</a>
+						<a href="#" class="depth2">대출상품</a>
+						<a href="#" class="depth3">여신거래약관</a>
+					</div>
+					<div class="tit-wrap">
+						<div class="sub-tit">
+							<h2>대출상품</h2>
+							<p class="desc">고려저축은행의 대출상품을 소개해드립니다.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //e:subVisualWrap -->
+
+            <!-- s:contents -->
+            <div class="contents default-wrap"> <!-- border 없는 contents class = contents02 -->
+                <div class="disclosure-wrap">
+                    <div class="loanterms-cts">
+	                    <div class="tab-wrap">
+	                        <ul>
+	                        	<li><a href="../disclosure/loan_intro.html">상품소개</a></li>
+	                        	<li><a href="../disclosure/loan_stop.html">판매중지상품</a></li>
+	                            <li><a href="../disclosure/loan_rate.html">대출상품금리</a></li>
+	                            <li class="active"><a href="../disclosure/loan_terms.html">여신거래약관</a></li>
+	                        </ul>
+	                    </div>
+
+						<!-- s:기획 현행화 20230831 -->
+						<div class="list-tit">상호저축은행여신거래기본약관</div>
+						<p>이 상호저축은행여신거래기본약관(이하 "약관"이라 한다.)은 고려저축은행(이하 "저축은행"이라 한다)과 거래처(이하 “채무자”라 한다)와의 상호신뢰를 바탕으로 여신거래의 원활하고 공정한 처리를 위하여 만들어진 것이다. 저축은행은 이 약관을 모든 영업점 및 전자매체에 비치 게시하고 채무자는 영업시간중 언제든지 열람하거나 그 교부를 청구할 수 있다. &lt;개정 2003. 3. 3&gt;</p>
+						<div class="accordion-wrap">
+							<ul class="accordion terms">
+								<li data="677.9318237304688">
+									<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"><span class="con">제1조(적용범위)</span></a>
+									<div class="answer-wrap"> 									
+										<span class="con">										
+											<ol class="list type3">
+												<li data="0">① 적립식예금(이하 “이 예금”이라 한다)이란 기간을 정하고 그 기간 중에 미리 정한 금액이나 불특정금액을 정기 또는 부정기로 입금하는 예금을 말한다.</li>
+												<li data="0">② 이 약관에 정하지 않은 사항은 예금거래기본약관의 규정을 적용한다.</li>
+											</ol>
+										</span> 
+									</div>
+								</li>
+
+								<li data="783.9318237304688">
+									<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"><span class="con">제2조(지급시기)</span></a>
+									<div class="answer-wrap"> 									
+										<span class="con">										
+											<ol class="list type3">
+												<li data="0">이 예금은 약정한 만기일 이후 거래처가 청구할 때 지급한다. 다만, 거래처가 부득이한 사정으로 청구할 때에는 만기전이라도 지급할 수 있다.</li>
+											</ol>
+										</span> 
+									</div>
+								</li>
+
+								<li data="889.9318237304688">
+									<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"><span class="con">제3조(저축금의 입금 및 지연입금)</span></a>
+									<div class="answer-wrap"> 									
+										<span class="con">										
+											<ol class="list type3">
+												<li data="0">① 거래처는 계약기간 동안 약정한 날짜에 저축금을 입금하여야 한다.</li>
+												<li data="0">② 거래처가 제1항의 저축금을 약정일보다 늦게 입금하였을 때에는 상호저축은행은 거래처의 요청에 따라 총지연일수에서 총선납일수를 뺀 순지연일수에 대해 계약일 당시 영업점에 게시한 입금지연이율로 셈한 금액을 계약금액에서 빼거나 순지연일수를 계약월수로 나눈 월평균 지연일수만큼 만기일을 늦출 수 있다.</li>
+											</ol>
+										</span> 
+									</div>
+								</li>
+
+								<li data="995.9318237304688">
+									<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"><span class="con">제4조(만기지급금)</span></a>
+									<div class="answer-wrap"> 									
+										<span class="con">										
+											<ol class="list type3">
+												<li data="0">이 예금의 저축금을 약정한 날짜에 입금했을 때에는 상호저축은행이 저축금 총액(이하 “원금”이라 한다)에 제6조 제1항에 따라 셈한 이자를 더한 금액(이하 ‘계약금액’이라 한다)을 만기지급금으로서 지급한다.</li>
+											</ol>
+										</span> 
+									</div>
+								</li>
+
+								<li data="1101.931884765625">
+									<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"><span class="con">제5조(만기앞당김 지급)</span></a>
+									<div class="answer-wrap"> 									
+										<span class="con">										
+											<ol class="list type3">
+												<li data="0">이 예금중 자유적립식을 제외한 신용부금과 정기적금은 거래처가 모든 회차의 저축금을 입금한 후 만기일전 1개월 안에 청구하면 상호저축은행은 지급하는 날부터 만기일 전날까지의 기간에 대하여 계약일 당시 영업점에 게시한 만기앞당김 이율로 셈한 금액을 계약금액에서 빼고 지급한다.</li>
+											</ol>
+										</span> 
+									</div>
+								</li>
+
+								<li data="1207.931884765625">
+									<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"><span class="con">제6조(이자 등)</span></a>
+									<div class="answer-wrap"> 									
+										<span class="con">										
+											<ol class="list type3">
+												<li data="0">① 이 예금의 이자는 저축금마다 입금일부터 만기일 전날까지 기간에 대해 계약일 당시 영업점에 게시한 이율로 셈한다.</li>
+												<li data="0">② 거래처가 제4조의 계약금액을 정한 예금으로 가입하였을 때에는 저축금을 약정한 날짜보다 미리 입금하더라도 그 이자는 계약금액에서 원금을 뺀 금액내로 한다.</li>
+												<li data="0">③ 거래처가 만기일 후 청구한 때에는 만기지급금에 만기일부터 지급일 전날까지 기간에 대해 계약일 당시 영업점에 게시한 만기후 이율로 셈한 이자를 더하여 지급한다. &lt;개정 01.10.1&gt;</li>
+												<li data="0">④ 만기일 전에 청구할 때에는 저축금마다 입금일부터 지급일 전날까지 기간에 대해 계약일 당시 영업점에 게시한 중도해지이율로 셈한 이자를 원금에 더하여 지급한다. 다만, 신용계 및 신용부금은 계약일 당시 영업점에 게시한 계약일부터 해지일 전날까지의 기간에 해당하는 중도해지이율로 셈한다.</li>
+												<li data="0">⑤ 거래처가 만기일까지 약정한 모든 회차의 월저축금을 입금하지 않고 만기일 이후에 청구하였을 때에는 제4항 후단의 중도해지이율로 셈한 이자를 지급한다. 다만, 근로자우대저축은 약정이율을 적용한다. &lt;개정 01.6.10&gt;</li>
+												<li data="0">⑥ 이 예금 중 변동금리를 적용하는 예금은 이율을 바꾼 때 바꾼 날부터 바꾼 이율로 셈하여 이자를 지급한다.</li>
+											</ol>
+										</span> 
+									</div>
+								</li>
+
+								<li data="1313.931884765625">
+									<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"><span class="con">제7조(자유적립식예금 특례)</span></a>
+									<div class="answer-wrap"> 									
+										<span class="con">										
+											<ol class="list type3">
+												<li data="0">① 자유적립식예금이란 계약기간 동안 저축금을 달리하여 수시로 입금하는 예금을 말한다.</li>
+												<li data="0">② 자유적립식예금은 입금횟수에 관계없이 저축금마다 입금일부터 만기일전날까지의 기간에 대하여 계약일 당시 영업점에 게시한 이율로 셈한 이자와 원금을 만기지급금으로 한다.</li>
+												<li data="0">③ 자유적립식예금에는 제3조제2항, 제5조 및 제6조제4항의 규정을 적용하지 아니한다.</li>
+											</ol>
+										</span> 
+									</div>
+								</li>
+
+								<li data="1419.931884765625">
+									<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"><span class="con">제8조(세금우대종합통장 거래)</span></a>
+									<div class="answer-wrap"> 									
+										<span class="con">										
+											<ol class="list type3">
+												<li data="0">① 이 예금중에서 거래처가 개인인 정기적금 신용부금 등은 세금우대종합통장으로 거래할 수 있다. &lt;개정 01.6.10&gt;</li>
+												<li data="0">② 세금우대종합통장으로 거래하는 예금은 다음 요건을 모두 갖춘 때에 세금을 우대받을 수 있다.</li>
+												<li data="0">
+													<ol>
+														<li data="0">1. 예금기간 : 1년이상</li>
+														<li data="0">2. 예치한도 : 세금우대종합통장으로 거래할 수 있는 모든 거치식?적립식예금을 합하여 원금기준으로 관련 세법에서 정하는 한도금액이내</li>
+													</ol>
+												</li>
+												<li data="0">③ 거래처가 세금우대저축의 증액 또는 감액의 요청이 있는 경우에는 별도서면을 징구한 후 제2항 제2호의 한도내에서 증액 또는 감액할 수 있다.</li>
+												<li data="0">④ 거래처가 가입한 세금우대저축자료는 전국은행연합회에 제출되며 상호저축은행은 거래처가 다른 금융기관에 가입한 계약금액총액을 조회할 수 있다. 다만, 계약금액총액의 세부내역을 조회할 때에는 거래처의 동의를 받아야 한다.</li>
+											</ol>
+										</span> 
+									</div>
+								</li>
+
+								<li data="1525.931884765625">
+									<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"><span class="con">제9조(생계형저축통장 거래)</span></a>
+									<div class="answer-wrap"> 									
+										<span class="con">										
+											<ol class="list type3">
+												<li data="0">① 이 예금중 거래처가 개인인 경우는 생계형저축통장으로 거래할 수 있다.</li>
+												<li data="0">② 생계형저축통장으로 거래할 수 있는 예금은 모든 금융기관의 생계형저축통장 원금 합계액을 기준으로 관련 세법에서 정한 한도금액 이내이어야 한다.</li>
+												<li data="0">③ 생계형저축은 명의변경 및 양수도는 허용되지 아니한다. 다만, 법원의 개명에 의한 명의변경은 가능하다.</li>
+												<li data="0">④ 생계형저축이 한도초과로 입금(무통장 입금 및 타행송금 포함)이 되지 않아 자동이체 미처리 등의 손해가 발생하여도 거래금융기관은 그 책임을 지지 아니한다.</li>
+											</ol>
+										</span> 
+									</div>
+								</li>
+
+								<li data="1631.931884765625">
+									<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"><span class="con">제10조(법령위반시 처리)</span></a>
+									<div class="answer-wrap"> 									
+										<span class="con">										
+											<ol class="list type3">
+												<li data="0">법령에 따라 시행하는 예금에 있어서 거래처가 법령에서 정하는 가입자격, 저축한도 등 거래조건을 위반한 것으로 판명된 때는 상호저축은행은 임의로 그 예금을 해지하고 제6조 제4항의 규정에 따라 처리한 후 이를 즉시 거래처에 알린다.</li>
+											</ol>
+										</span> 
+									</div>
+								</li>
+							</ul>
+
+						</div>
+						<!-- e:기획 현행화 20230831 -->
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <!-- //e:contents -->
+            <button type="button" name="button" class="btn-circle top ir btn-top">위로</button>
+        </div>
+        <!-- //e: contentsWrap -->
+        <!-- ********** Include ********** -->
+		<!-- s footerWrap -->
+		<div id="footerWrap">
+			<script>
+			$(document).ready(function(){
+				$("#footerWrap").load("../include/inc_body_footer.html");
+			});
+			</script>
+		</div>
+		<!-- //e:footerWrap -->
+		<!-- ********** //Include ********** -->
+
+    </div>
+    <!-- //e:wrap -->
+   
+</body>
+</html>

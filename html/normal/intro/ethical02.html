@@ -1,0 +1,384 @@
+<html lang="ko">
+<head>
+<!-- 헤더 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="고려저축은행" />
+<meta name="description" content="딴딴해서 믿을 수 있는 예가람저축은행, 예금, 적금, 신용부금, 논스톱 자동대출 등 예금, 대출금융상품 안내" />
+<meta name="viewport" content="width=device-width">
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta property="og:image" content="https://www.yegaramsb.co.kr/resources/normal/images/main/meta-img-square_new.jpg">   
+<link rel="shortcut icon" type="image/x-icon" href="../../../resources/favicon.ico" />
+<link href="../../../resources/normal/css/jquery.bxslider.css" rel="stylesheet" />
+<link href="../../../resources/normal/css/default.css" rel="stylesheet" />
+<link href="../../../resources/normal/css/layout.css" rel="stylesheet" />
+<link href="../../../resources/normal/css/contents.css" rel="stylesheet" />    
+<link href="../../../resources/normal/css/jquery-ui.css" rel="stylesheet" />  
+<script src="../../../resources/normal/js/jquery-1.11.3.min.js"></script>
+<script src="../../../resources/normal/js/TweenMax.min.js"></script>
+<script src="../../../resources/normal/js/jquery.bxslider.min.js"></script>
+<script src="../../../resources/normal/js/placeholders.js"></script> 
+<!--     jquery-ui.js가 default.js보다 먼저 선언되어야 함 -->
+<script src="../../../resources/normal/js/jquery-ui.js" type="text/javascript"></script>        
+<script src="../../../resources/normal/js/default.js"></script>
+<script src="../../../resources/normal/js/ui.js"></script>
+<script src="../../../resources/normal/pub_js/ui_pub.js"></script>
+<script type="text/javascript" src="../../../resources/normal/js/jquery.form.min.js"></script> 
+<script type="text/javascript" src="../../../resources/normal/js/common_ajax.js"></script>
+<script type="text/javascript" src="../../../resources/normal/js/common_bank_calc_util.js"></script> 
+<script type="text/javascript" src="../../../resources/normal/js/common_bank_map_util.js"></script> 
+<script type="text/javascript" src="../../../resources/normal/js/common_layer.js"></script> 
+<script type="text/javascript" src="../../../resources/normal/js/common_pagevalidate.js"></script>
+<script type="text/javascript" src="../../../resources/normal/js/common_util.js"></script> 
+<script type="text/javascript" src="../../../resources/normal/js/iscroll.js"></script> 
+<script type="text/javascript" src="../../../resources/normal/js/jquery.animateSprite.min.js"></script>  
+<script src="../../../resources/normal/js/common_bank_calc_util.js" type="text/javascript"></script>
+<script src="../../../resources/normal/js/hp_common.js" type="text/javascript"></script>
+<script src="../../../resources/normal/js/calculator.js"></script>    
+<script src="../../../resources/normal/js/streamdocs/adapter.js"></script>  	
+<!--     scrap -->
+<!-- <link href="/resources/scrap/css/process_manager.css" rel="stylesheet" /> -->
+<!--     <script src="/resources/scrap/js/jquery-1.9.1.min.js"></script> -->
+
+</head>
+<body>
+<!-- <body class="color-type2"> 타입별 -->
+    <!-- ********** Include ********** -->
+    <!-- s:skipnavi -->
+    <div id="skipnavi">
+        <script>
+		$(document).ready(function(){
+			$("#skipnavi").load("../include/inc_body_skipnavi.html");
+		});
+		</script>
+    </div>
+    <!-- ********** //Include ********** -->
+    <!-- //e:skipnavi -->
+
+    <!-- s:wrap -->
+    <div id="wrap">
+
+        <!-- ********** Include ********** -->
+        <!-- s:header -->
+        <div id="headerWrap">
+           <script>
+			$(document).ready(function(){
+				$("#headerWrap").load("../include/inc_body_header.html");
+			});
+			</script>
+        </div>
+        <!-- //e:header -->
+
+        <!-- s:sitemapWrap -->
+        <div id="sitemapWrap" class="layerpopup sitemap-layer" tabindex="0" data-tooltip-con="sitemap-layer" data-focus="sitemap-layer" data-focus-prev="btn-menu-close">
+			<script>
+			$(document).ready(function(){
+				$("#sitemapWrap").load("../include/inc_body_sitemapWrap.html");
+			});
+			</script>
+        </div>
+        <!-- //e:sitemapWrap -->
+        <!-- ********** //Include ********** -->
+
+        <!-- s contentsWrap -->
+        <div id="contentsWrap">
+                     
+			<!-- s:subVisualWrap -->
+			<!-- s:디자인현행화 -->
+			<div id="subVisualWrap" class="sub-type01">
+			<!-- e:디자인현행화 -->
+				<div>
+					<div class="breadcrumb">
+						<a href="/" class="home ir">홈</a>
+						<a href="/deposit/submain" class="depth1">고려저축은행소개</a>
+					<!-- 	<a href="/deposit/register" class="depth2">윤리경영</a>
+						<a href="/deposit/register" class="depth3">윤리헌장</a> -->
+					</div>
+					<!-- s:디자인현행화 -->
+					<!-- <div class="tit-wrap">
+						<div class="sub-tit">
+							<h2>윤리경영</h2>
+							<p class="desc">고려저축은행의 윤리헌장과 윤리행동강령</p>
+						</div>
+					</div> -->
+
+					<div class="prod-main-tit">
+						<div class="sub-tit">
+							<h2>고려저축은행소개</h2>
+						</div>
+						<div class="prod-select">
+							<a href="../intro/intro_greetings.html" title="링크이동">고려저축은행소개</a>
+							<a href="../intro/busi_summary.html" title="링크이동">경영공시</a>
+							<a href="../intro/ethical01.html" class="on" title="링크이동">윤리경영</a>
+							<a href="../intro/heungkuk.html" title="링크이동">흥국금융가족</a>
+							<a href="../intro/ci.html" title="링크이동">CI소개</a>
+							<a href="../intro/talent01.html" title="링크이동">인재채용</a>
+							<!-- <a href="../intro/branchHeadOffice.html" title="링크이동">영업점안내</a> -->
+						</div>
+					</div>
+					<!-- e:디자인현행화 -->
+				</div>
+			</div>
+			<!-- //e:subVisualWrap -->
+
+			<!-- s:contents -->
+			<div class="contents default-wrap">
+				<div class="introduction-wrap">
+					<div class="ethical-cts">
+						<div class="tab-wrap">
+							<ul>
+								<li><a href="../intro/ethical01.html">윤리헌장</a></li>
+								<li class="active"><a href="../intro/ethical01.html">윤리행동강령</a></li>
+							</ul>
+						</div>
+						<!--s:기획현행화-->
+						<div class="terms-txt">
+							
+							<div class="list-tit">제1장 총 칙</div>
+							<dl>
+								<dt>제1조(목적)</dt>
+								<dd>
+									<p>이 윤리규범 실천수칙(이하 “수칙”이라 한다)은 「태광가족 윤리규범」을 바탕으로하며, 임직원이 일상생활 또는 업무와 관련된 구체적인 상황에서 따라야 하는 윤리적 의사 결정과 행동기준을 제시하는 것을 목적으로 한다.</p>
+								</dd>
+								<dt>제2조(용어의 정의)</dt>
+								<dd>
+									<p>이 강령에서 사용하는 용어의 뜻은 다음 각 호와 같다.</p>
+									<ol>
+										<li>1. ‘이해관계자’라 함은 업무와 관련한 임직원의 행위나 의사결정으로 인하여 그 영향을 받는 모든 자연인, 법인, 기타 단체를 말한다.</li>
+										<li>2. ‘협력업체’라 함은 구매, 영업대리, 공사, 개발, 업무위탁 등 회사와 거래관계에 있는 모든 법인 또는 자영업자를 말한다.</li>
+										<li>3. ‘향응수수’라 함은 식사, 주류, 운동(골프 등), 공연, 오락 등에서 발생하는 비용을 대신 부담시키는 행위를 말한다.</li>
+									</ol>
+								</dd>
+							</dl>
+
+							<div class="list-tit">제2장 공정한 업무수행 및 청렴한 자세</div>
+							<dl>
+								<dt>제3조(부당한 지시의 금지)</dt>
+								<dd>
+									<p>임직원은 동료나 부하직원에게 법규 등을 위반하는 다음 각 호의 업무처리를 요청하거나 지시하여서는 아니 된다.(또한 이를 요청받거나 지시받은 경우 거절하여야 한다.)</p>
+									<ol>
+										<li>1. 부적절한 대출을 지시하는 행위(대출자격이 안되는데도 불구하고 대출을 강요하는 등)</li>
+										<li>2. 중앙회, 금감원 보고시 패널티 등의 이유로 잘못된 내용을 보고하는 행위</li>
+										<li>3. 대출건수 등 업무처리상 실적을 쌓기 위해 실적을 가로채는 행위</li>
+										<li>4. 업무수행을 위한 경비 금액을 허위로 조작하여 보고하는 행위</li>
+										<li>5. 직·간접적인 금전대차를 강요하거나 투자를 부추기는 행위</li>
+									</ol>
+								</dd>
+
+								<dt>제4조(상호존중)</dt>
+								<dd>
+									<ol>
+										<li>① 임직원은 다음 각 호에 해당하는 부분에 대해 차별을 하지 않아야 하며 공사를 정확히 구분하여 업무를 수행하여야 한다
+											<ol>
+												<li>1. 연령·성별에 따른 차별</li>
+												<li>2. 종교·정치성향에 따른 차별</li>
+												<li>3. 장애유무에 따른 차별</li>
+												<li>4. 학연, 혈연, 지연 등에 따른 차별</li>
+											</ol>
+										</li>
+										<li>② 임직원은 동료 및 부하직원을 괴롭히는 다음 각 호의 행위를 하여서는 아니 된다.
+											<ol>
+												<li>1. 불특정 다수의 임직원 앞에서 특정 임직원을 험담하는 행위</li>
+												<li>2. 폭언 및 욕설 등 인격모독을 하여 괴롭히는 행위</li>
+												<li>3. 커피타기, 담배구매 등 잔심부름 등을 시키는 행위</li>
+												<li>4. 경조사비, 선물 등을 목적으로 사사로운 경조 사실을 알려 부담을 주는 행위</li>
+												<li>5. 회식을 강요하거나 회식자리에서 술 또는 춤을 강요하는 행위</li>
+												<li>6. 신체에 대해 성적인 평가를 하거나 음담패설, 성희롱 등을 하는 행위</li>
+											</ol>
+										</li>
+									</ol>
+								</dd>
+								
+								<dt>제5조(자산의 목적 외 사용금지)</dt>
+								<dd>
+									<ol>
+										<li>
+											① 임직원은 회사의 자산(업무수행 경비, 차량 등)을 다음 각 호의 사적인 용도로 사용하여서는 아니 된다.
+											<ol>
+												<li>1. 영업 등을 위한 접대비 명목의 경비 등을 유흥, 도박을 목적으로 사용하는 행위</li>
+												<li>2. 팀에 지급되는 경비를 개인이 독단적으로 사용하는 행위</li>
+												<li>3. 개인적인 사유로 경비를 사용하는 행위(식사, 물품·상품권구매 등)</li>
+												<li>4. 업무 외 개인적인 목적으로 차량을 사용하는 행위</li>
+											</ol>
+										</li>
+										<li>② 임직원은 업무상 취득한 비밀정보 및 고객정보에 대하여 다음 각 호의 사적인 용도로 사용하거나 누설하여서는 아니 된다.
+											<ol>
+												<li>1. 유가증권, 부동산투자를 하는 등 이익을 도모하거나 이와 관련하여 허위사실을 유포하여 오해를 유발케 하는 경우</li>
+												<li>2. 부당한 이득을 얻기 위하여 협력업체 또는 이해관계자에게 비밀정보를 발설하는 경우</li>
+												<li>3. 개인적인 친분이 있는 지인의 요청으로 특정 고객의 정보를 조회하여 알리는 경우</li>
+												<li>4. 부당한 이득을 얻기 위하여 다수 고객의 개인정보를 유출시키는 경우</li>
+											</ol>
+										</li>
+									</ol>
+								</dd>
+								
+								<dt>제6조(근무태만 금지)</dt>
+								<dd>
+									<p>임직원은 근무시간 중 다음 각 호의 행위를 하여서는 아니 된다.</p>
+									<ol>
+										<li>1. 스포츠 토토 등 사행성 도박을 하는 행위</li>
+										<li>2. 게임 등 오락을 하는 행위</li>
+										<li>3. 주식투자 행위</li>
+										<li>4. 음란사이트 접속 행위</li>
+										<li>5. 상위자의 승인 없이 무단외출을 하는 행위</li>
+									</ol>
+								</dd>
+								
+								<dt>제7조(건전한 생활자세)</dt>
+								<dd>
+									<p>임직원은 평소 생활에 있어서 건전함을 유지하여야 하며 다음 각 호의 행위를 하여서는 아니 된다.</p>
+									<ol>
+										<li>1. 본인의 경제적 능력을 벗어나는 투자 및 사치성 소비 행위</li>
+										<li>2. 사행성 도박을 위한 업소 방문 및 내기골프 등의 행위</li>
+										<li>3. 불법적인 유흥업소 출입 행위</li>
+										<li>4. 음주운전 행위</li>
+									</ol>
+								</dd>
+								
+								<dt>제8조(선물과 향응 수수 금지)</dt>
+								<dd>
+									<ol>
+										<li>
+											① 임직원은 이해관계자 및 협력업체에 대하여 향응 수수 및 제공을 하여서는 아니 되며, 가족 또는 친인척을 통해 주고받는 경우에도 본인의 행위로 본다. 다만 다음 각 호는 예외로 한다.
+											<ol>
+												<li>1. 통상적인 관례의 범위(1인당 3만원)에서 제공되는 식사 등</li>
+												<li>2. 업무관련 공식 행사에서 일률적으로 제공되는 기념품</li>
+											</ol>
+										</li>
+										<li>② 임직원 상호 간에도 선물과 향응 수수는 원칙적으로 금지되나, 상호부조 등은 예외로 한다.</li>
+									</ol>
+								</dd>
+								
+								<dt>제9조(청탁 금지)</dt>
+								<dd>
+									<ol>
+										<li>① 임직원은 자신의 임용, 승진 등을 위해 직접 또는 타인으로 하여금 인사 담당자에게 청탁을 하여서는 아니 된다.</li>
+										<li>② 임직원은 직위를 이용하여 다른 임직원의 임용, 승진 등 인사에 부당하게 개입하여서는 아니 된다.</li>
+										<li>③ 임직원은 자신의 부당한 이익을 위하여 이해관계자 및 협력업체에 청탁을 하여서는 아니 된다.</li>
+									</ol>
+								</dd>
+							</dl>
+
+							<div class="list-tit">제3장 고객존중 및 협력업체 보호</div>
+							<dl>
+								<dt>제10조(고객응대)</dt>
+								<dd>
+									<ol>
+										<li>① 임직원은 고객 응대시 고객의 의견을 경청하여야 하며, 고객이 만족할 수 있도록 친절하게 응대하여야 한다</li>
+										<li>② 임직원은 고객이 불만을 제기할시 어떤 부분에서 불편함을 느꼈는지에 대해 파악하고 다음 각 호에 따라 해결한다.
+											<ol>
+												<li>1. 응대에 대한 불만의 경우 해당부분을 파악하여 고칠 수 있도록 노력한다.</li>
+												<li>2. 업무처리에 대한 불만의 경우 업무를 개선할 수 있도록 관련 부서에 해당사항을 전달한다</li>
+											</ol>
+										</li>
+									</ol>
+								</dd>
+								
+								<dt>제11조(올바른 정보제공)</dt>
+								<dd>
+									<ol>
+										<li>① 임직원은 고객에게 상품 및 서비스를 제공함에 있어서 고객이 내용을 충분히 이해할 수 있게 설명하여야 하며 특히 고령자, 장애인 등 금융취약계층에게 설명시 좀 더 주의하여야 한다.</li>
+										<li>② 임직원은 다음 각 호에 해당하는 불완전 판매를 하여서는 아니 되며 고객의 알 권리를 보장해주어야 한다.
+											<ol>
+												<li>1. 이자수취를 목적으로 하는 필요 이상의 과다대출 유도</li>
+												<li>2. 실적을 쌓기 위해 고객이 원하는 상품 외 다른 상품 이용 권유</li>
+												<li>3. 고객이 헷갈릴 수 있는 중요사항(금리의 변동 여부, 대출계약철회에 대한 내용 등) 누락</li>
+											</ol>
+										</li>
+									</ol>
+								</dd>
+								
+								<dt>제12조(협력업체와의 의사소통)</dt>
+								<dd><p>임직원은 협력업체에 갑질행위를 하여서는 아니 되며, 업무상 요구사항 등이 있을 경우 정중하게 의사소통을 할 수 있도록 한다.</p></dd>
+							</dl>
+
+							<div class="list-tit">제4장 제보자 보호</div>
+							<dl>
+								<dt>제13조(제보자 보호)</dt>
+								<dd>
+									<p>윤리규범실천수칙을 위반한 사실 또는 위반할 가능성이 있다고 문제를 제기한 선의의 직원이 피해를 보지 않도록 보복을 명확히 금지하며, 보복 행위와 인사상 불이익 행위시 관련 내규에 따라 징계할 수 있다.</p>
+								</dd>
+							</dl>
+
+							<div class="list-tit">제5장 상벌</div>
+							<dl>
+								<dt>제14조(포상)</dt>
+								<dd>
+									<ol>
+										<li>① 윤리경영 정착을 위한 각종 제안과 윤리규범 우수실천자로 인정되는 경우 포상 또는 우대조치를 취할 수 있다.</li>
+										<li>② 제 1항의 포상은 내규의 상벌규정에 의해 실시한다.</li>
+									</ol>
+								</dd>
+
+								<dt>제15조(징계)</dt>
+								<dd>
+									<p>임직원은 윤리규범 실천수칙 위반시 관련 내규에 따라 조사를 받을 수 있으며, 사안의 경중에 따라 감사위원회(감사팀) 또는 인사위원회(경영지원팀)에 회부되어 징계를 받을 수 있다.</p>
+									<ol>
+										<li>② 제 1항의 징계는 내규의 상벌규정에 의해 실시한다.</li>
+									</ol>
+								</dd>
+							</dl>
+
+							<div class="list-tit">제6장 보칙</div>
+							<dl>
+								<dt>제16조(질의 및 보고)</dt>
+								<dd>
+									<p>임직원은 강령 해석에 대해 의문점이 있을 경우 준법감시인에게 질의할 수 있으며, 강령을 위반한 사실 또는 위반할 가능성이 있다고 생각하는 경우 즉시 준법감시인에게 신고하여 상담받을 수 있다.</p>
+								</dd>
+
+								<dt>제17조(자가진단)</dt>
+								<dd>
+									<p>임직원은 복잡한 상황에서 개개인이 스스로 윤리규범실천수칙에 부합여부를 판단할수 있도록 <첨부1>윤리규범 실천수칙 자가진단표에 의거 스스로의 행위에 대해 올바른 결정을 할수 있도록 노력하여야 한다.</p>
+								</dd>
+							</dl>
+
+							<div class="list-tit">부칙</div>
+							<dl>
+								<dt>제1조(시행일)</dt>
+								<dd><p>이 규정은 2019년 9월 1일부터 시행한다.</p></dd>
+								<br/>
+								<dd>
+									<p><첨부1> 윤리규범실천수칙 자가진단표</p>
+									<ol>
+										<li>① 합법여부 : 합법/적법한가?</li>
+										<li>② 회사정책 : 윤리실천방안, 회사정책, 가치에 부합하는가?</li>
+										<li>③ 회사명예 : 회사의 이미지를 실추 시키지는 않는가?</li>
+										<li>④ 언론노출 : 언론에 보도되어도 문제 없는가?</li>
+										<li>⑤ 보편타당 : 모든 직원이 이렇게 행동해도 괜찮은가?</li>
+										<li>⑥ 개인명성 : 가족, 친구, 동료가 알아도 불편하지 않는가</li>
+									</ol>
+								</dd>
+							</dl>
+
+						</div>
+						<!--e:기획현행화-->
+					</div>
+				</div>
+			</div>
+			<!-- //e:contents -->
+			<button type="button" name="button" class="btn-circle top ir btn-top">위로</button>
+            
+        </div>
+        <!-- //e: contentsWrap -->
+
+        <!-- ********** Include ********** -->
+        <!-- s footerWrap -->
+        <div id="footerWrap">
+            <script>
+			$(document).ready(function(){
+				$("#footerWrap").load("../include/inc_body_footer.html");
+			});
+			</script>
+        </div>
+        <!-- //e:footerWrap -->
+        <!-- ********** //Include ********** -->
+    </div>
+    <!-- //e:wrap -->
+
+</body>
+</html>

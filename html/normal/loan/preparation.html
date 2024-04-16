@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- 헤더 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="고려저축은행" />
+<meta name="description" content="딴딴해서 믿을 수 있는 예가람저축은행, 예금, 적금, 신용부금, 논스톱 자동대출 등 예금, 대출금융상품 안내" />
+<meta name="viewport" content="width=device-width">
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta property="og:image" content="https://www.yegaramsb.co.kr/resources/normal/images/main/meta-img-square_new.jpg">
+<link rel="shortcut icon" type="image/x-icon" href="../../../resources/favicon.ico" />
+<link href="../../../resources/normal/css/jquery.bxslider.css" rel="stylesheet" />
+<link href="../../../resources/normal/css/default.css" rel="stylesheet" />
+<link href="../../../resources/normal/css/layout.css" rel="stylesheet" />
+<link href="../../../resources/normal/css/contents.css" rel="stylesheet" />
+<link href="../../../resources/normal/css/jquery-ui.css" rel="stylesheet" />
+<script src="../../../resources/normal/js/jquery-1.11.3.min.js"></script>
+<script src="../../../resources/normal/js/TweenMax.min.js"></script>
+<script src="../../../resources/normal/js/jquery.bxslider.min.js"></script>
+<script src="../../../resources/normal/js/placeholders.js"></script>
+<!--     jquery-ui.js가 default.js보다 먼저 선언되어야 함 -->
+<script src="../../../resources/normal/js/jquery-ui.js" type="text/javascript"></script>
+<script src="../../../resources/normal/js/default.js"></script>
+<script src="../../../resources/normal/js/ui.js"></script>
+<script src="../../../resources/normal/pub_js/ui_pub.js"></script>
+<script type="text/javascript" src="../../../resources/normal/js/jquery.form.min.js"></script>
+<script type="text/javascript" src="../../../resources/normal/js/common_ajax.js"></script>
+<script type="text/javascript" src="../../../resources/normal/js/common_bank_calc_util.js"></script>
+<script type="text/javascript" src="../../../resources/normal/js/common_bank_map_util.js"></script>
+<script type="text/javascript" src="../../../resources/normal/js/common_layer.js"></script>
+<script type="text/javascript" src="../../../resources/normal/js/common_pagevalidate.js"></script>
+<script type="text/javascript" src="../../../resources/normal/js/common_util.js"></script>
+<script type="text/javascript" src="../../../resources/normal/js/iscroll.js"></script>
+<script type="text/javascript" src="../../../resources/normal/js/jquery.animateSprite.min.js"></script>
+<script src="../../../resources/normal/js/common_bank_calc_util.js" type="text/javascript"></script>
+<script src="../../../resources/normal/js/hp_common.js" type="text/javascript"></script>
+<script src="../../../resources/normal/js/calculator.js"></script>
+<script src="../../../resources/normal/js/streamdocs/adapter.js"></script>
+<!--     scrap -->
+<!-- <link href="/resources/scrap/css/process_manager.css" rel="stylesheet" /> -->
+<!--     <script src="/resources/scrap/js/jquery-1.9.1.min.js"></script> -->
+
+</head>
+<body>
+<!-- <body class="color-type2"> 타입별 -->
+    <!-- ********** Include ********** -->
+    <!-- s:skipnavi -->
+    <div id="skipnavi">
+        <script>
+		$(document).ready(function(){
+			$("#skipnavi").load("../include/inc_body_skipnavi.html");
+		});
+		</script>
+    </div>
+    <!-- ********** //Include ********** -->
+    <!-- //e:skipnavi -->
+
+    <!-- s:wrap -->
+    <div id="wrap">
+        <!-- ********** Include ********** -->
+        <!-- s:header -->
+        <div id="headerWrap">
+        <script>
+			$(document).ready(function(){
+				$("#headerWrap").load("../include/inc_body_header.html");
+			});
+			</script>
+        </div>
+        <!-- //e:header -->
+
+        <!-- s:sitemapWrap -->
+        <div id="sitemapWrap" class="layerpopup sitemap-layer" tabindex="0" data-tooltip-con="sitemap-layer" data-focus="sitemap-layer" data-focus-prev="btn-menu-close">
+			<script>
+			$(document).ready(function(){
+				$("#sitemapWrap").load("../include/inc_body_sitemapWrap.html");
+			});
+			</script>
+        </div>
+        <!-- //e:sitemapWrap -->
+        <!-- ********** //Include ********** -->
+		
+        <!-- s contentsWrap -->
+		<div id="contentsWrap">
+			
+			<!-- s:subVisualWrap -->
+            <div id="subVisualWrap" class="sub-type03">
+				<div>
+					<div class="breadcrumb">
+						<a href="#" class="home ir">홈</a>
+						<a href="#" class="depth1">대출상품</a>
+						<a href="#" class="depth2">대출가이드</a>
+						<a href="#" class="depth3">대출준비서류</a>
+					</div>
+					<div class="tit-wrap">
+						<div class="sub-tit">
+							<h2>대출가이드</h2>
+							<p class="desc">대출관련 FAQ 및 기본 가이드 안내</p>
+						</div>
+					</div>
+				</div>
+			</div>
+            <!-- //e:subVisualWrap -->
+
+			<!-- s:contents -->
+			<div class="contents default-wrap">
+				<div class="guide-wrap">
+					<div class="tab-wrap">
+						<ul>
+							<li><a href="../loan/faq.html">대출FAQ</a></li>
+                            <li><a href="../loan/basic_terms.html">대출거래기본약관</a></li>
+                            <li><a href="../loan/guide.html">대출방법안내</a></li>
+                            <li class="active"><a href="../loan/preparation.html">대출준비서류</a></li>
+						
+						</ul>
+					</div>
+
+					<div class="preparation-cts">
+                        <!-- 180726 am 추가 -->
+			            <!-- <div class="select-tab" tabindex="-1">
+			              <a href="#none" class="tab-txt">신용대출 준비서류 안내</a>
+			              <ul class="select-list">
+			                <li><a href="#none">신용대출 준비서류 안내</a></li>
+			                <li><a href="#none">사업자대출 준비서류 안내</a></li>
+			                <li><a href="#none">햇살론 준비서류 안내</a></li>
+			                
+			              </ul>
+			            </div> -->
+			            <!-- //180726 am 추가 -->
+			            <!-- 180726 am 추가 -->
+						<!-- s:디자인현행화 삭제 -->
+			            <!--<div class="select-tab" tabindex="-1">
+			               <a href="#none" class="tab-txt">신용대출 준비서류 안내</a>
+			              <ul class="select-list">
+			                <li><a href="#none">신용대출 준비서류 안내</a></li>
+			                <li><a href="#none">사업자대출 준비서류 안내</a></li>
+			                <li><a href="#none">햇살론 준비서류 안내</a></li>
+			              </ul> -->
+						
+						<!--<div class="select-wrap">
+							<select name="select_gbn" class="" id="select_gbn" title="대출구분 선택" style="display: none;">
+								<option value="1" selected="selected">신용대출 준비서류 안내</option>
+								<option value="2">사업자대출 준비서류 안내</option>
+								<option value="3">햇살론 준비서류 안내</option>
+							</select>
+						</div>-->
+						<!-- e:디자인현행화 삭제 -->
+						</div>
+			            <!-- //180726 am 추가 -->
+						
+						<!-- s:디자인현행화 -->
+						<div class="doc-type1">
+								<!-- s:디자인현행화 -->
+								<p class="list-tit">기본서류</p>
+								<table class="table-style">
+								<caption>기본서류 안내 - 구분, 법인, 개인으로 구성</caption>
+								
+								<colgroup>
+									<col style="width:20%">
+									<col style="width:*">
+									<col style="width:*">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">구분</th>
+										<th scope="col">법인</th>
+										<th scope="col">개인</th>
+									</tr>
+								</thead>
+								<!--s:디자인현행화-->
+								<tbody>
+									<tr>
+										<th class="ta-c">채무자</th>
+										<td>
+											등기권리증<br>
+											법인 인감증명서 및 법인인감도장<br>
+											법인등기부등본<br>
+											법인정관<br>
+											이사회의사록(금융기관차입금)<br>
+											주주명부<br>
+											소득증빙자료(재무제표,현금흐름표 등)<br>
+											국세 및 지방세 납세 증명서
+										</td>
+										<td class="al-l">
+											등기권리증인감증명서 및 인감도장주민등록등본 및 주민등록초본주민등록증(신분증)<br>
+											소득증빙자료<br>
+											- 개인:근로소득원천징수영수증,재직증명서<br>
+											- 사업자: 사업자등록증,소득세신고자료,&nbsp;국세 및 지방세 납세증명서
+										</td>
+									</tr>
+									<tr>
+										<th class="ta-c">보증인</th>
+										<td class="al-l">
+											법인 인감증명서 및 법인인감도장<br>
+											법인등기부등본<br>
+											법인정관<br>
+											이사회의사록(금융기관보증용)<br>
+											주주명부재무제표
+										</td>
+										<td class="al-l">
+											인감증명서 및 인감도장<br>
+											주민등록등본 및 주민등록초본<br>
+											소득증빙자료<br>
+											- 개인: 근로소득원천징수영수증,재직증명서<br>
+											- 사업자: 사업자등록증,소득세신고자료,&nbsp;국세 및 지방세 납세증명서
+										</td>
+									</tr>
+								</tbody>
+								<!--e:디자인현행화-->
+							</table>
+						</div>
+				
+						<div class="doc-type1">
+								
+								<p class="list-tit">추가서류</p>
+								<table class="table-style">
+								<!--s:디자인현행화-->
+								<caption>대출구비서류 - 추가서류</caption>
+								<!--e:디자인현행화-->
+								<colgroup>
+									<col style="width:*">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">대출유형</th>
+										<th scope="col">준비서류</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th class="ta-c">주책(아파트)담보대출</th>
+										<td>선순위은행 거래내역(금융거래확인서)</td>
+									</tr>
+									<tr>
+										<th class="ta-c">부동산담보대출</th>
+										<td>토지대장 및 건축물관리대장</td>
+									</tr>
+									<tr>
+										<th class="ta-c">사업자대출</th>
+										<td>사업자등록사본,소득금액증명원,부가가치세과세표준증명원<br/>(면세사업자:매출내역증명원)</td>
+									</tr>
+									<tr>
+										<th class="ta-c">예적금담보대출</th>
+										<td>예금통장,예금통장 날인된 인감도장,주민등록증 또는 운전면허증</td>
+									</tr>
+									<tr>
+										<th class="ta-c">보증서담보대출</th>
+										<td>보증서발급기관 보증서 <br />(기술신용보증기금,신용보증기금,신용보증재단,서울보증보험)</td>
+									</tr>
+									<tr>
+										<th class="ta-c">종합통장대출</th>
+										<td>재직증명서 및 사업자등록증,소득증빙자료</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- e:디자인현행화 -->
+						
+						<!-- s:디자인현행화 삭제 -->
+						<!--
+						<div class="doc-type2">
+						
+								<p class="list-tit">사업자대출</p>
+								<table class="table-style">
+								<%-- <caption>사업자대출 - 구분, 확인사항, 비고로 구성</caption> --%>
+								<caption>사업자대출 준비서류 안내 - 구분, 확인사항, 비고로 구성</caption>
+								
+								<colgroup>
+									<col style="width:20%">
+									<col style="width:*">
+									<col style="width:30%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">구분</th>
+										<th scope="col">확인사항</th>
+										<th scope="col">비고</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">공통</th>
+										<td>
+											사업자등록증사본<br>
+											주민등록 등본<br>
+											주민등록 원초본(과거주소포함)<br>
+											지방세 세목별 과세표준증명<br>
+											국세 완납증명서<br>
+											지방세 완납증명서<br>
+											전입세대열람내역서<br>
+											인감증명서<br>
+											소득금액증명원 또는 부가세 과세표준증명원
+										</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<th scope="row">법인, 조합</th>
+										<td>
+											법인등기부등본<br>
+											정관 또는 조합규약<br>
+											법인 인감증명서(담보 설정시 필요)<br>
+											재무재표<br>
+											이사회의사록 사본<br> 주주명부
+										</td>
+										<td>법인인감으로 "원본대조필" 확인</td>
+									</tr>
+									<tr>
+										<th scope="row">연대보증인</th>
+										<td>
+											보증인 인감증명서<br>
+											보증인 재산세 과세증명서 또는 영수증
+										</td>
+										<td>&nbsp;</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="doc-type3">
+							<div class="list-tit">햇살론</div>
+							<div class="txt-box">
+								<p>
+									기본서류 외에 신청하신 대출상품에 따라서 준비서류가 추가될 수 있습니다.<br>
+									자세한 준비서류는 당행으로 문의하시기 바랍니다.
+								</p>
+							</div>
+							<ul class="define-list">
+								<li>
+									<span class="de-tit">공통</span>
+									<div class="de-cts">
+										<ul class="list type2">
+											<li>- 주민등록등본 및 원초본</li>
+											<li>- 실명확인증표 사본</li>
+											<li>- 재직 및 근속소득 확인서류(근로소득신고여부 및 입사년도에 따라 상이)</li>
+										</ul>
+										<div class="table-wrap">
+											<table class="table-style">
+												
+												<caption>햇살론 준비서류 안내 - 근로소득, 당해년도 입사 신고자, 직전년도 이전 입사 신고자, 미신고자로 구성</caption>
+												<colgroup>
+													<col style="width:25%">
+													<col style="width:25%">
+													<col style="width:25%">
+													<col style="width:*">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="row">근로소득</th>
+														<th scope="col">당해년도 입사 신고자</th>
+														<th scope="col">직전년도 이전<br>입사 신고자</th>
+														<th scope="col">미신고자</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<th scope="row">재직증명서</th>
+														<td colspan="2" rowspan="3">건강보험(국민연금) 자격득실확인서 대체</td>
+														<td rowspan="3" class="va-m">택1</td> 
+													</tr>
+													<tr>
+														<th scope="row">근로(고용)계약서</th>
+													</tr>
+													<tr>
+														<th scope="row">근로(고용)확인서</th>
+													</tr>
+													<tr>
+														<th scope="row">소득금액증명원</th>
+														<td>&nbsp;</td>
+														<td rowspan="3" class="va-m">택1</td> 
+														<td>&nbsp;</td>
+													</tr>
+													<tr>
+														<th scope="row">근로소득원천징수영수증</th>
+														<td>&nbsp;</td>
+														<td>&nbsp;</td>
+													</tr>
+													<tr>
+														<th scope="row">건강보험납부 확인서</th>
+														<td><strong class="accent3">○</strong></td>
+														<td>&nbsp;</td>
+													</tr>
+													<tr>
+														<th scope="row">급여통장 거래내역</th>
+														<td>&nbsp;</td>
+														<td>&nbsp;</td>
+														<td><strong class="accent3">○</strong></td>
+													</tr>
+													<tr>
+														<th scope="row">급여명세서</th>
+														<td>&nbsp;</td>
+														<td>&nbsp;</td>
+														<td><strong class="accent3">○</strong></td>
+													</tr>
+													<tr>
+														<th scope="row">사업자등록증 사본</th>
+														<td>&nbsp;</td>
+														<td>&nbsp;</td>
+														<td><strong class="accent3">○</strong></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</li>
+								<li>
+									<span class="de-tit">대환</span>
+									<div class="de-cts">
+										<ul class="list type2">
+											<li>- 금융거래확인서 : 대환채무가 있는 신용카드 or 신용카드 겸업 은행必</li>
+											<li>- 대환대출대상 채무내역서 : 채권기관 비치 (고객작성)</li>
+											<li>- 대환대출대상 채무확인서 : NICE평가정보㈜</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+						-->
+						<!-- s:디자인현행화 삭제 -->
+					</div>
+				
+				
+				
+				</div>
+			</div>
+			<script type="text/javascript">
+			/* 180726 am 삭제 */
+			// $('[class*=doc-type]').hide();
+			// $('.doc-type1').show();
+			// $('select.preparation').on('selectmenuchange',function(){
+			// 	var _cate = "." + "doc-type" + $(this).val();
+			// 	$('[class*=doc-type]').hide();
+			// 	$(_cate).show();
+			// });
+			/* //180726 am 삭제*/
+
+			/* 180727 pm 수정 */
+			$('div[class*=doc-type]').hide(); /* 180726 pm 추가 */
+			$('.doc-type1').show(); /* 180726 pm 추가 */
+			$('.select-tab').each(function() {
+				$(this).find('.tab-txt').on('click', function(e) {
+					$(this).addClass('focus');
+					$('.select-list').show();
+				});
+
+				$(this).find('.tab-txt').on('focusin', function(e) {
+					$(this).addClass('focus');
+				});
+
+				$(this).find('.select-list li:last-child a').on('focusout', function(e) {
+					$('.select-list').hide();
+					$('.tab-txt').removeClass('focus');
+				});
+
+				$(this).find('.select-list a').on('click', function() {
+					tabTxt = $('.select-tab a:focus').text();
+        $('.tab-txt').text(tabTxt).addClass('focus');
+        $('.select-list').hide();
+        $('.tab-txt').focus();
+
+					var idx = $('.select-list li').index($(this).parent());
+					idx = idx + 1;
+					$('div[class*=doc-type]').hide();
+					$('.doc-type' + idx).show();
+					isOpen = false;
+				});
+
+				$(this).on('keydown', function(e) {
+					if (e.keyCode == 16) {
+						$('.select-list').hide();
+						$(this).find('.tab-txt').removeClass('focus');
+					} else if (e.keyCode == 9) {
+						if ($(this).find('.select-list:visible').length == 0) {
+							$('.tab-txt').removeClass('focus');
+						}
+					}
+				});
+			});
+			$(document).click(function(e) {
+				if ( !($(e.target).parents('.select-tab').length > 0) ){
+					$('.tab-txt').removeClass('focus');
+					$('.select-list').hide();
+				}
+			});
+
+			/* //180727 pm 수정 */
+			</script>
+			<!-- //e:contents -->
+			<button type="button" name="button" class="btn-circle top ir btn-top">위로</button>
+		</div>
+		<!-- //e: contentsWrap -->
+        
+        <!-- ********** Include ********** -->
+        <!-- s footerWrap -->
+        <div id="footerWrap">
+            <script>
+			$(document).ready(function(){
+				$("#footerWrap").load("../include/inc_body_footer.html");
+			});
+			</script>
+        </div>
+        <!-- //e:footerWrap -->
+        <!-- ********** //Include ********** -->
+    </div>
+    <!-- //e:wrap -->
+
+</body>
+</html>

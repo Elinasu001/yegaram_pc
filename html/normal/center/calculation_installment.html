@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 헤더 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>예가람저축은행</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="keywords" content="예가람저축은행">
+    <meta name="description" content="딴딴해서 믿을 수 있는 고려저축은행, 예금, 적금, 신용부금, 논스톱 자동대출 등 예금, 대출금융상품 안내">
+    <meta name="viewport" content="width=device-width">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta property="og:image" content="https://www.yegaramsb.co.kr/resources/normal/images/main/meta-img-square_new.jpg">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../resources/favicon.ico">
+    <link href="../../../resources/normal/css/jquery.bxslider.css" rel="stylesheet">
+    <link href="../../../resources/normal/css/default.css" rel="stylesheet">
+    <link href="../../../resources/normal/css/layout.css" rel="stylesheet">
+    <link href="../../../resources/normal/css/contents.css" rel="stylesheet">
+    <link href="../../../resources/normal/css/jquery-ui.css" rel="stylesheet">
+    <script src="../../../resources/normal/js/jquery-1.11.3.min.js"></script>
+    <script src="../../../resources/normal/js/TweenMax.min.js"></script>
+    <script src="../../../resources/normal/js/jquery.bxslider.min.js"></script>
+    <script src="../../../resources/normal/js/placeholders.js"></script>
+    <!--     jquery-ui.js가 default.js보다 먼저 선언되어야 함 -->
+    <script src="../../../resources/normal/js/jquery-ui.js" type="text/javascript"></script>
+    <script src="../../../resources/normal/js/default.js"></script>
+    <script src="../../../resources/normal/js/ui.js"></script>
+    <script src="../../../resources/normal/pub_js/ui_pub.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/jquery.form.min.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/common_ajax.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/common_bank_calc_util.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/common_bank_map_util.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/common_layer.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/common_pagevalidate.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/common_util.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/iscroll.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/jquery.animateSprite.min.js"></script>
+    <script src="../../../resources/normal/js/common_bank_calc_util.js" type="text/javascript"></script>
+    <script src="../../../resources/normal/js/hp_common.js" type="text/javascript"></script>
+    <script src="../../../resources/normal/js/calculator.js"></script>
+    <script src="../../../resources/normal/js/streamdocs/adapter.js"></script>
+    <!--     scrap -->
+    <!-- <link href="/resources/scrap/css/process_manager.css" rel="stylesheet" /> -->
+    <!--     <script src="/resources/scrap/js/jquery-1.9.1.min.js"></script> -->
+
+</head>
+
+<body>
+    <!-- <body class="color-type2"> 타입별 -->
+    <!-- ********** Include ********** -->
+    <!-- s:skipnavi -->
+    <div id="skipnavi">
+        <script>
+            $(document).ready(function () {
+                $("#skipnavi").load("../include/inc_body_skipnavi.html");
+            });
+        </script>
+    </div>
+    <!-- ********** //Include ********** -->
+    <!-- //e:skipnavi -->
+
+    <!-- s:wrap -->
+
+    <div id="wrap">
+
+        <!-- ********** Include ********** -->
+        <!-- s:header -->
+        <div id="headerWrap">
+            <script>
+                $(document).ready(function () {
+                    $("#headerWrap").load("../include/inc_body_header.html");
+                });
+            </script>
+        </div>
+        <!-- //e:header -->
+
+        <!-- s:sitemapWrap -->
+        <div id="sitemapWrap" class="layerpopup sitemap-layer" tabindex="0" data-tooltip-con="sitemap-layer"
+            data-focus="sitemap-layer" data-focus-prev="btn-menu-close">
+            <script>
+                $(document).ready(function () {
+                    $("#sitemapWrap").load("../include/inc_body_sitemapWrap.html");
+                });
+            </script>
+        </div>
+        <!-- //e:sitemapWrap -->
+        <!-- ********** //Include ********** -->
+
+        <!-- s contentsWrap -->
+        <div id="contentsWrap">
+
+            <!-- s:subVisualWrap -->
+            <div id="subVisualWrap" class="sub-type03">
+				<div>
+					<div class="breadcrumb">
+						<a href="/" class="home ir">홈</a>
+					<a href="#none" class="depth1">고객센터</a>
+					<a href="#none" class="depth2">금융계산기</a>
+					<a href="#none" class="depth3">적금계산</a>
+					</div>
+					<div class="tit-wrap">
+						<div class="sub-tit">
+							<h2>금융계산기</h2>
+                            <p class="desc">예상 예금, 적금, 대출 이자를 금융계산기로 계산해 보세요.</p>
+                        </div>
+					</div>
+				</div>
+			</div>
+            <!-- //e:subVisualWrap -->
+            <!-- s:contents -->
+            <div class="contents default-wrap"> <!-- border 없는 contents class = contents02 -->
+                <div class="calculator-wrap">
+                    <div class="tab-wrap">
+                        <ul>
+                            <li><a href="../center/calculation_deposit.html">예금계산</a></li>
+                            <li class="active"><a href="../center/calculation_installment.html">적금계산</a></li>
+                            <li><a href="../center/calculation_loan.html">대출계산</a></li>
+                        </ul>
+                    </div>
+                    <!-- s: 2023-07-14 , 태그 수정 -->
+					<p class="cont-tit">목돈을 일정기간 동안 예치 했을때 만기지급액과 이자를 자세히 보실 수 있습니다.</p>
+					<!-- e: 2023-07-14 , 태그 수정 //-->
+
+                    <div class="input-wrap">
+                        <div class="grid-wrap">
+                            <div class="grid2">
+                                <div class="form-wrap">
+                                    <p class="inp-tit">월납입액</p> 
+                                    <div class="calculator">
+                                        <div class="slider-wrap">
+                                            <div id="monthMoneySlider" class="slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" max="100000000">
+                                            <div class="ui-slider-range ui-corner-all ui-widget-header ui-slider-range-min"></div>
+                                            <input type="button" class="ui-slider-handle ui-corner-all ui-state-default" title="월납입액 수치"></div>
+                                        </div>
+                                        <p class="money-btn-wrap">
+                                            
+                                             <!-- s : 2023-07-14 , 위치 수정 -->
+											<button type="button" name="button" class="btn-normal tiny" data="100000" gubun="2">+10만</button>
+											<button type="button" name="button" class="btn-normal tiny" data="500000" gubun="2">+50만</button>
+											<button type="button" name="button" class="btn-normal tiny" data="1000000" gubun="2">+100만</button>
+											<button type="button" name="button" class="btn-normal tiny" data="5000000" gubun="2">+500만</button>
+											<button type="button" name="button" class="btn-normal tiny dark">정정</button>
+											 <!-- s : 2023-07-14 , 위치 수정 //-->
+                                        </p>
+                                        <div class="inp-area">
+              
+                                            <input type="text" name="" value="" id="money" placeholder="월납입액을 입력하세요" title="월납입액 입력">
+                                            <div class="unit-txt">원</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-wrap">
+                                    <p class="inp-tit">목표기간</p> 
+                                    <div class="calculator">
+                                        <div class="slider-wrap">
+                                            <div id="paymentSlider" class="slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" max="60">
+                                            <div class="ui-slider-range ui-corner-all ui-widget-header ui-slider-range-min"></div>
+                                        <input type="button" class="ui-slider-handle ui-corner-all ui-state-default" title="목표기간 수치"></div> 
+                                        </div>
+                                        <p class="money-btn-wrap">
+											  <!-- s : 2023-07-14 , 위치 수정 -->
+                                           
+											<button type="button" name="button" class="btn-normal tiny" data="6" gubun="1">6개월</button>
+											<button type="button" name="button" class="btn-normal tiny" data="12" gubun="1">12개월</button>
+											<button type="button" name="button" class="btn-normal tiny" data="24" gubun="1">24개월</button>
+											<button type="button" name="button" class="btn-normal tiny" data="30" gubun="1">30개월</button>
+											<button type="button" name="button" class="btn-normal tiny" data="36" gubun="1">36개월</button>
+											 <button type="button" name="button" class="btn-normal tiny dark">정정</button>
+                                           
+											 <!-- s : 2023-07-14 , 위치 수정 -->
+                                        </p>
+                                        <div class="inp-area">
+                                            <input type="text" name="" value="" id="month" placeholder="개월을 입력하세요" title="목표기간(개월) 입력">
+                                            <div class="unit-txt">개월</div><!--단위 텍스트가 있을때-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid2">
+                                <div class="form-wrap">
+                                    <p class="inp-tit">이자율</p>
+                                    <div class="calculator">
+                                        <div class="slider-wrap">
+                                            <div id="interestSlider" class="slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" max="20"><div class="ui-slider-range ui-corner-all ui-widget-header ui-slider-range-min"></div><input type="button" class="ui-slider-handle ui-corner-all ui-state-default" title="이자율 수치"></div> 
+                                        </div>
+                                        <div class="inp-area">
+                                            <input type="text" name="" value="" id="interest" placeholder="이자율을 입력하세요" title="이자율 입력">
+                                            <div class="unit-txt">%</div><!--단위 텍스트가 있을때-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-wrap">
+                                    <p class="inp-tit">기준</p>
+                                    <div class="calculator inradio">
+                                    	<span class="ctm-radio checked">
+                                    		<input type="radio" name="radio" id="radio1" value="1" checked="">
+                                        	<label for="radio1">단리</label>
+                                        </span>
+                                        <span class="ctm-radio">
+                                        	<input type="radio" name="radio" id="radio2" value="0">
+                                        	<label for="radio2">월 복리</label>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-wrap">
+                        <button type="button" name="button" class="btn-big navy btn-inquiry">계산하기</button>
+                        <!-- s : 2023-07-14 ,class 수정 //-->
+                        <button type="button" name="button" class="btn-normal btn-ft-dwn" onclick="pageFunc.init()">다시작성</button>
+                    </div>
+                    <div class="calculator-result line-box">
+						<div class="list-tit mb30">계산결과</div> <!-- 180726 pm 추가 -->
+						<table class="table-style"> <!-- 180726 pm class=" caption-tit" 삭제 -->
+							<!-- s: 20180725 am - 캡션 상세화 -->
+							<caption>계산결과 - 구분, 월납입액 합계(원), 이자(세금납부 전, 원), 이자(세금납부 후, 원), 만기지급액(원)으로 구성</caption>
+							<!-- //e: 20180725 am - 캡션 상세화 -->
+							<!-- 180626 pm colgroup 수정 -->
+							<colgroup>
+								<col style="width:*;">
+								<col style="width:23%;">
+								<col style="width:23%;">
+								<col style="width:23%;">
+								<col style="width:23%;">
+								<!-- //180626 pm colgroup 수정 -->
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">월납입액 합계(원)</th>
+									<th scope="col">이자(세금납부 전, 원)</th> <!-- 180723 am 오타수정 -->
+									<th scope="col">이자(세금납부 후, 원)</th>
+									<th scope="col">만기지급액(원)</th>
+								</tr>
+							</thead>
+                            <tbody id="cal_tbody">
+                            </tbody>
+                        </table>
+                        <div class="btn-wrap">
+                            <button type="button" name="button" class="btn-big btn-reinquiry" onclick="pageFunc.init()">다시 계산하기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //e:contents -->
+            <button type="button" name="button" class="btn-circle top ir btn-top">위로</button>
+        </div>
+        <!-- //e: contentsWrap -->
+
+        <!-- ********** Include ********** -->
+        <!-- s footerWrap -->
+        <div id="footerWrap">
+            <script>
+                $(document).ready(function () {
+                    $("#footerWrap").load("../include/inc_body_footer.html");
+                });
+            </script>
+        </div>
+        <!-- //e:footerWrap -->
+        <!-- ********** //Include ********** -->
+
+    </div>
+    <!-- //e:wrap -->
+</body>
+
+</html>
+
+<script>
+    $( function() {
+        $('.calculator-wrap .btn-inquiry').on('click',function(){
+            pageFunc.calculation();
+        });
+
+        //예치금액
+        $( "#monthMoneySlider" ).slider({
+            range: "min",
+            value:removeComma($("#money").val()),
+            min: 0,
+            max: 1000000000, //180622 pm max값 수정
+            disabled:false,
+            step: 10000,
+            slide: function( event, ui ) {
+                $( "#money" ).val( addComma(ui.value) );
+            }
+        });
+        $("#money").change(function () {
+            
+            var value = this.value*1 ? this.value*1 : this.value.getNumber() ? this.value.getNumber() : "0";
+            var _max = parseFloat($(this).parent().siblings('.slider-wrap').find('.slider').attr('max'));
+            value =  value*1 > _max  ? _max+"" : value;
+            this.value = addComma(value);
+            $("#monthMoneySlider").slider("value", value);
+        });
+
+        //예치기간
+        $( "#paymentSlider" ).slider({
+            range: "min",
+            value:0,
+            min: 0,
+            max: 60, //180622 pm max값 수정
+            step: 1,
+            slide: function( event, ui ) {
+                $( "#month" ).val( addComma(ui.value) );
+            }
+        });
+        $("#month").change(function () {
+            var value =  this.value.getNumber();
+            this.value = value;
+            $("#paymentSlider").slider("value", value);
+        });
+
+        //이자율
+        $( "#interestSlider" ).slider({
+            range: "min",
+            value:0,
+            min: 0,
+            max: 20, //180622 pm max값 수정
+            step: 0.01,
+            slide: function( event, ui ) {
+                $( "#interest" ).val( ui.value );
+            }
+        });
+        $("#interest").change(function () {
+            var value = this.value*1 ? this.value : "0";
+            this.value = value;
+            $("#interestSlider").slider("value", value);
+        });
+    } );
+</script>

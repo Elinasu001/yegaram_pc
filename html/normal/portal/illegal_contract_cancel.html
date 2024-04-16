@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 헤더 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>예가람저축은행</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="keywords" content="예가람저축은행">
+    <meta name="description" content="딴딴해서 믿을 수 있는 고려저축은행, 예금, 적금, 신용부금, 논스톱 자동대출 등 예금, 대출금융상품 안내">
+    <meta name="viewport" content="width=device-width">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta property="og:image" content="https://www.yegaramsb.co.kr/resources/normal/images/main/meta-img-square_new.jpg">   
+    <link rel="shortcut icon" type="image/x-icon" href="../../../resources/favicon.ico">
+    <link href="../../../resources/normal/css/jquery.bxslider.css" rel="stylesheet">
+    <link href="../../../resources/normal/css/default.css" rel="stylesheet">
+    <link href="../../../resources/normal/css/layout.css" rel="stylesheet">
+    <link href="../../../resources/normal/css/contents.css" rel="stylesheet">
+    <link href="../../../resources/normal/css/jquery-ui.css" rel="stylesheet">
+    <script src="../../../resources/normal/js/jquery-1.11.3.min.js"></script>
+    <script src="../../../resources/normal/js/TweenMax.min.js"></script>
+    <script src="../../../resources/normal/js/jquery.bxslider.min.js"></script>
+    <script src="../../../resources/normal/js/placeholders.js"></script>
+    <!--     jquery-ui.js가 default.js보다 먼저 선언되어야 함 -->
+    <script src="../../../resources/normal/js/jquery-ui.js" type="text/javascript"></script>
+    <script src="../../../resources/normal/js/default.js"></script>
+    <script src="../../../resources/normal/js/ui.js"></script>
+    <script src="../../../resources/normal/pub_js/ui_pub.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/jquery.form.min.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/common_ajax.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/common_bank_calc_util.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/common_bank_map_util.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/common_layer.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/common_pagevalidate.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/common_util.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/iscroll.js"></script>
+    <script type="text/javascript" src="../../../resources/normal/js/jquery.animateSprite.min.js"></script>
+    <script src="../../../resources/normal/js/common_bank_calc_util.js" type="text/javascript"></script>
+    <script src="../../../resources/normal/js/hp_common.js" type="text/javascript"></script>
+    <script src="../../../resources/normal/js/calculator.js"></script>
+    <script src="../../../resources/normal/js/streamdocs/adapter.js"></script>
+    <!--     scrap -->
+    <!-- <link href="/resources/scrap/css/process_manager.css" rel="stylesheet" /> -->
+    <!--     <script src="/resources/scrap/js/jquery-1.9.1.min.js"></script> -->
+
+</head>
+
+<body>
+    <!-- <body class="color-type2"> 타입별 -->
+    <!-- ********** Include ********** -->
+    <!-- s:skipnavi -->
+    <div id="skipnavi">
+        <script>
+            $(document).ready(function () {
+                $("#skipnavi").load("../include/inc_body_skipnavi.html");
+            });
+        </script>
+    </div>
+    <!-- ********** //Include ********** -->
+    <!-- //e:skipnavi -->
+
+    <!-- s:wrap -->
+    <div id="wrap">
+
+        <!-- ********** Include ********** -->
+        <!-- s:header -->
+        <div id="headerWrap">
+            <script>
+                $(document).ready(function () {
+                    $("#headerWrap").load("../include/inc_body_header.html");
+                });
+            </script>
+        </div>
+        <!-- //e:header -->
+
+        <!-- s:sitemapWrap -->
+        <div id="sitemapWrap" class="layerpopup sitemap-layer" tabindex="0" data-tooltip-con="sitemap-layer"
+            data-focus="sitemap-layer" data-focus-prev="btn-menu-close">
+            <script>
+                $(document).ready(function () {
+                    $("#sitemapWrap").load("../include/inc_body_sitemapWrap.html");
+                });
+            </script>
+        </div>
+        <!-- //e:sitemapWrap -->
+        <!-- ********** //Include ********** -->
+
+        <!-- s contentsWrap -->
+        <div id="contentsWrap">
+
+            <!-- s:subVisualWrap -->
+            <!--s:기획현행화-->
+            <div id="subVisualWrap" class="sub-type01">
+				<div>
+					<div class="breadcrumb">
+						<a href="#none" class="home ir">홈</a>
+						<a href="#none" class="depth1">금융소비자보호</a>
+						<a href="#none" class="depth1">금융소비자 권리</a>
+						<a href="#none" class="depth2">위법계약 해지권</a>
+					</div>
+
+					<!-- <div class="tit-wrap">
+						<div class="sub-tit">
+							<h2>금융소비자 권리</h2>
+                            <p class="desc">위법계약 해지권 안내 페이지입니다.</p>
+                        </div>
+					</div> -->
+
+                    <div class="prod-main-tit">
+						<div class="sub-tit">
+							<h2>금융소비자보호</h2>
+						</div>
+						<div class="prod-select">
+							<a href="../portal/protection_info.html" title="링크이동">금융소자보호체계</a>
+							<a href="../portal/online_const.html" title="링크이동">민원센터</a>
+							<a href="../portal/civil_apply_exam.html" title="링크이동">금융소비자보호우수사례</a>
+							<a href="../portal/illegal_contract_cancel.html" class="on" title="링크이동">금융소비자권리</a>
+							<a href="../portal/disclosure_civil_complaints.html" title="링크이동">금융소비자보호공시</a>
+							<a href="../portal/collection_bonds_guide.html" title="링크이동">채권추심업무</a>
+							<a href="../portal/fraud_notice.html" title="링크이동">유용한소비자정보</a>
+							<a href="../portal/aptness_confirm.html" title="링크이동">적합성·적정성 조회</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+            <!--e:기획현행화-->
+            <!-- //e:subVisualWrap -->
+            <!-- s:contents -->
+            <div class="contents default-wrap">
+                <div class="tab-wrap">
+                    <ul>
+                        <li class="active"><a href="../portal/illegal_contract_cancel.html">위법계약 해지권</a></li>
+                        <li><a href="../portal/withdrawal.html">청약철회권</a></li>
+                        <li><a href="../portal/ratecut_info.html">금리인하요구권</a></li>
+                        <li><a href="../portal/view_data_req.html">자료열람요구권</a></li>
+                    </ul>
+                </div>
+                <div class="withdrawal-wrap">
+					<!-- s:디자인현행화 -->
+                    <h3 class="list-tit">위법계약 해지권 안내</h3>
+					<!-- e:디자인현행화 -->
+                    <div class="list-tit type2">위법계약 해지권이란?</div>
+                    <ul class="define-list">
+                        <li>
+                            <!-- <span class="de-tit">내용설명</span> -->
+                            <span class="de-tit">설명</span> <!-- 180706 am 텍스트 수정 -->
+                            <div class="de-cts">금융회사가 판매원칙을 위반하여 금융상품 계약을 체결한 경우 금융소비자가 해당 계약의 해지를 요구할 수 있는 제도입니다.</div>
+                        </li>
+                        <li>
+                            <span class="de-tit">적용상품</span>
+                            <div class="de-cts">
+                                금융회사가 판매원칙을 위반하여 금융상품 계약을 체결한 경우 금융소비자가 해당 계약의 해지를 요구할 수 있는 제도입니다.금융소비자와 계속적 거래가 이루어지고 금융소비자가 해지시 재산상 불이익이 발생하는 금융상품 중 다음금융상품을 제외 한 상품
+                                <p>- '온라인투자연계금옹업 및 이용자보호에 관한 법률'에 따른 온라인투자연계금융업자와 체결하는 계약</p>
+                                <p>- '자본시장과 금융투자업에 관한 법률'에 따른 원화로 표시된 양도성 예금증서</p>
+                                <p>- '자본시장과 금융투자업에 관한 법률 시행령'에 따른 표지어음</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="de-tit">행사기간</span>
+                            <!--s:2023-07-14 구조변경-->
+                            <div class="de-cts">
+                                금융소비자가 계약 체결에 대한 위반사항을 안 날로부터 1년 이내 (이 경우 해당 기간은 계약체결일로부터 5년 이내의 범위에 있어야 함)
+                            </div>
+                            <!--e:2023-07-14 구조변경-->
+                        </li>
+                        <!--s:기획현행화-->
+                        <li>
+                            <span class="de-tit">행사요건</span>
+                            <div class="de-cts">
+                                <p>금융소비자보호법  5대 판매원칙을 위반하여 계약을 체결한 경우</p>
+                                <p>☞ 5대 판매원칙 : 적합성원칙, 적정성원칙, 설명의무, 불공정영업행위금지, 부당권유행위금지</p>
+                                <p>금융소비자가 위법한 사실을 안 날로부터 1년 이내의 기간으로서 계약체결일로부터 5년 이내 범위의 기간 내에 해지요구 가능</p>
+                            </div>
+                        </li>
+                        <!--e:기획현행화-->
+                        <li>
+                            <span class="de-tit">위법계약 해지요구 신청방법</span>
+                            <!--s:기획현행화-->
+                            <div class="de-cts">
+                                "위법계약 해지 요구서"를 작성하시어 당사에 제출해야 합니다.
+                                <br>
+                                · 이메일 : esyang1130@goryosb.co.kr / yjson0517@goryosb.co.kr
+                                <br>
+                                · 팩스 : 051-637-9020
+                            </div>
+                            <!--e:기획현행화-->
+                        </li>
+                        <!-- //20210910 pm 추가 -->
+                        <!-- 180706 am 추가 -->
+                        <li>
+                            <span class="de-tit">전화안내</span>
+                            <div class="de-cts">위법계약해지권에 대한 상세한 안내를 원하시면, 고려저축은행 고객센터 1877-9900으로 연락바랍니다.</div>
+                        </li>
+                        <!--s:기획현행화-->
+                        <div class="default-wrap02 ">
+                            <p>담당부서 : 준법지원팀 | 담당자 : 손영지 | 전화번호 : 051-640-9086</p>
+                        </div>
+                        <!--e:기획현행화-->
+                    </ul>
+                    
+                    <!--s:2023-07-17 구조변경-->
+                    <p class="btn-wrap">
+                    <!--e:2023-07-17 구조변경-->
+                        <a href="/resources/normal/file/위법계약해지권.pdf" class="btn-normal btn-ft-dwn" download>신청서 다운로드</a><a href="/resources/normal/file/위임장(210925).pdf" class="btn-normal btn-ft-dwn" download>위임장 다운로드</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- //e:contents -->
+            <button type="button" name="button" class="btn-circle top ir btn-top">위로</button>
+        </div>
+        <!-- //e: contentsWrap -->
+
+        <!-- ********** Include ********** -->
+        <!-- s footerWrap -->
+        <div id="footerWrap">
+            <script>
+                $(document).ready(function () {
+                    $("#footerWrap").load("../include/inc_body_footer.html");
+                });
+            </script>
+        </div>
+        <!-- //e:footerWrap -->
+        <!-- ********** //Include ********** -->
+
+    </div>
+    <!-- //e:wrap -->
+</body>
+
+</html>

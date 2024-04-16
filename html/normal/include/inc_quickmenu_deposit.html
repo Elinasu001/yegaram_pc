@@ -1,0 +1,75 @@
+
+     <script>
+     
+        var PageFuncQuickDeposit = ({
+            
+            setProdMenu : function(data) {
+                
+                //예금상품
+                $(".quick-menu > .quick-list > .list-wrap > ul").empty();
+                PageFuncQuickDeposit.printProdMenu($(".quick-menu > .quick-list > .list-wrap > ul"), data.selectCategoryDeposit, data.selectProdDeposit);
+                $(".quick-menu > .quick-list > .list-wrap > ul").append($('<li class="depth2"><a href="/deposit/register">보호금융상품등록부</a></li>'));
+                 $(".quick-menu > .quick-list > .list-wrap > ul").append($('<li class="depth2"><a href="/deposit/protect">예금자보호법</a></li>'));
+                $(".quick-menu > .quick-list > .list-wrap > ul").append($('<li class="depth2"><a href="/deposit/no_facing">비대면계좌개설</a></li>'));
+                $(".quick-menu > .quick-list > .list-wrap > ul").append($('<li class="depth2"><a href="/deposit/faq">예금가이드</a><ul class="depth3"><li><a href="/deposit/faq">예금FAQ</a></li><li><a href="/deposit/terms">예금거래기본약관</a></li></ul></li>'));
+                
+                $(".quick-menu > .quick-list > .list-wrap > ul a").each(function(index) {
+                    if(location.pathname === $(this).attr('href')) {
+                        $(this).addClass('current');
+                        if($(this).parents('.depth2')) {
+                            $(this).parents('.depth2').find('a').eq(0).addClass('current');
+                        }
+                    }
+                });
+            },
+            
+            printProdMenu : function(objTag, categoryList, prodList) {
+                
+                for(var i=0; i<categoryList.length; i++) {
+                    
+                    var arr = prodList.filter(function(item, index, array) {
+                        
+                        if(categoryList[i].CATE_CD === item.CATE_CD) {
+                            return item;
+                        }
+                    });
+                    
+                    if(1 === arr.length) {
+                    	
+                    	objTag.append($('<li class="depth2"><a href="/deposit/product/'+arr[0].PROD_CD+'" >'+categoryList[i].CATE_NM+'</a></li>'));
+                    } else {
+                    	
+                    	var liTag = $('<li class="depth2"><a href="/deposit/product/'+arr[0].PROD_CD+'" >'+categoryList[i].CATE_NM+'</a></li>');
+                    	var ulTag = $('<ul class="depth3"></ul>');
+                    	
+                        for(var j=0; j<arr.length; j++) {
+                            
+                            if(categoryList[i].CATE_CD === arr[j].CATE_CD && arr[j].PROD_CD) {
+                                
+                                var liT = $('<li><a href="/deposit/product/'+arr[j].PROD_CD+'" >'+arr[j].PROD_NM+'</a></li>');
+                                ulTag.append(liT);
+                            }
+                        }
+                        
+                        liTag.append(ulTag);
+                        objTag.append(liTag);
+                    }
+                    
+                }
+                setTimeout(function() {
+                	quickScroll();
+                }, 500)
+            },
+            
+        });
+
+    </script>
+        
+            <a href="#none" class="quick-toggle ir">퀵메뉴 열기</a> <!-- 180725 pm 텍스트 수정 -->
+			<div class="quick-list" tabindex="-1" data-focus="quick-menu" data-focus-prev="">
+				<p class="depth1">예금상품</p>
+				<div class="list-wrap">
+					<ul>
+					</ul>
+				</div>
+			</div>

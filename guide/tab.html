@@ -1,0 +1,3356 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<!-- 헤더 -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>예가람저축은행</title>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+		<meta http-equiv="Content-Style-Type" content="text/css">
+		<meta name="keywords" content="예가람저축은행" />
+		<meta name="description" content="딴딴해서 믿을 수 있는 예가람저축은행, 예금, 적금, 신용부금, 논스톱 자동대출 등 예금, 대출금융상품 안내" />
+		<meta name="viewport" content="width=device-width">
+		<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta property="og:image" content="https://www.yegaramsb.co.kr/resources/normal/images/main/meta-img-square_new.jpg">   
+		<link rel="shortcut icon" type="image/x-icon" href="../resources/favicon.ico" />
+		<link href="../resources/normal/css/jquery.bxslider.css" rel="stylesheet"f />
+		<link href="../resources/normal/css/default.css" rel="stylesheet" />
+		<link href="../resources/normal/css/layout.css" rel="stylesheet" />
+		<link href="../resources/normal/css/contents.css" rel="stylesheet" />
+		<link href="../resources/normal/css/jquery-ui.css" rel="stylesheet" />
+		<script src="../resources/normal/js/jquery-1.11.3.min.js"></script>
+		<script src="../resources/normal/js/TweenMax.min.js"></script>
+		<script src="../resources/normal/js/jquery.bxslider.min.js"></script>
+		<script src="../resources/normal/js/placeholders.js"></script>
+		<!--     jquery-ui.js가 default.js보다 먼저 선언되어야 함 -->
+		<script src="../resources/normal/js/jquery-ui.js" type="text/javascript"></script>
+		<script src="../resources/normal/js/default.js"></script>
+		<script src="../resources/normal/js/ui.js"></script>
+		<script src="../resources/normal/pub_js/ui_pub.js"></script>
+		<script type="text/javascript" src="../resources/normal/js/jquery.form.min.js"></script> 
+		<script type="text/javascript" src="../resources/normal/js/common_ajax.js"></script>
+		<script type="text/javascript" src="../resources/normal/js/common_bank_calc_util.js"></script> 
+		<script type="text/javascript" src="../resources/normal/js/common_bank_map_util.js"></script> 
+		<script type="text/javascript" src="../resources/normal/js/common_layer.js"></script> 
+		<script type="text/javascript" src="../resources/normal/js/common_pagevalidate.js"></script>
+		<script type="text/javascript" src="../resources/normal/js/common_util.js"></script> 
+		<script type="text/javascript" src="../resources/normal/js/iscroll.js"></script> 
+		<script type="text/javascript" src="../resources/normal/js/jquery.animateSprite.min.js"></script>  
+		<script src="../resources/normal/js/common_bank_calc_util.js" type="text/javascript"></script>
+		<script src="../resources/normal/js/hp_common.js" type="text/javascript"></script>
+		<script src="../resources/normal/js/calculator.js"></script>    
+		<script src="../resources/normal/js/streamdocs/adapter.js"></script>  	
+		<style>
+			/* 화면 확인용 */
+			.guide > h2 { position:relative; margin:30px 0; font-size:1.2rem; font-weight:bold; }
+			.guide > section { margin-bottom:100px; padding-bottom:100px; border-bottom:dotted 2px #ccc; }
+			.guide > section > p { position:relative; margin-bottom:20px; padding-left:15px; font-size:24px; font-weight:600; }
+			.guide > section > p::before { position:absolute; top:10px; left:0; width:5px; height:5px; border-radius:3px; background:#666; content:""; }
+			.guide > section > p > a { color:blue; }
+			.guide-wrap { min-height:unset; /* border-bottom:dotted 2px #ccc;  */ }
+			.guide-wrap header,
+			.guide-wrap .fixed-btn-wrap,
+			.guide-wrap .bottom-menu-area,
+			.guide-wrap .pop-header { position:sticky!important; }
+			.guide-wrap .btn-layer-close { position:absolute!important; } 
+			.guide-wrap .layerpopup { display:block; position:sticky!important; }
+	
+		</style>
+	
+	
+	
+	</head>
+<body>
+<!-- <body class="color-type2"> 타입별 -->
+    <!-- ********** Include ********** -->
+    <!-- s:skipnavi -->
+    <div id="skipnavi">
+        <script>
+		$(document).ready(function(){
+			$("#skipnavi").load("../include/inc_body_skipnavi.html");
+		});
+		</script>
+    </div>
+    <!-- ********** //Include ********** -->
+    <!-- //e:skipnavi -->
+
+    <!-- s:wrap -->
+    <div id="wrap">
+
+        <!-- s contentsWrap -->
+        <div id="contentsWrap">
+
+			<div class="contents default-wrap guide">
+                <h2>TAB</h2>
+                <section>
+                    <div class="container">
+						<p>보호금융상품등록부 - <a href="../html/normal/deposit/register.html" target="_blank">register.html</a></p>
+						<div class="tab-wrap tab-page">
+							<ul>
+								<li class="active">
+									<a href="#none">보호금융상품등록부</a>
+									<div id="H000100001" class="contents-area" style="display: block; top: 90px;">
+										 <!-- s:2023-07-14 수정 -->
+										 <div class="cts-box type2 mt0">
+										 <!-- e:2023-07-14 수정 -->
+											<!-- s:2023-07-16 수정 -->
+											<p class="box-txt">본 금융기관이 취급하는 금융상품 중 예금보험공사가 예금자보호법에 의하여 보호하는 금융상품의 종류는 붙임과 같습니다.</p>
+											<p class="box-txt accent2 fw-bold">붙임1 : 보호금융의 목록</p>
+											<p class="box-txt accent2 fw-bold mt0">붙임 2. 타 금융회사 보호금융상품 취급 목록</p>
+											<!-- e:2023-07-16 수정 -->
+											<div class="line-box">
+												<p class="box-txt">예금자보호제도에 관한 자세한 내용은 영업점에 비치된 예금자보호 안내책자 등을 참고하시거나<br> 	
+												<!-- s:2023-07-16 수정 -->
+												<span class="accent fw-bold">예금보험공사</span>로 문의하시기 바랍니다.</p>
+												<!-- e:2023-07-16 수정 -->
+												<!--s:2023-07-18 수정 -->
+												<p class="box-txt fc-black">
+													<span>※&nbsp;</span>연락처 : 1588-0037<br><span>※&nbsp;</span>홈페이지 : <a href="http://www.kdic.or.kr" target="_self" class="link">www.kdic.or.kr</a>
+												</p>
+												<p class="box-desc">※ 정부, 지방자치단체, 한국은행, 금융감독원, 예금보험공사, 부보금융기관이 가입한 금융상품은 보호되지않습니다.</p>
+												<p class="box-desc">※ 보험상품은 보험계약자 및 보험료납부자가 법인이면 보호되지 않습니다. 그러나 퇴직보험계약은 그러하지 않습니다.</p>
+												<!--e:2023-07-18 수정-->
+											</div>
+										</div>
+										<div class="prod-date">
+											<!--s: 2023-07-18 수정-->
+											<span class="date">기준일 : 2023년 04월 01일</span>
+											<span class="compliance">고려저축은행</span>
+											<!--e: 2023-07-18 수정-->
+										</div>
+									</div>
+								</li>
+							
+								<li class="">
+									<a href="#none">보호금융상품의 목록</a>
+									<div id="H000100003" class="contents-area" style="display: none;">
+										<div class="list-tit">보호금융상품의 목록</div>
+										<div class="cts-box type2 ">
+										   <div class="table-wrap">
+												<table class="table-style all-c __se_tbl_ext">
+													<caption class="sr-only">보호금융상품목록안내표이며 계정과목, 금융상품명, 판매중단일, 비고 항목이 있습니다.</caption>
+													<colgroup>
+														<col>
+														<col>
+														<col>
+														<col>
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">계정과목</th>
+															<th scope="col">금융상품명</th>
+															<th scope="col">판매중단일</th>
+															<th scope="col">비고</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>가계장기저축</td>
+															<td>가계장기저축</td>
+															<td>1998.12.31</td>
+															<td>&nbsp;</td>
+														</tr>
+														<tr>
+															<td>기업자유예금</td>
+															<td>기업자유예금</td>
+															<td>&nbsp;</td>
+															<td>&nbsp;</td>
+														</tr>
+														<tr>
+															<td>근로자우대저축</td>
+															<td>근로자우대저축</td>
+															<td>2002.12.31</td>
+															<td>&nbsp;</td>
+														</tr>
+														<tr>
+															<td>근로자장기저축</td>
+															<td>근로자장기저축</td>
+															<td>2003.06.30</td>
+															<td>&nbsp;</td>
+														</tr>
+														<tr>
+															<td>보통예금</td>
+															<td>보통예금</td>
+															<td>&nbsp;</td>
+															<td>&nbsp;</td>
+														</tr>
+														<tr>
+															<td>자유적립예금</td>
+															<td>자유적립예금</td>
+															<td>&nbsp;</td>
+															<td>&nbsp;</td>
+														</tr>
+														<tr>
+															<td>장기주택마련저축</td>
+															<td>장기주택마련저축</td>
+															<td>2012.12.31</td>
+															<td>&nbsp;</td>
+														</tr>
+														<tr>
+															<td>정기적금</td>
+															<td>일반정기적금</td>
+															<td>&nbsp;</td>
+															<td>&nbsp;</td>
+														</tr>
+														<tr>
+															<td>정기적금</td>
+															<td>가계우대정기적금</td>
+															<td>2001-06-10</td>
+															<td>&nbsp;</td>
+														</tr>
+														<tr>
+															<td>정기적금</td>
+															<td>응답하라2030정기적금</td>
+															<td>&nbsp;</td>
+															<td>&nbsp;</td>
+														</tr>
+														<tr>
+															<td>정기적금</td>
+															<td>씨앗정기적금</td>
+															<td>&nbsp;</td>
+															<td>&nbsp;</td>
+														</tr>
+														<tr>
+															<td>정기예금</td>
+															<td>일반정기예금</td>
+															<td>&nbsp;</td>
+															<td>&nbsp;</td>
+														</tr>
+														<tr>
+															<td>정기예금</td>
+															<td>복리정기예금</td>
+															<td>&nbsp;</td>
+															<td>&nbsp;</td>
+														</tr>
+														<tr>
+															<td>정기예금</td>
+															<td>회전정기예금</td>
+															<td>&nbsp;</td>
+															<td>&nbsp;</td>
+														</tr>
+														<tr>
+															<td>정기예금</td>
+															<td>퇴직연금정기예금(DC/IRP형)</td>
+															<td>&nbsp;</td>
+															<td>퇴직연금 전용</td>
+														</tr>
+														<tr>
+															<td>표지어음</td>
+															<td>표지어음(선취)</td>
+															<td>2000-12-31</td>
+															<td>&nbsp;</td>
+														</tr>
+														<tr>
+															<td>정기적금</td>
+															<td>ISA정기적금</td>
+															<td>&nbsp;</td>
+															<td>우리은행 제공</td>
+														</tr>
+														<tr>
+															<td>정기예금</td>
+															<td>(특판)GO BANK 정기예금</td>
+															<td>2022.02.28</td>
+															<td>앱전용</td>
+														</tr>
+														<tr>
+															<td>정기적금</td>
+															<td>(특판)GO BANK 정기적금</td>
+															<td>2022.02.28</td>
+															<td>앱전용</td>
+														</tr>
+														<tr>
+															<td>정기적금</td>
+															<td>보고파 정기적금</td>
+															<td>&nbsp;</td>
+															<td>비대면 전용</td>
+														</tr>
+														<tr>
+															<td>저축예금</td>
+															<td>보고파 파킹통장 개인</td>
+															<td>&nbsp;</td>
+															<td>&nbsp;</td>
+														</tr>
+														<tr>
+															<td>기업자유예금</td>
+															<td>보고파 기업파킹통장(대면/개인사업자)</td>
+															<td>&nbsp;</td>
+															<td>&nbsp;</td>
+														</tr>
+														<tr>
+															<td>기업자유예금</td>
+															<td>보고파 기업파킹통장(대면/법인사업자)</td>
+															<td>&nbsp;</td>
+															<td>&nbsp;</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<ul class="list type1 fs-16">
+											<li>변액보험상품의 경우 본 보호금융상품 목록에는 포함되지 않으나, 약관에서 보험회사가 최저보증하는 보험금에 한하여 보호됩니다. (보험사가 아닌 경우 생략)</li>
+										</ul>
+
+										<div class="prod-date">
+											<span class="date">(2023년 04월 01일)</span>
+											<span class="compliance">금융기관명 : (주)고려저축은행</span>
+										</div>
+									</div>
+								</li>
+
+								
+							</ul>
+						</div>
+
+						<p>예금가이드 > 예금FAQ - <a href="../html/normal/deposit/faq.html" target="_blank">faq.html</a></p>
+						<div class="guide-wrap">
+							<div class="tab-wrap">
+								<ul>
+									<li class="active"><a href="../html/normal/deposit/faq.html">예금FAQ</a></li>
+									<li><a href="../html/normal/deposit/terms.html">예금거래기본약관</a></li>
+								</ul>
+							</div> 
+							<div class="accordion-wrap">
+								<ul class="accordion">
+									<li data="613" class="">
+										<a href="#" class="question-wrap" aria-expanded="false" title="닫힘">
+											<span class="category">Q</span>
+											<span class="con">비과세종합저축 한도 및 가입조건이 어떻게 되나요 ? </span>
+										</a>
+										<div class="answer-wrap" style="display: none;">
+											<span class="con">
+												<p>* 가입한도 : 전 금융기관 통합 1인당 5,000만원</p>
+												<p>&nbsp;</p>
+												<p>* 가입조건</p>
+												<p>&nbsp;- 가입연령 만 65세 이상</p>
+												<p>&nbsp;- 장애인 복지법 제32조의 규정에 의해 등록한 장애인</p>
+												<p>&nbsp;- 독립유공자 예우에 관한 법률 제 6조 규정에 의해 등록한 국립유공자와 그 유족 및 가족</p>
+												<p>&nbsp;- 국가유공자 예우 및 지원에 관한 법률 제 6조의 규정에 의하여 등록된 상이자</p>
+												<p>&nbsp;- 고엽제후유증환자 및 5.18 민주화운동부상자</p>
+												<p>&nbsp;- 국민 생활보장법 제 2조2호의 규정에 의한 수급자</p>
+												<div><br></div>                     
+											 </span>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div id="paging_div" class="pagination-wrap"></div>
+
+						</div>
+
+						<p>예금가이드 > 예금거래기본약관 - <a href="../html/normal/deposit/terms.html" target="_blank">terms.html</a></p>
+						<div class="guide-wrap">
+							<div class="tab-wrap">
+								<ul>
+									<li><a href="../html/normal/deposit/faq.html">예금FAQ</a></li>
+									<li class="active"><a href="../html/normal/deposit/terms.html">예금거래기본약관</a></li>
+								</ul>
+							</div> 
+							<div id="terms_contents">
+								 <div class="accordion-wrap">
+									 <ul class="accordion terms">
+										 <li data="613" class=""> <a href="#" class="question-wrap" aria-expanded="false" title="닫힘"> <span class="con">제 1조 ( 적용범위 )</span> </a>
+											 <div class="answer-wrap"> <span class="con">이 약관은 상호저축은행과 거래처 사이의 모든 예금거래 ( 이하 ‘거래'라 한다. )에 입출금이 자유로운 예금약관, 거치식 · 적립식 예금약관과 함께 적용한다</span> </div>
+										 </li>
+										 <li data="719"> <a href="#" class="question-wrap" aria-expanded="false" title="닫힘"> <span class="con">제 2조 ( 실명거래 )</span> </a>
+											 <div class="answer-wrap"> <span class="con">
+													 <ol class="list type3">
+														 <li data="0">① 거래처는 실명으로 거래하여야 한다.</li>
+														 <li data="0">② 상호저축은행은 거래처의 실명을 확인하기 위해 주민등록증 · 사업자등록증 등 실명확인증표 또는 그밖에 필요한 서류의 제시나 제출을 요구할 수 있으며, 거래처는 이에 따라야 한다.</li>
+													 </ol>
+												 </span> </div>
+										 </li>
+										 <li data="825"> <a href="#" class="question-wrap" aria-expanded="false" title="닫힘"> <span class="con">제 3조 ( 거래장소 )</span> </a>
+											 <div class="answer-wrap" style=""> <span class="con"> 이 거래처는 예금계좌를 개설한 영업점 ( 이하 '개설점' 이라 한다. ) 에서 모든 예금거래를 한다. 다만, 상호저축은행이 정하는 바에 따라 다른 영업점이나 다른 금융기관 또는 현금자동지급기, 현금자동입 · 출금기, 컴퓨터, 전화기 등 ( 이하 '전산통신기기' 라 한다. ) 을 통해 거래할 수 있다. </span> </div>
+										 </li>
+										 <li data="931"> <a href="#" class="question-wrap" aria-expanded="false" title="닫힘"> <span class="con">제 4조 ( 거래방법 )</span> </a>
+											 <div class="answer-wrap" style=""> <span class="con"> 거래처는 상호저축은행에서 내준 통장 ( 증서, 전자통장을 포함한다. ) 또는 어음으로 거래해야 한다.<br>그러나 입금할 때와 자동이체 · 전산통신기기 이용약정 등에 따라 거래할 때에는 통장 없이도 거래할 수 있다. </span> </div>
+										 </li>
+										 <li data="1037"> <a href="#" class="question-wrap" aria-expanded="false" title="닫힘"> <span class="con">제 5조 ( 인감과 비밀번호 등의 신고 )</span> </a>
+											 <div class="answer-wrap" style=""> <span class="con">
+													 <ol class="list type3">
+														 <li data="0">① 거래처는 거래를 시작할 때 인감 또는 서명, 비밀번호, 성명, 상호, 대표자명, 대리인명, 주소 등 거래에 필요한 사항을 신고해야 한다. 다만, 거치식 · 적립식 예금은 비밀번호를 신고하지 않을 수 있다.</li>
+														 <li data="0">② 거래처는 인감과 서명을 함께 신고할 수 있으며, 이 경우에는 거래시마다 서명 또는 인감을 선택하여 사용 할 수 있다.</li>
+													 </ol>
+												 </span> </div>
+										 </li>
+										 <li data="1143"> <a href="#" class="question-wrap" aria-expanded="false" title="닫힘"> <span class="con">제 6조 ( 입금 )</span> </a>
+											 <div class="answer-wrap" style=""> <span class="con">
+													 <ol class="list type3">
+														 <li data="0">① 거래처는 현금이나 곧 추심할 수 있는 수표 · 어음 · 기타증권 ( 이하 '증권' 이라 한다. ) 으로 입금할 수 있다.</li>
+														 <li data="0">② 거래처는 현금이나 증권으로 계좌송금 ( 거래처가 개설점 이외에서 자기계좌에 입금하거나, 제 3 자가 개설점 또는 다른 영업점이나, 다른 금융기관에서 거래처계좌에 입금하는 것 ) 하거나, 계좌이체 ( 다른 계좌에서 거래처계좌에 입금하는 것 ) 를 할 수 있다.</li>
+														 <li data="0">③ 증권으로 입금할 때 입금인은 증권의 백지보충이나 배서 또는 영수기명날인 등 필요한 절차를 밟아야 하며, 상호저축은행은 백지보충 등의 의무를 지지 않는다.</li>
+														 <li data="0">④ 입금하는 증권이 수표나 어음일 때 상호저축은행은 부기금액과 상관없이 주금액란에 적힌 금액으로 처리한다.</li>
+													 </ol>
+												 </span> </div>
+										 </li>
+										 <li data="1249"> <a href="#" class="question-wrap" aria-expanded="false" title="닫힘"> <span class="con">제 7조 ( 예금이 되는 시기 )</span> </a>
+											 <div class="answer-wrap" style=""> <span class="con">
+													 <ol class="list type3">
+														 <li data="0">① 제 6 조에 따라 입금한 경우 다음 각 호의 시기에 예금이 된다.&nbsp;</li>
+														 <li data="0">&nbsp;A. 현금으로 입금했을 경우 : 상호저축은행이 이를 받아 확인했을 때&nbsp;</li>
+														 <li data="0">&nbsp;B. 현금으로 계좌송금하거나 또는 계좌이체한 경우 : 예금원장에 입금의 기록을 한 때&nbsp;</li>
+														 <li data="0">&nbsp;C. 증권으로 입금하거나 계좌송금한 경우 : 상호저축은행이 그 증권을 교환에 돌려 결제시간 연장없이 부도반환시한이 지나고 상호저축은행이 결제를 확인한 때</li>
+														 <li data="0">② 제 3 호에도 불구하고 증권이 자기앞수표로서 지급제시기간 이내에 사고신고가 없으며 결제될 것이 틀림없음을 상호저축은행이 확인한 경우에는 예금원장에 입금의 기록이 된 때 예금이 된다.</li>
+														 <li data="0">③ 상호저축은행은 특별한 사정이 없는 한 제 1 항 및 제 2 항의 확인 또는 입금기록을 신속히 하여야 한다.</li>
+													 </ol>
+												 </span> </div>
+										 </li>
+										 <li data="1355"> <a href="#" class="question-wrap" aria-expanded="false" title="닫힘"> <span class="con">제 8조 ( 증권의 부도 )</span> </a>
+											 <div class="answer-wrap" style=""> <span class="con">
+													 <ol class="list type3">
+														 <li data="0">① 제 6 조 제 1 항에 따라 입금한 증권이 지급거절되었을 때에는 상호저축은행은 그 금액을 예금원장의 잔액에서 뺀 뒤, 거래처 ( 무통장입금일 때는 입금의뢰인 ) 가 신고한 연락처로 그 사실을 알린다. 다만, 통화불능 등 부득이한 사유로 그 사실을 알릴 수 없는 경우에는 그러하지 아니하다.</li>
+														 <li data="0">② 상호저축은행은 지급거절된 증권을 그 권리보전절차를 밟지 아니하고, 입금한 영업점에서 거래처 ( 무통장입금일 때는 입금의뢰인 ) 가 반환청구할 때 돌려준다. 다만, 증권발행인이 지급거절한 날의 다음 영업일까지 증권을 입금한 예금계좌에 해당자금을 현금이나 즉시 현금으로 바꿀 수 있는 증권으로 입금했을 때는 발행인에게 돌려줄 수 있다.</li>
+													 </ol>
+												 </span> </div>
+										 </li>
+										 <li data="1461"> <a href="#" class="question-wrap" aria-expanded="false" title="닫힘"> <span class="con">제 9조 ( 이자 )</span> </a>
+											 <div class="answer-wrap" style=""> <span class="con">
+													 <ol class="list type3">
+														 <li data="0">① 이자는 원을 단위로, 약정한 예치기간 또는 제 7 조에 따라 예금이 된 날 ( 자기앞수표 · 가계수표는 입금일 ) 부터 지급일 전날까지 기간에 대해 금고가 정한 이율로 셈한다.</li>
+														 <li data="0">② 금고는 예금별 이율을 적은 예금이율표를 영업점에 놓아두거나 게시하며, 이율을 바꾼 때는 그 바꾼 내용을 영업점에 1 개월 동안 게시한다.</li>
+														 <li data="0">③ 제 2 항에 따라 이율을 바꾼 때에는, 입출금이 자유로운 예금은 바꾼 날부터 바꾼 이율을 적용하며, 거치식 · 적립식예금은 계약 당시의 이율을 적용함을 원칙으로 하되, 변동금리가 적용되는 예금은 바꾼 날로부터 바꾼 이율을 적용한다.</li>
+														 <li data="0">④ 거래처가 실제 받는 이자는 제 1 항에 따라 셈한 이자에서 소득세법 등 관계법령에 따라 원천징수한 세액을 뺀 금액이다.</li>
+													 </ol>
+												 </span> </div>
+										 </li>
+										 <li data="1567"> <a href="#" class="question-wrap" aria-expanded="false" title="닫힘"> <span class="con">제 9조의2 (휴면예금 및 출연)</span> </a>
+											 <div class="answer-wrap" style=""> <span class="con">
+													 <ol class="list type3">
+														 <li data="0"> ① 저축은행은 예금이 다음 각 호에 해당할 때에는 예금채권의 소멸시효가 완성된 것(이하 ‘휴면예금’이라 한다.)으로 본다. &nbsp;&nbsp;&nbsp;&nbsp; <ol>
+																 <li data="0">가. 입출금이 자유로운 예금은 이자지급을 포함한 최종거래일로부터 5년 이상 경과한 예금</li>
+																 <li data="0">나. 거치식, 적립식 예금은 만기일 또는 이자지급을 포함한 최종거래일로부터 5년 이상 경과한 예금</li>
+															 </ol>
+														 </li>
+														 <li data="0">② 제①항에 따른 휴면예금은 「서민의 금융생활 지원에 관한 법률」제40조에 따라 “서민금융진흥원”으로 출연될 수 있으며, 원 권리자는 출연된 휴면예금을 동법 제45조에 따라 지급청구할 수 있다. &lt;본조 신설 2017.9.27.&gt;</li>
+													 </ol>
+												 </span> </div>
+										 </li>
+										 <li data="1673"> <a href="#" class="question-wrap" aria-expanded="false" title="닫힘"> <span class="con">제 10조 ( 지급이나 해지청구 )</span> </a>
+											 <div class="answer-wrap" style=""> <span class="con">
+													 <ol class="list type3">
+														 <li data="0">① 거래처가 통장으로 예금 · 이자를 찾거나 예금계약을 해지하고자 할 때는 신고한 비밀번호 등 필요한 사항을 적고, 거래인감을 날인하거나 서명감과 일치하게 서명한 지급 또는 해지청구서를 제출하여야 한다.</li>
+														 <li data="0">② 거래처가 자동이체 · 전산통신기기 등을 이용하여 예금이나 이자를 찾을 때는 그 약관 또는 약정에서 정한 바에 따른다.</li>
+													 </ol>
+												 </span> </div>
+										 </li>
+										 <li data="1779"> <a href="#" class="question-wrap" aria-expanded="false" title="닫힘"> <span class="con">제 11조 ( 지급시기 )</span> </a>
+											 <div class="answer-wrap" style=""> <span class="con">
+													 <ol class="list type3">
+														 <li data="0">① 입출금이 자유로운 예금은 거래처가 찾을 때 지급한다.</li>
+														 <li data="0">② 거치식 · 적립식예금은 만기일 ( 만기일이 휴일인 경우에는 익영업일 ) 이후에 거래처가 찾을 때 지급한다.</li>
+													 </ol>
+												 </span> </div>
+										 </li>
+										 <li data="1885"> <a href="#" class="question-wrap" aria-expanded="false" title="닫힘"> <span class="con">제 12조 ( 양도 및 질권설정 )</span> </a>
+											 <div class="answer-wrap" style=""> <span class="con">
+													 <ol class="list type3">
+														 <li data="0">① 거래처가 예금을 양도하거나 질권설정하려면 사전에 상호저축은행에 통지하고 동의를 받아야 한다.&nbsp;</li>
+														 <li data="0">&nbsp;다만, 법령으로 금지한 경우에는 양도나 질권설정을 할 수 없다.</li>
+														 <li data="0">② 입출금이 자유로운 예금은 질권설정 할 수 없다.</li>
+													 </ol>
+												 </span> </div>
+										 </li>
+										 <li data="1991"> <a href="#" class="question-wrap" aria-expanded="false" title="닫힘"> <span class="con">제 13조 ( 사고 · 변경사항의 신고 )</span> </a>
+											 <div class="answer-wrap" style=""> <span class="con">
+													 <ol class="list type3">
+														 <li data="0">① 거래처는 통장 · 도장 · 카드 또는 증권이나 그 용지를 분실 · 도난 · 멸실 · 훼손했을 때는 곧 서면으로 신고하여야 한다.&nbsp;</li>
+														 <li data="0">&nbsp; &nbsp;다만, 긴급하거나 부득이할 때는 영업시간 중에 전화등으로 신고할 수 있으며 이 때는 다음 영업일 이내에 서면신고 하여야 한다.</li>
+														 <li data="0">② 거래처는 인감 또는 서명, 비밀번호, 성명, 상호, 대표자명, 대리인명, 주소, 전화번호 기타 신고사항을 바꿀 때는 서면으로 신고하여야 한다.</li>
+														 <li data="0">③ 제 1 항 및 제 2 항의 신고는 상호저축은행이 이를 접수한 뒤 전산입력 등 필요한 조치를 하는데 걸리는 합리적인 시간이 지나면 그 효력이 생기며 전산장애 등 불가항력적인 사유로 처리하지 못한 때는 복구 등 사유 해제시 즉시 처리하여야 한다.</li>
+														 <li data="0">④ 제 1 항의 신고를 철회할 때는 거래처 본인이 직접 서면으로 하여야 한다.</li>
+													 </ol>
+												 </span> </div>
+										 </li>
+										 <li data="2097"> <a href="#" class="question-wrap" aria-expanded="false" title="닫힘"> <span class="con">제 14조 ( 통장 · 카드의 재발급 등 )</span> </a>
+											 <div class="answer-wrap" style=""> <span class="con"> 제 13 조에 따라 통장 · 도장 · 카드에 대한 사고신고가 있을 때에는 상호저축은행은 신고인이 거래처 본인임을 확인하는 등 필요한 조치를 마친 뒤에 재발급하거나 지급한다. </span> </div>
+										 </li>
+										 <li data="2203"> <a href="#" class="question-wrap" aria-expanded="false" title="닫힘"> <span class="con">제 15조 ( 통지방법 및 효력 )</span> </a>
+											 <div class="answer-wrap" style=""> <span class="con">
+													 <ol class="list type3">
+														 <li data="0">① 상호저축은행은 오류의 정정 등 예금거래에서 발생하는 일반적 사항을 통보하는 경우에는 거래처가 신고한 주소지 또는 연락처로 서면 또는 전화로 통보한다. &lt;개정 2013.5.31&gt;</li>
+														 <li data="0">② 상호저축은행이 예금거래에서 발생하는 일반적 사항을 서면으로 통지했을 때는 천재지변 등 불가항력적인 경우 외에는 보통의 우송기간이 지났을 때는 도달한 것으로 본다.</li>
+														 <li data="0">③ 관계법령 또는 어음교환소규약 등에 의해 예금계약을 해지한 경우 외에 금고가 임의로 예금을 해지하기 위해 서면통지하는 등 중요한 의사표시의 경우는 그 통지가 거래처에 도달되어야 의사표시의 효력이 생긴다.&nbsp;</li>
+														 <li data="0">&nbsp;다만, 거래처가 제 13 조에 의하여 변경신고를 게을리하여 도달되지 않은 때에는 그러하지 아니 하다.</li>
+													 </ol>
+												 </span> </div>
+										 </li>
+										 <li data="2309"> <a href="#" class="question-wrap" aria-expanded="false" title="닫힘"> <span class="con">제 16조 ( 면책 )</span> </a>
+											 <div class="answer-wrap" style=""> <span class="con">
+													 <ol class="list type3">
+														 <li data="0">① 상호저축은행은 예금지급청구서, 증권 또는 신고서 등에 찍힌 인영 ( 또는 서명 ) 을 신고한 인감 ( 또는 서명감 ) 과 육안으로 주의깊게 비교 · 대조하여 틀림없다고 여기고, 예금지급청구서 등에 적힌 비밀번호가 신고한 것과 같아서 예금을 지급하였거나 기타 거래처가 요구하는 업무를 처리하였을 때에는 인감이나 서명의 위조 · 변조 또는 도용이나 그밖의 다른 사고로 인하여 거래처에 손해가 생겨도 그 책임을 지지 않는다. 다만, 상호저축은행이 거래처의 인감이나 서명에 관한 위조 · 변조 또는 도용된 사실을 알았거나 알 수 있었을 때는 그러하지 아니하다.</li>
+														 <li data="0">② 전산통신기기 등을 이용하거나 거래정보 등의 제공 및 금융거래명세 등의 통보와 관련하여 상호저축은행이 책임질 수 없는 사유로 계좌번호, 비밀번호 등의 금융정보가 새어나가 거래처에 손해가 생겨도 상호저축은행은 그 책임을 지지 않는다.</li>
+														 <li data="0">③ 상호저축은행이 주민등록증 등 실명확인증표로 주의깊게 실명확인하거나 실명전환한 계좌는 거래처가 실명확인증표 또는 서류의 위조 · 변조 · 도용 등을 한 경우 이로 인하여 거래처에 손해가 생겨도 상호저축은행은 그 책임을 지지 않는다.</li>
+														 <li data="0">④ 거래처가 제 13 조 제 1 항, 제 2 항, 제 4 항의 신고나 절차를 미루어 생긴 손해에 대해 상호저축은행은 그 책임을 지지 않는다. 다만, 이 경우에도 상호저축은행은 거래처에 손해가 발생하지 않도록 선량한 관리자로서의 주의를 다하여야 한다.</li>
+													 </ol>
+												 </span> </div>
+										 </li>
+										 <li data="2415"> <a href="#" class="question-wrap" aria-expanded="false" title="닫힘"> <span class="con">제 17조 ( 수수료 )</span> </a>
+											 <div class="answer-wrap" style=""> <span class="con">
+													 <ol class="list type3">
+														 <li data="0">① 거래처가 개설점 아닌 다른 영업점이나 다른 금융기관 또는 전산통신기기 등을 통해 거래할 때 상호저축은행은 온라인수수료나 추심수수료 등을 받을 수 있다.</li>
+														 <li data="0">② 상호저축은행은 제 1 항의 경우 외에도 거래처가 잔액증명서발급, 통장재발행 등을 원하거나 거래처 잘못으로 통장재발행 등을 요청하는 경우 그 사무처리와 관련하여 수수료를 받을 수 있다.</li>
+														 <li data="0">③ 제 1 항, 제 2 항과 관련한 수수료표는 영업점에 놓아두거나 게시한다.</li>
+													 </ol>
+												 </span> </div>
+										 </li>
+										 <li data="2521"> <a href="#" class="question-wrap" aria-expanded="false" title="닫힘"> <span class="con">제 18조 ( 오류처리 등 )</span> </a>
+											 <div class="answer-wrap" style=""> <span class="con">
+													 <ol class="list type3">
+														 <li data="0">① 상호저축은행이 예금원장이나 통장거래내용을 사실과 다르게 처리했을 때는, 이를 확인하여 바르게 고치고 그 사실을 거래처에 통지하여야 한다.</li>
+														 <li data="0">② 거래처는 거래를 마친 때 그 내용이 맞는가를 확인하고, 거래내용이 사실과 다를 때는 바르게 고칠 것을 요구할 수 있으며, 상호저축은행은 그 사실을 확인하고 바르게 처리하여야 한다.</li>
+													 </ol>
+												 </span> </div>
+										 </li>
+										 <li data="2627"> <a href="#" class="question-wrap" aria-expanded="false" title="닫힘"> <span class="con">제 19조 ( 예금의 비밀보장 )</span> </a>
+											 <div class="answer-wrap" style=""> <span class="con">
+													 <ol class="list type3">
+														 <li data="0">① 상호저축은행은 예금지급청구서, 증권 또는 신고서 등에 찍힌 인영 ( 또는 서명 ) 을 신고한 인감 ( 또는 서명감 ) 과 육안으로 주의깊게 비교 · 대조하여 틀림없다고 여기고, 예금지급청구서 등에 적힌 비밀번호가 신고한 것과 같아서 예금을 지급하였거나 기타 거래처가 요구하는 업무를 처리하였을 때에는 인감이나 서명의 위조 · 변조 또는 도용이나 그밖의 다른 사고로 인하여 거래처에 손해가 생겨도 그 책임을 지지 않는다. 다만, 상호저축은행이 거래처의 인감이나 서명에 관한 위조 · 변조 또는 도용된 사실을 알았거나 알 수 있었을 때는 그러하지 아니하다.</li>
+														 <li data="0">② 전산통신기기 등을 이용하거나 거래정보 등의 제공 및 금융거래명세 등의 통보와 관련하여 상호저축은행이 책임질 수 없는 사유로 계좌번호, 비밀번호 등의 금융정보가 새어나가 거래처에 손해가 생겨도 상호저축은행은 그 책임을 지지 않는다.</li>
+														 <li data="0">③ 상호저축은행이 주민등록증 등 실명확인증표로 주의깊게 실명확인하거나 실명전환한 계좌는 거래처가 실명확인증표 또는 서류의 위조 · 변조 · 도용 등을 한 경우 이로 인하여 거래처에 손해가 생겨도 상호저축은행은 그 책임을 지지 않는다.</li>
+														 <li data="0">④ 거래처가 제 13 조 제 1 항, 제 2 항, 제 4 항의 신고나 절차를 미루어 생긴 손해에 대해 상호저축은행은 그 책임을 지지 않는다. 다만, 이 경우에도 상호저축은행은 거래처에 손해가 발생하지 않도록 선량한 관리자로서의 주의를 다하여야 한다.</li>
+													 </ol>
+												 </span> </div>
+										 </li>
+										 <li data="2733"> <a href="#" class="question-wrap" aria-expanded="false" title="닫힘"> <span class="con">제 20조 ( 약관변경 )</span> </a>
+											 <div class="answer-wrap" style=""> <span class="con">
+													 <ol class="list type3">
+														 <li data="0">① 상호저축은행은 이 약관이나 입출금이 자유로운 예금약관 또는 거치식․적립식 예금약관 및 기타 약관을 변경하고자 하는 경우 변경예정일 직전 1개월간 상호저축은행의 영업점 및 인터넷 홈페이지 등에 변경내용을 게시하여 예금주에게 알려야 한다. 다만, 법령의 개정이나 제도의 개선 등으로 긴급히 약관을 변경한 때에는 즉시 이를 게시(최소 1개월이상)하여야 한다. &lt;개정 2013.5.31&gt;</li>
+														 <li data="0">② 제1항의 약관변경 내용이 예금주에게 불리하게 변경된 경우 제1항의 게시 외에 상호저축은행은 서면 · 전자우편 등 예금주와 사전에 합의한 방법으로 변경 전 최소 1개월 전까지(제1항 단서의 경우 즉시) 개별통지 하여야 한다. 다만, 기존 예금주에게 변경 전 내용이 그대로 적용되는 경우 또는 예금주가 변경내용에 대한 통지를 받지 아니하겠다는 의사를 명시적으로 표시한 경우에는 그러하지 아니한다. &lt;신설 2013. 5.31&gt;</li>
+														 <li data="0">③ 상호저축은행은 제1항의 게시 또는 제2항의 통지를 할 경우 “예금주가 변경에 동의하지 아니한 경우 제1항의 게시 또는 제2항의 통지를 받은 날로부터 1개월 이내에 서면에 의한 이의를 제기하거나 계약을 해지할 수 있으며, 서면에 의한 이의 또는 계약해지의 의사표시를 하지 아니한 경우에는 변경에 동의한 것으로 본다”라는 취지의 내용을 함께 게시 또는 통지하여야 한다. &lt;신설 2013.5.31&gt;</li>
+														 <li data="0">④ 제1항의 게시 또는 제2항의 통지(제3항의 게시 · 통지내용 포함)를 받은 날로부터 1개월 이내에 예금주의 서면에 의한 이의 또는 계약해지의 의사표시가 상호저축은행에 도달하지 않은 때에는 예금주가 변경에 동의한 것으로 본다. &lt;신설 2013.5.31&gt;</li>
+														 <li data="0">⑤ 상호저축은행은 약관을 영업점에 비치 또는 게시하여 예금주가 요구할 경우 약관 사본을 교부하여야 한다. &lt;신설 2013.5.31.&gt;</li>
+													 </ol>
+												 </span> </div>
+										 </li>
+										 <li data="2839"> <a href="#" class="question-wrap" aria-expanded="false" title="닫힘"> <span class="con">제 21조 ( 약관적용의 우선순서 )</span> </a>
+											 <div class="answer-wrap" style=""> <span class="con">
+													 <ol class="list type3">
+														 <li data="0">① 상호저축은행과 거래처사이에 개별적으로 합의한 사항이 약관조항과 다를 때는 그 합의사항을 약관에 우선하여 적용한다.</li>
+														 <li data="0">② 이 약관에 정한 사항과 입출금이 자유로운 예금약관 또는 거치식 · 적립식 예금약관에서 정한 사항이 다를 때는 입출금이 자유로운 예금약관이나 거치식 · 적립식 예금약관을 먼저 적용한다.</li>
+														 <li data="0">③ 이 약관과 입출금이 자유로운 예금약관 또는 거치식 · 적립식 예금약관에서 정하지 않은 사항은 따로 약정이 없으면 관계법령, 어음교환소규약을 적용한다.</li>
+													 </ol>
+												 </span> </div>
+										 </li>
+										 <li data="2945"> <a href="#" class="question-wrap" aria-expanded="false" title="닫힘"> <span class="con">제 22조 ( 이의제기 )</span> </a>
+											 <div class="answer-wrap" style=""> <span class="con"> 거래처는 상호저축은행과 거래에 이의가 있을 때 상호저축은행의 분쟁처리기구에 해결을 요구하거나 금융분쟁조정위원회등을 통해 분쟁조정을 신청할 수 있다. </span> </div>
+										 </li>
+									 </ul>
+								 </div>
+							</div>
+
+						</div>
+
+						<p>대출가이드 > 대출FAQ  - <a href="../html/normal/loan/faq.html" target="_blank">faq.html</a></p>
+						<div class="guide-wrap">
+							<div class="tab-wrap">
+								<ul>
+									<li class="active"><a href="../html/normal/loan/faq.html">대출FAQ</a></li>
+									<li><a href="../html/normal/loan/basic_terms.html">대출거래기본약관</a></li>
+									<li><a href="../html/normal/loan/guide.html">대출방법안내</a></li>
+									<li><a href="../html/normal/loan/preparation.html">대출준비서류</a></li>
+								</ul>
+							</div>
+							<div class="accordion-wrap">
+								<ul class="accordion">
+									<li data="613">
+										<a href="#" class="question-wrap" aria-expanded="false" title="닫힘">
+											<span class="category">Q</span>
+											<span class="con">신용평가는 어떤 내용들을 기준으로 평가합니까?</span>
+										</a>
+										<div class="answer-wrap">
+											<span class="con">신청서에 기재하신 모든 항목과 은행연합회 정보 및 외부 신용 정보기관의 정보 등을 종합하여 평가합니다.</span>
+										</div>
+									</li>
+									<li data="701.796875">
+										<a href="#" class="question-wrap" aria-expanded="false" title="닫힘">
+											<span class="category">Q</span>
+											<span class="con">예금을 담보로한 대출을 받고자 합니다. 대출한도, 대출이율 등을 설명해 주세요.</span>
+										</a>
+										<div class="answer-wrap">
+											<span class="con">인터넷뱅킹에서 한번 이체 되신 금액은 예금주의 자금으로 귀속되기 때문에 취소가 불가능 합니다. <br>상대 예금주에게 직접 청구하시거나 고려저축은행을 방문하시어 자금 반환 청구의 정식 절차를 받으셔야 합니다.</span>
+										</div>
+									</li>
+									<li data="790.59375">
+										<a href="#" class="question-wrap" aria-expanded="false" title="닫힘">
+											<span class="category">Q</span>
+											<span class="con">신청시 입력한 내용이 사실과 다를 경우에는 어떻게 되나요?</span>
+										</a>
+										<div class="answer-wrap">
+											<span class="con">인터넷뱅킹에서 한번 이체 되신 금액은 예금주의 자금으로 귀속되기 때문에 취소가 불가능 합니다. <br>상대 예금주에게 직접 청구하시거나 고려저축은행을 방문하시어 자금 반환 청구의 정식 절차를 받으셔야 합니다.</span>
+										</div>
+									</li>
+									<li data="879.390625">
+										<a href="#" class="question-wrap" aria-expanded="false" title="닫힘">
+											<span class="category">Q</span>
+											<span class="con">대출을 받으려고 합니다. 어떤 방법이 있을까요?</span>
+										</a>
+										<div class="answer-wrap">
+											<span class="con">인터넷뱅킹에서 한번 이체 되신 금액은 예금주의 자금으로 귀속되기 때문에 취소가 불가능 합니다. <br>상대 예금주에게 직접 청구하시거나 고려저축은행을 방문하시어 자금 반환 청구의 정식 절차를 받으셔야 합니다.</span>
+										</div>
+									</li>
+									<li data="968.1875">
+										<a href="#" class="question-wrap" aria-expanded="false" title="닫힘">
+											<span class="category">Q</span>
+											<span class="con">매달 이자금액이 다른 이유는 무엇인가요?</span>
+										</a>
+										<div class="answer-wrap">
+											<span class="con">인터넷뱅킹에서 한번 이체 되신 금액은 예금주의 자금으로 귀속되기 때문에 취소가 불가능 합니다. <br>상대 예금주에게 직접 청구하시거나 고려저축은행을을 방문하시어 자금 반환 청구의 정식 절차를 받으셔야 합니다.</span>
+										</div>
+									</li>
+									<li data="1056.984375">
+										<a href="#" class="question-wrap" aria-expanded="false" title="닫힘">
+											<span class="category">Q</span>
+											<span class="con">대출금액별 인지세</span>
+										</a>
+										<div class="answer-wrap">
+											<span class="con">인터넷뱅킹에서 한번 이체 되신 금액은 예금주의 자금으로 귀속되기 때문에 취소가 불가능 합니다. <br>상대 예금주에게 직접 청구하시거나 고려저축은행을을 방문하시어 자금 반환 청구의 정식 절차를 받으셔야 합니다.</span>
+										</div>
+									</li>
+									<li data="1145.78125">
+										<a href="#" class="question-wrap" aria-expanded="false" title="닫힘">
+											<span class="category">Q</span>
+											<span class="con">대출만기일 이전에 대출금을 상환할 수 있는지 그리고 상환할 경우 중도상환 수수료를</span>
+										</a>
+										<div class="answer-wrap">
+											<span class="con">인터넷뱅킹에서 한번 이체 되신 금액은 예금주의 자금으로 귀속되기 때문에 취소가 불가능 합니다. <br>상대 예금주에게 직접 청구하시거나 고려저축은행을을 방문하시어 자금 반환 청구의 정식 절차를 받으셔야 합니다.</span>
+										</div>
+									</li>
+									<li data="1234.578125">
+										<a href="#" class="question-wrap" aria-expanded="false" title="닫힘">
+											<span class="category">Q</span>
+											<span class="con">인터넷뱅킹에서 이체 취소가 가능한가요?</span>
+										</a>
+										<div class="answer-wrap">
+											<span class="con">인터넷뱅킹에서 한번 이체 되신 금액은 예금주의 자금으로 귀속되기 때문에 취소가 불가능 합니다. <br>상대 예금주에게 직접 청구하시거나 고려저축은행을을 방문하시어 자금 반환 청구의 정식 절차를 받으셔야 합니다.</span>
+										</div>
+									</li>
+									<li data="1323.375">
+										<a href="#" class="question-wrap" aria-expanded="false" title="닫힘">
+											<span class="category">Q</span>
+											<span class="con">인터넷뱅킹에서 이체 취소가 가능한가요?</span>
+										</a>
+										<div class="answer-wrap">
+											<span class="con">인터넷뱅킹에서 한번 이체 되신 금액은 예금주의 자금으로 귀속되기 때문에 취소가 불가능 합니다. <br>상대 예금주에게 직접 청구하시거나 고려저축은행을을 방문하시어 자금 반환 청구의 정식 절차를 받으셔야 합니다.</span>
+										</div>
+									</li>
+									<li data="1412.171875">
+										<a href="#" class="question-wrap" aria-expanded="false" title="닫힘">
+											<span class="category">Q</span>
+											<span class="con">인터넷뱅킹에서 이체 취소가 가능한가요?</span>
+										</a>
+										<div class="answer-wrap">
+											<span class="con">인터넷뱅킹에서 한번 이체 되신 금액은 예금주의 자금으로 귀속되기 때문에 취소가 불가능 합니다. <br>상대 예금주에게 직접 청구하시거나 고려저축은행을을 방문하시어 자금 반환 청구의 정식 절차를 받으셔야 합니다.</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+						</div>
+
+						<p>대출가이드 > 대출거래기본약관  - <a href="../html/normal/loan/basic_terms.html" target="_blank">basic_terms.html</a></p>
+						<div class="guide-wrap">
+							<div class="tab-wrap">
+								<ul>
+									<li><a href="../html/normal/loan/faq.html">대출FAQ</a></li>
+									<li class="active"><a href="../html/normal/loan/basic_terms.html">대출거래기본약관</a></li>
+									<li><a href="../html/normal/loan/guide.html">대출방법안내</a></li>
+									<li><a href="../html/normal/loan/preparation.html">대출준비서류</a></li>
+								</ul>
+							</div>
+							<div class="txt-box">
+								<p>이 상호저축은행여신거래기본약관(이하”약관”이라 한다.) 은 고려상호저축은행(이하”저축은행”이라한다.)과 거래처(이하”채무자”라 한다)와의 상호신뢰를 바탕으로 여신거래의 원활하고 공정한 처리를 위하여 만들어진 것이다. <br>저축은행은 이약관을 모든 영업점 및 전자매체에 비치 · 게시하고 채무자는 영업시간 중 얼마든지 열람하거나 그 교부를 청구 할 수 있다.</p>
+							</div>
+
+							<div class="accordion-wrap">
+								<div class="accordion-wrap"> 						
+									<ul class="accordion terms"> 							
+										<li data="769.390625"> 								
+											<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"> 									
+												<span class="con">제1조(적용범위)</span> 								
+											</a> 								
+											<div class="answer-wrap"> 									
+												<span class="con"> 										
+													<ol class="list type3"> 											
+														<li data="0"> ① 이 약관은 저축은행과 채무자(차주 · 어음할인신청인 · 지급보증신청인 · 매출채권양도인 등 저축은행에 대하여 채무를 부담하는 자를 말한다. 이하 같다) 사이의 계 또는 부금의 급부 및 어음대출 · 어음할인 · 증서대출 · 지급보증 · 매출채권거래 기타 여신에 관한 모든 거래에 적용된다.
+														</li> 											
+														<li data="0">② 이 약관은 채무자가 발행 · 배서 · 인수나 보증한 어음(수표를 포함한다. 이하 같다)을 저축은행이 제3자와의 여신에 관한 거래에서 취득한 경우에 그 채무의 이행에 관하여도 적용된다. 다만, 제2조, 제3조, 제5조, 제7조, 제9조, 제12조 제1항, 제15조 제1항은 적용되지 않는다.&nbsp;
+														</li>
+														<li data="0">③ 이 약관은 채무자가 법인인 경우 저축은행의 본 · 지점과 채무자의 본 · 지점 사이의 제1항 및 제2항의 적용범위에 속하는 모든 거래와 채무이행에 공통으로 적용된다.</li>
+													</ol>
+												</span>
+											</div> 							
+										</li> 							
+										<li data="875.390625"> 								
+											<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"> 									
+												<span class="con">제2조(어음채권과 여신채권)</span> 								
+											</a> 								
+											<div class="answer-wrap"> 									
+												<span class="con">채무자가 발행하거나 배서 · 보증 · 인수한 어음에 의한 여신의 경우에는, 저축은행은 어음채권 또는 여신채권의 어느 것에 의하여도 청구할 수 있다.</span> 					
+											</div> 							
+										</li> 							
+										<li data="981.390625"> 								
+											<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"> 									
+												<span class="con">제3조(이자 등과 지연배상금)</span> 								
+											</a> 								
+											<div class="answer-wrap"> 									
+												<span class="con"> 										
+													<ol class="list type3"> 											
+														<li data="0">① 이자 · 할인료 · 보증료 · 수수료 등(이하 “이자등”이라 한다.)의 율 · 계산방법 · 지급의 시기 및 방법에 관하여 저축은행은 법령이 허용하는 한도내에서 정할 수 있으며, 채무자가 해당사항을 계약 체결 전에 상품설명서 및 홈페이지 등에서 확인할 수 있도록 하여야 한다. &lt;개정 2003.3.3, 2013.5.31&gt;
+														</li> 											
+														<li data="0">② 이자등의 율은 거래계약시 채무자가 다음 각호 중 하나를 선택하여 적용할 수 있다.&nbsp;
+															<ol> 													
+																<li data="0">- 채무의 이행을 완료할 때까지 저축은행이 그 율을 변경할 수 없음을 원칙으로 하는 것</li> 													
+																<li data="0">- 채무의 이행을 완료할 때까지 저축은행이 그 율을 수시로 변경할 수 있는 것</li> 												
+															</ol> 											
+														</li> 											
+														<li data="0">③ 제2항 제1호를 선택한 경우 채무이행완료 전에 국가경제 · 금융사정의 급격한 변동등으로 계약 당시에 예상할 수 없는 현저한 사정변경이 생긴 때에는 저축은행은 채무자에 대한 개별통지에 의하여 그 율을 인상 · 인하할 수 있다. 이 경우 당해 변동요인이 해소된 경우에는 저축은행은 지체없이 해소된 상황에 부합하도록 그 율을 변경하여야 한다. &lt;신설 2003. 3. 3&gt;
+														</li> 											
+														<li data="0">④ 제2항 제2호를 선택한 경우 이자등의 율에 관한 저축은행의 인상 · 인하는 건전한 금융관행에 따라 합리적인 범위내에서 이루어져야 한다.&nbsp;</li> 					<li data="0">⑤ 채무자가 저축은행에 대한 채무의 이행을 지체한 경우에는, 곧, 지급하여야 할 금액에 대하여 법령이 정하는 제한내에서 저축은행이 정한 율로, 1년을 365일로 보고 1일 단위로 계산한 지체일수에 해당하는 지연배상금을 지급하기로 하되, 금융사정의 변화 및 기타 이에 상당하는 사유가 발생한 경우에는 법령에 의하여 허용되는 한도내에서 그 율을 변경할 수 있다.</li> 		
+														<li data="0">⑥ 저축은행이 이자 등과 지연배상금의 계산방법 · 지급의 시기 및 방법을 변경한 경우에 그것이 법령에서 정하는 한도 이내이고 금융사정 및 그 밖의 여신거래에 영향을 미치는 상황의 변화로 인하여 필요한 것인 때에는 변경후 최초로 이자를 납입하여야 하는 날부터 그 변경된 사항이 적용된다.</li> 											
+														<li data="0">⑦ 제4항 내지 제6항에 따라 변경하는 경우 저축은행은 그 변경기준일로부터 1개월간 해당 영업점 및 저축은행이 정하는 전자매체에 이를 공시하여야 한다. 다만, 특정채무자에 대하여 개별적으로 변경하는 경우에는 개별통지하여야 한다.&nbsp;</li> 											
+														<li data="0">⑧ 채무자는 제3항 및 제5항에 의하여 변경된 이율에 이의가 있을 때에는 제18조에 의한 통지의 효력 발생일로부터 1개월내에 서면으로 동 계약을 해지할 수 있고, 제6항에 의하여 변경된 계산방법등에 이의가 있을 때에는 변경후 최초로 이자를 납입해야 하는 날부터 1개월 이내에 서면으로 계약을 해지할 수 있으며 그러하지 아니한 경우에는 변경된 내용을 동의한 것으로 간주한다.&nbsp;</li> 											
+														<li data="0">⑨ 제8항에 의해 계약을 해지하는 경우 해지일까지는 변경전의 이율 등을 적용하기로 하고 채무자가 그 해지로 인하여 발생한 저축은행에 대한 반환채무이행을 지체하는 경우에는 변경전의 지연배상금율 등을 적용하기로 한다.&nbsp;</li> 										
+													</ol> 									
+												</span> 								
+											</div> 							
+										</li> 							
+										
+										<li data="1087.390625"> 								
+											<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"> 									
+												<span class="con">제4조(비용의 부담)</span> 								
+											</a> 								
+											<div class="answer-wrap"> 									
+												<span class="con"> 										
+													<ol class="list type3"> 											
+														<li data="0">① 채무자는 채무불이행에 따라 발생하는 다음 각 호의 비용을 부담한다. &lt;개정 2011.4.1&gt;
+															<ol> 													
+																<li data="0">1. 채무자 · 보증인 또는 물상보증인에 대한 저축은행의 채권 · 담보권 등의 권리의 행사나 보전[가압류 또는 가처분(그 해지도 포함)등을 말함]에 관한 비용 &lt;개정 2003. 3. 3, 2011.4.1&gt;<br>&nbsp; &nbsp;(2. 삭제 &lt;2003.3.3&gt;)</li> 													
+																<li data="0">2. 담보목적물의 조사 또는 추심비용 &lt;개정 2011.4.1&gt;<br>&nbsp; &nbsp;(4. 삭제 &lt;2003.3.3&gt;)</li> 								<li data="0">3. 채무이행의 독촉을 위한 통지 비용 &lt;개정 2011.4.1&gt;</li> 												
+															</ol> 											
+														</li> 											
+														<li data="0">② 제1항에 의한 비용을 채무자가 지급하지 않아서, 저축은행이 대신 지급한 경우에는, 채무자는 곧 이를 갚아야 한다. 채무자가 이를 곧 갚지 아니하는 때에는 저축은행이 대신 지급한 금액에, 대신 지급한 날부터 다 갚는 날까지의 날짜수 만큼, 상법 제54조에 의한 상사법정이율 범위내에서 약정금리로, 1년을 365일(윤년은 366일)로 보고 1일 단위로 계산한 금액을 더하여 갚아야 한다. &lt;개정 2003. 3.3, 2011.4.1&gt;</li> 											
+														<li data="0">③ 저축은행은 대출약정시 채무자가 사전에 알 수 있도록 약정이자 외에 담보대출에 소요되는 부대비용의 항목과 금액을 알려주어야 한다. &lt;신설 2003. 3. 3&gt;</li>
+													</ol>
+												</span>
+											</div>
+										</li> 							
+										
+										<li data="1193.390625"> 								
+											<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"> 									
+												<span class="con">제5조(자금의 사용)</span> 								
+											</a> 								
+											<div class="answer-wrap"> 									
+												<span class="con">채무자는 여신신청시 자금의 용도를 명확하게 제시하고 저축은행과의 여신거래로 받은 자금을 그 거래 당초에 정해진 용도와 다른 용도로 사용하지 아니한다. 기타 저축은행으로부터 받은 신용의 경우에도 또한 같다.&nbsp;</span>
+											</div> 							
+										</li> 							
+										<li data="1299.390625"> 								
+											<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"> 									
+												<span class="con">제6조(담보)</span> 								
+											</a> 								
+											<div class="answer-wrap"> 									
+												<span class="con"> 										
+													<ol class="list type3"> 											
+														<li data="0">① 채무자 또는 보증인의 책임있는 사유로 신용이 악화 · 담보가치의 감소 등의 사유로 채권보전상 필요하다고 인정될 때에는 채무자는 저축은행의 청구에 의하여 곧 저축은행이 인정하는 담보를 제공하거나 보증인을 세우기로 한다.</li> 											
+														<li data="0">② 담보목적물의 처분은 법정절차에 의함을 원칙으로 하되 담보물이 거래소의 시세가 있는 물건이거나 유리한 조건이 기대될 경우에 한하여 저축은행이 일반적으로 적당하다고 인정된 방법 · 시기&nbsp;·&nbsp;가격 등에 의하여 추심 또는 처분하고, 그 취득금에서 제비용을 뺀 잔액을 제 13조에 준하여 채무의 변제에 충당할 수 있기로 하며, 채무자는 나머지 채무가 있는 경우에 곧 변제하기로 한다. 이 경우에 저축은행은 담보물을 처분하기 10일 전까지 담보제공자에게 그 사실을 통지하기로 한다.&nbsp;</li>
+														<li data="0">&nbsp; &nbsp; &nbsp;다만, 파산법, 회의법 또는 회사정리법에 의한 법원의 개시결정이 있기전에 신속한 처분이 필요한 경우에는 저축은행은 처분후 지체없이 그 사실을 채무자에게 통보하여야 한다.
+															<ol></ol> 											
+														</li> 											
+														<li data="0">③ 채무자가 저축은행에 대한 채무의 이행을 지체한 경우에는, 저축은행이 점유하고 있는 채무자의 동산 · 어음, 기타의 유가증권을 담보로서 제공된 것이 아닐지라도, 저축은행이 계속 점유하거나 제2항 내지 제3항에 준하여 추심 또는 처분 등의 처리를 할 수 있기로 한다.</li> 										
+													</ol> 									
+												</span> 								
+											</div> 							
+										</li> 							
+										
+										<li data="1405.390625"> 								
+											<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"> 									
+												<span class="con">제7조(기한전의 채무변제의무)</span> 								
+											</a> 								
+											<div class="answer-wrap"> 									
+												<span class="con"> 										
+													<ol class="list type3"> 											
+														<li data="0">① 채무자에 관하여 다음 각 호에서 정한 사유 중 하나라도 발생한 경우에는, 저축은행으로부터의 독촉 · 통지 등이 없어도, 채무자는 당연히 저축은행에 대한 모든 채무의 기한의 이익을 상실하여(지급보증거래에 있어서의 사전구상채무발생을 포함한다.), 곧 이를 변제(또는 이행)할 의무를 지기로 한다.&nbsp;
+															<ol> 													
+																<li data="0">- ‌‌ 제예치금 기타 저축은행에 대한 채권에 대하여 가압류 · 압류명령이나 체납처분 압류통지가 발송 된 때 또는 기타의 방법에 의한 강제집행개시나 체납처분 착수가 있는 때. 다만, 담보재산이 존재하는 채무의 경우에는 채권회수에 중대한 지장이 있는 때에만 가압류를 사유로 기한의 이익을 상실한다.&nbsp;</li> 										<li data="0">- 채무자가 제공한 담보재산(제1호의 제예치금 기타 저축은행에 대한 채권은 제외)에 대하여 압류 명령이나 체납처분 압류통지가 발송된 때 또는 기타의 방법에 의한 강제집행개시나 체납처분 착수가 있는 때&nbsp;</li> 													
+																<li data="0">- 파산 · 회생 · 개인회생절차개시의 신청이 있거나, 채무불이행자명부 등재 신청이 있는 때&nbsp;</li> 												<li data="0">- 조세공과에 관하여 납기전 납부고지서를 받거나, 어음교환소의 거래정지처분이 있는 때</li> 													
+																<li data="0">- 폐업, 도피 기타의 사유로 지급을 정지한 것으로 인정된 때</li> 													
+																<li data="0">- 채무자의 과점주주나 실질적인 기업주인 포괄근보증인의 제예치금 기타 저축은행에 대한 채권에 대하여 제1호의 명령이나 통지가 발송된 때</li> 				
+															</ol> 											
+														</li> 											
+														<li data="0">② 채무자에 관하여 다음 각 호에서 정한 사유중 하나라도 발생한 경우에는 채무자는 당연히 당해 채무의 기한의 이익을 상실하여 곧 이를 변제(또는 이행)할 의무를 지기로 한다. 다만, 저축은행은 기한의 이익상실일 7영업일 전까지 다음 각호의 채무이행 지체사실과 대출잔액 전부에 대하여 연체이자가 부과될 수 있다는 사실을 채무자에게 서면으로 통지하여야 하며, 기한의 이익상실일 7영업일 전까지 통지하지 않은 경우에는 채무자는 실제 통지가 도달한 날로부터 7영업일이 경과한 날에 기한의 이익을 상실하여 곧 이를 변제(또는 이행)할 의무를 지기로 한다. 						<ol> 													
+																<li data="0">- 이자 등을 지급하여야 할 때로부터 계속하여 1개월(가계주택담보대출의 경우 2개월)간 지체한 때</li> 												<li data="0">- 분할상환금 또는 분할상환원리금의 지급을 2회(가계주택담보대출의 경우 3회)이상 연속하여 지체한 때</li> 											
+															</ol> 											
+														</li> 											
+														<li data="0">③ 채무자에 관하여 다음 각 호에서 정한 사유 중 하나라도 발생하여 저축은행의 채권보전에 현저한 위험이 예상될 경우, 저축은행은 서면으로 변제 · 압류 등의 해소 · 신용의 회복 등을 독촉하고, 그 통지의 도달일로부터 10일이상으로 저축은행이 정한 기간이 경과하면 채무자는 저축은행에 대한 모든 채무의 기한의 이익을 상실하여, 곧 이를 변제(또는 이행)할 의무를 지기로 한다.&nbsp;
+															<ol> 													
+																<li data="0">- 저축은행에 대한 수개의 채무 중 하나라도 기한에 변제하지 아니하거나 제2항 또는 제4항에 의하여 기한의 이익을 상실한 채무를 변제하지 아니한 때&nbsp;</li> 	<li data="0">- 제1항 제1호 및 제2호 외의 재산에 대하여 압류 · 체납처분이 있는 때&nbsp;</li> 													
+																<li data="0">- 채무자의 제1항 제1호 외의 재산에 대하여, 민사집행법상의 담보권실행등을 위한 경매 개시가 있거나 가압류통지가 발송되는 경우로서, 채무자의 신용이 현저하게 악화되어 채권회수에 중대한 지장이 있는 때&nbsp;</li> 													
+																<li data="0">- 여신거래와 관련하여 허위, 위 · 변조 또는 고의로 부실자료를 저축은행에 제출한 사실이 확인된 때<br></li> 											<li data="0">- 제5조, 제19조에서 정한 약정을 위반하여 건전한 계속거래유지가 어렵다고 인정된 때&nbsp;</li> 													<li data="0">- 청산절차 개시, 결손회사와의 합병, 노사분규에 따른 조업중단, 휴업, 관련기업의 도산, 회사경영에 영향을 미칠 법적분쟁발생 등으로 현저하게 신용이 악화되었다고 인정된 때</li> 													
+																<li data="0">- 어음교환소의 거래정지처분 이외에 사유로 금융기관의 연체등 정보등록자로 규제된 때</li> 												
+															</ol> 											
+														</li> 											
+														<li data="0">④ 채무자에 관하여 다음 각호에서 정한 사유 중 하나라도 발생한 경우에, 저축은행은 서면으로 독촉하고, 그 통지의 도달일로부터 10일이상으로 저축은행이 정한 기간이 경과하면 채무자는 저축은행에 대한 당해 채무 전부의 기한의 이익을 상실하여, 곧 이를 변제(또는 이행)할 의무를 지기로 한다.&nbsp;
+															<ol> 													
+																<li data="0">- 제6조제1항, 제15조에서 정한 약정을 이행하지 아니한 때</li> 													
+																<li data="0">- 담보물에 대한 화재보험 가입의무를 이행하지 아니한 때, 저축은행을 해할 목적으로 담보물건을 양도하여 저축은행에 손해를 끼친 때, 시설자금을 받아 설치 · 완공된 기계 · 건물 등의 담보제공을 지체하는 때, 기타 저축은행과의 개별약정을 이행하지 아니하여 정상적인 거래관계 유지가 어렵다고 인정된 때</li> 										<li data="0">- 보증인이 제1항 제1호 내지 제5호의 사유에 해당하거나 제3항 제2호 · 제3호에 해당하는 경우로서, 상당한 기간내에 보증인을 교체하지 아니한 때&nbsp;</li> 												
+															</ol> 											
+														</li> 											
+														<li data="0">⑤ 제1항 내지 제4항에 의하여 채무자가 저축은행에 대한 채무의 기한의 이익을 상실한 경우라도, 저축은행의 명시적 의사표시가 있거나, 분할상환금 · 분할상환원리금 · 이자 · 지연배상금의 수령등 정상적인 거래의 계속이 있는 때에는, 그 채무 또는 저축은행이 지정하는 채무의 기한의 이익은 그때부터 부활하는 것으로 한다.</li> 								
+													</ol> 									
+												</span> 								
+											</div> 							
+										</li> 
+										
+										<li data="1511.390625"> 								
+											<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"> 									
+												<span class="con">제8조(기한의 이익상실의 연대보증인 및 담보제공자에 대한 통지)</span> 								
+											</a> 								
+											<div class="answer-wrap"> 									
+												<span class="con"> 										
+													<ol class="list type3"> 											
+														<li data="0">① 제7조 제1항 각호에 의하여 기한의 이익이 상실될 때, 저축은행은 동조 제1호 및 제6호의 경우에는 기한의 이익 상실사유가 발생한 날부터, 제2호 내지 제5호의 경우에는 기한의 이익 상실사유를 저축은행이 인지한 날로부터 15영업일 이내에 연대보증인 및 담보제공자에게 서면으로 그 내용을 통지하여야 한다.</li> 											
+														<li data="0">② 제7조 제3항 또는 제4항 각호에 의하여 기한의 이익이 상실되는 경우, 저축은행은 기한의 이익이 상실된 날로부터 15영업일 이내에 연대보증인 및 담보제공자에게 서면으로 그 내용을 통지하여야 한다.</li> 											
+														<li data="0">③ 제1항 및 제2항에 의해 연대보증인 및 담보제공자에게 기한의 이익 상실을 통지한 경우라도 제7조 제5항에 해당되어 기한의 이익이 부활된 채무에 대하여는 연대보증인의 동의가 없어도 계속거래가 가능한 것으로 한다. 이 경우 저축은행은 기한의 이익이 부활된 채무자의 연대보증인 및 담보제공자에게 15영업일 이내에 서면으로 기한의 이익 부활통지를 하여야 한다.&nbsp;</li> <li data="0">④ 제7조 제2항 각호에 의해 연대보증인에게 기한의 이익 상실을 통지한 경우라도 제 7 조 제 5 항에 해당되어 기한의 이익이 부활된 채무에 대하여는 연대보증인의 동의가 없어도 계속거래가 가능한 것으로 한다. 이 경우 저축은행은 기한의 이익이 부활된 채무자의 연대보증인인에게 15 영업일 이내에 서면으로 기한의 이익 부활통지를 하여야 한다.</li> 				
+													</ol> 									
+												</span> 								
+											</div> 							
+										</li> 							
+										<li data="1617.390625"> 								
+											<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"> 									
+												<span class="con">제9조(할인어음의 환매채무)</span> 								
+											</a> 								
+											<div class="answer-wrap"> 									
+												<span class="con"> 										
+													<ol class="list type3"> 											
+														<li data="0">① 어음의 할인을 받은 채무자는 다음의 어음에 대하여 저축은행으로부터의 독촉 · 통지 등이 없어도 당연히 어음면 기재금액에 의한 환매채무를 지고 곧 변제하기로 한다. 이 경우 채무자가 어음의 만기전에 환매채무를 이행하는 때에는 저축은행은 그 이행일로부터 만기일까지의 할인료 상당금액을 환급하기로 한다. 												
+															<ol> 													
+																<li data="0">- 채무자에 관하여 제7조 제1항 각 호에서 정한 사유중 하나라도 발생한 경우에는 할인 의뢰한 모든 어음</li> 											<li data="0">- 어음을 발행 또는 인수한 자에게 제7조 제1항 각호에서 정한 사유중 하나라도 발생되거나 기일에 지급하지 아니한 때에는 그가 발행 또는 인수한 모든 어음</li> 	
+															</ol> 											
+														</li> 											
+														<li data="0">② 어음의 할인을 받은 채무자는 다음의 어음에 대하여 저축은행이 서면으로 독촉하고 그 통지의 도달일로부터 10일이상으로 저축은행이 정한 기간이 경과하면 어음의 환매채무를 지고 곧 변제하기로 한다. 이 경우 채무자가 어음의 만기전에 환매채무를 이행하는 때에는 저축은행은 그 이행일로부터 만기일까지의 할인료 상당금액을 환급하기로 한다. 									<ol> 													
+																<li data="0">- 채무자에 관하여 제7조 제3항, 제4항 각호에서 정한 사유중 하나라도 발생한 경우에는 할인의뢰한 모든 어음</li> 										<li data="0">- 어음을 발행 또는 인수한 자에 관하여 제7조 제3항, 제4항 각호에서 정한 사유중 하나라도 발생한 경우 그가 발행 또는 인수한 모든 어음</li> 				
+															</ol> 											
+														</li> 											
+														<li data="0">③ 제1항, 제2항에 의한 채무를 변제하기까지는, 저축은행이 어음소지인으로서의 모든 권리를 행사할 수 있다.</li> 											
+														<li data="0">④ 제1항, 제2항의 경우에도, 제7조 제5항을 준용한다.</li> 										
+													</ol> 									
+												</span> 								
+											</div> 							
+										</li> 							
+										<li data="1723.390625"> 								
+											<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"> 									
+												<span class="con">제10조(저축은행으로부터의 상계등)</span> 								
+											</a> 								
+											<div class="answer-wrap"> 									
+												<span class="con"> 										
+													<ol class="list type3"> 											
+														<li data="0">① 기한의 도래 또는 제7조에 의한 기한전 채무변제의무, 제9조에 의한 할인어음의 환매채무의 발생 기타의 사유로, 저축은행에 대한 채무를 이행하여야 하는 경우에는, 그 채무와 채무자의 제 예치금 기타의 채권과를 그 채권의 기한도래 여부에도 불구하고, 저축은행은 서면통지에 의하여 상계할 수 있다.&nbsp;</li> 											
+														<li data="0">② 저축은행이 사전구성권에 의하여 제 1항의 상계를 하는 경우에는 민법 제 443조의 항변권에 불구하고 상계할 수 있는 것으로 하며, 원채무 또는 구상채무에 관하여 담보가 있는 경우에도 상계할 수 있다. 이 경우, 저축은행은 상계후 지체없이 이행하기로 한다.</li>
+														<li data="0">③&nbsp;제1항에 있어서와 같이 저축은행에 대한 채무를 이행하여야 하는 경우에는, 저축은행은 사전의 통지나 소정의 절차를 생략하고, 채무자를 대리하여 채무자가 담보로 제공한 채무자의 제 예치금을 그 기한도래 여부에 불구하고 환급받아서 채무의 변제에 충당할 수 있다. 이 경우 저축은행은 대리환급 변제충당후 그 사실을 지체없이 채무자에게 통지한다.</li> 			
+														<li data="0">④&nbsp;제1항 및 제2항에 따라 채무자의 채무와 채무자 및 보증인의 제예치금 기타 채권(이하 “제예치금 등”이라 한다)을 상계할 경우, 저축은행은 상계에 앞서 채무자 및 보증인의 제예치금 등에 대하여 일시적인 지급정지 조치를 취할 수 있기로 하되, 채무자와 보증인의 제예치금 등에 대하여 지급정지 조치를 취하는 경우에는 그 사실을 지체없이 보증인에게 통보한다.</li> 	
+														<li data="0">⑤&nbsp;‌‌ 제1항 및 제2항에 의한 상계나 제3항에 의한 대리환급변제충당을 실행하는 경우에는 채무자 · 보증인 · 담보제공자의 정당한 이익을 고려하여 신속히 실행하여야 하며, 채권 · 채무에 대한 이자등과 지연배상금의 계산기간은 저축은행의 상계통지가 채무자에게 도달한 날 또는 저축은행이 대리환급변제충당을 위한 계산을 하는 날까지로 하고, 그 율은 저축은행이 정하는 바에 따르기로 한다. 이 경우 기한 미도래 예금등의 이율은  <b><u>해당 예금등을 가입할 때 저축은행과 약정한 이자율을 적용한다.</u></b>. &lt;개정 2003. 3. 3, 2014.8.20.,2020.2.12&gt;</li> 										
+													</ol> 									
+												</span> 								
+											</div> 							
+										</li> 							
+										<li data="1829.390625"> 								
+											<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"> 									
+												<span class="con">제11조(채무자로부터의 상계)</span> 								
+											</a> 								
+											<div class="answer-wrap"> 									
+												<span class="con"> 										
+													<ol class="list type3"> 											
+														<li data="0">① 채무자는 채무자의 기한 도래한 예금 기타의 채권과 저축은행에 대한 채무와를 그 채무의 기한 도래 여부에 불구하고 상계할 수 있다.</li> 								<li data="0">② 제1항에 의하여 만기전의 할인어음에 관하여 상계할 경우에는, 채무자는 어음금액에서 환매일로부터 만기일까지 할인료 상당금액을 공제한 나머지 금액에 대한 환매채무를 지고, 이를 상계할 수 있다. 그러나, 저축은행이 타인에게 재양도중인 할인어음에 관하여는 상계할 수 없기로 한다.</li> 											
+														<li data="0">③ 제1항, 제2항에 의하여 상계하는 경우에는, 서면에 의한 상계통지에 의하기로 하며, 상계한 예금 기타 채권의 증서 · 통장은 이미 신고한 도장을 찍거나 서명을 하여 곧 저축은행에 제출하기로 한다.&nbsp;</li> 											
+														<li data="0">④ 제1항, 제2항에 의한 상계를 하는 경우 채권 · 채무의 이자 · 할인료 등과 지연배상금의 계산기간은 상계 통지가 도달한 날까지로 하고, 그 율은 저축은행이 정하는 바에 따르기로 한다. 또한 기한전 변제에 관한 특별한 수수료의 정함이 있는 때에는 그 정함에 따르기로 한다.</li> 										
+													</ol> 									
+												</span> 								
+											</div> 							
+										</li> 							
+										<li data="1935.390625"> 								
+											<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"> 									
+												<span class="con">제12조(어음의 제시•교부)</span> 								
+											</a> 								
+											<div class="answer-wrap"> 									
+												<span class="con"> 										
+													<ol class="list type3"> 											
+														<li data="0">① 어음이 따르는 거래에 있어서, 저축은행이 어음채권에 의하지 아니하고 제10조에 의한 상계 또는 대리환급변제충당을 할 때에는, 저축은행은 그 어음을 동시에 반환하지 아니하여도 되며, 어음의 반환장소는 그 거래영업점으로 한다.&nbsp;</li>
+														<li data="0">&nbsp;이 경우 저축은행은 어음을 찾아가도록 지체없이 채무자에게 통지한다. 제11조에 의한 상계에 따른 어음의 처리도 같다.&nbsp;</li> 								<li data="0">② 저축은행이 어음채권에 의하여 제10조에 의한 상계 또는 대리환급변제충당을 할 때에는, 다음 각호의 경우에 한하여, 어음의 제시 또는 교부를 아니하여도 되며, 이 경우의 어음의 처리도 제1항과 같다.&nbsp;
+															<ol> 													
+																<li data="0">- 저축은행이 채무자의 소재를 알 수 없을 때</li> 													
+																<li data="0">- 저축은행이 어음의 지급장소인 때</li> 													
+																<li data="0">- 교통 · 통신의 두절, 추심 기타의 사유로 제시 또는 교부의 생략이 부득이 하다고 인정되는 때</li> 												
+															</ol> 											
+														</li> 											
+														<li data="0">③ 제10조, 제11조에 의한 상계 등을 하고도, 곧 이행하여야 할 나머지 채무가 있을 경우에, 어음에 채무자 이외의 어음상 채무자가 있는 때에는 저축은행은 그 어음을 계속 점유하고 추심 또는 처분하여, 제13조에 준하여 채무의 변제에 충당할 수 있다.&nbsp;</li> 											
+														<li data="0">④ 저축은행이 어음채권의 시효중단을 위하여 독촉을 할 경우에도, 어음의 제시를 생략할 수 있다.</li> 										
+													</ol> 									
+												</span> 								
+											</div> 							
+										</li> 							
+										<li data="2041.390625"> 								
+											<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"> 									
+												<span class="con">제13조(저축은행의 변제 등의 충당지정)</span> 								
+											</a> 								
+											<div class="answer-wrap"> 									
+												<span class="con"> 										
+													<ol class="list type3"> 											
+														<li data="0">① 채무자가 기한의 이익을 상실한 채무를 변제하거나, 저축은행이 제10조에 의한 상계 또는 대리 환급변제충당을 하는 경우에, 채무자의 채무 전액을 소멸시키기에 부족한 때에는 비용, 이자, 원금의 순서로 충당하기로 한다. 그러나 저축은행은 채무자에게 불리하지 않는 범위내에서 충당순서를 달리할 수 있다.</li> 											
+														<li data="0">② 변제 또는 상계될 채무가 수개인 경우로서 채무 전액이 변제 또는 상계되지 아니할 때에는 강제집행 또는 담보권 실행경매에 의한 회수금에 대하여는 민법 또는 기타법률이 정하는 법정충당순서에 의한다.&nbsp;</li> 											
+														<li data="0">③ 변제 또는 상계할 채무가 수개인 경우로서 제2항에 해당되지 않는 임의의 상환금 또는 제예치금으로 채무자의 채무전액을 상환하기에 부족한 때에는 채무자가 지정한 순서에 따라 변제 또는 상계에 충당하기로 한다. 이 경우 채무자의 지정이 이미 연체된 채무를 제외하고 기한 미도래 채무에, 또는 무담보채무를 제외하고 유담보채무에 충당하는 등 저축은행의 채권보전에 지장이 생길 염려가 있는 때에는 저축은행은 지체없이 이의를 표시하고 물적담보나 보증의 유무, 그 경중이나 처분의 난이, 변제기의 장단, 할인어음의 결제가능성을 고려하여 저축은행이 변제나 상계에 충당할 채무를 바꾸어 지정할 수 있다.&nbsp;</li> 											
+														<li data="0">④ 저축은행이 변제충당순서를 법정충당순서와 달리할 경우에는 저축은행의 채권보전에 지장이 없는 범위 내에서 채무자와 담보제공자나 보증인의 정당한 이익을 고려하여야 한다.</li>
+													</ol> 									
+												</span> 								
+											</div> 							
+										</li> 							
+										<li data="2147.390625"> 								
+											<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"> 									
+												<span class="con">제14조(채무자의 상계충당순서지정)</span> 								
+											</a> 								
+											<div class="answer-wrap"> 									
+												<span class="con"> 										
+													<ol class="list type3"> 											
+														<li data="0">① 채무자가 제11조에 의하여 상계하는 경우, 채무자의 채무전액을 소멸시키기에 부족한 때에는, 채무자가 지정하는 순서에 따라 상계에 충당한다.&nbsp;</li> 				<li data="0">② 채무자가 제1항의 지정을 아니하거나, 제1항의 충당지정에 의하면 채권보전상 지장이 생길 염려가 있는 경우에는 제13조에 준하여 저축은행이 상계에 충당할 채무를 지정하기로 한다.&nbsp;</li> 										
+													</ol> 									
+												</span> 								
+											</div> 							
+										</li> 							
+										<li data="2253.390625"> 								
+											<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"> 									
+												<span class="con">제15조(위험조항•면책조항)</span> 								
+											</a> 								
+											<div class="answer-wrap"> 									
+												<span class="con"> 										
+													<ol class="list type3"> 											
+														<li data="0">① 채무자가 발행 · 배서 · 인수나 보증한 어음 또는 채무자가 저축은행에 제출한 제 증서 등이 불가항력 · 사변 · 재해 · 수송도중의 사고 등 저축은행의 책임없는 사유로 하여 분실 · 손상 · 멸실 또는 연착한 경우 채무자는 저축은행의 장부 · 전표 등의 기록에 의하여 채무를 변제하기로 한다. 다만, 채무자가 저축은행의 장부 · 전표등의 기록과 다른 자료를 제시할 경우 저축은행의 기록과 채무자가 제시하는 자료를 상호 대조하여 채무를 확정한 후 상환키로 한다.&nbsp;</li> 											
+														<li data="0">② 채무자는 제1항의 분실 · 손상 · 멸실의 경우에 저축은행의 청구에 따라 곧 그에 대신할 어음이나 증서 등을 제출하기로 한다. 다만, 저축은행이 제3자와의 거래에서 취득한 어음이나 증서의 경우에는 그러하지 아니하다.</li> 											
+														<li data="0">③ 제1항, 제2항에 의한 변제 또는 어음이나 증서의 제출로 인하여 채무자가 과실없이 이중의 지급의무를 부담하게 됨으로 말미암은 손해는 저축은행이 부담하기로 한다.</li> 		<li data="0">④ 저축은행이 어음이나 제 증서 등의 인영 · 서명을 채무자가 미리 신고한 인감 · 서명과 상당한 주의로써 대조하고, 틀림없다고 인정하여 거래한 때에는, 어음 · 증서 등과 도장 · 서명에 관하여 위조 · 변조 · 도용 등의 사고가 있더라도 이로 말미암은 손해는 채무자가 부담하며, 채무자는 어음 또는 증서 등의 기재문언에 따라 책임을 지기로 한다.</li> 			
+													</ol> 									
+												</span> 								
+											</div> 							
+										</li> 							
+										<li data="2359.390625"> 								
+											<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"> 									
+												<span class="con">제16조(신고사항과 그 변경 등)</span> 								
+											</a> 								
+											<div class="answer-wrap"> 									
+												<span class="con"> 										
+													<ol class="list type3"> 											
+														<li data="0">① 채무자는 거래에 필요한 채무자의 명칭 · 상호 · 대표자 · 주소 등과 인감 · 서명을 저축은행이 정한 용지에 의하여, 미리 신고하기로 한다. 또한 대리인에 의하여 거래하고자 할 경우에, 그 성명 · 인감 · 서명 등에 관하여도 같다.</li> 											
+														<li data="0">② 제1항에 의한 신고사항에 변경이 있는 때에는, 채무자는 지체없이 그 변경내용을 저축은행에 서면, 전화, 팩스, 기타전자적 수단의 방법으로 신고하여야 한다. &lt;개정 2013.05.31&gt;</li> 										
+													</ol> 									
+												</span> 								
+											</div> 							
+										</li> 							
+										<li data="2465.390625"> 								
+											<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"> 									
+												<span class="con">제17조(자료의 성실 작성의무)</span> 								
+											</a> 								
+											<div class="answer-wrap"> 									
+												<span class="con"> 채무자는 여신거래와 관련하여 저축은행에 제출하는 자료를 성실하게 작성 · 제출하기로 한다.&nbsp;</span>
+											</div> 							
+										</li> 							
+										
+										<li data="2571.390625"> 								
+											<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"> 									
+												<span class="con">제18조(통지의 효력)</span> 								
+											</a> 								
+											<div class="answer-wrap"> 									
+												<span class="con"> 										
+													<ol class="list type3"> 											
+														<li data="0">① 저축은행이 채무자가 신고한 최종 주소로 서면 통지 또는 기타 서류 등을 발송한 경우에는, 보통의 우송기간이 경과한 때에 도달한 것으로 추정한다.</li> 					<li data="0">② 채무자가 제16조 제2항에 의한 변경신고를 게을리 함으로 말미암아 제1항에 의하여 발송한 서면통지 또는 기타서류가 채무자에게 연착되거나 도달되지 아니한 때에는 보통의 우송기간이 경과한 때에 도달한 것으로 본다. 다만, 상계통지나 기한전의 채무변제 청구 등 중요한 의사표시인 경우에는 배달증명부내용증명에 의한 경우에 한하여 도달한 것으로 본다.&nbsp;</li> 			<li data="0">③ 저축은행이 채무자에 대한 통지 등의 사본을 보존하고 또 그 발신의 사실 및 연월일을 장부 등에 명백히 기재한 때에는 발송한 것으로 추정한다.</li> 					
+													</ol> 									
+												</span> 								
+											</div> 							
+										</li> 							
+										<li data="2677.390625"> 								
+											<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"> 									
+												<span class="con">제19조(회보와 조사 등)</span> 								
+											</a> 								
+											<div class="answer-wrap"> 									
+												<span class="con"> 										
+													<ol class="list type3"> 											
+														<li data="0">① 채무자는 그 재산 · 경영 · 업황 또는 융자조건의 이행여부 기타 필요한 사항에 대하여, 저축은행의 청구가 있으면 곧 회보하며, 저축은행이 필요에 따라 채무자의 장부 · 공장 · 사업장 기타의 조사에 임할 경우에는, 협조하기로 한다.</li> 											
+														<li data="0">② 채무자는 그 재산 · 경영 · 업황 기타 거래관계에 영향을 미칠 사항에 관하여 중대한 변화가 생기거나 생길 염려가 있을 때에는, 청구가 없더라도 저축은행 앞으로 곧 통지하기로 한다.</li> 											
+														<li data="0">③ 저축은행은 제1항 또는 제2항에 의한 회보 등이나 조사에 의하여, 채무자가 어음교환소의 거래정지처분, 부실여신의 보유, 경영상황의 급격한 악화 등으로 채권회수 불능의 우려가 있는 때에는, 그 직원을 파견하여 채무자의 재산 및 경영에 관하여 채권보전을 위한 범위내에서 관리 · 감독을 할 수 있다.</li> 										
+													</ol> 									
+												</span> 								
+											</div> 							
+										</li> 							
+										<li data="2783.390625"> 								
+											<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"> 									
+												<span class="con">제20조(여신거래조건의 변경)</span> 								
+											</a> 								
+											<div class="answer-wrap"> 									
+												<span class="con"> 										
+													<ol class="list type3"> 											
+														<li data="0">① 저축은행은 채무자의 신용상태 변동시 저축은행이 정하는 바에 따라 신용평가 등급을 조정하고 서면통지에 의하여 여신한도, 여신만기, 금리등 여신거래조건을 신용평가등급에 따라 변경할 수 있기로 한다.</li> 											
+														<li data="0">② 채무자는 제1항에 의하여 여신거래조건이 변경된 경우 이에 이의가 있을 때에는 변경기준일로부터 1개월이내에 계약을 해지할 수 있다. 이 경우 해지일까지는 변경전의 여신거래조건을 적용 하기로 한다.</li> 											
+														<li data="0">③ 채무자는 신용상태가 호전되었다고 인정되는 경우 저축은행이 정하는 바에 따라 여신한도, 여신만기, 금리 등 여신거래조건변경을 서면으로 요구할 수 있기로 한다. 이 경우 저축은행은 적정성여부를 심사하여 필요한 조치를 취하고, 그 결과를 채무자 앞으로 곧 통지하기로 한다.&nbsp;</li> 										
+													</ol> 									
+												</span> 								
+											</div> 							
+										</li> 							
+										<li data="2889.390625"> 								
+											<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"> 									
+												<span class="con">제21조(이행장소•준거법)</span> 								
+											</a> 								
+											<div class="answer-wrap"> 									
+												<span class="con"> 										
+													<ol class="list type3"> 											
+														<li data="0">① 채무의 이행장소는, 다른 약정이 없는 한, 거래영업점으로 한다. 다만, 부실 채권의 관리등 상당한 사유로 채권관리업무를 저축은행의 본점 또는 다른 영업점으로 이관한 경우에는 이관받은 본점 또는 다른 영업점을 그 이행장소로 한다.</li> 											
+														<li data="0">② 이 약관에 터잡은 여신거래에 관하여 적용 될 법률은, 채무자가 내국인 또는 내국법인이 아닌 경우라도 국내법을 적용한다.</li> 									
+													</ol> 									
+												</span> 								
+											</div> 							
+										</li> 							
+										<li data="2995.390625"> 								
+											<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"> 									
+												<span class="con">제22조(약관•부속약관 변경)</span> 								
+											</a> 								
+											<div class="answer-wrap"> 									
+												<span class="con"> 										
+													<ol class="list type3"> 											
+														<li data="0">① 저축은행이 이 약관이나 부속약관을 변경하고자 할 경우에, 변경예정일 직전 1개월간 저축은행의 영업점 및 인터넷 홈페이지 등에 변경내용을 게시하여 채무자에게 알려야 한다. 다만, 법령의 개정이나 제도의 개선 등으로 긴급히 약관을 변경한 때에는 즉시 이를 게시(최소 1개월이상)하여야 한다. &lt;개정 2013.05.31&gt;</li> 											
+														<li data="0">② 제1항의 약관변경 내용이 채무자에게 불리하게 변경된 경우 제1항의 게시 외에 저축은행은 서면 · 전자우편 등 채무자와 사전에 합의한 방법으로 변경 전 최소 1개월 전까지(제1항 단서의 경우 즉시) 개별통지 하여야 한다. 다만, 기존 채무자에게 변경 전 내용이 그대로 적용되는 경우 또는 채무자가 변경 내용에 대한 통지를 받지 아니하겠다는 의사를 명시적으로 표시한 경우에는 그러하지 아니한다.&lt;개정 2013.05.31&gt;</li> 											
+														<li data="0">③ 저축은행은 제1항의 게시 또는 제2항의 통지를 할 경우 “채무자가 변경에 동의하지 아니한 경우 제1항의 게시 또는 제2항의 통지를 받은날로부터 1개월 이내에 서면에 의한 이의를 제기하거나 계약을 해지할 수 있으며, 서면에 의한 이의 또는 계약해지의 의사표시를 하지 아니한 경우에는 변경에 동의한 것으로 본다”라는 취지의 내용을 함께 게시 또는 통지하여야 한다. &lt;개정 2013.05.31&gt;</li> 											
+														<li data="0">④ 제1항의 게시 또는 제2항의 통지(제3항의 게시 · 통지내용 포함)를 받은날로부터 1개월이내에 채무자의 서면에 의한 이의 또는 계약해지의 의사표시가 저축은행에 도달하지 않은 때에는 채무자가 변경에 동의한 것으로 본다. &lt;개정 2013.05.31&gt;</li> 											
+														<li data="0">⑤ 저축은행은 약관을 영업점에 비치 또는 게시하여 채무자가 요구할 경우 약관 사본을 교부하여야 한다. &lt;개정 2013.05.31&gt;</li> 								
+													</ol> 									
+												</span> 								
+											</div> 							
+										</li> 							
+										<li data="3101.390625"> 								
+											<a class="question-wrap" href="#" aria-expanded="false" title="닫힘"> 									
+												<span class="con">제23조(관할법원의 합의)</span> 								
+											</a> 								
+											<div class="answer-wrap"> 									
+												<span class="con">이 약관에 터잡은 여신거래에 관하여 저축은행과 채무자 또는 보증인 혹은 물상보증인 사이에 소송의 필요가 생긴 때에는 법이 정하는 관할법원과 아울러 저축은행의 거래영업점 소재지 지방법원을 관할법원으로 하기로 한다.&nbsp;</span>다만, 채무자의 책임있는 사유로 부실채권이 발생되어 그 채권의 관리를 위하여 저축은행이 본점 또는 다른 영업점으로 그 채권관리업무를 이관한 경우에는 법이 정하는 관할법원과 아울러 이관받은 본점 또는 다른 영업점의 소재지 지방법원을 관할법원으로 하기로 한다.
+											</div>
+										</li> 						
+									</ul> 					
+								</div> 					 					 					 					 					 					 					 					 	
+							</div>
+
+							<div class="rule-wrap mt40">
+								<p>부칙</p>
+								<p><span class="fw-bold mr10">제1조(시행일)</span>이 약관은 2018년 11월 1일부터 시행한다.</p>
+								<p><span class="fw-bold mr10">제2조(법정 최고금리 변경사항 반영에 관한 적용례)</span>제20조의2의 개정내용은 약관 시행일 이후 체결 또는 갱신하거나 연장하는 대출약정에 한하여 적용하기로 한다.</p>
+							</div>
+							
+						</div>
+
+						<p>대출가이드 > 대출방법안내  - <a href="../html/normal/loan/guide.html" target="_blank">guide.html</a></p>
+						<div class="guide-wrap">
+							<div class="tab-wrap">
+								<ul>
+									<li><a href="../html/normal/loan/faq.html">대출FAQ</a></li>
+									<li><a href="../html/normal/loan/basic_terms.html">대출거래기본약관</a></li>
+									<li class="active"><a href="../html/normal/loan/guide.html">대출방법안내</a></li>
+									<li><a href="../html/normal/loan/preparation.html">대출준비서류</a></li>
+								</ul>
+							</div>
+							<div class="guide-cts">
+								
+								<div class="list-tit">온라인대출신청</div>
+								<!-- <p class="desc">
+									온라인(모바일앱에 한함)을 통해 바로 송금까지 진행 하실 수 있습니다. 단, 단계별로 지원 여부를 확인하시어 신청 하시기 바라며 간단한 정보 입력 후 상담신청을 하시면 담당직원이 직업 연락드려 상담 및 심사진행을 도와드립니다.
+								</p> -->
+								<!-- s:2023-07-14 수정 -->
+								<div class="txt-box mt0">
+									<p class="desc">온라인(모바일앱에 한함)을 통해 바로 송금까지 진행 하실 수 있습니다. 단, 단계별로 지원 여부를 확인하시어 신청 하시기 바랍니다. 또한 , 간단한 정보 입력 후 상담신청을 하시면, 담당직원이 직접 연락하여 상담 및 심사진행을 도와드립니다.</p>
+								</div>
+								<p class="cont-tit mt20">PC 및 모바일웹</p>
+								<div class="img-cts"><img src="../../../resources/normal/images/page/img_guide_pc.png" alt="PC 및 모바일웹 / 자세한 설명은 아래 내용 참고"></div>
+								<!-- e:2023-07-14 수정 -->
+								<ol class="blind">
+									<li>1단계 - PC 또는 모바일 신청접수</li>
+									<li>2단계 - 상담 및 심사진행</li>
+									<li>3단계 - 대출여부 확인 및 승인</li>
+									<li>4단계 - 송금 및 계약 (계약서 발송 또는 전자계약)</li>
+								</ol>
+								
+								<!-- s:2023-07-14 수정 -->
+								<p class="cont-tit">모바일앱</p>
+								<div class="img-cts"><img src="../../../resources/normal/images/page/img_guide_app.png" alt="모바일 앱 / 자세한 설명은 아래 내용 참고"></div>
+								<!-- e:2023-07-14 수정 -->
+								<ol class="blind">
+									<li>1단계 - 모바일앱 신청접수</li>
+									<li>2단계 - 온라인 서류제출</li>
+									<li>3단계 - 한도 및 금리확인</li>
+									<li>4단계 - 전자계약</li>
+									<li>5단계 - 비대면 계좌인증</li>
+									<li>6단계 - 비대면 본인인증</li>
+									<li>7단계 - 송금</li>
+								</ol>
+								<div class="list-tit">전화 및 홈페이지 신청</div>
+								<!-- s:2023-07-14 수정 -->
+								<div class="txt-box mt0">
+									<p class="desc">고객님 근처에 지점이 없는 경우 전화로 신청하고 대출여부가 확인되면 구비서류를 가지고 가까운 지점을 방문하여 작성 또는 전자계약서(우편발송)을 작성하는 방식입니다.</p>
+								</div>
+								<!-- s:2023-07-14 수정 -->
+								<!-- <p class="desc">
+									고객님이 계신 지역 근처에 당행 지점이 없는 경우 전화로 신청하시고 대출여부가 확인되면 구비서류를 가지고 전자계약서(우편발송)하여 진행되는 방식입니다.
+								</p> -->
+								<div class="img-cts"><img src="../../../resources/normal/images/page/img_guide_call.png" alt="전화 및 홈페이지 신청 안내 / 자세한 설명은 아래 내용 참고"></div>
+								<ol class="blind">
+									<li>1단계 - 전화 및 홈페이지 신청접수</li>
+									<li>2단계 - 상담 및 심사진행</li>
+									<li>3단계 - 대출여부 확인 및 승인</li>
+									<li>4단계 - 송금 및 계약(계약서 발송 또는 전자계약)</li>
+								</ol>
+								
+							</div>
+						</div>
+
+						<p>대출가이드 > 대출방법안내  - <a href="../html/normal/loan/preparation.html" target="_blank">preparation.html</a></p>
+						<div class="guide-wrap">
+							<div class="tab-wrap">
+								<ul>
+									<li><a href="../html/normal/loan/faq.html">대출FAQ</a></li>
+									<li><a href="../html/normal/loan/basic_terms.html">대출거래기본약관</a></li>
+									<li><a href="../html/normal/loan/guide.html">대출방법안내</a></li>
+									<li class="active"><a href="../html/normal/loan/preparation.html">대출준비서류</a></li>
+								
+								</ul>
+							</div>
+
+							<div class="preparation-cts">
+								
+								<div class="select-tab" tabindex="-1">
+								 
+									<div class="select-wrap">
+										<select name="select_gbn" class="" id="select_gbn" title="대출구분 선택" style="display: none;">
+											<option value="1" selected="selected">신용대출 준비서류 안내</option>
+											<option value="2">사업자대출 준비서류 안내</option>
+											<option value="3">햇살론 준비서류 안내</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="doc-type1" style="display: block;">
+								
+										<!-- s: 20180725 pm - list-tit 클래스를 가진 p태그 추가 -->
+										<p class="list-tit mb30">신용대출</p>
+										<!-- //e: 20180725 pm - list-tit 클래스를 가진 p태그 추가 -->
+										<!-- s: 20180725 pm - 테이블 클래스 삭제 -->
+										<table class="table-style">
+										<!-- //e: 20180725 pm - 테이블 클래스 삭제 -->
+										<!-- s: 20180725 pm - 캡션 클래스 삭제 -->
+										<caption>신용대출 준비서류 안내 - 구분, 확인사항, 증빙서류, 징구대상, 비고로 구성</caption> <!-- 180726 pm 텍스트 수정 -->
+										<!-- //e: 20180725 pm - 클래스 삭제 -->
+										
+										<colgroup>
+											<col style="width:10%">
+											<col style="width:20%">
+											<col style="width:*">
+											<col style="width:15%">
+											<col style="width:20%">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">구분</th>
+												<th scope="col">확인사항</th>
+												<th scope="col">증빙서류</th>
+												<th scope="col">징구대상</th>
+												<th scope="col">비고</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th rowspan="5" scope="row">인적사항</th>
+												<td>본인확인, 연령, 주소</td>
+												<td>주민등록증 사본</td>
+												<td>신청인</td> <!-- 180706 am ', 담보제공인' 삭제 -->
+												<td>&nbsp;</td>
+											</tr>
+											<tr>
+												<td>동거가족수, 결혼여부</td>
+												<td>주민등록등·초본<br> 가족관계증명서</td> <!-- 180706 am 텍스트수정 --> <!-- 180724 am br태그 추가 -->
+												<td>신청인</td>
+												<td>&nbsp;</td>
+											</tr>
+											<tr>
+												<td>직업, 직위, 직장, 입사일자</td>
+												<td>재직증명서<br>신분증 사본<br>건강보험자격득실확인서</td> <!-- 180712 pm 텍스트수정 --> <!-- 180724 am br태그 추가 -->
+												<td>&nbsp;</td>
+												<td>&nbsp;</td>
+											</tr>
+											<tr>
+												<td>자영업 업종</td>
+												<td>사업자등록증 사본<br>영업허가증 사본</td><!-- 180724 am br태그 추가 -->
+												<td>&nbsp;</td>
+												<td>&nbsp;</td>
+											</tr>
+											<tr>
+												<td>전문직종</td>
+												<td>신분증 사본<br>자격증 사본</td><!-- 180724 am br태그 추가 -->
+												<td>&nbsp;</td>
+												<td>&nbsp;</td>
+											</tr>
+											<tr>
+												<th rowspan="3" scope="row">재무사항</th>
+												<td class="va-m">연소득(기타 연소득 포함)</td> <!-- 180712 pm class명 추가 -->
+												<td>
+													<!-- 180724 am br태그 추가 -->
+													근로소득원천징수 영수증 사본<br>
+													소득금액증명<br>
+													급여이체통장 사본<br>
+													급여명세서 사본<br>
+													건강보험납부확인서<br>
+													기타 연소득 확인서류
+													<!-- //180724 am br태그 추가 -->
+												</td>
+												<td rowspan="3" class="va-m">신청인</td> <!-- 180712 pm class명 추가 -->
+												<td rowspan="2" class="va-m">해당사항 있는 경우</td> <!-- 180712 pm class명 추가 -->
+											</tr>
+											<tr>
+												<td>연간재산세, 재산보유여부</td>
+												<td>재산세 과세증명<br>재산세영수증 사본<br>등기부 등본</td><!-- 180724 am br태그 추가 -->
+											</tr>
+											<tr>
+												<td>총 여신 및 신용여신금액</td>
+												<td>부채현황표(당행양식/일부상품에 한함)</td> <!-- 180706 am 텍스트수정 -->
+												<td>100만원 초과 신청시</td>
+											</tr>
+											<tr>
+												<th rowspan="2" scope="row">부동산 담보현황</th>
+												<td>소유자, 종류, 선순위 등 권리사항</td>
+												<td class="va-m">등기부등본</td> <!-- 180706 am 텍스트수정 -->
+												<td>담보제공인</td>
+												<td>부동산 담보인 경우</td>
+											</tr>
+											<tr>
+												<td>임대보증금 등 임대현황</td>
+												<td>임대차계약서 사본<br>임대차확인서</td> <!-- 180724 am br태그 추가 -->
+												<td>담보제공인</td>
+												<td>해당사항 있는 경우</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+								<div class="doc-type2" style="display: none;">
+								
+										<!-- s: 20180725 pm - list-tit 클래스를 가진 p태그 추가 -->
+										<p class="list-tit mb30">사업자대출</p>
+										<!-- //e: 20180725 pm - list-tit 클래스를 가진 p태그 추가 -->
+										<!-- s: 20180725 pm - 테이블 클래스 삭제 -->
+										
+										&lt;%--  --%&gt;
+										<table class="table-style">
+										<!-- //e: 20180725 pm - 테이블 클래스 삭제 -->
+										<!-- s: 20180725 pm - 캡션 클래스 삭제 --><caption>사업자대출 - 구분, 확인사항, 비고로 구성</caption><caption>사업자대출 준비서류 안내 - 구분, 확인사항, 비고로 구성</caption> <!-- 180726 pm 텍스트 수정 -->
+										<!-- //e: 20180725 pm - 클래스 삭제 -->
+										
+										<colgroup>
+											<col style="width:20%">
+											<col style="width:*">
+											<col style="width:30%">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">구분</th>
+												<th scope="col">확인사항</th>
+												<th scope="col">비고</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">공통</th>
+												<td>
+													<!-- 180724 am br태그 추가 -->
+													사업자등록증사본<br>
+													주민등록 등본<br>
+													주민등록 원초본(과거주소포함)<br>
+													지방세 세목별 과세표준증명<br>
+													국세 완납증명서<br>
+													지방세 완납증명서<br>
+													전입세대열람내역서<br>
+													인감증명서<br>
+													소득금액증명원 또는 부가세 과세표준증명원
+													<!-- //180724 am br태그 추가 -->
+												</td>
+												<td>&nbsp;</td>
+											</tr>
+											<tr>
+												<th scope="row">법인, 조합</th>
+												<td>
+													<!-- 180724 am br태그 추가 -->
+													법인등기부등본<br>
+													정관 또는 조합규약<br>
+													법인 인감증명서(담보 설정시 필요)<br>
+													재무재표<br>
+													이사회의사록 사본<br> 주주명부
+													<!-- //180724 am br태그 추가 -->
+												</td>
+												<td>법인인감으로 "원본대조필" 확인</td>
+											</tr>
+											<tr>
+												<th scope="row">연대보증인</th>
+												<td>
+													<!-- 180724 am br태그 추가 -->
+													보증인 인감증명서<br>
+													보증인 재산세 과세증명서 또는 영수증
+													<!-- //180724 am br태그 추가 -->
+												</td>
+												<td>&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+								<div class="doc-type3" style="display: none;">
+									<div class="list-tit mb30">햇살론</div> <!-- 180726 pm class=" mb30" 추가 -->
+									<div class="txt-box">
+										<p>
+											기본서류 외에 신청하신 대출상품에 따라서 준비서류가 추가될 수 있습니다.<br>
+											자세한 준비서류는 당행으로 문의하시기 바랍니다.
+										</p>
+									</div>
+									<ul class="define-list">
+										<li>
+											<span class="de-tit">공통</span>
+											<div class="de-cts">
+												<ul class="list type2">
+													<li>- 주민등록등본 및 원초본</li>
+													<li>- 실명확인증표 사본</li>
+													<li>- 재직 및 근속소득 확인서류(근로소득신고여부 및 입사년도에 따라 상이)</li>
+												</ul>
+												<div class="table-wrap">
+													<table class="table-style">
+														
+														<!-- s: 20180725 am - 캡션 상세화 -->
+														<caption>햇살론 준비서류 안내 - 근로소득, 당해년도 입사 신고자, 직전년도 이전 입사 신고자, 미신고자로 구성</caption> <!-- 180726 pm 텍스트 수정 -->
+														<!-- //e: 20180725 am - 캡션 상세화 -->
+														<colgroup>
+															<col style="width:25%">
+															<col style="width:25%">
+															<col style="width:25%">
+															<col style="width:*">
+														</colgroup>
+														<thead>
+															<tr>
+																<th scope="row">근로소득</th>
+																<th scope="col">당해년도 입사 신고자</th>
+																<th scope="col">직전년도 이전<br>입사 신고자</th>
+																<th scope="col">미신고자</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<th scope="row">재직증명서</th>
+																<td colspan="2" rowspan="3">건강보험(국민연금) 자격득실확인서 대체</td>
+																<td rowspan="3" class="va-m">택1</td> <!-- 180706 am class추가 -->
+															</tr>
+															<tr>
+																<th scope="row">근로(고용)계약서</th>
+															</tr>
+															<tr>
+																<th scope="row">근로(고용)확인서</th>
+															</tr>
+															<tr>
+																<th scope="row">소득금액증명원</th>
+																<td>&nbsp;</td>
+																<td rowspan="3" class="va-m">택1</td> <!-- 180706 am class추가 -->
+																<td>&nbsp;</td>
+															</tr>
+															<tr>
+																<th scope="row">근로소득원천징수영수증</th>
+																<td>&nbsp;</td>
+																<td>&nbsp;</td>
+															</tr>
+															<tr>
+																<th scope="row">건강보험납부 확인서</th>
+																<td><strong class="accent3">○</strong></td>
+																<td>&nbsp;</td>
+															</tr>
+															<tr>
+																<th scope="row">급여통장 거래내역</th>
+																<td>&nbsp;</td>
+																<td>&nbsp;</td>
+																<td><strong class="accent3">○</strong></td>
+															</tr>
+															<tr>
+																<th scope="row">급여명세서</th>
+																<td>&nbsp;</td>
+																<td>&nbsp;</td>
+																<td><strong class="accent3">○</strong></td>
+															</tr>
+															<tr>
+																<th scope="row">사업자등록증 사본</th>
+																<td>&nbsp;</td>
+																<td>&nbsp;</td>
+																<td><strong class="accent3">○</strong></td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</li>
+										<li>
+											<span class="de-tit">대환</span>
+											<div class="de-cts">
+												<ul class="list type2">
+													<li>- 금융거래확인서 : 대환채무가 있는 신용카드 or 신용카드 겸업 은행必</li>
+													<li>- 대환대출대상 채무내역서 : 채권기관 비치 (고객작성)</li>
+													<li>- 대환대출대상 채무확인서 : NICE평가정보㈜</li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						
+						
+						
+						</div>
+
+						<p>금융소비자 권리(4개 탭)  - <a href="../html/normal/portal/illegal_contract_cancel.html" target="_blank">illegal_contract_cancel.html</a></p>
+						<div class="contents default-wrap">
+							<div class="tab-wrap">
+								<ul>
+									<li class="active"><a href="../html/normal/portal/illegal_contract_cancel.html">위법계약 해지권</a></li>
+									<li><a href="../html/normal/portal/withdrawal.html">청약철회권</a></li>
+									<li><a href="../html/normal/portal/ratecut_info.html">금리인하요구권</a></li>
+									<li><a href="../html/normal/portal/view_data_req.html">자료열람요구권</a></li>
+								</ul>
+							</div>
+							<div class="withdrawal-wrap">
+								<h3 class="tit">위법계약 해지권 안내</h3>
+								<div class="list-tit type2">위법계약 해지권이란?</div>
+								<ul class="define-list">
+									<li>
+										<!-- <span class="de-tit">내용설명</span> -->
+										<span class="de-tit">설명</span> <!-- 180706 am 텍스트 수정 -->
+										<div class="de-cts">금융회사가 판매원칙을 위반하여 금융상품 계약을 체결한 경우 금융소비자가 해당 계약의 해지를 요구할 수 있는 제도입니다.</div>
+									</li>
+									<li>
+										<span class="de-tit">적용상품</span>
+										<div class="de-cts">
+											금융회사가 판매원칙을 위반하여 금융상품 계약을 체결한 경우 금융소비자가 해당 계약의 해지를 요구할 수 있는 제도입니다.금융소비자와 계속적 거래가 이루어지고 금융소비자가 해지시 재산상 불이익이 발생하는 금융상품 중 다음금융상품을 제외 한 상품
+											<p>- '온라인투자연계금옹업 및 이용자보호에 관한 법률'에 따른 온라인투자연계금융업자와 체결하는 계약</p>
+											<p>- '자본시장과 금융투자업에 관한 법률'에 따른 원화로 표시된 양도성 예금증서</p>
+											<p>- '자본시장과 금융투자업에 관한 법률 시행령'에 따른 표지어음</p>
+										</div>
+									</li>
+									<li>
+										<span class="de-tit">행사기간</span>
+										<!--s:2023-07-14 구조변경-->
+										<div class="de-cts">
+											금융소비자가 계약 체결에 대한 위반사항을 안 날로부터 1년 이내 (이 경우 해당 기간은 계약체결일로부터 5년 이내의 범위에 있어야 함)
+										</div>
+										<!--e:2023-07-14 구조변경-->
+									</li>
+									<!-- 20210910 pm 추가 -->
+									<li>
+										<span class="de-tit">위법계약 해지요구 신청방법</span>
+										<div class="de-cts">
+											"위법계약 해지 요구서"를 작성하시어 당사에 제출해야 합니다.
+											<br>
+											· 이메일 : / <br>
+											· 팩스 : 
+										</div>
+									</li>
+									<!-- //20210910 pm 추가 -->
+									<!-- 180706 am 추가 -->
+									<li>
+										<span class="de-tit">전화안내</span>
+										<div class="de-cts">위법계약해지권에 대한 상세한 안내를 원하시면, 고려저축은행 고객센터 1877-9900으로 연락바랍니다.</div>
+									</li>
+									<!-- //180706 am 추가 -->
+
+								</ul>
+								<!--s:2023-07-17 구조변경-->
+								<p class="btn-wrap">
+								<!--e:2023-07-17 구조변경-->
+									<a href="/resources/normal/file/위법계약해지권.pdf" class="btn-normal btn-ft-dwn" download="">신청서 다운로드</a><a href="/resources/normal/file/위임장(210925).pdf" class="btn-normal btn-ft-dwn" download="">위임장 다운로드</a>
+								</p>
+							</div>
+						</div>
+
+						<p>금융소비자보호 체계(5개 탭)  - <a href="../html/normal/portal/protection_info.html" target="_blank">protection_info.html</a></p>
+						<div class="protection-wrap">
+							<div class="tab-wrap">
+								<ul>
+									<li class="active"><a href="../html/normal/portal/protection_info.html">금융소비자보호 헌장</a></li>
+									<li><a href="../html/normal/portal/protection_system.html">금융소비자보호조직도</a></li>
+									<li><a href="../html/normal/portal/sales_rule.html">상품판매 준칙</a></li>
+									<li><a href="../html/normal/portal/dev_rule.html">상품개발 준칙</a></li>
+									<li><a href="../html/normal/portal/operation_status.html">민원처리프로세스</a></li>
+								</ul>
+							</div>
+							<!-- s : 2023-07-17 , 내용 수정 -->
+							<div class="terms-txt">
+								<dl>
+									<dt>우리 고려저축은행 임직원 모두는</dt><br>
+									<dd>올바른 윤리의식 함양을 통하여 건전한 신용사회 정착에 기여하고, 고객보호 및 기업가치 증대를 통하여 금융산업의 발전을 도모하며 더 나아가 국민경제 발전에 이바지하고자 다음의 사항 을 윤리강령으로 정하여 이를 적극 실천한다.</dd>
+								</dl>
+								<br>
+
+								<dl class="pro-inner">
+									<dt>하나. 투철한 책임감과 사명감을 가지고, 성실·근면하게 직무를 수행한다.</dt>
+									<dt>하나. 정직과 신뢰를 가장 중요한 가치관으로 삼고, 도덕적 윤리에 입각하여 직무를 공정하게 수행한다.</dt>
+									<dt>하나. 금융인으로서의 자긍심을 가지고 전문성 유지를 위해 노력하며, 금융산업의 발전을 위해 맡은 업무에 충실한다.</dt>
+									<dt>하나. 업무를 수행함에 있어 관련 법령 및 제 규정을 충분히 이해하고 준수한다.</dt>
+									<dt>하나. 공정하고 자유로운 시장경제 질서를 존중하고 이를 유지하기 위해 노력한다.</dt>
+									<dt>하나. 고객의 발전이 저축은행의 발전임을 인식하고 항상 고객의 입장에서 생각하고 행동한다.</dt>
+									<dt>하나. 고객이 만족하고 신뢰할 수 있는 금융상품과 서비스를 제공하고 새로운 서비스 문화를 창조하기 위해 노력한다.</dt>
+									<dt>하나. 고객의 자산과 정보를 관련법류에 따라 안전하게 보관․관리하며, 고객의 사생활이 침해되지 않도록 최대한 주의를 기울인다.</dt>
+									<dt>하나. 협력업체와 공정한 거래를 통한 상생의 관계를 지향하며, 우월적 지위를 이용한 불공정한 행위를 하지 않는다.</dt>
+									<dt>하나. 지역사회의 일원으로서 지역사회 및 그 구성원의 가치를 높이는 사회공헌호라동에 적극 참여한다.</dt>
+									<dt>하나. 변칙적·불법적 업무처리를 하지 않으며, 관련법령에 따른 보고의무를 성실히 이행한다.</dt>
+									<dt>하나. 업무수행시 부하직원이나 동료에게 부당한 지시나 요청을 하지 않는다.</dt>
+									<dt>하나. 업무상 지득한 미공개정보를 이용 또는 누설하여 자신 또는 제3자의 이익을 도모하는 행위를 하지 않는다.</dt>
+									<dt>하나. 업무과 관련하여 금품․향응 등 경제적 혜택을 수수하거나, 청탁․압력 등 공정성을 저해하는 행위를 하지 않는다.</dt>
+								</dl>
+							</div>
+							<!-- e : 2023-07-17 , 내용 수정 -->
+						</div>
+
+						<p>민원센터(6개 탭)  - <a href="../html/normal/portal/online_const.html" target="_blank">online_const.html</a></p>
+						<div class="complaint-wrap">
+							<div class="tab-wrap">
+								<ul>
+									<li class="active"><a href="../html/normal/portal/online_const.html">온라인상담센터</a></li>
+									<li><a href="../html/normal/portal/customer_opinion.html">고객의견(칭찬/불만)</a></li>
+									<li><a href="../html/normal/portal/customer_suggestion">고객제안</a></li>
+									<li><a href="../html/normal/portal/civil_apply.html">전자민원신청</a></li>
+									<li><a href="../html/normal/portal/civil_apply_list.html">신청 내역조회/취하</a></li>
+									<li><a href="../html/normal/portal/affairs_manual.html">민원사무편람</a></li>
+								</ul>
+							</div>
+							
+							<div class="accordion-wrap mb60">
+								<h3 class="tit">자주 하는 질문 TOP 5</h3>
+								<ul class="accordion">
+									<li>
+										<a href="#" class="question-wrap">
+											<span class="category">Q</span>
+											<span class="con">대출 상환할 금액 및 입금내역 확인 하고 싶어요.</span>
+										</a>
+										<div class="answer-wrap">
+											<span class="con">
+												<p>대출원금일부 및 완납금을 입금하시려면 앱 마이고려 또는 고객센터()를 통해 금액 확인 후 가상계좌로 입금해주세요.</p>
+												<p>(상품계약에 따라 중도상환수수료가 부과되오니, 반드시 금액을 먼저 확인하시고 입금부탁드립니다.)</p>
+												<p>입금 후 입금확인은 고려저축은행 앱과 홈페이지의 마이고려, 고객센터()를 통해 확인가능합니다.</p>
+											</span>
+										</div>
+									</li>
+									<li>
+										<a href="#" class="question-wrap">
+											<span class="category">Q</span>
+											<span class="con">금융거래확인서, 부채잔액증명서 발급 및 수령 방법 알려주세요.</span>
+										</a>
+										<div class="answer-wrap">
+											<span class="con">
+												<p>본인 지점 방문,고려저축은행 앱, 홈페이지, 고객센터()를 통해 접수와 가능하며 비대면발급 및 팩스, 우편으로 받아볼 수 있습니다.</p>
+												<p>&nbsp;신청서작성 및 발급수수료 절차가 있으니 접수방법을 확인 후 접수하시면 됩니다.</p><p>&nbsp;&lt;접수방법&gt;</p>
+												<p>&nbsp; · 고려저축은행 앱,홈페이지 고객센터 &gt; 제증명서 발급신청 &gt; 비대면발급에서 신청 및 발급수수료 입금</p>
+												<p>&nbsp; · 고려저축은행 앱,홈페이지 고객센터 &gt; 제증명서 발급신청 &gt; 해당증명서 선택 신청 및 발급수수료 입금</p>
+												<p>&nbsp; · 제증명신청서 홈페이지 서식 다운로드 또는 고객센터()을 통해 신청서 팩스 접수 신청 및 수수료입금</p>
+												<p>&nbsp; · 대리인이 신청할 경우 원격지접수 및 지점 방문</p>
+												<p>(지점 방문시에는 신분증을 지참하시어 연락 후 방문하여 주시기 바랍니다.)</p>
+												<p><a onclick="commonMoveUrl('move','/certificate/certificateAuth.ysb')" class="app_go">제증명 신청 바로가기</a></p>
+												<p><a href="/center/certificate_auth" class="mobile_go">제증명 신청 바로가기</a></p>
+												<p><a href="/center/certificate_auth" class="pc_go">제증명 신청 바로가기</a></p>
+											</span>
+										</div>
+									</li>
+									<li>
+										<a href="#" class="question-wrap">
+											<span class="category">Q</span>
+											<span class="con">대출신청취소를 하려면, 어떤 방법이 있나요?</span>
+										</a>
+											<div class="answer-wrap">
+												<span class="con">
+													<p>대출신청취소는 고객센터()로 문의주시면 취소 가능합니다.&nbsp;</p>
+												</span>
+											</div>
+									</li>
+									<li>
+										<a href="#" class="question-wrap">
+											<span class="category">Q</span>
+											<span class="con">소득이 있는데 대출신청 할 수 있나요?</span>
+										</a>
+										<div class="answer-wrap">
+											<span class="con">
+												<p>소득증빙이 가능하면 대출신청은 가능합니다. 단, 가능여부 및 고객님의 신용도 등 고객정보에 따라 한도 및 이자율은 달라지니&nbsp;</p>
+												<p>대출신청해주시면 친절하고 빠른 상담 해드리겠습니다.</p><p>대출상품 확인 후 고려저축은행 앱, 홈페이지, 고객센터()을 통해 접수해주세요.</p>
+												<p>신청가능대상 : 소득증빙가능한 급여소득자, 개인사업자, 프리랜서, 주부, 연금소득자&nbsp;</p>
+												<p><a href="/product/loan/loanProductList.ysb" class="app_go">대출상품바로가기</a></p>  <p><a href="/loan/submain" class="mobile_go">대출상품바로가기</a></p>
+												<p><a href="/loan/submain" class="pc_go">대출상품바로가기</a></p>
+											</span>
+										</div>
+									</li>
+									<li>
+										<a href="#" class="question-wrap">
+											<span class="category">Q</span>
+											<span class="con">자동이체(CMS)로 이중출금 됐는데 어떻게 하나요?</span>
+										</a>
+										<div class="answer-wrap">
+											<span class="con">
+												<p>이중출금은 자동이체 출금 후 다음 영업일 오후 반환처리 됩니다.</p>
+												<p>다음 영업일에도 반환을 못 받은 경우 고객센터()로 전화주세요.</p>
+												<p>자동이체 출금신청은 결제일 전 영업일에 의뢰되므로 결제일 전영업일에 가상계좌로 입금해도 이중출금이 발생할 수 있습니다.</p>
+												<p>&nbsp;</p>
+											</span>
+										</div>
+									</li>
+								</ul>
+									<p class="btn-wrap"><a href="/center/faq" class="btn-big navy">도움말 바로가기</a></p><!--0606-->
+							</div>
+
+							<form id="frm1" name="frm1" >
+								<input type="hidden" name="MW_TYPE_CD" value="${MINWON_ON_CODE }">
+								<div class="apply-wrap">
+									<div class="required-wrap">
+										<h3 class="tit">정보입력</h3>
+										<span class="required-txt">* 필수 입력항목 입니다.</span>
+									</div>
+									<div class="input-wrap">
+										<div class="grid-wrap">
+
+											<div class="grid2" id="online_type">
+												<div class="form-wrap">
+													<label for="ON_REQ_TYPE" class="inp-tit req">문의유형</label>
+													<div class="select-wrap">
+														<select name="ON_REQ_TYPE" class="" id="ON_REQ_TYPE" title="문의유형 선택">
+															<option selected="selected" value="">내용을 선택하세요</option>
+															<option value="1">민원신청</option>
+															<option value="2">일반문의</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="grid2">
+												<div class="form-wrap">
+													<label for="name" class="inp-tit req">성명</label>
+													<input type="text" name="CUST_NM" value=""  id="name" placeholder="고객실명 입력" option="onlyKr" title="성명 입력">
+												</div>
+												<div class="form-wrap">
+													<label for="birth" class="inp-tit req">생년월일</label>
+													<!--s: 2023-07--14 구조변경-->
+													<input type="text" name="BIRTH_DAY" value="" id="birth" placeholder="ex) 19901212" maxlength="8"  title="생년월일 입력">
+													<!--e: 2023-07--14 박수현-->
+												</div>
+											</div>
+
+											<div class="grid2"> 
+												<div class="form-wrap">
+													<label for="phone" class="inp-tit req">핸드폰번호</label> <!-- 180614 텍스트수정 -->
+													<div class="tel-area">
+														<div class="select-wrap">
+															<select name="" class="" id="phone" title="핸드폰번호 앞자리 선택"> <!-- 180614 title값 수정 -->
+																<!--s:2023-07-18 구조변경-->
+																<option value="010">010</option>
+																<option value="011">011</option>
+																<option value="016">016</option>
+																<option value="016">017</option>
+																<option value="016">018</option>
+																<option value="016">019</option>
+																<!--e:2023-07-18 구조변경-->
+															</select>
+														</div>
+														<span class="hyphen">-</span>
+														<input type="text" name="" value=""  id="phone1" placeholder="" title="핸드폰번호 가운데자리" maxlength="4"> <!-- 180614 title값 수정 -->
+														<span class="hyphen">-</span>
+														<input type="text" name="" value=""  id="phone2" placeholder="" title="핸드폰번호 뒷자리" maxlength="4"> <!-- 180614 title값 수정 -->
+
+														<input type="hidden" id="phone_hidden" name="PHONE_NO" value=""/>
+
+													</div>
+													<p class="rice">문의주신 내용의 신속하고 원활한 안내를 위하여 당행 준법지원팀 담당자가 선택하신 회신방법외 기재하신 연락처로 연락드릴 수 있습니다.</p>
+												</div>
+												<!-- s:2023-07-17 추가 -->
+												<div class="form-wrap">
+													<label for="niceAuthNum" class="inp-tit req">인증번호</label>
+													<div class="nice-auth-num-area">
+														<input type="hidden" id="niceAuthNumIntervalId" value="">
+														<input type="text" id="niceAuthNum" value="" numberonly="" placeholder="" maxlength="5">
+														<button type="button" class="btn-normal form btn-nice-auth-num" id="sendBtn">인증번호요청</button>
+														<button type="button" class="btn-normal form btn-nice-auth-num" id="reSendBtn" style="display:none">재요청</button>
+														<button type="button" class="btn-normal form btn-nice-auth-num" id="confirmBtn">확인</button>
+													</div>
+												</div>
+												<!-- e:2023-07-17 추가 -->
+											</div>
+											<div class="grid2" id="radioRecvType">
+												<div class="form-wrap">
+													<span class="inp-tit req">회신방법 선택</span>
+													<div class="radiobox-area">
+														<!-- S: 2023-07-17, 구조 추가 -->
+														<span class="ctm-radio">
+															<input type="radio" name="reply" id="reply1" value="">
+															<label for="reply1"><span>전화</span></label>
+														</span>
+														<span class="ctm-radio">
+															<input type="radio" name="reply" id="reply2" value="">
+															<label for="reply2"><span>이메일</span></label>
+														</span>
+														<span class="ctm-radio">
+															<input type="radio" name="reply" id="reply3" value="">
+															<label for="reply3"><span>SMS</span></label>
+														</span>
+														<span class="ctm-radio">
+															<input type="radio" name="reply" id="reply4" value="">
+															<label for="reply4"><span>미회신</span></label>
+														</span>
+														<!-- S: 2023-07-17, 구조 추가 //-->
+													</div>
+													<!-- S: 2023-07-17, accent4 > accent5 변경 //-->
+													<p class="exclam accent5">개인정보관련 정보유출의 우려로 일부 답변이 제한될 수 있습니다.</p>
+												</div>
+											</div>
+
+											<div class="grid1 email-area">
+												<label for="email-id" class="inp-tit req">이메일</label>
+												<div class="email-area">
+													<input type="text" name="" value="" id="email-id" placeholder="" title="이메일 입력"> <span class="at">@</span>
+													<input type="text" class="mailtxt" name="" value="" id="email-domain" placeholder="" title="이메일 도메인 입력">
+													<div class="select-wrap">
+														<select name="" class="" id="email" title="이메일 도메인 선택">
+															<option selected="selected" value="">선택</option>
+															<option value="direct">직접입력</option>
+															<option value="naver">naver.com</option>
+															<option value="gmail">gmail.com</option>
+														</select>
+													</div>
+												</div>
+
+												<input type="hidden" id="email_hidden" name="EMAIL" value="" />
+											</div>
+										</div>
+
+										<div class="grid-wrap">
+											<div class="grid1">
+												<div class="form-wrap">
+													<label for="inp-tit" class="inp-tit req">제목</label>
+													<input type="text" name="TITLE" value=""  id="inp-tit" placeholder="문의제목을 입력하세요" maxlength="50"  title="제목 입력">
+												</div>
+											</div>
+											<div class="grid1">
+												<div class="form-wrap">
+													<span><label for="inp-txt" class="inp-tit req">상담내용</label><div class = "inp-txt_cnt">( 0 / 1000 )</div></span>
+													<textarea class="inputContents" name="CONTENTS" rows="11" cols="80" id="inp-txt" placeholder="상세내용을 입력하세요" maxlength="2000"  title="상담내용"></textarea>
+												</div>
+											</div>
+											<div class="grid2">
+												<div class="form-wrap">
+													<label for="inp-file" class="inp-tit">파일첨부</label>
+													<div class="file-wrap">
+														<div class="file-area">
+															<div id="file_src" tabindex="0">파일첨부 내용</div>
+															<input type="file" class="file-hidden" name="FILE_INFO" value="" id="inp-file"  onchange="PageFunc.img_preview(this)" tabindex="0" title="파일첨부">
+															<button type="button" class="btn-normal form btn-file" tabindex="-1">찾아보기</button>
+														</div>
+													</div>
+													<p class="rice">이미지(jpg, png, gif 등) 파일 또는 PDF 파일만 첨부가 가능합니다.</p>
+													<p class="rice">파일 첨부는 5MB이하만 가능합니다.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="line-box">
+										<table class="table-style caption-tit">
+											<caption class="list-tit">상담센터 및 처리기간 안내</caption>
+											<colgroup>
+												<col>
+												<col>
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">상담센터 연락처</th>
+													<th scope="col">처리기간</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr><!--//D: 2023-07-13 구조변경-->
+													<th>대표번호 1877-9900<br/>
+														(상담가능시간 : 평일 09:00 ~ 18:00 / 토, 일 공휴일 휴무)</th>
+													<td>접수일로부터 5영업일 이내</td>
+												</tr><!--D: 2023-07-13 구조변경//-->
+											</tbody>
+										</table>
+									</div>
+									<div class="auth-wrap line-box">
+										<input type="hidden" name="AUTH_CD" id="auth_cd" />
+										<p class="tit-txt">온라인상담신청 진행을 위해서는 본인인증이 필요합니다.<br>아래의 인증 방식 중 하나를 선택해 인증을 진행해주세요.</p>
+										<ul class="auth-list">
+											<li class="auth1">
+												<span class="ctm-radio">
+													<input type="radio" name="auth" id="auth1" value="">
+													<label for="auth1"><span>휴대폰인증</span></label>
+												</span>
+											</li>
+											<li class="auth3">
+												<span class="ctm-radio">
+													<input type="radio" name="auth" id="auth3" value="">
+													<label for="auth3"><span>아이핀인증</span></label>
+												</span>
+											</li>
+											<li class="auth5">
+												<span class="ctm-radio">
+													<input type="radio" name="auth" id="auth5" value="">
+													<label for="auth5"><span>신용카드인증</span></label>
+												</span>
+											</li>
+										</ul>
+									</div>
+									<div class="agree-wrap">
+										<div class="agree-area">
+											<!--s: 2023-07-18 구조변경-->
+											<div class="agree-cts pb0">
+											<!--e: 2023-07-18 구조변경-->
+												<!-- <div class="all-agree">
+													<span class="ctm-check">
+														<input type="checkbox" name="check" id="all-check" value="" title="전체 약관보기">
+														<label for="all-check">아래의 다음 약관에 모두 동의합니다.</label>
+													</span>
+													<button type="button" name="button" class="btn-normal tiny hide" data-tooltip="agreementall-layer">자세히보기</button>
+												</div> -->
+												<div class="agree-box">
+													<div class="items-wrap">
+														<p class="item-tit">
+															<span>[필수] 개인(신용)정보 수집·이용 동의서[민원접수 / 고객제안접수 / 고객의견접수 처리용]</span>
+															<label for="detailViewBtn">
+																<span id="labelTremsName" ></span>
+															</label>
+															<button type="button" name="button" id="detailViewBtn" class="btn-normal tiny fl-r" data-tooltip="manual011-layer" onclick="fn_layerPopOpen(this)">자세히보기</button><!--D:2023-07-13 구조변경-->
+														</p>
+														<!-- <div class="items">
+															<div class="item-check">
+																<div>
+																	<span class="ctm-check">
+																		<input type="checkbox" name="check" id="agree1" value="" title="수집·이용에 관한 동의여부 : 고객식별정보">
+																		<label for="agree1">수집·이용에 관한 동의여부 : 고객식별정보</label>
+																	</span>
+																</div>
+															</div>
+															<div class="item-check">
+																<div>
+																	<span class="ctm-check">
+																		<input type="checkbox" name="check" id="agree2" value="" title="개인정보(필수항목)">
+																		<label for="agree2">개인정보(필수항목)</label>
+																	</span>
+																</div>
+															</div>
+														</div> -->
+														<div class="items">
+																<div class="item-check">
+																	<div>
+																		<span class="ctm-radio">
+																			<input type="radio" name="agreeRadio" id="agree1" value="N" title="개인정보 취급방침 미동의" ><!-- onclick="fn_layerPopOpen();" -->
+																			<label for="agree1">미동의</label>
+																		</span>
+																		<span class="ctm-radio">
+																			<input type="radio" name="agreeRadio" id="agree2" value="Y" title="개인정보 취급방침 동의" ><!-- onclick="fn_layerPopOpen();" -->
+																			<label for="agree2">동의</label>
+																		</span>
+																	</div>
+																</div>
+															</div>
+													</div>
+												</div>
+											</div>
+											<p class="rice rice-type2">위 개인(신용)정보의 수집·이용에 관한 동의는 본 서비스를 이용하기 위한 필수사항이므로, 위 사항에 동의하셔야만 민원센터에 글을 등록하실 수 있습니다.</p>
+											<div class="btn-wrap">
+												<button type="button" name="button" class="btn-big navy" >등록하기</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+
+						<p>금융소비자보호 공시(4개 탭)  - <a href="../html/normal/portal/disclosure_civil_complaints.html" target="_blank">disclosure_civil_complaints.html</a></p>
+						<div class="protection-wrap">
+							<div class="tab-wrap">
+								<ul>
+									<li class="active"><a href="../html/normal/portal/disclosure_civil_complaints.html">민원공시</a></li>
+									<li><a href="../html/normal/portal/evaluation_result_list.html">금융소비자보호 실태평가</a></li>
+									<li><a href="../html/normal/portal/payment_stop_list.html">지급정지관련 공시</a></li>
+									<li><a href="../html/normal/portal/bond_extinction_list.html">채권소멸관련 공시</a></li>
+								</ul>
+							</div>
+
+							<div class="txt-box bull-type">
+								<div  style="text-align: left;">
+									<p>동 민원건수는 중복·반복민원, 단순질의성, 책임소재가 판단되지 않은 소송, 수사 중민 민원 등은 제외되어 있으므로 이용·활용 시 주의하시기 바랍니다.</p>
+									<p>저축은행별 발생건수 열람 <a target="_blank" href="https://www.fsb.or.kr/busconspeti_0100.act" class="accent2">저축은행중앙회 ></a></p>
+								</div>
+							</div>
+							<p class="txt-btn-box">
+								* 공시 자료는 PDF파일로 제공되며, 아크로벳 리더가 설치되어있어야 열람하실 수 있습니다.<br>
+								아크로벳리더가 설치되어 있지 않은 고객님 께서는 설치하기버튼을 클릭하시어 설치하여 주시기 바랍니다.
+								<button type="button" name="button" class="btn-normal tiny" onclick="javascript:fn_download_PDF_Viewer('');">설치하기</button>
+							</p>
+							<br>
+							<br>
+							<table class="table-style all-c list type2">
+								<caption>민원공시 - 리스트</caption>
+								<colgroup>
+									<col style="width:8%;">
+									<col style="width:10%;">
+									<col style="*">
+									<col style="width:16%;">
+									<col style="width:16%;">
+									<col style="width:12%;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">번호</th>
+										<th scope="col">구분</th>
+										<th scope="col" class="title">제목</th>
+										<th scope="col">게시일</th>
+										<th scope="col">기준일</th>
+										<th scope="col">첨부파일</th>
+									</tr>
+								</thead>
+								<tbody id="notice_tbody">
+									<tr>
+										<td>1</td>
+										<td><strong>민원공시</strong></td>
+										<td class="title">
+											<a href="/portal/disclosure_civil_complaints_view/8">2023년 1분기 민원발생건수</a>
+										</td>
+										<td>2023/04/28</td>
+										<td>2023/03/31</td>
+										<td class="file">
+											<a href="/common/download/SJqQosyeQFppQD%252FGRRfzbg%3D%3D" title="민원발생건수 공시(2023년 1분기).pdf">다운로드</a>
+										</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>
+											<strong>민원공시</strong>
+										</td>
+										<td class="title">
+											<a href="/portal/disclosure_civil_complaints_view/7">2022년 4분기 민원발생건수</a>
+										</td>
+										<td>2023/01/31</td>
+										<td>2022/12/31</td>
+										<td class="file">
+											<a href="/common/download/NN%2BPnH299hC4ICtgoZx3WQ%3D%3D" title="민원발생건수 공시(2022년 4분기).pdf">다운로드</a>
+										</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td><strong>민원공시</strong></td>
+										<td class="title">
+											<a href="/portal/disclosure_civil_complaints_view/6">2022년 3분기 민원발생건수</a>
+										</td>
+										<td>2022/10/31</td>
+										<td>2022/09/30</td>
+										<td class="file">
+											<a href="/common/download/EewO%252Fvuhpnpx0RBAIA40yw%3D%3D" title="민원발생건수 공시(2022년 3분기).pdf">다운로드</a>
+										</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td><strong>민원공시</strong></td>
+										<td class="title">
+											<a href="/portal/disclosure_civil_complaints_view/5">2022년 2분기 민원발생건수</a>
+										</td>
+										<td>2022/07/27</td>
+										<td>2022/06/30</td>
+										<td class="file">
+											<a href="/common/download/8hVQEv1Oi3p9S6g0QL2pYw%3D%3D" title="민원발생건수 공시(2022년 2분기).pdf">다운로드</a>
+										</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td><strong>민원공시</strong></td>
+										<td class="title">
+											<a href="/portal/disclosure_civil_complaints_view/4">2022년 1분기 민원발생건수</a>
+										</td>
+										<td>2022/04/25</td>
+										<td>2022/03/31</td>
+										<td class="file">
+											<a href="/common/download/2gLHyuc6oC9jVbqfendJSw%3D%3D" title="2022년 1분기 민원발생건수.pdf">다운로드</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div id="paging_div" class="pagination-wrap">
+								<div class="pagination">
+									<ul>
+										<li>
+											<a href="#" onclick="pageFunc.selectNoticeList(1)" class="btn-circle nb active" title="현재페이지">1</a>
+										</li>
+										<li>
+											<a href="#" onclick="pageFunc.selectNoticeList(2)" class="btn-circle nb">2</a>
+										</li>
+									</ul>
+									<a class="btn-circle next nb ir" href="javascript:pageFunc.selectNoticeList(2)">다음</a>
+								</div>
+							</div>
+						</div>
+
+						<p>채권추심업무(3개 탭)  - <a href="../html/normal/portal/collection_bonds_guide.html" target="_blank">collection_bonds_guide.html</a></p>
+						<div class="collection-bonds-wrap">
+							<div class="tab-wrap">
+								<ul>
+									<li class="active"><a href="../html/normal/portal/collection_bonds_guide.html">채권추심업무 처리절차안내문</a></li>
+									<li><a href="../html/normal/portal/collection_bonds_action.html">불법채권추심 대응요령</a></li>
+									<li><a href="../html/normal/portal/collection_bonds_notice.html">소멸시효 완성채권 추심 관련 금융소비자 유의사항</a></li>
+
+								</ul>
+							</div>
+							<!--s: 2023-07-17, 구조 삭제
+							<div class="txt-box bull-type">
+								<div>
+									<p>채무자앞 채권추심 수임사실 통지 이후 다음과 같은 채권추심 행위가 이루어집니다.<br/>
+										당사의 채권추심 업무진행과 관련하여 문의사항이 있으시면 언제든지 당사 준법지원팀(전화번호 : 051-640-9105) 으로 연락하여 주시면 친절히 안내해 드리겠습니다.</p>
+								</div>
+							</div>-->
+							<h3 class="tit">채권추심업무 처리절차 안내</h3>
+							<div class="terms-txt">
+								<!-- s: 2023-07-17, 구조 수정 -->
+								<ol class="list type4 num-list">
+									<li>
+										<div class="txt-box">
+											<p>1. '변제독촉장', '변제최고장', '채무정리 최종촉구 통고서' 등의 우편물을 발송하여 채무상환을 요구하게 되고, 채무불이행 시 불이익(연체정보 등록에 따른 금융거래 제한 등)에 대한 안내를 하게 됩니다.</p>
+										</div>
+									</li>
+									<li>
+										<div class="txt-box">
+											<p>2. 우편물과 별도로 전화나 문자메시지를 통해 채무상환을 요구하게 되며, 채무불이행 시 불이익에 대한 안내를 하게 됩니다.</p>
+										</div>
+									</li>
+									<li>
+										<div class="txt-box">
+											<p>3. 우편물이나 전화 또는 문자메시지 등을 통한 채무상환 요구에도 불구하고 변제가 이루어지지 않거나 귀하와 연락이 닿지 않는 경우에는 우편물이나 전화 또는 문자메시지 등을 통해 '방문추심'에 관한 사전 안내를 한 후 채무상환 요구나 소재파악 또는 재산조사 등을 위해 자택이나 근무지, 기타 소재지에 대한 방문을 할 수 있습니다.</p>
+										</div>
+									</li>
+									<li>
+										<div class="txt-box">
+											<p>4. 상당기간 채무변제가 이루어지지 않을 경우 우편물이나 전화 또는 문자메시지 등을 통해 채권자 또는 채권자협의회에 의한 채무금액 강제회수에 관한 법적조치(가압류신청, 지급명령신청, 강제경매신청 등) 예고통보를 할 수 있으며, 이에 불구하고 변제가 이루어지지 않는 경우에는 법원으로부터 집행권원을 부여받아 강제집행을 통한 채권 회수를 하게 됩니다. 그 밖에도 채권자 또는 채권자협의회에 의하여 법원에 재산관계명시신청이나 채무불이행등록 신청이 이루어질 수 있습니다.</p>
+										</div>
+									</li>
+								</ol>
+								<!-- e: 2023-07-17, 구조 수정 //-->
+							</div>
+						</div>
+
+						<p>예금상품(3개 탭)  - <a href="../html/normal/disclosure/deposit_intro.html" target="_blank">deposit_intro.html</a></p>
+						<div class="disclosure-wrap">
+							<div class="loanintro-cts">
+								<div class="tab-wrap">
+									<ul>
+										<li class="active"><a href="../html/normal/disclosure/deposit_intro.html">상품소개</a></li>
+										<li><a href="../html/normal/disclosure/deposit_rate.html">예금상품금리</a></li>
+										<li><a href="../html/normal/disclosure/deposit_terms.html">예금약관</a></li>
+									</ul>
+								</div>
+								<div class="txt-box">
+									<p>이 예금은 예금자보호법에 따라, 본 상호저축은행에 있는 귀하의 모든 예금 보호 대상 금융상품의 원금과 소정의 이자를 합하여 <span class="accent">예금보험공사가 1인당 "최고 5천만원까지" 보호합니다.</span></p>
+								</div><br>
+								<div class="list-tit mb30">고려저축은행 예금상품 전체보기</div> <!-- 180726 pm 추가 -->
+								
+								<table class="table-style">
+									<caption>고려저축은행 예금상품 전체보기 - 상품분류, 상품명으로 구성</caption> <!-- 180726 pm class="list-tit" 삭제/ 텍스트 수정 -->
+									<colgroup>
+										<col style="width:20%;">
+										<col style="width:25%;">
+										<col style="width:35%;">
+										<col style="width:20%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">상품 분류</th>
+											<th scope="col">상품명</th>
+											<th scope="col">공시자료</th>
+											<th scope="col">공시자료변경</th>
+										</tr>
+									</thead>
+									<tbody id="mainTbody">
+										<tr>
+											<th scope="row" rowspan="8" class="ta-c">목돈굴리기</th>
+											<td rowspan="4"><a href="javascript:void(0);" title="링크이동">e-정기예금</a></td>
+											<td><a href="javascript:void(0);" title="1.예금거래기본약관_20220831.pdf">예금거래기본약관</a></td>
+											<td rowspan="4" style="text-align: center;">
+												<button type="button" class="btn-normal tiny btn-file" data-tooltip="changeList-layer" onclick="PageFunc.getChangeListPopUpOpen('PC00000008P000000009정기예금','정기예금',this)">공시자료변경</button>
+											</td>
+										</tr>
+										<tr>
+											<td><a href="javascript:void(0);" title="거치식예금약관 pdf 다운로드">거치식예금약관</a></td>
+										</tr>
+										<tr>
+											<td><a href="javascript:void(0);" title="정기예금특약 pdf 다운로드">정기예금특약</a></td>
+										</tr>
+										<tr>
+											<td><a href="javascript:void(0);" title="e-정기예금 상품설명서 pdf 다운로드">e-정기예금 상품설명서</a></td>
+										</tr>
+										<tr>
+											<td rowspan="4"><a href="javascript:void(0);" title="링크이동">e-회전정기예금</a></td>
+											<td><a href="javascript:void(0);" title="예금거래기본약관 pdf 다운로드">예금거래기본약관</a></td>
+											<td rowspan="4" style="text-align: center;">
+												<button type="button" class="btn-normal tiny btn-file" data-tooltip="changeList-layer" onclick="PageFunc.getChangeListPopUpOpen('PC00000008P000000010표지어음','표지어음',this)">공시자료변경</button>
+											</td>
+										</tr>
+										<tr>
+											<td><a href="javascript:void(0);" title="거치식예금약관 pdf 다운로드">거치식예금약관</a></td>
+										</tr>
+										<tr>
+											<td><a href="javascript:void(0);" title="회전정기예금특약 pdf 다운로드">회전정기예금특약</a></td>
+										</tr>
+										<tr>
+											<td><a href="javascript:void(0);" title="e-회전정기예금 상품설명서 pdf 다운로드">e-회전정기예금 상품설명서</a></td>
+										</tr>
+										<tr>
+											<th scope="row" rowspan="6" class="ta-c">목돈마련상품</th>
+											<td rowspan="3"><a href="javascript:void(0);" title="링크이동">e-정기적금</a></td>
+											<td><a href="javascript:void(0);" title="예금거래기본약관 pdf 다운로드">예금거래기본약관</a></td>
+											<td rowspan="3" style="text-align: center;">
+												<button type="button" class="btn-normal tiny btn-file" data-tooltip="changeList-layer" onclick="PageFunc.getChangeListPopUpOpen('PC00000008P000000018e-정기예금','e-정기예금',this)">공시자료변경</button>
+											</td>
+										</tr>
+										<tr>
+											<td><a href="javascript:void(0);" title="적립식예금약관 pdf 다운로드">적립식예금약관</a></td>
+										</tr>
+										<tr>
+											<td><a href="javascript:void(0);" title="정기적금 상품설명서 pdf 다운로드">정기적금 상품설명서</a></td>
+										</tr>
+
+										<tr>
+											<td rowspan="3"><a href="javascript:void(0);" title="링크이동">보고파 정기적금</a></td>
+											<td><a href="javascript:void(0);" title="예금거래기본약관 pdf 다운로드">예금거래기본약관</a></td>
+											<td rowspan="3" style="text-align: center;">
+												<button type="button" class="btn-normal tiny btn-file" data-tooltip="changeList-layer" onclick="PageFunc.getChangeListPopUpOpen('PC00000008P000000037e-안심Plus 정기예금','e-안심Plus 정기예금',this)">공시자료변경</button>
+											</td>
+										</tr>
+										<tr>
+											<td><a href="javascript:void(0);" title="적립식예금약관 pdf 다운로드">적립식예금약관</a></td>
+										</tr>
+										<tr>
+											<td><a href="javascript:void(0);" title="보고파 정기적금 pdf 다운로드">보고파 정기적금 상품설명서</a></td>
+										</tr>
+										<tr>
+											<th rowspan="4" class="ta-c">입출금자유예금
+											</th><td rowspan="4"><a href="javascript:void(0);" title="링크이동">보고파 파킹통장</a></td>
+											<td><a href="javascript:void(0);" title="예금거래기본약관 pdf 다운로드">예금거래기본약관</a></td>
+											<td rowspan="4" style="text-align: center;">
+												<button type="button" class="btn-normal tiny btn-file" data-tooltip="changeList-layer" onclick="PageFunc.getChangeListPopUpOpen('PC00000008P000000037e-안심Plus 정기예금','e-안심Plus 정기예금',this)">공시자료변경</button>
+											</td>
+										</tr>
+										<tr>
+											<td><a href="javascript:void(0);" title="거치식예금약관 pdf 다운로드">거치식예금약관</a></td>
+										</tr>
+										<tr>
+											<td><a href="javascript:void(0);" title="정기예금특약 pdf 다운로드">정기예금특약</a></td>
+										</tr>
+										<tr>
+											<td><a href="javascript:void(0);" title="e-정기예금 상품설명서 pdf 다운로드">e-정기예금 상품설명서</a></td>
+										</tr>
+
+											
+									</tbody>
+								</table>
+								<p class="ex-txt">※ 예금상품명을 클릭하시면 해당 상품 소개 페이지로 이동합니다</p>
+								<p class="btn-wrap">
+									<a href="#none" class="btn-big navy" id="centerCaDe">예금상품 이자계산기 바로가기</a>
+								</p>
+							</div>
+						</div>
+
+						<p>대출상품(3개 탭)  - <a href="../html/normal/disclosure/loan_intro.html" target="_blank">loan_intro.html</a></p>
+						<div class="disclosure-wrap">
+							<div class="loanintro-cts">
+								<div class="tab-wrap">
+									<ul>
+										<li class="active"><a href="../html/normal/disclosure/loan_intro.html">상품소개</a></li>
+										<li><a href="../html/normal/disclosure/loan_rate.html">대출상품금리</a></li>
+										<li><a href="../html/normal/disclosure/loan_terms.html">여신거래약관</a></li>
+									</ul>
+								</div>
+								
+								<div class="list-tit mb30">고려저축은행 대출상품 전체보기</div> 
+								
+								<table class="table-style">
+									<caption>고려저축은행 대출상품 전체보기 - 상품분류, 상품명으로 구성</caption> 
+									<colgroup>
+										<col style="width:20%;">
+										<col style="width:25%;">
+										<col style="width:35%;">
+										<col style="width:20%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">상품 분류</th>
+											<th scope="col">상품명</th>
+											<th scope="col">공시자료</th>
+											<th scope="col">공시자료변경</th>
+										</tr>
+									</thead>
+									<tbody id="mainTbody">
+										<tr>
+											<th scope="row" class="ta-c" rowspan="3">정책자금대출</th>
+											<td rowspan="3"><a href="javascript:void(0);" title="링크이동">햇살론</a></td>
+											<td><a href="javascript:void(0);" title="상호저축은행여신거래기본약관 pdf 다운로드">상호저축은행여신거래기본약관</a></td>
+											<td rowspan="3" style="text-align: center;">
+												<button type="button" class="btn-normal tiny btn-file" data-tooltip="changeList-layer" onclick="PageFunc.getChangeListPopUpOpen('PC00000008P000000010표지어음','표지어음',this)">공시자료변경</button>
+											</td>
+										</tr>
+										<tr>
+											<td><a href="javascript:void(0);" title="가계대출상품설명서 pdf 다운로드">가계대출상품설명서</a></td>
+										</tr>
+										<tr>
+											<td><a href="javascript:void(0);" title="기업대출설명서 pdf 다운로드">기업대출설명서</a></td>
+										</tr>
+
+										<tr>
+											<th scope="row" class="ta-c" rowspan="6">담보대출</th>
+											<td rowspan="3"><a href="javascript:void(0);" title="링크이동">부동산담보대출</a></td>
+											<td><a href="javascript:void(0);" title="상호저축은행여신거래기본약관 pdf 다운로드">상호저축은행여신거래기본약관</a></td>
+											<td rowspan="3" style="text-align: center;">
+												<button type="button" class="btn-normal tiny btn-file" data-tooltip="changeList-layer" onclick="PageFunc.getChangeListPopUpOpen('PC00000008P000000010표지어음','표지어음',this)">공시자료변경</button>
+											</td>
+										</tr>
+										<tr>
+											<td><a href="javascript:void(0);" title="가계대출상품설명서 pdf 다운로드">가계대출상품설명서</a></td>
+										</tr>
+										<tr>
+											<td><a href="javascript:void(0);" title="기업대출설명서 pdf 다운로드">기업대출설명서</a></td>
+										</tr>
+
+										<tr>
+											<td rowspan="3"><a href="javascript:void(0);" title="링크이동">아파트담보대출</a></td>
+											<td><a href="javascript:void(0);" title="상호저축은행여신거래기본약관 pdf 다운로드">상호저축은행여신거래기본약관</a></td>
+											<td rowspan="3" style="text-align: center;">
+												<button type="button" class="btn-normal tiny btn-file" data-tooltip="changeList-layer" onclick="PageFunc.getChangeListPopUpOpen('PC00000008P000000010표지어음','표지어음',this)">공시자료변경</button>
+											</td>
+										</tr>
+										<tr>
+											<td><a href="javascript:void(0);" title="가계대출상품설명서 pdf 다운로드">가계대출상품설명서</a></td>
+										</tr>
+										<tr>
+											<td><a href="javascript:void(0);" title="기업대출설명서 pdf 다운로드">기업대출설명서</a></td>
+										</tr>
+
+										<tr>
+											<th scope="row" class="ta-c" rowspan="9">신용대출</th>
+											<td rowspan="3"><a href="javascript:void(0);" title="링크이동">뉴플랜론III</a></td>
+											<td><a href="javascript:void(0);" title="상호저축은행여신거래기본약관 pdf 다운로드">상호저축은행여신거래기본약관</a></td>
+											<td rowspan="3" style="text-align: center;">
+												<button type="button" class="btn-normal tiny btn-file" data-tooltip="changeList-layer" onclick="PageFunc.getChangeListPopUpOpen('PC00000008P000000010표지어음','표지어음',this)">공시자료변경</button>
+											</td>
+										</tr>
+										<tr>
+											<td><a href="javascript:void(0);" title="가계대출상품설명서 pdf 다운로드">가계대출상품설명서</a></td>
+										</tr>
+										<tr>
+											<td><a href="javascript:void(0);" title="기업대출설명서 pdf 다운로드">기업대출설명서</a></td>
+										</tr>
+
+										<tr>
+											<td rowspan="3"><a href="javascript:void(0);" title="링크이동">더좋은론</a></td>
+											<td><a href="javascript:void(0);" title="상호저축은행여신거래기본약관 pdf 다운로드">상호저축은행여신거래기본약관</a></td>
+											<td rowspan="3" style="text-align: center;">
+												<button type="button" class="btn-normal tiny btn-file" data-tooltip="changeList-layer" onclick="PageFunc.getChangeListPopUpOpen('PC00000008P000000010표지어음','표지어음',this)">공시자료변경</button>
+											</td>
+										</tr>
+										<tr>
+											<td><a href="javascript:void(0);" title="가계대출상품설명서 pdf 다운로드">가계대출상품설명서</a></td>
+										</tr>
+										<tr>
+											<td><a href="javascript:void(0);" title="기업대출설명서 pdf 다운로드">기업대출설명서</a></td>
+										</tr>
+										<tr>
+											<td rowspan="3"><a href="javascript:void(0);" title="링크이동">더좋은니즈론</a></td>
+											<td><a href="javascript:void(0);" title="상호저축은행여신거래기본약관 pdf 다운로드">상호저축은행여신거래기본약관</a></td>
+											<td rowspan="3" style="text-align: center;">
+												<button type="button" class="btn-normal tiny btn-file" data-tooltip="changeList-layer" onclick="PageFunc.getChangeListPopUpOpen('PC00000008P000000010표지어음','표지어음',this)">공시자료변경</button>
+											</td>
+										</tr>
+										<tr>
+											<td><a href="javascript:void(0);" title="가계대출상품설명서 pdf 다운로드">가계대출상품설명서</a></td>
+										</tr>
+										<tr>
+											<td><a href="javascript:void(0);" title="기업대출설명서 pdf 다운로드">기업대출설명서</a></td>
+										</tr>
+											
+									</tbody>
+								</table>
+								<p class="ex-txt">※ 대출상품명을 클릭하시면 해당 상품 소개 페이지로 이동합니다</p>
+							</div>
+						</div>
+
+						<p>개인정보보호(6개 탭)  - <a href="../html/normal/center/privacy_credit_protect.html" target="_blank">privacy_credit_protect.html</a></p>
+						<div class="privacy-wrap">
+							<div class="tab-wrap">
+								<ul>
+									<li class="active"><a href="../html/normal/center/privacy_credit_protect.html">개인신용정보관리 및 보호</a></li>
+									<li><a href="../html/normal/center/privacy_credit_policy.html">고객권리 안내문</a></li>
+									<li><a href="../html/normal/center/privacy_credit_system.html">개인신용정보관리보호정책</a></li>
+									<li><a href="../html/normal/center/privacy_info_policy.html">개인정보처리방침</a></li>
+									<li><a href="../html/normal/center/privacy_right_guide.html">신용정보활용체제</a></li>
+									<li><a href="../html/normal/center/privacy_video_manage.html">영상정보처리기기 운영관리방침</a></li>
+								</ul>
+							</div>
+							<div class="terms-txt em-txt">
+								<!--S:개발:DB불러오기 -->
+								<div class="terms-dv">
+									<dl>
+										<dt>1.금융서비스이용범위</dt>
+										<dd>
+											<ol class="list type3">
+												<li>가. 고객의 개인신용정보는 금융거래의 설정, 유지여부 판단 목적 및 고객이 동의한 목적만으로 이용됩니다.</li>
+												<li>나. 고객은 영업장ㆍ인터넷 등 다양한 채널을 통해 금융거래를 체결하거나 금융서비스를 제공받는 과정에서
+													<ol class="list type4">
+														<li>1) 금융회사가 본인의 개인신용정보(이하 '본인정보')를 제휴ㆍ부가서비스 등을 위해 제휴회사 등에 제공하는 것 및</li>
+														<li>2) 당해 금융회사가 금융상품 소개 및 구매권유(이하 '마케팅') 목적으로 이용하는 것에 대해 동의를 하지 않는 경우에도 금융거래를 체결하거나 금융서비스를 이용하실 수 있습니다. 다만, 이러한 동의를 하지 않으신 경우에는 제휴ㆍ부가서비스 및 신상품ㆍ서비스 등을 제공받지 못 할 수도 있습니다.</li>
+													</ol>
+												</li>
+											</ol>
+										</dd>
+										<dt>2.「신용정보이용및보호에관한법률」상의 고객권리</dt>
+										<dd>
+											<ol class="list type3">
+												<li>가. 본인정보의 제3자 제공사실 통보요구<br>고객은&nbsp;「신용정보의&nbsp;이용&nbsp;및&nbsp;보호에&nbsp;관한&nbsp;법률」제35조에 따라 금융회사가 본인정보를 한국신용정보원, 신용조회회사, 타 금융회사 등 제3자에게 제공한 경우 제공한 본인정보의 주요 내용 등을 알려주도록 금융회사에 요구할 수 있습니다.
+													<ul class="list type2">
+														<li>- 신청방법<p class="sub-txt">&nbsp; 전화 : 02-6906-7000&nbsp;</p></li>
+													</ul>
+												</li>
+												<li>나. 금융거래 거절 근거 신용정보 고지 요구<br>고객은&nbsp;「신용정보의&nbsp;이용&nbsp;및&nbsp;보호에&nbsp;관한&nbsp;법률」제36조에 따라 금융회사가 한국신용정보원, 신용조회회사 등으로 부터 제공받은 연체정보 등에 근거하여 금융거래를 거절 중지 하는 경우에는 그 거절 중지의 근거가 된 신용정보, 동 정보를 제공한 기관의 명칭, 주소, 연락처 등을 고지해 줄 것을 금융회사에 요구할 수 있습니다.</li>
+												<li>다. 본인정보의 제3자 제공 및 마케팅 목적의 전화 등의 중단 요구<br>고객은&nbsp;「신용정보의&nbsp;이용&nbsp;및&nbsp;보호에&nbsp;관한&nbsp;법률」제 37조에 따라 가입 신청시 동의를 한 경우에도 본인 정보를 제3자에게 제공하는 것 및 당해 금융회사가 마케팅 목적으로 본인에게 연락하는 것을 전체 또는 사안 별로 중단 시킬 수 있습니다.(다만, 고객의 신용도 등을 평가하기 위해 한국신용정보원 또는 신용조회회사 등에 제공하는 것에 대해서는 중단시킬 수 없습니다.)
+													<ul class="list type2">
+														<li>- 신청방법<p class="sub-txt">&nbsp; &nbsp; 전화 : 02-6906-7000<br>&nbsp; 인터넷 :&nbsp;<a href="http://www.yegaramsb.co.kr" target="_blank" title="새창열기">http://www.yegaramsb.co.kr</a><br>&nbsp; 서면 : 서울시 강남구 테헤란로 419 강남파이낸스플라자 2층</p></li>
+													</ul>
+												</li>
+												<li>라. 본인정보의 열람 및 정정요구<br>고객은&nbsp;「신용정보의&nbsp;이용&nbsp;및&nbsp;보호에&nbsp;관한&nbsp;법률」제38조에 따라 한국신용정보원, 신용조회회사,금융회사 등이 보유한 본인정보에 대해 열람 청구가 가능하며, 본인정보가 사실과 다른 경우에는 이의 정정 및 삭제를 요구할 수 있으며, 그 처리결과에 이의가 있는 경우에는 금융위원회에 시정을 요청 할 수 있습니다.
+													<ul class="list type2">
+														<li>- 신청방법<p class="sub-txt">&nbsp; &nbsp; 전화 : 02-6906-7000<br>&nbsp; 인터넷 :&nbsp;<a href="http://www.yegaramsb.co.kr" target="_blank" title="새창열기">http://www.yegaramsb.co.kr</a><br>&nbsp; 서면 : 서울시 강남구 테헤란로 419 강남파이낸스플라자 2층</p></li>
+													</ul>
+												</li>
+												<li>마. 본인정보의 무료 열람 요구<br>고객은&nbsp;「신용정보의&nbsp;이용&nbsp;및&nbsp;보호에&nbsp;관한&nbsp;법률」제39조에 따라 본인정보를 신용조회회사를 통하여 연간 일정 범위 내에서 무료로 열람할 수 있습니다. 자세한 사항은 각 신용조회회사에 문의하시기 바랍니다
+													<ul class="list type2">
+														<li>- 신용조회회사 연락처
+															<ul class="list type2">
+																<li>• NICE평가정보(주) : 1588-2486 /&nbsp;<a href="http://www.mycredit.co.kr" target="_blank" title="새창열기">www.mycredit.co.kr</a></li>
+																<li>• 코리아크레딧뷰로(주) : 02-708-6000 /&nbsp;<a href="http://www.allcredit.co.kr" target="_blank" title="새창열기">www.allcredit.co.kr</a></li>
+																<li>• SCI평가정보(주) : 1577-1006 /&nbsp;<a href="http://www.siren24.com" target="_blank" title="새창열기">www.siren24.com</a></li>
+																<li>• 한국신용정보원 : 1544-6640 /&nbsp;<a href="http://www.credit4u.or.kr" target="_blank" title="새창열기">www.credit4u.or.kr</a></li>
+															</ul>
+														</li>
+													</ul>
+												</li>
+											</ol>
+										</dd>
+										<dt>3.위의 권리행사와 관련하여 불편함을 느끼시거나 애로가 있으신 경우 아래의 담당자 앞으로 연락하여 주시기 바랍니다.</dt>
+										<dd>
+											<ul class="list type2">
+												<li>-연락처
+													<ul class="list type2">
+														<li>• 예가람저축은행 준법감시인 : 02-6906-7045 (서울시 강남구 테헤란로 419 강남파이낸스플라자 2층)</li>
+														<li>• 중앙회 개인신용정보 보호담당자 : 02-397-8800 (서울시 마포구 마포대로 163 서울신용재단빌딩 11층)</li>
+														<li>• 금융감독원 개인신용정보 보호담당자 : 국번없이 1332 (서울시 영등포구 여의대로 38)</li>
+													</ul>
+												</li>
+											</ul>
+										</dd>
+									</dl>
+									<p class="accent mt20">※ 고려저축은행의 고의 또는 과실 등 귀책사유로 인한 개인정보 유출로 고객님에게 발생한 손해에 대해 관계 법령 등에 따라 보상 받으실 수 있습니다. </p>
+								</div>
+								<!--E:개발:DB불러오기 -->
+							</div>
+						</div>
+
+						<p>전자금융안내(5개 탭)  - <a href="../html/normal/center/electric_internetbanking.html" target="_blank">electric_internetbanking.html</a></p>
+						<div class="efinancial-info-wrap">
+							<div class="tab-wrap">
+								<ul>
+									<li class="active"><a href="../html/normal/center/electric_internetbanking.html">인터넷뱅킹</a></li>
+									<li><a href="../html/normal/center/electric_telebanking.html">텔레뱅킹</a></li>
+									<li><a href="../html/normal/center/electric_transaction_terms.html">전자금융거래약관</a></li>
+									<li><a href="../html/normal/center/electric_service_terms.html">전자금융서비스이용약관</a></li>
+									<li><a href="../html/normal/center/secure_ebanking.html">안전한 전자금융</a></li>
+								</ul>
+							</div>
+							<div class="prod-cts">
+								<div class="list-tit">인터넷뱅킹이란?</div>
+								<ul class="define-list">
+									<li>
+										<span class="de-tit">설명</span>
+										<div class="de-cts">인터넷이 연결된 어느 곳에서나 안전하고 편리하게 은행업무를 처리할 수 있는 금융서비스입니다.</div>
+									</li>
+									<li>
+										<span class="de-tit">인터넷뱅킹 이용대상</span>
+										<div class="de-cts">당행의 보통예금 계좌를 가지고 계신 고객님</div>
+									</li>
+									<li>
+										<span class="de-tit">인터넷뱅킹 이용시간</span>
+										<div class="de-cts">07:00~23:00</div>
+									</li>
+									<li>
+										<span class="de-tit">전자자금 이체한도</span>
+										<div class="de-cts">
+											전자자금 이체한도는 다음과 같습니다.
+											<!-- s : 2023-07-16 , 수정 -->
+											<span class="unit">(단위: 억원)</span>
+											<div class="table-wrap">
+												<table class="table-style">
+													<caption>인터넷뱅킹 이체한도</caption>
+													<colgroup>
+														<col style="width:25%">
+														<col style="width:*">
+														<col style="width:20%">
+														<col style="width:20%">
+														<col style="width:20%">
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col" colspan="2" rowspan="2" id="division">구분</th>
+															<th scope="col" colspan="3" id="grade">보안등급</th>
+														</tr>
+														<tr>
+															<th scope="col" id="grade1">1등급</th>
+															<th scope="col" id="grade2">2등급</th>
+															<th scope="col" id="grade3">3등급</th>
+														</tr>
+													</thead>
+													<tbody class="table-center"> 
+														<tr>
+															<th rowspan="2" scope="row" id="individual">개인</th>
+															<td scope="row" id="once1">1회</td>
+															<td headers="division individual once1 grade grade1">1</td>
+															<td headers="division individual once1 grade grade2">0.5</td>
+															<td headers="division individual once1 grade grade3">0.1</td>
+														</tr>
+														<tr>
+															<td scope="row" id="oneday1">1일</td>
+															<td headers="division individual oneday1 grade1">5</td>
+															<td headers="division individual oneday1 grade2">2.5</td>
+															<td headers="division individual oneday1 grade3">0.5</td>
+														</tr>
+														<tr>
+															<th rowspan="2" scope="row" id="corporation">법인</th>
+															<td scope="row" id="once2">1회</td>
+															<td headers="division corporation once2 grade1">10</td>
+															<td headers="division corporation once2 grade2">-</td>
+															<td headers="division corporation once2 grade3">-</td>
+														</tr>
+														<tr>
+															<td scope="row" id="oneday2">1일</td>
+															<td headers="division corporation oneday2 grade1">50</td>
+															<td headers="division corporation oneday2 grade2">-</td>
+															<td headers="division corporation oneday2 grade3">-</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<!-- e : 2023-07-16 , 수정 -->
+										</div>
+									</li>
+									<li>
+										<span class="de-tit">인터넷뱅킹 가입절차</span>
+										<div class="de-cts">
+											인터넷뱅킹 가입절차는 다음과 같습니다.
+											<div class="table-wrap">
+												<table class="table-style">
+													<caption>인터넷뱅킹 가입절차</caption>
+													<colgroup>
+														<col style="width:33.33%">
+														<col style="width:33.33%">
+														<col style="width:*">
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">고객</th>
+															<th scope="col">신청방법</th>
+															<th scope="col">준비물</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<th scope="row">당행의 보통예금통장 미보유 고객</th>
+															<td>가까운 지점을 방문하여 보통예금통장 개설 후 인터넷뱅킹을 신청하세요</td>
+															<td>신분증, 인감</td>
+														</tr>
+														<tr>
+															<th scope="row">당행의 보통예금통장 보유 고객</th>
+															<td>가까운 지점을 방문하여 인터넷뱅킹을 신청하세요</td>
+															<td>사용하실 출금계좌의 통장, 신분증, 인감</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</li>
+									<li>
+										<span class="de-tit">유의사항</span>
+										<div class="de-cts">
+											<ul class="list type1">
+												<li>타 금융기관 인터넷뱅킹으로 다행에 이체(송금)하시려면 은행코드 50번 상호저축은행을 선택하시고 통장에 인쇄되어 있는 전자금융계좌를 이용하시기 바랍니다.</li>
+												<li>이체비밀번호, 계좌비밀번호, 보안카드 암호를 잘 관리하여 분실 또는 유출되지 않도록 하십시오.<br> 3회 이상 연속하여 오류 입력 하셨을 경우에는 안전을 위하여 거래를 중단합니다.<br>
+													모든 거래 가능한 사용자인 경우 인터넷뱅킹 신청 후 반드시 3일 이내에 이체 비밀번호를 등록 하셔야 합니다.<br>등록하지 않으시면 인터넷뱅킹 서비스를 이용하실 수 없습니다.</li>
+												<li>인터넷뱅킹 거래가 중지된 고객은 신분증을 지참하시고 가까운 영업점을 방문하여 오류 횟수 삭제 및 재등록하면 다시 서비스를 이용하실 수 있습니다.</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<p>인증센터(2개 탭) - <a href="../html/normal/center/certificate.html" target="_blank">certificate.html</a></p>
+						<div class="auth-wrap">
+
+							<div class="tab-wrap tab-page type2" style="padding-bottom: 2248px;"><!--D:2023-07-12 type2 추가-->
+								<ul>
+									<li class="active">
+										<!--s: 2023-07-21 구조수정-->
+										<a href="#none">공동인증서 내보내기<span>(PC웹사이트→GOBANK APP)</span></a>
+										<!--e: 2023-07-21 구조수정-->
+										<div class="contents-area" style="display: block;">
+											<div class="cer-txt">
+												<h3 class="list-tit">공동인증서란</h3>
+												<p class="mt20">공동인증기관에서 발행한 고객님의 전자적 서명을 관리합니다. <br> 안전한 인터넷뱅킹 서비스를 위해서 반드시 본인 명의의 인증서가 필요합니다.</p>
+												<dl class="ex-txt mt30">
+													<dt>※ 범용공동인증서 안내</dt>
+													<dd>- 정보통신부의 지침에 의하여 금융결제원(Yessign)의 범용 공동인증서 신규 발급이 중지됨(2006.7.1)에 따라 한국정보인증(signGATE) 범용 공동인증서만 발급이 가능합니다. (단, 금융결제원 범용으로 기 발급 사실이 있는 경우는 발급, 재발급, 갱신이 가능합니다.) 공동인증서에 대한 자세한 내용은 금융결제원 홈페이지에서 정보를 제공하고 있습니다.</dd>
+													<dd>- <span class="accent">증권사, 국세청, 우체국, 카드사, 전자무역 등 에서 발급받은 공동인증서 중 특수용도로 발급받은 인증서는 사용이 불가합니다.</span></dd>
+												</dl>
+											</div>
+											<div>
+												<div class="list-tit">PC웹사이트 → GO BANK APP으로 내보내기 절차</div>
+												<img src="../../../resources/normal/images/page/img-pc_app.png" alt="1단계:스마트기기에서 고려저축은행 논스톱대출 어플리케이션 실행 / 2단계:PC에서 '공동인증서 내보내기(PC웹사이트→예스뱅킹APP)' 선택 / 3단계:PC에서 복사할 인증서 선택 후 '인증번호' 생성 / 4단계:어플리케이션 “인증센터 > 공동인증서 복사 > PC → 스마트폰 복사” 화면에 “인증번호” 입력 후 복사 완료" class="mt20">
+												<h3 class="list-tit">사용가능한 인증서</h3>
+												<!--//s:2023-07-12 구조 변경 -->
+												<ul class="define-list ta-l type2">
+													<li>
+														<span class="de-tit">설명</span> 
+														<div class="de-cts">
+															종류 :  범용개인 인증서 <br>
+															발급대상 : 개인뱅킹 가입고객 <br>
+															용도 : 인증서가 필요한 모든거래
+														</div>
+													</li>
+													<li>
+														<span class="de-tit">기업고객</span>
+														<div class="de-cts">
+															종류 :  저축은행용<br>
+															발급대상 : 기업뱅킹 가입고객<br>
+															용도 : 저축은행 인터넷뱅킹 거래용
+														</div>
+													</li>
+												</ul>
+												<!--s:2023-07-14 구조변경-->
+												<div class="btn-wrap full">
+													<button type="button" name="button" class="btn-normal btn-ft-dwn">공동인증서 내보내기 (PC웹사이트→GO BANK APP)</button>
+												</div>
+												<!--e:2023-07-14 구조변경-->
+											</div>
+										</div>
+									</li>
+									
+									<li class="">
+										<!--s: 2023-07-21 구조수정-->
+										<a href="#none">공동인증서 가져오기<span>(GOBANK APP→PC웹사이트)</span></a>
+										<!--e: 2023-07-21 구조수정-->
+										<div class="contents-area" style="display: none;">
+											<div class="cer-txt">
+												<h3 class="list-tit">공동인증서란</h3>
+												<p class="mt20">공동인증기관에서 발행한 고객님의 전자적 서명을 관리합니다. <br> 안전한 인터넷뱅킹 서비스를 위해서 반드시 본인 명의의 인증서가 필요합니다.</p>
+												<dl class="ex-txt mt30">
+													<dt>※ 범용공동인증서 안내</dt>
+													<dd>- 정보통신부의 지침에 의하여 금융결제원(Yessign)의 범용 공동인증서 신규 발급이 중지됨(2006.7.1)에 따라 한국정보인증(signGATE) 범용 공동인증서만 발급이 가능합니다. (단, 금융결제원 범용으로 기 발급 사실이 있는 경우는 발급, 재발급, 갱신이 가능합니다.) 공동인증서에 대한 자세한 내용은 금융결제원 홈페이지에서 정보를 제공하고 있습니다.</dd>
+													<dd>- <span class="accent">증권사, 국세청, 우체국, 카드사, 전자무역 등 에서 발급받은 공동인증서 중 특수용도로 발급받은 인증서는 사용이 불가합니다.</span></dd>
+												</dl>
+											</div>
+
+											<div>
+												<div class="list-tit">GO BANK APP → PC웹사이트로 가져오기 절차</div>
+												<img src="../../../resources/normal/images/page/img-app_pc.png" alt="1단계:고려저축은행 모바일웹사이트 사이트 접속 / 2단계: 어플리케이션 “인증센터 > 공동인증서 복사 > 스마트폰 → PC 복사” 화면에서 복사할 인증서 선택 후 “인증번호” 생성 / 3단계: PC에서 “공동인증서 가져오기 (예스뱅킹APP → PC웹사이트)” 선택 / 4단계:PC에서 가져오기 화면에 “인증번호” 입력 후 복사 완료" class="mt20">
+												<!--//s:2023-07-12 구조 변경 -->
+												<ul class="define-list ta-l type2">
+													<li>
+														<span class="de-tit">설명</span> 
+														<div class="de-cts">
+															종류 :  범용개인 인증서 <br>
+															발급대상 : 개인뱅킹 가입고객 <br>
+															용도 : 인증서가 필요한 모든거래
+														</div>
+													</li>
+													<li>
+														<span class="de-tit">기업고객</span>
+														<div class="de-cts">
+															종류 :  저축은행용<br>
+															발급대상 : 기업뱅킹 가입고객<br>
+															용도 : 저축은행 인터넷뱅킹 거래용
+														</div>
+													</li>
+												</ul>
+												<!--s:2023-07-14 구조변경-->
+												<div class="btn-wrap full">
+													<button type="button" name="button" class="btn-normal btn-ft-dwn">공동인증서 가져오기(GO BANK APP→PC웹사이트)</button>
+												</div>
+												<!--e:2023-07-12 구조변경--> 
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							
+						</div>
+
+						<p>고려저축은행소개(4개 탭) - <a href="../html/normal/intro/intro_greetings.html" target="_blank">intro_greetings.html</a></p>
+						<div class="introduction-wrap">
+							<div class="tab-wrap">
+								<ul>
+									<li class="active"><a href="../html/normal/intro/intro_greetings.html">대표이사인사말</a></li>
+									<li><a href="../html/normal/intro/intro_history.html">연혁</a></li>
+									<li><a href="../html/normal/intro/intro_philosophy.html">경영이념</a></li>
+									<li><a href="../html/normal/intro/intro_organization.html">조직도</a></li>
+								</ul>
+							</div>
+							<div class="greetings-cts" id="div_greetings">
+								<div class="intro-txt"> 							
+									<p class="accent">Goryo Saving Bank</p>
+									<p class="accent5">고객님께 드리는 <br> 흥국금융가족의 튼튼한 약속!</p>
+								</div>
+								
+								<ul class="intro-txt-inner">
+									<li>항상 고려저축은행 발전을 위하여 변함없는 관심과 성원을 보내주시는 고객님들께 진심으로 감사드립니다.</li>
+									<li>저희 고려저축은행은 1971년 창립 이후 고객님들의 금융서비스 만족과 지역경제발전에 일익을 담당하며 괄목할 만한 성장을 지속해 왔으며, 2022년 03월 기준 BIS비율 14.30%로 저축은행 업계 우량저축은행의 건전성비율 기준을 충족하고 있습니다.</li>
+									<li>아울러, 고려저축은행은 태광그룹계열 흥국금융가족인 흥국생명, 흥국화재, 흥국증권, 흥국자산운용, 예가람저축은행과 함께 금융 Network를구축하여 고객님들께 편리한 원스톱 금융서비스를 제공하는 저축은행으로 한걸음 더 나아가기 위해 최선의 노력을 다하고 있습니다.</li>
+									<li>또한, 고객님께서 믿고 맡겨주신 소중한 금융자산을 고려저축은행 임직원 모두는 정성을 다하여 관리하고 안전하게 운용하여, 언제나 고객님의 금융자산 증식의 밑거름이 되겠습니다.</li>
+								</ul>
+
+								<ul class="intro-txt-inner ta-r mt30">
+									<li>고객 여러분들의 지속적인 관심과 성원을 부탁드립니다. <br> 감사합니다.</li>
+								</ul>
+								
+								<!-- s: 2023-07-13 , 이미지 태그 추가 //-->
+								<p class="intro-name">(주)고려저축은행 대표이사 <span><img src="../../../resources/normal/images/page/ceo_name.png" alt="(주)고려저축은행 대표이사 이은우"></span></p>
+																																												   
+							</div>
+						</div>
+
+						<p>영업점안내(3개 탭) - <a href="../html/normal/intro/branchHeadOffice.html" target="_blank">branchHeadOffice.html</a></p>
+						<div class="introduction-wrap">
+							<div class="tab-wrap">
+								<ul id="">
+									<li class="active"><a href="../html/normal/intro/branchHeadOffice.html">고려 (본점)</a></li>
+								
+									<li class=""><a href="../html/normal/intro/branchCenter.html">고려 (중앙)</a></li>
+								
+									<li class=""><a href="../html/normal/intro/branchCentum.html">고려 (센텀)</a></li>
+								</ul>
+							</div>
+							<div class="shop-cts">
+									<div class="map">
+										
+									</div>
+									<div class="list-tit">고려 (본점)</div>
+									<ul class="define-list">
+										<li>
+											<span class="de-tit">지번주소</span>
+											<div class="de-cts ta-l" id="">부산 동구 초량동 1193-1 흥국생명빌딩 3F, 4F, 5F</div>
+										</li>
+										<li>
+											<span class="de-tit">도로명주소</span>
+											<div class="de-cts ta-l" id="">부산 동구 중앙대로 244 흥국생명빌딩  3F, 4F, 5F</div>
+										</li>
+										<li>
+											<span class="de-tit">전화번호</span>
+											<div class="de-cts ta-l" id="">☎  : 1877-9900</div>
+										</li>
+									</ul>
+							</div>
+						</div>
+
+						<p>인재상(2개 탭) - <a href="../html/normal/intro/talent01.html" target="_blank">talent01.html</a></p>
+						<div class="introduction-wrap">
+							<div class="tab-wrap">
+								<ul>
+									<li class="active"><a href="../html/normal/intro/talent01.html">인재상</a></li>
+									<li><a href="../html/normal/intro/talent02.html">채용공고</a></li>
+								</ul>
+							</div>
+							<div class="talent-cts">
+								<div class="tit-img">
+									<span>고객에게 행복을 주는</span><span>따뜻한 금융 파트너</span>
+								</div>
+								<ul>
+									<li class="talent1">
+										<p class="tit">신의<span>Faith</span></p>
+										<span>함께 일하고 원칙을 준수하며 신뢰를 쌓는 사람</span>
+									</li>
+									<li class="talent2">
+										<p class="tit">변화<span>Change</span></p>
+										<span>늘 새롭게 변화하고 <br>성장하는 사람</span>
+									</li>
+									<li class="talent3">
+										<p class="tit">실행<span>Execution</span></p>
+										<span>현장에서 답을 찾고 <br>앞장서 실천하는 사람</span>
+									</li>
+									<li class="talent4">
+										 <p class="tit">프로의식<span>Professional</span></p>
+										<span>주어진 업무에 <br>최고가 되는 사람</span>
+									</li>
+								</ul>
+							</div>            
+						</div>
+
+						<p>윤리경영(2개 탭) - <a href="../html/normal/intro/ethical01.html" target="_blank">ethical01.html</a></p>
+						<div class="introduction-wrap">
+							<div class="ethical-cts">
+								<div class="tab-wrap">
+									<ul>
+										<li class="active"><a href="../html/normal/intro/ethical01.html">윤리헌장</a></li>
+										<li><a href="../html/normal/intro/ethical02.html">윤리행동강령</a></li>
+									</ul>
+								</div>
+								<div class="cts-box">
+									<p class="ta-c">
+										우리 고려저축은행 임직원 모두는 금융인으로서의 건전한 직업윤리를 지니고 고객으로부터 신뢰받는 <br>
+										저축은행을 만들어 고객의 만족과 주주의 이익을 극대화하여 금융산업 발전에 이바지하고자 <br>
+										다음의 사항을 윤리헌장으로 정하여 이를 적극 실천한다.
+									</p>
+								</div>
+
+								<ul class="ethical-list">
+									<li>
+										<dl>
+											<dt>
+												<span>하나,</span>
+												<span class="accent">고객우선</span>
+											</dt>
+											<dd>당행과 임직원은 항상 고객의 입장에서 생각하고 고객에게 보다 나은 금융서비스를 제공하기 위해 노력하여야 한다.</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>
+												<span>둘,</span>
+												<span class="accent">법규준수</span>
+											</dt>
+											<dd> 당행과 임직원은 업무를 수행함에 있어 관련 법령 및 제 규정을 이해하고 준수하여야 한다.</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>
+												<span>셋,</span>
+												<span class="accent">신의성실</span>
+											</dt>
+											<dd>당행과 임직원은 정직과 신뢰를 가장 중요한 가치관으로 삼고 신의성실의 원칙에 입각하여 맡은 업무를 충실히 수행하여야 한다.</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>
+												<span>넷,</span>
+												<span class="accent">시장질서 존중</span>
+											</dt>
+											<dd>당행과 임직원은 공정하고 자유로운 시장경제 질서를 존중하고, 이를 유지하기 위하여 노력하여야 한다.</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>
+												<span>다섯,</span>
+												<span class="accent">경영진의 책임</span>
+											</dt>
+											<dd>당행의 경영진은 직원을 대상으로 윤리교육을 실시하는 등 올바른 윤리문화 정착을 위하여 노력하여야 한다.</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>
+												<span>여섯,</span>
+												<span class="accent">정보보호</span>
+											</dt>
+											<dd>당행과 임직원은 업무수행 과정에서 알게 된 회사의 업무정보와 고객정보를 안전하게 보호하고 관리하여야 한다.</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>
+												<span>일곱,</span>
+												<span class="accent">자기혁신</span>
+											</dt>
+											<dd>당행과 임직원은 경영환경 변화에 유연하게 적응하기 위하여 창의적 사고를 바탕으로 끊임없이 자기혁신에 힘써야 한다.</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>
+												<span>여덟,</span>
+												<span class="accent">상호존중</span>
+											</dt>
+											<dd>당행은 임직원 개개인의 자율과 창의를 존중하고 삶의 질 향상을 위하여 노력하여야 하며, 임직원은 서로를 존중하고 원활한 의사소통과 적극적인 협조 자세를 견지하여야 한다.</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>
+												<span>아홉,</span>
+												<span class="accent">주주가치 극대화</span>
+											</dt>
+											<dd>당행과 임직원은 합리적인 의사결정과 투명한 경영활동을 통하여 주주와 기타 이해관계자의 가치를 극대화하기 위하여 최선을 다하여야 한다.</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>
+												<span>열,</span>
+												<span class="accent">사회적 책임</span>
+											</dt>
+											<dd>당행과 임직원 모두 시민사회의 일원임을 인식하고, 사회적 책임과 역할을 다하여야 한다.</dd>
+										</dl>
+									</li>
+								</ul>                          
+							</div>
+						</div>
+
+						<p>경영공시(5개 탭) - <a href="../html/normal/intro/busi_summary.html" target="_blank">busi_summary.html</a></p>
+						<div class="introduction-wrap">
+							<div class="summary-cts">
+								<div class="tab-wrap">
+									<ul>
+										<li class="active"><a href="../html/normal/intro/busi_summary.html">요약공시</a></li>
+										<li><a href="../html/normal/intro/busi_settlement_list.html">결산공시</a></li>
+										<li><a href="../html/normal/intro/busi_provisional_list.html">가결산공시</a></li>
+										<li><a href="../html/normal/intro/busi_anytime_list.html">수시공시</a></li>
+										<li><a href="../html/normal/intro/busi_technology_list.html">정보기술부분공시</a></li>
+									</ul>
+								</div>
+								<div class="terms-txt">
+									<h3 class="tit">2022년(19기) 12월 4분기</h3>
+									<p class="ex-txt">※ 이 공시 자료는 각 해당 저축은행이 입력한 자료로, 금융감독원 및 상호저축은행 중앙회에 의하여 그 정확성 및 적정성 여부에 대한 검토 또는 확인이 이루어지지 않았음을 알려 드립니다.</p>
+
+									<div class="tab-wrap">
+										
+										<div class="table-scroll mt30">
+											<table class="table-style td-r __se_tbl_ext caption-tit">
+												<caption>영업개황</caption>
+												<colgroup>
+													<col>
+													<col style="width: 26%;">
+													<col style="width: 26%;">
+													<col style="width: 26%;">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col">구분</th>
+														<th class="ta-c" scope="col">제54기1분기말(금분기)(A)</th>
+														<th class="ta-c" scope="col">제53기1분기말(전년동기)(B)</th>
+														<th class="ta-c" scope="col">증감(A-B)</th>
+													</tr>
+												</thead>
+												<tbody class="table-center">
+													<tr>
+														<th scope="row">총자산</th>
+														<td>16,499</td>
+														<td>12,933</td>
+														<td>3,566</td>
+													</tr>
+													<tr>
+														<th scope="row">총수신</th>
+														<td>13,593</td>
+														<td>10,137</td>
+														<td>3,456</td>
+													</tr>
+													<tr>
+														<th scope="row">총여신</th>
+														<td>12,868</td>
+														<td>10,589</td>
+														<td>2,279</td>
+													</tr>
+													<tr>
+														<th scope="row">납입자본</th>
+														<td>112</td>
+														<td>112</td>
+														<td>-</td>
+													</tr>
+													<tr>
+														<th scope="row">자기자본</th>
+														<td>2,349</td>
+														<td>2,436</td>
+														<td>-88</td>
+													</tr>
+													<tr>
+														<th scope="row">점포수</th>
+														<td>3</td>
+														<td>3</td>
+														<td>-</td>
+													</tr>
+													<tr>
+														<th scope="row">상장여부</th>
+														<td>비상장</td>
+														<td>비상장</td>
+														<td>-</td>
+													</tr>
+													<tr>
+														<th scope="row">임직원수</th>
+														<td>153</td>
+														<td>170</td>
+														<td>-17</td>
+													</tr>
+													<tr>
+														<th scope="row">거래자수</th>
+														<td>98,192</td>
+														<td>101,113</td>
+														<td>-2,921</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<p class="tbl-txt"> <span>※ 제 54기1분기말(금분기):2023년3월말 <br>※ 제 53기1분기말(전년동기):2022년3월말 <br> (단위: 억원, 개, 명) </span> </p>
+
+										<div class="table-scroll mt30">
+											<table class="table-style td-r __se_tbl_ext caption-tit">
+												<caption>재무현황</caption>
+												<colgroup>
+													<col style="width: 12%;">
+													<col>
+													<col style="width: 14%;">
+													<col style="width: 14%;">
+													<col style="width: 14%;">
+													<col style="width: 14%;">
+													<col style="width: 14%;">
+												</colgroup>
+												<thead>
+													<tr>
+														<th rowspan="2" colspan="2" scope="col">구분</th>
+														<th colspan="2" scope="col">제54기1분기말(금분기)(A)</th>
+														<th colspan="2" scope="col">제53기1분기말(전년동기)(B)</th>
+														<th rowspan="2" scope="col">증감(A-B)</th>
+													</tr>
+													<tr>
+														<th scope="col">금액</th>
+														<th scope="col">구성비</th>
+														<th scope="col">금액</th>
+														<th scope="col">구성비</th>
+													</tr>
+												</thead>
+												
+												<tbody>
+													<tr>
+														<th rowspan="6" scope="row">자산</th>
+														<td class="ta-l" scope="row">현금 및 예치금
+														</td><td>2,426</td>
+														<td>14.70</td>
+														<td>1,308</td>
+														<td>10.12</td>
+														<td>1,118</td>
+													</tr>
+													<tr>
+														<td class="ta-l" scope="row">유가증권
+														</td><td>1,449</td>
+														<td>8.78</td>
+														<td>1,320</td>
+														<td>10.21</td>
+														<td>129</td>
+													</tr>
+													<tr>
+														<td class="ta-l" scope="row">대출채권
+														</td><td>12,395</td>
+														<td>75.13</td>
+														<td>10,116</td>
+														<td>78.22</td>
+														<td>2,279</td>
+													</tr>
+													<tr>
+														<td class="ta-l" scope="row">유형자산
+														</td><td>31</td>
+														<td>0.19</td>
+														<td>37</td>
+														<td>0.29</td>
+														<td>-6</td>
+													</tr>
+													<tr>
+														<td class="ta-l" scope="row">기타자산
+														</td><td>198</td>
+														<td>1.20</td>
+														<td>150</td>
+														<td>1.16</td>
+														<td>48</td>
+													</tr>
+													<tr class="total-txt">
+														<td class="ta-l" scope="row">자산총계
+														</td><td>16,499</td>
+														<td>100.00</td>
+														<td>12,933</td>
+														<td>100.00</td>
+														<td>3,566</td>
+													</tr>
+													<tr>
+														<th rowspan="4" scope="row">부채</th>
+														<td class="ta-l" scope="row">예수부채
+														</td><td>13,593</td>
+														<td>82.39</td>
+														<td>10,137</td>
+														<td>78.38</td>
+														<td>3,456</td>
+													</tr>
+													<tr>
+														<td class="ta-l" scope="row">차입부채
+														</td><td>-</td>
+														<td>-</td>
+														<td>-</td>
+														<td>-</td>
+														<td>-</td>
+													</tr>
+													<tr>
+														<td class="ta-l" scope="row">기타부채
+														</td><td>557</td>
+														<td>3.38</td>
+														<td>359</td>
+														<td>2.78</td>
+														<td>198</td>
+													</tr>
+													<tr class="total-txt">
+														<td class="ta-l" scope="row">부채총계
+														</td><td>14,150</td>
+														<td>85.77</td>
+														<td>10,496</td>
+														<td>81.16</td>
+														<td>3,654</td>
+													</tr>
+													<tr>
+														<th rowspan="6" scope="row">자본</th>
+														<td class="ta-l" scope="row">자본금
+														</td><td>112</td>
+														<td>0.68</td>
+														<td>112</td>
+														<td>0.86</td>
+														<td>-</td>
+													</tr>
+													<tr>
+														<td class="ta-l" scope="row">자본잉여금
+														</td><td>175</td>
+														<td>1.06</td>
+														<td>175</td>
+														<td>1.35</td>
+														<td>-</td>
+													</tr>
+													<tr>
+														<td class="ta-l" scope="row">자본조정
+														</td><td>-79</td>
+														<td>-0.48</td>
+														<td>-79</td>
+														<td>-0.61</td>
+														<td>-</td>
+													</tr>
+													<tr>
+														<td class="ta-l" scope="row">기타포괄손익 누계액
+														</td><td>5</td>
+														<td>0.03</td>
+														<td>-</td>
+														<td>-</td>
+														<td>4</td>
+													</tr>
+													<tr>
+														<td class="ta-l" scope="row">이익잉여금
+														</td><td>2,137</td>
+														<td>12.95</td>
+														<td>2,229</td>
+														<td>17.24</td>
+														<td>-92</td>
+													</tr>
+													<tr class="total-txt">
+														<td class="ta-l" scope="row">자본총계
+														</td><td>2,349</td>
+														<td>14.23</td>
+														<td>2,436</td>
+														<td>18.84</td>
+														<td>-88</td>
+													</tr>
+												</tbody>
+												<tfoot>
+													<tr>
+														<th colspan="2" scope="row">부채 및 자본총계</th>
+														<td>16,499</td>
+														<td>100.00</td>
+														<td>12,933</td>
+														<td>100.00</td>
+														<td>3,566</td>
+													</tr>
+												</tfoot>
+											</table>
+										</div>
+										<p class="tbl-txt"> <span>※ 제 54기1분기말(금분기):2023년3월말 <br>※ 제 53기1분기말(전년동기):2022년3월말 <br> (단위: 억원, %) </span> </p>
+
+										<div class="table-scroll mt30">
+											<table class="table-style td-r __se_tbl_ext caption-tit">
+												<caption>손익현황</caption>
+												<colgroup>
+													<col>
+													<col style="width: 12%;">
+													<col style="width: 12%;">
+													<col style="width: 12%;">
+													<col style="width: 12%;">
+													<col style="width: 12%;">
+													<col style="width: 12%;">
+												</colgroup>
+												<thead>
+													<tr>
+														<th rowspan="2" scope="col">구분</th>
+														<th colspan="2" scope="col">제54(당)기 1분기(3개월)(A)</th>
+														<th colspan="2" scope="col">제53(전)기 1분기(3개월)(B)</th>
+														<th colspan="2" scope="col">증감(A-B)</th>
+													</tr>
+													<tr>
+														<th scope="col">금분기</th>
+														<th scope="col">누계</th>
+														<th scope="col">전년동기</th>
+														<th scope="col">누계</th>
+														<th scope="col">분기</th>
+														<th scope="col">누적</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<th scope="row">Ⅰ. 수익합계</th>
+														<td>433</td>
+														<td>433</td>
+														<td>294</td>
+														<td>294</td>
+														<td>140</td>
+														<td>140</td>
+													</tr>
+													<tr>
+														<th scope="row">1. 이자수익</th>
+														<td>342</td>
+														<td>342</td>
+														<td>245</td>
+														<td>245</td>
+														<td>98</td>
+														<td>98</td>
+													</tr>
+													<tr>
+														<th scope="row">2. 유가증권관련수익</th>
+														<td>-</td>
+														<td>-</td>
+														<td>-</td>
+														<td>-</td>
+														<td>-</td>
+														<td>-</td>
+													</tr>
+													<tr>
+														<th scope="row">3. 대출채권관련수익</th>
+														<td>69</td>
+														<td>69</td>
+														<td>-</td>
+														<td>-</td>
+														<td>69</td>
+														<td>69</td>
+													</tr>
+													<tr>
+														<th scope="row">4. 수수료수익</th>
+														<td>19</td>
+														<td>19</td>
+														<td>5</td>
+														<td>5</td>
+														<td>14</td>
+														<td>14</td>
+													</tr>
+													<tr>
+														<th scope="row">5. 배당금수익</th>
+														<td>-</td>
+														<td>-</td>
+														<td>-</td>
+														<td>-</td>
+														<td>-</td>
+														<td>-</td>
+													</tr>
+													<tr>
+														<th scope="row">6. 기타수익</th>
+														<td>2</td>
+														<td>2</td>
+														<td>43</td>
+														<td>43</td>
+														<td>-41</td>
+														<td>-41</td>
+													</tr>
+													<tr>
+														<th scope="row">Ⅱ. 비용합계(-)</th>
+														<td>430</td>
+														<td>430</td>
+														<td>209</td>
+														<td>09</td>
+														<td>221</td>
+														<td>221</td>
+													</tr>
+													<tr>
+														<th scope="row">1. 이자비용</th>
+														<td>167</td>
+														<td>167</td>
+														<td>58</td>
+														<td>58</td>
+														<td>109</td>
+														<td>109</td>
+													</tr>
+													<tr>
+														<th scope="row">2. 유가증권관련비용</th>
+														<td>-</td>
+														<td>-</td>
+														<td>-</td>
+														<td>-</td>
+														<td>-</td>
+														<td>-</td>
+													</tr>
+													<tr>
+														<th scope="row">3. 대출채권관련손실</th>
+														<td>-</td>
+														<td>-</td>
+														<td>-</td>
+														<td>-</td>
+														<td>-</td>
+														<td>-</td>
+													</tr>
+													<tr>
+														<th scope="row">4. 수수료비용</th>
+														<td>11</td>
+														<td>11</td>
+														<td>18</td>
+														<td>18</td>
+														<td>-7</td>
+														<td>-7</td>
+													</tr>
+													<tr>
+														<th scope="row">5. 판매비와 관리비</th>
+														<td>54</td>
+														<td>54</td>
+														<td>48</td>
+														<td>48</td>
+														<td>6</td>
+														<td>6</td>
+													</tr>
+													<tr>
+														<th scope="row">6. 기타비용</th>
+														<td>197</td>
+														<td>197</td>
+														<td>73</td>
+														<td>73</td>
+														<td>124</td>
+														<td>124</td>
+													</tr>
+													<tr>
+														<th scope="row">7. 법인세비용</th>
+														<td>-</td>
+														<td>-</td>
+														<td>14</td>
+														<td>14</td>
+														<td>-14</td>
+														<td>-14</td>
+													</tr>
+													<tr>
+														<th scope="row">Ⅲ. 당기순이익(또는 당기순손실)</th>
+														<td>3</td>
+														<td>3</td>
+														<td>84</td>
+														<td>84</td>
+														<td>-81</td>
+														<td>-81</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<p class="tbl-txt"> <span>※ 제54기1분기(금분기): 2023년1월1일부터 2023년3월31일까지 <br>※ 제54기(금기) 누계 : 2023년1월1일부터 2023년3월31일까지 <br>※ 제53기1분기(금분기): 2022년1월1일부터 2022년3월31일까지 <br>※ 제53기(전년동기) 누계 : 2022년1월1일부터 2022년3월31일까지 <br> (단위: 억원) </span> </p>
+
+										<div class="table-scroll">
+											<table class="table-style td-r __se_tbl_ext caption-tit">
+												<caption>기타</caption>
+												<colgroup>
+													<col>
+													<col style="width: 26%;">
+													<col style="width: 26%;">
+													<col style="width: 20%;">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col">구분</th>
+														<th scope="col">제54기1분기말(금분기)(A)</th>
+														<th scope="col">제53기1분기말(전년동기)(B)</th>
+														<th scope="col">증감(A-B)</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<th scope="row">고정이하여신비율</th>
+														<td>4.91</td>
+														<td>5.15</td>
+														<td>-0.24</td>
+													</tr>
+													<tr>
+														<th scope="row">위험가중자산에 대한 자기자본비율<br>(BIS기준 자기자본비율) </th>
+														<td>12.36</td>
+														<td>14.30</td>
+														<td>-1.93</td>
+													</tr>
+													<tr>
+														<th scope="row">유동성비율</th>
+														<td>288.44</td>
+														<td>211.32</td>
+														<td>77.12</td>
+													</tr>
+													<tr>
+														<th scope="row">예대율**</th>
+														<td>85.58</td>
+														<td>87.22</td>
+														<td>-1.64</td>
+													</tr>
+													<tr>
+														<th scope="row">총자산이익율</th>
+														<td>0.52</td>
+														<td>2.95</td>
+														<td>-2.43</td>
+													</tr>
+													<tr>
+														<th scope="row">자기자본이익율</th>
+														<td>3.17</td>
+														<td>15.34</td>
+														<td>-12.17</td>
+													</tr>
+													<tr>
+														<th scope="row">소액신용대출 금액***</th>
+														<td>68</td>
+														<td>109</td>
+														<td>-41</td>
+													</tr>
+													<tr>
+														<th scope="row">소액신용대출연체비율***</th>
+														<td>10.87</td>
+														<td>19.61</td>
+														<td>-8.74</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<p class="tbl-txt"> <span>※ 제 54기1분기말(금분기):2023년1월말 <br> ※ 제 53기1분기말(전년동기):2022년1월말 <br> (단위: 억원, %, %p) </span> </p>
+										
+									</div>
+									<ul>
+										<li>* 금융감독원 감독규정상 최저 BIS비율</li>
+										<li>* 자산 1조원 이상 저축은행 - 현재 8%이상</li>
+										<li>* 자산 1조원 미만 저축은행 - 현재 7%이상</li>
+										<li>** FY2020부터 예대율 규제 도입('20.3.31)에 따라 산출 방식이 변경되었음.</li>
+										<li>*** 신용대출잔액이 10억원 이하인 경우 저축은행은 "소액신용대출 취급현황"을 공시하지 아니할 수 있음.</li>
+									</ul>
+								</div> 
+								<div class="select-wrap">
+									 <select name="selectTerms" id="selectTerms" title="요약공시 선택" class="summary" style="display: none;">
+									</select><span tabindex="0" id="selectTerms-button" role="combobox" aria-hidden="false" aria-label="요약공시 선택" aria-labelledby="요약공시 선택" aria-autocomplete="list" aria-activedescendant="selectTerms-button" title="요약공시 선택" class="ui-selectmenu-button ui-selectmenu-button-closed ui-corner-all ui-button ui-widget in-value"><span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span><span class="ui-selectmenu-text" id="selectTerms-ui-selectmenu-vlaue" title="" role="combobox">&nbsp;</span></span>
+								</div>
+								
+							</div>
+						</div>
+						
+						
+						
+ 
+                    </div>
+                </section>
+            </div>
+
+
+		</div>
+        <!-- //e: contentsWrap -->
+    </div>
+    <!-- //e:wrap -->
+</body>
+</html>

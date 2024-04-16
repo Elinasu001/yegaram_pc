@@ -1,0 +1,390 @@
+.cerft-main-visual {
+  width: 1050px;
+  height: 496px;
+  margin: 0 auto;
+  background: url(../../images/sign/main_visual.jpg) 0 0 no-repeat;
+}
+.cerft-main-cont {
+  width: 100%;
+  height: 125px;
+  background: url(../../images/sign/main_bar_bg.png) center 0 no-repeat;
+  margin-top: -26px;
+}
+.cerft-main-inner {
+  width: 1050px;
+  height: 125px;
+  margin: 0 auto;
+  position: relative;
+}
+.cerft-main-inner h3 {
+  display:inline-block;
+  font-size: 20px;
+  letter-spacing: -1px;
+  color: #fff;
+  padding: 0 0 0 46px;
+  position: absolute;
+  top: 38px;
+  left: 55px;
+  line-height: 1.3;
+  font-weight:normal;
+}
+.cerft-main-inner h3:after {
+  content:'';
+  display:inline-block;
+  width:40px;
+  height:50px;
+    background: url(../../images/sign/main_h3.png) 0 0 no-repeat;
+  position:absolute;left:0px;top:0px;
+}
+.cerft-main-inner .adv-wrap{
+  position:absolute;
+  right: 0;
+  top: 104px;
+}
+.cerft-main-inner .adv-wrap label {
+  padding:0 10px 0 30px;
+}
+.cerft-main-inner .adv-wrap input[type="text"] {
+  border: 1px solid #dcdcdc;
+  padding: 6px;
+  color: #888888;
+  background:none;
+  float:none;
+}
+.cerft-main-inner .adv-wrap .btn-inline {
+  margin-left:5px;
+  vertical-align:middle;
+}
+.cerft-main-input {
+  position: absolute;
+  top: 8px;
+  left: 300px;
+  display: inline-block;
+  width: 740px;
+}
+.cerft-main-input input[type="text"],
+.cerft-main-input input[type="password"] {
+  border: 1px solid #e4eaed;
+  padding: 10px;
+  float: left;
+  background: #e4eaed;
+}
+.cerft-main-input fieldset .row {
+  margin-top: 10px;
+  display: inline-block;
+}
+.cerft-main-input fieldset .row:first-child {
+  margin-top: 0;
+  margin-right: 10px;
+}
+
+.cerft-main-input fieldset .row span {
+  color: #fff;
+  float: left;
+  margin: 10px 5px 0px 5px;
+}
+.cerft-main-input fieldset label {
+  float: left;
+  width: 90px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 40px;
+  letter-spacing:-1px;
+}
+.cerft-main-btn{
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+.cerft-main-btn a {
+  display: inline-block;
+  height:100px;
+  width:100px;
+  background:url(../../images/sign/main_btn_bg.png) 0 0 no-repeat;
+  vertical-align:middle;
+  text-align:center;
+}
+.cerft-main-btn a strong {
+  font-size:16px;
+}
+.cerft-main-btn a span {
+  display:block;
+  margin: 24px 0 5px;
+  font-size: 13px;
+  color:#333;
+  font-weight:bold;
+  line-height:1.3;
+}
+.cerft-loading {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  padding: 20px 0 0 140px;
+  background: #1e96c4 url(../../images/sign/cerft_loading_icon.png) 70px center no-repeat;
+}
+.cerft-loading p {
+  color: #fff !important;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  width: 399px;
+  text-align: center;
+  background: url(../../images/sign/pop_security_loding.gif) center 23px no-repeat;
+  padding-bottom: 20px;
+}
+.cerft-sub-cont {
+  position:relative;
+  width: 1000px;
+  margin: 0 auto;
+}
+.cerft-sub-visual {
+  width: 100%;
+  border-bottom: 1px solid #e4eaed;
+}
+.cerft-sub-visual + .sub-maintitle {
+  margin-top:50px;
+}
+.cerft-sub-visual .visual-inner {
+  width: 1050px;
+  height: 471px;
+  margin: 0 auto;
+  background: url(../../images/sign/main_visual.jpg) 0 0 no-repeat;
+}
+.cerft-sub-visual .visual-inner_1 {
+  width: 100%;
+  margin: 0 auto 20px;
+  border-top: none;
+}
+.visual-inner_1-img1 {
+    margin: auto auto;
+}
+
+.cerft-sub-visual .visual-inner_2 {
+  width: 1000px;
+  border-top: none;
+}
+.visual-inner_2-img1{
+  width: 100%;
+}
+.complete-wrap {
+  margin: 0 30px;
+  border: 1px solid #dcdcdc;
+  background: #fcfcf3;
+  padding: 100px 0 0 347px;
+  height: 223px;
+  background: #fcfcf3 url(../../images/sign/complete_icon.png) 245px 65px no-repeat;
+}
+.complete-wrap.sign {
+  margin: 30px 0 0;
+  background: #fcfcf3 url(../../images/sign/sign_icon.gif) 210px 50px no-repeat
+}
+.complete-wrap.sign {
+  margin: 30px 0 0;
+  padding:77px 0 0 347px;
+  background: #fcfcf3 url(../../images/sign/sign_icon.gif) 210px 50px no-repeat
+}
+.complete-wrap strong {
+  font-size: 20px;
+}
+.complete-wrap strong span {
+  font-size: 20px;
+  color: #ed5f00;
+}
+.complete-wrap p {
+  font-size: 14px;
+  line-height:1.45;
+}
+.complete-wrap strong + p {
+  margin-top:5px;
+}
+.esign-wrap {
+  width: 100%;
+  border:solid #dcdcdc;
+  border-width:0 1px;
+  padding: 20px;
+
+}
+.esign-wrap .esign-wrap-row {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 20px;
+}
+.esign-wrap .esign-wrap-row:first-child {
+  margin-top: 0;
+}
+.esign-wrap .esign-wrap-row h3,
+.esign-wrap .esign-wrap-row p {
+  float: left;
+  font-size:14px;
+}
+.esign-wrap .esign-wrap-row h3 {
+  width: 110px;
+}
+.esign-wrap .esign-wrap-row p {
+  width: 650px;
+  line-height: 1.5em;
+}
+.esign-wrap + .sub-agree-allcheck {
+  margin: 15px 0;
+}
+.esign-wrap-message p {
+  color: #ed9004;
+}
+.pop-list-note {
+  margin-bottom: 20px;
+}
+.pop-list-note > li {
+  background: url(../../images/sign/post_list_bul.gif) 0 6px no-repeat;
+  padding-left: 8px;
+  margin-top: 25px;
+  line-height: 1.5em;
+}
+.pop-list-note > li:first-child {
+  margin-top: 0;
+}
+.pop-list-note ol li {
+ margin-bottom:10px;
+ line-height: 1.5em;
+}
+.pop-table th {
+  background: #e4eaed;
+  text-align: center;
+  padding: 19px 0 ;
+  font-weight: normal;
+}
+.pop-table th:first-child {
+  border-right: 1px solid #cbcbcb;
+}
+.pop-table td {
+  border-bottom: 1px solid #cbcbcb;
+  padding: 15px 10px 15px ;
+  text-align: center;
+  line-height: 1.5em;
+}
+.pop-table td:first-child {
+  border-right: 1px solid #cbcbcb;
+  text-align: left;
+}
+.pop-board-search {
+  float: right;
+  width: 100%;
+  height: 36px;
+  margin-bottom: 20px;
+  border: 1px #666 solid;
+  border-radius: 50px;
+}
+.pop-board-search input {
+  float: left;
+  width: 80%;
+  height: 36px;
+  margin: 0 10px;
+  border: 0;
+  background: transparent;
+  line-height: 30px;
+}
+.pop-board-search .btn-board-search {
+  float: right;
+  width: 20px;
+  height: 36px;
+  margin-right: 15px;
+  background: url(../../images/sign/cust_board_btn.gif) no-repeat 100% 50%;
+}
+
+.pop-board-table{clear:both}
+.pop-board-table table {
+  border-top: 2px solid #888888;
+}
+.pop-board-table th {
+  text-align: center;
+  font-weight: bold;
+  background: #ededed;
+  padding: 17px 0;
+  font-size: 14px;
+}
+.pop-board-table th:first-child {
+  border-right: 1px solid #dcdcdc;
+}
+.pop-board-table td {
+  text-align: center;
+  padding: 17px 0;
+  font-size: 14px;
+  border-left: 1px solid #dcdcdc;
+}
+.pop-board-table td:first-child {
+  border-left: 0 none;
+}
+.page-footer-itemCopyright {
+  position:relative;
+  margin: 20px 0 0 0;
+  text-align:center;
+}
+.page-footer-itemCopyright li {
+  margin-top:5px;
+}
+.page-footer-itemCopyright li:first-child {
+  margin-top:0;
+}
+.page-footer-itemCopyright li .btn-inline {
+padding-right:0;
+}
+.cerft-noti {
+  margin-top:20px;
+  padding:15px 0;
+  background-color:#ddd;
+  text-align:center;
+}
+.cerft-noti dl {
+	display:inline-block;
+}
+.cerft-noti dt{
+  position:relative;
+  float:left;
+  font-weight:bold;
+  color: #0086be;
+  padding-left: 20px;
+  line-height:15px;
+  font-size:12px;
+  letter-spacing:-1px;
+}
+.cerft-noti dt:after {
+  content:'';
+  display:inline-block;
+  width:15px;
+  height:15px;
+  background: url(../../images/sub_common/sub_infomation_bul.gif) 0 50% no-repeat;
+  position:absolute;
+  left:0;
+  top:0;
+}
+.cerft-noti dd:first-child{
+  margin-left:0;
+}
+.cerft-noti dd{
+  float:left;
+  margin-left:10px;
+  line-height:15px;
+  color:#333;
+}
+.footer-banner {
+  width: 1000px;
+  margin: 20px auto 0;
+}
+.sub-table .calendar-btn,
+.sub-table .ui-datepicker-trigger {
+  display: inline-block;
+  margin-top: 3px;
+  float: left;
+  margin-right: 15px;
+}
+.cerft-sub-cont .cust-consult-agree  {
+  padding:0;
+}
+@media (max-width:780px){
+	.pop-board-search .btn-board-search {
+	  margin-right: 10px;
+	}
+}
