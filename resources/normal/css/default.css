@@ -70,7 +70,7 @@
 /*base*/
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 html { font-size:18px; }/*추가*/
-body{ width:100%; height:100%; text-align:left; font-size:1rem; font-weight:400; font-family:'Spoqa Han Sans Neo', "Apple SD Gothic Neo", sans-serif; color:#000; line-height:1.27; -webkit-overflow-scrolling:touch; }
+body{ width:100%; height:100%; text-align:left; font-size:1rem; font-weight:400; font-family:'Spoqa Han Sans Neo', "Apple SD Gothic Neo", sans-serif; color:#111; line-height:1.27; -webkit-overflow-scrolling:touch; }
 body,p,h1,h2,h3,h4,h5,h6,table,caption,form,fieldset,legend,span,div,th,td,address{margin:0; padding:0; }
 ul,ol,li,dl,dt,dd{list-style:none; margin:0; padding:0px}
 /* 7월 13일*/
@@ -352,7 +352,7 @@ select:not(.no-style) {
 .ir { overflow:hidden; text-indent:100%; white-space:nowrap; }
 
 /* text-decoration */
-.link { text-decoration:underline; color:#000; }
+.link { text-decoration:underline; color:#111; }
 
 /*animation*/
 .ani-all {
@@ -403,7 +403,7 @@ input[type="tel"] { height:auto; line-height:normal;  padding:0px 20px; box-sizi
 input[type="text"]:-webkit-autofill,
 input[type="password"]:-webkit-autofill,
 input[type="tel"]:-webkit-autofill { background-color: #fff !important; }
-input[type="text"][placeholder] { font-size:18px; color:#000000; }
+input[type="text"][placeholder] { font-size:18px; color:#111111; }
 input[type="text"]::-ms-clear, input[type="password"]::-ms-clear, input[type="tel"]::-ms-clear { display:none; }
 input[type="text"]:focus,input[type="password"]:focus,input[type="tel"]:focus,textarea:focus { border:2px solid #000000; outline:none; color:#000!important; }
 ::-webkit-input-placeholder { color:#666666; font-weight:400; }
@@ -477,10 +477,10 @@ input[type="password"]:disabled { background-color:#F2F2F2; border:1px solid #BB
 /*.select-wrap select { background-image:url(../images/common/bg_select_arrow_up.png); background-position:right 15px center; border:1px solid #B3BBC0; color:#888; }*/
 .form-wrap { position:relative; /*overflow:hidden;*/ }
 .form-wrap:after { display:block; content:''; clear:both; }
-.form-wrap .unit-txt { color:#000; font-size:18px; right:0; top:32px; position:absolute; line-height:60px; padding:0px 20px; }/*07-18*/
+.form-wrap .unit-txt { color:#111; font-size:18px; right:0; top:32px; position:absolute; line-height:60px; padding:0px 20px; }/*07-18*/
 :root .form-wrap .unit-txt { /*right:50px\9;*/ }
 .form-wrap .message { margin-top:10px; }
-.form-wrap .message.error { color:#000000; }
+.form-wrap .message.error { color:#111111; }
 .form-wrap .message.help { color:#626C74; }
 /* s:2023-07-14 수정 */
 .form-wrap .radio, .radio, 

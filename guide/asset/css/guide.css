@@ -260,7 +260,7 @@ h1, h2, h3, h4, h5, h6 { display:inline-block; float:left; width:100%; }
 .sub-header h2::before { content:''; position:absolute; left:-10px; top:10px; display:inline-block; width:30px; height:30px; background:#fff; opacity:0.2; } 
 .sub-header h2::after { content:''; position:absolute; left:-20px; top:0px; display:inline-block; width:18px; height:18px; background:#fff; opacity:0.4; } 
 
-h3, h4 { padding:15px 0 10px; color:#000; font-weight:bold; }
+h3, h4 { padding:15px 0 10px; color:#111; font-weight:bold; }
 .guide-tit { padding:10px 0 10px 15px; }
 .guide-tit::before { content:''; position:absolute; top:50%; left:0; width:6px; height:40%; background:#1d94d4; transform:translate(0, -50%); }
 
@@ -393,7 +393,7 @@ a.btn-lg { display:inline-block; padding:12px 30px; color:#333; font-size:1.1rem
 .btn-pagenation li:last-child { margin-right:0; }
 .btn-pagenation li a,
 .btn-pagenation li button { width:36px; height:36px; line-height:36px; } 
-.btn-pagenation li.on a { font-weight:bold; color:#000; }
+.btn-pagenation li.on a { font-weight:bold; color:#111; }
 
 /* 게시판 */
 .list-notice-mo { display:inline-block; float:left; width:100%; border-top:solid 2px #777; border-bottom:solid 2px #777; }
@@ -453,7 +453,7 @@ a.btn-lg { margin-bottom:10px; }
 .ip-wrap { position:relative; margin-top:18px; }
 .ip-wrap label { position:absolute; top:50%; left:0; transform:translateY(-50%); z-index:9; transition:all 0.3s; color:#999; font-size:18px; }
 .ip-wrap .placeholder { position:absolute; top:50%; left:0; transform:translateY(-50%); z-index:9; display:none; color:#ccc; }
-.ip-wrap input { border-bottom:2px solid #E5E5E5; color:#000; }
+.ip-wrap input { border-bottom:2px solid #E5E5E5; color:#111; }
 .ip-wrap input:focus { border-color:#260F54; }
 .ip-wrap input:focus-visible { outline:none; }
 .ip-wrap input:focus ~ label,

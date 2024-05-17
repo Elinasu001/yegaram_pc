@@ -36,7 +36,7 @@
 .progress_wrap{position:relative;display:block;height:23px;padding-right:57px;}
 .progress_bar{position:relative;width:100%;max-width:100%;height:23px;background-color:#e4e7e7;-webkit-box-shadow:1px 1px 4px rgba(0,0,0,0.25) inset;-moz-box-shadow:1px 1px 4px rgba(0,0,0,0.25) inset;-o-box-shadow:1px 1px 4px rgba(0,0,0,0.25) inset;-ms-box-shadow:1px 1px 4px rgba(0,0,0,0.25) inset;box-shadow:1px 1px 4px rgba(0,0,0,0.25) inset;overflow:hidden;}
 .progress_amount{position:absolute;left:0;display:inline-block;height:23px;line-height:23px;color:#6190da;text-align:center;background-color:#E4E7E7;z-index:888;}
-.progress_bar_txt{position:absolute;top:0;left:0;width:100%;padding:1px 0 0;color:#000;text-align:center;line-height:23px;z-index:999;}
+.progress_bar_txt{position:absolute;top:0;left:0;width:100%;padding:1px 0 0;color:#111;text-align:center;line-height:23px;z-index:999;}
 .progress_wrap a.btn_style1_w{position:absolute;top:0;right:0;}
 .t_line{padding-top:15px;border-top:1px solid #ccc;}
 
@@ -110,7 +110,7 @@ a:hover,a:active{text-decoration:none;color:#555;}
 
 /*cert START*/
 *{margin:0;padding:0;}
-body{font-size:12px;color:#000;font-family:Dotum, '돋움', Gulim, '굴림', Arial, sans-serif;}
+body{font-size:12px;color:#111;font-family:Dotum, '돋움', Gulim, '굴림', Arial, sans-serif;}
 a{cursor:pointer;}
 .t_center{text-align:center !important;}
 .cert_top{position:relative;border:1px solid #3c434e;background-color:#4c5663;}
@@ -136,7 +136,7 @@ h2.bul1{padding-left:12px;margin-bottom:10px;font-size:12px;background:url(/reso
 .cbtn.type1{color:#fff;border:1px solid #2c82bd;background-color:#3598db;}
 .cbtn.type2{color:#555;border:1px solid #9f9f9f;background-color:#fff;}
 .cipt{}
-.cipt input{width:97%;height:21px;line-height:16px;text-indent:8px;font-size:14px;color:#000;border:1px solid #cbcbcb;background-color:#f4f4f4;}
+.cipt input{width:97%;height:21px;line-height:16px;text-indent:8px;font-size:14px;color:#111;border:1px solid #cbcbcb;background-color:#f4f4f4;}
 .cipt input:focus{height:19px;text-indent:7px;border:2px solid #98b8ec;border-radius:2px;-moz-border-radius: 2px;-webkit-border-radius: 2px;}
 /* Chrome Field Outline = None */
 input:focus{outline:none;}

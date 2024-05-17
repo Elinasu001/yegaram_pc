@@ -47,7 +47,7 @@ inline-block 클래스를 추가하여 a태그와 a태그 안의 img태그의 �
 .loan-status-wrap{width:640px !important;}
 .loan-status-wrap .s-tit{padding-left:20px;}
 .loan-status-wrap .txt-all{margin-top:20px;padding:0 0 15px 20px;border-bottom:2px solid #eee;font-size:18px;}
-.loan-status-wrap .txt-all strong{color:#000;}
+.loan-status-wrap .txt-all strong{color:#111;}
 .loan-status-wrap .btn-request{display:inline-block;position:absolute;right:0;top:0;height:50px;padding:0 30px;background:#f90094;border-radius:25px;color:#fff;font-weight:700;line-height:50px;}
 .loan-status-wrap .btn-request:before{content:'';display:inline-block;width:27px;height:24px;margin-right:8px;background:url(/resources/normal/images/main_new/ico_loan_arrow.png);vertical-align:middle;}
 .loan-status-wrap .btn-request:after{content:'';display:inline-block;width:28px;height:18px;margin-left:12px;background:url(/resources/normal/images/main_new/ico_loan_arrow2.png);vertical-align:middle;}
@@ -56,7 +56,7 @@ inline-block 클래스를 추가하여 a태그와 a태그 안의 img태그의 �
 .loan-status-area .date-area{position:absolute;left:0;width:112px;padding:22px 0 26px;background:#fff;text-align:center;z-index:2;}
 .loan-status-area .date-area:after{content:'';display:block;position:absolute;right:-32px;top:0;bottom:0;width:1px;background:#eee;}
 .loan-status-area .date-area .date{font-size:72px;font-weight:700;color:#612885;}
-.loan-status-area .date-area .month{margin-top:10px;font-size:24px;font-weight:700;color:#000;}
+.loan-status-area .date-area .month{margin-top:10px;font-size:24px;font-weight:700;color:#111;}
 .loan-status-area .loan-status-list{display:table;position:relative;min-height:65px;margin-top:25px;padding-left:80px;}
 .loan-status-area .loan-status-list:first-child{margin-top:0;}
 .loan-status-area .loan-status-list .img{position:absolute;left:0;width:64px;height:65px;}
@@ -77,7 +77,7 @@ inline-block 클래스를 추가하여 a태그와 a태그 안의 img태그의 �
 .rate-status-wrap .col{margin-top:46px;}
 .rate-status-wrap .prod{display:inline-block;width:200px;height:200px;padding-top:55px;border:1px solid #ed008d;border-radius:50%;text-align:center;vertical-align:top;}
 .rate-status-wrap .prod:last-child{margin-left:15px;}
-.rate-status-wrap .prod .name{font-size:22px;font-weight:700;color:#000;}
+.rate-status-wrap .prod .name{font-size:22px;font-weight:700;color:#111;}
 .rate-status-wrap .prod .info{margin-top:7px;font-size:18px;color:#666;}
 .rate-status-wrap .prod .info span{display:inline-block;vertical-align:bottom;line-height:1.4;}
 .rate-status-wrap .prod .rate{margin-top:15px;font-size:24px;font-weight:700;color:#ed008d;}
@@ -89,7 +89,7 @@ inline-block 클래스를 추가하여 a태그와 a태그 안의 img태그의 �
 .prod-info-area .col:last-of-type{width:420px !important;padding-right:20px;}
 .prod-info-area .prod-service-list{overflow:hidden;}
 .prod-info-area .prod-service-list li{float:left;width:135px;text-align:center;}
-.prod-info-area .prod-service-list li a{display:block;position:relative;padding:40px 0;font-size:16px;color:#000;}
+.prod-info-area .prod-service-list li a{display:block;position:relative;padding:40px 0;font-size:16px;color:#111;}
 .prod-info-area .prod-service-list li a:before{content:'';display:block;width:69px;height:55px;margin:0 auto 37px;background:url(/resources/normal/images/main_new/ico_service.png);}
 .prod-info-area .prod-service-list li.serv2 a:before{background-position:0 -55px;}
 .prod-info-area .prod-service-list li.serv3 a:before{background-position:0 -110px;}
@@ -122,13 +122,13 @@ inline-block 클래스를 추가하여 a태그와 a태그 안의 img태그의 �
 .recom-prod-list li:first-child{margin-left:0;}
 .recom-prod-list li{display:block;}
 .recom-prod-list li a{display:block;}
-.recom-prod-list li .name{padding-top:60px;font-size:22px;font-weight:700;color:#000;}
+.recom-prod-list li .name{padding-top:60px;font-size:22px;font-weight:700;color:#111;}
 .recom-prod-list li .info{padding-top:20px;font-size:16px;}
 .recom-prod-list li .date{font-size:14px;}
-.recom-prod-list li .rate{margin-top:8px;font-size:16px;font-weight:bold;color:#000;}
+.recom-prod-list li .rate{margin-top:8px;font-size:16px;font-weight:bold;color:#111;}
 .recom-prod-list li .rate strong{font-size:20px;}
 .recom-prod-list li .rate-info{margin-top:8px;font-size:14px;}
-.recom-prod-list li .rate-info strong{color:#000;}
+.recom-prod-list li .rate-info strong{color:#111;}
 .recom-prod-list li .prod-info{position:absolute;bottom:50px;left:0;right:0;text-align:center;}
 .recom-prod-list li.prod1{background-image:url(/resources/normal/images/main_new/bg_recom_list_01.png);}
 .recom-prod-list li.prod2{background-image:url(/resources/normal/images/main_new/bg_recom_list_02.png);}
@@ -152,7 +152,7 @@ inline-block 클래스를 추가하여 a태그와 a태그 안의 img태그의 �
 .main-info-wrap .bx-pager{display:inline-block;position:static;width:auto !important;}
 .main-info-wrap dl{overflow:hidden;width:292px;line-height:24px;}
 .main-info-wrap dt{float:left;font-size:18px;line-height:27px;}
-.main-info-wrap dd{margin-bottom:7px;font-size:24px;font-weight:bold;color:#000;line-height:27px;text-align:right;}
+.main-info-wrap dd{margin-bottom:7px;font-size:24px;font-weight:bold;color:#111;line-height:27px;text-align:right;}
 .main-info-wrap dd img{margin-top:2px;}
 .main-info-wrap .txt{margin-top:10px;font-size:14px;line-height:20px;}
 
@@ -160,7 +160,7 @@ inline-block 클래스를 추가하여 a태그와 a태그 안의 img태그의 �
 .notice-wrap{padding-bottom:0 !important;}
 .notice-wrap .col{height:120px;padding:0 20px;border:1px solid #ddd;border-radius:12px;}
 .notice-wrap .notice{width:670px !important;margin-bottom:20px;padding:30px 20px 20px;}
-.notice-wrap .notice .s-tit{margin-bottom:10px;font-size:18px;font-weight:bold;color:#000;}
+.notice-wrap .notice .s-tit{margin-bottom:10px;font-size:18px;font-weight:bold;color:#111;}
 .notice-wrap .notice-list a{display:block;}
 .notice-wrap .notice-list .tit{display:inline-block;overflow:hidden;width:515px;font-size:16px;text-overflow:ellipsis;white-space:nowrap;line-height:40px;}
 .notice-wrap .notice-list .date{float:right;font-size:14px;color:#bbb;line-height:40px;}

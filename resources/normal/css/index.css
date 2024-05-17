@@ -5,7 +5,7 @@
 /* 정보 */
 .infoBox { position:relative; flex:1; margin-right:20px; padding:30px; border-radius:20px; }
 .infoBox:last-child { margin:0; }
-.infoBox > dt { font-size:30px; color:#000000; font-weight: 600;}
+.infoBox > dt { font-size:30px; color:#111111; font-weight: 600;}
 .infoBox > dt > span { display:block; font-size:14px; font-weight: 400; line-height: 1; }
 .infoBox > dd { display:inline-block; /*float:left;*/ width:100%; /*margin:10px 0;*/ font-size:16px; color:#757575; /*line-height:1.2;*/ }
 .infoBox .rate { /*margin:20px 0;*/ font-size:26px; }
@@ -188,7 +188,7 @@
 /* 공지사항 */
 .noticeWrap .tab-item { justify-content:flex-start; margin-bottom:20px; font-weight: 500; }
 .noticeWrap .tab-item > li { font-size:22px; cursor:pointer; }
-.noticeWrap .tab-item > li.on { border-bottom:0; color:#000; }
+.noticeWrap .tab-item > li.on { border-bottom:0; color:#111; }
 .noticeWrap .tab-item > li:first-child { margin-left:0; }
 .noticeWrap .tab-cont { flex-direction:column; overflow:hidden; /*margin:0;*/ }
 .noticeWrap .tab-cont > li { /*margin-bottom:22px;*/margin-bottom: 30px; }

@@ -32,7 +32,7 @@
 [class*="pop-address-search"] textarea,
 [class*="pop-address-search"] select,
 [class*="pop-address-search"] button,
-[class*="pop-address-search"] table {font-family: "맑은 고딕", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size:13px; /*color:#000;*/letter-spacing:-0.05em; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -o-box-sizing:border-box; -ms-box-sizing:border-box; box-sizing:border-box;}
+[class*="pop-address-search"] table {font-family: "맑은 고딕", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size:13px; /*color:#111;*/letter-spacing:-0.05em; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -o-box-sizing:border-box; -ms-box-sizing:border-box; box-sizing:border-box;}
 [class*="pop-address-search"] article,
 [class*="pop-address-search"] aside,
 [class*="pop-address-search"] details,
