@@ -92,20 +92,26 @@
         	
             <!-- s:subVisualWrap -->
             <div id="subVisualWrap" class="sub-type03">
+
+				<!--D: 전체 구조 변경 -->
+				<div id="breadcrumb" class="breadcrumb-renewal">
+					<script>
+						$(document).ready(function(){
+							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
+						});
+					</script>
+				</div>
+
 				<div>
-					<div class="breadcrumb">
+					<!-- <div class="breadcrumb">
 						<a href="#" class="home ir">홈</a>
 						<a href="#" class="depth1">대출상품</a>
-						<!--s:기획현행화 (text만 변경)-->
 						<a href="#" class="depth2">간편대출한도조회</a>
-						<!--e:기획현행화 (text만 변경)-->
-					</div>
+					</div> -->
 					<div class="tit-wrap">
 						<div class="sub-tit">
-							<!--s:기획현행화 (text만변경)-->
-							<h2>간편대출한도조회</h2>
-							<p class="desc">고려저축은행의 한도조회 프로세스 입니다.</p>
-                            <!--e:기획현행화 (text만변경)-->
+							<h2>간편한도조회</h2>
+							<p class="desc">예가람저축은행의 간편한도조회 인증 페이지 입니다.</p>
 						</div>
 					</div>
 				</div>
@@ -388,7 +394,7 @@
                         		<p class="tit-txt">고객거래확인</p>
                         	</div>
 							<!-- s:2023-07-16 수정 -->
-                        	<div class="cust_terms_contents" style="padding:40px;=">
+                        	<div class="cust_terms_contents" style="padding:40px;">
 							<!-- e:2023-07-16 수정 -->
                        			<script>
 								$(document).ready(function(){
@@ -400,7 +406,7 @@
                         
 						<div class="line-box">
 							<div class="agree-wrap">
-								<p class="tit-txt">한도조회을 위한 약관에 동의하시겠습니까?</p>
+								<p class="tit-txt">간편한도조회을 위한 약관에 동의하시겠습니까?</p>
 								<!-- s:2023-07-14 수정 -->
 								<div class="agree-area bor-line-gray">
 									<div class="agree-cts">
@@ -558,6 +564,26 @@
 													</div>
 												</div>
 											</div>
+
+											<!--D: 추가 -->
+											<div class="items-wrap" id="">
+												<div class="items">
+													<div class="item-check">
+														<div>
+															<span class="ctm-check">
+																<input type="checkbox" name="check" id="" value="" >
+																<label for="" ><span class="chk_span">[필수] 계약 체결·이행을 위한 상세 동의서(개인금융성 신용보험용)</span></label> 
+															</span>
+															<p class="item-tit"><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+														</div>
+													</div>
+													<p class="rice">
+														상기 사항에 동의 시, 저금리 정책 상품의 결과조회 및 취급이 가능하며 동의에 의한 개인(신용)정보 조회는<br />
+														귀하의 신용등급에 영향을 미치지 않습니다. 단, 당행의 신용평가시스템 및 해당 정책상품 실행기관의 심사기준과 개인의 신용도에 따라 대출여부가 결정됩니다.
+													</p>
+												</div>
+											</div>
+
 											<div class="items-wrap" id='${CODE_T000800007}' style="display:none;">
 												<div class="items">
 													<div class="item-check">
@@ -888,7 +914,7 @@
 																<!--s:기획현행화-->
 																<span class="ctm-check">
 																	<input type="checkbox" name="check" id="agree50" value="">
-																	<label for="agree50"><span class="chk_span">[선택] 고려저축은행 멤버십서비스 개인(신용)정보 수집·이용 동의</span></label>
+																	<label for="agree50"><span class="chk_span">[선택] 예가람저축은행 멤버십서비스 개인(신용)정보 수집·이용 동의</span></label>
 																</span>
 																<p class="item-tit"><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
 																<!--e:기획현행화-->
@@ -919,7 +945,7 @@
 								</div>
 								<div class="btn-wrap">
 									
-									<button type="button" name="button" class="btn-big navy" >한도조회</button>
+									<button type="button" name="button" class="btn-big navy" >한도조회하기</button>
 									
 								</div>
 								<!-- e:2023-07-14 수정 -->
