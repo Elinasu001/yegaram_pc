@@ -1,0 +1,388 @@
+<html lang="ko">
+<head>
+<!-- 헤더 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="예가람저축은행" />
+<meta name="description" content="딴딴해서 믿을 수 있는 예가람저축은행, 예금, 적금, 신용부금, 논스톱 자동대출 등 예금, 대출금융상품 안내" />
+<meta name="viewport" content="width=device-width">
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta property="og:image" content="https://www.yegaramsb.co.kr/resources/images/main/meta-img-square_new.jpg">   
+<link rel="shortcut icon" type="image/x-icon" href="../../../resources/favicon.ico" />
+<link href="../../../resources/css/jquery.bxslider.css" rel="stylesheet" />
+<link href="../../../resources/css/default.css" rel="stylesheet" />
+<link href="../../../resources/css/layout.css" rel="stylesheet" />
+<link href="../../../resources/css/contents.css" rel="stylesheet" />    
+<link href="../../../resources/css/jquery-ui.css" rel="stylesheet" />  
+<script src="../../../resources/js/jquery-1.11.3.min.js"></script>
+<script src="../../../resources/js/TweenMax.min.js"></script>
+<script src="../../../resources/js/jquery.bxslider.min.js"></script>
+<script src="../../../resources/js/placeholders.js"></script> 
+<!--     jquery-ui.js가 default.js보다 먼저 선언되어야 함 -->
+<script src="../../../resources/js/jquery-ui.js" type="text/javascript"></script>        
+<script src="../../../resources/js/default.js"></script>
+<script src="../../../resources/js/ui.js"></script>
+<script src="../../../resources/pub_js/ui_pub.js"></script>
+<script type="text/javascript" src="../../../resources/js/jquery.form.min.js"></script> 
+<script type="text/javascript" src="../../../resources/js/common_ajax.js"></script>
+<script type="text/javascript" src="../../../resources/js/common_bank_calc_util.js"></script> 
+<script type="text/javascript" src="../../../resources/js/common_bank_map_util.js"></script> 
+<script type="text/javascript" src="../../../resources/js/common_layer.js"></script> 
+<script type="text/javascript" src="../../../resources/js/common_pagevalidate.js"></script>
+<script type="text/javascript" src="../../../resources/js/common_util.js"></script> 
+<script type="text/javascript" src="../../../resources/js/iscroll.js"></script> 
+<script type="text/javascript" src="../../../resources/js/jquery.animateSprite.min.js"></script>  
+<script src="../../../resources/js/common_bank_calc_util.js" type="text/javascript"></script>
+<script src="../../../resources/js/hp_common.js" type="text/javascript"></script>
+<script src="../../../resources/js/calculator.js"></script>    
+<script src="../../../resources/js/streamdocs/adapter.js"></script>  	
+<!--     scrap -->
+<!-- <link href="/resources/scrap/css/process_manager.css" rel="stylesheet" /> -->
+<!--     <script src="/resources/scrap/js/jquery-1.9.1.min.js"></script> -->
+
+</head>
+<body>
+<!-- <body class="color-type2"> 타입별 -->
+    <!-- ********** Include ********** -->
+    <!-- s:skipnavi -->
+    <div id="skipnavi">
+        <script>
+		$(document).ready(function(){
+			$("#skipnavi").load("../include/inc_body_skipnavi.html");
+		});
+		</script>
+    </div>
+    <!-- ********** //Include ********** -->
+    <!-- //e:skipnavi -->
+
+    <!-- s:wrap -->
+    <div id="wrap">
+
+        <!-- ********** Include ********** -->
+        <!-- s:header -->
+        <div id="headerWrap">
+           <script>
+			$(document).ready(function(){
+				$("#headerWrap").load("../include/inc_body_header.html");
+			});
+			</script>
+        </div>
+        <!-- //e:header -->
+
+        <!-- s:sitemapWrap -->
+        <div id="sitemapWrap" class="layerpopup sitemap-layer" tabindex="0" data-tooltip-con="sitemap-layer" data-focus="sitemap-layer" data-focus-prev="btn-menu-close">
+			<script>
+			$(document).ready(function(){
+				$("#sitemapWrap").load("../include/inc_body_sitemapWrap.html");
+			});
+			</script>
+        </div>
+        <!-- //e:sitemapWrap -->
+        <!-- ********** //Include ********** -->
+
+        <!-- s contentsWrap -->
+        <div id="contentsWrap">
+        
+            <!-- s:subVisualWrap -->
+			<div id="subVisualWrap" class="sub-type03">
+				<div>
+					<div class="breadcrumb">
+						<a href="#none" class="home ir">홈</a>
+						<a href="#none" class="depth1">고객센터</a>
+						<a href="#none" class="depth2">자동이체신청</a>
+						
+					</div>
+					<div class="tit-wrap">
+						<div class="sub-tit">
+							<h2>자동이체신청</h2>
+							<p class="desc">자동이체 조회 및 신청 페이지입니다.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //e:subVisualWrap -->
+
+            <!-- s:contents -->
+            <div class="contents default-wrap">
+                <div class="online-wrap">
+                    <ul class="step-wrap">
+                        <li class="step01"><span>01.<strong>본인인증</strong></span></li>
+                        <li class="step02 active"><span>02.<strong>확인 및 입력</strong></span></li> <!-- 180612 텍스트변경 -->
+                        <li class="step03"><span>03.<strong>제출 완료</strong></span></li> <!-- 180612 텍스트변경 -->
+                    </ul>
+                    <div class="apply-wrap ratecut-apply">
+                        <div class="required-wrap">
+                            <h3 class="tit">자동이체신청 정보입력</h3>
+                            <span class="required-txt">* 필수 입력항목 입니다.</span>
+                        </div>
+                        
+                        <form id="frm1" name="frm1" >
+                        <div class="input-wrap">
+                        
+                            <div class="grid-wrap">
+                            	<div class="grid2">
+                                    <div class="form-wrap" id="cust_name_form">
+                                        <label for="CMS_TYPE_CD" class="inp-tit req">CMS신청구분</label>
+                                        <span class="ctm-radio">
+	                                		<input type="radio" name="CMS_TYPE_CD_R" id="CMS_TYPE_CD_C" value="C">
+	                                    	<label for="CMS_TYPE_CD_C"><span>신규</span></label>
+	                                    </span>
+	                                    <span class="ctm-radio">
+	                                		<input type="radio" name="CMS_TYPE_CD_R" id="CMS_TYPE_CD_U" value="U">
+	                                    	<label for="CMS_TYPE_CD_U"><span>변경</span></label>
+	                                    </span>
+	                                    <span class="ctm-radio">
+	                                		<input type="radio" name="CMS_TYPE_CD_R" id="CMS_TYPE_CD_D" value="D">
+	                                    	<label for="CMS_TYPE_CD_D"><span>해지</span></label>
+	                                    </span>
+                                    </div>
+                                    <div class="form-wrap" id="cust_name_form" style="display:none;">
+                                        <label for="CMS_STATUS" class="inp-tit">CMS상태</label>
+                                        <input type="text" name="CMS_STATUS" value="" id="CMS_STATUS" placeholder="" title="CMS상태" readonly="readonly">
+                                    </div>
+                                </div>
+                                <div class="grid2">
+                                    <div class="form-wrap" id="cust_name_form">
+                                    	<label for="CMS_TRANSFER_DT_S" class="inp-tit req">이체일자</label><!-- 필수 입력항목 class명 "req" 적용 -->
+                                             <input type="text" name="CMS_TRANSFER_DT_S" class="" id="CMS_TRANSFER_DT_S"  title="이체일자 입력"/>
+                                    </div>
+                                    <div class="form-wrap" id="cust_name_form">
+                                        <label for="BIRTH_DAY" class="inp-tit req">생년월일(사업자번호)</label>
+                                            <input type="text" name="BIRTH_DAY" value="" id="BIRTH_DAY" placeholder="숫자만 입력해주세요" title="생년월일(사업자번호)" maxlength="12">
+                                    </div>
+                                </div>
+                                <div class="grid2">
+                                	<div class="form-wrap form-banknum"> <!-- 180618 pm class명 'form-banknum' 추가 -->
+										<label for="getBank" class="inp-tit req">은행명</label>
+										<!-- 180618 pm 수정 -->
+										<input type="text" name="" value="" id="getBank"  placeholder="은행명을 선택하세요" readOnly onclick='PageFunc.openBankPopup();' title="은행명 입력">
+										<!--s:디자인현행화-->
+										<a href="#" class="btn-normal form no-fl" id="openPopBankList" onclick='PageFunc.openBankPopup();return false;' title="은행선택팝업">은행 선택</a>
+										<!--e:디자인현행화-->
+										<!-- //180618 pm 수정 -->
+									</div>
+									<!-- 180614 계좌인증버튼 추가 -->
+									<div class="form-wrap form-banknum jumin-area">  <!-- 180621 am class='form-banknum' 삭제 -->
+										<label for="account-num" class="inp-tit req">계좌번호</label>
+										<input type="text" name="CMS_ACCT_NO" value="" id="account-num" placeholder="(-) 없이 숫자만 입력해 주세요"  title="계좌번호 입력">
+										<!--s:디자인현행화-->
+										<a href="javascript:PageFunc.chkBankAcctNo();" id="a_bank_acct" class="btn-normal form no-fl">계좌인증</a> <br>
+										<!--e:디자인현행화-->
+										<label class="rice">기업은행의 평생계좌(핸드폰 번호로 구성)는 계좌 조회서비스의 이용이 불가하오니, 일반 계좌번호를 이용하여 주시기 바랍니다.</label>
+									</div>
+<!--                                     <div class="form-wrap" id="cust_name_form"> -->
+<!--                                         <label for="getBank" class="inp-tit req">은행명</label> -->
+<!-- 											180618 pm 수정 -->
+<!-- 											<input type="text" name="" value="" id="getBank" placeholder="은행명을 입력해주세요" readOnly onclick='PageFunc.openBankPopup();'  title="은행명"> -->
+<!-- 											<a href="#" class="btn-normal form" data-tooltip="bank-layer">은행 선택</a> -->
+<!--                                     </div> -->
+                                    
+                                </div>
+                                <div class="grid2">
+                                    <div class="form-wrap" id="cust_name_form">
+                                        <label for="CMS_ACCT_NAME" class="inp-tit req">예금주명</label>
+                                        <input type="text" name="CMS_ACCT_NAME" value="" id="CMS_ACCT_NAME" placeholder="" title="예금주명">
+                                    </div>
+                                    <div class="form-wrap" id="hp_form">
+                                        <label for="phone" class="inp-tit req">연락처</label>
+										<!--s:디자인현행화-->
+										<div class="tel-area">
+											<div class="select-wrap">
+												<select name="" class="" id="phone" title="핸드폰번호 앞자리 선택">
+													<option value="">010</option>
+													<!-- 
+														<option value="">011</option>
+														<option value="">016</option>
+														<option value="">017</option>
+														<option value="">018</option>
+														<option value="">019</option> -->
+												</select>
+											</div>
+											<span class="hyphen">-</span> <input type="text" name="" value="" id="phone1" placeholder="" title="핸드폰번호 가운데자리" maxlength="4">
+											<!-- 180614 title값 수정 -->
+											<span class="hyphen">-</span> <input type="text" name="" value="" id="phone2" placeholder="" title="핸드폰번호 뒷자리" maxlength="4">
+											<!-- 180614 title값 수정 -->
+
+											<input type="hidden" id="phone_hidden" name="PHONE_NO" value="" />
+
+										</div>
+										<!--e:디자인현행화-->
+                                    </div>
+<!--                                     <div class="form-wrap" id="cust_name_form"> -->
+<!--                                         <label for="CMS_ACCT_NO" class="inp-tit req">계좌번호</label> -->
+<!--                                         <input type="text" name="CMS_ACCT_NO" value=""  id="CMS_ACCT_NO" placeholder="연락처 입력"  title="연락처 입력"> -->
+<!--                                     </div> -->
+                                </div>
+                            </div>
+                            
+						</div>
+                            
+                        <input type="hidden" name="SIGN_DATA_STR" id="SIGN_DATA_STR" />
+                        <input type="hidden" name="SIGN_DATA" id="SIGN_DATA" />
+                        <input type="hidden" name="CMS_TYPE_CD" id="CMS_TYPE_CD" />
+                        <input type="hidden" name="CMS_STATUS" id="CMS_STATUS" />
+                        <input type="hidden" name="ACCT_NO" id="ACCT_NO" />
+                        <input type="hidden" name="CMS_AGREE_YN" id="terms_agreement_yn" value="Y|Y|Y|Y" />
+                        <input type="hidden" name="CMS_BANK_CD" id="CMS_BANK_CD" />
+                        <input type="hidden" name="CMS_TRANSFER_DT" id="CMS_TRANSFER_DT" />
+                    </form>
+													        
+                </div>
+                        
+                        
+						<div class="line-box">
+							<div class="agree-wrap">
+								<p class="tit-txt">자동이체 신청을 위한 약관에 동의하시겠습니까?</p>
+								<!--s: 디자인현행화-->
+								<div class="agree-area bor-line-gray">
+								<!--e: 디자인현행화-->
+									<div class="agree-cts">
+										<div class="all-agree">
+											<span class="ctm-check">
+												<input type="checkbox" name="check" id="all-check" value="">
+												<label for="all-check">아래의 다음 약관에 모두 동의합니다.</label>
+											</span>
+											<button type="button" name="button" id="btnAgreemenAll" class="btn-normal tiny hide" data-tooltip="agreementall-layer">자세히보기</button>
+										</div>
+										<!-- 180614 약관 추가 및 순서 변경 -->
+										<div class="agree-box">
+											
+											<div class="items-wrap" id='${CODE_T001300001}'>
+												<p class="item-tit"><label>[필수] 개인정보 및 고유식별정보 수집 및 이용 동의 </label><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+												<div class="items">
+													<div class="item-check">
+														<div>
+															<span class="ctm-check">
+																<input type="checkbox" name="check" id="agree1" value="">
+																<label for="agree1">개인정보 및 고유식별정보 수집 및 이용에 동의합니다.</label>
+															</span>
+														</div>
+													</div>
+												</div>
+												
+											</div>
+											<div class="items-wrap" id='${CODE_T001300002}'>
+												<p class="item-tit"><label>[필수] 개인정보 제3자 제공 동의 </label><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+												<div class="items">
+													<div class="item-check">
+														<div>
+															<span class="ctm-check">
+																<input type="checkbox" name="check" id="agree2" value="">
+																<label for="agree2">개인정보 제3자 제공에 동의합니다.</label>
+															</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+											<div class="items-wrap" id='${CODE_T001300003}'>
+												<p class="item-tit"><label>[필수] 출금이체 동의여부 및 해지사실 통지 안내 </label><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+												<div class="items">
+													<div class="item-check">
+														<div>
+															<span class="ctm-check">
+																<input type="checkbox" name="check" id="agree4" value="">
+																<label for="agree4">출금이체 동의여부 및 해지사실 통지 안내에 동의합니다.</label>
+															</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!--s:디자인현행화-->
+											<div class="items-wrap " id='${CODE_T001300004}' style="border-bottom:0;">
+											<!--e:디자인현행화-->	
+												<p class="item-tit"><label>[필수] CMS 출금이체 약관 </label><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+												<div class="items">
+													<div class="item-check">
+														<div>
+															<span class="ctm-check">
+																<input type="checkbox" name="check" id="agree3" value="">
+																<label for="agree3">CMS 출금이체 약관에 동의합니다.</label>
+															</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- //180614 추가 및 약관 순서 변경 -->	
+									</div>
+									<p class="font12 color-626C74 mb30" id="coment_cc" style="display:none;">1. 신청인과 예금주명이 동일한 경우만 신청 가능합니다.<br>
+			                        	2. 신청일자가 약정일자의 7영업일이내일 경우, 익월부터 출금 가능합니다.<br>
+			                        	3. 약정일을 변경하시려면 고객센터로 문의하시기 바랍니다.<br>
+			                        	문의전화 (상담가능시간 09:00 ~ 18:00)
+			                        </p>
+			                        <p class="font12 color-626C74 mb30" id="coment_dd" style="display:none;">
+			                        	※ 해지 후 취소 처리 불가능합니다.<br>
+			                        	문의전화 (상담가능시간 09:00 ~ 18:00)
+			                        </p>
+									
+									<!-- <p class="rice">상기 사항에 동의 시, 저금리 정책 상품의 결과조회 및 취급이 가능하며 동의에 의한 개인(신용)정보 조회는 귀하의 신용등급에 영향을 미치지 않습니다. 단, 당행의 신용평가시스템 및 해당 정책상품 실행기관의 심사기준과 개인의 신용도에 따라 대출여부가 결정됩니다.</p> -->
+								</div>
+								<!--s:디자인현행화-->
+								<div class="btn-wrap">
+									<button type="button" name="button" class="btn-big navy" >자동이체신청</button>
+									<!-- <button type="button" name="button" class="btn-big re ir">이전</button> -->
+								</div>
+								<!--e:디자인현행화-->
+							</div>
+						</div>
+					
+ 							                   
+                    </div>
+                </div>
+            </div>
+            <!-- //e:contents -->
+            <button type="button" name="button" class="btn-circle top ir btn-top">위로</button>
+        </div>
+        <!-- //e: contentsWrap -->
+        
+        <!-- s:전체 레이어팝업 -->
+		<div id="agreementallLayer" class="layerpopup pdfLayerpopup agreementall-layer" tabindex="0" data-tooltip-con="agreementall-layer" data-focus="agreementall-layer" data-focus-prev="btn-menu-close">
+			<div class="pop-wrap">
+				<div class="all-agree">* 필수 약관 전체 보기 ( <span class="view"></span> / <span class="total"></span> )</div>
+				
+				<div class="ctrl-box">
+					<button type="button" name="button" class="btn-prev">이전</button>
+					<button type="button" name="button" class="btn-next">다음</button>
+					<button type="button" name="button" class="btn-menu-closePdf tooltip-close" data-focus="btn-menu-close" data-focus-next="agreementall-layer">닫기</button>
+				</div>
+			</div>
+		</div>
+		<!-- //e:전체 레이어팝업 -->
+
+		<div id="manualLayer011" class="layerpopup pdfLayerpopup manual-layer" tabindex="0" data-tooltip-con="manual011-layer" data-focus="manual011-layer" data-focus-prev="btn-menu-close">
+			<div class="pop-wrap">
+				<iframe id="viewer" src="" ></iframe>
+				<button type="button" name="button" class="btn-menu-closePdf2 tooltip-close" data-focus="btn-menu-close" data-focus-next="manual011-layer">닫기</button>
+			</div>
+		</div>
+		
+		<form id="goComp" action="/center/cms_comp" method="post">
+	    	<input type="hidden"  name="SUCCESS" value="" id="SUCCESS" > 
+	    	<input type="hidden"  name="FAIL" value="" id="FAIL" > 
+	    	<input type="hidden"  name="CUST_NM" value="${sessionCUST_NM}" id="CUST_NM" > 
+	    	<input type="hidden"  name="CMS_TYPE_CD_COMP" value="" id="CMS_TYPE_CD_COMP" >
+	    </form>
+
+       	<!-- ********** Include ********** -->
+        <!-- s footerWrap -->
+        <div id="footerWrap">
+            <script>
+			$(document).ready(function(){
+				$("#footerWrap").load("../include/inc_body_footer.html");
+			});
+			</script>
+        </div>
+        <!-- //e:footerWrap -->
+        <!-- ********** //Include ********** -->
+    </div>
+    <!-- //e:wrap -->
+
+	<input type="hidden" id="streamdocsAdd" value="${streamdocsAdd}">
+</body>
+</html>

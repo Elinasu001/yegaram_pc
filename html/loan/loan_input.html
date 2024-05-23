@@ -1,0 +1,2791 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- 헤더 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="예가람저축은행" />
+<meta name="description" content="딴딴해서 믿을 수 있는 예가람저축은행, 예금, 적금, 신용부금, 논스톱 자동대출 등 예금, 대출금융상품 안내" />
+<meta name="viewport" content="width=device-width">
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta property="og:image" content="https://www.yegaramsb.co.kr/resources/images/main/meta-img-square_new.jpg">   
+<link rel="shortcut icon" type="image/x-icon" href="../../../resources/favicon.ico" />
+<link href="../../../resources/css/jquery.bxslider.css" rel="stylesheet" />
+<link href="../../../resources/css/default.css" rel="stylesheet" />
+<link href="../../../resources/css/layout.css" rel="stylesheet" />
+<link href="../../../resources/css/contents.css" rel="stylesheet" />    
+<link href="../../../resources/css/jquery-ui.css" rel="stylesheet" />  
+<script src="../../../resources/js/jquery-1.11.3.min.js"></script>
+<script src="../../../resources/js/TweenMax.min.js"></script>
+<script src="../../../resources/js/jquery.bxslider.min.js"></script>
+<script src="../../../resources/js/placeholders.js"></script> 
+<!--     jquery-ui.js가 default.js보다 먼저 선언되어야 함 -->
+<script src="../../../resources/js/jquery-ui.js" type="text/javascript"></script>        
+<script src="../../../resources/js/default.js"></script>
+<script src="../../../resources/js/ui.js"></script>
+<script src="../../../resources/pub_js/ui_pub.js"></script>
+<script type="text/javascript" src="../../../resources/js/jquery.form.min.js"></script> 
+<script type="text/javascript" src="../../../resources/js/common_ajax.js"></script>
+<script type="text/javascript" src="../../../resources/js/common_bank_calc_util.js"></script> 
+<script type="text/javascript" src="../../../resources/js/common_bank_map_util.js"></script> 
+<script type="text/javascript" src="../../../resources/js/common_layer.js"></script> 
+<script type="text/javascript" src="../../../resources/js/common_pagevalidate.js"></script>
+<script type="text/javascript" src="../../../resources/js/common_util.js"></script> 
+<script type="text/javascript" src="../../../resources/js/iscroll.js"></script> 
+<script type="text/javascript" src="../../../resources/js/jquery.animateSprite.min.js"></script>  
+<script src="../../../resources/js/common_bank_calc_util.js" type="text/javascript"></script>
+<script src="../../../resources/js/hp_common.js" type="text/javascript"></script>
+<script src="../../../resources/js/calculator.js"></script>    
+<script src="../../../resources/js/streamdocs/adapter.js"></script>  	
+<!--     scrap -->
+<!-- <link href="/resources/scrap/css/process_manager.css" rel="stylesheet" /> -->
+<!--     <script src="/resources/scrap/js/jquery-1.9.1.min.js"></script> -->
+</head>
+<body>
+<!-- <body class="color-type2"> 타입별 -->
+    <!-- ********** Include ********** -->
+    <!-- s:skipnavi -->
+    <div id="skipnavi">
+        <script>
+		$(document).ready(function(){
+			$("#skipnavi").load("../include/inc_body_skipnavi.html");
+		});
+		</script>
+    </div>
+    <!-- ********** //Include ********** -->
+    <!-- //e:skipnavi -->
+
+    <!-- s:wrap -->
+    <div id="wrap">
+   
+       <!-- ********** Include ********** -->
+        <!-- s:header -->
+        <div id="headerWrap">
+           <script>
+			$(document).ready(function(){
+				$("#headerWrap").load("../include/inc_body_header.html");
+			});
+			</script>
+        </div>
+        <!-- //e:header -->
+
+        <!-- s:sitemapWrap -->
+        <div id="sitemapWrap" class="layerpopup sitemap-layer" tabindex="0" data-tooltip-con="sitemap-layer" data-focus="sitemap-layer" data-focus-prev="btn-menu-close">
+			<script>
+			$(document).ready(function(){
+				$("#sitemapWrap").load("../include/inc_body_sitemapWrap.html");
+			});
+			</script>
+        </div>
+        <!-- //e:sitemapWrap -->
+        <!-- ********** //Include ********** -->
+
+        <!-- s contentsWrap -->
+        <div id="contentsWrap">
+			
+			<!-- s: 2023-06-08 class 변경 -->
+			<div id="subVisualWrap" class="sub-type03">
+			<!-- e: 2023-06-08 class 변경 -->
+
+				<div>
+					<div class="breadcrumb">
+						<a href="#" class="home ir">홈</a>
+						<!--s:기획현행화-->
+						<a href="#" class="depth1">대출</a>
+						<a href="#" class="depth2">온라인바로대출</a>
+						<!--e:기획현행화-->
+					</div>
+					<div class="tit-wrap">
+						<div class="sub-tit">
+							<!--s:기획현행화-->
+							<h2>온라인바로대출</h2>
+							<!--e:기획현행화-->
+							<p class="desc">고려저축은행의 대출신청 프로세스입니다.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+            <div class="contents default-wrap">
+                <div class="loan-input-wrap">
+                    <ul class="step-wrap">
+                        <li class="active"><span>01.<strong>신청정보 입력</strong></span></li>
+                        <li><span>02.<strong>대출신청 완료</strong></span></li>
+                    </ul>
+                    <div class="apply-wrap">
+                        <div class="required-wrap">
+                            <h3 class="tit">대출신청 정보입력</h3>
+                            <span class="required-txt">* 필수 입력항목 입니다.</span>
+                        </div>
+                        <form id="frm1" name="frm1" >
+                        <div class="input-wrap">
+                            <div class="grid-wrap">
+								<!-- s:디자인현행화 -->
+                                <div class="grid2">
+                                    <div class="form-wrap" id="prod_form">
+                                        <label for="loan_prod" class="inp-tit req">대출상품</label><!-- 필수 입력항목 class명 "req" 적용 -->
+                                        <div class="select-wrap">
+                                             <select name="PROD_CD" class="" id="loan_prod"  title="대출상품 선택">
+                                                <option value="">대출상품을 선택하세요</option>
+                                                <option value="">부동산담보대출</option>
+                                                <option value="">전세보증금담보대출</option>
+                                                <option value="">공공임대아파트보증금담보대출</option>
+                                                <option value="">유가증권담보대출</option>
+                                                <option value="">예적금담보대출</option>
+                                                <option value="">햇살론</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+								<div class="grid2">
+									<div class="form-wrap" id="hp_form">
+                                        <label for="phone" class="inp-tit req">핸드폰번호</label>
+                                        <div class="phone-area">
+                                            <div class="select-wrap agency">
+                                                <select name="TELECOM" class="" id="phone" title="핸드폰 통신사 선택">
+                                                    <option selected="selected" value="">통신사</option>
+                                                </select>
+                                            </div>
+                                            <div class="select-wrap phone-fst">
+                                                <select name="" class="" title="핸드폰번호 앞자리 선택" id="phone_front" >
+                                                    <option value="">010</option>
+                                                </select>
+                                            </div>
+                                            <span class="hyphen">-</span>
+                                            <input type="text" name="" value=""  id="phone1" placeholder="" title="핸드폰번호 가운데자리" maxlength="4">
+                                            <span class="hyphen">-</span>
+                                            <input type="text" name="" value=""  id="phone2" placeholder="" title="핸드폰번호 뒷자리" maxlength="4">
+                                            <input type="hidden" id="phone_hidden" name="PHONE_NO"/>
+                                        </div>
+                                    </div>
+									<!--s:기획현행화-->
+									<!--<div class="form-wrap">
+										<label for="niceAuthNum" class="inp-tit req">인증번호</label>
+										<div class="nice-auth-num-area">
+											<input type="hidden" id="niceAuthNumIntervalId" value="">
+											<input type="text" id="niceAuthNum" value="" numberonly="" placeholder="" maxlength="5">
+											<button type="button" class="btn-normal form btn-nice-auth-num" id="sendBtn">인증번호요청</button>
+											<button type="button" class="btn-normal form btn-nice-auth-num" id="reSendBtn" style="display:none">재요청</button>
+											<button type="button" class="btn-normal form btn-nice-auth-num" id="confirmBtn">확인</button>
+										</div>
+									</div>-->
+									<!--e:기획현행화-->
+								</div>
+								<!-- e:디자인현행화-->
+                                <div class="grid2">
+                                    <div class="form-wrap" id="cust_name_form">
+                                        <label for="name" class="inp-tit req">성명</label>
+                                        <input type="text" name="CUST_NM" value=""  id="name" placeholder="고객실명 입력" option="onlyKr" style="ime-mode:active"  title="성명 입력" maxlength="10">
+                                    </div>
+                                    <div class="form-wrap" id="ssn_form">
+                                        <label for="jumin1" class="inp-tit req">주민등록번호</label>
+                                        <div class="jumin-area">
+                                            <input type="text" name="SSN1" value="" id="jumin1" placeholder="" title="주민등록번호 앞자리" maxlength="6">
+                                            <span class="hyphen">-</span>
+                                            <input type="password" name="SSN2" value="" id="SSN2" placeholder="" title="주민등록번호 뒷자리" maxlength="7"><!-- 임시처리 -->
+                                            <p class="rice">당 저축은행은 신용정보의 이용 및 보호에 관한 법률 시행령 제37조의2에 의거하여 주민등록번호를 수집합니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+							<div class="grid-wrap">
+								<div class="grid2">
+									<div class="form-wrap" style="display: block;">
+										<label for="incom_annual_format" class="inp-tit req">연소득</label>
+										<input type="text" class="incom_annual_format" id="incom_annual_format" value="" placeholder="만원 단위로 입력하세요" title="연소득" maxlength="7">
+										<div class="unit-txt">만원</div>
+									</div>
+									<div class="form-wrap" style="display: block;">
+										<label for="car_yn" class="inp-tit req">차량보유여부</label>
+										<div class="select-wrap">
+											<select name="CAR_YN" id="car_yn"  title="차량보유여부 선택">
+												<option selected="selected" value="">차량보유여부를 선택하세요.</option>
+												<option value="Y">예</option>
+												<option value="N">아니오</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="grid2">
+									<div class="form-wrap" style="display: block;">
+										<label for="req_amt" class="inp-tit req">대출신청금액</label>
+										<input type="text" class="incom_annual_format" id="req_amt" value="" placeholder="만원 단위로 입력하세요" title="대출신청금액" maxlength="7">
+										<div class="unit-txt" id="req_amt_unit">만원</div>
+									</div>
+									
+								</div>
+								<div class="grid2">
+									<div class="form-wrap" style="display: block;">
+										<label for="job_cd_1" class="inp-tit req">직장구분</label>
+										<div class="select-wrap">
+											<select class="job_type0" name="job" id="job_cd_1"  title="직장구분 선택">
+												<option selected="selected" value="">선택</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="grid2">
+									<div class="form-wrap" style="display: block;">
+										<label for="job_medical" class="inp-tit req">직장의료보험구분</label>
+										<div class="select-wrap">
+											<select name="JOB_MEDICAL_INSURANCE_CD" id="job_medical"  title="직장의료보험구분 선택"> 
+												<option selected="selected" value="">의료보험구분을 선택하세요</option>
+											</select>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<input type="hidden" name="EMPLOYEE_CD" id="worker_type" value=""/>   
+							<input type="hidden" name="RESIDENCE_OWN_TYPE_CD" id="residence_own_type_cd" value=""/> 
+							<input type="hidden" name="TERMS_AGREEMENT_YN" id="terms_agreement_yn" />
+							<input type="hidden" name="MARKETING_YN" id="marketing_yn" />
+							<input type="hidden" name="LAND_CH_CD" id="land_ch_cd" />
+							<input type="hidden" name="AUTH_CD" id="auth_cd" />
+							<input type="hidden" name="PROD_NM" id="prod_nm" />
+							<input type="hidden" name="INCOM_ANNUAL" id="incom_annual_hidden" />
+							<input type="hidden" name="REQ_AMT" id="req_amt_hidden" />
+							<input type="hidden" name="JOB_CD" id="job_cd" />
+							<input type="hidden" name="JOB_PERIOD" id="job_period" />
+							<input type="hidden" name="PROD_INTE_TYPE" id="prod_inte_type" value="" />
+							<input type="hidden" name="LOAN_YN" value="Y"/>
+							<input type="hidden" name="CON_CD" id="CON_CD">
+							<input type="hidden" name="CUST_TYPE" id="CUST_TYPE">
+							<input type="hidden" name="CUST_AGE" id="CUST_AGE">
+							<input type="hidden" name="LOAN_AIM" id="LOAN_AIM">
+							<input type="hidden" name="LOAN_AIM_TEXT" id="LOAN_AIM_TEXT">
+							<input type="hidden" name="INCOM_ANNUAL_RANGE" id="INCOM_ANNUAL_RANGE">
+							<input type="hidden" name="INCOM_ANNUAL_TEXT" id="INCOM_ANNUAL_TEXT">
+							<input type="hidden" name="WORTH_NET" id="WORTH_NET">
+							<input type="hidden" name="DEPT_MT" id="DEPT_MT">
+							<input type="hidden" name="CREDIT_SCORE" id="CREDIT_SCORE">
+							<input type="hidden" name="LOAN_RM" id="LOAN_RM">
+							<input type="hidden" name="LOAN_RM_TEXT" id="LOAN_RM_TEXT">
+							<input type="hidden" name="LOAN_PR_EX" id="LOAN_PR_EX">
+							<input type="hidden" name="LOAN_PR_UD" id="LOAN_PR_UD">
+							<input type="hidden" name="COST_FIX" id="COST_FIX">
+							<input type="hidden" name="ADE_REC" id="ADE_REC">
+							<input type="hidden" name="ADE_REC_MT" id="ADE_REC_MT">
+							<input type="hidden" name="REG_DT" id="REG_DT">
+							<input type="hidden" name="TERM_AGREE_YN" id="TERM_AGREE_YN">
+							
+							<input type="hidden" name="CRDT_AGR_DTL_YN" id="CRDT_AGR_DTL_YN" value="N">
+							<input type="hidden" name="PROD_AGR_DTL_YN" id="PROD_AGR_DTL_YN" value="N">
+							<input type="hidden" name="SRVC_AGR_DTL_YN" id="SRVC_AGR_DTL_YN" value="N">
+							<input type="hidden" name="THIRD_AGR_DTL_YN" id="THIRD_AGR_DTL_YN" value="">
+							<input type="hidden" name="MRGG_TP_CD" id="MRGG_TP_CD" value=""/>
+							<input type="hidden" name="GUARANTEE_SERVICE_YN" id="GUARANTEE_SERVICE_YN">
+							<input type="hidden" name="PRODUCT_SERVICE_YN" id="PRODUCT_SERVICE_YN">
+							
+							<input type="hidden" name="PROD_TERMS_AGREE" id="PROD_TERMS_AGREE"><!-- 20210927 -->
+							
+							<input type="hidden" name="SRVC_PRVD_AGR_DTL_YN" id="SRVC_PRVD_AGR_DTL_YN" value="N"><!-- 20220331 -->
+							<input type="hidden" name="PRODUCT_SERVICE_PROVIDE_YN" id="PRODUCT_SERVICE_PROVIDE_YN"><!-- 20220331 -->
+							<input type="hidden" name="MEMBERSHIP_AGREEMENT_YN" id="MEMBERSHIP_AGREEMENT_YN"/>
+							<input type="hidden" name="MEMB_AGR_DTL_YN" id="MEMB_AGR_DTL_YN" value="N"/>
+
+							<input type="hidden" name="INDV_NEW_TRN_PRPS_DVCD" id="INDV_TRN_PRPS_CD">
+							<input type="hidden" name="INDV_TRN_CPT_DVCD" id="INDV_TRN_CPT_CD">
+							<input type="hidden" name="INDV_NEW_TRN_PRPS_APV_ONE_CNTN" id="INDV_TRN_PRPS_APV_ONE" value="N"/>
+							<input type="hidden" name="INDV_NEW_TRN_PRPS_APV_TWO_CNTN" id="INDV_TRN_PRPS_APV_TWO" value="N"/>
+							<input type="hidden" name="INDV_NEW_TRN_PRPS_APV_THR_CNTN" id="INDV_TRN_PRPS_APV_THR" value="N"/>
+						</div>
+						</form>
+
+                        <div class="auth-wrap line-box">
+                            <p class="tit-txt">대출신청 진행을 위해서는 본인인증이 필요합니다.<br>아래의 인증 방식 중 하나를 선택해 인증을 진행해주세요.
+                            <span id="warnText" style="display:none;color:#DC0082;"><br>"사잇돌2"상품은 SGI서울보증보험의 정책에 따라 아래 두가지 방식을 통한 인증만 유효합니다.</span>
+                            </p>
+                            <ul class="auth-list">
+                                <li class="auth1">
+                                	<span class="ctm-radio">
+                                		<input type="radio" name="auth" id="auth1" value="">
+                                    	<label for="auth1"><span>휴대폰인증</span></label>
+                                    </span>
+                                </li>
+                                <li class="auth2">
+                                	<span class="ctm-radio">
+                                		<input type="radio" name="auth" id="auth2" value="">
+                                    	<label for="auth2"><span>공동인증서</span></label>
+                                    </span>
+                                </li>
+                                <li class="auth6">
+                                	<span class="ctm-radio">
+                                		<input type="radio" name="auth" id="auth6" value="">
+                                    	<label for="auth6"><span>금융인증서</span></label>
+                                    </span>
+                                </li><br><br>
+								<!--s:기획현행화 (텍스트만수정)-->
+                                <li class="auth3">
+                                	<span class="ctm-radio">
+                                		<input type="radio" name="auth" id="auth3" value="">
+                                    	<label for="auth3"><span>네이버인증</span></label>
+                                    </span>
+                                </li>
+                                <li class="auth4">
+                                	<span class="ctm-radio">
+                                		<input type="radio" name="auth" id="auth4" value="">
+                                    	<label for="auth4"><span>카카오인증</span></label>
+                                    </span>
+                                </li>
+                                <li class="auth5">
+                                	<span class="ctm-radio">
+                                		<input type="radio" name="auth" id="auth5" value="">
+                                    	<label for="auth5"><span>토스인증</span></label>
+                                    </span>
+                                </li>
+								<!--e:기획현행화 (텍스트만수정)-->
+                            </ul>
+                        </div>
+
+                        <!-- 사전문진  -->
+                        <div class="line-box">
+                        	<div class="question-wrap">
+	                        	<div class="required-wrap">
+									<!-- s:2023-07-14 수정 -->
+			                        <span class="box-txt fw-bold">* 대출신청 전에 아래사항을 꼭 체크하세요.</span>
+									<!-- e:2023-07-14 수정 -->
+			                    </div>
+			                    <div class="question-list bor-line-gray">
+			                        <ol>
+			                            <li>
+			                                <span class="num">1.</span>
+			                                <span class="cont">혹시 지금 진행하시는 대출이, 금융회사직원이라며 전화나 문자를 받아진행하고 계신가요?</span>
+			                                <span class="radio-area">
+			                                	<span class="ctm-radio">
+			                                		<input type="radio" name="radio1" id="radio1Y" value="Y">
+			                                    	<label for="radio1Y">예</label>
+			                                    </span>
+			                                    <span class="ctm-radio">
+			                                    	<input type="radio" name="radio1" id="radio1N" value="N">
+			                                    	<label for="radio1N">아니오</label>
+			                                    </span>
+			                                </span>
+			                            </li>
+			                            <li>
+			                                <span class="num">2.</span>
+			                                <span class="cont">햇살론 등 저금리의 서민지원대출로 바꿔준다고 해서 대출을 받으라고 하던가요?</span>
+			                                <span class="radio-area">
+			                                	<span class="ctm-radio">
+			                                		<input type="radio" name="radio2" id="radio2Y" value="Y">
+			                                    	<label for="radio2Y">예</label>
+			                                    </span>
+			                                    <span class="ctm-radio">
+			                                    	<input type="radio" name="radio2" id="radio2N" value="N">
+			                                    	<label for="radio2N">아니오</label>
+			                                    </span>
+			                                </span>
+			                            </li>
+			                            <li>
+			                                <span class="num">3.</span>
+			                                <span class="cont">혹시 대출을 받고 바로 상환하면 신용등급이 올라 저금리로 대출이 가능하다고 하던가요?</span>
+			                                <span class="radio-area">
+			                                	<span class="ctm-radio">
+			                                		<input type="radio" name="radio3" id="radio3Y" value="Y">
+			                                    	<label for="radio3Y">예</label>
+			                                    </span>
+			                                    <span class="ctm-radio">
+			                                    	<input type="radio" name="radio3" id="radio3N" value="N">
+			                                    	<label for="radio3N">아니오</label>
+			                                    </span>
+			                                </span>
+			                            </li>
+			                            <li>
+			                                <span class="num">4.</span>
+			                                <span class="cont">출처가 불분명한 어플리케이션을 설치하셨습니까?</span>
+			                                <span class="radio-area">
+			                                	<span class="ctm-radio">
+			                                		<input type="radio" name="radio4" id="radio4Y" value="Y">
+			                                    	<label for="radio4Y">예</label>
+			                                    </span>
+			                                    <span class="ctm-radio">
+			                                    	<input type="radio" name="radio4" id="radio4N" value="N">
+			                                    	<label for="radio4N">아니오</label>
+			                                    </span>
+			                                </span>
+			                            </li>
+			                            <li>
+			                                <span class="num">5.</span>
+			                                <span class="cont">검찰 등을 사칭하는 자에게 개인정보를 제공하셨습니까?</span>
+			                                <span class="radio-area">
+			                                	<span class="ctm-radio">
+			                                		<input type="radio" name="radio5" id="radio5Y" value="Y">
+			                                    	<label for="radio5Y">예</label>
+			                                    </span>
+			                                    <span class="ctm-radio">
+			                                    	<input type="radio" name="radio5" id="radio5N" value="N">
+			                                    	<label for="radio5N">아니오</label>
+			                                    </span>
+			                                </span>
+			                            </li>
+			                        </ol>
+			                    </div>
+								<!--s:기획현행화-->
+			                    <div class="cts-box voice-wrap">
+								<!--e:기획현행화-->	
+									<!-- s:2023-07-14 수정 -->
+			                    	<p class="box-info">보이스피싱 피해신고</p>
+									<!-- e:2023-07-14 수정 -->
+									<ul class="boxline-wrap">
+										<li>
+											<p class="box-line"><span>금융감독원 콜센터</span><strong>1332</strong></p>
+										</li>
+										<li>
+											<p class="box-line"><span>경찰청</span><strong>112</strong></p>
+										</li>
+									</ul>
+									<p class="box-txt">위의 항목 중 단 하나라도 해당이 된다면 금융사기(보이스피싱)가 의심됩니다.<br>금융사기 예방을 위해 주변 지인에게 금융사기(보이스피싱) 여부를 확인받거나<br>당행 대표번호(1877-9900)로 연락하여 직원에게 상담을 요청하거나</p>
+									<!-- s:2023-07-14 수정 -->
+									<div class="sign-area cts-txt-big">
+										<p class="fw-bold">위 연락처로 문의주세요.</p>
+									</div>
+									<!-- e:2023-07-14 수정 -->
+			                    </div>
+			                    <div class="sign-area cts-txt-big">
+									<!-- s: 2023-07-14 수정 -->
+			                        <p class="fc-black">상기 보이스피싱 예방 문진 내용을 읽어보고 해당사항이 있는지 여부를 직접 입력하였음을 확인합니다.</p>
+									<p class="sign-input">
+										<!--s:기획현행화-->
+										<span class="date fc-black">2023년 5월 2일</span>
+										<!--e:기획현행화-->
+									</p>
+									<!-- s: 2023-07-14 수정 -->
+			                    </div>
+	                        </div>
+                        </div>
+
+                        <div class="line-box agr-terms">
+                        	<div>
+                        		<p class="tit-txt">적합성·적정성원칙 확인서</p>
+                        	</div>
+							<!-- s:2023-07-16 수정 -->
+                        	<div class="cust_terms_contents">
+							<!-- e:2023-07-16 수정 -->
+                       			<script>
+								$(document).ready(function(){
+									$(".agr-terms > .cust_terms_contents").load("inc_terms.html");
+								});
+								</script>
+                        	</div>
+                        </div>
+
+                        <div class="line-box" id="inc_indv_trn_cnfr_div">
+                        	<div>
+                        		<p class="tit-txt">고객거래확인</p>
+                        	</div>
+							<!-- s:2023-07-16 수정 -->
+                        	<div class="cust_terms_contents">
+							<!-- e:2023-07-16 수정 -->
+                       			<script>
+								$(document).ready(function(){
+									$("#inc_indv_trn_cnfr_div > .cust_terms_contents").load("inc_indv_trn_cnfr.html");
+								});
+								</script>
+                        	</div>
+                        </div>
+
+						<div class="line-box">
+							<!-- s 디자인현행화 -->
+							<div class="agree-wrap mt0">
+							<!-- e:디자인현행화 -->
+								<p class="tit-txt">대출신청을 위한 약관에 동의하시겠습니까?</p>
+								<!-- s:2023-07-14 수정 -->
+								<div class="agree-area bor-line-gray">
+									<div class="agree-cts">
+									 <div class="all-agree">
+											<span class="ctm-check">
+												<input type="checkbox" name="check" id="all-check" value="">
+												<label for="all-check">아래의 다음 필수약관에 모두 동의합니다.</label>
+											</span>
+											<button type="button" name="button" id="btnAgreemenAll" class="btn-normal tiny hide" data-tooltip="agreementall-layer">자세히보기</button>
+										</div>
+										<div class="items-wrap">
+											<!-- s:기획현행화 -->
+			                            	<div class="mt20 mb20 fc-black">※열람하실 동의서 유형을 선택해 주시기 바랍니다.</div>
+											<!-- e:기획현행화-->
+											<span class="radio-area">
+												<!-- s:디자인현행화 -->
+												<label for="agr_dtl_yn_1" class="radio r-on mr10"><input type="radio" name="agr_dtl_yn" id="agr_dtl_yn_1" value="N" checked="checked">요약동의서</label>
+												<!-- e: 디자인현행화 -->
+												<label for="agr_dtl_yn_2" class="radio"><input type="radio" name="agr_dtl_yn" id="agr_dtl_yn_2" value="Y">상세동의서</label>
+											</span>
+										</div>
+										<div class="agree-box">
+											<div class="items-wrap" id='agreementLayer1'><!--<div class="items-wrap" id='${CODE_T000800001}'>-->
+												<div class="items">
+													<div class="item-check">
+														<div>
+															<span class="ctm-check">
+																<input type="checkbox" name="check" id="agree1" value="">
+																<!--s:디자인현행화-->
+																<label for="agree1"><span class="chk_span">[필수] 개인(신용)정보 조회 동의서</span></label>
+																<!--e:디자인현행화-->
+															</span>
+
+															<!-- s: 디자인현행화 -->
+															<p class="item-tit"><button type="button" name="button" id="btnAgree1" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+															<!-- e: 디자인현행화 -->
+
+															<!-- s: 2023-06-05 수정 전 -->
+															<!--<p class="item-tit"><label for="agree1"><span class="chk_span"></span></label><button type="button" name="button" id="btnAgree1" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>-->
+															<!-- e: 2023-06-05 수정 전 -->
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="items-wrap" id='agreementLayer2'><!--<div class="items-wrap" id='${CODE_T000800002}'>-->
+												<div class="items">
+													<div class="item-check">
+														<div>
+															<span class="ctm-check">
+																<input type="checkbox" name="check" id="agree5" value="">
+																<!--s: 디자인현행화-->
+																<label for="agree5"><span class="chk_span">[필수] 개인(신용)정보 수집·이용·제공 동의서(여신 금융 거래)</span></label>
+																<!--e: 디자인현행화-->
+															</span>
+
+															<!--s: 디자인현행화-->
+															<p class="item-tit"><button type="button" name="button" id="btnAgree2" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+															<!--e: 디자인현행화-->
+
+															<!-- s: 2023-06-05 수정 전 -->
+															<!--<p class="item-tit"><label for="agree5"><span class="chk_span"></span></label><button type="button" name="button" id="btnAgree2" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>-->
+															<!-- e: 2023-06-05 수정 전 -->
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="items-wrap" id='manualLayer01'><!--<div class="items-wrap" id='${CODE_T000800004}'>-->
+												<div class="items">
+													<div class="item-check">
+														<div>
+															<span class="ctm-check">
+																<input type="checkbox" name="check" id="agree9" value="">
+																<!-- s: 디자인현행화 -->
+																<label for="agree9"><span class="chk_span">[필수] 상품설명서(신용대출용)</span></label>
+																<!-- e: 디자인현행화 -->
+															</span>
+															<!-- s: 디자인현행화 -->
+															<p class="item-tit"><button type="button" name="button" id="btnAgree9" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+															<!-- e: 디자인현행화 -->
+
+															<!-- s: 2023-06-05 수정 전 -->
+															<!-- <p class="item-tit"><label for="agree9"><span class="chk_span"></span></label><span class="chk_span"></span><button type="button" name="button" id="btnAgree9" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p> -->
+															<!-- e: 2023-06-05 수정 전 -->
+														</div>
+													</div>
+												</div>
+												<div class="subcheck-area guide-means add_class2">
+			                                    	<div class="sub-box">
+			                                    		<div>
+			                                    			<span class="ctm-check checked">
+																<input type="checkbox" name="check" id="prod_terms_agree0" class="prod_terms_agree0" value="" disabled="">
+																<label for="prod_terms_agree0">금리인하요구권에 대한 상기의 설명을 확인하였습니다.</label>
+															</span>
+			                                    		</div>
+														<div>	
+															<p class="check-tit">대출거절사유 고지신청서 <br>
+															<span class="radio-area">
+																<span class="ctm-radio">
+																	<input type="radio" name="prod_terms_agree4" id="prod_terms_agree4_1" value="Y">
+																	<label for="prod_terms_agree4_1">신청</label>
+																</span>
+																<span class="ctm-radio checked">
+																	<input type="radio" name="prod_terms_agree4" id="prod_terms_agree4_2" value="N" >
+																	<label for="prod_terms_agree4_2">신청하지 않음</label>
+																</span>
+															</span>
+														</div>
+														<div>
+															<p class="check-tit">대학생·청년층확인서 <br>
+															<span class="radio-area">
+																<span class="ctm-radio">
+																	<!--s: 디자인현행화-->
+																	<input type="radio" name="prod_terms_agree5" id="prod_terms_agree5_1" value="Y">
+																	<label for="prod_terms_agree5_1">설명 받았음</label>
+																</span>
+																<span class="ctm-radio checked">
+																	<input type="radio" name="prod_terms_agree5" id="prod_terms_agree5_2" value="N">
+																	<label for="prod_terms_agree5_2">설명 받지 않았음</label>
+																	<!--e: 디자인현행화-->
+																</span>
+															</span>
+														</div>
+				                                    </div>
+			                                    </div>
+											</div>
+											<div class="items-wrap" id='manualLayer02'><!--<div class="items-wrap" id='${CODE_T000800005}'>-->
+												<div class="items">
+													<div class="item-check">
+														<div>
+															<span class="ctm-check">
+																<input type="checkbox" name="check" id="agree19" value="">
+																<!--s:디자인현행화-->
+																<label for="agree19"><span class="chk_span">[필수] 상품설명서(리테일대출용)</span></label>
+																<!--e:디자인현행화-->
+															</span>
+
+															<!--s:디자인현행화-->
+															<p class="item-tit"><button type="button" name="button" id="btnAgree19" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+															<!--e:디자인현행화-->
+
+															<!-- s: 2023-06-05 수정 전 -->
+															<!--<p class="item-tit"><label for="agree19"><span class="chk_span"></span></label><button type="button" name="button" id="btnAgree19" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>-->
+															<!-- e: 2023-06-05 수정 전 -->
+
+														</div>
+													</div>
+												</div>
+												<div class="subcheck-area guide-means add_class_2">
+			                                    	<div class="sub-box">
+			                                    		<div>
+			                                    			<span class="ctm-check checked">
+																<input type="checkbox" name="check" id="prod_terms_agree0" class="prod_terms_agree0" value="" checked disabled="disabled">
+																<label for="prod_terms_agree0">금리인하요구권에 대한 상기의 설명을 확인하였습니다.</label>
+															</span>
+			                                    		</div>
+														<div>	
+															<p class="check-tit">대출거절사유 고지신청서 <br>
+															<span class="radio-area">
+																<span class="ctm-radio">
+																	<input type="radio" name="prod_terms_agree7" id="prod_terms_agree7_1" value="Y">
+																	<label for="prod_terms_agree7_1">신청</label>
+																</span>
+																<span class="ctm-radio checked">
+																	<input type="radio" name="prod_terms_agree7" id="prod_terms_agree7_2" value="N" checked>
+																	<label for="prod_terms_agree7_2">신청하지 않음</label>
+																</span>
+															</span>
+														</div>
+				                                    </div>
+			                                    </div>
+											</div>
+											<div class="items-wrap" id='agreementLayer5'><!--<div class="items-wrap" id='${CODE_T000800006}'>-->
+												<div class="items">
+													<div class="item-check">
+														<div>
+															<span class="ctm-check">
+																<input type="checkbox" name="check" id="agree13" value="" >
+																<!--s:디자인현행화-->
+																<label for="agree13"><span class="chk_span">[필수] 개인(신용)정보 조회동의서(서민금융진흥원)</span></label>
+																<!--e:디자인현행화-->
+															</span>
+
+															<!--s:디자인현행화-->
+															<p class="item-tit"><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+															<!--e:디자인현행화-->
+
+															<!-- s: 2023-06-05 수정 전 -->
+															<!--<p class="item-tit"><label for="agree13"><span class="chk_span"></span></label><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>-->
+															<!-- s: 2023-06-05 수정 전 -->
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="items-wrap" id='agreementLayer6'><!--<div class="items-wrap" id='${CODE_T000800007}'>-->
+												<div class="items">
+													<div class="item-check">
+														<div>
+															<span class="ctm-check">
+																<input type="checkbox" name="check" id="agree16" value="">
+																<!--s:디자인현행화-->
+																<label for="agree16"><span class="chk_span">[필수] 개인(신용)정보 수집·이용·제공 동의서(서민금융진흥원)</span></label>
+																<!--e:디자인현행화-->
+															</span>
+
+															<!--s:디자인현행화-->
+															<p class="item-tit"><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+															<!--e:디자인현행화-->
+
+															<!-- s: 2023-06-05 수정 전 -->
+															<!--<p class="item-tit"><label for="agree16"><span class="chk_span"></span></label><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>-->
+															<!-- e: 2023-06-05 수정 전 -->
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="items-wrap" id='agreementLayer7'><!--<div class="items-wrap" id='${CODE_T000800008}'>-->
+												<div class="items">
+													<div class="item-check">
+														<div>
+															<span class="ctm-check">
+																<input type="checkbox" name="check" id="agree21" value="" >
+																<!--s:디자인현행화-->
+																<label for="agree21"><span class="chk_span">[필수] 개인(신용)정보 및 기업(신용)정보 조회·수집·이용·제공과 행정·정보공동이용, 전자금융거래확인서 발급을 위한 동의서</span></label>
+																<!--e:디자인현행화-->
+															</span>
+
+															<!--s:디자인현행화-->
+															<p class="item-tit"><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+															<!--e:디자인현행화-->
+
+															<!-- s: 2023-06-05 수정 전 -->
+															<!--<p class="item-tit"><label for="agree21"><span class="chk_span"></span></label><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>-->
+															<!-- s: 2023-06-05 수정 전 -->
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="items-wrap" id='agreementLayer8'><!--<div class="items-wrap" id='${CODE_T000800009}'>-->
+												<div class="items">
+													<div class="item-check">
+														<div>
+															<span class="ctm-check">
+																<input type="checkbox" name="check" id="agree24" value="" >
+																<!--s:디자인현행화-->
+																<label for="agree24"><span class="chk_span">[필수] 계약 체결 · 이행 등을 위한 필수 동의서(개인금융성 신용보험용)</span></label>
+																<!--e:디자인현행화-->
+															</span>
+
+															<!--s:디자인현행화-->
+															<p class="item-tit"><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+															<!--e:디자인현행화-->
+
+															<!-- s: 2023-06-05 수정 전 -->
+															<!--<p class="item-tit"><label for="agree24"><span class="chk_span"></span></label><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>-->
+															<!-- e: 2023-06-05 수정 전 -->
+														</div>
+													</div>
+												</div>
+												<p class="rice accent3">상기 사항에 동의 시, 저금리 정책 상품의 결과조회 및 취급이 가능하며 동의에 의한 개인(신용)정보 조회는 귀하의 신용등급에 영향을 미치지 않습니다. 단, 당행의 신용평가시스템 및 해당 정책상품 실행기관의 심사기준과 개인의 신용도에 따라 대출여부가 결정됩니다.</p>
+											</div>
+											<div class="items-wrap" id='agreementLayer4'><!--<div class="items-wrap" id='${CODE_T000800010}'>-->
+												<div class="items">
+													<div class="item-check">
+														<div>
+															<span class="ctm-check">
+																<input type="checkbox" name="check" id="agree11" value="">
+																<!--s:디자인현행화-->
+																<label for="agree11"><span class="chk_span">[필수] CMS 출금이체 동의</span></label>
+																<!--e:디자인현행화-->
+															</span>
+
+															<!--s:디자인현행화-->
+															<p class="item-tit"><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+															<!--e:디자인현행화-->
+
+															<!-- s: 2023-06-05 수정 전 -->
+															<!--<p class="item-tit"><label for="agree11"><span class="chk_span"></span></label><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>-->
+															<!-- e: 2023-06-05 수정 전 -->
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="items-group" style="border-bottom:0;">
+											<div class="all-chAgree all-agree" style="text-align: center;">
+												<span class="ctm-check">
+													<input type="checkbox" name="check" id="all-ch-check" value="">
+													<label for="all-ch-check">아래의 다음 선택약관에 모두 동의합니다.</label>
+												</span>
+												<button type="button" name="button" id="btnAgreemenChall" class="btn-normal tiny hide" data-tooltip="agreementChall-layer">자세히보기</button>
+											</div><br>
+												<div class="items-wrap" id='agreementLayer3'><!--<div class="items-wrap" id='${CODE_T000800003}'>-->
+													<div class="items">
+														<div class="item-check">
+															<div>
+																<span class="ctm-check">
+																	<input type="checkbox" name="check" id="agree6" value="">
+																	<!--s:디자인현행화-->
+																	<label for="agree6"><span class="chk_span">[선택] 개인(신용)정보 수집·이용·제공 동의서(상품서비스 안내)</span></label>
+																	<!--e:디자인현행화-->
+																</span>
+
+																<!--s:디자인현행화-->
+																<p class="item-tit"><button type="button" name="button" id="btnAgree3" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+																<!--e:디자인현행화-->
+
+																<!-- s: 2023-06-05 수정 전 -->
+																<!--<p class="item-tit"><label for="agree6"><span class="chk_span"></span></label><button type="button" name="button" id="btnAgree3" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>-->
+																<!-- e: 2023-06-05 수정 전 -->
+
+															</div>
+														</div>
+													</div>
+													<div class="guide-means" id="means_sub">
+														<div class="">
+															<div style="margin-top:0px !important;">
+																<div>
+																	<span class="ctm-check">
+																		<input type="checkbox" name="check" id="agree37" class="agree37" value="">
+																		<label for="agree37">위 개인(신용)정보 수집·이용에 동의하십니까?&nbsp;&nbsp;<img style="width:30px; height: 20px; float: right;" src="../../../resources/images/common/T000800003_icon_1.gif" alt="수집, 이용에 관한사항  평가등급 보통"/></label>
+																	</span><br>
+																	<span class="ctm-check">
+																		<input type="checkbox" name="check" id="agree7" class="agree7" value="">
+																		<label for="agree7">전자적 전송매체를 통한 광고성 정보의 수신을 동의하십니까?</label>
+																	</span><br>
+																	<!--s:기획현행화-->
+																	<div style="margin-left:25px;" ><br>
+																	<!--e:기획현행화-->
+																		<strong>상품서비스 안내수단</strong><br>
+																		<span class="ctm-check">
+																			<input type="checkbox" name="guide" id="guide-all" class="guide-all" value="">
+																			<label for="guide-all">전체</label>
+																		</span><br>
+																		<div class="type">
+																			<span class="ctm-check checked">
+																				<input type="checkbox" name="guide" id="guide1" value="" checked>
+																				<label for="guide1">문자메시지</label>
+																			</span>
+																			<span class="ctm-check">
+																				<input type="checkbox" name="guide" id="guide2" value="">
+																				<label for="guide2">이메일</label>
+																			</span>
+																			<span class="ctm-check">
+																				<input type="checkbox" name="guide" id="guide3" value="">
+																				<label for="guide3">전화</label>
+																			</span>
+																			<span class="ctm-check">
+																				<input type="checkbox" name="guide" id="guide4" value="">
+																				<label for="guide4">DM</label>
+																			</span>
+																		</div>
+																		<input type="hidden" name="guide" id="guide5" value="N"><!-- 20210608 전체선택 체크를 위해 자리이동 -->
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="">
+															<div style="margin-top:0px !important;">
+																<span class="ctm-check">
+																	<input type="checkbox" name="check" id="agree8" class="agree8" value="">
+																	<label for="agree8">제공 항목에 관한 개인(신용)정보 제공 동의여부</label>
+																</span><br>
+																<div style="margin-left:25px;">
+																	<div>
+																		<span class="ctm-check">
+																			<input type="checkbox" name="guide" id="agree12" class="agree12" value="">
+																			<label for="agree12">위 개인신용정보 제공에 동의하십니까?&nbsp;&nbsp;<img style="width:60px; height: 20px; float: right;" src="../../../resources/images/common/T000800003_icon_3.gif" alt="제공에 관한 사항 평가등급 다소안심"/></label>
+																		</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!--S// 20220331 -->
+												<div class="items-wrap" id='agreementLayer17'><!-- <div class="items-wrap" id='${CODE_T000800022}'> -->
+													<div class="items">
+														<div class="item-check">
+															<div>
+																<span class="ctm-check">
+																	<input type="checkbox" name="check" id="agree29" value="">
+																	<!--s:디자인현행화-->
+																	<label for="agree29"><span class="chk_span">[선택] 개인(신용)정보 수집·이용·제공 동의서 [맞춤형 상품 제공](요약동의서)</span></label>
+																	<!--e:디자인현행화-->
+																</span>
+
+																<!--s:디자인현행화-->
+																<p class="item-tit"><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+																<!--e:디자인현행화-->
+
+																<!-- s: 2023-06-05 수정 전 -->
+																<!--<p class="item-tit"><label for="agree29"><span class="chk_span"></span></label><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>-->
+																<!-- e: 2023-06-05 수정 전 -->
+
+															</div>
+														</div>
+													</div>
+													<div class="guide-means" id="means_sub3">
+														<div class="">
+															<div style="margin-top:0px !important;">
+																<div>
+																	<span class="ctm-check">
+																		<input type="checkbox" name="check" id="agree45" class="agree45" value="">
+																		<label for="agree45">개인(신용)정보 수집·이용에 동의하십니까?</label>
+																	</span><br>
+																	<span class="ctm-check">
+																		<input type="checkbox" name="check" id="agree46" class="agree45" value="">
+																		<label for="agree45">개인(신용)정보 제공에 동의하십니까?</label>
+																	</span><br>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!--E// 20220331 -->
+												<div class="items-wrap" id='agreementLayer16'><!--<div class="items-wrap" id='${CODE_T000800016}'>-->
+													<div class="items">
+														<div class="item-check">
+															<div>
+																<span class="ctm-check">
+																	<input type="checkbox" name="check" id="agree26" value="">
+																	<!--s: 디자인현행화-->
+																	<label for="agree26"><span class="chk_span">[선택] 개인(신용)정보 수집·이용 동의서(보증료 우대 서비스)</span></label>
+																	<!--e: 디자인현행화-->
+																</span>
+																
+																<!--s: 디자인현행화-->
+																<p class="item-tit"><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+																<!--e: 디자인현행화-->
+
+																<!-- s: 2023-06-05 수정 전 -->
+																<!--<p class="item-tit"><label for="agree26"><span class="chk_span"></span></label><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>-->
+																<!-- e: 2023-06-05 수정 전 -->
+
+															</div>
+														</div>
+													</div>
+													<div class="guide-means" id="means_sub1">
+														<div class="">
+															<div style="margin-top:0px !important;">
+																<div>
+																	<span class="ctm-check">
+																		<input type="checkbox" name="check" id="agree40" class="agree40" value="">
+																		<label for="agree40">고유식별정보 수집·이용에 동의하십니까?</label>
+																	</span><br>
+																	<span class="ctm-check">
+																		<input type="checkbox" name="check" id="agree41" class="agree40" value="">
+																		<label for="agree40">개인(신용)정보 수집·이용에 동의하십니까?&nbsp;&nbsp;<img style="width:30px; height: 20px; float: right;" src="../../../resources/images/common/T000800003_icon_2.gif" alt="일반 개인정보 수집,이용에 관한 사항 평가등급 안심"/></label>
+																	</span><br>
+																	<span class="ctm-check">
+																		<input type="checkbox" name="check" id="agree42" class="agree40" value="">
+																		<label for="agree40">개인정보 수집·이용에 동의하십니까?&nbsp;&nbsp;<img style="width:30px; height: 20px; float: right;" src="../../../resources/images/common/T000800003_icon_2.gif" alt="건강정보 수집,이용에 관한 사항 평가등급 안심"/></label>
+																	</span><br>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="items-wrap" id='agreementLayer17'><!-- <div class="items-wrap" id='${CODE_T000800017}'> -->
+													<div class="items">
+														<div class="item-check">
+															<div>
+																<span class="ctm-check">
+																	<input type="checkbox" name="check" id="agree27" value="">
+																	<!--s:디자인현행화-->
+																	<label for="agree27"><span class="chk_span">[선택] 개인(신용)정보 수집·이용 동의서(상품서비스 안내 등)</span></label>
+																	<!--e:디자인현행화-->
+																</span>
+
+																<!--s:디자인현행화-->
+																<p class="item-tit"><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+																<!--e:디자인현행화-->
+
+																<!-- s: 2023-06-05 수정 전 -->
+																<!--<p class="item-tit"><label for="agree27"><span class="chk_span"></span></label><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>-->
+																<!-- e: 2023-06-05 수정 전 -->
+
+															</div>
+														</div>
+													</div>
+													<div class="guide-means" id="means_sub2">
+														<div class="">
+															<div style="margin-top:0px !important;">
+																<div>
+																	<span class="ctm-check">
+																		<input type="checkbox" name="check" id="agree43" class="agree43" value="">
+																		<label for="agree43">개인(신용)정보 수집·이용에 동의하십니까?&nbsp;&nbsp;<img style="width:30px; height: 20px; float: right;" src="../../../resources/images/common/T000800003_icon_1.gif" alt="일반 개인정보 수집,이용에 관한 사항 평가등급 보통"/></label>
+																	</span><br>
+																	<span class="ctm-check">
+																		<input type="checkbox" name="check" id="agree44" class="agree43" value="">
+																		<label for="agree43">광고성 정보의 수신을 동의 하시겠습니까?</label>
+																	</span><br>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="items-wrap" id='agreementLayer25'><!-- <div class="items-wrap" id='${CODE_T001000002}'> -->
+													<div class="items">
+														<div class="item-check">
+															<div>
+																<span class="ctm-check">
+																	<input type="checkbox" name="check" id="agree50" value="">
+																	<!--s:디자인현행화-->
+																	<label for="agree50"><span class="chk_span">[선택] 개인(신용)정보 수집·이용·제공·조회 동의서 [멤버십 회원가입 동의]</span></label>
+																	<!--e:디자인현행화-->
+																</span>
+
+																<!--s:디자인현행화-->
+																<p class="item-tit"><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
+																<!--e:디자인현행화-->
+
+																<!-- s: 2023-06-05 수정 전 -->
+																<!--<p class="item-tit"><label for="agree50"><span class="chk_span"></span></label><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>-->
+																<!-- e: 2023-06-05 수정 전 -->
+															</div>
+														</div>
+													</div>
+													<div class="guide-means" id="means_sub4">
+														<div class="">
+															<div style="margin-top:0px !important;">
+																<div>
+																	<span class="ctm-check">
+																		<input type="checkbox" name="check" id="agree51" class="agree51" value="">
+																		<label for="agree51">고려저축은행 멤버십 회원 약관&nbsp;&nbsp;<button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></label>
+																	</span><br>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- <p class="rice">상기 사항에 동의 시, 저금리 정책 상품의 결과조회 및 취급이 가능하며 동의에 의한 개인(신용)정보 조회는 귀하의 신용등급에 영향을 미치지 않습니다. 단, 당행의 신용평가시스템 및 해당 정책상품 실행기관의 심사기준과 개인의 신용도에 따라 대출여부가 결정됩니다.</p> -->
+									
+								</div>
+								<div class="btn-wrap">
+									<button type="button" name="button" class="btn-big navy" >대출신청 완료</button>
+									<button type="button" name="button" class="btn-big gray">새로고침</button>
+								</div>
+								<!-- s:2023-07-14 수정 -->
+							</div>
+						</div>    
+                    </div>
+                </div>
+            </div>
+            <button type="button" name="button" class="btn-circle top ir btn-top">위로</button>
+        </div>
+        <!-- //e: contentsWrap -->
+
+        <!-- s:전체 레이어팝업 -->
+		<div id="agreementallLayer" class="layerpopup pdfLayerpopup agreementall-layer" tabindex="0" data-tooltip-con="agreementall-layer" data-focus="agreementall-layer" data-focus-prev="btn-menu-close">
+			<div class="pop-wrap">
+				<div class="all-agree">* 필수 약관 전체 보기 ( <span class="view"></span> / <span class="total"></span> )</div>
+				<div class="ctrl-box">
+					<button type="button" name="button" class="btn-prev">이전</button>
+					<button type="button" name="button" class="btn-next">다음</button>
+				<button type="button" name="button" class="btn-menu-closePdf tooltip-close" data-focus="btn-menu-close" data-focus-next="agreementall-layer">닫기</button>
+				</div>
+			</div>
+		</div>
+		<!-- //e:전체 레이어팝업 -->
+
+		<!-- //s:선택약관 전체 레이어팝업 -->
+		<div id="agreementChallLayer" class="layerpopup pdfLayerpopup agreementall-layer" tabindex="0" data-tooltip-con="agreementChall-layer" data-focus="agreementChall-layer" data-focus-prev="btn-menu-close">
+			<div class="pop-wrap">
+				<div class="all-agree">* 선택 약관 전체 보기 ( <span class="view1"></span> / <span class="total1"></span> )</div>
+				<div class="ctrl-box">
+					<button type="button" name="button" class="btn-prev">이전</button>
+					<button type="button" name="button" class="btn-next">다음</button>
+					<button type="button" name="button" class="btn-menu-closePdf tooltip-close" data-focus="btn-menu-close" data-focus-next="agreementChall-layer">닫기</button>
+				</div>
+			</div>
+		</div>
+		<!-- //e:선택약관 전체 레이어팝업 -->
+
+		<!-- //s:(필수) -->
+		<div id="manualLayer011" class="layerpopup pdfLayerpopup manual-layer" tabindex="0" data-tooltip-con="manual011-layer" data-focus="manual011-layer" data-focus-prev="btn-menu-close">
+			<div class="pop-wrap">
+				<iframe id="viewer" src="" style="width: 100%;height: 730px;margin-top:30px;"></iframe>
+				<button type="button" name="button" class="btn-menu-closePdf2 tooltip-close" data-focus="btn-menu-close" data-focus-next="manual011-layer">닫기</button>
+			</div>
+		</div>
+		<!-- //e:(필수) -->
+
+		<!-- ********** Include ********** -->
+        <!-- s footerWrap -->
+        <div id="footerWrap">
+            <script>
+			$(document).ready(function(){
+				$("#footerWrap").load("../include/inc_body_footer.html");
+			});
+			</script>
+        </div>
+        <!-- //e:footerWrap -->
+        <!-- ********** //Include ********** -->
+
+    </div>
+    <!-- //e:wrap -->
+	  
+   <!-- ********** Include ********** -->
+
+	<!-- s: bg 영역 삭제 -->
+    <!-- s:bg -->
+    <!--<div class="bg1">
+        <img src="../../../resources/images/common/bg1.gif" alt="">
+    </div>
+    <div class="bg2">
+        <img src="../../../resources/images/common/bg2.gif" alt="">
+    </div>-->
+    <!-- //e:bg -->
+	<!-- e: bg 영역 삭제 -->
+
+    <!-- ********** //Include ********** -->
+
+</body>
+</html>
+
+<script type="text/javascript">
+	var depth1 = -1;//1~3 메뉴순서 없는 메뉴는 메뉴명 기입
+	var depth2 = -1;//없으면 0
+	var depth3 = -1;
+	var tempProdCode = "${PROD_CODE}";
+	
+	var essentialItemArry=[];//20211214 약관 PDF 적용 
+	var optinItemArry=[];//20211214 약관 PDF 적용 
+	var firstOpenEssential = false;//20211214 약관 PDF 적용 
+	var firstOpenoptin = false;//20211214 약관 PDF 적용 
+	var btnFocusTaget; //20220726 웹접근성 관련로직
+	// 해당 페이지에서 처리할 이벤트
+	$(function(){
+		if(tempProdCode=="P999999999"){
+			PageFunc.userProdCode = "P000000014";
+			$("#prod_inte_type").val("P999999999");
+		}else{
+			PageFunc.userProdCode = tempProdCode;
+		}
+		PageFunc.userCustNm = "${CUST_NM}";
+		PageFunc.isMobile = ${isMobile};
+		PageFunc.landChCd = "${LAND_CH_CD}";
+		PageFunc.currentDate = ${date};
+		PageFunc.initPage();
+		document.title = "대출신청 < 대출상품 < 예가람저축은행";
+		
+		termsRadioChangeEvent();
+		
+		//20210927 만31세 이하 대학생·청년층확인서 체크
+		$("#jumin1").on("blur", function(){
+			var value = $(this).val();
+			if(value.length >= 6){
+				value = UtilFunc.getAge(value);
+				$("input[name=prod_terms_agree5]").each(function(){
+					var chkVal = $(this).val();
+					$(this).attr("checked", "");
+					$(this).parent().removeClass("checked");
+					if(value <= 31){
+						if(chkVal == 'Y'){
+							$(this).attr("checked", "checked");
+							$(this).parent().addClass("checked");
+						}
+					}else{
+						if(chkVal == 'N'){
+							$(this).attr("checked", "checked");
+							$(this).parent().addClass("checked");
+						}
+					}
+				});
+			}
+		});
+		//20211214 약관 PDF 적용 
+		$(".contents").find(".agree-wrap").find('.items').find("button").on("click", function (){
+			var btnId = $(this).attr("id");
+			
+			if( (btnId == "btnAgreemenAll") || (btnId == "btnAgreemenChall") ){
+				return;
+			}
+			
+			var value = $(this).val();
+			var nameValue = $(this).parent().find("label").find("span").text();//20220726 pdfview title추가
+			if(value !=""){
+				var viewerElement = document.getElementById("viewer"); 
+				var streamdocs = new StreamDocs({
+					element : viewerElement,
+				});
+				
+				$("#viewer").attr("src","/resources/pdfjs-2/web/viewer.html?file=/resources/pdfjs-2/"+value);
+				$("#viewer").attr("title",nameValue);//20220726 pdfview title추가
+			}
+		});
+
+		$(".contents").find(".agree-wrap").find('.guide-means').find("button").on("click", function (){
+			var btnId = $(this).attr("id");
+			
+			if( (btnId == "btnAgreemenAll") || (btnId == "btnAgreemenChall") ){
+				return;
+			}
+			
+			var value = $(this).val();
+			var nameValue = $(this).parent().find("label").find("span").text();//20220726 pdfview title추가
+			if(value !=""){
+				var viewerElement = document.getElementById("viewer"); 
+				var streamdocs = new StreamDocs({
+					element : viewerElement,
+				});
+				
+				$("#viewer").attr("src","/resources/pdfjs-2/web/viewer.html?file=/resources/pdfjs-2/"+value);
+				$("#viewer").attr("title",nameValue);//20220726 pdfview title추가
+			}
+		});
+
+		$("#agree51").on("change", function (){
+            if ($(this).is(':checked')) {
+				$(this).siblings('label').find('button').eq(0).trigger('click');
+            }
+		});
+
+		//20211214 약관 PDF 적용 
+		$("#btnAgreemenAll").on("click", function (){
+			btnFocusTaget = $("#all-check");
+			if(!firstOpenEssential){
+				var divId = essentialItemArry[0];
+				if(divId !=""){
+					var value = $("#"+divId+"").find("button").val();
+					var nameValue = $("#"+divId+"").find("button").parent().find("label").find("span").text();//20220726 pdfview title추가
+					
+					var viewerElement = document.getElementById("viewerAllL0"); 
+					var streamdocs = new StreamDocs({
+						element : viewerElement,
+					});
+					$("#viewerAllL0").attr("src","/resources/pdfjs-2/web/viewer.html?file=/resources/pdfjs-2/"+value);
+					$("#viewerAllL0").attr("title",nameValue);//20220726 pdfview title추가
+				}
+				firstOpenEssential = true;
+			}
+		});
+		//20211214 약관 PDF 적용 
+		$("#btnAgreemenChall").on("click", function (){
+			btnFocusTaget = $("#all-ch-check");
+			if(!firstOpenoptin){
+				var divId = optinItemArry[0];
+				if(divId !=""){
+					var value = $("#"+divId+"").find("button").val();
+					var nameValue = $("#"+divId+"").find("button").parent().find("label").find("span").text();//20220726 pdfview title추가
+					
+					var viewerElement = document.getElementById("viewerChallL0"); 
+					var streamdocs = new StreamDocs({
+						element : viewerElement,
+					});
+					$("#viewerChallL0").attr("src","/resources/pdfjs-2/web/viewer.html?file=/resources/pdfjs-2/"+value);
+					$("#viewerChallL0").attr("title",nameValue);//20220726 pdfview title추가
+				}
+				firstOpenoptin=true;
+			}
+		});
+		
+		//20211214 상세/요약 약관 분기세팅
+		$("input:radio[name='agr_dtl_yn']").unbind("change").bind("change",function(){
+			PageFunc.setLoanTermsCheck();
+			$("#CRDT_AGR_DTL_YN").val($(this).val());
+			$("#PROD_AGR_DTL_YN").val($(this).val());
+			$("#SRVC_AGR_DTL_YN").val($(this).val());
+			$("#SRVC_PRVD_AGR_DTL_YN").val($(this).val());
+			$("#MEMB_AGR_DTL_YN").val($(this).val());
+		});
+		
+		$("#agr_dtl_yn_1").parent().addClass("r-on");
+		
+		//20220726 웹접근성 관련로직
+		$(".btn-normal").on("click", function(){
+			var dataT = $(this).attr("data-tooltip");
+			if(dataT=="manual011-layer"){
+				btnFocusTaget = $(this);
+			}
+		});
+	});
+
+	// 인풋 항목이 있는 경우 유효성 체크
+	var formValidate = [
+		{id : 'loan_prod', 				fieldName : '대출상품', 			validate : [ 'NotNull'] 						,authType : ['auth1','auth2', 'auth3', 'auth4', 'auth5', 'auth6']}
+	,	{id : 'name', 					fieldName : '성명', 				validate : [ 'NotNull', 'Char'] 				,authType : ['auth2', 'auth4', 'auth6']}
+	,	{id : 'jumin1', 				fieldName : '주민등록번호 앞자리', 	validate : [ 'NotNull', 'Number','isjumin1'] 	,authType : ['auth2', 'auth4', 'auth6']}
+	,	{id : 'SSN2', 					fieldName : '주민등록번호 뒷자리', 	validate : [ 'NotNull'] 						,authType : ['auth2', 'auth4', 'auth6']}
+	,	{id : 'phone', 					fieldName : '통신사',				validate : [ 'NotNull'] 						,authType : ['auth4']}
+	,	{id : 'phone_front', 			fieldName : '핸드폰번호 앞자리',		validate : [ 'NotNull', 'Number'] 				,authType : ['auth4']}
+	,	{id : 'phone1', 				fieldName : '핸드폰번호 가운데자리',	validate : [ 'NotNull', 'Number'] 				,authType : ['auth4']}
+	,	{id : 'phone2', 				fieldName : '핸드폰번호 뒷자리',		validate : [ 'NotNull', 'Number'] 				,authType : ['auth4']}
+	,	{id : 'phone_hidden', 			fieldName : '핸드폰번호',			validate : [ 'TelNo'] 							,authType : ['auth4']}
+	,	{id : 'radio1',					fieldName : '첫번째항목',			validate : [ 'NotNull' ]  						,authType : ['auth1','auth2', 'auth3', 'auth4', 'auth5', 'auth6'], 		type : 'radio'	, message : '을 선택해주세요'		}
+	,	{id : 'radio2',					fieldName : '두번째항목',			validate : [ 'NotNull' ]  						,authType : ['auth1','auth2', 'auth3', 'auth4', 'auth5', 'auth6'], 		type : 'radio'	, message : '을 선택해주세요'		}
+	,	{id : 'radio3',					fieldName : '세번째항목',			validate : [ 'NotNull' ]  						,authType : ['auth1','auth2', 'auth3', 'auth4', 'auth5', 'auth6'], 		type : 'radio'	, message : '을 선택해주세요'		}
+	,	{id : 'radio4',					fieldName : '네번째항목',			validate : [ 'NotNull' ] 						,authType : ['auth1','auth2', 'auth3', 'auth4', 'auth5', 'auth6'],		type : 'radio'	, message : '을 선택해주세요'		}
+	,	{id : 'radio5',					fieldName : '다섯번째항목',			validate : [ 'NotNull' ] 						,authType : ['auth1','auth2', 'auth3', 'auth4', 'auth5', 'auth6'],		type : 'radio'	, message : '을 선택해주세요'		}
+	,	{id : 'mrgg_tp_cd_radio',		fieldName : '담보종류',			validate : [ 'NotNull' ]  						,authType : [''], 		type : 'radio'	, message : '를 선택해주세요'		,  inputType : [ '${LOAN_INPUT_CODE07}']}
+	,	{id : 'incom_annual_format', 	fieldName : '연소득',				validate : [ 'NotNull'] 						,authType : [''],  inputType : [ '${LOAN_INPUT_CODE01}', '${LOAN_INPUT_CODE02}', '${LOAN_INPUT_CODE03}', '${LOAN_INPUT_CODE04}', '${LOAN_INPUT_CODE05}','${LOAN_INPUT_CODE06}']}
+	,	{id : 'req_amt', 				fieldName : '대출신청금액',			validate : [ 'NotNull'] 						,authType : [''],  inputType : [ '${LOAN_INPUT_CODE01}', '${LOAN_INPUT_CODE02}', '${LOAN_INPUT_CODE03}', '${LOAN_INPUT_CODE04}', '${LOAN_INPUT_CODE05}','${LOAN_INPUT_CODE06}','${LOAN_INPUT_CODE07}','${LOAN_INPUT_CODE08}']}
+	,	{id : 'jobname', 				fieldName : '직장명',				validate : [ 'NotNull'] 						,authType : [''],  inputType : [ '${LOAN_INPUT_CODE03}']}
+	,	{id : 'job_join_day', 			fieldName : '입사일',				validate : [ 'NotNull'] 						,authType : [''],  inputType : [ '${LOAN_INPUT_CODE01}', '${LOAN_INPUT_CODE03}', '${LOAN_INPUT_CODE04}', '${LOAN_INPUT_CODE06}']}
+	,	{id : 'job_cd_1', 				fieldName : '직장구분',			validate : [ 'NotNull'] 						,authType : [''],  inputType : [ '${LOAN_INPUT_CODE04}', '${LOAN_INPUT_CODE05}', '${LOAN_INPUT_CODE06}','${LOAN_INPUT_CODE01}']} //20220316 직장구분 빅머니M일경우 추가${LOAN_INPUT_CODE01}
+	,	{id : 'job_cd_2', 				fieldName : '직장구분',			validate : [ 'NotNull'] 						,authType : [''],  inputType : [ '${LOAN_INPUT_CODE01}']}
+	,	{id : 'job_cd_3', 				fieldName : '직장구분',			validate : [ 'NotNull'] 						,authType : [''],  inputType : [ '${LOAN_INPUT_CODE06}']}
+	,	{id : 'job_cd_4', 				fieldName : '직장구분',			validate : [ 'NotNull'] 						,authType : [''],  inputType : [ '${LOAN_INPUT_CODE03}']}
+	,	{id : 'job_medical', 			fieldName : '직장의료보험구분',		validate : [ 'NotNull'] 						,authType : [''],  inputType : [ '${LOAN_INPUT_CODE01}', '${LOAN_INPUT_CODE02}', '${LOAN_INPUT_CODE03}', '${LOAN_INPUT_CODE04}', '${LOAN_INPUT_CODE05}','${LOAN_INPUT_CODE06}','${LOAN_INPUT_CODE07}']}
+	,	{id : 'residence_type_cd', 		fieldName : '주거형태',			validate : [ 'NotNull'] 						,authType : [''],  inputType : [ '${LOAN_INPUT_CODE02}']}
+	,	{id : 'car_cd', 				fieldName : '차량구분',			validate : [ 'NotNull'] 						,authType : [''],  inputType : [ '${LOAN_INPUT_CODE02}']}
+	,	{id : 'car_yn',	 				fieldName : '차량보유여부',			validate : [ 'NotNull'] 						,authType : [''],  inputType : [ '${LOAN_INPUT_CODE01}', '${LOAN_INPUT_CODE02}', '${LOAN_INPUT_CODE03}', '${LOAN_INPUT_CODE04}', '${LOAN_INPUT_CODE05}','${LOAN_INPUT_CODE06}']}
+	,   {id : 'address-code', 			fieldName : '우편번호', 			validate : [ 'Number'] 							,authType : [''],  inputType : [ '${LOAN_INPUT_CODE07}', '${LOAN_INPUT_CODE08}'],		message : '찾기로 입력해주세요.'}
+	,   {id : 'address1', 				fieldName : '주소', 				validate : [ 'NotNull'] 						,authType : [''],  inputType : [ '${LOAN_INPUT_CODE07}', '${LOAN_INPUT_CODE08}']}
+	,   {id : 'address2', 				fieldName : '상세주소', 			validate : [ 'NotNull'] 						,authType : [''],  inputType : [ '${LOAN_INPUT_CODE07}', '${LOAN_INPUT_CODE08}']}
+	,	{id : 'mod_tp_cd', 				fieldName : '기기모델',			validate : [ 'NotNull'] 						,authType : [''],  inputType : [ '${LOAN_INPUT_CODE08}']}
+	,	{id : 'loan_tp_cd', 			fieldName : '대출구분',			validate : [ 'NotNull'] 						,authType : [''],  inputType : [ '${LOAN_INPUT_CODE08}']}
+	,   {id : 'qnt', 					fieldName : '수량', 				validate : [ 'NotNull'] 						,authType : [''],  inputType : [ '${LOAN_INPUT_CODE08}']}
+	,   {id : 'comnt', 					fieldName : '비고', 				validate : [ 'NotNull'] 						,authType : [''],  inputType : [ '${LOAN_INPUT_CODE08}']}
+	];
+	// 해당 페이지의 기본 + 주요 기능 
+	var PageFunc = ({
+		currentDate : "00000000",
+		prodList : [],
+		userProdCode : "",
+		userCustNm : "",
+		currentAuth : "",
+		currentInputType : "",
+		landChCd : "",
+		isMobile : false,
+		termsTypeArr : [
+			/*
+			YN_SEQ : 전문 보낼때 약관(TERMS_AGREEMENT_YN) 순서 Y|Y|Y|Y|Y|...
+			RETAIL_YN_SEQ : 담보 대출일 경우 전문 보내는 순서 Y|Y|Y|Y
+			ALL_SEQ : 상세동의서가 요약동의서보다 숫자가 커야 한다
+			*/
+			{ TERM_CODE : '${CODE_T000800001}', VISIBLE_LAYER : "agreementLayer1", YN_SEQ : 11 , ALL_SEQ : 1,	RETAIL_YN_SEQ : 11},//개인(신용)정보 조회 동의서
+			{ TERM_CODE : '${CODE_T000800002}', VISIBLE_LAYER : "agreementLayer2", YN_SEQ : 12 , ALL_SEQ : 2,	RETAIL_YN_SEQ : 12},//개인(신용)정보 수집·이용·제공 동의서(여신 금융거래)
+			{ TERM_CODE : '${CODE_T000800004}', VISIBLE_LAYER : "manualLayer01" , 	 YN_SEQ : 13 , ALL_SEQ : 6,	RETAIL_YN_SEQ : -1},//상품설명서(신용대출용)
+			{ TERM_CODE : '${CODE_T000800006}', VISIBLE_LAYER : "agreementLayer5", YN_SEQ : 14 , ALL_SEQ : 7,	RETAIL_YN_SEQ : -1},//개인(신용)정보 조회동의서 (서민금융진흥원用)
+			{ TERM_CODE : '${CODE_T000800007}', VISIBLE_LAYER : "agreementLayer6", YN_SEQ : 15 , ALL_SEQ : 8,	RETAIL_YN_SEQ : -1},//(필수)개인(신용)정보 수집·이용·제공 동의서 (서민금융진흥원用)
+			{ TERM_CODE : '${CODE_T000800008}', VISIBLE_LAYER : "agreementLayer7", YN_SEQ : 16 , ALL_SEQ : 9,	RETAIL_YN_SEQ : 14},//개인(신용)정보 및 기업(신용)정보 조회·수집·이용·제공과 행정정보공동이용, 전자금융거래확인서 발급을 위한 동의서 관리
+			{ TERM_CODE : '${CODE_T000800009}', VISIBLE_LAYER : "agreementLayer8", YN_SEQ : 17 , ALL_SEQ : 10,	RETAIL_YN_SEQ : -1},//계약 체결이행 등을 위한 필수 동의서(개인금융성신용보험용)
+			{ TERM_CODE : '${CODE_T000800010}', VISIBLE_LAYER : "agreementLayer4", YN_SEQ : 18 , ALL_SEQ : 11,	RETAIL_YN_SEQ : -1},//CMS출금이체 동의
+			{ TERM_CODE : '${CODE_T000800005}', VISIBLE_LAYER : "manualLayer02" , 	 YN_SEQ : 19 , ALL_SEQ : 6,	RETAIL_YN_SEQ : 13},//상품설명서(리테일대출용)
+
+			{ TERM_CODE : '${CODE_T000800003}', VISIBLE_LAYER : "agreementLayer3", YN_SEQ : 21, ALL_SEQ : 3,	RETAIL_YN_SEQ : 21},//개인(신용)정보 수집·이용·제공 동의서(상품서비스 안내)
+			{ TERM_CODE : '${CODE_T000800022}', VISIBLE_LAYER : "agreementLayer17", YN_SEQ : 22, ALL_SEQ : 4,	RETAIL_YN_SEQ : 22},//개인(신용)정보 수집·이용·제공 동의서 [맞춤형 상품 제공](요약동의서) 20220331추가
+			{ TERM_CODE : '${CODE_T000800016}', VISIBLE_LAYER : "agreementLayer16", YN_SEQ : 23 , ALL_SEQ : 16,	RETAIL_YN_SEQ : -1},//개인(신용)정보 수집·이용 동의서(보증료 우대 서비스)
+			{ TERM_CODE : '${CODE_T000800017}', VISIBLE_LAYER : "agreementLayer17", YN_SEQ : 24, ALL_SEQ : 17,	RETAIL_YN_SEQ : -1},//개인(신용)정보 수집·이용 동의서(상품서비스 안내 등)
+			{ TERM_CODE : '${CODE_T001000002}', VISIBLE_LAYER : "agreementLayer25", YN_SEQ : -1, ALL_SEQ : 25,	RETAIL_YN_SEQ : -1},//개인(신용)정보 수집·이용·제공·조회 동의서 [멤버십 회원가입 동의]
+
+			{ TERM_CODE : '${CODE_T000800011}', VISIBLE_LAYER : "agreement9Layer", 	YN_SEQ : -1, ALL_SEQ : 90},//대출거절사유 고지에 관한 사항
+			{ TERM_CODE : '${CODE_T000800013}', VISIBLE_LAYER : "agreementLayer10", YN_SEQ : -1, ALL_SEQ : 91},//개인(신용)정보 선택적 동의서(통신정보 활용 동의)
+			{ TERM_CODE : '${CODE_T000800014}', VISIBLE_LAYER : "agreementLayer11", YN_SEQ : -1, ALL_SEQ : 92},//개인(신용)정보 수집·이용·제공 동의서 (서민금융진흥원用)
+			{ TERM_CODE : '${CODE_T000800019}', VISIBLE_LAYER : "agreementLayer19", YN_SEQ : -1, ALL_SEQ : 93},//개인(신용)정보 조회 동의서_상세약관
+			{ TERM_CODE : '${CODE_T000800020}', VISIBLE_LAYER : "agreementLayer20", YN_SEQ : -1, ALL_SEQ : 94},//개인(신용)정보 수집·이용·제공 동의서(여신 금융거래)_상세약관
+			{ TERM_CODE : '${CODE_T000800021}', VISIBLE_LAYER : "agreementLayer21", YN_SEQ : -1, ALL_SEQ : 95},//개인(신용)정보 수집·이용·제공 동의서(상품서비스 안내)_상세약관
+			{ TERM_CODE : '${CODE_T000800023}', VISIBLE_LAYER : "agreementLayer17", YN_SEQ : -1, ALL_SEQ : 96},//개인(신용)정보 수집·이용·제공 동의서 [맞춤형 상품 제공](상세동의서) 20220330 신규약관 추가
+			{ TERM_CODE : '${CODE_T001000005}', VISIBLE_LAYER : "agreementLayer17", YN_SEQ : -1, ALL_SEQ : 97},//개인(신용)정보 수집·이용·제공·조회 동의서 [멤버십 회원가입 동의]
+			],
+		inputTypeArr : [
+			{ INPUT_TYPE_CODE : '${LOAN_INPUT_CODE01}',	VISIBLE_CHECK_AREA : "#incom_annual_format, #req_amt, #job_join_day, #job_cd_1, #job_medical, #car_yn" },//20220316 빅머니M일경우 job_cd_2 -> job_cd_1 로 수정
+			{ INPUT_TYPE_CODE : '${LOAN_INPUT_CODE02}',	VISIBLE_CHECK_AREA : "#incom_annual_format, #req_amt, #residence_type_cd, #car_cd, #car_yn" },
+			{ INPUT_TYPE_CODE : '${LOAN_INPUT_CODE03}',	VISIBLE_CHECK_AREA : "#incom_annual_format, #req_amt, #job_join_day, #job_cd_4, #jobname, #job_medical, #car_yn" },
+			{ INPUT_TYPE_CODE : '${LOAN_INPUT_CODE04}',	VISIBLE_CHECK_AREA : "#incom_annual_format, #req_amt, #job_join_day, #job_cd_1, #car_yn" },
+			{ INPUT_TYPE_CODE : '${LOAN_INPUT_CODE05}',	VISIBLE_CHECK_AREA : "#incom_annual_format, #req_amt, #job_cd_1, #car_yn" },
+			{ INPUT_TYPE_CODE : '${LOAN_INPUT_CODE06}',	VISIBLE_CHECK_AREA : "#incom_annual_format, #req_amt, #job_cd_3, #car_yn" },
+			{ INPUT_TYPE_CODE : '${LOAN_INPUT_CODE07}',	VISIBLE_CHECK_AREA : "#req_amt, #mrgg_tp_cd_radio1, #loan_zip_code, #address1, #address2" },
+			{ INPUT_TYPE_CODE : '${LOAN_INPUT_CODE08}',	VISIBLE_CHECK_AREA : "#req_amt, #loan_tp_cd, #mod_tp_cd, #qnt, #loan_zip_code, #address1, #address2, #comnt" },
+		],
+		authTypeArr : [
+			{ code: "${AUTH_CODE_PHONE}"				, element	: "auth1"},
+			{ code: "${AUTH_CODE_CERT}" 				, element	: "auth2"},
+			{ code: "${AUTH_CODE_IPIN}" 				, element	: "auth3"},
+			{ code: "${AUTH_CODE_KAKAO}" 				, element	: "auth4"},
+			{ code: "${AUTH_CODE_CREDIT_CARD}"			, element	: "auth5"},
+			{ code: "${AUTH_CODE_FIN_CERT}" 	, 	element	: "auth6"}
+		],
+		getAuthType : function( code ){
+			var mapperArr = PageFunc.authTypeArr;
+			for (var i = 0; i < mapperArr.length; i++) {
+				if(code == mapperArr[i].code){
+					return mapperArr[i].element;
+				}
+			}
+		},
+		initPage : function(){
+			PageFunc.initCurrentDate();
+			PageFunc.initCertUse();
+			PageFunc.makeMrggTpCdRadio();
+			PageFunc.defaultTopArea();
+			PageFunc.defaultAuthRadio();
+			PageFunc.defaultNameInput();
+			PageFunc.makeComponent();
+			PageFunc.addEvent();
+			if(tempProdCode=="P999999999"){
+				PageFunc.initProdInputSetting();
+			}
+			$('.guide-means .ctm-check input').parent().removeClass("checked");
+			$('.guide-means .ctm-check input').prop('checked', false);
+			$( "#job_cd_1" ).selectmenu({
+				change : function(){
+					if($("#loan_prod").selectmenu().val()=="GL056"){
+						var temp = $("#job_cd_1").selectmenu().val();
+						for(var i=0;i<formValidate.length;i++){
+							var arrTemp = formValidate[i];
+							if(arrTemp.id=="job_join_day"){
+								if(temp=="C002000003"||temp=="C002000005"){
+									arrTemp.fieldName='사업시작일자';
+									$("#id_job_join_day").text('사업시작일자');
+								}else if(temp=="C002000007"){
+									arrTemp.fieldName='연금수령개시일자';
+									$("#id_job_join_day").text('연금수령개시일자');
+								}else{
+									arrTemp.fieldName='입사일자';
+									$("#id_job_join_day").text('입사일자');
+								}
+								formValidate[i] = arrTemp;
+							}
+						}
+					}
+				}
+			});
+		},	
+		initCurrentDate : function(){
+			var currentDate = new String(PageFunc.currentDate);
+			$(".date").eq(0).text("" + currentDate.substring(0,4) + "년 " + new Number(currentDate.substring(4,6)) +"월 " + new Number(currentDate.substring(6,8)) +"일");
+			$("#pop_text_date").val("" + currentDate.substring(0,4) + "년 " + new Number(currentDate.substring(4,6)) +"월 " + new Number(currentDate.substring(6,8)) +"일");
+		},
+		addEvent : function(){
+			PageFunc.addPhoneNumberKeyBoardEvent();
+			PageFunc.addAmtKeyBoardEvent();
+			PageFunc.addRadioButtonEvent();
+			PageFunc.addPrevButtonEvent();
+			PageFunc.addApplyButtonEvent();
+			PageFunc.addNumberEvent();
+			PageFunc.addAddressFindButtonEvent();
+		},
+		addAddressFindButtonEvent : function(){
+			$("#find_zip_code").unbind("click").bind("click", function(e){
+				e.preventDefault();
+				PageFunc.addressFind();
+			});
+		},
+		addressFind : function(){
+			JusoUtil.openJusoPopup({},function(result){
+				var juso = JSON.parse(result);
+				$(".address-area").find("input:text").eq(0).val( juso.zipNo );
+				$(".grid2.address-detail").find("input:text").eq(0).val( juso.roadAddrPart1.toString().replace("&middot;",".") );
+				$(".grid2.address-detail").find("input:text").eq(1).val( juso.addrDetail );
+			},function(){}, "${isMobile}" ); 
+		},
+		addNumberEvent : function(){
+			$( "#jumin1" ).unbind("keyup").bind("keyup", function( e ){
+				$( this ).val(UtilFunc.getOnlyNumber($( this ).val()));
+			});
+
+		},
+		makeComponent : function(){
+			PageFunc.initLandChCdBox();
+			PageFunc.makeLoanProdSelectBox();
+			PageFunc.makePhoneNumberSelectBox();
+			PageFunc.makeLoanTpCdSelectBox();
+			PageFunc.makeModTpCdSelectBox();
+			PageFunc.makeDatePicker($(".calendar"));
+			PageFunc.makeSelectBox("phone", {code : "${DIV_MOBILE_CORP_CODE}"});												//휴대폰통신사구분코드
+			PageFunc.makeSelectBox("job_cd_2"	, {code : "${DIV_JOB_CODE}", codes : "${JOB_SALAY_CD}"});														//직장구분코드 중금리
+			PageFunc.makeSelectBox("job_cd_3"	, {code : "${DIV_JOB_CODE}", descs : "${JOB_DESC01},${JOB_DESC02},${JOB_DESC03}"});			//직장구분코드 고금리라이브T
+			
+			if(tempProdCode=="P999999999"){
+				PageFunc.makeSelectBox("job_cd_4"	, {code : "${DIV_JOB_CODE}"}, PageFunc.addJobSelectBox);			//직장구분코드
+			}else{
+				PageFunc.makeSelectBox("job_cd_4"	, {code : "${DIV_JOB_CODE}", values : "${DIV_SELF_OWN_CD},${DIV_SALAY_EMP_CD}"}, PageFunc.addJobSelectBox);			//직장구분코드 
+			}
+			PageFunc.makeSelectBox("residence_type_cd"	, {code : "${DIV_RESIDENCE_TYPE_CD}",values : 'APT'});												//주거형태
+			PageFunc.makeSelectBox("car_cd"	, {code : "${DIV_CAR_TYPE_CD}"});																								//차량구분
+			PageFunc.loadTermsData();
+			
+		},
+		loadTermsData : function(){
+			var code = '${CODE_T000800000}';
+			AjaxFunc.ajaxAsyncWithProcess( '<c:url value="${ termsInfoRest }" />' , { upperCode : code }, function( data ) {
+				var termsList = data.data.list;
+				for (var i = 0; i < termsList.length; i++) {
+					var term = termsList[i];
+					
+					if(term.TERMS_CODE=="T000800012")continue;
+					if(term.TERMS_CODE=="T000800018")continue;
+					if(term.TERMS_CODE=="T000800015")continue;//20210811
+					var eventObj = PageFunc.getTermsEventType( term.TERMS_CODE );
+					if(eventObj == null)continue; //20220302
+					PageFunc.createTermsLayer( eventObj.VISIBLE_LAYER , term.CONTENTS);
+				}
+				$('.prod_terms_section_info').hide();
+				if($("#loan_prod").selectmenu().val()=='GL090'){
+					$('.retail1_info').show();
+				}else if($("#loan_prod").selectmenu().val()=='GL091'){
+					$('.retail2_info').show();
+				}else{
+					$('.direct_info').show();
+				}
+			});
+		},
+		addJobSelectBox : function(){
+			if(PageFunc.isMobile){
+				PageFunc.setJobSelectBoxVisible();
+				PageFunc.setSelectedJob();
+				$( "#job_cd_4" ).unbind("change").bind("change",function(){
+					PageFunc.setJobSelectBoxVisible();
+					PageFunc.setSelectedJob();
+				});
+			}else{
+				PageFunc.setJobSelectBoxVisible();
+				PageFunc.setSelectedJob();
+				$( "#job_cd_4" ).selectmenu({
+					change : function(){
+						PageFunc.setJobSelectBoxVisible();
+						PageFunc.setSelectedJob();
+					}
+				});
+			}
+		},
+		setJobSelectBoxVisible : function(){
+			if( $("#job_cd_4").closest(".form-wrap").is(":visible") == false )return;
+			var jobCode = PageFunc.getSelectedJobCode();
+			switch( jobCode ){
+				case "${JOB_SALAY_CD}" :  $("#jobname, #job_join_day").closest(".form-wrap").css("display", "block"); break;
+				default : $("#jobname, #job_join_day").closest(".form-wrap").css("display", "none"); break;
+			}
+		},
+		getSelectedJobCode : function(){
+			var jobCode = "";
+			if(PageFunc.isMobile){
+				jobCode = $("#job_cd_4 option:selected" ).val();
+			}else{
+				jobCode = $("#job_cd_4" ).selectmenu().val();
+			}
+			return jobCode;
+		},
+		defaultNameInput : function(){
+			$("#name").val( PageFunc.userCustNm );
+		},
+		createTermsLayer : function( layerId , contents ){
+			var area = $("#" + layerId ).find(".pop-cts").eq(0);
+			var button = $( area ).find("button").parent().eq(0);
+			$( area ).empty();
+			$( area ).html( contents );
+			$( area ).append( button );
+			UiFunc.addAgreementAllLayer();
+		},
+		validateForm: function() {
+			var cloneValidate = $.extend( [], formValidate );
+			for (var i = 0; i < cloneValidate.length; i++) {
+				var element = cloneValidate[i];
+				if(typeof element.inputType == "undefined" || element.inputType.length == 0) continue;
+				var inputList = element.inputType;
+				var isMatch = false;
+				for (var x = 0; x < inputList.length; x++) {
+					var input = inputList[x];
+					if($("#"+element.id).prop("tagName").toLowerCase()=="select"){
+						if( input == PageFunc.currentInputType && !$("#"+element.id).parent().parent().is(":hidden") ){
+							isMatch = true;
+						}
+					}else{
+						if( input == PageFunc.currentInputType && !$("#"+element.id).is(":hidden") ){
+							isMatch = true;
+						}
+					}
+				}
+				if(!isMatch){
+					cloneValidate.splice(i , 1);
+					i--;
+				}
+			}
+			var validate = PageValidate.validate( cloneValidate );
+			if(!validate.result) {
+				validate.alert();
+				return false;
+			}
+			return true;
+		},
+		
+		getNotCheckedTermsTitle : function() {
+			var title = "";
+			var notCount = 0;
+			$(".agree-box").find("div,p").each(function( index, element ){
+				if( typeof $( element ).attr("needyn") == "undefined" )return;
+				var isVisible = $( element ).is(":visible");
+				var needyn = $( element ).attr("needyn");
+				if( notCount > 0 )return;
+				var celement = $(element).clone();
+				$(celement).find("button").remove();
+				title = $( celement ).find(".item-tit").eq(0).text();
+				if( needyn == "Y"  && isVisible ){
+					$( element ).find(".ctm-check").each(function( index, element ){
+						if( !$(element).hasClass("checked") ){
+							if( title.length == 0 ){
+								var cl = $(element).clone();
+								$( cl ).find("button").remove();
+								title = $( cl ).text();
+							}
+							notCount++;
+							return;
+						}
+					});
+				}
+				if(notCount == 0) title = "";
+			});
+			return title;
+		},
+		makeLoanProdSelectBox : function (){
+			var url = '<c:url value="${ loanInputRest }" />';
+			var param = {};
+			var selectBox = $("#loan_prod");
+			var defaultOption = $( selectBox ).find("option").eq(0);
+			$( selectBox ).empty();
+			AjaxFunc.ajaxAsyncWithProcess( url, param, function( data ){
+				var list = data.data.list;
+				PageFunc.prodList = list;
+				var code = "";
+				if(PageFunc.userProdCode != ""){
+					var info = PageFunc.getProdInfo(PageFunc.userProdCode, false)
+					code = info != null ? info.NTREE_PROD_CODE : "";
+				}else{
+					code = PageFunc.userProdCode;
+				}
+				$( selectBox ).append(defaultOption);
+				for (var i = 0; i < list.length; i++) {
+					var dataObj = list[i];
+					var value = dataObj.NTREE_PROD_CODE;
+					var name = dataObj.NAME;
+					if(value!=""&&value!=null&&value!="GL038"&&value!="GL074"){
+						if( code == value ){
+							$( selectBox ).append("<option value=\'" +value+ "\' selected='selected'>"+name+"</option>");
+							
+						}else{
+							$( selectBox ).append("<option value=\'" +value+ "\'>"+name+"</option>");
+						}
+					}
+				}
+				$( selectBox ).selectmenu('refresh');
+				PageFunc.setSelectedLoanProd();
+				if(PageFunc.isMobile){
+					$( selectBox ).unbind("change").bind("change",function(){
+						PageFunc.setSelectedLoanProd();
+					});
+				}else{
+					$( selectBox ).selectmenu({
+						change : function(){
+							for(var i=0;i<formValidate.length;i++){
+								var arrTemp = formValidate[i];
+								if(arrTemp.id=="job_join_day"){
+									arrTemp.fieldName='입사일자';
+									$("#id_job_join_day").text('입사일자');
+									formValidate[i] = arrTemp;
+								}
+							}
+							PageFunc.setSelectedLoanProd();
+						}
+					});
+				}
+			},function(){});
+			if(PageFunc.landChCd=='C006600701'||PageFunc.landChCd=='C006600702'){
+				$("#loan_prod").prop("disabled","disabled");
+			}
+		},
+		setSelectedLoanProd : function(){
+			PageFunc.setCurrentInputType();
+			PageFunc.setLoanApplyArea();
+			PageFunc.setLoanTermsCheck();
+			$("#car_yn").prop("disabled","");
+			$("#car_yn").val("");
+			$("#car_yn").selectmenu('refresh');
+			PageFunc.setAuthShow();
+			if($("#loan_prod").selectmenu().val()=="GL084"){
+				$("#car_yn").val("Y");
+				$("#car_yn").prop("disabled","disabled");
+				$("#car_yn").selectmenu('refresh');
+			}
+			//20210629
+			if($("#loan_prod").selectmenu().val() != "GL091"){
+				$("#THIRD_AGR_DTL_YN").val("");
+			}
+			if($("#loan_prod").selectmenu().val()=="GL021"||$("#loan_prod").selectmenu().val()=="GL084"){
+				PageFunc.makeSelectBox("job_medical"	, {code : "${DIV_JOB_INSURANCE_TYPE_CD}"});		//직장건강보험구분코드
+			}else {
+				PageFunc.makeSelectBox("job_medical"	, {code : "${DIV_JOB_INSURANCE_TYPE_CD}", codes : "${JOB_INSURANCE_TYPE__CODE}"});		//직장건강보험구분코드
+			}
+			if($("#loan_prod").selectmenu().val()=="GL084"||$("#loan_prod").val()=="GL066"||$("#loan_prod").val()=="GL077"){
+				$("#job_cd_1").closest(".form-wrap").css("display", "block");
+				$("#job_cd_2").closest(".form-wrap").css("display", "none");
+			}
+			if($("#loan_prod").selectmenu().val()!='GL090'&&$("#loan_prod").selectmenu().val()!='GL091'){
+				$("#req_amt").attr("placeholder","만원 단위로 입력하세요.");
+				$("#req_amt_unit").text("만원");
+			}else{
+				$("#req_amt").attr("placeholder","백만원 단위로 입력하세요.");
+				$("#req_amt_unit").text("백만원");
+			}
+			if($("#loan_prod").selectmenu().val() == "GL090" || $("#loan_prod").selectmenu().val() == "GL091"){
+				$("#inc_indv_trn_cnfr_div").hide();
+			} else {
+				$("#inc_indv_trn_cnfr_div").show();
+			}
+		},
+		setAuthShow : function(){
+			if($(".auth4").attr("useyn") == "Y"){
+				var prodInfoObj = PageFunc.getProdInfo( PageFunc.getSelectedProdCode(), true);
+				if(prodInfoObj != null){
+					var applyCode = prodInfoObj.LOAN_APPLY_CD;
+					switch( applyCode ){
+						case '${LOAN_INPUT_CODE04}' :  $(".auth4").hide(); break;
+						default : $(".auth4").show(); break;
+					}
+				}
+			}
+		},
+		setSelectedJob : function(){
+			PageFunc.setCurrentInputType();
+			PageFunc.setLoanTermsCheck();
+		},
+		getSelectedProdCode : function(){
+			var prodCode = "";
+			if(PageFunc.isMobile){
+				prodCode = $("#loan_prod option:selected" ).val();
+			}else{
+				prodCode = $("#loan_prod" ).selectmenu().val();
+			}
+			return prodCode;
+		},
+		getSelectedWorkerCode : function(){
+			var workerCode = "";
+			if(PageFunc.isMobile){
+				workerCode = $("#job_cd_4 option:selected" ).val();
+			}else{
+				workerCode = $("#job_cd_4" ).selectmenu().val();
+			}
+			return workerCode;
+		}, 
+		setCurrentInputType : function(){
+			var prodInfoObj = PageFunc.getProdInfo( PageFunc.getSelectedProdCode() , true);
+			if(prodInfoObj != null){
+				PageFunc.currentInputType = prodInfoObj.LOAN_APPLY_CD;
+			}
+		},
+		getTermsEventType : function( termsCode ){
+			var list = PageFunc.termsTypeArr;
+			for (var i = 0; i < list.length; i++) {
+				var eventObj = list[i];
+				if( eventObj.TERM_CODE == termsCode ){
+					return eventObj;
+				}
+			}
+			return null;
+		},
+		//db에서 상품별 약관 정보를 가져와 화면에 약관을 보여줌
+		setLoanTermsCheck : function(){
+			PageFunc.defaultTermsCheck();
+			var prodInfoObj = PageFunc.getProdInfo(PageFunc.getSelectedProdCode(), true);
+			if(prodInfoObj == null){
+				PageFunc.initLoanTermsArea();
+				return;
+			}
+			var categoryCode = prodInfoObj.CATEGORY_CODE;
+			var productCode = "";
+			if(tempProdCode=="P999999999"){
+				productCode = "P000000029";
+			}else{
+				productCode = prodInfoObj.PROD_CODE;
+			}
+			var jobCode = PageFunc.getSelectedWorkerCode();
+			
+			//20211223 추가
+			var newTermsCode = ["N000802001","N000804001","N000805001","N000805002","N000820001"]
+			
+			var url = '<c:url value="${ loanInputTermsRest }" />';
+			var dtlYn = $("input:radio[name='agr_dtl_yn']:checked").val();//20211215 상세/요약 약관 분기세팅
+			var param = { product : productCode , job : jobCode , searchType : dtlYn};
+			AjaxFunc.ajaxAsyncWithProcess( url, param, function( data ){
+				var sortList = PageFunc.getTermsAgreementList();
+				var tempList = [];
+				for (var x = 0; x < sortList.length; x++) {
+					var sort = sortList[x];
+					for (var i = 0; i < data.data.list.length; i++) {
+						var term = data.data.list[i];
+						if(tempList.indexOf(term) != -1) continue;
+						if(  term.TERMS_CODE=="T000800012") term.TERMS_CODE="T000800004";//term.TERMS_CODE=="T000800005"||
+						if(sort.TERM_CODE == term.TERMS_CODE ){
+							if($("#loan_prod").selectmenu().val()!='GL091'&& term.TERMS_CODE=='${CODE_T000800013}'){//(term.TERMS_CODE=='${CODE_T000800015}'||term.TERMS_CODE=='${CODE_T000800013}')){
+								continue;
+							}
+							tempList.push( term );
+						}
+					}
+				}
+				
+				//20211223 추가
+				for (var i = 0; i < data.data.list.length; i++) {
+					var term = data.data.list[i];
+					if(newTermsCode.indexOf(term.TERMS_CODE) != -1){
+						tempList.push( term );
+					}
+				}
+				
+				var selectProdCode = $("#loan_prod option:selected" ).val();
+				
+				//20211223 추가
+				$(tempList).each(function( idx, ele){
+					var yThis = $(this);
+					var yCode = $(yThis).attr("TERMS_CODE");
+					var yDocCode = $(yThis).attr("STREAM_DOC_ID");
+					$(tempList).each(function( idx, ele){
+						var zThis = $(this);
+						var zCode = $(zThis).attr("TERMS_CODE");
+						var zDocCode = $(zThis).attr("STREAM_DOC_ID");
+						
+						if(dtlYn == "Y"){
+							
+							if(yCode == zCode){//pdf관련 없앨것 20220804
+								$(yThis).attr("STREAM_DOC_ID", zCode);
+							}	
+						
+							if(yCode == "T000800001"){
+								if(zCode == "T000800019"){
+									$(yThis).attr("STREAM_DOC_ID", zCode);//pdf관련 바꿀것 20220809 -> zDocCode
+								}
+							}else if(yCode == "T000800002"){
+								if( ( selectProdCode=="" ) || ( selectProdCode=="GL090" ) || ( selectProdCode=="GL091" ) ){//리테일 상품일때 개인신용정보 수집 이용 제공 동의서(여신 금융거래)_국세, 담보
+									if(zCode == "T000800020"){
+										$(yThis).attr("STREAM_DOC_ID", zCode);//pdf관련 바꿀것 20220809 -> zDocCode
+									}
+								}else{
+									if(zCode == "N000820001"){//신용 상품일때 개인신용정보 수집 이용 제공 동의서(여신 금융거래)_국세
+										$(yThis).attr("STREAM_DOC_ID", zCode);//pdf관련 바꿀것 20220809 -> zDocCode
+									}
+								}
+							}else if(yCode == "T000800003"){
+								if(zCode == "T000800021"){
+									$(yThis).attr("STREAM_DOC_ID", zCode);//pdf관련 바꿀것 20220809 -> zDocCode
+								}
+							}else if(yCode == "T000800022"){//20220331 신규약관 추가
+								if(zCode == "T000800023"){
+									$(yThis).attr("STREAM_DOC_ID", zCode);//pdf관련 바꿀것 20220809 -> zDocCode
+								}
+							}else if (yCode == "T001000002") {
+								if(zCode == "T001000005"){
+									$(yThis).attr("STREAM_DOC_ID", zCode);
+								}
+							}
+						}else{//pdf관련 없앨것 20220804
+							if(yCode == zCode){//pdf관련 없앨것 20220804
+								$(yThis).attr("STREAM_DOC_ID", zCode);
+							}	
+							if(yCode == "T000800002"){
+								if( ( selectProdCode=="" ) || ( selectProdCode=="GL090" ) || ( selectProdCode=="GL091" ) ){//리테일 상품일때 개인신용정보 수집 이용 제공 동의서(여신 금융거래)_국세, 담보
+									if(zCode == "T000800002"){
+										$(yThis).attr("STREAM_DOC_ID", zCode);//pdf관련 바꿀것 20220809 -> zDocCode
+									}
+								}else{
+									if(zCode == "N000802001"){//신용 상품일때 개인신용정보 수집 이용 제공 동의서(여신 금융거래)_국세
+										$(yThis).attr("STREAM_DOC_ID", zCode);//pdf관련 바꿀것 20220809 -> zDocCode
+									}
+								}
+							}
+						}
+						
+						if( ( selectProdCode=="" ) || ( selectProdCode=="GL090" ) || ( selectProdCode=="GL091" ) ){
+							if( selectProdCode=="GL091" ){
+								if(yCode == "T000800005"){
+									if(zCode == "N000805001"){
+										$(yThis).attr("STREAM_DOC_ID", zCode);//pdf관련 바꿀것 20220809 -> zDocCode
+									}
+								}
+							}
+						}
+					});
+				});
+				
+				firstOpenEssential = false;
+				firstOpenoptin = false;
+				PageFunc.createLoanTermsArea( tempList );
+				PageFunc.setDocIDBtnValue( tempList );
+			},function(){});
+		},
+		createLoanTermsArea : function( termsList ){
+			var itemsIdAry=['T000800003','T000800011','T000800014','T000800013','T000800016','T000800017','T000800022','T001000002'];//선택약관 전체선택 추가 20210621
+			var itIdAry=[];//선택약관 전체선택 추가 20210621
+			var allTermsCnt=0;//20211214 약관 PDF 적용
+			var chTermsCnt=0;//20211214 약관 PDF 적용
+			optinItemArry=[];//20211214 약관 PDF 적용
+			essentialItemArry=[];//20211214 약관 PDF 적용
+			PageFunc.initLoanTermsArea();
+			
+			//20211228 약관추가로 인한 소스코드 추가
+			var prodVal = $("#loan_prod").selectmenu().val()
+			var jobVal = $("#job_cd_4").selectmenu().val();
+			if( prodVal == "GL021" ){
+				if(jobVal != ""){
+					if( termsList.length > 0 ){
+						$(".agree-wrap").show();
+					}
+				}
+			}else{
+				if( termsList.length > 0 ){
+					$(".agree-wrap").show();
+				}
+			}
+			
+			for (var i = 0; i < termsList.length; i++) {
+				var termsObj = termsList[i];
+				if( (termsObj.TERMS_CODE == "T000800019") || ( termsObj.TERMS_CODE == "T000800020") || ( termsObj.TERMS_CODE == "T000800021") || ( termsObj.TERMS_CODE == "T000800023") || ( termsObj.TERMS_CODE == "T001000005"))continue;//20211215 약관 PDF 적용
+				var eventObj = PageFunc.getTermsEventType( termsObj.TERMS_CODE );
+				if( eventObj == null )continue;
+				if( (optinItemArry.indexOf(eventObj.TERM_CODE) == 1) || (essentialItemArry.indexOf(eventObj.TERM_CODE) == 1) ){//2022
+					continue;
+				}
+				if(itemsIdAry.indexOf(eventObj.TERM_CODE) != -1){//선택약관 전체선택 추가 20210621
+					itIdAry.push(eventObj.TERM_CODE);
+					optinItemArry.push(eventObj.TERM_CODE);//20211214 약관 PDF 적용
+				}else{
+					essentialItemArry.push(eventObj.TERM_CODE);//20211214 약관 PDF 적용
+				}
+				PageFunc.setTermsAgreeBox( termsObj );
+				if( eventObj.VISIBLE_LAYER.length == 0 )continue;
+				var con = $("#agreementallLayer").find(".con").last();
+				var con2 = $("#agreementChallLayer").find(".con").last();//선택약관 전체선택 추가 20210621
+				if(itIdAry.indexOf(eventObj.TERM_CODE) == -1){//선택약관 전체선택 추가 20210621
+					
+					var viewerAllL="viewerAllL"+allTermsCnt;//20211214 약관 PDF 적용
+					
+					if(con.length == 0){
+						$("#agreementallLayer").find(".all-agree").after("<iframe style='width: 100%;height: 700px;' class='con' id='"+viewerAllL+"'></iframe>");//20211214 약관 PDF 적용
+					}else{
+						$( con ).after("<iframe style='width: 100%;height: 700px;' class='con' id='"+viewerAllL+"'></iframe>");//20211214 약관 PDF 적용
+					}
+					allTermsCnt++;
+				}else{
+					
+					var viewerChallL="viewerChallL"+chTermsCnt;//20211214 약관 PDF 적용
+					
+					if(con2.length == 0){//선택약관 전체선택 추가 20210621
+						$("#agreementChallLayer").find(".all-agree").after("<iframe style='width: 100%;height: 700px;' class='con' id='"+viewerChallL+"'></iframe>");//20211214 약관 PDF 적용
+					}else{
+						$( con2 ).after("<iframe style='width: 100%;height: 700px;' class='con' id='"+viewerChallL+"'></iframe>");//20211214 약관 PDF 적용
+					}
+					chTermsCnt++;
+				}	
+				var title = PageFunc.makeTermsTitle( termsObj.NEED_YN , termsObj.TERMS_NAME );
+				$("#" + eventObj.VISIBLE_LAYER ).find(".tit").text( title );
+			}
+			UiFunc.addAgreementAllLayer();
+			$('.prod_terms_section_info').hide();
+			
+			if($("#loan_prod").selectmenu().val()=='GL090'){
+				$('.retail1_info').show();
+			}else if($("#loan_prod").selectmenu().val()=='GL091'){
+				$('.retail2_info').show();
+			}else{
+				$('.direct_info').show();
+			}
+		},
+		initLoanTermsArea : function(){
+			PageFunc.removeTermsAgreeLayer();
+			PageFunc.hideTermsAgreeBox();
+		},
+		removeTermsAgreeLayer : function(){
+			$("#agreementallLayer").find(".con").remove();
+			$("#agreementChallLayer").find(".con").remove();
+		},
+		setTermsAgreeBox : function( termsObj ){
+			var termsCode = termsObj.TERMS_CODE;
+			var needyn = termsObj.NEED_YN;
+			$(".agree-box").find("div").each(function( index, element ){
+				var id = $(element).attr("id");
+				
+				if( termsCode == id ){
+					var title = PageFunc.makeTermsTitle( termsObj.NEED_YN , termsObj.TERMS_NAME );
+					var button = $( element ).find(".item-tit").find("button:eq(0)");
+					$( element ).find(".item-tit").find(".chk_span").text( title );
+					$( element ).find(".item-tit").append( button );
+					$( element ).show();
+					$( element ).attr( "needyn" , needyn );
+					//20220729 웹 접근성 관련 추가
+					$( element ).find(".ctm-check").find("input").attr("title", title );
+				}
+			});
+		},
+		
+		setDocIDBtnValue : function( tempList ){
+			var termsCode;
+			
+			for(var i=0; i < tempList.length; i++){
+				termsCode = tempList[i].TERMS_CODE;
+				$(".agree-box").find("div").each(function( index, element ){
+					var id = $(element).attr("id");
+					if( termsCode == id ){
+						$("#"+termsCode+"").find('.items').find("button").val(tempList[i].STREAM_DOC_ID+".pdf");
+						if (termsCode == 'T001000002') {
+							$("#"+termsCode+"").find('.guide-means').find("button").val("T001000001.pdf");
+						}
+					}
+				});
+			}
+		},
+		makeTermsTitle : function( dispYn, termsName ){
+			if($("#loan_prod").selectmenu().val()=='GL090'||$("#loan_prod").selectmenu().val()=='GL091'){
+				if(termsName=="가계대출상품설명서"){
+					return (dispYn == "Y" ? "[필수]" : "[선택]") +" "+ "기업대출상품설명서";	
+				}
+			}
+			return (dispYn == "Y" ? "[필수]" : "[선택]") +" "+ termsName;	
+		},
+		hideTermsAgreeBox : function(){
+			var count = 3;
+			$(".agree-box").find("div,p").each(function( index, element ){
+				var id = $(element).attr("id");
+				var arr = PageFunc.termsTypeArr;
+				for (var i = 0; i < arr.length; i++) {
+					var termType = arr[i];
+					if(termType.TERM_CODE == id){
+						$(element).hide();
+						count++;
+					}
+				}
+			});
+			if(count == PageFunc.termsTypeArr.length){
+				$(".agree-wrap").hide()
+			}
+		},
+		setLoanApplyArea : function(){
+			var prodInfoObj = PageFunc.getProdInfo( PageFunc.getSelectedProdCode(), true);
+			if(prodInfoObj == null){
+				PageFunc.defaultLoanApplyArea();
+				return;
+			}
+			var list = PageFunc.inputTypeArr;
+			var applyCd = prodInfoObj.LOAN_APPLY_CD;
+			PageFunc.defaultLoanApplyArea();
+			
+			$(".grid-wrap").eq(1).css("display", "block");
+			var isDefault = true;
+			for (var i = 0; i < list.length; i++) {
+				var prodApply = list[i];
+				if(prodApply.INPUT_TYPE_CODE ==  applyCd ){
+					var area = $(prodApply.VISIBLE_CHECK_AREA);
+					$( area ).closest(".form-wrap").css("display", "block");
+					isDefault = false;
+				}
+			}
+			PageFunc.makeSelectBox("job_cd_1"	, {code : "${DIV_JOB_CODE}"});
+			if(isDefault){
+				var area = PageFunc.inputTypeArr[5].VISIBLE_CHECK_AREA;
+				$( area ).closest(".form-wrap").css("display", "block");
+			}
+		},
+		defaultTopArea : function(){
+			$(".grid-wrap").eq(0).find("input:text").val("");
+		},
+		defaultAuthRadio : function(){
+			$('input:radio').prop('checked', false);
+			$('.radio.r-on').removeClass('r-on');
+		},
+		defaultLoanApplyArea : function(){
+			$(".grid-wrap").eq(1).css("display", "none");
+			$(".grid-wrap").eq(1).find(".form-wrap").css("display", "none");
+			$(".grid-wrap").eq(1).find(".form-wrap").find("input:text").val("");
+			$(".grid-wrap").eq(1).find(".form-wrap").find("select").find("option:eq(0)").attr("selected","selected");
+		},
+		defaultTermsCheck : function(){
+			$('.check input').prop('checked', false);
+			$('.guide-means').hide();
+			$('.ctm-check.checked').removeClass('checked');
+		},
+		getProdInfo : function( prodCode , isInterface ){
+			var list = PageFunc.prodList;
+			if(typeof list == "undefined" || list.length == 0){
+				return null;
+			}
+			for (var i = 0; i < list.length; i++) {
+				var prodInfo = list[i];
+				var code;
+				if(isInterface){
+					code = prodInfo.NTREE_PROD_CODE
+				}else{
+					code = prodInfo.PROD_CODE
+				}
+				if(code ==  prodCode ){
+					return prodInfo;
+				}
+			}
+			return null;
+		},
+		makeSelectBox : function ( id, param, callback){
+			var url = '<c:url value="${ sysCodeRest }" />';
+			var selectBox = $("#" + id);
+			var defaultOption = $( selectBox ).find("option").eq(0);
+			$( selectBox ).empty();
+			AjaxFunc.ajaxAsyncWithProcess( url, param, function( data ){
+				var list = data.data.list;
+				$( selectBox ).append(defaultOption);
+				for (var i = 0; i < list.length; i++) {
+					var dataObj = list[i];
+					var value = dataObj.CODE;
+					var name = dataObj.NAME;
+					if(PageFunc.currentInputType == "${LOAN_INPUT_CODE04}"){
+						if(dataObj.CODE!='C002000004'){
+							$( selectBox ).append("<option value=\"" +value+ "\">"+name+"</option>");	
+						}
+					}else if($("#loan_prod").val()=="GL064" || $("#loan_prod").val()=="GL066"){
+						if(dataObj.CODE!='C002000004'){
+							$( selectBox ).append("<option value=\"" +value+ "\">"+name+"</option>");	
+						}
+					}else{
+						$( selectBox ).append("<option value=\"" +value+ "\">"+name+"</option>");
+					}
+				}
+				$( selectBox ).selectmenu('refresh');
+				if(typeof callback == "function"){
+					callback();
+				}
+				$( selectBox ).selectmenu({
+					change : function(){
+			            if(id == "job_cd_4"){
+			            	PageFunc.setJobSelectBoxVisible();
+							PageFunc.setSelectedJob();
+			            }
+						PageFunc.setPhoneHidden();
+					}
+				});
+			},function(e){});
+		},
+		addPhoneNumberKeyBoardEvent : function(){
+			$( ".phone-area" ).eq(0).find("input:text:eq(0), input:text:eq(1)").unbind("keyup").bind("keyup", function( e ){
+				$( this ).val(UtilFunc.getOnlyNumber($( this ).val()));
+				PageFunc.setPhoneHidden();
+			});
+			$( ".phone-area" ).eq(0).find("input:text:eq(0), input:text:eq(1)").unbind("change").bind("change", function( e ){
+				$( this ).val(UtilFunc.getOnlyNumber($( this ).val()));
+			});
+		},
+		addAmtKeyBoardEvent : function(){
+			$("#incom_annual_format, #req_amt").unbind("keyup").bind("keyup", function( e ){
+				$( this ).val(UtilFunc.gridFormatterThousandNumber($( this ).val()));
+			});
+		},
+		makePhoneNumberSelectBox : function (){
+			var url = '<c:url value="${ sysCodeRest }" />';
+			var param = { code : "${DIV_MOBILE_CODE}" };
+			var selectBox = $("#phone_front");
+			$( selectBox ).empty();
+			AjaxFunc.ajaxAsyncWithProcess( url, param, function( data ){
+				var list = data.data.list;
+				for (var i = 0; i < list.length; i++) {
+					var dataObj = list[i];
+					var value = dataObj.NAME;
+					var name = dataObj.NAME;
+					if(i == 0){
+						$( selectBox ).append("<option value=\"" +value+ "\" selected=\"selected\">"+name+"</option>"); // 20220804 웹 접근성 관련 작업 추가
+					}else{
+						
+						$( selectBox ).append("<option value=\"" +value+ "\">"+name+"</option>");
+					}
+				}
+				PageFunc.setPhoneHidden();
+				if(PageFunc.isMobile){
+					$( selectBox ).unbind("change").bind("change",function(){
+						PageFunc.setPhoneHidden();
+					});
+				}else{
+					$( selectBox ).selectmenu({
+						change : function(){
+							PageFunc.setPhoneHidden();
+						}
+					});
+				}
+			},function(){});
+		},
+		makeMrggTpCdRadio : function (){
+			var url = '<c:url value="${ sysCodeRest }" />';
+			var param = { code : "${MRGG_TP_CD}" };
+			var selectBox = $("#mrgg_tp_cd_radio");
+			$( selectBox ).empty();
+			AjaxFunc.ajaxAsyncWithProcess( url, param, function( data ){
+				var list = data.data.list;
+				for (var i = 0; i < list.length; i++) {
+					var dataObj = list[i];
+					var value = dataObj.CODE;
+					var name = dataObj.NAME;
+					var html ="";
+					html+='<span class="ctm-radio">';
+					html+='<input type="radio" name="mrgg_tp_cd_radio" id="mrgg_tp_cd_radio'+(i+1)+'" value="'+dataObj.CODE+'">';
+					html+='<label for="mrgg_tp_cd_radio'+(i+1)+'">'+name+'</label>';
+					html+='</span>';
+					
+					$( selectBox ).append(html);
+				}
+			},function(){});
+		},
+		makeLoanTpCdSelectBox : function (){
+			var url = '<c:url value="${ sysCodeRest }" />';
+			var param = { code : "${LOAN_TP_CD}" };
+			var selectBox = $("#loan_tp_cd");
+			var defaultOption = $( selectBox ).find("option").eq(0);
+			$( selectBox ).empty();
+			AjaxFunc.ajaxAsyncWithProcess( url, param, function( data ){
+				var list = data.data.list;
+				$( selectBox ).append(defaultOption);
+				for (var i = 0; i < list.length; i++) {
+					var dataObj = list[i];
+					var value = dataObj.CODE;
+					var name = dataObj.NAME;
+					$( selectBox ).append("<option value=\"" +value+ "\">"+name+"</option>");
+				}
+			},function(){});
+			
+		},
+		makeModTpCdSelectBox : function (){
+			var url = '<c:url value="${ sysCodeRest }" />';
+			var param = { code : "${MOD_TP_CD}" };
+			var selectBox = $("#mod_tp_cd");
+			var defaultOption = $( selectBox ).find("option").eq(0);
+			$( selectBox ).empty();
+			$( selectBox ).append(defaultOption);
+			AjaxFunc.ajaxAsyncWithProcess( url, param, function( data ){
+				var list = data.data.list;
+				for (var i = 0; i < list.length; i++) {
+					var dataObj = list[i];
+					var value = dataObj.CODE;
+					var name = dataObj.NAME;
+					$( selectBox ).append("<option value=\"" +value+ "\">"+name+"</option>");
+				}
+				PageFunc.setPhoneHidden();
+				if(PageFunc.isMobile){
+					$( selectBox ).unbind("change").bind("change",function(){
+						PageFunc.setPhoneHidden();
+					});
+				}else{
+					$( selectBox ).selectmenu({
+						change : function(){
+							PageFunc.setPhoneHidden();
+						}
+					});
+				}
+			},function(){ });
+		},
+		setPhoneHidden : function(){
+			var phoneNumber0 = "";
+			if(PageFunc.isMobile){
+				phoneNumber0 = $("#phone_front option:selected" ).val();
+			}else{
+				phoneNumber0 = $("#phone_front" ).selectmenu().val();
+			}
+			var phoneNumber1 = $( ".phone-area" ).find("input:text").eq(0).val();
+			var phoneNumber2 = $( ".phone-area" ).find("input:text").eq(1).val();
+			$("#phone_hidden").val(phoneNumber0 + "-"+phoneNumber1+"-"+phoneNumber2);
+		},
+		makeDatePicker : function ( calendar ){
+			$.datepicker.regional['ko'] = {
+				closeText: '닫기',
+				prevText: '이전',
+				nextText: '다음',
+				currentText: '오늘',
+				monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+				monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'],
+				dayNames: ['일','월','화','수','목','금','토'],
+				dayNamesShort: ['일','월','화','수','목','금','토'],
+				dayNamesMin: ['일','월','화','수','목','금','토'],
+				weekHeader: 'Wk',
+				dateFormat: 'yymmdd',
+				firstDay: 0,
+				isRTL: false,
+				showMonthAfterYear: true,
+				yearSuffix : '년'};
+			$.datepicker.setDefaults($.datepicker.regional['ko']);
+			$( calendar ).datepicker();
+		},
+		getCurrentCode : function( auth ){
+			var mapperArr = PageFunc.authTypeArr;
+			for (var i = 0; i < mapperArr.length; i++) {
+				if(auth == mapperArr[i].element){
+					return mapperArr[i].code;
+				}
+			}
+		},
+		initCertUse : function(){
+			var url = '<c:url value="${ certUseRest }" />';
+			AjaxFunc.ajaxAsyncWithProcess( url, {}, function( data ){
+				var list = data.data.list;
+				for (var i = 0; i < list.length; i++) {
+					var useYn = list[i].USE_YN;
+					var el = PageFunc.getAuthType(list[i].CODE);
+					if(useYn == "Y"){
+						$(".auth-list").find("." + el ).show();
+						$(".auth-list").find("." + el ).attr("useyn","Y");
+					}else{
+						$(".auth-list").find("." + el ).hide();
+						$(".auth-list").find("." + el ).attr("useyn","N");
+					}
+				}
+			},function(){});
+		},
+		initProdInputSetting : function(){
+			$("#prod_form").hide();
+			$("#ssn_form").insertAfter("#cust_name_form");
+			$("#cust_name_form").insertAfter("#prod_form");
+			$("#hp_form").insertAfter("#cust_name_form");
+			$("#prod_form").insertAfter("#ssn_form");
+		},
+		addRadioButtonEvent : function(){
+			$(":input:radio[name='auth']").bind("change",function(){
+				PageFunc.currentAuth = $("input:radio[name='auth']:checked").attr("id");
+			});
+		},
+		addPrevButtonEvent : function(){
+			$(".btn-big.re.ir").unbind("click").bind("click",function(){
+				addLoading();
+				location.href =  '<c:url value="${ loanQuestion }" />';
+			});
+		},
+		successCallBack : function( data ){
+			try{
+				if(data.data.RES_CODE == 1000){
+					PageFunc.loanApplyProcessStep03();
+				}else{
+					customAlert({title : "알림" , message : data.data.RES_MESSAGE }, function() {});
+				}
+			}catch(e){
+				customAlert({title : "알림" , message : data.resultMessage }, function() {});
+			}
+		},
+		failCallBack : function( data ){
+			PageFunc.defaultTermsCheck();
+		},
+		loanApplyProcessStep02 : function(){
+			switch( PageFunc.currentAuth ){
+				case "auth1" : AuthUtil.runAuthProcess(AuthUtil.authType.phone.id, {} , PageFunc.successCallBack , PageFunc.failCallBack); break; //휴대폰인증 	
+				case "auth2" : AuthUtil.runAuthProcess(AuthUtil.authType.certificate.id, "delfino" , PageFunc.successCallBack , PageFunc.failCallBack); break; //공동인증서 	
+				case "auth3" : AuthUtil.runAuthProcess(AuthUtil.authType.ipin.id, {} , PageFunc.successCallBack , PageFunc.failCallBack); break; //아이핀인증 	
+				case "auth4" : AuthUtil.runAuthProcess(AuthUtil.authType.kakao.id, {} , PageFunc.successCallBack , PageFunc.failCallBack); break; //카카오페이인증
+				case "auth5" : AuthUtil.runAuthProcess(AuthUtil.authType.credit.id, {} , PageFunc.successCallBack , PageFunc.failCallBack); break; //신용카드인증
+				case "auth6" : AuthUtil.runAuthProcess(AuthUtil.authType.certificate.id, "fincert" , PageFunc.successCallBack , PageFunc.failCallBack); break; //공동인증서
+				default : break;
+			}
+		},
+		getTermsAgreementList : function(){
+			var termsList = $.extend( [], PageFunc.termsTypeArr );
+			termsList.sort(function( a, b ){
+				return a["ALL_SEQ"] - b["ALL_SEQ"];
+			});
+			return termsList;
+		},
+		getTermsAgreement : function(){
+			var delimeter = "|";
+			var marketYn = "";
+			var termsList = $.extend( [], PageFunc.termsTypeArr );
+			termsList.sort(function( a, b ){
+				return a["YN_SEQ"] - b["YN_SEQ"];
+			});
+			for (var i = 0; i < termsList.length; i++) {
+				var terms = termsList[i];
+				var termCode = terms.TERM_CODE;
+				var seq = terms.YN_SEQ;
+				if(seq < 0) continue;
+				$(".agree-box").find("div,p").each(function( index, element ){
+					var code = $(element).attr("id");
+
+					if( termCode == code ){
+						if($(element).is(":visible")){
+							var need = $(element).attr("needyn");
+							if( need == "N" ){
+								var notcheckCount = $(element).find(".ctm-check").not(".checked").length;
+								if( notcheckCount > 0 ){
+									marketYn += "N" + delimeter;
+								}else{
+									marketYn += "Y" + delimeter;
+								}
+							}else{
+								marketYn += "Y" + delimeter;
+							}
+						}else{
+							marketYn += "" + delimeter;
+						}
+					}
+				});
+			}
+			return marketYn.substring( 0, marketYn.length - 1 );
+		},
+		getRetailTermsAgreement : function(){
+			var delimeter = "|";
+			var marketYn = "";
+	    	
+			var termsList = $.extend( [], PageFunc.termsTypeArr );
+			termsList.sort(function( a, b ){
+				return a["RETAIL_YN_SEQ"] - b["RETAIL_YN_SEQ"];
+			});
+			for (var i = 0; i < termsList.length; i++) {
+				var terms = termsList[i];
+				var termCode = terms.TERM_CODE;
+				var seq = terms.RETAIL_YN_SEQ;
+				if(seq < 0) continue;
+				$(".agree-box").find("div,p").each(function( index, element ){
+					var code = $(element).attr("id");
+					if( termCode == code ){
+						if($(element).is(":visible")){
+								var need = $(element).attr("needyn");
+								if( need == "N" ){
+									var notcheckCount = $(element).find(".ctm-check").not(".checked").length;
+									if( notcheckCount > 0 ){
+										marketYn += "N" + delimeter;
+									}else{
+										marketYn += "Y" + delimeter;
+									}
+								}else{
+									marketYn += "Y" + delimeter;
+								}
+						}else{
+							marketYn += "" + delimeter;
+						}
+					}
+				});
+			}
+			return marketYn.substring( 0, marketYn.length - 1 );
+		},
+		getMarketingYn: function(gbn){
+			var marketingForSeq;
+			var delimeter = "|";
+			var marketYn = "";
+			var marketAreaId;
+			if(gbn==1){
+				marketingForSeq = ["agree12", "agree8", "agree7", "guide1", "guide2", "guide3", "guide4", "guide5", "agree37"];
+				marketAreaId = "#" + "${CODE_T000800003}";
+			}else if(gbn==2){
+				marketingForSeq = ["agree26"];
+				marketAreaId = "#" + "${CODE_T000800016}";
+			}else if(gbn==3){
+				marketingForSeq = ["agree27"];
+				marketAreaId = "#" + "${CODE_T000800017}";
+			}else if(gbn==4){//20220331 신규약관 추가
+				marketingForSeq = ["agree29"];
+				marketAreaId = "#" + "${CODE_T000800022}";
+			}else if(gbn==5){
+				marketingForSeq = ["agree50"];
+				marketAreaId = "#" + "${CODE_T001000002}";
+			}
+			
+			while(marketingForSeq.length != 0){
+				var popAttr =  marketingForSeq.shift();
+				$( marketAreaId ).find("input").each(function( index, element ){//.ctm-check
+					var attr = $( element ).attr("id");//.find("label") for
+					if(popAttr == attr){
+						if(attr.indexOf("guide-all") == -1){
+							if($( element).parent().hasClass("checked")){//-.parent()
+								marketYn += "Y" + delimeter;
+							}else if(popAttr=='guide5'){
+								marketYn += "N" + delimeter;
+							}else{
+								marketYn += "N" + delimeter;
+							}
+						}
+					}
+				});
+			}
+			return marketYn.substring( 0, marketYn.length - 1 );
+		},
+		loanApplyProcessStep03 : function(){
+			var url = '<c:url value="${ loanApplyRest }" />';
+			var form = document.frm1;
+			$("#loan_prod").prop("disabled","");
+			$("#car_yn").prop("disabled","");
+			var param = $( form ).serialize();
+			$("#loan_prod").prop("disabled","disabled");
+			$("#car_yn").prop("disabled","disabled");
+			AjaxFunc.ajaxAsyncWithProcess( url , param, function(data) {
+				try{
+					if(data.data.RES_CODE == 1000){
+						addLoading();
+						location.href =  '<c:url value="${ loanComp }" />';
+					}else{
+						if(data.data.DUPLICATE_LOAN_YN=='Y'){
+							customAlert({title : "알림" , message : "고객님께서는<br> <font style='font-weight:bold'>대출신청 진행 중</font>에 있습니다. <br>현재 대출 신청중으로 입력하신 연락처로<br> 상담원이 빠르게 연락드리겠습니다." }, function() {});
+						}else{
+							customAlert({title : "알림" , message : data.data.RES_MESSAGE }, function() {});
+						}
+					}
+				}catch(e){
+					customAlert({title : "알림" , message : "대출신청에 실패했습니다." }, function() {});
+				}
+			},function(){});
+		},
+		getCurrentJobCode : function(){
+			switch( PageFunc.currentInputType ){
+				case '${LOAN_INPUT_CODE01}' : 
+					return $( "#job_cd_2" ).selectmenu().val();
+				case '${LOAN_INPUT_CODE02}' : 
+					return ""; 
+				case '${LOAN_INPUT_CODE03}' : 
+					return $( "#job_cd_4" ).selectmenu().val(); 
+				case '${LOAN_INPUT_CODE04}' : 
+					return $( "#job_cd_1" ).selectmenu().val(); 
+				case '${LOAN_INPUT_CODE05}' : 
+					return $( "#job_cd_1" ).selectmenu().val(); 
+				case '${LOAN_INPUT_CODE06}' : 
+					return $( "#job_cd_3" ).selectmenu().val(); 
+				default : return "";
+			}
+		},
+		loanApplyProcessStep01 : function(){
+			if($("#loan_prod").selectmenu().val()!="GL021" && $("#loan_prod").selectmenu().val()!="GL056"){
+				if(UtilFunc.getAge($("#jumin1").val()) >= 70){
+					customAlert({title : "알림" , message : "고객님께서는 당사 대출규정상 <br> 신청하신 대출이 거절되었습니다. <br>도움을 드리지 못해 죄송합니다. <br><br>상세한 거절사유에 대하여 안내를 원하시면<br> 저축은행에 직접 방문하시거나 전화를 <br>주시면 거절사유를 안내해 드리겠습니다." }, function() {});
+					return;
+				}
+			}
+			if(UtilFunc.getAge($("#jumin1").val())<20){
+				customAlert({title : "알림" , message : "대출신청은 만 20세 이상부터 가능합니다." }, function() {$("#jumin1").focus();});
+				return;
+			}
+			var temp ="";
+			temp = $("#incom_annual_format").val().replace(/[^0-9]/g,'');
+			if(temp.length>6){
+				customAlert({title : "알림" , message : "연소득금액을 6자리 이하로 입력해 주세요." }, function() {$("#incom_annual_format").focus()});
+				return;
+			}
+			temp = $("#req_amt").val().replace(/[^0-9]/g,'');
+			if(temp.length>6){
+				customAlert({title : "알림" , message : "대출신청금액은 6자리 이하로 입력해 주세요." }, function() {$("#req_amt").focus()});
+				return;
+			}
+			if($("#loan_prod").selectmenu().val()!='GL090'&&$("#loan_prod").selectmenu().val()!='GL091'){
+				if($("#car_yn").selectmenu().val()==''){
+					customAlert({title : "알림" , message : "차량 보유여부를 확인해주세요." }, function() {$("#car_no").focus()});
+					return;
+				}
+			}
+			if($("#car_yn").selectmenu().val()=='Y'){
+				if($("#car_no").val()==''){
+					customAlert({title : "알림" , message : "차량을 보유하신 경우, 차량정보를 입력해주세요." }, function() {$("#car_no").focus()});
+					return;
+				}
+				if(!PageFunc.isCarNumChk($("#car_no").val())){
+					customAlert({title : "알림" , message : "차량정보 형식에 맞게 입력해주세요." }, function() {$("#car_no").focus()});
+					return;
+				}
+			}
+			if(PageFunc.currentAuth == ""){
+				customAlert({title : "알림" , message : "인증방식을 선택해주세요." }, function() {});
+				return;
+			}else{
+				if(!PageFunc.validateForm()) {
+					return false;
+				}
+			}
+			if(!setCustTermsFormData()){
+				return;
+			}
+
+			var retail_yn;
+			if($("#loan_prod").selectmenu().val()=="GL090" || $("#loan_prod").selectmenu().val()=="GL091"){
+				retail_yn = 'y'
+			}
+			if(!setIndvTrnCnfrFormData(retail_yn)){
+				return;
+			}
+
+			var value = PageFunc.getYCheckedRadio();
+			if( value != null) {
+				customAlert({title : "알림" , message : "보이스피싱 피해가 <br/>우려됩니다. <br/>금융감독원 콜센터 1332, <br/>경찰청 112로 문의하시길 바랍니다." }, function() {
+					$(value).focus();
+				});
+				return;
+			}
+			
+			var title = PageFunc.getNotCheckedTermsTitle();
+			if( title.length > 0 ){
+				customAlert({title : "알림" , message : title + " 에 동의 해 주세요." }, function() {});
+				return;
+			}
+			
+			if (PageFunc.getMarketingYn(5) == 'Y') {
+				if (!$('#agree51').is(':checked')) {
+					customAlert({title : "알림" , message : "멤버십 서비스 가입시 멤버십회원 약관을 확인하셔야 합니다." }, function() {});
+					return;
+				}
+			}
+
+			if($("#loan_prod").selectmenu().val()=='GL021'){
+				$("#worker_type").val("C001900001");
+				$("#residence_own_type_cd").val("C007700002");
+	    	}else{
+	    		$("#worker_type").val("");
+				$("#residence_own_type_cd").val("");
+	    	}
+			
+			$("#phone_hidden").val(UtilFunc.getOnlyNumber($("#phone_hidden").val()));
+			$("#incom_annual_hidden").val(UtilFunc.getOnlyNumber($("#incom_annual_format").val())*10000);
+			$("#marketing_yn").val(PageFunc.getMarketingYn(1));
+			$("#PRODUCT_SERVICE_PROVIDE_YN").val(PageFunc.getMarketingYn(4));//선택약관추가 20220331
+
+			if($("#loan_prod").selectmenu().val()!='GL090'&&$("#loan_prod").selectmenu().val()!='GL091'){
+				$("#GUARANTEE_SERVICE_YN").val(PageFunc.getMarketingYn(2));//선택약관추가 20210721
+				$("#PRODUCT_SERVICE_YN").val(PageFunc.getMarketingYn(3));//선택약관추가 20210721
+				$("#MEMBERSHIP_AGREEMENT_YN").val(PageFunc.getMarketingYn(5));
+				$("#terms_agreement_yn").val(PageFunc.getTermsAgreement());
+				$("#req_amt_hidden").val(UtilFunc.getOnlyNumber($("#req_amt").val())*10000);
+				$("#PROD_TERMS_AGREE").val(PageFunc.getProdMarketingYn(1));//상품설명서 하위내용20210927
+			}else{
+				$("#terms_agreement_yn").val(PageFunc.getRetailTermsAgreement());
+				$("#req_amt_hidden").val(UtilFunc.getOnlyNumber($("#req_amt").val())*1000000);
+				$("#MRGG_TP_CD").val($('input[name="mrgg_tp_cd_radio"]:checked').val());
+				$("#PROD_TERMS_AGREE").val(PageFunc.getProdMarketingYn(2));//상품설명서 하위내용20210927
+			}
+			$("#auth_cd").val(PageFunc.getCurrentCode(PageFunc.currentAuth));
+			if( PageFunc.landChCd == "" ){
+				$("#land_ch_cd").val("${LAND_CH_HOME_PC_CD}");
+			}
+			if(tempProdCode=="P999999999"){
+				$("#prod_nm").val("통합대출")			
+			}else{
+				$("#prod_nm").val( PageFunc.getProdInfo( PageFunc.getSelectedProdCode(), true).NAME );
+			}
+			var jobcd = "";
+			$("select[name='job']").each(function(index, element){
+				if($(element).parent().parent().is(":visible")){
+					jobcd = $(element).find("option:selected").selectmenu().val();
+				}
+			});
+			if($("#loan_prod").selectmenu().val()=="GL084"){
+				jobcd = $("#job_cd_1").selectmenu().val();
+			}
+			$("#job_cd").val( jobcd );
+			$("#jobname").val( $("#jobname").val().trim() );
+			if(!PageFunc.jobJoinDayUpdate()){
+				return;	
+			}
+			if("Y" == "${testv1}" || "Y" ==  "${testv2}") {
+				//임시처리
+				var form = document.frm1;
+				var param = $( form ).serialize();
+				var url = '<c:url value="${ loanRealNameCheck }" />';
+				AjaxFunc.ajaxSyncWithProcess( url , param, function(data) {
+					PageFunc.successStep01(data);
+				}, function() {});
+				return;
+			}
+			try{
+				var isWindows = ${isWindows};
+				if(isWindows){
+					PageFunc.processAstx();
+				}else{
+					PageFunc.processNfiter();
+				}
+			}catch(e){
+				customAlert({title : "알림" , message : "실명인증 중 문제가 생겼습니다."}, function() {});
+			}
+	    },
+	    getYCheckedRadio : function() {
+			var result = null;
+			$(".radio-area").each(function( index, element ){
+				var selectedElment = $(element).find("input[type='radio']:checked");
+				var selectedId = selectedElment.attr("id");
+				if( typeof selectedId != "undefined" && selectedId.indexOf("Y") > -1 ){
+					result = $(element).find("input[type='radio']").eq(0);
+					$(element).closest("li").addClass("warning");
+				}else{
+					$(element).closest("li").removeClass("warning");
+				}
+			});
+			return result;
+	    },
+		jobJoinDayUpdate :  function() {
+			if($('#job_join_day').is(':visible')) {
+				var value = $('#job_join_day').val();
+				var job_period = '';
+				if(value.length == 8 && new Date([value.substr(0, 4), value.substr(4, 2), value.substr(6)].join('-')) != 'Invalid Date') {
+					var current = new Date();
+					var inputYear = value.substr(0, 4);
+					var inputMonth = value.substr(4, 2);
+					var months = (current.getFullYear() - Number(inputYear)) * 12 + (current.getMonth() + 1) - Number(inputMonth) + 1;
+					job_period = months < 0 ? 0 : months;
+				}else{
+					customAlert({title : "알림" , message : "날짜 형식에 맞지 않습니다." }, function() { $('#job_join_day').focus(); });
+					return false;
+				}
+				$('#job_period').val(job_period);
+			}
+			return true;
+		},
+		successStep01 : function( data ){
+			try{
+				if(data.resultCode == -1){
+					customAlert({title : "알림" , message : data.resultMessage }, function() {
+						location.reload();
+					});
+				}else if(data.resultCode == -2){
+					PageFunc.clearAstxD2("SSN2");
+					customAlert({title : "알림" , message : data.resultMessage }, function() {
+					});
+				}else{
+					if(data.data.RES_YN == "Y" || data.data.RES_CODE == 1000){
+						PageFunc.loanApplyProcessStep02();
+					}else{
+						PageFunc.clearAstxD2("SSN2");
+						customAlert({title : "알림" , message : data.data.RES_MESSAGE }, function() {});
+					}
+				}
+			}catch(e){
+				PageFunc.clearAstxD2("SSN2");
+				customAlert({title : "알림" , message : "실명인증에 실패했습니다."}, function() {});
+			}
+		},
+		processAstx : function(){
+			var form = document.frm1;
+			$ASTX2.getE2EData( form , function (data) {
+				$ASTX2.setE2EData( form, data);
+				$("#loan_prod").prop("disabled","");
+				$("#car_yn").prop("disabled","");
+				var param = $( form ).serialize();
+				$("#loan_prod").prop("disabled","disabled");
+				$("#car_yn").prop("disabled","disabled");
+			    
+				var url = '<c:url value="${ loanRealNameCheck }" />';
+				AjaxFunc.ajaxSyncWithProcess( url , param, function(data) {
+					PageFunc.successStep01(data);
+				}, function() {});
+			},function(){});
+		},
+	    
+		processNfiter : function(){
+			$("input[name='SSN2']").eq(0).val(encodeURIComponent(nFilterEncrypted()));
+			var form = document.frm1;
+			$("#loan_prod").prop("disabled","");
+			$("#car_yn").prop("disabled","");
+			var param = $( form ).serialize();
+			$("#loan_prod").prop("disabled","disabled");
+			$("#car_yn").prop("disabled","disabled");
+			var url = '<c:url value="${ loanRealNameCheck }" />';
+			AjaxFunc.ajaxSyncWithProcess( url , param, function(data) {
+				PageFunc.successStep01(data);
+			}, function() {});
+		},
+	    	 
+		addApplyButtonEvent : function(){
+			$(".btn-wrap .btn-big.pink").unbind("click").bind("click", function(){
+				PageFunc.loanApplyProcessStep01();
+			});
+		},
+		initLandChCdBox : function(){
+			$("#land_ch_cd").val( PageFunc.landChCd );
+		},
+		clearAstxD2 : function(obj){
+			var isWindows = ${isWindows};
+			if(isWindows){
+				$ASTX2.clearE2EText( document.getElementById('SSN2') );
+			}else{
+				$("input[name='SSN2']").eq(0).val("");
+			}
+		},
+		isCarNumChk : function(val){
+		    var data = val;
+		    var carPattern1 = /^[0-9]{2}[가-힣]{1}[\s]*[0-9]{4}$/;  //12가1234
+		    var carPattern2 = /^[0-9]{3}[가-힣]{1}[\s]*[0-9]{4}$/;  //123가1234
+		    var carPattern3 = /^[가-힣]{2}[\s]*[0-9]{2}[가-힣]{1}[\s]*[0-9]{4}$/;  //서울12가1234
+		    if(!carPattern1.test(data) && !carPattern2.test(data) && !carPattern3.test(data)){
+		        return false;
+		    }else{
+		        return true;
+		    }
+		},
+		getProdMarketingYn: function(gbn){//상품설명서 하위내용20210927
+			var marketingForSeq;
+			var delimeter = "|";
+			var marketYn = "";
+			var marketAreaId;
+			if(gbn==1){
+				marketingForSeq = ["prod_terms_agree0", "prod_terms_agree4_1", "prod_terms_agree4_2", "prod_terms_agree5_1", "prod_terms_agree5_2"];
+				marketAreaId = "#" + "${CODE_T000800004}";
+			}else{
+				marketingForSeq = ["prod_terms_agree0","prod_terms_agree7_1", "prod_terms_agree7_2"];
+				marketAreaId = "#" + "${CODE_T000800005}";
+			}
+			
+			while(marketingForSeq.length != 0){
+				var popAttr =  marketingForSeq.shift();
+				$(marketAreaId).find("input").each(function( index, element ){
+					var inputId = $(this).attr("id");
+					if(popAttr == inputId){
+						if(popAttr =="prod_terms_agree0" && $(this).attr("checked")){
+							marketYn += 	"Y"+ delimeter;
+						}
+						else if($(this).parent().hasClass("checked")) {
+							marketYn += $(this).val()+ delimeter;
+						}
+					}
+				});
+			}
+			
+			return marketYn;
+			
+		},
+	});
+</script>

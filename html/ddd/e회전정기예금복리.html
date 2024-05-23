@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<!-- 헤더 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>예가람저축은행</title>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta name="keywords" content="예가람저축은행" />
+	<meta name="description" content="딴딴해서 믿을 수 있는 예가람저축은행, 예금, 적금, 신용부금, 논스톱 자동대출 등 예금, 대출금융상품 안내" />
+	<meta name="viewport" content="width=device-width">
+	<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta property="og:image"
+		content="https://www.yegaramsb.co.kr/resources/images/main/meta-img-square_new.jpg">
+	<link rel="shortcut icon" type="image/x-icon" href="../../../resources/favicon.ico" />
+	<link href="../../../resources/css/jquery.bxslider.css" rel="stylesheet" />
+	<link href="../../../resources/css/default.css" rel="stylesheet" />
+	<link href="../../../resources/css/layout.css" rel="stylesheet" />
+	<link href="../../../resources/css/contents.css" rel="stylesheet" />
+	<link href="../../../resources/css/jquery-ui.css" rel="stylesheet" />
+	<script src="../../../resources/js/jquery-1.11.3.min.js"></script>
+	<script src="../../../resources/js/TweenMax.min.js"></script>
+	<script src="../../../resources/js/jquery.bxslider.min.js"></script>
+	<script src="../../../resources/js/placeholders.js"></script>
+	<!--     jquery-ui.js가 default.js보다 먼저 선언되어야 함 -->
+	<script src="../../../resources/js/jquery-ui.js" type="text/javascript"></script>
+	<script src="../../../resources/js/default.js"></script>
+	<script src="../../../resources/js/ui.js"></script>
+	<script src="../../../resources/pub_js/ui_pub.js"></script>
+	<script type="text/javascript" src="../../../resources/js/jquery.form.min.js"></script>
+	<script type="text/javascript" src="../../../resources/js/common_ajax.js"></script>
+	<script type="text/javascript" src="../../../resources/js/common_bank_calc_util.js"></script>
+	<script type="text/javascript" src="../../../resources/js/common_bank_map_util.js"></script>
+	<script type="text/javascript" src="../../../resources/js/common_layer.js"></script>
+	<script type="text/javascript" src="../../../resources/js/common_pagevalidate.js"></script>
+	<script type="text/javascript" src="../../../resources/js/common_util.js"></script>
+	<script type="text/javascript" src="../../../resources/js/iscroll.js"></script>
+	<script type="text/javascript" src="../../../resources/js/jquery.animateSprite.min.js"></script>
+	<script src="../../../resources/js/common_bank_calc_util.js" type="text/javascript"></script>
+	<script src="../../../resources/js/hp_common.js" type="text/javascript"></script>
+	<script src="../../../resources/js/calculator.js"></script>
+	<script src="../../../resources/js/streamdocs/adapter.js"></script>
+	<!--     scrap -->
+	<!-- <link href="/resources/scrap/css/process_manager.css" rel="stylesheet" /> -->
+	<!--     <script src="/resources/scrap/js/jquery-1.9.1.min.js"></script> -->
+
+</head>
+
+<body>
+	<!-- <body class="color-type2"> 타입별 -->
+	<!-- ********** Include ********** -->
+	<!-- s:skipnavi -->
+	<div id="skipnavi">
+		<script>
+			$(document).ready(function () {
+				$("#skipnavi").load("../include/inc_body_skipnavi.html");
+			});
+		</script>
+	</div>
+	<!-- ********** //Include ********** -->
+	<!-- //e:skipnavi -->
+
+	<!-- s:wrap -->
+	<div id="wrap">
+
+		<!-- ********** Include ********** -->
+		<!-- s:header -->
+		<div id="headerWrap">
+			<script>
+				$(document).ready(function () {
+					$("#headerWrap").load("../include/inc_body_header.html");
+				});
+			</script>
+		</div>
+		<!-- //e:header -->
+
+		<!-- s:sitemapWrap -->
+		<div id="sitemapWrap" class="layerpopup sitemap-layer" tabindex="0" data-tooltip-con="sitemap-layer"
+			data-focus="sitemap-layer" data-focus-prev="btn-menu-close">
+			<script>
+				$(document).ready(function () {
+					$("#sitemapWrap").load("../include/inc_body_sitemapWrap.html");
+				});
+			</script>
+		</div>
+		<!-- //e:sitemapWrap -->
+		<!-- ********** //Include ********** -->
+
+		<!-- s contentsWrap -->
+		<div id="contentsWrap">
+
+		<!-- s:contents -->
+		<div class="contents default-wrap">
+			<div class="prod-info">
+				<div class="prod-cts">
+					<div class="list-tit">상품소개</div>
+					<ul class="define-list">
+						<li>
+							<span class="de-tit">가입기간</span>
+							<div class="de-cts">6개월~60개월</div>
+						</li>
+						<li>
+							<span class="de-tit">가입금액</span>
+							<div class="de-cts">1만원 이상</div>
+						</li>
+						<li>
+							<span class="de-tit">가입대상</span>
+							<div class="de-cts">비거주 외국인 외 제한없음</div>
+						</li>
+						<li>
+							<span class="de-tit">이자의 지급시기</span>
+							<div class="de-cts">만기시 원금과 함께 한번에 지급</div>
+						</li>
+					</ul>
+
+
+					<!-- s:20230912 수정사항 -->
+					<div id="rateDiv">
+						<div class="de-cts">
+							<div class="info-table-area">
+								<div class="sub-title-area">
+									<h6 class="sub-title">금리정보</h6>
+								</div>
+								<ul class="list-wrap01">
+									<li class="list-item">
+										<div class="list-item-tit">약정이율</div>
+										<div class="list-item-txt"><p>4.40% (확정금리)(세전) 장래의 금리 변동에 따라 변동될 수 있습니다.</p></div>
+									</li>
+									<li class="list-item">
+										<div class="list-item-tit">금리</div>
+										<div class="list-item-txt">
+											<div class="table-wrap01">
+												<table class="table-type01 cke_show_border __se_tbl_ext">
+													<caption class="sr-only">금리정보표이며 기간, 약정이율 항목이 있습니다.</caption>
+													<thead>
+														<tr>
+															<th data-cell-header="기간" scope="col">
+																<div>기간</div>
+															</th>
+															<th data-cell-header="약정이율" scope="col">
+																<div>단리식(약정이율)</div>
+															</th>
+															<th data-cell-header="약정이율" scope="col">
+																<div>복리식(연평균수익률)</div>
+															</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="session">
+															<th class="se-td" data-cell-header="기간">
+																<div class="td-wrap">
+																	<div class="common-text01">
+																		<div>12개월</div>
+																	</div>
+																</div>
+															</th>
+															<th class="se-td" data-cell-header="단리식(약정이율)">
+																<div class="td-wrap">
+																	<div class="common-text01">
+																		<div>4.40</div>
+																	</div>
+																</div>
+															</th>
+															<th class="se-td" data-cell-header="복리식(연평균수익률)">
+																<div class="td-wrap">
+																	<div class="common-text01">
+																		<div>4.48</div>
+																	</div>
+																</div>
+															</th>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</li>
+									<li class="list-item">
+										<div class="list-item-tit">우대조건</div>
+										<div class="list-item-txt"><p>-</p></div>
+									</li>
+									<li class="list-item">
+										<div class="list-item-tit">이자지급 시기 및 방법</div>
+										<div class="list-item-txt">
+											<p>단리식 : 매월 이자 지급</p>
+											<p>복리식 : 매월 발생하는 이자가 원금에 포함 복리 계산되어 만기에 한번에 지급</p>
+										</div>
+									</li>
+									<li class="list-item">
+										<div class="list-item-tit">이자지급 제한 사유</div>
+										<div class="list-item-txt">
+											<p>사고신고 및 출금정지 등</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+							<div class="info-table-area">
+								<div class="sub-title-area">
+									<h6 class="sub-title">중도해지이율 및 만기 후 이율</h6>
+								</div>
+								<ul class="list-wrap01">
+									<li class="list-item">
+										<div class="list-item-tit">중도해지이율</div>
+										<div class="list-item-txt">
+											<p>회전주기 도래전: 정기예금 중도해지이율 적용</p>
+											<p>회전주기 도래후</p>
+											<p>완료된 회전주기 기간: 약정금리 적용</p>
+											<p>미완료된 회전주기 기간: 정기예금 중도해지이율 적용</p>
+											<div class="table-wrap01">
+												<table class="table-type01 cke_show_border __se_tbl_ext">
+													<caption class="sr-only">중도해지이율표이며 기간, 중도해지이율 항목이 있습니다.
+													</caption>
+													<thead>
+														<tr>
+															<th data-cell-header="예치기간" scope="col">
+																<div>예치 기간</div>
+															</th>
+															<th data-cell-header="중도해지이율" scope="col">
+																<div>중도해지 이율</div>
+															</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="session">
+															<th class="se-td" data-cell-header="예치 기간">
+																<div class="td-wrap">
+																	<div class="common-text01">
+																		<div>1개월 미만</div>
+																	</div>
+																</div>
+															</th>
+															<th class="se-td" data-cell-header="중도해지 이율">
+																<div class="td-wrap">
+																	<div class="common-text01">
+																		<div>보통예금 이율</div>
+																	</div>
+																</div>
+															</th>
+														</tr>
+														<tr class="session">
+															<th class="se-td" data-cell-header="예치 기간">
+																<div class="td-wrap">
+																	<div class="common-text01">
+																		<div>1개월 이상 ~ 6개월 미만</div>
+																	</div>
+																</div>
+															</th>
+															<th class="se-td" data-cell-header="중도해지 이율">
+																<div class="td-wrap">
+																	<div class="common-text01">
+																		<div>약정금리의 50%</div>
+																	</div>
+																</div>
+															</th>
+														</tr>
+														<tr class="session">
+															<th class="se-td" data-cell-header="예치 기간">
+																<div class="td-wrap">
+																	<div class="common-text01">
+																		<div>6개월 이상 ~ 12개월 미만</div>
+																	</div>
+																</div>
+															</th>
+															<th class="se-td" data-cell-header="중도해지 이율">
+																<div class="td-wrap">
+																	<div class="common-text01">
+																		<div>약정금리의 55%</div>
+																	</div>
+																</div>
+															</th>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</li>
+									<li class="list-item">
+										<div class="list-item-tit">중도해지시 처리방법</div>
+										<div class="list-item-txt"><p>매 납입금마다 납입일부터 지급일 전일까지의 기간에 대하여 납입기간 경과비율에 따른 중도해지 이자율을 적용</p></div>
+									</li>
+									<li class="list-item">
+										<div class="list-item-tit">만기 후 처리방법</div>
+										<div class="list-item-txt">
+											<div class="list-item-box">
+												<p>1개월 이내 : 당초 약정금리와 만기시 동일상품 동일계약기간의 신규약정금리 중 낮은 이율(2019.07.01. 가입분부터)</p>
+												<p>1개월 초과 : 보통예금 이율</p>
+											</div>
+										</div>
+									</li>
+									<li class="list-item">
+										<div class="list-item-tit">만기 후 이율</div>
+										<div class="list-item-txt">
+											<div class="list-item-box">
+												<p>만기후 1개월 이하 : 약정금리와 현행금리중 낮은 금리</p>
+												<p>1개월 초과 : 보통예금이율 적용(현재 0.1%)</p>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div id="notice">
+						<div class="list-tit">유의사항</div>
+						<ul class="list-wrap01">
+							<li class="list-item">
+								<div class="list-item-tit">부수되는 서비스</div>
+								<div class="list-item-txt"><p>-</p></div>
+							</li>
+							<li class="list-item">
+								<div class="list-item-tit">수수료(요율/금액)</div>
+								<div class="list-item-txt"><p>-</p></div>
+							</li>
+							<li class="list-item">
+								<div class="list-item-tit">기타사항</div>
+								<div class="list-item-txt">
+									<p><strong>[비대면 정기예금 가입방법]</strong></p>
+									<p>SB톡톡플러스/GOBANK 어플 설치하여 가입하거나 방문하여 인터넷뱅킹 서비스 신청 후 가능</p>
+									<p>인터넷뱅킹 및 스마트뱅킹 가입안내 : 신분증, 도장 지참하여 본인 내방 후 ‘전자금융서비스신청서’를 작성하여 가입후 예금 신규절차 진행</p>
+									<p>SB톡톡플러스 가입안내 : SB톡톡플러스 어플 설치</p>
+									<p>GOBANK 가입안내 : GOBANK 어플 설치</p>
+								</div>
+							</li>
+							<li class="list-item">
+								<div class="list-item-tit">위법계약해지 안내</div>
+								<div class="list-item-txt">
+									<p>금융회사가 금융소비자보호법상 판매원칙 위반 시 일정 기간 이내에 금융소비자가 계약 해지를 요구할 수 있습니다.</p>
+									<p>금융회사는 10일 이내에 수락여부를 통지해야하며, 거절 시에는 거절사유와 함께 통지하여야 합니다.</p>
+									<p>위법계약해지 요구는 계약서류를 받은 날로부터 5년, 위법사실을 안 날로부터 1년 이내에 가능(계약 종료 시 행사 불가)</p>
+								</div>
+							</li>
+						</ul>
+
+						<div class="list-item-box">
+							<ul class="notice-list">
+								<li>계약 체결 전 상품설명서 및 약관을 확인하시기 바랍니다.</li>
+								<li>해당 상품에 대한 충분한 사전 설명을 받을 권리가 있으며, 설명을 이해한 후 거래하시기 바랍니다.</li>
+							</ul>
+						</div>
+
+					</div>
+
+					<!-- e:2023-07-13 클래스 추가 -->
+					<ul class="define-list mt20">
+						<li id="nontaxSavingOpen">
+							<span class="de-tit">세금우대상품[비과세 종합저축]</span>
+							<div class="de-cts">
+								<ul class="list type1">
+									<li>가입대상 : 만65세 이상의 거주자, 장애인복지법에 의하여 등록한 장애인, 독립유공자와 그 유족 또는 가족, 국가유공자에 의한 상이자,
+										기초생활보장수급자, 고엽제후유의증 환자, 5.18민주화운동 부상자</li>
+									<li>20.1.1 이후 가입(자동재예치) 분부터 직전 3개년도 과세기간 내 1회이상 금융소득 종합과세 대상자(금융소득 연간 합계액 2천만원
+										초과)에 해당되는 경우 추후 검증을 통해 가입대상에서 제외되며, 이후 관련 법령에서 정하는 절차에 따라 일반과세로 전환될 수 있음
+									</li>
+									<li>관련세법이 개정될 경우 세율이 변경되거나 세금이 부과될 수 있으며, 계약기간 만료일 이후의 이자는 과세됨</li>
+								</ul>
+							</div>
+						</li>
+						<li id="deposProtect">
+							<span class="de-tit">예금자보호안내</span>
+							<div class="de-cts">
+								<div id="depositProAll" class="mark-kdic">
+									<p><img src="/resources/images/page/img_kdic.jpg"
+											alt="예금보험공사  보호금융상품 1인당 최고 5천만원 (예금보험공사  보호금융상품 마크)"></p>
+									<p>이 예금은 예금자보호법에 따라 예금보험공사가 보호하되, 보호 한도는 본 상호저축은행에 있는 귀하의 모든 예금보호 대상 금융상품의 원금과
+										소정의 이자를 합하여 1인당 "최고 5천만원"이며, 5천만원을 초과하는 나머지 금액은 보호하지 않습니다.</p>
+								</div>
+								<div class="table-wrap" id="retireInfo" style="display: none;">
+								</div>
+							</div>
+						</li>
+					</ul>
+
+				</div>
+
+				<div class="prod-date">
+					<span class="date">기준일 : 2023-08-30</span>
+					<span class="compliance">고려저축은행 준법감시인 심의필 고려저축은행 준법감시인 심의필 2023.24호(2033.03.23)</span>
+				</div>
+
+			</div>
+
+			<div class="sub-menu-wrap">
+				<!-- s:2023-07-14 수정 -->
+				<!-- s:디자인현행화 -->
+				<div class="list-tit mt60">다른상품 보기</div>
+				<!-- e:디자인현행화 -->
+				<div class="sub-menu mt20">
+					<div class="bx-wrapper" style="max-width: 1082px; margin: 0px auto;">
+						<div class="bx-viewport"
+							style="width: 100%; overflow: hidden; position: relative; height: 72px;">
+							<ul
+								style="width: 615%; position: relative; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
+								<li
+									style="float: left; list-style: none; position: relative; width: 237.5px; margin-right: 10px;">
+									<a href="/deposit/product/P000000090">보고파 정기적금</a>
+								</li>
+								<li
+									style="float: left; list-style: none; position: relative; width: 237.5px; margin-right: 10px;">
+									<a href="/deposit/product/P000000040">e정기적금</a>
+								</li>
+								<li
+									style="float: left; list-style: none; position: relative; width: 237.5px; margin-right: 10px;">
+									<a href="/deposit/product/P000000148">씨앗정기적금</a>
+								</li>
+								<li
+									style="float: left; list-style: none; position: relative; width: 237.5px; margin-right: 10px;">
+									<a href="/deposit/product/P000000149">응답하라2030 정기적금</a>
+								</li>
+							</ul>
+						</div>
+						<div class="bx-controls bx-has-controls-direction">
+							<div class="bx-controls-direction"><a class="bx-prev disabled" href="">Prev</a><a
+									class="bx-next disabled" href="">Next</a></div>
+						</div>
+					</div>
+					<!-- <div class="bx-controls bx-has-controls-direction">
+							<div class="bx-controls-direction">
+								<a class="bx-prev" href="">Prev</a>
+								<a class="bx-next" href="">Next</a>
+							</div>
+						</div> -->
+					<!-- e:2023-07-14 수정 -->
+				</div>
+				<div class="btn-wrap">
+					<!-- s:2023-07-14 수정 -->
+					<a class="btn-big navy" href="/deposit/submain">통합상품조회</a>
+					<!-- e:2023-07-14 수정 -->
+				</div>
+			</div>
+
+		</div>
+
+
+
+		<!-- //e:contents -->
+		<button type="button" name="button" class="btn-circle top ir btn-top" style="display: none;">위로</button>
+
+	</div>
+	<!-- //e: contentsWrap -->
+
+	<!-- ********** Include ********** -->
+	<!-- s footerWrap -->
+	<div id="footerWrap">
+		<script>
+			$(document).ready(function () {
+				$("#footerWrap").load("../include/inc_body_footer.html");
+			});
+		</script>
+	</div>
+	<!-- //e:footerWrap -->
+	<!-- ********** //Include ********** -->
+
+	</div>
+	<!-- //e:wrap -->
+
+	<!-- ********** Include ********** -->
+	<!--s:기획현행화-->
+	<!--e:기획현행화-->
+	<!-- ********** //Include ********** -->
+</body>
+
+</html>

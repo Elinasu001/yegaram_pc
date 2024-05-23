@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>예가람저축은행</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="keywords" content="예가람저축은행" />
+	<meta name="description" content="" />
+    <meta name="viewport" content="width=device-width">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta property="og:image" content="https://www.yegaramsb.co.kr/resources/images/main/meta-img-square_new.jpg">
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../../resources/favicon.ico" />
+    <link href="../../../resources/css/jquery.bxslider.css" rel="stylesheet" />
+	<link href="../../../resources/css/default.css" rel="stylesheet" />
+	<link href="../../../resources/css/layout.css" rel="stylesheet" />
+	<link href="../../../resources/css/contents.css" rel="stylesheet" />
+	<link href="../../../resources/css/jquery-ui.css" rel="stylesheet" />
+
+    <script src="../../../resources/js/jquery-1.11.3.min.js"></script>
+    <script src="../../../resources/js/TweenMax.min.js"></script>
+    <script src="../../../resources/js/jquery.bxslider.min.js"></script>
+    <script src="../../../resources/js/placeholders.js"></script>
+    
+<!--     jquery-ui.js가 default.js보다 먼저 선언되어야 함 -->
+    <script src="../../../resources/js/jquery-ui.js" type="text/javascript"></script>
+         
+    <script src="../../../resources/js/default.js"></script>
+    <script src="../../../resources/js/ui.js"></script>
+    
+    <script type="text/javascript" src="../../../resources/js/jquery.form.min.js"></script> 
+  	<script type="text/javascript" src="../../../resources/js/common_ajax.js"></script>
+  	<script type="text/javascript" src="../../../resources/js/common_bank_calc_util.js"></script> 
+  	<script type="text/javascript" src="../../../resources/js/common_bank_map_util.js"></script> 
+
+  	<script type="text/javascript" src="../../../resources/js/common_layer.js"></script> 
+    <script type="text/javascript" src="../../../resources/js/common_pagevalidate.js"></script>
+    <script type="text/javascript" src="../../../resources/js/common_util.js"></script> 
+    <script type="text/javascript" src="../../../resources/js/iscroll.js"></script> 
+    <script type="text/javascript" src="../../../resources/js/jquery.animateSprite.min.js"></script>
+     
+    
+    <script src="../../../resources/js/common_bank_calc_util.js" type="text/javascript"></script>
+    <script src="../../../resources/js/hp_common.js" type="text/javascript"></script>
+    <script src="../../../resources/js/calculator.js"></script>
+    
+    <script src="../../../resources/js/streamdocs/adapter.js"></script>  	
+<!--     scrap -->
+<!-- <link href="../../../resources/scrap/css/process_manager.css" rel="stylesheet" /> -->
+<!--     <script src="../../../resources/scrap/js/jquery-1.9.1.min.js"></script> -->
+
+</head>
+<body>
+<!-- <body class="color-type2"> 타입별 -->
+    <!-- ********** Include ********** -->
+    <!-- s:skipnavi -->
+    <div id="skipnavi">
+        <script>
+		$(document).ready(function(){
+			document.charset="euc-kr";
+			$("#skipnavi").load("../include/inc_body_skipnavi.html");
+		});
+		</script>
+    </div>
+	<!-- ********** //Include ********** -->
+    <!-- //e:skipnavi -->
+
+    <!-- ********** //Include ********** -->
+    <!-- //e:skipnavi -->
+
+    <!-- s:wrap -->
+    <div id="wrap">
+		 <!-- ********** Include ********** -->
+       <div id="headerWrap">
+			<script>
+			$(document).ready(function(){
+				document.charset="euc-kr";
+				$("#headerWrap").load("../include/inc_body_header.html");
+			});
+			</script>
+        </div>
+
+		<div id="sitemapWrap" class="layerpopup sitemap-layer" tabindex="0" data-tooltip-con="sitemap-layer" data-focus="sitemap-layer" data-focus-prev="btn-menu-close">
+			<script>
+			$(document).ready(function(){
+				document.charset="euc-kr";
+				$("#sitemapWrap").load("../include/inc_body_sitemapWrap.html");
+			});
+			</script>
+        </div>
+        <!-- ********** //Include ********** -->
+
+        <!-- ********** Include ********** -->
+		 <div class="quick-menu close">
+			<script>
+			$(document).ready(function(){
+				document.charset="euc-kr";
+				$(".quick-menu").load("../include/inc_quickmenu_deposit.html");
+			});
+			</script>
+        </div>
+        <!-- ********** //Include ********** -->
+
+         <!-- s contentsWrap -->
+        <div id="contentsWrap">
+        
+            <!-- s:subVisualWrap -->
+            <div id="subVisualWrap" class="sub1-1">
+                <div class="breadcrumb">
+                    <a href="#" class="home ir">홈</a>
+                    <a href="#" class="depth1"></a>
+                    <a href="#" class="depth2"></a>
+                    <a href="#" class="depth3"></a>
+                </div>
+                <div class="prod-main-tit">
+                    <h2><img src="/resources/images/page/tit_sub01.png" alt="예가람저축은행 예금상품" /></h2>
+                    <div class="prod-select">
+                    </div>
+                </div>
+            </div> 
+            <!-- //e:subVisualWrap -->
+            <!-- s:contents -->
+            <div class="contents02 default-wrap">
+                <p class="prod-count">목돈굴리기 상품 (3개)</p>
+                <ul class="prod-main">
+                    <li>
+                        <h3><img src="/resources/images/page/tit_sub01_01_01.png" alt="목돈굴리기 e-정기예금" /></h3>
+                        <p class="desc">일정기간 여유자금을 예금하고 확정금리로 고수익을 보장하는 예금 (인터넷가입전용)</p>
+                        <p class="hashtag"><span>#추천 #인터넷가입 #예금자보호 #비과세가능</span></p>
+                        <a href="#" class="prod-more">상품 자세히보기</a>
+                    </li>
+                    <li>
+                        <h3><img src="/resources/images/page/tit_sub01_01_02.png" alt="목돈굴리기 정기예금" /></h3>
+                        <p class="desc">일정기간 여유자금을 예금하고 확정금리로 고수익을 보장하는 예금</p>
+                        <a href="#" class="prod-more">상품 자세히보기</a>
+                        <p class="hashtag"><span>#추천</span><span>#예금자보호</span><span>#비과세가능</span></p>
+                    </li>
+                    <li>
+                        <h3><img src="/resources/images/page/tit_sub01_01_03.png" alt="목돈굴리기 표지어음" /></h3>
+                        <p class="desc">일정기간 여유자금을 예금하고 확정금리로 고수익을 보장하는 예금</p>
+                        <p class="hashtag"><span>#추천</span><span>#예금자보호</span><span>#비과세가능</span></p>
+                        <a href="#" class="prod-more">상품 자세히보기</a>
+                    </li>
+                </ul>
+                <p class="prod-count">목돈마련 상품 (5개)</p>
+                <ul class="prod-main">
+                    <li>
+                        <h3><img src="/resources/images/page/tit_sub01_02_01.png" alt="목돈마련 정기적금" /></h3>
+                        <p class="desc">일정기간 여유자금을 예금하고 확정금리로 고수익을 보장하는 예금</p>
+                        <p class="hashtag"><span>#추천</span><span>#예금자보호</span><span>#비과세가능</span><span>#우대금리</span></p>
+                        <a href="#" class="prod-more">상품 자세히보기</a>
+                    </li>
+                    <li>
+                        <h3><img src="/resources/images/page/tit_sub01_02_02.png" alt="목돈마련 2030 Start 정기적금" /></h3>
+                        <p class="desc">일정기간 여유자금을 예금하고 확정금리로 고수익을 보장하는 예금</p>
+                        <p class="hashtag"><span>#추천</span><span>#예금자보호</span><span>#비과세가능</span></p>
+                        <a href="#" class="prod-more">상품 자세히보기</a>
+                    </li>
+                    <li>
+                        <h3><img src="/resources/images/page/tit_sub01_02_03.png" alt="목돈마련 직장인 Plus 정기적금" /></h3>
+                        <p class="desc">일정기간 여유자금을 예금하고 확정금리로 고수익을 보장하는 예금</p>
+                        <p class="hashtag"><span>#추천</span><span>#예금자보호</span><span>#비과세가능</span></p>
+                        <a href="#" class="prod-more">상품 자세히보기</a>
+                    </li>
+                    <li>
+                        <h3><img src="/resources/images/page/tit_sub01_02_04.png" alt="목돈마련 예가람멤버십정기적금" /></h3>
+                        <p class="desc">일정기간 여유자금을 예금하고 확정금리로 고수익을 보장하는 예금</p>
+                        <p class="hashtag"><span>#추천</span><span>#예금자보호</span><span>#비과세가능</span></p>
+                        <a href="#" class="prod-more">상품 자세히보기</a>
+                    </li>
+                    <li>
+                        <h3><img src="/resources/images/page/tit_sub01_02_05.png" alt="목돈마련 자유적립예금" /></h3>
+                        <p class="desc">일정기간 여유자금을 예금하고 확정금리로 고수익을 보장하는 예금</p>
+                        <p class="hashtag"><span>#추천</span><span>#예금자보호</span><span>#비과세가능</span></p>
+                        <a href="#" class="prod-more">상품 자세히보기</a>
+                    </li>
+                </ul>
+                <p class="prod-count">입출금자유예금상품 (1개)</p>
+                <ul class="prod-main">
+                    <li>
+                        <h3><img src="/resources/images/page/tit_sub01_03_01.png" alt="입출금자유 입출금자유예금" /></h3>
+                        <p class="desc">일정기간 여유자금을 예금하고 확정금리로 고수익을 보장하는 예금</p>
+                        <p class="hashtag"><span>#추천</span><span>#예금자보호</span><span>#비과세가능</span></p>
+                        <a href="#" class="prod-more">상품 자세히보기</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- //e:contents -->
+            <button type="button" name="button" class="btn-circle top ir btn-top">위로</button>
+            
+        </div>
+        <!-- //e: contentsWrap -->
+         
+ 
+       <!-- ********** Include ********** -->
+        <!-- s footerWrap -->
+        <div id="footerWrap">
+            <script>
+			$(document).ready(function(){
+				document.charset="euc-kr";
+				$("#footerWrap").load("../include/inc_body_footer.html");
+			});
+			</script>
+        </div>
+        <!-- //e:footerWrap -->
+        <!-- ********** //Include ********** -->
+    </div>
+    <!-- //e:wrap -->
+    <!-- ********** Include ********** -->
+	  
+   <!-- ********** Include ********** -->
+    <!-- s:bg -->
+    <div class="bg1">
+        <img src="../../../resources/images/common/bg1.gif" alt="">
+    </div>
+    <div class="bg2">
+        <img src="../../../resources/images/common/bg2.gif" alt="">
+    </div>
+    <!-- //e:bg -->
+    <!-- ********** //Include ********** -->
+    <!-- ********** //Include ********** -->
+</body>
+</html>
+<script>
+	var depth1 = 1;//없으면 0
+	var depth2 = 0;//없으면 0
+	var depth3 = 0;//없으면 0
+	
+	var titles = [];
+	$(function() {
+		addLoading();
+		setTimeout(function() {
+			removeLoading();
+		}, 700);
+		PageFunc.init(${depositSubmain});
+	});
+    
+	var PageFunc = ({
+		
+		init : function (submain) {
+			if(submain.result) {
+				PageFunc.setCategoryList(submain.data.selectCategoryList);
+				PageFunc.setProdList(submain.data.selectProdList, submain.data.selectCategoryList);
+			}else if( submain.success) {
+				PageFunc.setProdList(submain.data.selectProdList, submain.data.selectCategoryList);
+			}else {
+				customAlert({title : "알림" , message : submain.resultMessage });
+			}
+                
+		},
+		
+		searchProdList : function() {
+			var param = {
+				"cateCd" : $(':radio[name="radioCateCd"]:checked').val(),
+			};
+                    
+			AjaxFunc.ajaxAsyncWithProcess('/deposit/submain', param, function(result) {
+				PageFunc.setProdList(result.data.selectProdList, result.data.selectCategoryList);
+			}, function(e) {
+				customAlert({title : "알림" , message : e });
+			});
+		},
+		
+		setCategoryList : function(data) {
+			$("#subVisualWrap > .prod-main-tit > .prod-select").empty();
+			$("#subVisualWrap > .prod-main-tit > .prod-select").append($('<span class="ctm-radio checked"><input type="radio" name="radioCateCd" id="radioAll" value="" checked><label for="radioAll">전체상품</label></span>'));
+			for(var i=0; i<data.length; i++) {
+				var liTag = $('<span class="ctm-radio"><input type="radio" name="radioCateCd" id="radio'+i+'" value="'+data[i].CATE_CD+'"><label for="radio'+i+'">'+data[i].CATE_NM+'</label>');
+				$("#subVisualWrap > .prod-main-tit > .prod-select").append(liTag);
+			}
+			$('#subVisualWrap > .prod-main-tit > .prod-select .ctm-radio input').on('click',function(){
+				$(this).addClass('focus');
+				var tname = $(this).attr("name");
+				$('input[type=radio]').each(function(){
+					if( tname == $(this).attr("name") ){
+						$(this).parent().removeClass('checked');
+						$(this).attr("checked", false);
+					}
+				});
+				$(this).parent().addClass('checked');
+				$(this).prop("checked", true);
+				setTimeout(function() {
+					PageFunc.searchProdList();
+				}, 0);
+			});
+			$('#subVisualWrap > .prod-main-tit > .prod-select .ctm-radio input').on('focusout',function(){
+				$(this).removeClass('focus');
+			});
+			if("${selectCd}") {
+				$(".prod-select").find(".ctm-radio").each(function(){
+					$(this).removeClass("checked");
+					$(this).find('input:radio').prop('checked',false);
+				});
+				$('input[type=radio]').each(function(){
+					if(this.value === "${selectCd}") {
+						this.checked = true;
+						$(this).parent().addClass("checked");
+					}
+				});
+			}
+		},
+		
+		setProdList : function(prodList, categoryList) {
+			$("#contentsWrap .contents02").empty();
+			//카테고리 리스트
+			for(var i=0; i<categoryList.length; i++) {
+				var arr = prodList.filter(function(item, index, array) {
+					if(categoryList[i].CATE_CD === item.CATE_CD) {
+						return item;
+					}
+				});
+				if(0 < arr.length) {
+					var titleContent = setTitleContent(categoryList[i].CATE_CD);
+					var title =  categoryList[i].CATE_NM + "<span>(" + arr.length + "개)</span><span style = 'margin-left:15px; font-size:15px;'>" + titleContent + "</span>";
+					$("#contentsWrap .contents02").append($('<p class="prod-count">'+title+'</p>'));
+					var ulTag = $('<ul class="prod-main"></ul>');
+				}
+				//상품 리스트
+				for(var j=0; j<arr.length; j++) {
+					var liTag = $('<li></li>');
+					var prodCd = arr[j]["PROD_CD"] ? arr[j]["PROD_CD"] : "";
+					/** 2021.08.20 웹접근성 수정
+						alt="'+arr[j].PROD_NM   추가함**/
+					liTag.append($('<h3><a href="/deposit/product/'+prodCd+'"><img src="/common/images/'+arr[j].IMG_TITLE+'" alt="'+arr[j].PROD_NM+'" /></h3></a>'));
+					var desc = arr[j]["DESC_SRCH"] ? arr[j]["DESC_SRCH"] : "";
+					liTag.append($('<p class="desc">'+desc+'</p>'));
+					if(prodCd=='P000000010'){
+						liTag.append($('<div class="rate"><div><span>금리안내</span><p>180일<strong>'+arr[j]["D_MIN_INTRATE"]+'</strong>% (연, 세전, 단리)</p></div></div>'));   
+					}else if(prodCd=='P000000018'){  // e-정기예금
+						liTag.append($('<div class="rate"><div><span>금리안내</span><p>12개월<strong>'+arr[j]["D_MIN_INTRATE"]+'</strong>% (연, 세전, 단리)</p></div></div>'));
+					}else if(prodCd=='P000000024'){  // 자유적립예금
+						liTag.append($('<div class="rate"><div><span>금리안내</span><p>12개월<strong>'+arr[j]["D_MIN_INTRATE"]+'</strong>% (연, 세전)</p></div></div>'));
+					}else if(prodCd=='P000000037'||prodCd=='P000000038'){  // 자유적립예금
+						liTag.append($('<div class="rate"><div><span>금리안내</span><p>36개월<strong>'+arr[j]["D_MIN_INTRATE"]+'</strong>% (연, 세전, 단리)</p></div></div>'));
+					}else if(prodCd=='P000000044'){//퇴직연금
+						liTag.append($('<div class="rate"><div><span>금리안내(DB형 기준)</span><p>12개월<strong>'+arr[j]["D_MIN_INTRATE"]+'</strong>% (연, 세전, 단리)</p></div></div>'));
+					}else{
+						liTag.append($('<div class="rate"><div><span>금리안내</span><p>12개월<strong>'+arr[j]["D_MIN_INTRATE"]+'</strong>% (연, 세전, 단리)</p></div></div>'));
+					}
+					ulTag.append(liTag);
+				}
+				$("#contentsWrap .contents02").append(ulTag);
+			}
+		},
+	});
+	
+	function setTitleContent(category){
+		var titleContent1 = "거치식(일정기간) 정기예금";
+		var titleContent2 = "매월 적립식 정기적금";
+		var titleContent3 = "수시 입·출금 보통예금";
+		
+		var titleContent = "";
+		if(category == "PC00000008")		titleContent = titleContent1;
+		else if(category == "PC00000009")		titleContent = titleContent2;
+		else if(category == "PC00000010")		titleContent = titleContent3;
+		
+		return titleContent;
+	}
+</script>

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 헤더 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>예가람저축은행</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="keywords" content="예가람저축은행">
+    <meta name="description" content="딴딴해서 믿을 수 있는 고려저축은행, 예금, 적금, 신용부금, 논스톱 자동대출 등 예금, 대출금융상품 안내">
+    <meta name="viewport" content="width=device-width">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta property="og:image" content="https://www.yegaramsb.co.kr/resources/images/main/meta-img-square_new.jpg">   
+    <link rel="shortcut icon" type="image/x-icon" href="../../../resources/favicon.ico">
+    <link href="../../../resources/css/jquery.bxslider.css" rel="stylesheet">
+    <link href="../../../resources/css/default.css" rel="stylesheet">
+    <link href="../../../resources/css/layout.css" rel="stylesheet">
+    <link href="../../../resources/css/contents.css" rel="stylesheet">
+    <link href="../../../resources/css/jquery-ui.css" rel="stylesheet">
+    <script src="../../../resources/js/jquery-1.11.3.min.js"></script>
+    <script src="../../../resources/js/TweenMax.min.js"></script>
+    <script src="../../../resources/js/jquery.bxslider.min.js"></script>
+    <script src="../../../resources/js/placeholders.js"></script>
+    <!--     jquery-ui.js가 default.js보다 먼저 선언되어야 함 -->
+    <script src="../../../resources/js/jquery-ui.js" type="text/javascript"></script>
+    <script src="../../../resources/js/default.js"></script>
+    <script src="../../../resources/js/ui.js"></script>
+    <script src="../../../resources/pub_js/ui_pub.js"></script>
+    <script type="text/javascript" src="../../../resources/js/jquery.form.min.js"></script>
+    <script type="text/javascript" src="../../../resources/js/common_ajax.js"></script>
+    <script type="text/javascript" src="../../../resources/js/common_bank_calc_util.js"></script>
+    <script type="text/javascript" src="../../../resources/js/common_bank_map_util.js"></script>
+    <script type="text/javascript" src="../../../resources/js/common_layer.js"></script>
+    <script type="text/javascript" src="../../../resources/js/common_pagevalidate.js"></script>
+    <script type="text/javascript" src="../../../resources/js/common_util.js"></script>
+    <script type="text/javascript" src="../../../resources/js/iscroll.js"></script>
+    <script type="text/javascript" src="../../../resources/js/jquery.animateSprite.min.js"></script>
+    <script src="../../../resources/js/common_bank_calc_util.js" type="text/javascript"></script>
+    <script src="../../../resources/js/hp_common.js" type="text/javascript"></script>
+    <script src="../../../resources/js/calculator.js"></script>
+    <script src="../../../resources/js/streamdocs/adapter.js"></script>
+    <!--     scrap -->
+    <!-- <link href="/resources/scrap/css/process_manager.css" rel="stylesheet" /> -->
+    <!--     <script src="/resources/scrap/js/jquery-1.9.1.min.js"></script> -->
+
+</head>
+
+<body>
+    <!-- <body class="color-type2"> 타입별 -->
+    <!-- ********** Include ********** -->
+    <!-- s:skipnavi -->
+    <div id="skipnavi">
+        <script>
+            $(document).ready(function () {
+                $("#skipnavi").load("../include/inc_body_skipnavi.html");
+            });
+        </script>
+    </div>
+    <!-- ********** //Include ********** -->
+    <!-- //e:skipnavi -->
+
+    <!-- s:wrap -->
+    <div id="wrap">
+
+        <!-- ********** Include ********** -->
+        <!-- s:header -->
+        <div id="headerWrap">
+            <script>
+                $(document).ready(function () {
+                    $("#headerWrap").load("../include/inc_body_header.html");
+                });
+            </script>
+        </div>
+        <!-- //e:header -->
+
+        <!-- s:sitemapWrap -->
+        <div id="sitemapWrap" class="layerpopup sitemap-layer" tabindex="0" data-tooltip-con="sitemap-layer"
+            data-focus="sitemap-layer" data-focus-prev="btn-menu-close">
+            <script>
+                $(document).ready(function () {
+                    $("#sitemapWrap").load("../include/inc_body_sitemapWrap.html");
+                });
+            </script>
+        </div>
+        <!-- //e:sitemapWrap -->
+        <!-- ********** //Include ********** -->
+
+        <!-- s contentsWrap -->
+        <div id="contentsWrap">
+
+			<!-- s:subVisualWrap -->
+			<!--s:기획현행화-->
+			<div id="subVisualWrap" class="sub-type01">
+				<div>
+					<div class="breadcrumb">
+						<a href="#none" class="home ir">홈</a>
+						<a href="#none" class="depth1">금융소비자보호</a>
+						<a href="#none" class="depth2">민원센터</a>
+                        <a href="#none" class="depth3">전자민원신청</a>
+					</div>
+
+					<!-- <div class="tit-wrap">
+						<div class="sub-tit">
+							<h2>민원센터</h2>
+							<p class="desc">고려저축은행의 전자민원신청 프로세스입니다.</p>
+						</div>
+					</div> -->
+
+					<div class="prod-main-tit">
+						<div class="sub-tit">
+							<h2>금융소비자보호</h2>
+						</div>
+						<div class="prod-select">
+							<a href="../portal/protection_info.html" title="링크이동">금융소자보호체계</a>
+							<a href="../portal/online_const.html" class="on" title="링크이동">민원센터</a>
+							<a href="../portal/civil_apply_exam.html" title="링크이동">금융소비자보호우수사례</a>
+							<a href="../portal/illegal_contract_cancel.html" title="링크이동">금융소비자권리</a>
+							<a href="../portal/disclosure_civil_complaints.html" title="링크이동">금융소비자보호공시</a>
+							<a href="../portal/collection_bonds_guide.html" title="링크이동">채권추심업무</a>
+							<a href="../portal/fraud_notice.html" title="링크이동">유용한소비자정보</a>
+							<a href="../portal/aptness_confirm.html" title="링크이동">적합성·적정성 조회</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!--e:기획현행화-->
+			<!-- //e:subVisualWrap -->
+			<!-- s:contents -->
+			<div class="contents default-wrap">
+				<div class="complaint-wrap">
+					<div class="tab-wrap">
+						<ul>
+							<!--s:디자인현행화-->
+							<li><a href="../portal/online_const.html">온라인상담센터</a></li>
+							<!--e:디자인현행화-->
+							<li><a href="../portal/customer_opinion.html">고객의견(칭찬/불만)</a></li>
+							<li><a href="../portal/customer_suggestion.html">고객제안</a></li>
+							<li class="active"><a href="../portal/civil_apply.html">전자민원신청</a></li>
+							<li><a href="../portal/civil_apply_list.html">신청 내역조회/취하</a></li>
+                            <li><a href="../portal/affairs_manual.html">민원사무편람</a></li>
+						</ul>
+					</div>
+					<div class="accordion-wrap mb60">
+							<!-- s:디자인현행화 -->
+							<h3 class="list-tit">자주 하는 질문 TOP 5</h3>
+							<!-- e:디자인현행화 -->
+							<ul class="accordion">
+								<li>
+									<a href="#" class="question-wrap">
+										<span class="category"></span>
+										<span class="con">대출 상환할 금액 및 입금내역 확인 하고 싶어요.</span>
+									</a>
+									<div class="answer-wrap">
+										<span class="con">
+											<p>대출원금일부 및 완납금을 입금하시려면 앱 마이고려 또는 고객센터()를 통해 금액 확인 후 가상계좌로 입금해주세요.</p>
+											<p>(상품계약에 따라 중도상환수수료가 부과되오니, 반드시 금액을 먼저 확인하시고 입금부탁드립니다.)</p>
+											<p>입금 후 입금확인은 고려저축은행 앱과 홈페이지의 마이고려, 고객센터()를 통해 확인가능합니다.</p>
+										</span>
+									</div>
+								</li>
+								<li>
+									<a href="#" class="question-wrap">
+										<span class="category"></span>
+										<span class="con">금융거래확인서, 부채잔액증명서 발급 및 수령 방법 알려주세요.</span>
+									</a>
+									<div class="answer-wrap">
+										<span class="con">
+											<p>본인 지점 방문,고려저축은행 앱, 홈페이지, 고객센터()를 통해 접수와 가능하며 비대면발급 및 팩스, 우편으로 받아볼 수 있습니다.</p>
+											<p>&nbsp;신청서작성 및 발급수수료 절차가 있으니 접수방법을 확인 후 접수하시면 됩니다.</p>
+											<p>&nbsp;&lt;접수방법&gt;</p>
+											<p>&nbsp; · 고려저축은행 앱,홈페이지 고객센터 &gt; 제증명서 발급신청 &gt; 비대면발급에서 신청 및 발급수수료 입금</p>
+											<p>&nbsp; · 고려저축은행 앱,홈페이지 고객센터 &gt; 제증명서 발급신청 &gt; 해당증명서 선택 신청 및 발급수수료 입금</p>
+											<p>&nbsp; · 제증명신청서 홈페이지 서식 다운로드 또는 고객센터()을 통해 신청서 팩스 접수 신청 및 수수료입금</p>
+											<p>&nbsp; · 대리인이 신청할 경우 원격지접수 및 지점 방문</p><p>(지점 방문시에는 신분증을 지참하시어 연락 후 방문하여 주시기 바랍니다.)</p>
+											<p><a onclick="commonMoveUrl('move','/certificate/certificateAuth.ysb')" class="app_go">제증명 신청 바로가기</a></p>
+											<p><a href="/center/certificate_auth" class="mobile_go">제증명 신청 바로가기</a></p>
+											<p><a href="/center/certificate_auth" class="pc_go">제증명 신청 바로가기</a></p>
+										</span>
+									</div>
+								</li>
+								<li>
+									<a href="#" class="question-wrap">
+										<span class="category"></span>
+										<span class="con">대출신청취소를 하려면, 어떤 방법이 있나요?</span>
+									</a>
+									<div class="answer-wrap">
+										<span class="con"><p>대출신청취소는 고객센터()로 문의주시면 취소 가능합니다.&nbsp;</p></span>
+									</div>
+								</li>
+								<li>
+									<a href="#" class="question-wrap">
+										<span class="category"></span>
+										<span class="con">소득이 있는데 대출신청 할 수 있나요? </span>
+									</a>
+										<div class="answer-wrap">
+											<span class="con">
+												<p>소득증빙이 가능하면 대출신청은 가능합니다. 단, 가능여부 및 고객님의 신용도 등 고객정보에 따라 한도 및 이자율은 달라지니&nbsp;</p>
+												<p>대출신청해주시면 친절하고 빠른 상담 해드리겠습니다.</p>
+												<p>대출상품 확인 후 고려저축은행 앱, 홈페이지, 고객센터()을 통해 접수해주세요.</p>
+												<p>신청가능대상 : 소득증빙가능한 급여소득자, 개인사업자, 프리랜서, 주부, 연금소득자&nbsp;</p>
+												<p><a href="/product/loan/loanProductList.ysb" class="app_go">대출상품바로가기</a></p>
+												<p><a href="/loan/submain" class="mobile_go">대출상품바로가기</a></p>
+												<p><a href="/loan/submain" class="pc_go">대출상품바로가기</a></p>
+											</span>
+										</div>
+								</li>
+								<li>
+									<a href="#" class="question-wrap"><span class="category"></span>
+										<span class="con">자동이체(CMS)로 이중출금 됐는데 어떻게 하나요?</span>
+									</a>
+									<div class="answer-wrap">
+										<span class="con">
+											<p>이중출금은 자동이체 출금 후 다음 영업일 오후 반환처리 됩니다.</p>
+											<p>다음 영업일에도 반환을 못 받은 경우 고객센터()로 전화주세요.</p>
+											<p>자동이체 출금신청은 결제일 전 영업일에 의뢰되므로 결제일 전영업일에 가상계좌로 입금해도 이중출금이 발생할 수 있습니다.</p>
+											<p>&nbsp;</p>
+										</span>
+									</div>
+								</li>
+							</ul>
+						</ul>
+						<p class="btn-wrap">
+							<a href="/center/faq" class="btn-big navy">도움말 바로가기</a>
+						</p>
+					</div>
+					<div class = "online-text">
+						<!--s: 2023-07-13 구조변경-->
+						<p>일반문의 및 상담은 <a href="../portal/online_const.html" class="const-center">온라인상담센터</a> 또는 <span> 고객센터(1877-9900)를</span> 이용하시기 바랍니다. 보다 빠른 처리가 가능합니다.</p>
+						<p class="const-term">일반문의 및 상담 처리기한 : 5영업일 이내</p>
+						<p class="const-term">민원처리기한 : 14영업일 이내</p>
+						<!--e: 2023-07-13 구조변경-->
+					</div>
+					<form id="frm1" name="frm1">
+						<div class="apply-wrap">
+							<div class="required-wrap">
+								<h3 class="tit">정보입력</h3>
+								<span class="required-txt">* 필수 입력항목 입니다.</span>
+							</div>
+							<div class="input-wrap">
+							<!-- 디자인현행화, input hidden 위치 수정필요, css 속성상 첫번쨰 구조는 grid-wrap이 와야함<input type="hidden" name="MW_TYPE_CD" value="H000300002"> -->
+								<div class="grid-wrap">
+									<div class="grid2">
+										<div class="form-wrap">
+											<label for="name" class="inp-tit req">성명</label>
+											<input type="text" name="CUST_NM" value="" id="name" placeholder="고객실명 입력" option="onlyKr" title="성명 입력">
+										</div>
+										<div class="form-wrap">
+											<label for="birth" class="inp-tit req">생년월일</label>
+											<input type="text" name="BIRTH_DAY" value="" id="birth" placeholder="ex) 19901212" maxlength="8" title="생년월일 입력">
+										</div>
+									</div>
+
+									<!-- s:기획현행화 -->
+									<div class="grid2"> 
+										<div class="form-wrap">
+											<label for="phone" class="inp-tit req">핸드폰번호</label>
+											<div class="phone-area">
+												<div class="select-wrap agency">
+													<select name="" class="" id="phone" title="핸드폰 통신사 선택">
+														<option selected="selected" value="">통신사</option>
+														<option value="">SKT</option>
+														<option value="">KT</option>
+														<option value="">LG U+</option>
+														<option value="">SKT MVNO</option>
+														<option value="">KT MVNO</option>
+														<option value="">LGU MVNO</option>
+													</select>
+												</div>
+												<div class="select-wrap phone-fst">
+													<select name="TELECOM" class="" title="핸드폰번호 앞자리 선택" id="phone_front">
+														<option value="">010</option>
+														<option value="">011</option>
+														<option value="">016</option>
+														<option value="">017</option>
+														<option value="">018</option>
+														<option value="">019</option>
+													</select>
+												</div>
+												<span class="hyphen">-</span>
+												<input type="text" name="" value=""  id="phone1" placeholder="" title="핸드폰번호 가운데자리" maxlength="4">
+												<span class="hyphen">-</span>
+												<input type="text" name="" value=""  id="phone2" placeholder="" title="핸드폰번호 뒷자리" maxlength="4">
+												<input type="hidden" id="phone_hidden" name="PHONE_NO"/>
+												
+											</div>
+											<p class="rice">문의주신 내용의 신속하고 원활한 안내를 위하여 당행 준법지원팀 담당자가 선택하신 회신방법외 기재하신 연락처로 연락드릴 수 있습니다.</p>
+										</div>
+										
+										<!--<div class="form-wrap">
+											<label for="niceAuthNum" class="inp-tit req">인증번호</label>
+											<div class="nice-auth-num-area">
+												<input type="hidden" id="niceAuthNumIntervalId" value="">
+												<input type="text" id="niceAuthNum" value="" numberonly="" placeholder="" maxlength="5">
+												<button type="button" class="btn-normal form btn-nice-auth-num" id="sendBtn">인증번호요청</button>
+												<button type="button" class="btn-normal form btn-nice-auth-num" id="reSendBtn" style="display:none">재요청</button>
+												<button type="button" class="btn-normal form btn-nice-auth-num" id="confirmBtn">확인</button>
+											</div>
+										</div>-->
+									</div>
+									<!-- e:기획현행화 -->
+									<div class="grid2" id="radioRecvType">
+										<div class="form-wrap">
+											<span class="inp-tit req">회신방법 선택</span>
+											<div class="radiobox-area">
+												<span class="ctm-radio">
+													<input type="radio" name="reply" id="reply0" value="">
+													<label for="reply0">
+														<span>이메일</span>
+													</label>
+												</span>
+												<span class="ctm-radio">
+													<input type="radio" name="reply" id="reply1" value="">
+													<label for="reply1"><span>전화</span>
+													</label>
+												</span>
+												<span class="ctm-radio">
+													<input type="radio" name="reply" id="reply3" value="">
+													<label for="reply3">
+														<span>우편</span>
+													</label>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="grid2 address-area">
+										<div class="form-wrap">
+											<span class="inp-tit req">주소</span>
+											<div class="zipcode">
+												<label for="address-code" class="hide">우편번호</label>
+												<input type="text" name="ZIP_CODE" value="" id="address-code" placeholder="우편번호를 입력하세요" readonly="readonly" title="우편번호 입력">
+												<a href="#" class="btn-normal form" title="새창 열림">우편번호 찾기</a>
+											</div>
+										</div>
+									</div>
+									<div class="grid2 address-detail">
+										<div class="form-wrap">
+											<input type="text" name="ADDR" value="" id="address1" placeholder="주소를 입력하세요" title="주소" readonly="readonly">
+										</div>
+										<div class="form-wrap">
+											<input type="text" name="ADDR_DETAIL" value="" id="address2" placeholder="상세주소를 직접 입력하세요" title="주소 - 상세주소">
+										</div>
+									</div>
+
+									<div class="grid1 email-area">
+										<label for="email-id" class="inp-tit req">이메일</label>
+										<div class="email-area">
+											<input type="text" name="" value="" id="email-id" placeholder="" title="이메일 입력"> <span class="at">@</span>
+											<input type="text" class="mailtxt" name="" value="" id="email-domain" placeholder="" title="이메일 도메인 입력">
+											<div class="select-wrap">
+												<select name="" class="" id="email" title="이메일 도메인 선택">
+													<option selected="selected" value="">선택</option>
+													<option value="direct">직접입력</option>
+													<option value="naver">naver.com</option>
+													<option value="gmail">gmail.com</option>
+												</select>
+											</div>
+										</div>
+
+										<input type="hidden" id="email_hidden" name="EMAIL" value="" />
+									</div>
+								</div>
+
+								<div class="grid-wrap">
+									<div class="grid1">
+										<div class="form-wrap">
+											<label for="inp-tit" class="inp-tit req">제목</label>
+											<input type="text" name="TITLE" value="" id="inp-tit" placeholder="문의제목을 입력하세요" maxlength="50" title="제목 입력">
+										</div>
+									</div>
+									<div class="grid1">
+										<div class="form-wrap">
+											<span><label for="inp-txt" class="inp-tit req">내용</label><div class = "inp-txt_cnt">( 0 / 1000 )</div></span>
+											<textarea class = "inputContents" name="CONTENTS" rows="11" cols="80" id="inp-txt" placeholder="상세내용을 입력하세요" maxlength="2000" title="상담내용"></textarea>
+										</div>
+									</div>
+									<div class="grid2">
+										<div class="form-wrap">
+											<label for="inp-file" class="inp-tit">파일첨부</label>
+											<div class="file-wrap">
+												<div class="file-area">
+													<div id="file_src" tabindex="0">파일첨부 내용</div>
+													<input type="file" class="file-hidden" name="FILE_INFO" value="" id="inp-file" onchange="PageFunc.img_preview(this)" tabindex="0" title="파일첨부">
+													<button type="button" class="btn-normal form btn-file" tabindex="-1">찾아보기</button>
+												</div>
+											</div>
+											<p class="rice">이미지(jpg, png, gif 등) 파일 또는 PDF 파일만 첨부가 가능합니다.</p>
+											<p class="rice">파일 첨부는 5MB이하만 가능합니다.</p>
+										</div>
+										<script type="text/javascript">
+
+											$('#email').on('selectmenuchange',function() {
+													var mail = $('#email option:selected').val();
+													$('.mailtxt').hide();
+													if (mail == 'direct') {
+														$('.mailtxt').show();
+													} else {
+														$('.mailtxt').hide();
+													}
+												});
+										</script>
+									</div>
+								</div>
+							</div>
+
+							<div class="line-box" id="minwon_notice">
+								<table class="table-style caption-tit">
+									<caption class="list-tit">민원센터 및 처리기간 안내</caption>
+									<colgroup>
+										<col>
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">민원센터 연락처</th>
+											<th scope="col">처리기간</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr><!--s:기획현행화-->
+											<td>준법지원팀 051-640-9086(담당자 손영지)</td>
+											<td>접수일로부터 14영업일 이내</td>
+										</tr><!--e:기획현행화-->
+									</tbody>
+								</table>
+							</div>
+							<div class="auth-wrap line-box">
+								<input type="hidden" name="AUTH_CD" id="auth_cd" />
+								<p class="tit-txt"> 민원신청 진행을 위해서는 본인인증이 필요합니다.<br>아래의 인증 방식 중 하나를 선택해 인증을 진행해주세요.</p>
+								<ul class="auth-list">
+									<li class="auth1">
+										<span class="ctm-radio">
+											<input type="radio" name="auth" id="auth1" value="">
+											<label for="auth1">
+												<span>휴대폰인증</span>
+											</label>
+										</span>
+									</li>
+									<!--s:기획현행화-->
+									<!-- <li class="auth3">
+										<span class="ctm-radio">
+											<input type="radio" name="auth" id="auth3" value="">
+											<label for="auth3">
+												<span>아이핀인증</span>
+											</label>
+										</span>
+									</li>
+									<li class="auth5">
+										<span class="ctm-radio">
+											<input type="radio" name="auth" id="auth5" value="">
+											<label for="auth5">
+												<span>신용카드인증</span>
+											</label>
+										</span>
+									</li> -->
+									<!--e:기획현행화-->
+								</ul>
+							</div>
+							<div class="agree-wrap">
+								<div class="agree-area">
+									<!--s:기획현행화 (클래스삭제)-->
+									<div class="">
+									<!--e:기획현행화 (클래스삭제)-->
+										<!-- <div class="all-agree">
+										<span class="ctm-check">
+											<input type="checkbox" name="check" id="all-check" value="" title="전체 약관보기">
+											<label for="all-check">아래의 다음 약관에 모두 동의합니다.</label>
+										</span>
+										<button type="button" name="button" class="btn-normal tiny hide" data-tooltip="agreementall-layer">자세히보기</button>
+									</div> -->
+										<div class="agree-box">
+											<div class="items-wrap">
+												<p class="item-tit">
+                                                    <span>[필수] 개인(신용)정보 수집·이용 동의서[민원접수 / 고객제안접수 / 고객의견접수 처리용]</span>
+													<label for="detailViewBtn"><span id="labelTremsName"></span></label>
+													<button type="button" name="button" id="detailViewBtn" class="btn-normal tiny fl-r" data-tooltip="manual011-layer" onclick="fn_layerPopOpen(this)">자세히보기</button><!--//D: 2023-07-13 구조변경//-->
+												</p>
+												<div class="items">
+													<div class="item-check">
+														<div>
+															<span class="ctm-radio">
+																<input type="radio" name="agreeRadio" id="agree1" value="N" title="개인정보 취급방침 미동의" ><!-- onclick="fn_layerPopOpen();" -->
+																<label for="agree1">미동의</label>
+															</span>
+															<span class="ctm-radio">
+																<input type="radio" name="agreeRadio" id="agree2" value="Y" title="개인정보 취급방침 동의" ><!-- onclick="fn_layerPopOpen();" -->
+																<label for="agree2">동의</label>
+															</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p class="rice rice-type2">위 개인(신용)정보의 수집·이용에 관한 동의는 본 서비스를 이용하기 위한 필수사항이므로, 위 사항에 동의하셔야만 민원센터에 글을 등록하실 수 있습니다.</p>
+									<div class="btn-wrap">
+										<button type="button" name="button" class="btn-big navy">등록하기</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<input type="hidden" name="TERMS_AGREEMENT_YN" id="TERMS_AGREEMENT_YN" value="Y">
+					</form>
+				</div>
+			</div>
+			<!-- //e:contents -->
+			<button type="button" name="button" class="btn-circle top ir btn-top">위로</button>
+		</div>
+        <!-- //e: contentsWrap -->
+
+		<!-- s:개인정보 취급방침(수집·이용에 관한 동의) 레이어팝업 -->
+		<div id="manualLayer011" class="layerpopup pdfLayerpopup manual-layer" tabindex="0" data-tooltip-con="manual011-layer" data-focus="manual011-layer" data-focus-prev="btn-menu-close">
+			<div class="pop-wrap">
+				<iframe id="viewer" src=""></iframe>
+				<button type="button" name="button"class="btn-menu-closePdf2 tooltip-close" data-focus="btn-menu-close"data-focus-next="manual011-layer">닫기</button>
+			</div>
+		</div>
+		<!-- //e:개인정보 취급방침(수집·이용에 관한 동의) 레이어팝업  -->
+
+        <!-- ********** Include ********** -->
+        <!-- s footerWrap -->
+        <div id="footerWrap">
+            <script>
+                $(document).ready(function () {
+                    $("#footerWrap").load("../include/inc_body_footer.html");
+                });
+            </script>
+        </div>
+        <!-- //e:footerWrap -->
+        <!-- ********** //Include ********** -->
+
+    </div>
+    <!-- //e:wrap -->
+</body>
+
+</html>

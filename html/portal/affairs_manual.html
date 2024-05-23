@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 헤더 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>예가람저축은행</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="keywords" content="예가람저축은행">
+    <meta name="description" content="딴딴해서 믿을 수 있는 고려저축은행, 예금, 적금, 신용부금, 논스톱 자동대출 등 예금, 대출금융상품 안내">
+    <meta name="viewport" content="width=device-width">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta property="og:image" content="https://www.yegaramsb.co.kr/resources/images/main/meta-img-square_new.jpg">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../resources/favicon.ico">
+    <link href="../../../resources/css/jquery.bxslider.css" rel="stylesheet">
+    <link href="../../../resources/css/default.css" rel="stylesheet">
+    <link href="../../../resources/css/layout.css" rel="stylesheet">
+    <link href="../../../resources/css/contents.css" rel="stylesheet">
+    <link href="../../../resources/css/jquery-ui.css" rel="stylesheet">
+    <script src="../../../resources/js/jquery-1.11.3.min.js"></script>
+    <script src="../../../resources/js/TweenMax.min.js"></script>
+    <script src="../../../resources/js/jquery.bxslider.min.js"></script>
+    <script src="../../../resources/js/placeholders.js"></script>
+    <!--     jquery-ui.js가 default.js보다 먼저 선언되어야 함 -->
+    <script src="../../../resources/js/jquery-ui.js" type="text/javascript"></script>
+    <script src="../../../resources/js/default.js"></script>
+    <script src="../../../resources/js/ui.js"></script>
+    <script src="../../../resources/pub_js/ui_pub.js"></script>
+    <script type="text/javascript" src="../../../resources/js/jquery.form.min.js"></script>
+    <script type="text/javascript" src="../../../resources/js/common_ajax.js"></script>
+    <script type="text/javascript" src="../../../resources/js/common_bank_calc_util.js"></script>
+    <script type="text/javascript" src="../../../resources/js/common_bank_map_util.js"></script>
+    <script type="text/javascript" src="../../../resources/js/common_layer.js"></script>
+    <script type="text/javascript" src="../../../resources/js/common_pagevalidate.js"></script>
+    <script type="text/javascript" src="../../../resources/js/common_util.js"></script>
+    <script type="text/javascript" src="../../../resources/js/iscroll.js"></script>
+    <script type="text/javascript" src="../../../resources/js/jquery.animateSprite.min.js"></script>
+    <script src="../../../resources/js/common_bank_calc_util.js" type="text/javascript"></script>
+    <script src="../../../resources/js/hp_common.js" type="text/javascript"></script>
+    <script src="../../../resources/js/calculator.js"></script>
+    <script src="../../../resources/js/streamdocs/adapter.js"></script>
+    <!--     scrap -->
+    <!-- <link href="/resources/scrap/css/process_manager.css" rel="stylesheet" /> -->
+    <!--     <script src="/resources/scrap/js/jquery-1.9.1.min.js"></script> -->
+
+</head>
+
+<body>
+    <!-- <body class="color-type2"> 타입별 -->
+    <!-- ********** Include ********** -->
+    <!-- s:skipnavi -->
+    <div id="skipnavi">
+        <script>
+            $(document).ready(function () {
+                $("#skipnavi").load("../include/inc_body_skipnavi.html");
+            });
+        </script>
+    </div>
+    <!-- ********** //Include ********** -->
+    <!-- //e:skipnavi -->
+
+    <!-- s:wrap -->
+    <div id="wrap">
+
+        <!-- ********** Include ********** -->
+        <!-- s:header -->
+        <div id="headerWrap">
+            <script>
+                $(document).ready(function () {
+                    $("#headerWrap").load("../include/inc_body_header.html");
+                });
+            </script>
+        </div>
+        <!-- //e:header -->
+
+        <!-- s:sitemapWrap -->
+        <div id="sitemapWrap" class="layerpopup sitemap-layer" tabindex="0" data-tooltip-con="sitemap-layer"
+            data-focus="sitemap-layer" data-focus-prev="btn-menu-close">
+            <script>
+                $(document).ready(function () {
+                    $("#sitemapWrap").load("../include/inc_body_sitemapWrap.html");
+                });
+            </script>
+        </div>
+        <!-- //e:sitemapWrap -->
+        <!-- ********** //Include ********** -->
+
+        <!-- s contentsWrap -->
+		<div id="contentsWrap">
+
+			<!-- s:subVisualWrap -->
+			<!--s:기획현행화-->
+			<div id="subVisualWrap" class="sub-type01">
+				<div>
+					<div class="breadcrumb">
+						<a href="#none" class="home ir">홈</a>
+						<a href="#none" class="depth1">소비자정보포털</a>
+						<a href="#none" class="depth2">민원센터</a>
+                        <a href="#none" class="depth3">민원사무편람</a>
+					</div>
+<!-- 
+					<div class="tit-wrap">
+						<div class="sub-tit">
+							<h2>민원센터</h2>
+							<p class="desc">고려저축은행의 민원센터입니다.</p>
+						</div>
+					</div> -->
+
+					<div class="prod-main-tit">
+						<div class="sub-tit">
+							<h2>금융소비자보호</h2>
+						</div>
+						<div class="prod-select">
+							<a href="../portal/protection_info.html" title="링크이동">금융소자보호체계</a>
+							<a href="../portal/online_const.html" class="on" title="링크이동">민원센터</a>
+							<a href="../portal/civil_apply_exam.html" title="링크이동">금융소비자보호우수사례</a>
+							<a href="../portal/illegal_contract_cancel.html" title="링크이동">금융소비자권리</a>
+							<a href="../portal/disclosure_civil_complaints.html" title="링크이동">금융소비자보호공시</a>
+							<a href="../portal/collection_bonds_guide.html" title="링크이동">채권추심업무</a>
+							<a href="../portal/fraud_notice.html" title="링크이동">유용한소비자정보</a>
+							<a href="../portal/aptness_confirm.html" title="링크이동">적합성·적정성 조회</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!--e:기획현행화-->
+			<!-- //e:subVisualWrap -->
+			<!-- s:contents -->
+			<div class="contents default-wrap">
+				<div class="complaint-wrap">
+					<div class="tab-wrap">
+						<ul>
+							<!--s:디자인현행화-->
+							<li><a href="../portal/online_const.html">온라인상담센터</a></li>
+							<!--e:디자인현행화-->
+							<li><a href="../portal/customer_opinion.html">고객의견(칭찬/불만)</a></li>
+							<li><a href="/portal/customer_suggestion">고객제안</a></li>
+							<li><a href="../portal/civil_apply.html">전자민원신청</a></li>
+							<li><a href="../portal/civil_apply_list.html">신청 내역조회/취하</a></li>
+                            <li class="active"><a href="../portal/affairs_manual.html">민원사무편람</a></li>
+						</ul>
+					</div>
+					<div class="affairs-cts">
+						<div class="table-wrap">
+							<table class="table-style type3">
+								<caption>민원사무편람</caption>
+								<!-- s: 20180725 am - 캡션 상세화 -->
+								<caption>민원사무편람 - 구분, 내용으로 구성</caption>
+								<!-- //e: 20180725 am - 캡션 상세화 -->
+								<colgroup>
+									<col style="width:30%">
+									<col style="width:*">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">구분</th>
+										<th scope="col">내용</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">Ⅰ. 민원이란?</th>
+										<td>
+											<!--s:기획현행화-->
+											<ol class="list type2">
+												<li>① 민원구분
+													<ol>당저축은행과 관련된 업무처리에 대한 이의신청, 진정, 건의, 질의 및 기타 특정행위를 요하는 의사표시를 하는 것을 민원이라 합니다. 민원의 종류에는 금융민원과 기타민원이 있습니다.
+														<li class="em2">1.금융민원</li>
+														<li>당행 금융업무와 관련하여, 고객 및 기타 이해관계인으로부터 제기되는 이의신청, 진정사항, 요청 등에 관한 사무</li>
+													</ol>
+													<ol>
+														<li class="em2">2.기타민원</li>
+														<li>당행의 업무와 관련하여 단순한 질의, 건의 및 기타 회사에 특정한 행위를 요구하는 것으로 금융 민원에 해당되지 않는 사무</li>
+													</ol>
+												</li>
+											</ol>
+											<!--e:기획현행화-->
+											<ol class="list type2">
+												<li>② 다음 중 어느 하나라도 해당하는 경우에는 민원으로 처리하지 않습니다.
+													<ol>
+														<li>당저축은행과 사법(私法)상의 계약을 체결하고자 하는 자 또는 계약관계에 있는 자가 사법(司法)적 효과를 얻기 위하여 특정한 행위를 요구하는 경우</li>
+														<li>법원판결에 의하여 확정된 사항, 재판에 계류중인 사항, 금융감독원이 처리중인 사항 및 수사기관에서 수사중인 사항에 대하여 특정한 행위를 요구하는 경우</li>
+														<li>민원사항이 막연하여 취급할 수 없는 경우</li>
+														<li>성명, 주소 등이 분명하지 아니하거나 대리인 입증이 불명한 자가 회사에 특정한 행위를 요구하는 경우</li>
+													</ol>
+												</li>
+											</ol>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">Ⅱ. 민원신청절차</th>
+										<td>
+											<ol class="list type2">
+												<li>① 신청/첨부 서류
+													<ol>
+														<li>민원 신청시에는 각 영업점 민원안내 창구 및 전자민원창구에 비치된 민원 신청서를 이용해야 합니다.</li>
+														<li>인터넷을 이용한 전자민원창구를 통하여 민원을 접수하거나 별지 양식을 이용하지 않을 경우에는 아래 사항을 명기해야 합니다
+															<ol>
+																<li>- 본인 및 대리인의 성명, 주민등록번호(사업자번호), 주소, 전화번호(휴대전화)</li>
+																<li>- 신청취지(요구사항)</li>
+																<li>- 신청사유 (6하 원칙에 따라 기술)</li>
+															</ol>
+														</li>
+														<li>민원신청과 관련하여 당사자, 이해관계인 및 사실관계를 입증하는 첨부서류는 다음 각호와 같습니다.
+															<ol>
+																<li>- 본인인 경우 본인 실명확인증표 사본</li>
+																<li>- 대리인이 신청하는 경우 본인의 위임장 및 인감증명서</li>
+																<li>- 기타 사실 관계를 입증하는 서류 사본</li>
+															</ol>
+														</li>
+													</ol>
+												</li>
+												<li>② 신청방법
+													<ol>
+														<li>당행은 고객의 민원 및 각종 문의, 불편사항을 신속히 해결하기 위하여 각 영업점에 민원상담창구를 운영하고 있으며, 민원상담 책임자 및 각 민원처리부서 연락처가 명기된 민원사무편람을 배치하고 있습니다.</li>
+														<li>당행 인터넷 홈페이지(http://www.goryosb.co.kr) 를 통하여 민원 및 불편사항을 접수할 수 있습니다.</li>
+													</ol>
+												</li>
+												<li>③ 홈페이지 전자민원창구 안내
+													<ol>
+														<li>1. 고려저축은행 홈페이지에 접속하세요</li>
+														<li>2. 고객센터->전자민원실->민원신청</li>
+														<li>3. 민원 및 불편사항을 접수할수 있습니다.</li>
+													</ol>
+												</li>
+											</ol>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">Ⅲ. 민원접수 및 처리</th>
+										<td>
+											<ol class="list type2">
+												<li>① 민원접수
+													<ol>
+														<li>민원은 문서, 모사전송, 인터넷 등 입증이 가능한 방법으로 접수합니다. 민원의 의사표시를 문서로 증명할 필요가 없는 경우, 직접 구술 또는 전화로 접수할 수 있으며, 전자민원상담창구 또한 이용 가능합니다.</li>
+														<li>민원서류에 중대한 흠결이 있거나 관련서류가 누락되고 있다고 판단되는 경우 업무전담자가 상당한 기간을 정해 민원인에게 보완을 요구할 수 있습니다.</li>
+														<li>민원인은 민원사무의 처리가 종결되기 전에 그 신청 내용을 변경할 수 있으며 신청을 철회 또는 취하할 수 있습니다.</li>
+														<li>업무 담당자는 민원이 처리되는 즉시 민원접수 사실, 민원처리담당자명, 전화번호 등을 민원인에게 문서, 모사전송, 전자우편, 문자메세지, 녹취전화 등 입증이 가능한 방법으로 통지합니다.</li>
+													</ol>
+												</li>
+												<li>② 민원처리
+													<ol>
+														<li>민원관리책임자는 접수된 민원내용을 기초로 하여 사실관계를 확인하고 분류합니다.</li>
+														<li>민원은 접수일로 부터 <span class="em">14영업일 이내에 처리</span>를 원칙으로 합니다.(민원인의 귀책사유로 민원처리가 지연 / 민원서류 보완 or 보정소요 / 검사, 조사 및 외부 기관 질의 등에 소요되는 기간은 산입되지 않습니다.)</li>
+														<li>민원인의 요청이 있는 경우 동 사실을 민원인에게 민원처리진행상황 통지서에 따라 문서, 모사전송, 전자우편 또는 녹취전화 등으로 통지해 드립니다.</li>
+														<li>민원인이 동일한 내용의 민원서류를 정당한 사유없이 3회 이상 반복하여 제출한 경우에는 2회이상 그 처리 결과를 통지합니다.</li>
+														<li>민원처리를 종결한 경우 그 결과를 지체 없이 민원인에게 통지하고 통지사항에는 민원의 처리결과, 처리근거, 이의신청 안내 등을 포함합니다.(민원인의 소재지나 연락처가 분명하지 아니하여 보완 또는 보정의 요구가 2회에 걸쳐 반송된 때에는 민원을 철회한 것으로 보아 내부적으로 종결 처리할 수 있습니다.)</li>
+													</oi>
+												</li>
+												<li>③ 민원인은 다음 각호에 해당하는 사유가 있는 경우 당행의 민원의 재심을 청구할 수 있습니다.
+													<ol>
+														<li>민원처리 과정 중에 제출되지 아니한 것으로서 민원의 처리결과에 중대한 영향을 미치는 새로운 사실이 나타난 경우</li>
+														<li>민원의 증거로 된 문서, 증인의 증언, 참고인의 진술 등의 자료가 위조 또는 변조된 것이거나 허위임이 밝혀진 경우</li>
+														<li>민원처리 결과에 영향을 미칠 중요한 사항에 대하여 판단하지 아니한 경우</li>
+														<li>기타민원의 기초가 관련법령, 판결 등이 변경된 경우</li>
+													</ol>
+												</li>
+											</ol>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">Ⅲ. 민원접수 및 처리</th>
+										<td>
+											<!--s:기획현행화-->
+											<ol class="list">
+												<li>1. 민원신청서
+													<a href=""  role="button" class="btn-normal tiny">다운로드</a>
+												</li>
+												<li>2. 위임장
+													<a href="" role="button" class="btn-normal tiny">다운로드</a>
+												</li>
+												<li>3. 개인정보수집∙이용∙제공 동의
+													<a href=""  role="button" class="btn-normal tiny">다운로드</a>
+												</li>
+												<li>4. 민원처리 진행상황 통지서
+													<a href="" role="button" class="btn-normal tiny">다운로드</a>
+												</li>
+												<li>5. 민원취하서
+													<a href="" role="button" class="btn-normal tiny">다운로드</a>
+												</li>
+											</ol>
+											<!--e:기획현행화-->
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //e:contents -->
+			<button type="button" name="button" class="btn-circle top ir btn-top">위로</button>
+		</div>
+        <!-- //e: contentsWrap -->
+
+        <!-- ********** Include ********** -->
+        <!-- s footerWrap -->
+        <div id="footerWrap">
+            <script>
+                $(document).ready(function () {
+                    $("#footerWrap").load("../include/inc_body_footer.html");
+                });
+            </script>
+        </div>
+        <!-- //e:footerWrap -->
+        <!-- ********** //Include ********** -->
+
+    </div>
+    <!-- //e:wrap -->
+</body>
+
+</html>
