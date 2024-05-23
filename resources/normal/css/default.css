@@ -554,6 +554,7 @@ input[type="password"]:disabled { background-color:#F2F2F2; border:1px solid #BB
 .mark-kdic > p:first-child { display:table-cell; width:100px; vertical-align:middle; }
 .mark-kdic > p:first-child img { width:100%; }
 .mark-kdic > p:last-child { display:table-cell; width:auto; padding-left:20px; }
+.mark-kdic + .mark-kdic { margin-top: 20px; }
 
 /**07 17 */
 .exclam { position:relative; margin-top:10px; padding-left:20px; line-height:1.6; font-size:16px; letter-spacing:-0.7px; }
@@ -563,6 +564,30 @@ input[type="password"]:disabled { background-color:#F2F2F2; border:1px solid #BB
 .dot { position:relative; padding-left:15px; color:#666666; }
 .dot:before { position:absolute; left:0px; top:0px; content:'•'; color:#C3CED9; }
 
+/* 예가람 */
+.point { color:#F10F8E; }
+.clearfix{ zoom:1 ; }
+.clearfix:after{ clear:both; display:block; content:""; height:0px; visibility:hidden; }
+.ellipsis{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.bar-list > li { padding-left: 13px; box-sizing: border-box; position: relative;}
+.bar-list > li::before { content: '-'; display: inline-block; position: absolute; top:0; left:0; }
+
+/* 셀렉트 관련 - 개발 협의중 */
+.select-wrap select {
+    float: none !important;
+    padding: 0 20px;
+    width: 100% !important;
+    height: 60px;
+    line-height: 60px !important;
+    letter-spacing: -0.8px;
+    font-size: 18px;
+    color: #666666 !important;
+    font-weight: 400 !important;
+    /* display: block; */
+    cursor: pointer;
+    border: 1px solid #BBBBBB !important;
+    background: #FFFFFF url(../images/common/bg_select_arrow_up.png) no-repeat right 20px center !important;
+}
 
 
 @media all and (max-width:768px) {
