@@ -907,6 +907,9 @@ table td[colspan]{ border-top: 1px solid #ddd; }
 /*예금상품*/
 [class^="table-style"] tbody .ba-c { font-weight:500; background:#FCFCFC; }/*2023-07-24*/
 
+/* 예가람 240523 */
+.table-center tr td:has(ul) { vertical-align: top; }
+
 /* .bdl-none td:first-child { border-left:none!important; }  */
 .sub-tit { font-size:18px; font-weight:600; display: inline-block; } /* 2023-07-13 수정 완 */
 .table-tit:has(+ .sub-tit){ margin-bottom: 20px; }

@@ -90,17 +90,27 @@
         
             <!-- s:subVisualWrap -->
 			<div id="subVisualWrap" class="sub-type03">
+
+                <!--D: 전체 구조 변경 -->
+				<div id="breadcrumb" class="breadcrumb-renewal">
+					<script>
+						$(document).ready(function(){
+							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
+						});
+					</script>
+				</div>
+                
 				<div>
-					<div class="breadcrumb">
+					<!-- <div class="breadcrumb">
 						<a href="#" class="home ir">홈</a>
 						<a href="#" class="depth1">금융상품공시실</a>
 						<a href="#" class="depth2">예금상품</a>
 						<a href="#" class="depth3">예금상품금리</a>
-					</div>
+					</div> -->
 					<div class="tit-wrap">
 						<div class="sub-tit">
 							<h2>예금상품</h2>
-							<p class="desc">고려저축은행의 예금상품을 소개해드립니다.</p>
+							<p class="desc">예가람저축은행의 예금상품을 소개해드립니다.</p>
 						</div>
 					</div>
 				</div>
@@ -118,21 +128,19 @@
                         </ul>
                     </div>
                     
-						<!-- s:디자인현행화 -->
-						<p class="list-tit">고려저축은행 예금상품 금리정보 전체보기</p>
-						<!-- e:디자인현행화 --> 
-						<table class="table-style">
-						<caption>고려저축은행 예금상품 금리정보 전체보기 - 과목, 가입기간, 약정이율(단리식), 복리수익률(복리식), 중도해지이율로 구성</caption>
+                    <p class="list-tit">예가람저축은행 예금상품 금리정보 전체보기</p>
+                    <table class="table-style">
+                        <caption>예가람저축은행 예금상품 금리정보 전체보기 - 과목, 가입기간, 약정이율(단리식), 복리수익률(복리식), 중도해지이율로 구성</caption>
                         <colgroup>
-                            <col style="width:18%;">
-                            <col style="width:18%;">
-                            <col style="width:18%;">
-                            <col style="width:18%;">
+                            <col style="width:16%;">
+                            <col style="width:14%;">
+                            <col style="width:14%;">
+                            <col style="width:14%;">
                             <col style="width:*;">
                         </colgroup>
                         <thead>
                             <tr>
-                                <th scope="col">과목</th>
+                                <th scope="col">상품분류</th>
                                 <th scope="col">가입기간</th>
                                 <th scope="col">약정이율(년,세전): 단리식</th>
                                 <th scope="col">복리수익률(년,세전): 복리식</th>
@@ -140,132 +148,592 @@
                             </tr>
                         </thead>
 
-                        <tbody class="table-center">   <!-- s: 2023-07-13 , tbody에 클래스 table-center 추가 -->
+                        <tbody class="table-center">
                             <tr>
-                                <th scope="row" rowspan="6">e-정기예금</th>
+                                <th scope="row">정책자금대출</th>
+                                <td>12개월</td>
+                                <td>3.90%</td>
+                                <td>3.97%</td>
+                                <td>
+                                    <ul>
+                                        <li>1개월 미만 : 보통예금금리(0.2%)</li>
+                                        <li>1개월 이상 ~ 3개월 미만 : 약정금리 * 45 %</li>
+                                        <li>3개월 이상 ~ 6개월 미만 : 약정금리 * 55 %</li>
+                                        <li>6개월 이상 : 약정금리 * 60 %</li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">e-회전정기예금</th>
+                                <td>12개월</td>
+                                <td>3.90%</td>
+                                <td>3.97%</td>
+                                <td>
+                                    <ul>
+                                        <li>1개월 미만 : 보통예금금리(0.2%)</li>
+                                        <li>1개월 이상 ~ 3개월 미만 : 약정금리 * 45 %</li>
+                                        <li>3개월 이상 ~ 6개월 미만 : 약정금리 * 55 %</li>
+                                        <li>6개월 이상 : 약정금리 * 60 %</li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row" rowspan="6">정기예금</th>
                                 <td>1개월</td>
-                                <td>1.30</td>
-                                <td>1.30</td>
+                                <td>1.00%</td>
+                                <td>1.00%</td>
                                 <td rowspan="6">
                                     <ul>
-                                        <li>1개월 미만 : 보통예금 이율</li>
-                                        <li>1개월 이상 ~ 6개월 미만 :  약정금리의 50%</li>
-                                        <li>6개월 이상 ~ 12개월 미만 : 약정금리의 55%</li>
-										<li>12개월 이상 : 약정금리의 70%</li>
+                                        <li>
+                                            '19.06.30 이전 신규.
+                                            <ul class="bar-list">
+                                                <li>3개월 미만 : 0.2%</li>
+                                                <li>1년 미만 : 0.5%</li>
+                                                <li>1년 이상 : 1.0%</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul class="mt20">
+                                        <li>
+                                            '19.07.01 이후 신규
+                                            <ul class="bar-list">
+                                                <li>1개월 미만 : 보통예금금리(0.2%)</li>
+                                                <li>1개월 이상 ~ 3개월 미만 : 약정금리 * 45 %</li>
+                                                <li>3개월 이상 ~ 6개월 미만 : 약정금리 * 55 %</li>
+                                                <li>6개월 이상 ~ 35개월 미만 : 약정금리 * 60 %</li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </td>
                             </tr>
                             <tr>
                                 <td>3개월</td>
-                                <td>2.00</td>
-                                <td>2.00</td>
+                                <td>2.20%</td>
+                                <td>2.20%</td>
                             </tr>
                             <tr>
                                 <td>6개월</td>
-                                <td>3.30</td>
-                                <td>3.32</td>
+                                <td>2.40%</td>
+                                <td>2.41%</td>
                             </tr>
                             <tr>
                                 <td>12개월</td>
-                                <td>3.90</td>
-                                <td>3.97</td>
+                                <td>3.80%</td>
+                                <td>3.86%</td>
                             </tr>
                             <tr>
                                 <td>24개월</td>
-                                <td>3.40</td>
-                                <td>3.51</td>
+                                <td>3.20%</td>
+                                <td>3.30%</td>
                             </tr>
                             <tr>
                                 <td>36개월</td>
-                                <td>3.40</td>
-                                <td>3.57</td>
+                                <td>3.10%</td>
+                                <td>3.24%</td>
                             </tr>
+
                             <tr>
-                                <th scope="row">e-회전정기예금</th>
-                                <td>12개월</td>
-                                <td>4.00</td>
-                                <td>4.07</td>
-                                <td>
-                                    <ul>
-                                        <li>1개월 미만 : 보통예금 이율</li>
-                                        <li>1개월 이상 ~ 6개월 미만 :  약정금리의 50%</li>
-                                        <li>6개월 이상 ~ 12개월 미만 : 약정금리의 55%</li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            
-                            <tr>
-                                <th scope="row" rowspan="6">e-정기적금</th>
-                                <td>6개월</td>
-                                <td>1.90</td>
-                                <td></td>
+                                <th scope="row" rowspan="6">e-정기예금</th>
+                                <td>1개월</td>
+                                <td>1.00%</td>
+                                <td>1.00%</td>
                                 <td rowspan="6">
                                     <ul>
-                                        <li>1개월 미만 : 보통예금이율 (현재 0.1%)</li>
-                                        <li>1개월 이상 ~ 6개월 미만 :  약정금리의 50%</li>
-                                        <li>6개월 이상 ~ 12개월 미만 : 약정금리의 55%</li>
-										<li>12개월 이상 : 약정금리의 70%</li>
+                                        <li>
+                                            '19.06.30 이전 신규.
+                                            <ul class="bar-list">
+                                                <li>3개월 미만 : 0.2%</li>
+                                                <li>1년 미만 : 0.5%</li>
+                                                <li>1년 이상 : 1.0%</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul class="mt20">
+                                        <li>
+                                            '19.07.01 이후 신규
+                                            <ul class="bar-list">
+                                                <li>1개월 미만 : 보통예금금리(0.2%)</li>
+                                                <li>1개월 이상 ~ 3개월 미만 : 약정금리 * 45 %</li>
+                                                <li>3개월 이상 ~ 6개월 미만 : 약정금리 * 55 %</li>
+                                                <li>6개월 이상 ~ 35개월 미만 : 약정금리 * 60 %</li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </td>
                             </tr>
                             <tr>
+                                <td>3개월</td>
+                                <td>2.20%</td>
+                                <td>2.20%</td>
+                            </tr>
+                            <tr>
+                                <td>6개월</td>
+                                <td>2.40%</td>
+                                <td>2.41%</td>
+                            </tr>
+                            <tr>
                                 <td>12개월</td>
-                                <td>4.00</td>
-                                <td></td>
+                                <td>3.80%</td>
+                                <td>3.86%</td>
                             </tr>
                             <tr>
                                 <td>24개월</td>
-                                <td>4.00</td>
-                                <td></td>
+                                <td>3.20%</td>
+                                <td>3.30%</td>
                             </tr>
                             <tr>
                                 <td>36개월</td>
-                                <td>2.80</td>
-                                <td></td>
+                                <td>3.10%</td>
+                                <td>3.24%</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">e-안심<br />Plus정기예금</th>
+                                <td>36개월</td>
+                                <td>3.10%</td>
+                                <td>3.24%</td>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            '19.06.30 이전 신규.
+                                            <ul class="bar-list">
+                                                <li>3개월 미만 : 0.2%</li>
+                                                <li>1년 미만 : 0.5%</li>
+                                                <li>1년 이상 : 1.0%</li>
+                                                <li>13개월 이상 ~ 24개월 미만 : 가입당시 1년 e정기예금 고시금리</li>
+                                                <li>24개월 이상 ~ 36개월 미만 : 가입당시 2년 e정기예금 고시금리</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul class="mt20">
+                                        <li>
+                                            '19.07.01 이후 신규
+                                            <ul class="bar-list">
+                                                <li>1개월 미만 : 보통예금금리(0.2%)</li>
+                                                <li>1개월 이상 ~ 3개월 미만 : 약정금리 * 45 %</li>
+                                                <li>3개월 이상 ~ 6개월 미만 : 약정금리 * 55 %</li>
+                                                <li>6개월 이상 ~ 35개월 미만 : 약정금리 * 60 %</li>
+                                                <li>13개월 이상 ~ 24개월 미만 : 가입당시 1년 e정기예금 고시금리</li>
+                                                <li>24개월 이상 ~ 36개월 미만 : 가입당시 2년 e정기예금 고시금리</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">안심<br />Plus정기예금</th>
+                                <td>36개월</td>
+                                <td>3.10%</td>
+                                <td>3.24%</td>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            '19.06.30 이전 신규.
+                                            <ul class="bar-list">
+                                                <li>3개월 미만 : 0.2%</li>
+                                                <li>1년 미만 : 0.5%</li>
+                                                <li>1년 이상 : 1.0%</li>
+                                                <li>13개월 이상 ~ 24개월 미만 : 가입당시 1년 e정기예금 고시금리</li>
+                                                <li>24개월 이상 ~ 36개월 미만 : 가입당시 2년 e정기예금 고시금리</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul class="mt20">
+                                        <li>
+                                            '19.07.01 이후 신규
+                                            <ul class="bar-list">
+                                                <li>1개월 미만 : 0.2%</li>
+                                                <li>1개월 이상 ~ 3개월 미만 : 가입당시 1년 e정기예금 약정이율 * 45%</li>
+                                                <li>3개월 이상 ~ 6개월 미만 : 가입당시 1년 e정기예금 약정이율 * 55%</li>
+                                                <li>6개월 이상 ~ 13개월 미만 : 가입당시 1년 e정기예금 약정이율 * 60%</li>
+                                                <li>13개월 이상 ~ 24개월 미만 : 가입당시 1년 e정기예금 고시금리</li>
+                                                <li>24개월 이상 ~ 36개월 미만 : 가입당시 2년 e정기예금 고시금리</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row" rowspan="5">정기적금</th>
+                                <td>100일</td>
+                                <td>1.00%</td>
+                                <td>-</td>
+                                <td rowspan="5">
+                                    <ul>
+                                        <li>
+                                            '19.06.30 이전 신규.
+                                            <ul class="bar-list">
+                                                <li>3개월 미만 : 0.2%</li>
+                                                <li>1년 미만 : 0.5%</li>
+                                                <li>1년 이상 : 1.0%</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul class="mt20">
+                                        <li>
+                                            '19.07.01 이후 신규
+                                            <ul class="bar-list">
+                                                <li>1개월 미만 : 보통예금금리(0.2%)</li>
+                                                <li>1개월 이상 ~ 3개월 미만 : 약정금리 * 45 %</li>
+                                                <li>3개월 이상 ~ 6개월 미만 : 약정금리 * 55 %</li>
+                                                <li>6개월 이상 ~ 35개월 미만 : 약정금리 * 60 %</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
-                                <td>48개월</td>
-                                <td>2.80</td>
-                                <td></td>
-                            </tr>
-							<tr>
-                                <td>60개월</td>
-                                <td>2.80</td>
-                                <td></td>
+                                <td>6개월이상</td>
+                                <td>2.20%</td>
+                                <td>-</td>
                             </tr>
                             <tr>
-                                <th scope="row" rowspan="4">보고파 정기적금</th>
+                                <td>12개월이상</td>
+                                <td>3.50%</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>24개월이상</td>
+                                <td>3.30%</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>36개월</td>
+                                <td>3.00%</td>
+                                <td>-</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row" rowspan="3">2030<br />Start정기적금</th>
+                                <td>12개월이상</td>
+                                <td>3.60%</td>
+                                <td>-</td>
+                                <td rowspan="3">
+                                    <ul>
+                                        <li>
+                                            '19.06.30 이전 신규.
+                                            <ul class="bar-list">
+                                                <li>3개월 미만 : 0.2%</li>
+                                                <li>1년 미만 : 0.5%</li>
+                                                <li>1년 이상 : 1.0%</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul class="mt20">
+                                        <li>
+                                            '19.07.01 이후 신규
+                                            <ul class="bar-list">
+                                                <li>1개월 미만 : 보통예금금리(0.2%)</li>
+                                                <li>1개월 이상 ~ 3개월 미만 : 약정금리 * 45 %</li>
+                                                <li>3개월 이상 ~ 6개월 미만 : 약정금리 * 55 %</li>
+                                                <li>6개월 이상 ~ 35개월 미만 : 약정금리 * 60 %</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>24개월이상</td>
+                                <td>3.40%</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>36개월이상</td>
+                                <td>3.40%</td>
+                                <td>-</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row" rowspan="3">직장인<br />Plus정기적금</th>
+                                <td>12개월이상</td>
+                                <td>3.70%</td>
+                                <td>-</td>
+                                <td rowspan="3">
+                                    <ul>
+                                        <li>
+                                            '19.06.30 이전 신규.
+                                            <ul class="bar-list">
+                                                <li>3개월 미만 : 0.2%</li>
+                                                <li>1년 미만 : 0.5%</li>
+                                                <li>1년 이상 : 1.0%</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul class="mt20">
+                                        <li>
+                                            '19.07.01 이후 신규
+                                            <ul class="bar-list">
+                                                <li>1개월 미만 : 보통예금금리(0.2%)</li>
+                                                <li>1개월 이상 ~ 3개월 미만 : 약정금리 * 45 %</li>
+                                                <li>3개월 이상 ~ 6개월 미만 : 약정금리 * 55 %</li>
+                                                <li>6개월 이상 ~ 35개월 미만 : 약정금리 * 60 %</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>24개월이상</td>
+                                <td>3.50%</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>36개월이상</td>
+                                <td>3.50%</td>
+                                <td>-</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row" rowspan="3">예가람<br />멤버십정기적금</th>
+                                <td>12개월이상</td>
+                                <td>3.20%<br />(최대 3.70%)%</td>
+                                <td>-</td>
+                                <td rowspan="3">
+                                    <ul>
+                                        <li>
+                                            '19.06.30 이전 신규.
+                                            <ul class="bar-list">
+                                                <li>3개월 미만 : 0.2%</li>
+                                                <li>1년 미만 : 0.5%</li>
+                                                <li>1년 이상 : 1.0%</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul class="mt20">
+                                        <li>
+                                            '19.07.01 이후 신규
+                                            <ul class="bar-list">
+                                                <li>1개월 미만 : 보통예금금리(0.2%)</li>
+                                                <li>1개월 이상 ~ 3개월 미만 : 약정금리 * 45 %</li>
+                                                <li>3개월 이상 ~ 6개월 미만 : 약정금리 * 55 %</li>
+                                                <li>6개월 이상 ~ 35개월 미만 : 약정금리 * 60 %</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>24개월이상</td>
+                                <td>2.70%<br />(최대 3.20%)</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>36개월이상</td>
+                                <td>2.20%<br />(최대 2.70%)</td>
+                                <td>-</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row" rowspan="3">Hi!예가람<br />e정기적금</th>
+                                <td>12개월이상</td>
+                                <td>3.50%</td>
+                                <td>-</td>
+                                <td rowspan="3">
+                                    <ul>
+                                        <li>
+                                            '19.06.30 이전 신규.
+                                            <ul class="bar-list">
+                                                <li>3개월 미만 : 0.2%</li>
+                                                <li>1년 미만 : 0.5%</li>
+                                                <li>1년 이상 : 1.0%</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul class="mt20">
+                                        <li>
+                                            '19.07.01 이후 신규
+                                            <ul class="bar-list">
+                                                <li>1개월 미만 : 보통예금금리(0.2%)</li>
+                                                <li>1개월 이상 ~ 3개월 미만 : 약정금리 * 45 %</li>
+                                                <li>3개월 이상 ~ 6개월 미만 : 약정금리 * 55 %</li>
+                                                <li>6개월 이상 ~ 35개월 미만 : 약정금리 * 60 %</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>24개월이상</td>
+                                <td>3.30%</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>36개월이상</td>
+                                <td>3.00%</td>
+                                <td>-</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row" rowspan="6">자유적립예금</th>
+                                <td>1개월</td>
+                                <td>1.00%</td>
+                                <td>-</td>
+                                <td rowspan="6">
+                                    <ul>
+                                        <li>
+                                            2018-12-31 이전 가입자
+                                            <ul class="bar-list">
+                                                <li>1년 미만 : 1.0%</li>
+                                                <li>1년 이상 : 1.3%</li>
+                                                <li>2년 이상 : 1.5%</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul class="mt20">
+                                        <li>
+                                            2019-01-01 이후 가입자
+                                            <ul class="bar-list">
+                                                <li>3개월 미만 : 0.20%</li>
+                                                <li>12개월 미만 : 0.50%</li>
+                                                <li>12개월 이상 : 1.00%</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3개월</td>
+                                <td>2.20%</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
                                 <td>6개월</td>
-                                <td>4.00</td>
-                                <td></td>
+                                <td>2.40%</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>12개월</td>
+                                <td>3.80%</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>24개월이상</td>
+                                <td>3.20%</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>36개월이상</td>
+                                <td>3.10%</td>
+                                <td>-</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row" rowspan="4">표지어음</th>
+                                <td>30일 이상</td>
+                                <td>1.00%</td>
+                                <td>-</td>
                                 <td rowspan="4">
                                     <ul>
-                                        <li>1개월 미만 : 보통예금이율 (현재 0.1%)</li>
-                                        <li>1개월 이상 ~ 6개월 미만 :  약정금리의 50%</li>
-                                        <li>6개월 이상 ~ 12개월 미만 : 약정금리의 55%</li>
-										<li>12개월 이상 : 약정금리의 70%</li>
+                                        <li>
+                                            2018-12-31 이전 가입자
+                                            <ul class="bar-list">
+                                                <li>연 1%</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul class="mt20">
+                                        <li>
+                                            2019-01-01 이후 가입자
+                                            <ul class="bar-list">
+                                                <li>3개월 미만 : 0.20%</li>
+                                                <li>12개월 미만 : 0.50%</li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </td>
                             </tr>
                             <tr>
-                                <td>12개월</td>
-                                <td>4.80</td>
-                                <td></td>
+                                <td>60일 이상</td>
+                                <td>1.00%</td>
+                                <td>-</td>
                             </tr>
                             <tr>
-                                <td>24개월</td>
-                                <td>4.60</td>
-                                <td></td>
+                                <td>90일 이상</td>
+                                <td>2.22%</td>
+                                <td>-</td>
                             </tr>
-							<tr>
+                            <tr>
+                                <td>180일</td>
+                                <td>2.40%</td>
+                                <td>-</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row" rowspan="3">퇴직연금 정기예금<br />(DB형)</th>
+                                <td>12개월이상</td>
+                                <td>4.00%</td>
+                                <td>-</td>
+                                <td rowspan="6">
+                                    <ul>
+                                        <li>
+                                            일반중도해지이율
+                                            <ul class="bar-list">
+                                                <li>1개월 미만 : 보통예금이율(0.2%)</li>
+                                                <li>1개월 이상~6개월 미만 : 약정금리*50%</li>
+                                                <li>6개월 이상~12개월 미만 : 약정금리*55%</li>
+                                                <li>12개월 이상 : 약정금리*70%</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul class="mt20">
+                                        <li>
+                                            특별중도해지이율(신규일(재예치되었을 경우 최종재예치일) 이후 예치기간에 따라 다음과 같이 적용)
+                                            <ul class="bar-list">
+                                                <li>6개월 미만 : 가입당시 3개월 이 예금의 약정이율</li>
+                                                <li>6개월 이상~1년미만 : 가입당시 6개월 이 예금의 약정이율</li>
+                                                <li>6개월 이상~1년미만 : 가입당시 6개월 이 예금의 약정이율</li>
+                                                <li>1년 이상~2년미만 : 가입당시 12개월 이 예금의 약정이율</li>
+                                                <li>2년 이상~3년미만 : 가입당시 24개월 이 예금의 약정이율</li>
+                                                <li>3년 이상~5년미만 : 가입당시 36개월 이 예금의 약정이율</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>24개월이상</td>
+                                <td>3.40%</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
                                 <td>36개월</td>
-                                <td>4.60</td>
-                                <td></td>
+                                <td>3.10%</td>
+                                <td>-</td>
                             </tr>
-                           
+
+                            <tr>
+                                <th scope="row" rowspan="3">퇴직연금 정기예금<br />(DC/IRP형)</th>
+                                <td>12개월이상</td>
+                                <td>3.70%</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>24개월이상</td>
+                                <td>3.10%</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>36개월</td>
+                                <td>2.80%</td>
+                                <td>-</td>
+                            </tr>
+
+
                         </tbody>
                     </table>
-                    
+
+                    <div class="default-wrap02 ">
+                        <p>[담당부서 : YESBANK 사업팀 / 담당자 : 박선홍 / 대표번호 : 1877-7788]</p>
+                    </div>
+
+                    <div class="prod-date">
+                        <span class="date">기준일 : 2024-05-01</span>
+                    </div>
+                
                 </div>
             </div>
            
