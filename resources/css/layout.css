@@ -692,7 +692,7 @@ p + ul.list-wrap01 { margin-top:10px; }
 /* form + 버튼 */
 .btn-normal.form { font-size:22px;padding:0px 50px;height:60px;line-height:60px;font-weight:500; color:#666666; border:1px solid#BBBBBB; background:#FFFFFF; box-shadow:none; } 
 .btn-normal.form:hover,
-.btn-normal.form:focus { border:1px solid #F1108E !important; background:#ffffff !important; color:#F1108E; }
+.btn-normal.form:focus { border:1px solid #4E32A5 !important; background:#ffffff !important; color:#4E32A5; }
 
 /* 금액 추가 버튼 */
 .money-btn-wrap { display:flex; flex-wrap:nowrap; align-items:center; justify-content:space-between; gap:10px; font-size:0; margin:0; }
