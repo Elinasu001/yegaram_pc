@@ -259,7 +259,9 @@
 .terms-cts .btn-list .btn-popup { width:100%; }
 
 .terms-txt { color:#111111; background:#fff; }
+.terms-txt dt { font-size:22px; }
 .terms-txt dt,
+.terms-txt + .terms-txt { margin-top:60px; }
 .termsconditions_title01,
 .termsconditions_thema01 { /*margin-top:30px;*/ margin-top:40px; font-size:22px; font-weight:500; color:#111111; }
 .terms-txt dt:first-child,
@@ -278,6 +280,7 @@
 .terms-txt .txt-box { padding-top:0; }
 .terms-txt dl dd ol li{padding-left:22px;text-indent:-22px;}
 .terms-txt dl dd ol li > ol li {padding-left: 25px;}
+.terms-txt .sm-txt { font-size:16px; color:#999999; }/* 상품판매 준칙 - 기존 sm-txt에 스타일만 추가 */
 /* .terms-txt dl dd ol li + li { margin-top: 7px;} */
 .com-msgbox { padding:32px 40px;background:#efefef; line-height: 1.6;}
 .com-msgbox .com-msg01{font-size:18px;}
@@ -640,11 +643,11 @@ div.line-box { padding-top:60px; margin-top:60px; border-top:1px solid #bbb; }
 .online-text .const-term { font-size:0.9rem; color:#999; }
 
 /* 금융소비자보호 체계 */
-.protection-wrap {}
-.protection-wrap .system-cts .table-wrap { margin-top:65px; }
+.system-cts + .doc-type1,
+.protection-wrap .system-cts .doc-type1 { margin-top:60px; }
 .protection-wrap .system-cts .table-wrap td span { padding:0 15px; }
 .protection-wrap .pro-inner { padding:30px; margin-top: 40px; border:1px solid #ddd; }
-.terms-txt .pro-inner li { font-size:22px;font-weight:500;color:#111111; font-weight:500; }
+.terms-txt .pro-inner li { font-size:18px;font-weight:500;color:#111111; font-weight:500; }
 .terms-txt .pro-inner li + li { margin-top: 20px; }
 
 /* 개인정보보호 */
