@@ -146,7 +146,7 @@
 .prod-visual .prod-tit { max-width:700px; padding:40px 30px 0 0; }
 .prod-visual .desc { margin-top:10px; color:#666666; }
 .prod-visual .desc-prod { font-size:25px; color:#666666; font-weight: 500; }
-.prod-visual .hashtag span { display:inline-block; width:100%; margin-top:5px; color:#111; }
+.prod-visual .hashtag span { display:inline-block; width:100%; margin-top:10px; color: #999999; font-weight: 500; }
 .prod-visual .hashtag span:first-child { margin-left:0; }
 .prod-visual .btn-wrap { margin-top:20px; text-align:left; }
 /* .prod-visual .prod-more { display:inline-block; position:inherit; top:inherit; right:inherit; padding:20px 40px; font-size:20px; font-weight:500; border-radius:50px; background:#EEECF8; color:#260F54; } */
@@ -1104,7 +1104,18 @@ div.line-box { padding-top:60px; margin-top:60px; border-top:1px solid #bbb; }
 .history-cts { position:relative; width:100%; margin-top:30px; }
 .history-cts::after { display:inline-block; content:''; position:absolute; top:6px; left:50%; transform:translate(-50%, 0); width:3px; height:94%; background:#DEDEDE; z-index:1; }
 .history-cts li { position:relative; z-index:2; display:inline-block; width:50%; padding:0 30px; margin-bottom:70px; }
-.history-cts li:nth-child(even) { right:0; text-align:right; }
+.history-cts li:nth-child(odd) { right:0; text-align:right; }
+.history-cts li:nth-child(even) { left:50%; text-align:left; }
+.history-cts li:nth-child(odd) dt { color:#F1108E; font-size:27px; font-weight:700; }
+.history-cts li:nth-child(even) dt { color:#260F54; font-size:27px; font-weight:700; }
+.history-cts li dt:after { display:inline-block; content:''; position:absolute; top:7px; right:-14px; width:18px; height:18px; background:#fff; border:5px solid #ec008c; border-radius:50%; }
+.history-cts li:nth-child(even) dt:after { right:inherit; left:-14px; border:5px solid #612885; }
+.history-cts li dd { display: flex; }
+.history-cts li:nth-child(odd) dd { justify-content: end; flex-direction: row-reverse; }
+.history-cts li:nth-child(odd) dd strong { float:right; padding-left:10px; }
+.history-cts li:nth-child(even) dd strong { float:left; padding-right:10px; }
+
+/* .history-cts li:nth-child(even) { right:0; text-align:right; }
 .history-cts li:nth-child(odd) { left:50%; text-align:left; }
 .history-cts li:nth-child(even) dt { color:#F1108E; font-size:27px; font-weight:700; }
 .history-cts li:nth-child(odd) dt { color:#260F54; font-size:27px; font-weight:700; }
@@ -1113,7 +1124,8 @@ div.line-box { padding-top:60px; margin-top:60px; border-top:1px solid #bbb; }
 .history-cts li dd { display: flex; }
 .history-cts li:nth-child(even) dd { justify-content: end; flex-direction: row-reverse; }
 .history-cts li:nth-child(even) dd strong { float:right; padding-left:10px; }
-.history-cts li:nth-child(odd) dd strong { float:left; padding-right:10px; }
+.history-cts li:nth-child(odd) dd strong { float:left; padding-right:10px; } */
+
 
 .history-cts li dl dt { margin-bottom: 10px; }
 .history-cts li dl dd { font-size:18px; color:#666;}
@@ -1376,8 +1388,7 @@ div.line-box { padding-top:60px; margin-top:60px; border-top:1px solid #bbb; }
 .scroll-focus.type02::before,
 .scroll-focus.type02::after { display: none; }
 
-.list.type1 + .sms-app-wrap { margin-top: 50px; }
-.sms-app-wrap { display: flex; }
+.sms-app-wrap { display: flex; margin-top: 50px; }
 .sms-box { background-color: #FAFAFA; padding: 35px 0 45px 55px; width: 834px; margin-right: 20px; font-size: 0; }
 .sms-box .select-wrap { width: 125px; display: inline-block;vertical-align: top; }
 .sms-box input { width: 337px; margin: 0 20px; }
@@ -1404,3 +1415,13 @@ div.line-box { padding-top:60px; margin-top:60px; border-top:1px solid #bbb; }
 .subDiv { margin-top: 25px; font-size: 16px; display: block!important; }
 .subDiv .btn-box{ margin-top: 28px; text-align: center; display: block; }
 .subDiv .btn-box button.tiny { float: none; margin: 0; }
+
+.ex-txt-group { float: left; }
+.default-wrap02 .ex-txt-group p { float: none; }
+.introduction-wrap .greetings-cts .intro-txt .greetings-txt-big { font-weight: 500; color: #4E32A5; margin-bottom: 28px; line-height: 1.6; }
+.introduction-wrap .greetings-cts .intro-txt .greetings-txt { font-size: 22px; font-weight: 400; color: #666666; line-height: 1.7; }
+.define-list + .view-de-cts { margin-top: 0; }
+.view-de-cts { padding: 30px 20px 0; }
+.view-de-cts .mark-kdic div { margin-left: 13px; }
+.view-de-cts .mark-kdic div p{ color: #666666; font-weight: 400; margin-top: 10px; line-height: 1.6; }
+.view-de-cts .mark-kdic > p:first-child { width: 130px; }

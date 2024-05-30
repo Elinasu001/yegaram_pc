@@ -524,9 +524,9 @@ h3.tit + .list-tit.type2,
 .list-tit.type2,
 [class^="table-style"].caption-tit caption.list-tit.type2, 
 [class^="table-style"].caption-tit caption,
-.table-tit { width:auto; height:auto; text-indent:0; position:relative; left: inherit; padding-left: 0; margin-bottom:10px; font-size:22px !important; font-weight:600; line-height:27px; text-align:left; color:#111; }
+.table-tit { width:auto; height:auto; text-indent:0; position:relative; left: inherit; padding-left: 0; margin-bottom: 15px; font-size:22px !important; font-weight:600; line-height:27px; text-align:left; color:#111; }
 
-
+.tab-wrap + .list-tit { margin-top: 30px; }
 
 /******** list ********/
 .list-tit + .list.type1 { padding-left:25px; }
