@@ -94,38 +94,30 @@
 
 			<!-- s:subVisualWrap -->
 			<!--s:기획현행화-->
-			<div id="subVisualWrap" class="sub-type01">
+			<div id="subVisualWrap" class="sub-type03">
+
+				<!--D: 전체 구조 변경 -->
+				<div id="breadcrumb" class="breadcrumb-renewal">
+					<script>
+						$(document).ready(function(){
+							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
+						});
+					</script>
+				</div>
+
 				<div>
-					<div class="breadcrumb">
-						<a href="#none" class="home ir">홈</a>
-						<a href="#none" class="depth1">금융소비자보호</a>
-						<a href="#none" class="depth2">민원센터</a>
-                        <a href="#none" class="depth3">전자민원신청</a>
-					</div>
-
-					<!-- <div class="tit-wrap">
-						<div class="sub-tit">
-							<h2>민원센터</h2>
-							<p class="desc">고려저축은행의 전자민원신청 프로세스입니다.</p>
-						</div>
+					<!-- <div class="breadcrumb">
+						<a href="#" class="home ir">홈</a>
+						<a href="#" class="depth1">금융상품공시실</a>
+						<a href="#" class="depth2">예금상품</a>
+						<a href="#" class="depth3">상품소개</a>
 					</div> -->
-
-					<div class="prod-main-tit">
+					<div class="tit-wrap">
 						<div class="sub-tit">
-							<h2>금융소비자보호</h2>
-						</div>
-						<div class="prod-select">
-							<a href="../portal/protection_info.html" title="링크이동">금융소자보호체계</a>
-							<a href="../portal/online_const.html" class="on" title="링크이동">민원센터</a>
-							<a href="../portal/civil_apply_exam.html" title="링크이동">금융소비자보호우수사례</a>
-							<a href="../portal/illegal_contract_cancel.html" title="링크이동">금융소비자권리</a>
-							<a href="../portal/disclosure_civil_complaints.html" title="링크이동">금융소비자보호공시</a>
-							<a href="../portal/collection_bonds_guide.html" title="링크이동">채권추심업무</a>
-							<a href="../portal/fraud_notice.html" title="링크이동">유용한소비자정보</a>
-							<a href="../portal/aptness_confirm.html" title="링크이동">적합성·적정성 조회</a>
+							<h2>전자민원신청</h2>
+							<p class="desc">예가람저축은행의 전자민원신청 프로세스입니다.</p>
 						</div>
 					</div>
-
 				</div>
 			</div>
 			<!--e:기획현행화-->
@@ -133,22 +125,9 @@
 			<!-- s:contents -->
 			<div class="contents default-wrap">
 				<div class="complaint-wrap">
-					<div class="tab-wrap">
-						<ul>
-							<!--s:디자인현행화-->
-							<li><a href="../portal/online_const.html">온라인상담센터</a></li>
-							<!--e:디자인현행화-->
-							<li><a href="../portal/customer_opinion.html">고객의견(칭찬/불만)</a></li>
-							<li><a href="../portal/customer_suggestion.html">고객제안</a></li>
-							<li class="active"><a href="../portal/civil_apply.html">전자민원신청</a></li>
-							<li><a href="../portal/civil_apply_list.html">신청 내역조회/취하</a></li>
-                            <li><a href="../portal/affairs_manual.html">민원사무편람</a></li>
-						</ul>
-					</div>
+					
 					<div class="accordion-wrap mb60">
-							<!-- s:디자인현행화 -->
 							<h3 class="list-tit">자주 하는 질문 TOP 5</h3>
-							<!-- e:디자인현행화 -->
 							<ul class="accordion">
 								<li>
 									<a href="#" class="question-wrap">
@@ -229,11 +208,9 @@
 						</p>
 					</div>
 					<div class = "online-text">
-						<!--s: 2023-07-13 구조변경-->
-						<p>일반문의 및 상담은 <a href="../portal/online_const.html" class="const-center">온라인상담센터</a> 또는 <span> 고객센터(1877-9900)를</span> 이용하시기 바랍니다. 보다 빠른 처리가 가능합니다.</p>
+						<p>일반문의 및 상담은 <a href="../portal/online_const.html" class="const-center">온라인상담센터</a> 또는 <span> 고객센터(1877-7788)를</span> 이용하시기 바랍니다. 보다 빠른 처리가 가능합니다.</p>
 						<p class="const-term">일반문의 및 상담 처리기한 : 5영업일 이내</p>
 						<p class="const-term">민원처리기한 : 14영업일 이내</p>
-						<!--e: 2023-07-13 구조변경-->
 					</div>
 					<form id="frm1" name="frm1">
 						<div class="apply-wrap">
@@ -251,11 +228,10 @@
 										</div>
 										<div class="form-wrap">
 											<label for="birth" class="inp-tit req">생년월일</label>
-											<input type="text" name="BIRTH_DAY" value="" id="birth" placeholder="ex) 19901212" maxlength="8" title="생년월일 입력">
+											<input type="text" name="BIRTH_DAY" value="" id="birth" placeholder="ex)19991225" maxlength="8" title="생년월일 입력">
 										</div>
 									</div>
 
-									<!-- s:기획현행화 -->
 									<div class="grid2"> 
 										<div class="form-wrap">
 											<label for="phone" class="inp-tit req">핸드폰번호</label>
@@ -291,18 +267,18 @@
 											<p class="rice">문의주신 내용의 신속하고 원활한 안내를 위하여 당행 준법지원팀 담당자가 선택하신 회신방법외 기재하신 연락처로 연락드릴 수 있습니다.</p>
 										</div>
 										
-										<!--<div class="form-wrap">
+										<div class="form-wrap">
 											<label for="niceAuthNum" class="inp-tit req">인증번호</label>
 											<div class="nice-auth-num-area">
 												<input type="hidden" id="niceAuthNumIntervalId" value="">
-												<input type="text" id="niceAuthNum" value="" numberonly="" placeholder="" maxlength="5">
+												<input type="text" id="niceAuthNum" value="" numberonly="" placeholder="인증번호 입력" maxlength="5">
 												<button type="button" class="btn-normal form btn-nice-auth-num" id="sendBtn">인증번호요청</button>
 												<button type="button" class="btn-normal form btn-nice-auth-num" id="reSendBtn" style="display:none">재요청</button>
 												<button type="button" class="btn-normal form btn-nice-auth-num" id="confirmBtn">확인</button>
 											</div>
-										</div>-->
+										</div>
 									</div>
-									<!-- e:기획현행화 -->
+
 									<div class="grid2" id="radioRecvType">
 										<div class="form-wrap">
 											<span class="inp-tit req">회신방법 선택</span>
@@ -310,24 +286,38 @@
 												<span class="ctm-radio">
 													<input type="radio" name="reply" id="reply0" value="">
 													<label for="reply0">
-														<span>이메일</span>
+														<span>전화</span>
 													</label>
 												</span>
 												<span class="ctm-radio">
 													<input type="radio" name="reply" id="reply1" value="">
-													<label for="reply1"><span>전화</span>
+													<label for="reply1">
+														<span>이메일</span>
+													</label>
+												</span>
+												<span class="ctm-radio">
+													<input type="radio" name="reply" id="reply2" value="">
+													<label for="reply2">
+														<span>SMS</span>
 													</label>
 												</span>
 												<span class="ctm-radio">
 													<input type="radio" name="reply" id="reply3" value="">
 													<label for="reply3">
-														<span>우편</span>
+														<span>미회신</span>
 													</label>
 												</span>
+												
+												<!-- <span class="ctm-radio">
+													<input type="radio" name="reply" id="reply3" value="">
+													<label for="reply3">
+														<span>우편</span>
+													</label>
+												</span> -->
 											</div>
 										</div>
 									</div>
-									<div class="grid2 address-area">
+									<!-- <div class="grid2 address-area">
 										<div class="form-wrap">
 											<span class="inp-tit req">주소</span>
 											<div class="zipcode">
@@ -344,7 +334,7 @@
 										<div class="form-wrap">
 											<input type="text" name="ADDR_DETAIL" value="" id="address2" placeholder="상세주소를 직접 입력하세요" title="주소 - 상세주소">
 										</div>
-									</div>
+									</div> -->
 
 									<div class="grid1 email-area">
 										<label for="email-id" class="inp-tit req">이메일</label>
@@ -421,10 +411,10 @@
 										</tr>
 									</thead>
 									<tbody>
-										<tr><!--s:기획현행화-->
-											<td>준법지원팀 051-640-9086(담당자 손영지)</td>
+										<tr>
+											<td>준법감시팀 02-6906-7065</td>
 											<td>접수일로부터 14영업일 이내</td>
-										</tr><!--e:기획현행화-->
+										</tr>
 									</tbody>
 								</table>
 							</div>
@@ -440,8 +430,7 @@
 											</label>
 										</span>
 									</li>
-									<!--s:기획현행화-->
-									<!-- <li class="auth3">
+									<li class="auth7">
 										<span class="ctm-radio">
 											<input type="radio" name="auth" id="auth3" value="">
 											<label for="auth3">
@@ -456,15 +445,12 @@
 												<span>신용카드인증</span>
 											</label>
 										</span>
-									</li> -->
-									<!--e:기획현행화-->
+									</li>
 								</ul>
 							</div>
 							<div class="agree-wrap">
 								<div class="agree-area">
-									<!--s:기획현행화 (클래스삭제)-->
 									<div class="">
-									<!--e:기획현행화 (클래스삭제)-->
 										<!-- <div class="all-agree">
 										<span class="ctm-check">
 											<input type="checkbox" name="check" id="all-check" value="" title="전체 약관보기">
@@ -492,11 +478,18 @@
 															</span>
 														</div>
 													</div>
+													<!--D: items 태그 안으로 이동-->
+													<p class="rice rice-type2">위 개인(신용)정보의 수집·이용에 관한 동의는 본 서비스를 이용하기 위한 필수사항이므로, 위 사항에 동의하셔야만 민원센터에 글을 등록하실 수 있습니다.</p>
 												</div>
 											</div>
+											<!--D: 추가-->
+											<div class="default-wrap02 ">
+												<p>담당부서 : 준법감시팀 / 담당자 : 최윤정 / 전화번호 : 02-6906-7065</p>
+											</div>
+											<!--D: 추가 //-->
 										</div>
 									</div>
-									<p class="rice rice-type2">위 개인(신용)정보의 수집·이용에 관한 동의는 본 서비스를 이용하기 위한 필수사항이므로, 위 사항에 동의하셔야만 민원센터에 글을 등록하실 수 있습니다.</p>
+									
 									<div class="btn-wrap">
 										<button type="button" name="button" class="btn-big navy">등록하기</button>
 									</div>
