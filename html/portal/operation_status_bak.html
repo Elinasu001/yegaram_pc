@@ -89,24 +89,38 @@
 			
 			<!-- s:subVisualWrap -->
 			<!--s:기획현행화-->
-			<div id="subVisualWrap" class="sub-type03">
-
-				<!--D: 전체 구조 변경 -->
-				<div id="breadcrumb" class="breadcrumb-renewal">
-					<script>
-						$(document).ready(function(){
-							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
-						});
-					</script>
-				</div>
-
+			<div id="subVisualWrap" class="sub-type01">
 				<div>
-					<div class="tit-wrap">
+					<div class="breadcrumb">
+						<a href="#" class="home ir">홈</a>
+						<a href="#" class="depth1">금융소비자보호</a>
+						<a href="#" class="depth2">금융소비자보호 체계</a>
+                        <a href="#" class="depth3">민원처리프로세스</a>
+					</div>
+
+					<!-- <div class="tit-wrap">
 						<div class="sub-tit">
-							<h2>민원처리프로세스</h2>
-							<p class="desc">금융소비자를 보호하기 위한 원칙과 자세 및 의무 규정</p>
+							<h2>금융소비자보호 체계</h2>
+							<p class="desc">금융소비자보호 헌장 및 행동강령</p>
+						</div>
+					</div> -->
+
+					<div class="prod-main-tit">
+						<div class="sub-tit">
+							<h2>금융소비자보호</h2>
+						</div>
+						<div class="prod-select">
+							<a href="../portal/protection_info.html" class="on" title="링크이동">금융소자보호체계</a>
+							<a href="../portal/online_const.html" title="링크이동">민원센터</a>
+							<a href="../portal/civil_apply_exam.html" title="링크이동">금융소비자보호우수사례</a>
+							<a href="../portal/illegal_contract_cancel.html" title="링크이동">금융소비자권리</a>
+							<a href="../portal/disclosure_civil_complaints.html" title="링크이동">금융소비자보호공시</a>
+							<a href="../portal/collection_bonds_guide.html" title="링크이동">채권추심업무</a>
+							<a href="../portal/fraud_notice.html" title="링크이동">유용한소비자정보</a>
+							<a href="../portal/aptness_confirm.html" title="링크이동">적합성·적정성 조회</a>
 						</div>
 					</div>
+
 				</div>
 			</div>
 			<!--e:기획현행화-->
@@ -115,9 +129,19 @@
 			<!-- s:contents -->
 			<div class="contents default-wrap">
 				<div class="complaint-wrap">
-					
+					<div class="tab-wrap">
+						<ul>
+                            <li><a href="../portal/protection_info.html">금융소비자보호 헌장</a></li>
+							<li><a href="../portal/protection_system.html">금융소비자보호조직도</a></li>
+                            <li><a href="../portal/sales_rule.html">상품판매 준칙</a></li>
+                            <li><a href="../portal/dev_rule.html">상품개발 준칙</a></li>
+                            <li class="active"><a href="../portal/operation_status.html">민원처리프로세스</a></li>
+						</ul>
+					</div>
 					<div class="status-cts">
-						<div class="list-tit">비대면 계좌개설 절차</div>
+						<!-- s:디자인현행화 -->
+						<div class="list-tit">민원처리흐름도</div>
+						<!-- e:디자인현행화 -->
 						<div class="cts-img">
 							<img src="../../../resources/images/page/img_oper-progress.png" alt="민원처리흐름도 - 자세한 설명은 아래 내용 참고" />
 							<ol class="blind">
@@ -134,9 +158,18 @@
 
 
 						<div class="table-wrap">
+								<!-- s: 20180725 pm - list-tit 클래스를 가진 p태그 추가 -->
 								<p class="list-tit">민원접수 채널</p>
+								<!-- //e: 20180725 pm - list-tit 클래스를 가진 p태그 추가 -->
+								<!-- s: 20180725 pm - 테이블 클래스 삭제, mt30클래스 추가 -->
+								<!-- s:기획현행화 -->
 								<table class="table-style">
+								<!-- e:기획현행화 -->
+								<!-- //e: 20180725 pm - 테이블 클래스 삭제, mt30클래스 추가 -->
+								<!-- s: 20180725 pm - 캡션 클래스 삭제 -->
 								<caption>민원접수 채널 - 분류, 안내로 구성</caption>
+								<!-- //e:20180725 pm - 캡션 클래스 삭제 -->
+								
 								<colgroup>
 									<col style="width:30%">
 									<col style="width:*">
@@ -147,29 +180,31 @@
 										<th scope="col">안내</th>
 									</tr>
 								</thead>
-								<tbody>
+								<tbo.btn-popupdy>
 									<tr>
 										<th class="ta-c">전화 민원접수</td>
-										<td>대표번호 1877-7788 / 접수가능시간(평일 09:00 ~ 18:00)(토, 일, 공휴일 휴무)</td>
+										<td>대표번호 1877-9900 / 접수가능시간(평일 09:00 ~ 18:00)(토, 일, 공휴일 휴무)</td>
 									</tr>
 									<tr>
 										<th class="ta-c">인터넷 민원접수</td>
-										<td>예가람저축은행 홈페이지 고객센터 전자민원 접수<button type="button" name="button" class="btn-popup tiny ml10"  onclick="javascript:PageFunc.addButtonEvent();">바로가기</button></td>
+										<td>고려저축은행 홈페이지 고객센터 전자민원접수 <button type="button" name="button" class="btn-popup tiny ml10"  onclick="javascript:PageFunc.addButtonEvent();">바로가기</button></td><!--D:2023-07-12: 바로가기 버튼 디자인 수정-->
 									</tr>
 									<tr>
 										<th class="ta-c">우편(또는 지점방문) 민원접수</td>
-										<td>(04526) 서울특별시 중구 세종대로 50 흥국생명빌딩 3층 준법감시팀 민원담당자</td>
+										<!--s:기획현행화-->
+										<td>부산시 동구 중앙대로 244, 흥국생명빌딩 부산사옥 5F 고려저축은행 준법지원팀 민원담당자</td>
+										<!--e:기획현행화-->
 									</tr>
 								</tbody>
 							</table>
 						</div>
 					</div>
 				</div>
-                <!--D: 추가-->
+				<!--s:기획현행화-->
 				<div class="default-wrap02 ">
-					<p>담당부서 : 준법감시팀 / 담당자 : 최윤정 / 전화번호 : 02-6906-7065</p>
+					<p>담당부서 : 준법지원팀 | 담당자 : 손영지 | 전화번호 : 051-640-9086</p>
 				</div>
-                <!--D: 추가//-->
+				<!--s:기획현행화-->
 			</div>
 
 			<!-- //e:contents -->

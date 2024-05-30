@@ -282,7 +282,8 @@
 .ratecut-info-wrap + .ratecut-info-wrap { margin-top: 60px; }
 
 /* e:디자인현행화 */
-.default-wrap02 { display:inline-block; width:100%; margin:20px auto 0; /*padding: 5px 0;*/ font-size:16px; font-weight:400; line-height:1.6; color:#999999; }
+.default-wrap02 { display:inline-block; width:100%; margin:18px auto 0; /*padding: 5px 0;*/ font-size:16px; font-weight:400; line-height:1.6; color:#999999; }
+.default-wrap02.line { border-top:1px solid #E1E1E1; padding-top:18px; margin-top:30px; }
 .default-wrap02 > .ex-txt { float:left!important; }
 .default-wrap02 p { float:right; }
 
@@ -722,7 +723,7 @@ p + ul.list-wrap01 { margin-top:10px; }
 
 /* 팝업호출버튼 ( 약관자세히보기 및 바로가기버튼 등) */
 .tiny,
-.btn-popup { border-radius:45px;padding:0px 40px;height:45px;line-height:43px;font-size:16px;font-weight:500;border:1px solid #BBBBBB;color:#666666;background:#ffffff;/* float:right; */box-shadow:none;}
+.btn-popup { border-radius:45px;padding:0px 40px;height:45px;line-height:47px;font-size:16px;font-weight:500;border:1px solid #BBBBBB;color:#666666;background:#ffffff;/* float:right; */box-shadow:none;}
 .tiny:hover, 
 .tiny:focus,
 .btn-popup:hover, 
