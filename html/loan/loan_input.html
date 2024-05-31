@@ -88,24 +88,27 @@
         <!-- s contentsWrap -->
         <div id="contentsWrap">
 			
-			<!-- s: 2023-06-08 class 변경 -->
 			<div id="subVisualWrap" class="sub-type03">
-			<!-- e: 2023-06-08 class 변경 -->
+
+				<!--D: 전체 구조 변경 -->
+				<div id="breadcrumb" class="breadcrumb-renewal">
+					<script>
+						$(document).ready(function(){
+							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
+						});
+					</script>
+				</div>
 
 				<div>
-					<div class="breadcrumb">
+					<!-- <div class="breadcrumb">
 						<a href="#" class="home ir">홈</a>
-						<!--s:기획현행화-->
 						<a href="#" class="depth1">대출</a>
 						<a href="#" class="depth2">온라인바로대출</a>
-						<!--e:기획현행화-->
-					</div>
+					</div> -->
 					<div class="tit-wrap">
 						<div class="sub-tit">
-							<!--s:기획현행화-->
 							<h2>온라인바로대출</h2>
-							<!--e:기획현행화-->
-							<p class="desc">고려저축은행의 대출신청 프로세스입니다.</p>
+							<p class="desc">예가람저축은행의 대출신청 프로세스입니다.</p>
 						</div>
 					</div>
 				</div>
@@ -124,7 +127,6 @@
                         <form id="frm1" name="frm1" >
                         <div class="input-wrap">
                             <div class="grid-wrap">
-								<!-- s:디자인현행화 -->
                                 <div class="grid2">
                                     <div class="form-wrap" id="prod_form">
                                         <label for="loan_prod" class="inp-tit req">대출상품</label><!-- 필수 입력항목 class명 "req" 적용 -->
@@ -140,8 +142,8 @@
                                             </select>
                                         </div>
                                     </div>
-                                    
                                 </div>
+
 								<div class="grid2">
 									<div class="form-wrap" id="hp_form">
                                         <label for="phone" class="inp-tit req">핸드폰번호</label>
@@ -163,8 +165,8 @@
                                             <input type="hidden" id="phone_hidden" name="PHONE_NO"/>
                                         </div>
                                     </div>
-									<!--s:기획현행화-->
-									<!--<div class="form-wrap">
+
+									<div class="form-wrap">
 										<label for="niceAuthNum" class="inp-tit req">인증번호</label>
 										<div class="nice-auth-num-area">
 											<input type="hidden" id="niceAuthNumIntervalId" value="">
@@ -173,11 +175,10 @@
 											<button type="button" class="btn-normal form btn-nice-auth-num" id="reSendBtn" style="display:none">재요청</button>
 											<button type="button" class="btn-normal form btn-nice-auth-num" id="confirmBtn">확인</button>
 										</div>
-									</div>-->
-									<!--e:기획현행화-->
+									</div>
 								</div>
-								<!-- e:디자인현행화-->
-                                <div class="grid2">
+
+								<div class="grid2">
                                     <div class="form-wrap" id="cust_name_form">
                                         <label for="name" class="inp-tit req">성명</label>
                                         <input type="text" name="CUST_NM" value=""  id="name" placeholder="고객실명 입력" option="onlyKr" style="ime-mode:active"  title="성명 입력" maxlength="10">
@@ -229,7 +230,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="grid2">
+								<!-- <div class="grid2">
 									<div class="form-wrap" style="display: block;">
 										<label for="job_medical" class="inp-tit req">직장의료보험구분</label>
 										<div class="select-wrap">
@@ -238,8 +239,7 @@
 											</select>
 										</div>
 									</div>
-								</div>
-
+								</div> -->
 							</div>
 							<input type="hidden" name="EMPLOYEE_CD" id="worker_type" value=""/>   
 							<input type="hidden" name="RESIDENCE_OWN_TYPE_CD" id="residence_own_type_cd" value=""/> 
@@ -299,7 +299,7 @@
 
                         <div class="auth-wrap line-box">
                             <p class="tit-txt">대출신청 진행을 위해서는 본인인증이 필요합니다.<br>아래의 인증 방식 중 하나를 선택해 인증을 진행해주세요.
-                            <span id="warnText" style="display:none;color:#DC0082;"><br>"사잇돌2"상품은 SGI서울보증보험의 정책에 따라 아래 두가지 방식을 통한 인증만 유효합니다.</span>
+                            <!-- <span id="warnText" style="display:none;color:#DC0082;"><br>"사잇돌2"상품은 SGI서울보증보험의 정책에 따라 아래 두가지 방식을 통한 인증만 유효합니다.</span> -->
                             </p>
                             <ul class="auth-list">
                                 <li class="auth1">
@@ -320,26 +320,18 @@
                                     	<label for="auth6"><span>금융인증서</span></label>
                                     </span>
                                 </li><br><br>
-								<!--s:기획현행화 (텍스트만수정)-->
-                                <li class="auth3">
+                                <li class="auth7">
                                 	<span class="ctm-radio">
-                                		<input type="radio" name="auth" id="auth3" value="">
-                                    	<label for="auth3"><span>네이버인증</span></label>
-                                    </span>
-                                </li>
-                                <li class="auth4">
-                                	<span class="ctm-radio">
-                                		<input type="radio" name="auth" id="auth4" value="">
-                                    	<label for="auth4"><span>카카오인증</span></label>
+                                		<input type="radio" name="auth" id="auth7" value="">
+                                    	<label for="auth7"><span>아이핀인증</span></label>
                                     </span>
                                 </li>
                                 <li class="auth5">
-                                	<span class="ctm-radio">
-                                		<input type="radio" name="auth" id="auth5" value="">
-                                    	<label for="auth5"><span>토스인증</span></label>
+                                    <span class="ctm-radio">
+                                        <input type="radio" name="auth" id="auth5" value="">
+                                        <label for="auth5"><span>신용카드인증</span></label>
                                     </span>
                                 </li>
-								<!--e:기획현행화 (텍스트만수정)-->
                             </ul>
                         </div>
 
@@ -347,9 +339,7 @@
                         <div class="line-box">
                         	<div class="question-wrap">
 	                        	<div class="required-wrap">
-									<!-- s:2023-07-14 수정 -->
 			                        <span class="box-txt fw-bold">* 대출신청 전에 아래사항을 꼭 체크하세요.</span>
-									<!-- e:2023-07-14 수정 -->
 			                    </div>
 			                    <div class="question-list bor-line-gray">
 			                        <ol>
@@ -425,12 +415,8 @@
 			                            </li>
 			                        </ol>
 			                    </div>
-								<!--s:기획현행화-->
 			                    <div class="cts-box voice-wrap">
-								<!--e:기획현행화-->	
-									<!-- s:2023-07-14 수정 -->
 			                    	<p class="box-info">보이스피싱 피해신고</p>
-									<!-- e:2023-07-14 수정 -->
 									<ul class="boxline-wrap">
 										<li>
 											<p class="box-line"><span>금융감독원 콜센터</span><strong>1332</strong></p>
@@ -439,22 +425,16 @@
 											<p class="box-line"><span>경찰청</span><strong>112</strong></p>
 										</li>
 									</ul>
-									<p class="box-txt">위의 항목 중 단 하나라도 해당이 된다면 금융사기(보이스피싱)가 의심됩니다.<br>금융사기 예방을 위해 주변 지인에게 금융사기(보이스피싱) 여부를 확인받거나<br>당행 대표번호(1877-9900)로 연락하여 직원에게 상담을 요청하거나</p>
-									<!-- s:2023-07-14 수정 -->
+									<p class="box-txt">위의 항목 중 단 하나라도 해당이 된다면 금융사기(보이스피싱)가 의심됩니다.<br>금융사기 예방을 위해 주변 지인에게 금융사기(보이스피싱) 여부를 확인받거나<br>당행 대표번호(1877-7788)로 연락하여 직원에게 상담을 요청하거나</p>
 									<div class="sign-area cts-txt-big">
 										<p class="fw-bold">위 연락처로 문의주세요.</p>
 									</div>
-									<!-- e:2023-07-14 수정 -->
 			                    </div>
 			                    <div class="sign-area cts-txt-big">
-									<!-- s: 2023-07-14 수정 -->
 			                        <p class="fc-black">상기 보이스피싱 예방 문진 내용을 읽어보고 해당사항이 있는지 여부를 직접 입력하였음을 확인합니다.</p>
 									<p class="sign-input">
-										<!--s:기획현행화-->
 										<span class="date fc-black">2023년 5월 2일</span>
-										<!--e:기획현행화-->
 									</p>
-									<!-- s: 2023-07-14 수정 -->
 			                    </div>
 	                        </div>
                         </div>
@@ -463,9 +443,7 @@
                         	<div>
                         		<p class="tit-txt">적합성·적정성원칙 확인서</p>
                         	</div>
-							<!-- s:2023-07-16 수정 -->
                         	<div class="cust_terms_contents">
-							<!-- e:2023-07-16 수정 -->
                        			<script>
 								$(document).ready(function(){
 									$(".agr-terms > .cust_terms_contents").load("inc_terms.html");
@@ -478,9 +456,7 @@
                         	<div>
                         		<p class="tit-txt">고객거래확인</p>
                         	</div>
-							<!-- s:2023-07-16 수정 -->
                         	<div class="cust_terms_contents">
-							<!-- e:2023-07-16 수정 -->
                        			<script>
 								$(document).ready(function(){
 									$("#inc_indv_trn_cnfr_div > .cust_terms_contents").load("inc_indv_trn_cnfr.html");
@@ -488,13 +464,143 @@
 								</script>
                         	</div>
                         </div>
+						
+						<!--D: 추가 -->
+						<div class="line-box">
+							<div class="agree-wrap mt0">
+								<p class="tit-txt">중요사항안내</p>
+
+								<div class="agree-box">
+									<div class="items-wrap" id="">
+										<div class="items">
+											<div class="item-check">
+												<div>
+													<span class="ctm-check">
+														<input type="checkbox" name="check" id="" value="">
+														<label for=""><span class="chk_span">[필수] 금융상품 중요사항 안내</span></label>
+													</span>
+
+													<p class="item-tit"><button type="button" name="button" id="" class="btn-normal tiny" data-tooltip="manual011-layer" data="agree-more">자세히보기</button></p>
+												</div>
+											</div>
+
+											<!--D: 중요사항 확인 -->
+											<div class="parentDivMain">
+												<p class="parentText"><span>「금융소비자 보호에 관한 법률」 제 19조 제1항에서 규정하고 있는 중요한 사항</span> 입니다. 모든 내용을 확인하시면 다음 단계로 넘어갈 수 있습니다.</p>
+
+												<div class="parentDiv">
+													<p>중요사항 확인 - 금리 및 변동여부 <span class="DivInSpanTag"> 1/8</span></p>
+												</div>
+												<div class="subDiv subcheck-area guide-means">
+													내용
+
+													<div class="btn-box">
+														<button type="button" name="button" class="btn-normal tiny pink infobtn" data="agree-more">확인</button>
+													</div>
+												</div>
+
+												<div class="parentDiv">
+													<p>중요사항 확인 - 중도상환해약금 <span class="DivInSpanTag"> 2/8</span></p>
+												</div>
+												<div class="subDiv subcheck-area guide-means">
+													내용
+
+													<div class="btn-box">
+														<button type="button" name="button" class="btn-normal tiny pink infobtn" data="agree-more">확인</button>
+													</div>
+												</div>
+
+												<div class="parentDiv">
+													<p>중요사항 확인 - 상환금액ㆍ이자율ㆍ 시기 <span class="DivInSpanTag"> 3/8</span></p>
+												</div>
+												<div class="subDiv subcheck-area guide-means">
+													내용
+
+													<div class="btn-box">
+														<button type="button" name="button" class="btn-normal tiny pink infobtn" data="agree-more">확인</button>
+													</div>
+												</div>
+
+												<div class="parentDiv">
+													<p>중요사항 확인 - 담보물에 관한 사항 <span class="DivInSpanTag"> 4/8</span></p>
+												</div>
+												<div class="subDiv subcheck-area guide-means">
+													내용
+
+													<div class="btn-box">
+														<button type="button" name="button" class="btn-normal tiny pink infobtn" data="agree-more">확인</button>
+													</div>
+												</div>
+
+												<div class="parentDiv">
+													<p>중요사항 확인 - 금융소비자의 부담금액 <span class="DivInSpanTag"> 5/8</span></p>
+												</div>
+												<div class="subDiv subcheck-area guide-means">
+													내용
+
+													<div class="btn-box">
+														<button type="button" name="button" class="btn-normal tiny pink infobtn" data="agree-more">확인</button>
+													</div>
+												</div>
+
+												<div class="parentDiv">
+													<p>중요사항 확인 - 발생 가능한 불이익 <span class="DivInSpanTag"> 6/8</span></p>
+												</div>
+												<div class="subDiv subcheck-area guide-means">
+													내용
+
+													<div class="btn-box">
+														<button type="button" name="button" class="btn-normal tiny pink infobtn" data="agree-more">확인</button>
+													</div>
+												</div>
+
+												<div class="parentDiv">
+													<p>중요사항 확인 - 금융소비자의 권리 <span class="DivInSpanTag"> 7/8</span></p>
+												</div>
+												<div class="subDiv subcheck-area guide-means">
+													내용
+
+													<div class="btn-box">
+														<button type="button" name="button" class="btn-normal tiny pink infobtn" data="agree-more">확인</button>
+													</div>
+												</div>
+
+												<div class="parentDiv bB0">
+													<p>중요사항 확인 - 상품별 유의사항 <span class="DivInSpanTag"> 8/8</span></p>
+												</div>
+												<div class="subDiv subcheck-area guide-means">
+													내용
+
+													<div class="btn-box">
+														<button type="button" name="button" class="btn-normal tiny pink infobtn" data="agree-more">확인</button>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+
+									<div class="items-wrap" id="">
+										<div class="items">
+											<div class="item-check">
+												<div>
+													<span class="ctm-check">
+														<input type="checkbox" name="check" id="" value="">
+														<label for=""><span class="chk_span">[필수] 가계대출상품설명서</span></label>
+													</span>
+
+													<p class="item-tit"><button type="button" name="button" id="" class="btn-normal tiny" data-tooltip="manual011-layer" data="agree-more">자세히보기</button></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 
 						<div class="line-box">
-							<!-- s 디자인현행화 -->
 							<div class="agree-wrap mt0">
-							<!-- e:디자인현행화 -->
 								<p class="tit-txt">대출신청을 위한 약관에 동의하시겠습니까?</p>
-								<!-- s:2023-07-14 수정 -->
 								<div class="agree-area bor-line-gray">
 									<div class="agree-cts">
 									 <div class="all-agree">
@@ -505,13 +611,9 @@
 											<button type="button" name="button" id="btnAgreemenAll" class="btn-normal tiny hide" data-tooltip="agreementall-layer">자세히보기</button>
 										</div>
 										<div class="items-wrap">
-											<!-- s:기획현행화 -->
 			                            	<div class="mt20 mb20 fc-black">※열람하실 동의서 유형을 선택해 주시기 바랍니다.</div>
-											<!-- e:기획현행화-->
 											<span class="radio-area">
-												<!-- s:디자인현행화 -->
 												<label for="agr_dtl_yn_1" class="radio r-on mr10"><input type="radio" name="agr_dtl_yn" id="agr_dtl_yn_1" value="N" checked="checked">요약동의서</label>
-												<!-- e: 디자인현행화 -->
 												<label for="agr_dtl_yn_2" class="radio"><input type="radio" name="agr_dtl_yn" id="agr_dtl_yn_2" value="Y">상세동의서</label>
 											</span>
 										</div>
@@ -522,18 +624,10 @@
 														<div>
 															<span class="ctm-check">
 																<input type="checkbox" name="check" id="agree1" value="">
-																<!--s:디자인현행화-->
-																<label for="agree1"><span class="chk_span">[필수] 개인(신용)정보 조회 동의서</span></label>
-																<!--e:디자인현행화-->
+																<label for="agree1"><span class="chk_span">[필수] 개인(신용)정보 수집·이용·제공·조회 동의서</span></label>
 															</span>
 
-															<!-- s: 디자인현행화 -->
 															<p class="item-tit"><button type="button" name="button" id="btnAgree1" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
-															<!-- e: 디자인현행화 -->
-
-															<!-- s: 2023-06-05 수정 전 -->
-															<!--<p class="item-tit"><label for="agree1"><span class="chk_span"></span></label><button type="button" name="button" id="btnAgree1" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>-->
-															<!-- e: 2023-06-05 수정 전 -->
 														</div>
 													</div>
 												</div>
@@ -544,18 +638,10 @@
 														<div>
 															<span class="ctm-check">
 																<input type="checkbox" name="check" id="agree5" value="">
-																<!--s: 디자인현행화-->
-																<label for="agree5"><span class="chk_span">[필수] 개인(신용)정보 수집·이용·제공 동의서(여신 금융 거래)</span></label>
-																<!--e: 디자인현행화-->
+																<label for="agree5"><span class="chk_span">[필수] 개인(신용)정보 수집·이용·제공 동의서(여신 금융거래)</span></label>
 															</span>
 
-															<!--s: 디자인현행화-->
 															<p class="item-tit"><button type="button" name="button" id="btnAgree2" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
-															<!--e: 디자인현행화-->
-
-															<!-- s: 2023-06-05 수정 전 -->
-															<!--<p class="item-tit"><label for="agree5"><span class="chk_span"></span></label><button type="button" name="button" id="btnAgree2" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>-->
-															<!-- e: 2023-06-05 수정 전 -->
 														</div>
 													</div>
 												</div>
@@ -566,17 +652,9 @@
 														<div>
 															<span class="ctm-check">
 																<input type="checkbox" name="check" id="agree9" value="">
-																<!-- s: 디자인현행화 -->
-																<label for="agree9"><span class="chk_span">[필수] 상품설명서(신용대출용)</span></label>
-																<!-- e: 디자인현행화 -->
+																<label for="agree9"><span class="chk_span">[필수] 가계대출상품설명서</span></label>
 															</span>
-															<!-- s: 디자인현행화 -->
 															<p class="item-tit"><button type="button" name="button" id="btnAgree9" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
-															<!-- e: 디자인현행화 -->
-
-															<!-- s: 2023-06-05 수정 전 -->
-															<!-- <p class="item-tit"><label for="agree9"><span class="chk_span"></span></label><span class="chk_span"></span><button type="button" name="button" id="btnAgree9" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p> -->
-															<!-- e: 2023-06-05 수정 전 -->
 														</div>
 													</div>
 												</div>
@@ -605,84 +683,29 @@
 															<p class="check-tit">대학생·청년층확인서 <br>
 															<span class="radio-area">
 																<span class="ctm-radio">
-																	<!--s: 디자인현행화-->
 																	<input type="radio" name="prod_terms_agree5" id="prod_terms_agree5_1" value="Y">
-																	<label for="prod_terms_agree5_1">설명 받았음</label>
+																	<label for="prod_terms_agree5_1">설명 받음</label>
 																</span>
 																<span class="ctm-radio checked">
 																	<input type="radio" name="prod_terms_agree5" id="prod_terms_agree5_2" value="N">
-																	<label for="prod_terms_agree5_2">설명 받지 않았음</label>
-																	<!--e: 디자인현행화-->
+																	<label for="prod_terms_agree5_2">설명 받지 않음</label>
 																</span>
 															</span>
 														</div>
 				                                    </div>
 			                                    </div>
 											</div>
-											<div class="items-wrap" id='manualLayer02'><!--<div class="items-wrap" id='${CODE_T000800005}'>-->
-												<div class="items">
-													<div class="item-check">
-														<div>
-															<span class="ctm-check">
-																<input type="checkbox" name="check" id="agree19" value="">
-																<!--s:디자인현행화-->
-																<label for="agree19"><span class="chk_span">[필수] 상품설명서(리테일대출용)</span></label>
-																<!--e:디자인현행화-->
-															</span>
-
-															<!--s:디자인현행화-->
-															<p class="item-tit"><button type="button" name="button" id="btnAgree19" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
-															<!--e:디자인현행화-->
-
-															<!-- s: 2023-06-05 수정 전 -->
-															<!--<p class="item-tit"><label for="agree19"><span class="chk_span"></span></label><button type="button" name="button" id="btnAgree19" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>-->
-															<!-- e: 2023-06-05 수정 전 -->
-
-														</div>
-													</div>
-												</div>
-												<div class="subcheck-area guide-means add_class_2">
-			                                    	<div class="sub-box">
-			                                    		<div>
-			                                    			<span class="ctm-check checked">
-																<input type="checkbox" name="check" id="prod_terms_agree0" class="prod_terms_agree0" value="" checked disabled="disabled">
-																<label for="prod_terms_agree0">금리인하요구권에 대한 상기의 설명을 확인하였습니다.</label>
-															</span>
-			                                    		</div>
-														<div>	
-															<p class="check-tit">대출거절사유 고지신청서 <br>
-															<span class="radio-area">
-																<span class="ctm-radio">
-																	<input type="radio" name="prod_terms_agree7" id="prod_terms_agree7_1" value="Y">
-																	<label for="prod_terms_agree7_1">신청</label>
-																</span>
-																<span class="ctm-radio checked">
-																	<input type="radio" name="prod_terms_agree7" id="prod_terms_agree7_2" value="N" checked>
-																	<label for="prod_terms_agree7_2">신청하지 않음</label>
-																</span>
-															</span>
-														</div>
-				                                    </div>
-			                                    </div>
-											</div>
+											
 											<div class="items-wrap" id='agreementLayer5'><!--<div class="items-wrap" id='${CODE_T000800006}'>-->
 												<div class="items">
 													<div class="item-check">
 														<div>
 															<span class="ctm-check">
 																<input type="checkbox" name="check" id="agree13" value="" >
-																<!--s:디자인현행화-->
-																<label for="agree13"><span class="chk_span">[필수] 개인(신용)정보 조회동의서(서민금융진흥원)</span></label>
-																<!--e:디자인현행화-->
+																<label for="agree13"><span class="chk_span">[필수] 개인(신용)정보 조회동의서 (서민금융진흥원用)</span></label>
 															</span>
 
-															<!--s:디자인현행화-->
 															<p class="item-tit"><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
-															<!--e:디자인현행화-->
-
-															<!-- s: 2023-06-05 수정 전 -->
-															<!--<p class="item-tit"><label for="agree13"><span class="chk_span"></span></label><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>-->
-															<!-- s: 2023-06-05 수정 전 -->
 														</div>
 													</div>
 												</div>
@@ -693,62 +716,25 @@
 														<div>
 															<span class="ctm-check">
 																<input type="checkbox" name="check" id="agree16" value="">
-																<!--s:디자인현행화-->
-																<label for="agree16"><span class="chk_span">[필수] 개인(신용)정보 수집·이용·제공 동의서(서민금융진흥원)</span></label>
-																<!--e:디자인현행화-->
+																<label for="agree16"><span class="chk_span">[필수] 개인(신용)정보 수집·이용·제공 동의서 (서민금융진흥원用)</span></label>
 															</span>
 
-															<!--s:디자인현행화-->
 															<p class="item-tit"><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
-															<!--e:디자인현행화-->
-
-															<!-- s: 2023-06-05 수정 전 -->
-															<!--<p class="item-tit"><label for="agree16"><span class="chk_span"></span></label><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>-->
-															<!-- e: 2023-06-05 수정 전 -->
 														</div>
 													</div>
 												</div>
 											</div>
-											<div class="items-wrap" id='agreementLayer7'><!--<div class="items-wrap" id='${CODE_T000800008}'>-->
-												<div class="items">
-													<div class="item-check">
-														<div>
-															<span class="ctm-check">
-																<input type="checkbox" name="check" id="agree21" value="" >
-																<!--s:디자인현행화-->
-																<label for="agree21"><span class="chk_span">[필수] 개인(신용)정보 및 기업(신용)정보 조회·수집·이용·제공과 행정·정보공동이용, 전자금융거래확인서 발급을 위한 동의서</span></label>
-																<!--e:디자인현행화-->
-															</span>
-
-															<!--s:디자인현행화-->
-															<p class="item-tit"><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
-															<!--e:디자인현행화-->
-
-															<!-- s: 2023-06-05 수정 전 -->
-															<!--<p class="item-tit"><label for="agree21"><span class="chk_span"></span></label><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>-->
-															<!-- s: 2023-06-05 수정 전 -->
-														</div>
-													</div>
-												</div>
-											</div>
+									
 											<div class="items-wrap" id='agreementLayer8'><!--<div class="items-wrap" id='${CODE_T000800009}'>-->
 												<div class="items">
 													<div class="item-check">
 														<div>
 															<span class="ctm-check">
 																<input type="checkbox" name="check" id="agree24" value="" >
-																<!--s:디자인현행화-->
 																<label for="agree24"><span class="chk_span">[필수] 계약 체결 · 이행 등을 위한 필수 동의서(개인금융성 신용보험용)</span></label>
-																<!--e:디자인현행화-->
 															</span>
 
-															<!--s:디자인현행화-->
 															<p class="item-tit"><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
-															<!--e:디자인현행화-->
-
-															<!-- s: 2023-06-05 수정 전 -->
-															<!--<p class="item-tit"><label for="agree24"><span class="chk_span"></span></label><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>-->
-															<!-- e: 2023-06-05 수정 전 -->
 														</div>
 													</div>
 												</div>
@@ -760,18 +746,10 @@
 														<div>
 															<span class="ctm-check">
 																<input type="checkbox" name="check" id="agree11" value="">
-																<!--s:디자인현행화-->
 																<label for="agree11"><span class="chk_span">[필수] CMS 출금이체 동의</span></label>
-																<!--e:디자인현행화-->
 															</span>
 
-															<!--s:디자인현행화-->
 															<p class="item-tit"><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
-															<!--e:디자인현행화-->
-
-															<!-- s: 2023-06-05 수정 전 -->
-															<!--<p class="item-tit"><label for="agree11"><span class="chk_span"></span></label><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>-->
-															<!-- e: 2023-06-05 수정 전 -->
 														</div>
 													</div>
 												</div>
@@ -790,19 +768,10 @@
 															<div>
 																<span class="ctm-check">
 																	<input type="checkbox" name="check" id="agree6" value="">
-																	<!--s:디자인현행화-->
 																	<label for="agree6"><span class="chk_span">[선택] 개인(신용)정보 수집·이용·제공 동의서(상품서비스 안내)</span></label>
-																	<!--e:디자인현행화-->
 																</span>
 
-																<!--s:디자인현행화-->
 																<p class="item-tit"><button type="button" name="button" id="btnAgree3" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
-																<!--e:디자인현행화-->
-
-																<!-- s: 2023-06-05 수정 전 -->
-																<!--<p class="item-tit"><label for="agree6"><span class="chk_span"></span></label><button type="button" name="button" id="btnAgree3" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>-->
-																<!-- e: 2023-06-05 수정 전 -->
-
 															</div>
 														</div>
 													</div>
@@ -867,26 +836,17 @@
 														</div>
 													</div>
 												</div>
-												<!--S// 20220331 -->
+
 												<div class="items-wrap" id='agreementLayer17'><!-- <div class="items-wrap" id='${CODE_T000800022}'> -->
 													<div class="items">
 														<div class="item-check">
 															<div>
 																<span class="ctm-check">
 																	<input type="checkbox" name="check" id="agree29" value="">
-																	<!--s:디자인현행화-->
-																	<label for="agree29"><span class="chk_span">[선택] 개인(신용)정보 수집·이용·제공 동의서 [맞춤형 상품 제공](요약동의서)</span></label>
-																	<!--e:디자인현행화-->
+																	<label for="agree29"><span class="chk_span">[선택] 개인(신용)정보 수집·이용·제공 동의서(맞춤형 상품 제공)</span></label>
 																</span>
 
-																<!--s:디자인현행화-->
 																<p class="item-tit"><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
-																<!--e:디자인현행화-->
-
-																<!-- s: 2023-06-05 수정 전 -->
-																<!--<p class="item-tit"><label for="agree29"><span class="chk_span"></span></label><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>-->
-																<!-- e: 2023-06-05 수정 전 -->
-
 															</div>
 														</div>
 													</div>
@@ -907,26 +867,17 @@
 														</div>
 													</div>
 												</div>
-												<!--E// 20220331 -->
+
 												<div class="items-wrap" id='agreementLayer16'><!--<div class="items-wrap" id='${CODE_T000800016}'>-->
 													<div class="items">
 														<div class="item-check">
 															<div>
 																<span class="ctm-check">
 																	<input type="checkbox" name="check" id="agree26" value="">
-																	<!--s: 디자인현행화-->
 																	<label for="agree26"><span class="chk_span">[선택] 개인(신용)정보 수집·이용 동의서(보증료 우대 서비스)</span></label>
-																	<!--e: 디자인현행화-->
 																</span>
 																
-																<!--s: 디자인현행화-->
 																<p class="item-tit"><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
-																<!--e: 디자인현행화-->
-
-																<!-- s: 2023-06-05 수정 전 -->
-																<!--<p class="item-tit"><label for="agree26"><span class="chk_span"></span></label><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>-->
-																<!-- e: 2023-06-05 수정 전 -->
-
 															</div>
 														</div>
 													</div>
@@ -957,19 +908,10 @@
 															<div>
 																<span class="ctm-check">
 																	<input type="checkbox" name="check" id="agree27" value="">
-																	<!--s:디자인현행화-->
 																	<label for="agree27"><span class="chk_span">[선택] 개인(신용)정보 수집·이용 동의서(상품서비스 안내 등)</span></label>
-																	<!--e:디자인현행화-->
 																</span>
 
-																<!--s:디자인현행화-->
 																<p class="item-tit"><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
-																<!--e:디자인현행화-->
-
-																<!-- s: 2023-06-05 수정 전 -->
-																<!--<p class="item-tit"><label for="agree27"><span class="chk_span"></span></label><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>-->
-																<!-- e: 2023-06-05 수정 전 -->
-
 															</div>
 														</div>
 													</div>
@@ -996,18 +938,10 @@
 															<div>
 																<span class="ctm-check">
 																	<input type="checkbox" name="check" id="agree50" value="">
-																	<!--s:디자인현행화-->
-																	<label for="agree50"><span class="chk_span">[선택] 개인(신용)정보 수집·이용·제공·조회 동의서 [멤버십 회원가입 동의]</span></label>
-																	<!--e:디자인현행화-->
+																	<label for="agree50"><span class="chk_span">[선택] 예가람저축은행 멤버십서비스 개인(신용)정보 수집·이용 동의</span></label>
 																</span>
 
-																<!--s:디자인현행화-->
 																<p class="item-tit"><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>
-																<!--e:디자인현행화-->
-
-																<!-- s: 2023-06-05 수정 전 -->
-																<!--<p class="item-tit"><label for="agree50"><span class="chk_span"></span></label><button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></p>-->
-																<!-- e: 2023-06-05 수정 전 -->
 															</div>
 														</div>
 													</div>
@@ -1017,7 +951,7 @@
 																<div>
 																	<span class="ctm-check">
 																		<input type="checkbox" name="check" id="agree51" class="agree51" value="">
-																		<label for="agree51">고려저축은행 멤버십 회원 약관&nbsp;&nbsp;<button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></label>
+																		<label for="agree51">예가람저축은행 멤버십 회원 약관&nbsp;&nbsp;<button type="button" name="button" class="btn-normal tiny" data-tooltip="manual011-layer">자세히보기</button></label>
 																	</span><br>
 																</div>
 															</div>
@@ -1032,7 +966,7 @@
 								</div>
 								<div class="btn-wrap">
 									<button type="button" name="button" class="btn-big navy" >대출신청 완료</button>
-									<button type="button" name="button" class="btn-big gray">새로고침</button>
+									<button type="button" name="button" class="btn-big prod-more">새로고침</button>
 								</div>
 								<!-- s:2023-07-14 수정 -->
 							</div>

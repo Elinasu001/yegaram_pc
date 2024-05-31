@@ -89,24 +89,27 @@
         <!-- s contentsWrap -->
 		<div id="contentsWrap">
 			
-			<!-- s: 2023-06-08 class 변경 -->
 			<div id="subVisualWrap" class="sub-type03">
-			<!-- e: 2023-06-08 class 변경 -->
+
+				<!--D: 전체 구조 변경 -->
+				<div id="breadcrumb" class="breadcrumb-renewal">
+					<script>
+						$(document).ready(function(){
+							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
+						});
+					</script>
+				</div>
 
 				<div>
-					<div class="breadcrumb">
+					<!-- <div class="breadcrumb">
 						<a href="#" class="home ir">홈</a>
 						<a href="#" class="depth1">대출상품</a>
-						<!--s:기획현행화-->
 						<a href="#" class="depth2">온라인바로대출</a>
-						<!--e:기획현행화-->
-					</div>
+					</div> -->
 					<div class="tit-wrap">
 						<div class="sub-tit">
-							<!--s:기획현행화-->
 							<h2>온라인바로대출</h2>
-							<!--e:기획현행화-->
-							<p class="desc">고려저축은행의 대출신청 프로세스입니다.</p>
+							<p class="desc">예가람저축은행의 대출신청 프로세스입니다.</p>
 						</div>
 					</div>
 				</div>
@@ -122,27 +125,23 @@
 					</ul>
 					<h3 class="tit">대출신청 완료</h3>
 
-					<!-- s:디자인현행화 -->
 					<div class="cts-box suc-type">
-						<p class="box-info"><span>김고려</span> 고객님의 <span>대출신청</span>이 <span>완료</span> 되었습니다.</p>
+						<p class="box-info"><span>이가람</span> 고객님의 <span>대출신청</span>이 <span>완료</span> 되었습니다.</p>
 						<div class="box-line">
 							<span>대출신청상품</span>
 							<p>햇살론</p>
 						</div>
 					</div>
-					<!-- e:디자인현행화 -->
 
-					<!-- s:디자인현행화 -->
 					<div class="cts-box fail-type">
-						<p class="box-info"><span>김고려</span> 고객님의 대출신청이 정상 처리되지 않았습니다.</p>
+						<p class="box-info"><span>이가람</span> 고객님의 <span>대출신청</span>이 정상 처리되지 않았습니다.</p>
 						<div class="box-txt">
 							<ul class="desc">
-								<li>위 관련된 문의사항은 당행 대표번호 <span class="accent2">대표번호 1877-9900</span>으로 연락부탁드립니다.</li>
-								<li>( 상담가능시간 : 평일 09:00 ~ 18:00 )</li>
+								<li>입력해 주신 연락처로 빠른 시일내에 연락드리겠습니다.</li>
+								<li>자세한 사항은 <span class="accent2">대표번호 1877-7788</span>로 연락부탁드립니다. ( 상담가능시간 09:00~18:00 )</li>
 							</ul>
 						</div>
 					</div>
-					<!-- e:디자인현행화 -->
 
 					<p class="btn-wrap"><button type="button" name="button" class="btn-big navy">메인으로</button></p>
 				</div>
