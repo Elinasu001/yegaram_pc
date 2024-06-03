@@ -93,62 +93,35 @@
         <div id="contentsWrap">
 
             <!-- s:subVisualWrap -->
-            <div id="subVisualWrap" class="sub-type01">
-                <div>
-                    <div class="breadcrumb">
-                        <a href="#none" class="home ir">홈</a>
-                        <a href="#none" class="depth1">금융소비자보호</a>
-                        <a href="#none" class="depth2">민원신청 내역조회/취하센터</a>
-                    </div>
-                    <!-- <div class="tit-wrap">
-                        <div class="sub-tit">
-                            <h2>금융소비자보호</h2>
-                            <p class="desc">고려저축은행의 신청 내역조회/취하 프로세스입니다.</p>
-                        </div>
-                    </div> -->
-                    <div class="prod-main-tit">
-                        <div class="sub-tit">
-                            <h2>금융소비자보호</h2>
-                        </div>
-                        <div class="prod-select">
-                            <a href="../portal/protection_info.html" title="링크이동">금융소자보호체계</a>
-                            <a href="../portal/online_const.html" class="on" title="링크이동">민원센터</a>
-                            <a href="../portal/civil_apply_exam.html" title="링크이동">금융소비자보호우수사례</a>
-                            <a href="../portal/illegal_contract_cancel.html" title="링크이동">금융소비자권리</a>
-                            <a href="../portal/disclosure_civil_complaints.html" title="링크이동">금융소비자보호공시</a>
-                            <a href="../portal/collection_bonds_guide.html" title="링크이동">채권추심업무</a>
-                            <a href="../portal/fraud_notice.html" title="링크이동">유용한소비자정보</a>
-                            <a href="../portal/aptness_confirm.html" title="링크이동">적합성·적정성 조회</a>
-                        </div>
-                    </div>
+            <div id="subVisualWrap" class="sub-type03">
 
-                </div>
+				<!--D: 전체 구조 변경 -->
+				<div id="breadcrumb" class="breadcrumb-renewal">
+					<script>
+						$(document).ready(function(){
+							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
+						});
+					</script>
+				</div>
+
+				<div>
+					<div class="tit-wrap">
+						<div class="sub-tit">
+							<h2>신청 내역조회/취하</h2>
+							<p class="desc">신청내역 조회/취하 프로세스입니다.</p>
+						</div>
+					</div>
+				</div>
 			</div>
             <!-- //e:subVisualWrap -->
 			<!-- s:contents -->
 			<div class="contents default-wrap">
 				<div class="complaint-wrap">
-					<div class="tab-wrap">
-						<ul>
-                            <!--s:디자인현행화-->
-							<li><a href="../portal/online_const.html">온라인상담센터</a></li>
-                            <!--e:디자인현행화-->
-							<li><a href="../portal/customer_opinion.html">고객의견(칭찬/불만)</a></li>
-							<li><a href="../portal/customer_suggestion.html">고객제안</a></li>
-							<li><a href="../portal/civil_apply.html">전자민원신청</a></li>
-							<li class="active"><a href="../portal/civil_apply_list.html">신청 내역조회/취하</a></li>
-                            <li><a href="../portal/affairs_manual.html">민원사무편람</a></li>
-						</ul>
-					</div>
-					<!-- s:디자인현행화 -->
+					
 					<div id="auth-wrap">
-					<!-- e:디자인현행화 -->
-						<!--s:디자인현행화-->
-                        <!--s:기획현행화 .pb40 뗌 20230907-->
 						<form id="frm1" name="frm1" class="" >
-                        <!--e:기획현행화 .pb40 뗌 20230907-->
 							<div class="certificate">
-								<div class="list-tit">전자민원신청 내역조회/취하 본인인증</div>  <!--디자인현행화 text 변경 -->
+								<div class="list-tit">내역조회/취하 본인인증</div><!--D: 텍스트 수정-->
 								<div class="grid-wrap mt10">
 									<div class="grid2">
 										<div class="form-wrap" id="cust_name_form">
@@ -156,7 +129,6 @@
 											<input type="text" name="CUST_NM" value=""  id="name" placeholder="고객실명 입력" option="onlyKr" title="성명 입력" maxlength="10">
 										</div>
 									</div>
-									<!-- s:디자인현행화-->
 									<div class="grid2 mt40">
 										<div class="form-wrap" id="hp_form">
 											<label for="phone" class="inp-tit req">핸드폰번호</label>
@@ -178,25 +150,22 @@
 												<input type="hidden" id="phone_hidden" name="PHONE_NO"/>
 											</div>
 										</div>
-										<!--s:기획현행화-->
-										<!-- <div class="form-wrap">
+										<div class="form-wrap">
 											<label for="niceAuthNum" class="inp-tit req">인증번호</label>
 											<div class="nice-auth-num-area">
 												<input type="hidden" id="niceAuthNumIntervalId" value="">
-												<input type="text" id="niceAuthNum" value="" numberonly="" placeholder="" maxlength="5">
+												<input type="text" id="niceAuthNum" value="" numberonly="" placeholder="인증번호 입력" maxlength="5">
 												<button type="button" class="btn-normal form btn-nice-auth-num" id="sendBtn">인증번호요청</button>
 												<button type="button" class="btn-normal form btn-nice-auth-num" id="reSendBtn" style="display:none">재요청</button>
 												<button type="button" class="btn-normal form btn-nice-auth-num" id="confirmBtn">확인</button>
 											</div>
-										</div> -->
-                                        <!--e:기획현행화-->
-										<!-- e:디자인현행화 -->
+										</div>
 									</div>
 								</div>
 							</div>
 							<input type="hidden" name="AUTH_CD" id="auth_cd" />
 						</form>
-                    <!--디자인현행화:삭제,  <h3 class="tit">전자민원신청 내역조회/취하 본인인증</h3> -->
+
                         <div class="step-auth">
                             <p class="tit-txt">민원신청 내역조회를 위해서는 본인인증이 필요합니다.<br/>아래의 인증 방식 중 하나를 선택해 인증을 진행해주세요.</p>
 							<input type="hidden" name="AUTH_CD" id="auth_cd" />
@@ -207,8 +176,8 @@
 	                                	<label for="auth1"><span>휴대폰인증</span></label>
 	                                </span>
 	                            </li>
-                                <!--s:기획현행화-->
-	                            <!-- <li class="auth3">
+                                <!--D: 추가-->
+	                            <li class="auth7 ">
 	                            	<span class="ctm-radio">
 	                            		<input type="radio" name="auth" id="auth3" value="">
 	                                	<label for="auth3"><span>아이핀인증</span></label>
@@ -219,31 +188,25 @@
 	                            		<input type="radio" name="auth" id="auth5" value="">
 	                                	<label for="auth5"><span>신용카드인증</span></label>
 	                                </span>
-	                            </li> -->
-                                <!--e:기획현행화-->
+	                            </li>
+                                <!--D: 추가//-->
 	                        </ul>
 	                    </div>
+                        <!--D: 추가-->
 						<div class="default-wrap02 ">
-                            <p>담당부서 : 준법지원팀 | 담당자 : 손영지 | 전화번호 : 051-640-9086</p>
+                            <p>담당부서 : 준법감시팀 / 담당자 : 최윤정 / 전화번호 : 02-6906-7065</p>
                         </div>
+                        <!--D: 추가//-->
 	                    <div class="btn-wrap">
                             <button id="inquiryBtn" type="button" name="button" class="btn-big navy">내글보기</button>
                         </div>
-						<!--e:디자인현행화-->
                     </div>
 
-                    <!--s:디자인현행화-->
                     <div id="board-list-wrap">
                         <div class="board-list-wrap mt15">
                             <h3 class="tit">신청내역</h3>
-
-                            <!-- s:디자인현행화, 구조 삭제  
-                            <p class="no-result">신청내역이 없습니다.</p>-->
-                            <!-- e:디자인현행화, 구조 삭제 // -->
-    
-                            <!-- 신청내역이 있을경우 -->
-                            <div class="listDelBtnDiv" style="text-align: right;"> <button id="listDelBtn" type="button" name="button" class="btn-normal tiny">신청내역 삭제</button></div>
-                            
+                            <div class="listDelBtnDiv" style="text-align: right;"><button id="listDelBtn" type="button" name="button" class="btn-normal tiny">신청내역 삭제</button></div>
+                            <!--D: checkbox 추가-->
                             <table class="table-style list type2 all-c" id="examList">
                                 <caption>신청내역 - 리스트</caption>
                                 <colgroup>
@@ -264,12 +227,15 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <!--D: 신청내역이 없을 경우-->
 									<tr>
 										<td colspan="6"><p class="no-result">신청내역이 없습니다.</p></td>
 									</tr>
+                                    <!--D: 신청내역이 없을 경우//-->
+                                    <!--D: 신청내역이 있을 경우-->
                                     <tr>
                                         <td onclick="fn_chkBoxEvt(this)">
-                                             <label for="222" class="check">
+                                            <label for="222" class="check">
                                                 <input type="checkbox" name="222"/>
                                             </label>
                                         </td>
@@ -303,27 +269,30 @@
                                         <td><input type="hidden" id="444" value="H000300001"/></td>
                                         <td></td>
                                     </tr>
+                                    <!--D: 신청내역이 있을 경우//-->
                                 </tbody>
                             </table>
+                            <div class="default-wrap02 ">
+                                <p>담당부서 : 준법감시팀 / 담당자 : 최윤정 / 전화번호 : 02-6906-7065</p>
+                            </div>
                         </div>
-                       <!-- 2023-07-24, 페이지네이션으로 수정  
-					   <p class="btn-wrap"><button type="button" name="button" class="btn-normal more navy" onclick="PageFunc.selectExamListMore();">더보기</button></p> -->
-					   <div id="paging_div" class="pagination-wrap">
-							<div class="pagination">
-								<a class="btn-circle prev nb ir" href="javascript:pageFunc.selectNoticeList(2)">이전</a>
-								<ul>
-									<li>
-										<a href="#" onclick="pageFunc.selectNoticeList(1)" class="btn-circle nb active" title="현재페이지">1</a></li>
-									<li>
-										<a href="#" onclick="pageFunc.selectNoticeList(2)" class="btn-circle nb">2</a></li>
-									<li><a href="#" onclick="pageFunc.selectNoticeList(3)" class="btn-circle nb">3</a></li>
-								</ul>
-								<a class="btn-circle next nb ir" href="javascript:pageFunc.selectNoticeList(2)">다음</a>
-							</div>
-						</div>
+
+                        <!-- <p class="btn-wrap"><button type="button" name="button" class="btn-normal more navy" onclick="PageFunc.selectExamListMore();">더보기</button></p> -->
+                        <div id="paging_div" class="pagination-wrap">
+                            <div class="pagination">
+                                <a class="btn-circle prev nb ir" href="javascript:pageFunc.selectNoticeList(2)">이전</a>
+                                <ul>
+                                    <li>
+                                        <a href="#" onclick="pageFunc.selectNoticeList(1)" class="btn-circle nb active" title="현재페이지">1</a></li>
+                                    <li>
+                                        <a href="#" onclick="pageFunc.selectNoticeList(2)" class="btn-circle nb">2</a></li>
+                                    <li><a href="#" onclick="pageFunc.selectNoticeList(3)" class="btn-circle nb">3</a></li>
+                                </ul>
+                                <a class="btn-circle next nb ir" href="javascript:pageFunc.selectNoticeList(2)">다음</a>
+                            </div>
+                        </div>
 
                     </div>
-                    <!--e:디자인현행화-->
 				</div>
 			</div>
 			<!-- //e:contents -->
