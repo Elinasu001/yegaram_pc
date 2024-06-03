@@ -89,40 +89,24 @@
         <div id="contentsWrap">
         
             <!-- s:subVisualWrap -->
-			<!-- s:디자인현행화 -->
-			<div id="subVisualWrap" class="sub-type01">
-			<!-- e:디자인현행화 -->
-				<div>
-					<div class="breadcrumb">
-						<a href="/" class="home ir">홈</a>
-						<a href="/deposit/submain" class="depth1">고려저축은행소개</a>
-						<!-- <a href="/deposit/register" class="depth2">고려저축은행소개</a>
-						<a href="/deposit/register" class="depth3">조직도</a> -->
-					</div>
-					
-					<!-- s:디자인현행화 -->
-					<!--<div class="tit-wrap">
-							<div class="sub-tit">
-								<h2>고려저축은행소개</h2> 
-								<p class="desc">딴딴해서 믿을 수 있는 고려저축은행</p>
-							</div>
-						</div>-->
+			<div id="subVisualWrap" class="sub-type03">
 
-					<div class="prod-main-tit">
+                <!--D: 전체 구조 변경 -->
+				<div id="breadcrumb" class="breadcrumb-renewal">
+					<script>
+						$(document).ready(function(){
+							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
+						});
+					</script>
+				</div>
+
+				<div>
+                    <div class="tit-wrap">
 						<div class="sub-tit">
-							<h2>고려저축은행소개</h2>
-						</div>
-						<div class="prod-select">
-							<a href="../intro/intro_greetings.html" class="on" title="링크이동">고려저축은행소개</a>
-							<a href="../intro/busi_summary.html" title="링크이동">경영공시</a>
-							<a href="../intro/ethical01.html" title="링크이동">윤리경영</a>
-							<a href="../intro/heungkuk.html" title="링크이동">흥국금융가족</a>
-							<a href="../intro/ci.html" title="링크이동">CI소개</a>
-							<a href="..intro/talent01.html" title="링크이동">인재채용</a>
-							<!-- <a href="..intro/branchHeadOffice.html" title="링크이동">영업점안내</a> -->
+							<h2>조직도</h2>
+							<p class="desc">딴딴해서 믿을 수 있는 예가람저축은행</p>
 						</div>
 					</div>
-					<!-- e:디자인현행화 -->
 				</div>
 			</div>
 			<!-- //e:subVisualWrap -->
@@ -130,89 +114,79 @@
             <!-- s:contents -->
             <div class="contents default-wrap">
                 <div class="introduction-wrap">
-                    <div class="tab-wrap">
-                        <ul>
-                            <li><a href="../intro/intro_greetings.html">대표이사인사말</a></li>
-                            <li><a href="../intro/intro_history.html">연혁</a></li>
-                            <li><a href="../intro/intro_philosophy.html">경영이념</a></li>
-                            <li class="active"><a href="../intro/intro_organization.html">조직도</a></li>
-							<!-- s:디자인현행화 -->
-							<li><a href="../intro/intro_promotion.html">홍보/PR</a></li>
-							<!-- e:디자인현행화 -->
-                        </ul>
-                    </div>
                     <div class="organization-cts">
-                        <div><img src="../../../resources/images/page/img-org.png" alt="고려저축은행 조직도" /></div>
-                    <!--s: 2023-07-13 , 전체적인 구조수정  -->
-                    <div class="blind">
-						<ul>
-                           <li>이사회
-                               <ul>
-								   <li>감사위원회
-									   <ul>
-                                           <li>감사팀</li>
-                                       </ul>
-								   </li>
-                                   <li>임원후보추천위원회</li>
-                                   <li>보수위원회</li>
-                                   <li>위험관리위원회</li>
-                               </ul>
-                           </li>
-                           <li>대표이사
-                               <ul>
-                                   <li>준법감시실(준법감시인)
-                                       <ul>
-                                           <li>준법지원팀</li>
-                                       </ul>
-                                   </li>
-                                   <li>리스크관리실(위험관리책임자)
-                                       <ul>
-                                           <li>리스크관리팀</li>
-                                       </ul>
-                                   </li>
-                               </ul>
-                           </li>
-                           <li>
-                               <ul>
-                               		<li>신용사업본부
-	                                    <ul>
-	                                        <li>개인금융관리팀</li>
-											<li>고객마케팅팀</li>
-	                                        <li>개인금융2팀</li>
-	                                        <li>개인금융1팀</li>
-	                                    </ul>
-                                   </li>
-                                   <li>리테일금융본부
-                                       <ul>
-                                           <li>수신팀</li>
-                                           <li>센텀지점</li>
-                                           <li>중앙지점</li>
-                                           <li>리테일금융팀</li>
-                                       </ul>
-                                   </li>
-                                   <li>기업금융본부
-                                       <ul>
-                                           <li>기업금융2팀</li>
-                                           <li>기업금융1팀</li>
-                                       </ul>
-                                   </li>
-                                   <li>기획관리실
-									    <ul>
-										   <li>IT팀</li>
-										   <li>영업추진팀</li>
-										   <li>GOBANK사업팀</li>
-                                           <li>CSS기획팀</li>
-                                           <li>경영기획팀</li>
-                                       </ul>
-								   </li>
-                                   <li>여신관리팀</li>
-                                   <li>심사팀</li>
-                                   <li>경영기획팀</li>
-                               </ul>
-                           </li>
-                        </ul>
-					</div>
-					 <!-- e: 2023-07-13 , 전체적인 구조수정  //-->
+                        <div><img src="../../../resources/images/page/img-org.png" alt="예가람저축은행 조직도" /></div>
+
+                        <div class="blind">
+                            <ul>
+                                <li>이사회
+                                    <ul>
+                                        <li>임원후보추천위원회</li>
+                                        <li>보수위원회</li>
+                                        <li>위험관리위원회</li>
+                                        <li>감사위원회
+                                            <ul>
+                                                <li>감사팀</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>대표이사
+                                    <ul>
+                                        <li>준법감시실
+                                            <ul>
+                                                <li>준법감시팀</li>
+                                            </ul>
+                                        </li>
+                                        <li>위법관리책임자
+                                            <ul>
+                                                <li>리스크관리팀</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li>개인신용본부
+                                            <ul>
+                                                <li>개인금융관리팀</li>
+                                                <li>개인금융2팀</li>
+                                                <li>개인금융1팀</li>
+                                            </ul>
+                                        </li>
+                                        <li>종합금융본부
+                                            <ul>
+                                                <li>수신팀</li>
+                                                <li>창원지점</li>
+                                                <li>울산지점</li>
+                                                <li>강남지점</li>
+                                                <li>종합2금융팀</li>
+                                                <li>종합1금융팀</li>
+                                            </ul>
+                                        </li>
+                                        <li>기업금융본부
+                                            <ul>
+                                                <li>기업금융2팀</li>
+                                                <li>기업금융1팀</li>
+                                            </ul>
+                                        </li>
+                                        <li>기획관리실
+                                                <ul>
+                                                <li>IT팀</li>
+                                                <li>YESBANK사업팀</li>
+                                                <li>CSS기획팀</li>
+                                                <li>영업기획팀</li>
+                                                <li>경영기획팀</li>
+                                            </ul>
+                                        </li>
+                                        <li>여신관리팀</li>
+                                        <li>심사팀</li>
+                                        <li>인사팀</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
 				</div>
               </div>
           </div>
