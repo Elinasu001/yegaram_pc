@@ -9,7 +9,7 @@
     <meta http-equiv="Content-Script-Type" content="text/javascript">
     <meta http-equiv="Content-Style-Type" content="text/css">
     <meta name="keywords" content="예가람저축은행">
-    <meta name="description" content="딴딴해서 믿을 수 있는 고려저축은행, 예금, 적금, 신용부금, 논스톱 자동대출 등 예금, 대출금융상품 안내">
+    <meta name="description" content="딴딴해서 믿을 수 있는 예가람저축은행, 예금, 적금, 신용부금, 논스톱 자동대출 등 예금, 대출금융상품 안내">
     <meta name="viewport" content="width=device-width">
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -94,60 +94,37 @@
 
             <!-- s:subVisualWrap -->
             <!--s:기획현행화-->
-            <div id="subVisualWrap" class="sub-type01">
+            <div id="subVisualWrap" class="sub-type03">
+
+				<!--D: 전체 구조 변경 -->
+				<div id="breadcrumb" class="breadcrumb-renewal">
+					<script>
+						$(document).ready(function () {
+							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
+						});
+					</script>
+				</div>
+
 				<div>
-					<div class="breadcrumb">
-						<a href="#" class="home ir">홈</a>
-                        <a href="#" class="depth1">금융소비자보호</a>
-                        <a href="#" class="depth2">금융소비자 권리</a>
-                        <a href="#" class="depth3">청약철회권</a>
-					</div>
-					<!-- <div class="tit-wrap">
+					<div class="tit-wrap">
 						<div class="sub-tit">
-							<h2>금융소비자 권리</h2>
-                            <p class="desc">청약철회권 안내 페이지입니다</p>
-                        </div>
-					</div> -->
-
-                    <div class="prod-main-tit">
-						<div class="sub-tit">
-							<h2>금융소비자보호</h2>
-						</div>
-						<div class="prod-select">
-							<a href="../portal/protection_info.html" title="링크이동">금융소자보호체계</a>
-							<a href="../portal/online_const.html" title="링크이동">민원센터</a>
-							<a href="../portal/civil_apply_exam.html" title="링크이동">금융소비자보호우수사례</a>
-							<a href="../portal/illegal_contract_cancel.html" class="on" title="링크이동">금융소비자권리</a>
-							<a href="../portal/disclosure_civil_complaints.html" title="링크이동">금융소비자보호공시</a>
-							<a href="../portal/collection_bonds_guide.html" title="링크이동">채권추심업무</a>
-							<a href="../portal/fraud_notice.html" title="링크이동">유용한소비자정보</a>
-							<a href="../portal/aptness_confirm.html" title="링크이동">적합성·적정성 조회</a>
+							<h2>청약철회권</h2>
+							<p class="desc">청약철회권 안내 페이지입니다.</p>
 						</div>
 					</div>
-
 				</div>
 			</div>
             <!--e:기획현행화-->
             <!-- //e:subVisualWrap -->
             <!-- s:contents -->
             <div class="contents default-wrap">
-                <div class="tab-wrap">
-                    <ul>
-                        <li><a href="../portal/illegal_contract_cancel.html">위법계약 해지권</a></li>
-                        <li class="active"><a href="../portal/withdrawal.html">청약철회권</a></li>
-                        <li><a href="../portal/ratecut_info.html">금리인하요구권</a></li>
-                        <li><a href="../portal/view_data_req.html">자료열람요구권</a></li>
-                    </ul>
-                </div>
+                
                 <div class="withdrawal-wrap">
-					<!-- s:디자인현행화 -->
                     <h3 class="list-tit">청약철회권 안내</h3>
-					<!-- e:디자인현행화 -->
                     <div class="list-tit type2">청약철회권이란?</div>
                     <ul class="define-list">
                         <li>
-                            <!-- <span class="de-tit">내용설명</span> -->
-                            <span class="de-tit">설명</span> <!-- 180706 am 텍스트 수정 -->
+                            <span class="de-tit">설명</span>
                             <div class="de-cts">금융소비자가 대출계약에 대한 숙려기간 동안 불이익 없이 대출계약을 철회할 수 있는 권리를 보장해주는 제도입니다.</div>
                         </li>
                         <li>
@@ -179,24 +156,21 @@
                             </div>
                         </li>
 
-                        <!-- 180706 am 추가 -->
                         <li>
                             <span class="de-tit">접수안내</span>
-                            <div class="de-cts">홈페이지. 앱 또는 전화접수(1877-9900)로 접수 가능합니다.</div>
+                            <!--D: 번호 수정-->
+                            <div class="de-cts">홈페이지. 앱 또는 전화접수(1877-7788)로 접수 가능합니다.</div>
+                            <!--D: 번호 수정//-->
                         </li>
-                        <!-- //180706 am 추가 -->
 
                     </ul>
                     <div class="agree-wrap">
                         <div class="agree-area">
-                            <!--s:기획현행화 (클래스삭제)-->
                             <div class="">
-                            <!--e:기획현행화 (클래스삭제)-->
                                 <div class="agree-box type2" style="margin-top:0px;padding-top:0px;border-top:0px;">
                                     <div class="items-wrap">
                                         <div class="items">
                                             <div class="item-check">
-                                                <!-- s: 기획 현행화 --> 
                                                 <div>
                                                     <span class="ctm-check">
                                                         <input type="checkbox" name="check" id="agree5" value="" title="[필수] 개인(신용)정보 수집·이용 동의서[청약철회용]">
@@ -205,7 +179,6 @@
                                                     <p class="item-tit">
                                                     <button type="button" name="button" id="detailViewBtn" class="btn-normal tiny" data-tooltip="manual011-layer" data="agree-more" value="T001500001.pdf">자세히보기</button></p>
                                                 </div>
-                                                <!-- e: 기획 현행화 //-->
                                                 <div class="sub_agree_5" id="sub_agree_5" style="margin-left: 25px; display: none;">
                                                     <span class="ctm-check checked">
                                                         <input type="checkbox" name="check" id="agree_1" class="agree_1_1" value="" disabled="disabled">
@@ -226,15 +199,17 @@
                             </div>
                         </div>
                     </div>
-                    <!--s:기획현행화-->
+                    <!--D: 텍스트 수정-->
                     <div class="default-wrap02 ">
-                        <p>담당부서 : 준법지원팀 | 담당자 : 손영지 | 전화번호 : 051-640-9086</p>
+                        <p>담당부서 : 준법감시팀 / 담당자 : 최윤정 / 전화번호 : 02-6906-7065</p>
                     </div>
-                    <!--e:기획현행화-->
+                    <!--D: 텍스트 수정 //-->
+                    <!--D: 클래스 추가-->
                     <p class="btn-wrap">
                         <a href="#" class="btn-big navy" id="reqWithdrawal">신청하기</a>
-                        <a href="withdrawal_inquiry.html" class="btn-big" id="reqWithdrawalHis">신청 이력조회</a>
+                        <a href="withdrawal_inquiry.html" class="btn-big prod-more" id="reqWithdrawalHis">신청 이력조회</a>
                     </p>
+                    <!--D: 클래스 추가//-->
                 </div>
             </div>
             <!-- //e:contents -->
