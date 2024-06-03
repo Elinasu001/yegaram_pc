@@ -242,9 +242,39 @@
                             <!-- e:디자인현행화, 구조 삭제 // -->
     
                             <!-- 신청내역이 있을경우 -->
+                            <!--s:기획현행화-->
                             <div class="listDelBtnDiv" style="text-align: right;"> <button id="listDelBtn" type="button" name="button" class="btn-normal tiny">신청내역 삭제</button></div>
-                            
+                            <!--e:기획현행화-->
                             <table class="table-style list type2 all-c" id="examList">
+                                <caption>신청내역 - 리스트</caption>
+                                <colgroup>
+                                    <col style="width:20%;">
+                                    <col style="*">
+                                </colgroup>
+                                <thead>
+                                        <th scope="col">진행상태</th>
+                                        <th scope="col" class="title">제목</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+									<tr>
+										<td colspan="2"><p class="no-result">신청내역이 없습니다.</p></td>
+									</tr>
+                                    <tr>
+                                        <td><strong>접수</strong></td>
+                                        <td class="title"><a href="#none">신청내역이 들어갑니다. 신청내역이 들어갑니다.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>처리중</strong></td>
+                                        <td class="title"><a href="#none">신청내역이 들어갑니다. 신청내역이 들어갑니다.</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>완료</strong></td>
+                                        <td class="title"><a href="#none">신청내역이 들어갑니다. 신청내역이 들어갑니다.</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- <table class="table-style list type2 all-c" id="examList">
                                 <caption>신청내역 - 리스트</caption>
                                 <colgroup>
                                     <col style="width:10%;">
@@ -304,7 +334,7 @@
                                         <td></td>
                                     </tr>
                                 </tbody>
-                            </table>
+                            </table> -->
                         </div>
                        <!-- 2023-07-24, 페이지네이션으로 수정  
 					   <p class="btn-wrap"><button type="button" name="button" class="btn-normal more navy" onclick="PageFunc.selectExamListMore();">더보기</button></p> -->
