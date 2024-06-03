@@ -95,64 +95,47 @@
         <div id="contentsWrap">
 
             <!-- s:subVisualWrap -->
-			<div id="subVisualWrap" class="sub-type01">
+			<div id="subVisualWrap" class="sub-type03">
+
+				<!--D: 전체 구조 변경 -->
+				<div id="breadcrumb" class="breadcrumb-renewal">
+					<script>
+						$(document).ready(function () {
+							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
+						});
+					</script>
+				</div>
+
 				<div>
-					<div class="breadcrumb">
-						<a href="#none" class="home ir">홈</a>
-						<a href="#none" class="depth1">금융소비자보호</a>
-						<a href="#none" class="depth1">금융소비자 권리</a>
-						<a href="#none" class="depth2">금리인하요구권 신청서 작성</a>
-					</div>
-					<!-- <div class="tit-wrap">
+					<div class="tit-wrap">
 						<div class="sub-tit">
-							<h2>금융소비자 권리</h2>
-                            <p class="desc">자료열람요구권 안내 페이지입니다.</p>
-                        </div>
-					</div> -->
-
-					<div class="prod-main-tit">
-						<div class="sub-tit">
-							<h2>금융소비자보호</h2>
-						</div>
-						<div class="prod-select">
-							<a href="../portal/protection_info.html" title="링크이동">금융소자보호체계</a>
-							<a href="../portal/online_const.html" title="링크이동">민원센터</a>
-							<a href="../portal/civil_apply_exam.html" title="링크이동">금융소비자보호우수사례</a>
-							<a href="../portal/illegal_contract_cancel.html" class="on" title="링크이동">금융소비자권리</a>
-							<a href="../portal/disclosure_civil_complaints.html" title="링크이동">금융소비자보호공시</a>
-							<a href="../portal/collection_bonds_guide.html" title="링크이동">채권추심업무</a>
-							<a href="../portal/fraud_notice.html" title="링크이동">유용한소비자정보</a>
-							<a href="../portal/aptness_confirm.html" title="링크이동">적합성·적정성 조회</a>
+							<h2>금리인하요구권</h2>
+							<p class="desc">약정금리 인하를 요구할 수 있는 권리입니다.</p>
 						</div>
 					</div>
-
 				</div>
 			</div>
             <!-- //e:subVisualWrap -->
 
 			<!-- s:contents -->
 			<div class="contents default-wrap">
-				<div class="tab-wrap">
+				<!--D: 삭제 <div class="tab-wrap">
 					<ul>
                         <li><a href="../portal/illegal_contract_cancel.html">위법계약 해지권</a></li>
                         <li><a href="../portal/withdrawal.html">청약철회권</a></li>
                         <li class="active"><a href="../portal/ratecut_info.html">금리인하요구권</a></li>
                         <li><a href="../portal/view_data_req.html">자료열람요구권</a></li>
                     </ul>
-				</div>
+				</div> -->
 				<div class="ratecut-wrap">
-					<!-- 2023-07-17 , . 추가 //-->
 					<ul class="step-wrap">
 						<li class="step01"><span>01.<strong>본인인증</strong></span></li>
 						<li class="step02 active"><span>02.<strong>신청서 작성</strong></span></li>
 						<li class="step03"><span>03.<strong>신청 완료</strong></span></li>
 					</ul>
 					<div class="apply-wrap ratecut-apply">
-						<!-- 180612 추가 -->
 						<h3 class="tit">금리인하요구권 신청서 작성</h3>
-						<!--s:기회현행화 (클래스추가)-->
 						<table class="table-style caption-tit all-c">
-						<!--e:기회현행화 (클래스추가)-->
 							<caption class="list-tit type2">계좌정보 확인</caption>
 							<colgroup>
 								<col style="width:*">
@@ -169,22 +152,18 @@
 								</tr>
 							</thead>
 							<tbody id="setTbody">
-								<!--s:기획현행화 (구조추가)-->
 								<tr>
 									<td>데이터영역</td>
 									<td>데이터영역</td>
 									<td>데이터영역</td>
 									<td>데이터영역</td>
 								</tr>
-								<!--s:기획현행화 (구조추가)-->
 							</tbody>
 						</table>
-						<!-- //180612 추가 -->
 						<div class="required-wrap">
-							<div class="list-tit">신청인 정보입력</div> <!-- 180612 수정 -->
+							<div class="list-tit">신청인 정보입력</div>
 							<span class="required-txt">* 필수 입력항목 입니다.</span>
 						</div>
-						<!-- 180612 내용수정:성명,생년월일,핸드폰번호영역 삭제 -->
 						<div class="input-wrap">
 						    <form id="callApply" onSubmit="return false;">
 						    	<input type="hidden"  name="rEQ_REASON_CD" value="" id="rEQ_REASON_CD" >
@@ -192,7 +171,6 @@
 								<div class="grid-wrap">
 									<div class="grid2">
 										<div class="form-wrap">
-											<!-- 180615 항목 수정 -->
 											<label for="selectType" class="inp-tit req">직업구분</label>
 											<div class="select-wrap">
 												<select name="" class="" id="selectType"  title="직업구분 선택">
@@ -202,10 +180,8 @@
 													<option value="6">기타</option>
 												</select>
 											</div>
-											<!-- //180615 항목 수정 -->
 										</div>
 									</div>
-									<!-- 180622 pm 주소영역 원복 -->
 									<div class="grid2 address-area">
 										<div class="form-wrap">
 											<label for="addr_cd" class="inp-tit req">주소</label>
@@ -223,18 +199,15 @@
 											<input type="text" name="ADDR_DETAIL" value="" id="addr2" readonly placeholder="상세주소를 직접 입력하세요" title="주소 - 상세주소">
 										</div>
 									</div>
-									<!-- 180622 pm 주소영역 원복 -->
 								</div>
 							</form>
 						</div>
-						<!-- //180612 내용수정:성명,생년월일,핸드폰번호영역 삭제 -->
 						<div class="line-box">
 							<div class="required-wrap">
 								<p class="list-tit">신청사유</p>
 								<span class="required-txt">* 해당항목에 체크 바랍니다.</span>
 							</div>
 							<ul class="reason-area reason-list">
-								<!-- 180614 항목내용 수정 -->
 								<li>
 									<span class="ctm-radio">
 										<input type="radio" name="reason" id="individual1" value="">
@@ -265,8 +238,6 @@
 										<label for="individual5">신용등급이 향상된 경우</label>
 									</span>
 								</li>
-								<!-- //180614 항목내용 수정 -->
-								<!-- 180612 기타항목 삭제 -->
 							</ul>
 							<p class="rice">상기 요건에 부합되지 않을 경우 금리인하가 되지 않을 수 있으며, 신청결과에 대하여 접수일로부터 10영업일 이내에 유선 또는 문자로 안내드립니다.</p>
 						</div>
@@ -275,7 +246,6 @@
 						<div class="" id="scrapDiv">
 							<div class="line-box">
 								<div class="list-tit">증빙서류 제출</div>
-								<!--s:기획현행화 (구조변경)-->
 								<div class="txt-box">
 									<p>온라인 서류제출시스템을 통해 건강보험납부확인 및 은행거래내역등의 소득 증빙 관련 내역을 조회 하실 수 있습니다.</p>
 									<p>증빙서류 제출을 위해서는 공동인증서 인증이 반드시 필요합니다.</p>
@@ -284,11 +254,8 @@
 										(온라인 신청 후 상담원을 통한 서류 징구도 가능합니다.)
 									</p>
 								</div>
-								<!--e:기획현행화 (구조변경)-->
 								<div class="cts-box">
-									<!-- s: 디자인 현행화 -->
 									<p class="tit-txt">소득정보 자동화 조회 목록</p>
-									<!-- e: 디자인 현행화 -->
 
 									<div class="form-wrap evi-list">
 										<span class="ctm-check checked">
@@ -312,9 +279,7 @@
 											<label for="evi-list5">은행-입출금거래내역</label>
 										</span>
 									</div>
-									<!-- //180620 pm 추가 -->
 
-									<!-- //180614 구조 변경 -->
 									<div class="proc">
 										<p>증빙서류 제출을 진행하시겠습니까?</p>
 										<span class="ctm-radio">
@@ -327,7 +292,6 @@
 										</span>
 									</div>
 								</div>
-								<!-- s:기획현행화-->
 								<div class="agree-txt">
 									<span class="ctm-check">
 										<input type="checkbox" name="check" id="check1" checked value="" title="[필수] 소득 및 재직서류 제출 자동화(스크래핑)서비스 이용 동의 약관보기">
@@ -335,14 +299,12 @@
 										<button type="button" name="button" id="detailViewBtn" class="btn-normal tiny" data-tooltip="manual011-layer" value="T000900001.pdf">자세히보기</button>
 									</span>
 								</div>
-								<!-- e:기획현행화-->
 							</div>
 							<div class="line-box account-inp">
 								<div id="juminNoInput">
 									<form name="juminFrm" id="juminFrm">
-										<div class="list-tit">주민등록번호 입력</div> <!-- 180621 am 텍스트 수정 -->
-										<!-- <p class="rice">이름과 주민등록번호를 입력하고 소득정보 자동 조회를 위해 공동인증서명을 해주세요.</p> -->  <!-- 180621 am 텍스트 삭제 -->
-										<p class="rice">당 저축은행은 신용정보의 이용 및 보호에 관한 법률 시행령 제 37조의2에 의거하여 주민등록번호를 수집합니다.</p>
+										<div class="list-tit">주민등록번호 입력</div>
+										
 										<div class="grid-wrap">
 											<div class="grid2">
 												<div class="form-wrap">
@@ -354,7 +316,11 @@
 													</div>
 												</div>
 											</div>
+											<!--D: 구조 이동-->
+											<p class="rice">당 저축은행은 신용정보의 이용 및 보호에 관한 법률 시행령 제 37조의2에 의거하여 주민등록번호를 수집합니다.</p>
+											<!--D: 구조 이동//-->
 										</div>
+										
 									</form>
 								</div>
 								<div id="accountInput">
@@ -364,25 +330,20 @@
 									</p>
 									<div class="grid-wrap">
 										<div class="grid2">
-											<div class="form-wrap form-banknum"> <!-- 180618 pm class명 'form-banknum' 추가 -->
+											<div class="form-wrap form-banknum">
 												<label for="getBank" class="inp-tit req">은행명</label>
-												<!-- 180618 pm 수정 -->
 												<input type="text" name="" value="" id="getBank"  placeholder="은행명을 선택하세요" readOnly onclick='PageFunc.openBankPopup();' title="은행명 입력">
 												<a href="#" class="btn-normal form no-fl" id="openPopBankList" onclick='PageFunc.openBankPopup();return false;' title="은행선택팝업">은행 선택</a>
-												<!-- //180618 pm 수정 -->
 											</div>
-											<!-- 180614 계좌인증버튼 추가 -->
-											<div class="form-wrap form-banknum">  <!-- 180621 am class='form-banknum' 삭제 -->
+											<div class="form-wrap form-banknum">
 												<label for="account-num" class="inp-tit req">계좌번호</label>
 												<input type="text" name="" value="" id="account-num" placeholder="(-) 없이 숫자만 입력해 주세요"  title="계좌번호 입력">
 												<a href="javascript:PageFunc.chkBankAcctNo();" id="a_bank_acct" class="btn-normal form no-fl">계좌인증</a>
 											</div>
-											<!-- //180614 계좌인증버튼 추가 -->
 										</div>
 									</div>
 								</div>
 								<div id="buziNoInput">
-									<!-- 180615 항목추가 -->
 									<div class="list-tit">사업자등록번호 입력</div>
 									<div class="grid-wrap">
 										<div class="grid2">
@@ -392,7 +353,6 @@
 											</div>
 										</div>
 									</div>
-									<!-- //180615 항목추가 -->
 								</div>
 							</div>
 						</div>
