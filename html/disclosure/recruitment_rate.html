@@ -90,16 +90,26 @@
         	
             <!-- s:subVisualWrap -->
 			<div id="subVisualWrap" class="sub-type03">
+
+				<!--D: 전체 구조 변경 -->
+				<div id="breadcrumb" class="breadcrumb-renewal">
+					<script>
+						$(document).ready(function(){
+							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
+						});
+					</script>
+				</div>
+
 				<div>
-					<div class="breadcrumb">
+					<!-- <div class="breadcrumb">
 						<a href="#" class="home ir">홈</a>
 						<a href="#" class="depth1">금융상품공시실</a>
 						<a href="#" class="depth2">모집인수수료율</a>
-					</div>
+					</div> -->
 					<div class="tit-wrap">
 						<div class="sub-tit">
 							<h2>모집인수수료율</h2>
-							<p class="desc">고려저축은행의 모집인수수료율 안내입니다.</p>
+							<p class="desc">예가람저축은행의 모집인수수료율 안내입니다.</p>
 						</div>
 					</div>
 				</div>
@@ -111,118 +121,179 @@
                 <div class="disclosure-wrap">
                     <h3 class="tit">모집인수수료율 안내</h3>
 					<p class="ex-txt">※ 실제 지급되는 대출모집인 수수료는 저축은행에서 정한 별도의 기준에 따라 아래 수수료율 보다 더 낮게 지급될 수 있습니다.</p>
-                    <!-- s: 2023-07-13 , DB 테이블 td -> th 변경 구조 참고 -->
+
 					<table class="table-style caption-tit mt30">
                         <caption>모집인수수료율</caption>
                         <colgroup>
-							<col style="width:14%;">
-							<col style="width:20%;">
-							<col style="width:20%;">
+							<col style="width:15%;">
+							<col style="width:15%;">
+							<col style="width:13%;">
                             <col style="width:*;">
+                            <col style="width:10%;">
                         </colgroup>
                         <thead>
                             <tr>
-                                <th scope="col" colspan="2">상품구분</th>
-                                <th scope="col">대출금액(건별)</th>
-								<!--s:기획현행화-->
-                                <th scope="col">대출모집수수료율</th>
-								<!--e:기획현행화-->
+                                <th scope="col">상품구분</th>
+                                <th scope="col">구분</th>
+                                <th scope="col">내용</th>
+                                <th scope="col">수수료 지급 기준</th>
+                                <th scope="col">비고</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="col" rowspan="3">신용대출</td>
-                                <td>모집법인</td>
-                                <td>500만원 이하</td>
-                                <td>대출금액의 3%</td>
+                                <th scope="col" rowspan="2">신용대출 &<br />사잇돌2</th>
+                                <td class="ta-c" rowspan="2">모집법인</td>
+                                <td class="ta-c" rowspan="2">기본수수료</td>
+                                <td>대출금액 500만원 이하 : 3%</td>
+								<td class="ta-c" rowspan="31">부가세<br />별도<br />(닥터론<br />제외)</td>
                             </tr>
 							<tr>
-                                <td>모집법인</td>
-                                <td>500만원 초과</td>
-                                <td>500만원을 초과하는 대출금액의 2.25% + 15만원</td>
+								<td>대출금액 500만원 초과 : 500만원을 초과하는 대출금액의 2.25% + 15만원</td>
                             </tr>
 							<tr>
-                                <td>혁신금융사업자</td>
-                                <td>대출금액기준</td>
-                                <td>
-									<p class="dot">핀다 : 대출금액의 2.0% 이내(대출실행금리별 차등적용)</p>
-									<p class="dot">깃플 : 대출금액의 1.8% 이내(대출실행금리별 차등적용)</p>
-									<p class="dot">핀마트 : 대출금액의 1.9% 이내</p>
-									<p class="dot">카카오페이 : 대출금액의 1.7% 이내</p>
-									<p class="dot">SK 플래닛 : 대출금액의 1.7% 이내</p>
-									<p class="dot">팀윙크 : 대출금액의 1.7% 이내</p>
-									<p class="dot">뱅크샐러드 : 대출금액의 2.0% 이내</p>
-									<p class="dot">토스 : 대출금액의 1.7% 이내</p>
-									<p class="dot">핀크 : 대출금액의 2.0% 이내</p>
-									<p class="dot">키움 : 대출금액의 1.7% 이내</p>
-									<p class="dot">뱅크몰 : 대출금액의 1.7% 이내</p>
-									<p class="dot">피플펀드 : 대출금액의 1.8% 이내</p>
-									<p class="dot">네이버파이낸셜 : 대출금액의 2.0% 이내(대출실행금리별 차등적용)</p>
-									<p class="dot">현대캐피탈 : 대출금액의 1.7% 이내(대출실행금리별 차등적용)</p>
-									<!--s:기획현행화 (추가)-->
-									<p class="dot">에이피더핀 : 대출금액의 1.7% 이내</p>
-									<!--e:기획현행화 (추가)-->
-									<p class="mt20">[대환대출]</p>
-									<p class="dot">네이버파이낸셜 : 대출금액의 0.8% 이내</p>
-									<p class="dot">토스 : 대출금액의 1.0% 이내</p>
-									<p class="dot">카카오페이 : 대출금액의 1.0% 이내</p>
-									<!--s:기획현행화 (추가)-->
-									<p class="dot">핀다 : 대출금액의 1.3% 이내</p>
-									<!--e:기획현행화 (추가)-->
-								</td>
-                            </tr>
-
-							<tr>
-                                <th scope="col" rowspan="3">보증부대출<br />(햇살론)</td>
-                                <td rowspan="2">모집법인</td>
-                                <td rowspan="3">대출금액기준</td>
-                                <td>대출금액의 1.5%</td>
+                                <th scope="col" rowspan="2">햇살론2</th>
+                                <td class="ta-c" rowspan="2">모집법인</td>
+                                <td class="ta-c">기본수수료</td>
+                                <td>대출금액의 1.90%</td>
                             </tr>
 							<tr>
-								<td>500만원을 초과하는 대출금액의 2.25%+15만원</td>
+                                <td class="ta-c">인센티브</td>
+								<td>당월 실행한 총 대출금액 30억원 이상 : 0.10%</td>
+                            </tr>
+							<tr>
+                                <th scope="col" rowspan="8">부동산<br />담보대출</th>
+                                <td class="ta-c">개인상담사</td>
+                                <td class="ta-c">기본수수료</td>
+								<td>1.5% 이내</td>
+                            </tr>
+							<tr>
+                                <td class="ta-c" rowspan="7">모집법인</td>
+                                <td class="ta-c">기본수수료</td>
+								<td>1.5% 이내</td>
+                            </tr>
+							<tr>
+                                <td class="ta-c" rowspan="5">인센티브</td>
+								<td>대출금액 10억 초과 : 0.1%</td>
+                            </tr>
+							<tr>
+								<td>대출금액 20억 초과 : 0.2%</td>
 							</tr>
 							<tr>
-                                <td>혁신금융사업자</td>
-                                <td>
-									<p class="dot">핀다 : 대출금액의 1.9% 이내(대출실행금리별 차등적용)</p>
-									<p class="dot">깃플 : 대출금액의 1.0% 이내</p>
-									<p class="dot">핀마트 : 대출금액의 1.4% 이내</p>
-									<p class="dot">SK플래닛 : 대출금액의 1.2% 이내</p>
-									<p class="dot">팀윙크 : 대출금액의 1.2% 이내</p>
-									<p class="dot">뱅크샐러드 : 대출금액의 1.0% 이내</p>
-									<p class="dot">토스 : 대출금액의 1.7% 이내</p>
-									<p class="dot">핀크 : 대출금액의 1.43% 이내</p>
-									<p class="dot">키움 : 대출금액의 1.0% 이내</p>
-									<p class="dot">뱅크몰 : 대출금액의 1.7% 이내</p>
-									<p class="dot">네이버파이낸셜 : 대출금액의 1.9% 이내(대출실행금리별 차등적용)</p>
-									<!--s:기획현행화 (추가)-->
-									<p class="dot">에이피더핀 : 대출금액의 1.0% 이내</p>
-									<!--e:기획현행화 (추가)-->
+								<td>대출금액 30억 초과 : 0.3%</td>
+							</tr>
+							<tr>
+								<td>대출금액 40억 초과 : 0.4%</td>
+							</tr>
+							<tr>
+								<td>대출금액 50억 초과 : 0.5%</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									대출기간이 3년 미만인 대출 건에 대해서는 인센티브 대상 대출채권에서 제외함<br />
+									인센티브율은 월간 대출금액 대비 지급률(정액)이며, 인센티브 대상 대출채권 중<br />
+									실행일 30일 이내 일부 및 조기 상환된 금액은 대상 대출금액에서 공제함
 								</td>
+							</tr>
+
+							<tr>
+                                <th scope="col" rowspan="8">사업자 아파트<br />혼합대출</th>
+                                <td class="ta-c">개인상담사</td>
+                                <td class="ta-c">기본수수료</td>
+								<td>1.5% 이내</td>
+                            </tr>
+							<tr>
+                                <td class="ta-c" rowspan="7">모집법인</td>
+                                <td class="ta-c">기본수수료</td>
+								<td>2.0%</td>
+                            </tr>
+							<tr>
+                                <td class="ta-c" rowspan="5">인센티브</td>
+								<td>대출금액 10억 초과 : 0.2%</td>
+                            </tr>
+							<tr>
+								<td>대출금액 15억 초과 : 0.4%</td>
+							</tr>
+							<tr>
+								<td>대출금액 20억 초과 : 0.6%</td>
+							</tr>
+							<tr>
+								<td>대출금액 25억 초과 : 0.8%</td>
+							</tr>
+							<tr>
+								<td>대출금액 30억 초과 : 1.0%</td>
+							</tr>
+							<tr>
+								<td colspan="2">* 단, 인센티브 포함 지급수수료율은 최대 2.25% 초과 할 수 없음</td>
+							</tr>
+
+							<tr>
+                                <th scope="col" rowspan="2">스크린골프<br />동산담보대출</th>
+                                <td class="ta-c">개인상담사</td>
+                                <td class="ta-c">기본수수료</td>
+								<td>2.25% 이내</td>
+                            </tr>
+							<tr>
+                                <td class="ta-c">모집법인</td>
+                                <td class="ta-c">기본수수료</td>
+								<td>2.25% 이내</td>
                             </tr>
 
 							<tr>
-                                <th scope="col" rowspan="3">담보대출<br />(부동산대출/후순위담보대출)</td>
-                                <td>모집법인</td>
-                                <td rowspan="2">대출금액기준</td>
-                                <td>대출금액의 1.5%</td>
+                                <th scope="col" rowspan="2">The좋은<br />축산물담보대출</th>
+                                <td class="ta-c" rowspan="2">모집법인</td>
+                                <td class="ta-c">기본수수료</td>
+								<td>월말대출평잔 1.5%이내(평잔*1.5%/12)</td>
                             </tr>
 							<tr>
-                                <td>혁신금융사업자</td>
-                                <td>
-									<p class="dot">담비 : 대출금액의 1.0% 이내</p>
-									<p class="dot">뱅크몰 : 대출금액의 1.0% 이내</p>
-									<p class="dot">뱅크샐러드 : 1.0% 이내</p>
-									<!--s:기획현행화 (추가)-->
-									<p class="dot">에이피더핀 : 대출금액의 1.0% 이내</p>
-									<!--e:기획현행화 (추가)-->
-								</td>
+                                <td class="ta-c">인센티브</td>
+								<td>월말대출평잔 30억 초과 : 0.1% / 50억초과 : 0.2% / 100억초과 : 0.3% 가산</td>
                             </tr>
 
+							<tr>
+                                <th scope="col">전세보증금<br />담보대출</th>
+                                <td class="ta-c">모집법인<br />개인상담사</td>
+                                <td class="ta-c">기본수수료</td>
+								<td>1.0% 이내</td>
+                            </tr>
+							<tr>
+                                <th scope="col">부동산 근저당권부<br />담보대출</th>
+                                <td class="ta-c">모집법인<br />개인상담사</td>
+                                <td class="ta-c">기본수수료</td>
+								<td>0.3% 이내</td>
+                            </tr>
+
+							<tr>
+                                <th scope="col" rowspan="4">임대아파트 보증금<br />담보대출</th>
+                                <td class="ta-c" rowspan="4">모집법인<br />개인상담사</td>
+                                <td class="ta-c">기본수수료</td>
+								<td>1.5% 이내</td>
+                            </tr>
+							<tr>
+                                <td class="ta-c" rowspan="3">인센티브</td>
+								<td>10억 초과 : 0.1%</td>
+                            </tr>
+							<tr>
+								<td>20억 초과 : 0.2%</td>
+							</tr>
+							<tr>
+								<td>30억 초과 : 0.3%</td>
+							</tr>
                         </tbody>
                     </table>
-                    <!-- e: 2023-07-13 , DB 테이블 td -> th 변경 구조 참고 -->
-           
+
+					<div class="default-wrap02">
+						<div class="ex-txt-group">
+							<p class="ex-txt">※ 대출모집인 수수료는 저축은행 부담이며 고객님의 대출금리에 영향을 주지 않습니다.</p>
+							<p class="ex-txt">※ 대출모집인 수수료는 대출금리와는 무관하며, 고객이 부담하지 않습니다.</p>
+						</div>
+						<p>[담당부서 : YESBANK 사업팀 / 담당자 : 김명현 / 대표번호 : 1877-7788]</p>
+					</div>
+
+					<div class="prod-date">
+						<span class="date">기준일 : 2024-03-07</span>
+					</div>
+
                 </div>
             </div>
            

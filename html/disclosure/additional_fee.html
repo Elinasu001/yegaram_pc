@@ -87,16 +87,26 @@
 
 			<!-- s:subVisualWrap -->
 			<div id="subVisualWrap" class="sub-type03">
+
+				<!--D: 전체 구조 변경 -->
+				<div id="breadcrumb" class="breadcrumb-renewal">
+					<script>
+						$(document).ready(function(){
+							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
+						});
+					</script>
+				</div>
+
 				<div>
-					<div class="breadcrumb">
+					<!-- <div class="breadcrumb">
 						<a href="#" class="home ir">홈</a>
 						<a href="#" class="depth1">금융상품공시실</a>
 						<a href="#" class="depth2">부대비용</a>
-					</div>
+					</div> -->
 					<div class="tit-wrap">
 						<div class="sub-tit">
 							<h2>부대비용</h2>
-							<p class="desc">고려저축은행의 부대비용 안내입니다.</p>	<!-- s: 2023-07-13 , 문구 수정 -->
+							<p class="desc">예가람저축은행의 부대비용 안내입니다.</p>
 						</div>
 					</div>
 				</div>
@@ -107,404 +117,151 @@
 			<div class="contents default-wrap">
 				<div class="disclosure-wrap">
 					<div class="additional-cts">
-						<h3 class="tit">부대비용 안내</h3>	<!-- s: 2023-07-13 , class mb30 삭제 -->
+						<h3 class="tit">부대비용 안내</h3>
 						<div class="table-wrap">
 							<table class="table-style caption-tit">
-								<caption>예금관련수수료</caption>
+								<caption>예금관련 수수료</caption>
 								<colgroup>
-									<col style="width:33%;">
-									<col style="width:33%;">
-									<col style="width:*;">
+									<col style="width:50%;">
+									<col style="width:50%;">
 								</colgroup>
 								<thead>
 									<tr>
-										<th scope="col">구분</th>
-										<th scope="col">대상항목</th>
-										<th scope="col">정수금액(원)</th>
+										<th scope="col">인터넷뱅킹 이용수수료</th>
+										<th scope="col">텔레뱅킹 이용수수료</th>
 									</tr>
 								</thead>
 								<tbody class="table-center">
 									<tr>
-										<th scope="row" rowspan="2">제증명서발급수수료</th>
-										<td>예금잔액증명서(국문, 영문)<br />주식납입보관증 기타증명서</td>
-										<td>건당 1,000원</td>
+										<td>면제</td>
+										<td>면제</td>
 									</tr>
-									<tr>
-										<td>금융거래 확인서</td>
-										<td>건당 5,000원</td>
-									</tr>
-									<tr>
-										<th scope="row">제사고신고 처리수수료</td>
-										<td>제사고, 변경신고 및 재발행(통장포함)</td>
-										<td>건당 1,000원</td>
-									</tr>
-									<tr>
-										<th scope="row">현금카드 재발급수수료<br />(체크카드 포함)</td>
-										<td>분실‧도난 및 훼손 등의 재발급</td>
-										<td>카드 1매당 1,000원</td>
-									</tr>
-									<tr>
-										<th scope="row">보안카드 재발급수수료</td>
-										<td>분실‧도난 및 훼손 등의 재발급</td>
-										<td>카드 1매당 1,000원</td>
-									</tr>
-									
 								</tbody>
 							</table>
 
 							<table class="table-style caption-tit">
-								<caption>대출관련수수료</caption>
+								<caption>대출관련 수수료</caption>
 								<colgroup>
-									<col style="width:33%;">
-									<col style="width:33%;">
-									<col style="width:*;">
+									<col style="width:50%;">
+									<col style="width:50%;">
 								</colgroup>
 								<thead>
 									<tr>
 										<th scope="col">구분</th>
-										<th scope="col">대상항목</th>
-										<th scope="col">정수금액(원)</th>
+										<th scope="col">기한전 상환수수료</th>
 									</tr>
 								</thead>
 								<tbody class="table-center">
 									<tr>
-										<th scope="row" rowspan="3">제증명서발급수수료</th>
-										<td>부채잔액증명서</td>
-										<td>건당 2,000원</td>
+										<th class="ta-c" scope="row">부동산담보대출</th>
+										<td rowspan="2">2%</td>
 									</tr>
 									<tr>
-										<td>금융거래 확인서</td>
-										<td>건당 5,000원</td>
+										<th class="ta-c" scope="row">경락담보대출</th>
 									</tr>
 									<tr>
-										<td>원격지 잔액증명서</td>
-										<td>건당 5,000원</td>
+										<th class="ta-c" scope="row">전세자금대출</th>
+										<td>잔존기간 : 6개월초과시 1.5%, 6개월이하시 1.0%, 1개월이내시 면제</td>
 									</tr>
 									<tr>
-										<th scope="row" rowspan="2">담보조사</td>
-										<td>담보물추정시가 조사</td>
-										<td rowspan="2">당행부담</td>
+										<th class="ta-c" scope="row">신용대출</th>
+										<td>2년이내 최대 2%</td>
 									</tr>
 									<tr>
-										<td>외부 감정기관 의뢰서</td>
+										<th class="ta-c" scope="row">스크린골프동산담보대출</th>
+										<td>2%</td>
 									</tr>
 									<tr>
-										<th scope="row">신용조사</td>
-										<td>외부 감정기관 의뢰서</td>
-										<td>당행부담</td>
+										<th class="ta-c" scope="row">공공임대보증금담보대출</th>
+										<td>2%</td>
 									</tr>
 									<tr>
-										<th scope="row">임대차조사수수료</td>
-										<td>대출취급시</td>
-										<td>당행부담</td>
+										<th class="ta-c" scope="row">자산유동화대출(ABL)</th>
+										<td>2%이내</td>
 									</tr>
 									<tr>
-										<th scope="row">은행조회서</td>
-										<td>은행조회서</td>
-										<td>5,000원</td>
+										<th class="ta-c" scope="row">닥터론</th>
+										<td>2%  * 대출거래기간이 36개월 초과시 대출기한전 상환수수료 면제</td>
 									</tr>
 									<tr>
-										<th scope="row">대출기한전 상환수수료</td>
-										<td>대출금기한전 상환시</td>
-										<td>별도로 정함</td>
+										<th class="ta-c" scope="row">부동산PF대출</th>
+										<td>대출 취급 조건에 따라 결정</td>
 									</tr>
 									<tr>
-										<th scope="row">보증서발급수수료</td>
-										<td>보증서 발급</td>
+										<th class="ta-c" scope="row">중도금대출</th>
+										<td>2%</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<table class="table-style caption-tit">
+								<caption>기타</caption>
+								<colgroup>
+									<col style="width:17%">
+									<col style="width:33%">
+									<col style="width:*">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">구분</th>
+										<th scope="col">금액</th>
+										<th scope="col">인지세(고객부담금액)</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th class="ta-c" scope="row" rowspan="4">채무자</th>
+										<td>5천만원 이하</td>
+										<td>비과세</td>
+									</tr>
+									<tr>
+										<td>5천만원 초과 ~ 1억이하</td>
+										<td>35,000원</td>
+									</tr>
+									<tr>
+										<td>1억 초과 ~ 10억이하</td>
+										<td>75,000원</td>
+									</tr>
+									<tr>
+										<td>10억 초과</td>
+										<td>175,000원</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<table class="table-style caption-tit">
+								<caption>담보물저장권설정비용</caption>
+								<colgroup>
+									<col style="width:50%;">
+									<col style="width:50%;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">구분</th>
+										<th scope="col">선정기준</th>
+									</tr>
+								</thead>
+								<tbody class="table-center">
+									<tr>
+										<th class="ta-c" scope="row">주택채권 매입</th>
+										<td>설정금액*1%</td>
+									</tr>
+									<tr>
+										<th class="ta-c" scope="row">선 순위근저당 말소비용</th>
 										<td>실비</td>
 									</tr>
 									<tr>
-										<th scope="row">PF대출 수수료</td>
-										<td>프로젝트 파이낸싱 심사 및 여신을 신청하는 경우 <br /> 관련 수수료 수치</td>
-										<td>별도로 정함</td>
-									</tr>
-									<tr>
-										<th scope="row">기업한도 거래수수료</td>
-										<td>한도약정수수료 또는 약정한도 <br /> 미사용 수수료(중복수취불가)</td>
-										<td>별도로 정함</td>
+										<th class="ta-c" scope="row">권리침해 해제비용 (압류ㆍ가압류ㆍ가등기 등)</th>
+										<td>실비</td>
 									</tr>
 								</tbody>
 							</table>
 
-							<div class="table-style">
-								<h3 class="table-tit">기타수수료</h3>
-								<span class="sub-tit">송금수수료</span>
-								<span class="unit">(단위: 원)</span>
-								<table class="mt10">
-									<caption>송금수수료</caption>
-									<colgroup>
-										<!--s:기획현행화-->
-										<col style="width:10%;">
-										<!--e:기획현행화-->
-										<col style="width:*;">
-									</colgroup>
-									<thead>
-										<tr>
-											<th scope="col">구분</th>
-											<th scope="col">10만원이하</th>
-											<th scope="col">50만원이하</th>
-											<th scope="col">1백만원이하</th>
-											<th scope="col">3백만원이하</th>
-											<th scope="col">5백만원이하</th>
-											<th scope="col">7백만원이하</th>
-											<th scope="col">1천만원이하</th>
-											<th scope="col">1천만원초과</th>
-										</tr>
-									</thead>
-									<tbody class="table-center">
-										<tr>
-											<th scope="row">창구송금수수료</th>
-											<td>500</td>
-											<td>700</td>
-											<td>1,000</td>
-											<td>1,500</td>
-											<td>1,800</td>
-											<td>2,100</td>
-											<td>2,500</td>
-											<td>2,800</td>
-										</tr>
-
-									</tbody>
-								</table>
-							</div>
-							
-							<div class="table-style">
-								<h3 class="table-tit">CD업무수수료</h3>
-								<span class="sub-tit">현금인출</span>
-								<span class="unit">(단위: 원)</span>
-								<table class="mt10">
-									<caption>현금인출</caption>
-									<colgroup>
-										<col style="width:10%;">
-										<col style="width:11%;">
-										<col style="width:11%;">
-										<col style="width:*;">
-									</colgroup>
-									<thead>
-										<tr>
-											<th scope="col" rowspan="2">구분</th>
-											<th scope="col" rowspan="2">저축은행내</th>
-											<th scope="col" rowspan="2">저축은행간</th>
-											<th scope="col" rowspan="2">CS 공동망</th>
-											<th scope="col" colspan="6">점외VAN사</th>
-										</tr>
-										<tr>
-											<th scope="col">나이스</th>
-											<th scope="col">한네트</th>
-											<th scope="col">청호이지캐쉬</th>
-											<th scope="col">비니에프캐시넷</th>
-											<!--s:기획현행화-->
-											<th scope="col">롯데피에스넷</th>
-											<th scope="col">노틸러스효성</th>
-											<!--e:기획현행화-->
-										</tr>
-
-									</thead>
-
-									<tbody class="table-center">
-										<tr>
-											<th scope="row">마감전</th>
-											<td>-</td>
-											<td>-</td>
-											<td>200</td>
-											<td>900</td>
-											<td>1,000</td>
-											<td>1,000</td>
-											<td>1,000</td>
-											<td>1,000</td>
-											<td>1,000</td>
-										</tr>
-
-										<tr>
-											<th scope="row">마감후</th>
-											<td>-</td>
-											<td>-</td>
-											<td>500</td>
-											<td>1,100</td>
-											<td>1,200</td>
-											<td>1,200</td>
-											<td>1,200</td>
-											<td>1,200</td>
-											<td>1,200</td>
-										</tr>
-
-									</tbody>
-								</table>
-							</div>
-							<p class="fee-txt">점외VAN사 : 점외VAN에서 설치한CD기를 이용하여 저축은행고객이 예금인출, 계좌이체 등 금융서비스 이용시 발생되는 수수료</p>
-							<p class="fee-txt">저축은행 CD 마감전 : 00:15 ~ 17:00, 마감후 17:00 ~ 23:30(휴일은 마감후)</p>
-
-							<div class="table-style">
-								<span class="sub-tit">계좌이체</span>
-								<span class="unit">(단위: 원)</span>
-								<table class="mt10">
-									<caption>계좌이체</caption>
-									<colgroup>
-										<col style="width:16%;">
-										<col style="width:*;">
-									</colgroup>
-									<thead>
-										<tr>
-											<th scope="col">계좌이체</th>
-											<th scope="col">10만원이하</th>
-											<th scope="col">50만원이하</th>
-											<th scope="col">1백만원이하</th>
-											<!--s:기획현행화-->
-											<th scope="col">3백만원이하</th>
-											<th scope="col">5백만원이하</th>
-											<th scope="col">7백만원이하</th>
-											<th scope="col">1천만원이하</th>
-											<!--e:기획현행화-->
-										</tr>
-									</thead>
-
-									<tbody class="table-center">
-										<tr>
-											<th scope="col">저축은행간이체</th>
-											<td>500</td>
-											<td>700</td>
-											<td>900</td>
-											<td>1,100</td>
-											<td>1,400</td>
-											<td>1,700</td>
-											<td>2,000</td>
-										</tr>
-
-										<tr>
-											<th scope="col">CS공동망이체</th>
-											<td>500</td>
-											<td>700</td>
-											<td>900</td>
-											<td>1,100</td>
-											<td>1,400</td>
-											<td>1,700</td>
-											<td>2,000</td>
-										</tr>
-
-									</tbody>
-								</table>
+							<div class="default-wrap02 ">
+								<p class="ex-txt">※ 담보물저장권설정비용은 당행이 부담합니다. (단, 위의 비용은 고객부담입니다.)</p>
+								<p>[담당부서 : 준법감시팀 / 담당자 : 최윤정 / 전화번호 : 02-6906-7065]</p>
 							</div>
 
-							<div class="table-style">
-								<span class="sub-tit">점외VAN사 계좌이체</span>
-								<span class="unit">(단위: 원)</span>
-								<table class="mt10">
-									<caption>점외VAN사 계좌이체</caption>
-									<colgroup>
-										<!--s:기획현행화-->
-										<col style="width:8%;">
-										<col style="width:10%;">
-										<col style="width:10%;">
-										<col style="width:8%;">
-										<col style="width:10%;">
-										<col style="width:10%;">
-										<col style="width:10%;">
-										<col style="width:10%;">
-										<!--e:기획현행화-->
-									</colgroup>
-									<thead>
-										<tr>
-											<th scope="col">업무명</th>
-											<th scope="col">마감구분</th>
-											<th scope="col">금액구분</th>
-											<th scope="col">한네트</th>
-											<th scope="col">청호이지캐쉬</th>
-											<th scope="col">비지에프캐시넷</th>
-											<th scope="col">롯데피에스넷</th>
-											<th scope="col">노틸러스효성</th>
-										</tr>
-									</thead>
-
-									<tbody class="table-center">
-										<tr>
-											<th scope="col" rowspan="4">당행이체</th>
-											<td rowspan="2">마감전</td>
-											<td>10만원이하</td>
-											<td>-</td>
-											<td>-</td>
-											<td>-</td>
-											<td>-</td>
-											<td>-</td>
-										</tr>
-										<tr>
-											<td>10만원초과</td>
-											<td>-</td>
-											<td>-</td>
-											<td>-</td>
-											<td>-</td>
-											<td>-</td>
-										</tr>
-										<tr>
-											<td rowspan="2">마감후</td>
-											<td>10만원이하</td>
-											<td>500</td>
-											<td>500</td>
-											<td>600</td>
-											<td>500</td>
-											<td>500</td>
-										</tr>
-										<tr>
-											<td>10만원초과</td>
-											<td>500</td>
-											<td>500</td>
-											<td>600</td>
-											<td>500</td>
-											<td>500</td>
-										</tr>
-
-										<tr>
-											<th scope="col" rowspan="4">당행이체</th>
-											<td rowspan="2">마감전</td>
-											<td>10만원이하</td>
-											<td>1,000</td>
-											<td>1,000</td>
-											<td>1,000</td>
-											<td>1,000</td>
-											<td>1,000</td>
-										</tr>
-										<tr>
-											<td>10만원초과</td>
-											<td>1,300</td>
-											<td>1,300</td>
-											<td>1,300</td>
-											<td>1,300</td>
-											<td>1,300</td>
-										</tr>
-										<tr>
-											<td rowspan="2">마감후</td>
-											<td>10만원이하</td>
-											<td>1,500</td>
-											<td>1,500</td>
-											<td>1,600</td>
-											<td>1,500</td>
-											<td>1,500</td>
-										</tr>
-										<tr>
-											<td>10만원초과</td>
-											<td>1,800</td>
-											<td>1,800</td>
-											<td>1,900</td>
-											<td>1,800</td>
-											<td>1,500</td>
-										</tr>
-
-
-									</tbody>
-								</table>
-							</div>
-							<p class="fee-txt">당행이체 : 저축은행간 계좌이체</p>
-							<p class="fee-txt">타행이체 : 저축은행과 타 금융기관간 계좌이체</p>
-
-
-							<div class="mt60">
-								<span class="sub-tit">전자금융 수수료</span>
-								<!--s:기획현행화 (삭제)-->
-								<!-- <span class="unit">(단위: 원)</span> -->
-								<!--e:기획현행화 (삭제)-->
-								<p class="mt10">인터넷뱅킹수수료: 없음</p>
-							</div>
-							<p class="fee-txt">저축은행간 전자금융수수료는 면제</p>
-						  
 						</div>
 					</div>
 				</div>
