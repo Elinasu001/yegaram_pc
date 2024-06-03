@@ -9,7 +9,7 @@
     <meta http-equiv="Content-Script-Type" content="text/javascript">
     <meta http-equiv="Content-Style-Type" content="text/css">
     <meta name="keywords" content="예가람저축은행">
-    <meta name="description" content="딴딴해서 믿을 수 있는 고려저축은행, 예금, 적금, 신용부금, 논스톱 자동대출 등 예금, 대출금융상품 안내">
+    <meta name="description" content="딴딴해서 믿을 수 있는 예가람저축은행, 예금, 적금, 신용부금, 논스톱 자동대출 등 예금, 대출금융상품 안내">
     <meta name="viewport" content="width=device-width">
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -93,45 +93,38 @@
         <div id="contentsWrap">
 
 			<!-- s:subVisualWrap -->
-            <div id="subVisualWrap" class="sub-type01">
+            <div id="subVisualWrap" class="sub-type03">
+
+				<!--D: 전체 구조 변경 -->
+				<div id="breadcrumb" class="breadcrumb-renewal">
+					<script>
+						$(document).ready(function () {
+							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
+						});
+					</script>
+				</div>
+
 				<div>
-					<div class="breadcrumb">
-						<a href="/home" class="home ir">홈</a>
-                        <a href="/portal/protection_info" class="depth1">금융소비자보호</a>
-                        <a href="/portal/illegal_contract_cancel" class="depth2">금융소비자 권리</a>
-                        <a href="/portal/withdrawal" class="depth3">청약철회권</a>
-					</div>
-
-                    <div class="prod-main-tit">
+					<div class="tit-wrap">
 						<div class="sub-tit">
-							<h2>금융소비자보호</h2>
-						</div>
-						<div class="prod-select">
-							<a href="/portal/protection_info" title="링크이동">금융소비자보호체계</a>
-							<a href="/portal/online_const" title="링크이동">민원센터</a>
-							<a href="/portal/civil_apply_exam" title="링크이동">금융소비자보호우수사례</a>
-							<a href="/portal/illegal_contract_cancel" class="on" title="링크이동">금융소비자권리</a>
-							<a href="/portal/disclosure_civil_complaints" title="링크이동">금융소비자보호공시</a>
-							<a href="/portal/collection_bonds_guide" title="링크이동">채권추심업무</a>
-							<a href="/portal/fraud_notice" title="링크이동">유용한소비자정보</a>
-							<a href="/portal/aptness_confirm" title="링크이동">적합성·적정성 조회</a>
+							<h2>청약철회권</h2>
+							<p class="desc">청약철회권 안내 페이지입니다.</p>
 						</div>
 					</div>
-
 				</div>
 			</div>
 
 			<!-- //e:subVisualWrap -->
 			<!-- s:contents -->
 			<div class="contents default-wrap">
-				<div class="tab-wrap">
+				<!--D: 삭제 <div class="tab-wrap">
 					<ul>
                         <li><a href="../portal/illegal_contract_cancel.html">위법계약 해지권</a></li>
                         <li class="active"><a href="../portal/withdrawal.html">청약철회권</a></li>
                         <li><a href="../portal/ratecut_info.html">금리인하요구권</a></li>
                         <li><a href="../portal/view_data_req.html">자료열람요구권</a></li>
                     </ul>
-				</div>
+				</div> -->
 				<div class="ratecut-wrap">
 					<h3 class="tit">청약철회 신청 이력조회</h3>
 					<div class="searchWrap line-box">
@@ -140,21 +133,17 @@
 								<input type="text" class="calendar" name="start_dt" id="start_dt"  placeholder="시작일" title="시작일" maxlength="8" value="" style="width: 200px;" autocomplete='off'>
 								<label for="" class="inp-tit " id="">~</label>
 								<input type="text" class="calendar" name="end_dt" id="end_dt"  placeholder="종료일" title="종료일" maxlength="8" value="" style="width: 200px; margin-right:20px; " autocomplete='off'>
-								<button type="button" name="button" onclick="PageFunc.selectFormsList()" class="btn-normal navy type2">검색</button>
+								<!--D: 클래스 수정-->
+								<button type="button" name="button" onclick="PageFunc.selectFormsList()" class="btn-normal form">검색</button>
+								<!--D: 클래스 수정//-->
 							</div>
-	                       
 	                    </div>
                     </div>
 					<div class="result-wrap line-box">
-						<!-- <p class="result-tit">조회결과</p> -->
-						<!-- 180614 table 항목 수정 -->
 						<div class="table-wrap">
-							<!--s:기획현행화 (클래스삭제)-->
 							<table class="table-style type2">
-							<!--e:기획현행화 (클래스삭제)-->
 								<caption>조회결과</caption>
 								<colgroup>
-									<!-- 180722 pm width값 수정 -->
 									<col style="width:5%">
 									<col style="width:10%">
 									<col style="width:*">
@@ -162,7 +151,6 @@
 									<col style="width:15%">
 									<col style="width:10%">
 									<col style="width:15%">
-									<!-- //180722 pm width값 수정 -->
 								</colgroup>
 								<thead>
 									<tr>
@@ -182,15 +170,17 @@
 								</tbody>
 							</table>
 						</div>
-						<!-- //180614 table 항목 수정 -->
-						<!-- 180720 pm 버튼 추가 -->
+						<!--D: 추가-->
+						<div class="default-wrap02">
+							<p>담당부서 : 준법감시팀 / 담당자 : 최윤정 / 전화번호 : 02-6906-7065</p>
+						</div>
+						<!--D: 추가//-->
+						<!--D: 버튼 클래스 및 텍스트 수정-->
 						<p class="btn-wrap">
-							<!--s:기획현행화(텍스트만수정)-->
-							<a href="javascript:location.replace('/portal/withdrawal')" class="btn-big navy">목록으로</a>
-							<!--e:기획현행화(텍스트만수정)-->
-							<a href="javascript:location.replace('/home')" class="btn-big navy">메인으로</a>
+							<a href="javascript:location.replace('/portal/withdrawal')" class="btn-big navy">신청하기</a>
+							<a href="javascript:location.replace('/home')" class="btn-big prod-more">메인으로</a>
 						</p>
-						<!-- //180720 pm 버튼 추가 -->
+						<!--D: 버튼 클래스 및 텍스트 수정//-->
 					</div>
 				</div>
 			</div>
