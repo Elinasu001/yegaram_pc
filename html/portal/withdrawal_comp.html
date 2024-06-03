@@ -9,7 +9,7 @@
     <meta http-equiv="Content-Script-Type" content="text/javascript">
     <meta http-equiv="Content-Style-Type" content="text/css">
     <meta name="keywords" content="예가람저축은행">
-    <meta name="description" content="딴딴해서 믿을 수 있는 예가람저축은행, 예금, 적금, 신용부금, 논스톱 자동대출 등 예금, 대출금융상품 안내">
+    <meta name="description" content="딴딴해서 믿을 수 있는 고려저축은행, 예금, 적금, 신용부금, 논스톱 자동대출 등 예금, 대출금융상품 안내">
     <meta name="viewport" content="width=device-width">
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -93,37 +93,44 @@
         <div id="contentsWrap">
 
 			<!-- s:subVisualWrap -->
-            <div id="subVisualWrap" class="sub-type03">
-
-				<!--D: 전체 구조 변경 -->
-				<div id="breadcrumb" class="breadcrumb-renewal">
-					<script>
-						$(document).ready(function () {
-							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
-						});
-					</script>
-				</div>
-
+            <div id="subVisualWrap" class="sub-type01">
 				<div>
-					<div class="tit-wrap">
+					<div class="breadcrumb">
+						<a href="/home" class="home ir">홈</a>
+                        <a href="/portal/protection_info" class="depth1">금융소비자보호</a>
+                        <a href="/portal/illegal_contract_cancel" class="depth2">금융소비자 권리</a>
+                        <a href="/portal/withdrawal" class="depth3">청약철회권 신청 완료</a>
+					</div>
+
+                    <div class="prod-main-tit">
 						<div class="sub-tit">
-							<h2>청약철회권</h2>
-							<p class="desc">청약철회권 안내 페이지입니다.</p>
+							<h2>금융소비자보호</h2>
+						</div>
+						<div class="prod-select">
+							<a href="/portal/protection_info" title="링크이동">금융소비자보호체계</a>
+							<a href="/portal/online_const" title="링크이동">민원센터</a>
+							<a href="/portal/civil_apply_exam" title="링크이동">금융소비자보호우수사례</a>
+							<a href="/portal/illegal_contract_cancel" class="on" title="링크이동">금융소비자권리</a>
+							<a href="/portal/disclosure_civil_complaints" title="링크이동">금융소비자보호공시</a>
+							<a href="/portal/collection_bonds_guide" title="링크이동">채권추심업무</a>
+							<a href="/portal/fraud_notice" title="링크이동">유용한소비자정보</a>
+							<a href="/portal/aptness_confirm" title="링크이동">적합성·적정성 조회</a>
 						</div>
 					</div>
+
 				</div>
 			</div>
 			<!-- //e:subVisualWrap -->
 			<!-- s:contents -->
 			<div class="contents default-wrap">
-				<!--D: 삭제 <div class="tab-wrap">
+				<div class="tab-wrap">
 					<ul>
                         <li><a href="../portal/illegal_contract_cancel.html">위법계약 해지권</a></li>
                         <li class="active"><a href="../portal/withdrawal.html">청약철회권</a></li>
                         <li><a href="../portal/ratecut_info.html">금리인하요구권</a></li>
                         <li><a href="../portal/view_data_req.html">자료열람요구권</a></li>
                     </ul>
-				</div> -->
+				</div>
 				<div class="ratecut-wrap">
 					<div class="comp-wrap">
 						<ul class="step-wrap">
@@ -134,22 +141,12 @@
 						</ul>
 						<h3 class="tit">청약철회 신청 완료</h3>
 						
+						<!-- s:디자인현행화 -->
 						<div class="cts-box suc-type">
-							<p class="box-info"><span>예가람</span> 고객님의 <span>청약철회 신청</span>이 정상 <span>완료</span>되었습니다.</p>
-                            <!--D: 추가-->
-                            <div class="box-txt">
-								<ul class="desc">
-									<li>빠른 시간 내로 상담원을 통해 연락드리도록 하겠습니다.</li>
-								</ul>
-							</div>
-                            <!--D: 추가//-->
+							<p class="box-info"><span>김고려</span> 고객님의 <span>청약철회 신청</span>이 정상 <span>완료</span>되었습니다.</p>
 						</div>
-                        <!--D: 버튼 추가-->
-                        <div class="btn-wrap">
-                            <button type="button" name="button" class="btn-big navy ">메인으로</button>
-                            <button type="button" name="button" class="btn-big prod-more">이력조회하기</button>
-                        </div>
-                        <!--D: 버튼 추가//-->
+						<!-- e:디자인현행화 -->
+
 					</div>
 				</div>
 			</div>

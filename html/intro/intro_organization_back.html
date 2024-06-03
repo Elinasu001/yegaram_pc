@@ -1,0 +1,243 @@
+<html lang="ko">
+<head>
+<!-- 헤더 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="예가람저축은행" />
+<meta name="description" content="딴딴해서 믿을 수 있는 예가람저축은행, 예금, 적금, 신용부금, 논스톱 자동대출 등 예금, 대출금융상품 안내" />
+<meta name="viewport" content="width=device-width">
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta property="og:image" content="https://www.yegaramsb.co.kr/resources/images/main/meta-img-square_new.jpg">   
+<link rel="shortcut icon" type="image/x-icon" href="../../../resources/favicon.ico" />
+<link href="../../../resources/css/jquery.bxslider.css" rel="stylesheet" />
+<link href="../../../resources/css/default.css" rel="stylesheet" />
+<link href="../../../resources/css/layout.css" rel="stylesheet" />
+<link href="../../../resources/css/contents.css" rel="stylesheet" />    
+<link href="../../../resources/css/jquery-ui.css" rel="stylesheet" />  
+<script src="../../../resources/js/jquery-1.11.3.min.js"></script>
+<script src="../../../resources/js/TweenMax.min.js"></script>
+<script src="../../../resources/js/jquery.bxslider.min.js"></script>
+<script src="../../../resources/js/placeholders.js"></script> 
+<!--     jquery-ui.js가 default.js보다 먼저 선언되어야 함 -->
+<script src="../../../resources/js/jquery-ui.js" type="text/javascript"></script>        
+<script src="../../../resources/js/default.js"></script>
+<script src="../../../resources/js/ui.js"></script>
+<script src="../../../resources/pub_js/ui_pub.js"></script>
+<script type="text/javascript" src="../../../resources/js/jquery.form.min.js"></script> 
+<script type="text/javascript" src="../../../resources/js/common_ajax.js"></script>
+<script type="text/javascript" src="../../../resources/js/common_bank_calc_util.js"></script> 
+<script type="text/javascript" src="../../../resources/js/common_bank_map_util.js"></script> 
+<script type="text/javascript" src="../../../resources/js/common_layer.js"></script> 
+<script type="text/javascript" src="../../../resources/js/common_pagevalidate.js"></script>
+<script type="text/javascript" src="../../../resources/js/common_util.js"></script> 
+<script type="text/javascript" src="../../../resources/js/iscroll.js"></script> 
+<script type="text/javascript" src="../../../resources/js/jquery.animateSprite.min.js"></script>  
+<script src="../../../resources/js/common_bank_calc_util.js" type="text/javascript"></script>
+<script src="../../../resources/js/hp_common.js" type="text/javascript"></script>
+<script src="../../../resources/js/calculator.js"></script>    
+<script src="../../../resources/js/streamdocs/adapter.js"></script>  	
+<!--     scrap -->
+<!-- <link href="/resources/scrap/css/process_manager.css" rel="stylesheet" /> -->
+<!--     <script src="/resources/scrap/js/jquery-1.9.1.min.js"></script> -->
+
+</head>
+<body>
+<!-- <body class="color-type2"> 타입별 -->
+    <!-- ********** Include ********** -->
+    <!-- s:skipnavi -->
+    <div id="skipnavi">
+        <script>
+		$(document).ready(function(){
+			$("#skipnavi").load("../include/inc_body_skipnavi.html");
+		});
+		</script>
+    </div>
+    <!-- ********** //Include ********** -->
+    <!-- //e:skipnavi -->
+
+    <!-- s:wrap -->
+    <div id="wrap">
+
+        <!-- ********** Include ********** -->
+        <!-- s:header -->
+        <div id="headerWrap">
+           <script>
+			$(document).ready(function(){
+				$("#headerWrap").load("../include/inc_body_header.html");
+			});
+			</script>
+        </div>
+        <!-- //e:header -->
+
+        <!-- s:sitemapWrap -->
+        <div id="sitemapWrap" class="layerpopup sitemap-layer" tabindex="0" data-tooltip-con="sitemap-layer" data-focus="sitemap-layer" data-focus-prev="btn-menu-close">
+			<script>
+			$(document).ready(function(){
+				$("#sitemapWrap").load("../include/inc_body_sitemapWrap.html");
+			});
+			</script>
+        </div>
+        <!-- //e:sitemapWrap -->
+        <!-- ********** //Include ********** -->
+
+        <!-- s contentsWrap -->
+        <div id="contentsWrap">
+        
+            <!-- s:subVisualWrap -->
+			<!-- s:디자인현행화 -->
+			<div id="subVisualWrap" class="sub-type01">
+			<!-- e:디자인현행화 -->
+				<div>
+					<div class="breadcrumb">
+						<a href="/" class="home ir">홈</a>
+						<a href="/deposit/submain" class="depth1">고려저축은행소개</a>
+						<!-- <a href="/deposit/register" class="depth2">고려저축은행소개</a>
+						<a href="/deposit/register" class="depth3">조직도</a> -->
+					</div>
+					
+					<!-- s:디자인현행화 -->
+					<!--<div class="tit-wrap">
+							<div class="sub-tit">
+								<h2>고려저축은행소개</h2> 
+								<p class="desc">딴딴해서 믿을 수 있는 고려저축은행</p>
+							</div>
+						</div>-->
+
+					<div class="prod-main-tit">
+						<div class="sub-tit">
+							<h2>고려저축은행소개</h2>
+						</div>
+						<div class="prod-select">
+							<a href="../intro/intro_greetings.html" class="on" title="링크이동">고려저축은행소개</a>
+							<a href="../intro/busi_summary.html" title="링크이동">경영공시</a>
+							<a href="../intro/ethical01.html" title="링크이동">윤리경영</a>
+							<a href="../intro/heungkuk.html" title="링크이동">흥국금융가족</a>
+							<a href="../intro/ci.html" title="링크이동">CI소개</a>
+							<a href="..intro/talent01.html" title="링크이동">인재채용</a>
+							<!-- <a href="..intro/branchHeadOffice.html" title="링크이동">영업점안내</a> -->
+						</div>
+					</div>
+					<!-- e:디자인현행화 -->
+				</div>
+			</div>
+			<!-- //e:subVisualWrap -->
+
+            <!-- s:contents -->
+            <div class="contents default-wrap">
+                <div class="introduction-wrap">
+                    <div class="tab-wrap">
+                        <ul>
+                            <li><a href="../intro/intro_greetings.html">대표이사인사말</a></li>
+                            <li><a href="../intro/intro_history.html">연혁</a></li>
+                            <li><a href="../intro/intro_philosophy.html">경영이념</a></li>
+                            <li class="active"><a href="../intro/intro_organization.html">조직도</a></li>
+							<!-- s:디자인현행화 -->
+							<li><a href="../intro/intro_promotion.html">홍보/PR</a></li>
+							<!-- e:디자인현행화 -->
+                        </ul>
+                    </div>
+                    <div class="organization-cts">
+                        <!-- <div><img src="../../../resources/images/page/img-org.png" alt="고려저축은행 조직도" /></div> -->
+
+                        <!-- 기존거 백업 이미지 -->
+                        <div><img src="../../../resources/images/page/img_org_back.png" alt="고려저축은행 조직도" /></div>
+
+                    <!--s: 2023-07-13 , 전체적인 구조수정  -->
+                    <div class="blind">
+						<ul>
+                           <li>이사회
+                               <ul>
+								   <li>감사위원회
+									   <ul>
+                                           <li>감사팀</li>
+                                       </ul>
+								   </li>
+                                   <li>임원후보추천위원회</li>
+                                   <li>보수위원회</li>
+                                   <li>위험관리위원회</li>
+                               </ul>
+                           </li>
+                           <li>대표이사
+                               <ul>
+                                   <li>준법감시실(준법감시인)
+                                       <ul>
+                                           <li>준법지원팀</li>
+                                       </ul>
+                                   </li>
+                                   <li>리스크관리실(위험관리책임자)
+                                       <ul>
+                                           <li>리스크관리팀</li>
+                                       </ul>
+                                   </li>
+                               </ul>
+                           </li>
+                           <li>
+                               <ul>
+                               		<li>신용사업본부
+	                                    <ul>
+	                                        <li>개인금융관리팀</li>
+											<li>고객마케팅팀</li>
+	                                        <li>개인금융2팀</li>
+	                                        <li>개인금융1팀</li>
+	                                    </ul>
+                                   </li>
+                                   <li>리테일금융본부
+                                       <ul>
+                                           <li>수신팀</li>
+                                           <li>센텀지점</li>
+                                           <li>중앙지점</li>
+                                           <li>리테일금융팀</li>
+                                       </ul>
+                                   </li>
+                                   <li>기업금융본부
+                                       <ul>
+                                           <li>기업금융2팀</li>
+                                           <li>기업금융1팀</li>
+                                       </ul>
+                                   </li>
+                                   <li>기획관리실
+									    <ul>
+										   <li>IT팀</li>
+										   <li>영업추진팀</li>
+										   <li>GOBANK사업팀</li>
+                                           <li>CSS기획팀</li>
+                                           <li>경영기획팀</li>
+                                       </ul>
+								   </li>
+                                   <li>여신관리팀</li>
+                                   <li>심사팀</li>
+                                   <li>경영기획팀</li>
+                               </ul>
+                           </li>
+                        </ul>
+					</div>
+					 <!-- e: 2023-07-13 , 전체적인 구조수정  //-->
+				</div>
+              </div>
+          </div>
+          <!-- //e:contents -->
+          <button type="button" name="button" class="btn-circle top ir btn-top">위로</button>
+      </div>
+      <!-- //e: contentsWrap -->
+
+      <!-- ********** Include ********** -->
+	  <!-- s footerWrap -->
+	  <div id="footerWrap">
+		  <script>
+		    $(document).ready(function(){
+				$("#footerWrap").load("../include/inc_body_footer.html");
+			});
+		  </script>
+	  </div>
+	  <!-- //e:footerWrap -->
+	  <!-- ********** //Include ********** -->
+    </div>
+    <!-- //e:wrap -->
+
+</body>
+</html>

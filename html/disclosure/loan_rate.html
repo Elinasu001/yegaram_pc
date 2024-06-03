@@ -89,17 +89,27 @@
         	
             <!-- s:subVisualWrap -->
 			<div id="subVisualWrap" class="sub-type03">
+
+                <!--D: 전체 구조 변경 -->
+				<div id="breadcrumb" class="breadcrumb-renewal">
+					<script>
+						$(document).ready(function(){
+							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
+						});
+					</script>
+				</div>
+
 				<div>
-					<div class="breadcrumb">
+					<!-- <div class="breadcrumb">
 						<a href="#" class="home ir">홈</a>
 						<a href="#" class="depth1">금융상품공시실</a>
 						<a href="#" class="depth2">대출상품</a>
 						<a href="#" class="depth3">대출상품금리</a>
-					</div>
+					</div> -->
 					<div class="tit-wrap">
 						<div class="sub-tit">
 							<h2>대출상품</h2>
-							<p class="desc">고려저축은행의 대출상품을 소개해드립니다.</p>
+							<p class="desc">예가람저축은행의 대출상품을 소개해드립니다.</p>
 						</div>
 					</div>
 				</div>
@@ -107,27 +117,24 @@
 			<!-- //e:subVisualWrap -->
 
             <!-- s:contents -->
-            <div class="contents default-wrap"> <!-- border 없는 contents class = contents02 -->
+            <div class="contents default-wrap">
                 <div class="disclosure-wrap">
                     <div class="tab-wrap">
                         <ul>
                         	<li><a href="../disclosure/loan_intro.html">상품소개</a></li>
-                            <!--s:기획현행화-->
-                            <li><a href="../disclosure/loan_stop.html">판매중지상품</a></li>
-                            <!--e:기획현행화-->
                             <li class="active"><a href="../disclosure/loan_rate.html">대출상품금리</a></li>
                             <li><a href="../disclosure/loan_terms.html">여신거래약관</a></li>
                         </ul>
                     </div>
-					<!-- s:디자인현행화 -->
-                    <div class="list-tit">고려저축은행 대출상품 금리정보 전체보기</div>
-					<!-- e:디자인현행화 -->
-						<table class="table-style"> <!-- 180726 pm class=" caption-tit" 삭제 -->
-						<caption>고려저축은행 대출상품 금리정보 전체보기 - 상품분류, 상품명, 대출금리로 구성</caption> <!-- 180726 pm class="list-tit"" 삭제 / 텍스트 수정 -->
+
+                    <div class="list-tit">예가람저축은행 대출상품 금리정보 전체보기</div>
+
+					<table class="table-style">
+						<caption>예가람저축은행 대출상품 금리정보 전체보기 - 상품분류, 상품명, 대출금리로 구성</caption>
                         <colgroup>
+                            <col style="width:21%;">
+                            <col style="width:19%;">
                             <col style="width:*;">
-                            <col style="width:30%;">
-                            <col style="width:30%;">
                         </colgroup>
                         <thead>
                             <tr>
@@ -136,41 +143,121 @@
                                 <th scope="col">대출금리</th>
                             </tr>
                         </thead>
-                        <tbody class="table-center">	<!-- s: 2023-07-13 , tbody에 클래스 table-center 추가 -->
+                        <tbody class="table-center">
                             <tr>
-                                <th scope="row">정책자금대출</th>
-                                <td>햇살론</td>
-                                <td>연 5.90% ~ 연 15.90%(내부기준에 따라 차등적용)</td>
+                                <th scope="row" rowspan="3">정책자금대출</th>
+                                <td>햇살론II</td>
+                                <td>연 9 ~ 11%대(매월 금융감독원 고시에 따라 변동가능)</td>
+                            </tr>
+                            <tr>
+                                <td>온라인햇살론</td>
+                                <td>연 8 ~ 10%대(매월 금융감독원 고시에 따라 변동가능)</td>
+                            </tr>
+                            <tr>
+                                <td>사잇돌2</td>
+                                <td>연 13.6% ~ 19.6% (SGI 개인신용등급점에 따라 차등 적용)</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row" rowspan="7">신용대출</th>
+                                <td>빅머니M</td>
+                                <td>연 6.8% ~ 17.9% (내부신용등급에 따라 차등적용)</td>
+                            </tr>
+                            <tr>
+                                <td>빅머니F론</td>
+                                <td>연 14.7% ~ 17.7% (내부신용등급에 따라 차등적용)</td>
+                            </tr>
+                            <tr>
+                                <td>예스론</td>
+                                <td>연 6.8% ~ 19.6% (내부신용등급에 따라 차등적용)</td>
+                            </tr>
+                            <tr>
+                                <td>라이브M</td>
+                                <td>연 14.6% ~ 19.6% (내부신용등급에 따라 차등적용)</td>
+                            </tr>
+                            <tr>
+                                <td>빅머니A</td>
+                                <td>연 16.1% ~ 19.0% (내부신용등급에 따라 차등적용)</td>
+                            </tr>
+                            <tr>
+                                <td>라이브A론</td>
+                                <td>연 19.0% ~ 19.9% (내부신용등급에 따라 차등적용)</td>
+                            </tr>
+                            <tr>
+                                <td>GPS론</td>
+                                <td>연 6.8% ~ 14.5% (내부신용등급에 따라 차등적용)</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row" rowspan="3">대환대출</th>
+                                <td>빅머니U론</td>
+                                <td>연 6.8% ~ 17.9% (내부신용등급에 따라 차등적용)</td>
+                            </tr>
+                            <tr>
+                                <td>라이브U론</td>
+                                <td>연 14.6% ~ 19.6% (내부신용등급에 따라 차등적용)</td>
+                            </tr>
+                            <tr>
+                                <td>라이브T론</td>
+                                <td>연 16.1% ~ 19.9% (내부신용등급에 따라 차등적용)</td>
                             </tr>
 
 							<tr>
-                                <th scope="row" rowspan="2">담보대출</th>
-                                <td>부동산 담보대출</td>
-                                <td>연 7.00% ~ 연 11.90%</td>
+                                <th scope="row" rowspan="10">담보대출</th>
+                                <td>부동산담보대출</td>
+                                <td>연 4.5% ~ 13.0%</td>
+                            </tr>
+                            <tr>
+                                <td>부동산PF대출</td>
+                                <td>연 9.0% ~ 20.0% (사업성 및 차주의 신용도에 따라 차등적용)</td>
+                            </tr>
+                            <tr>
+                                <td>자산유동화대출(ABL)</td>
+                                <td>연 9.0% ~ 20.0% (담보자산, 차주의 신용도에 따라 차등적용)</td>
+                            </tr>
+                            <tr>
+                                <td>닥터론</td>
+                                <td>연 6.9% ~ 10.4% (신용등급에 따라 차등적용)</td>
+                            </tr>
+                            <tr>
+                                <td>중도금대출</td>
+                                <td>연 5.0% ~ 기준금리 + 가산금리 (시행 및 시공사와 은행이 협약한 금리)</td>
+                            </tr>
+                            <tr>
+                                <td>스크린골프동산담보대출</td>
+                                <td>연 9.0% ~ 15.0%</td>
+                            </tr>
+                            <tr>
+                                <td>공공임대보증금담보대출</td>
+                                <td>연 4.70% ~ 12.3%</td>
+                            </tr>
+                            <tr>
+                                <td>전세보증금담보대출</td>
+                                <td>연 5.0% ~ 12.0%</td>
+                            </tr>
+                            <tr>
+                                <td>유가증권담보대출</td>
+                                <td>담보의 종류 및 상담에 따라 다르게 적용</td>
+                            </tr>
+                            <tr>
+                                <td>예적금담보대출</td>
+                                <td>담보 예적금 금리 + 1.5%</td>
                             </tr>
 
 							<tr>
-                                <td>아파트 담보대출</td>
-                                <td>연 6.50% ~ 연 10.90%</td>
-                            </tr>
-
-							<tr>
-                                <th scope="row" rowspan="3">신용대출</th>
-                                <td>뉴플랜론III</td>
-                                <td>연 5.90% ~ 15.90%(내부기준에 따라 차등적용)</td>
+                                <th scope="row" rowspan="2">기타</th>
+                                <td>종합통장대출</td>
+                                <td>담보별 여신금리 + 1.5% 이내</td>
                             </tr>
 							<tr>
-                                <td>더좋은론</td>
-                                <td>연 10.55% ~ 19.25%(내부기준에 따라 차등적용)</td>
+                                <td>할인어음</td>
+                                <td>연 7.0% ~ 13.5% (금리는 업체 현황, 어음 발행사 현황, 담보여부 등에 따라 결정)</td>
                             </tr>
-							<tr>
-                                <td>더좋은니즈론</td>
-                                <td>연 10.55% ~ 19.25%(내부기준에 따라 차등적용)</td>
-                            </tr>
-                            
                         </tbody>
                     </table>
-                    
+                    <div class="default-wrap02">
+                        <p>담당부서&nbsp;:&nbsp;YESBANK 사업팀&nbsp;/&nbsp;담당자&nbsp;:&nbsp;박선홍&nbsp;/&nbsp;대표번호&nbsp;:&nbsp; 1877-7788</p>
+                    </div>
                 </div>
             </div>
             
