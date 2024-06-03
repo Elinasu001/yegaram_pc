@@ -312,7 +312,7 @@
 #subVisualWrap .sub-tit h2 span { color:#260F54; }
 #subVisualWrap .sub-tit h2 .point { color:#F10F8E; }
 #subVisualWrap .sub-tit .desc { margin-top:30px; font-size:25px; font-weight: 400; color:#666; /*letter-spacing:-1.5px;*/}
-#subVisualWrap .sub-product-wrap .sub-tit { padding-bottom: 100px; }
+#subVisualWrap .sub-product-wrap .sub-tit { padding-bottom: 100px; width: 776px; }
 
 /* 예가람 subVisual */
 #subVisualWrap.sub-type01 > .breadcrumb-renewal,
@@ -549,13 +549,14 @@ h3.tit + .list-tit.type2,
 
 
 /* .define-list, .sub-title-area + .list-wrap01 { border-top:solid 2px #000000; } */
-.define-list, .list-wrap01 { border-top:solid 2px #000000; }
+.list-wrap01, .define-list { border-top:solid 2px #000000; }
 .define-list li { line-height: 1.6; }
-.define-list > li, [class^="list-wrap"] > li { display:table /*!important*/; width:100%; margin:0 !important; border-bottom:solid 1px #E5E5E5; }
+.define-list > li{ display:table /*!important*/; width:100%; margin: 0!important; border-bottom:solid 1px #E5E5E5; }
+[class^="list-wrap"] > li { display:table /*!important*/; width:100%; margin:0 !important; border-bottom:solid 1px #E5E5E5; }
 .define-list .de-tit, 
 .define-list .de-cts,
 .list-item .list-item-tit,
-.list-item .list-item-txt { position:relative; display:table-cell; line-height: 1.45;}
+.list-item .list-item-txt { position:relative; display:table-cell; line-height: 1.45; font-size: 18px; }
 .list-item .list-item-txt .list-item-box { border:0; padding: 0;}
 .define-list .de-tit, .list-item .list-item-tit { width:20%; padding:20px; font-weight:600; vertical-align:middle; background:#FAFAFA; font-size:16px; text-align:center; }
 .define-list .de-tit.type2 { text-align:left; padding:30px 20px 10px 0px; font-weight:600; background:#fff; }
@@ -566,6 +567,11 @@ h3.tit + .list-tit.type2,
 .define-list .de-cts > p:has(+ .table-wrap01) { margin-bottom: 10px; color: #999999;}
 .define-list .de-cts .table-wrap + .table-wrap{ margin-top:15px; }
 .table-wrap01 + p {margin-top: 20px;}
+
+.add-define-list { border-top:0; }
+.add-define-list > li { border-bottom: 0; }
+.add-define-list p:last-child, .add-define-list .txt { font-size: 16px; color: #666666; }
+.define-list > .mt15 { margin-top: 15px!important; }
 
 .define-list [class^="table-style"] { margin-top:0; }
 .define-list [class^="table-style"] tbody tr:not(:has(th)) td:first-child,
