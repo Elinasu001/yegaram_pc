@@ -1412,6 +1412,7 @@ div.line-box { padding-top:60px; margin-top:60px; border-top:1px solid #bbb; }
 .logo-img img { width: auto; }
 
 .tab-wrap + .txt-box { text-align: center; border-bottom: 1px solid #E1E1E1; padding-bottom: 60px; }
+.tab-wrap + .txt-box.bull-type { text-align: left; }
 
 .parentDivMain { border-top: 1px solid #DDDDDD; margin-top: 20px; }
 .parentText { font-size: 18px; font-weight: 400; margin: 25px 0 7px; }
