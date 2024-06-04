@@ -752,7 +752,7 @@ div.line-box { padding-top:60px; margin-top:60px; border-top:1px solid #bbb; }
 /* 게시판 - view - 2023-07-14 ~ 07-15 수정 */
 .board-tit { position:relative; display:block; overflow:hidden; width:100%; padding:20px; }
 .board-tit .divs , .board-tit h3, .board-tit .date { display:inline-block; float:left; /*line-height:30px;*/ }
-.board-tit .divs { margin-right:20px; padding:0px 20px; line-height:43px; font-size:18px; font-weight:500; color:#232549; border-radius:22px; border:1px solid #232549; }
+.board-tit .divs { margin-right:20px; padding:0px 20px; line-height:40px; height:40px; font-size:16px; font-weight:500; color:#232549; border-radius:22px; border:1px solid #232549; }
 .board-tit h3 { max-width:800px; line-height:45px; font-size:22px; font-weight:500; }
 .board-tit .date { float:right; /*line-height:44px;*/ line-height:50px; font-size:18px; color:#666666; }
 .board-tit .date:has(span) { line-height:20px; }
