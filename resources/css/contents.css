@@ -646,7 +646,7 @@ div.line-box { padding-top:60px; margin-top:60px; border-top:1px solid #bbb; }
 .system-cts + .doc-type1,
 .protection-wrap .system-cts .doc-type1 { margin-top:60px; }
 .protection-wrap .system-cts .table-wrap td span { padding:0 15px; }
-.pro-inner { padding:30px; margin-top: 40px; border:1px solid #ddd; }
+.pro-inner { padding:30px; margin-top: 20px; border:1px solid #ddd; }
 .terms-txt .pro-inner li { font-size:18px;font-weight:500;color:#111111; font-weight:500; }
 .terms-txt .pro-inner li + li { margin-top: 20px; }
 
