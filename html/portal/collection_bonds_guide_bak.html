@@ -94,43 +94,67 @@
         <div id="contentsWrap">
 
             <!-- s:subVisualWrap -->
-            <div id="subVisualWrap" class="sub-type03">
-
-				<!--D: 전체 구조 변경 -->
-				<div id="breadcrumb" class="breadcrumb-renewal">
-					<script>
-						$(document).ready(function () {
-							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
-						});
-					</script>
-				</div>
-
+            <!--s:기획현행화-->
+            <div id="subVisualWrap" class="sub-type01">
 				<div>
-					<div class="tit-wrap">
+					<div class="breadcrumb">
+						<a href="#none" class="home ir">홈</a>
+						<a href="#none" class="depth1">금융소비자보호</a>
+						<a href="#none" class="depth2">채권추심업무</a>
+						<a href="#none" class="depth3">채권추심업무 처리절차안내문</a>
+					</div>
+					<!-- <div class="tit-wrap">
 						<div class="sub-tit">
-							<h2>채권추심업무 처리절차안내문</h2>
-							<p class="desc">채권추심업무 안내 페이지입니다.</p>
+							<h2>채권추심업무</h2>
+                            <p class="desc">채권추심업무 안내 페이지입니다.</p>
+                        </div>
+					</div> -->
+
+                    <div class="prod-main-tit">
+						<div class="sub-tit">
+							<h2>금융소비자보호</h2>
+						</div>
+						<div class="prod-select">
+							<a href="../portal/protection_info.html" title="링크이동">금융소자보호체계</a>
+							<a href="../portal/online_const.html" title="링크이동">민원센터</a>
+							<a href="../portal/civil_apply_exam.html" title="링크이동">금융소비자보호우수사례</a>
+							<a href="../portal/illegal_contract_cancel.html" title="링크이동">금융소비자권리</a>
+							<a href="../portal/disclosure_civil_complaints.html" title="링크이동">금융소비자보호공시</a>
+							<a href="../portal/collection_bonds_guide.html" class="on" title="링크이동">채권추심업무</a>
+							<a href="../portal/fraud_notice.html" title="링크이동">유용한소비자정보</a>
+							<a href="../portal/aptness_confirm.html" title="링크이동">적합성·적정성 조회</a>
 						</div>
 					</div>
+
 				</div>
 			</div>
+            <!--e:기획현행화-->
             <!-- //e:subVisualWrap -->
 
 			<!-- s:contents -->
 			<div class="contents default-wrap">
 				<div class="collection-bonds-wrap">
-					<!--D: 삭제 <div class="tab-wrap">
+					<div class="tab-wrap">
 						<ul>
 							<li class="active"><a href="../portal/collection_bonds_guide.html">채권추심업무 처리절차안내문</a></li>
                             <li><a href="../portal/collection_bonds_action.html">불법채권추심 대응요령</a></li>
                             <li><a href="../portal/collection_bonds_notice.html">소멸시효 완성채권 추심 관련 금융소비자 유의사항</a></li>
 
 						</ul>
-					</div> -->
-					
+					</div>
+					<!--s: 2023-07-17, 구조 삭제
+					<div class="txt-box bull-type">
+						<div>
+							<p>채무자앞 채권추심 수임사실 통지 이후 다음과 같은 채권추심 행위가 이루어집니다.<br/>
+                                당사의 채권추심 업무진행과 관련하여 문의사항이 있으시면 언제든지 당사 준법지원팀(전화번호 : 051-640-9105) 으로 연락하여 주시면 친절히 안내해 드리겠습니다.</p>
+						</div>
+					</div>-->
+					<!-- s:디자인현행화 -->
 					<h3 class="list-tit">채권추심업무 처리절차 안내</h3>
+					<!-- e:디자인현행화 -->
 					<div class="terms-txt">
-						<ol class="pro-inner"><!--D: 클래스 변경-->
+						<!-- s: 2023-07-17, 구조 수정 -->
+						<ol class="list type4 num-list">
 							<li>
 								<div class="txt-box">
 									<p>1. '변제독촉장', '변제최고장', '채무정리 최종촉구 통고서' 등의 우편물을 발송하여 채무상환을 요구하게 되고, 채무불이행 시 불이익(연체정보 등록에 따른 금융거래 제한 등)에 대한 안내를 하게 됩니다.</p>
@@ -152,12 +176,8 @@
 								</div>
 							</li>
 						</ol>
+						<!-- e: 2023-07-17, 구조 수정 //-->
 					</div>
-                    <!--D: 추가-->
-                    <div class="default-wrap02">
-                        <p>담당부서 : 개인금융관리팀 / 담당자 : 박준호 / 전화번호 : 070-4570-5349</p>
-                    </div>
-                    <!--D: 추가//-->
 				</div>
 			</div>
 			<!-- //e:contents -->

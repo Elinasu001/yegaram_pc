@@ -174,15 +174,26 @@ var depth3 = 0;//없으면 0
             
 		    <!-- s:subVisualWrap -->
 			<div id="subVisualWrap" class="sub-type03">
+
+				<!--D: 전체 구조 변경 -->
+				<div id="breadcrumb" class="breadcrumb-renewal">
+					<script>
+						$(document).ready(function () {
+							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
+						});
+					</script>
+				</div>
+
 				<div>
-					<div class="breadcrumb">
+					<!-- <div class="breadcrumb">
 						<a href="#none" class="home ir">홈</a>
 						<a href="#none" class="depth1">고려저축은행소개</a>
 						<a href="#none" class="depth2">영업점안내</a>
-					</div>
+					</div> -->
 					<div class="tit-wrap">
 						<div class="sub-tit">
 							<h2>영업점안내</h2>
+							<p class="desc">예가람저축은행의 전국 영업점안내</p>
 						</div>
 					</div>
 				</div>
@@ -195,64 +206,117 @@ var depth3 = 0;//없으면 0
                     <div class="tab-wrap tab-page">
 						<ul>
 							<li class="active">
-								<a href="#none">고려 (본점)</a>
+								<a href="#none">남대문본점</a>
 								<div class="shop-cts contents-area" style="display: block;">
 								  	<div class="map" id="daumMap"></div>
-								  	<div class="list-tit">고려 (본점)</div>
-								  	<ul class="define-list">
+								  	<div class="list-tit">남대문본점</div>
+									<ul class="define-list">
 										<li>
-											<span class="de-tit">지번주소</span>
-											<div class="de-cts ta-l" id="centerAddress">부산 동구 초량동 1193-1 흥국생명빌딩 3F, 4F, 5F</div>
+											<span class="de-tit">주소</span>
+											<div class="de-cts ta-l" id="centerAddress">서울특별시 중구 세종대로 50 흥국생명빌딩 2층, 3층</div>
 										</li>
 										<li>
-											<span class="de-tit">도로명주소</span>
-											<div class="de-cts ta-l" id="centerPhone">부산 동구 중앙대로 244 흥국생명빌딩  3F, 4F, 5F</div>
+											<span class="de-tit">대표전화번호</span>
+											<div class="de-cts ta-l" id="centerPhone">02-6906-7000</div>
 										</li>
 										<li>
-											<span class="de-tit">전화번호</span>
-											<div class="de-cts ta-l" id="">☎  : 1877-9900</div>
+											<span class="de-tit">대표 FAX번호</span>
+											<div class="de-cts ta-l">02-6906-7099  ※ 팩스 발송 후 영업점 내전하여 발송 여부 확인 필수(영업시간 내 처리가능)</div>
+										</li>
+										<li>
+											<span class="de-tit">교통수단</span>
+											<div class="de-cts ta-l">[지하철]<br />2호선 시청역 7번출구/4호선 회현역 5번출구 숭례문오거리 방향 500m 이내</div>
+										</li>
+										<li>
+											<span class="de-tit">영업점 운영시간</span>
+											<div class="de-cts ta-l">평일 09:00~16:00 (토, 일 공휴일 휴무)</div>
 										</li>
 								  	</ul>
 								</div>
 							</li>
 							<li>
-								<a href="#none">고려 (중앙)</a>
+								<a href="#none">강남지점</a>
 								<div class="shop-cts contents-area">
 								  	<div class="map" id="daumMap"></div>
-								  	<div class="list-tit">고려 (중앙)</div>
+								  	<div class="list-tit">강남지점</div>
 								 	 <ul class="define-list">
 										<li>
-											<span class="de-tit">지번주소</span>
-											<div class="de-cts ta-l" id="centerAddress">부산 중구 중앙동1가 23-8 </div>
+											<span class="de-tit">주소</span>
+											<div class="de-cts ta-l" id="centerAddress">서울특별시 강남구 테헤란로 337 화남타워 2층</div>
 										</li>
 										<li>
-											<span class="de-tit">도로명주소</span>
-											<div class="de-cts ta-l" id="centerPhone">부산 중구 해관로 17</div>
+											<span class="de-tit">대표전화번호</span>
+											<div class="de-cts ta-l" id="centerPhone">02-2678-4377</div>
 										</li>
 										<li>
-											<span class="de-tit">전화번호</span>
-											<div class="de-cts ta-l" id="">☎  : 051-640-9100</div>
+											<span class="de-tit">대표 FAX번호</span>
+											<div class="de-cts ta-l">02-2672-4378  ※ 팩스 발송 후 영업점 내전하여 발송 여부 확인 필수(영업시간 내 처리가능)</div>
+										</li>
+										<li>
+											<span class="de-tit">교통수단</span>
+											<div class="de-cts ta-l">[지하철]<br />2호선/수인분당선 선릉역 6번출구에서 4m</div>
+										</li>
+										<li>
+											<span class="de-tit">영업점 운영시간</span>
+											<div class="de-cts ta-l">평일 09:00~16:00 (토, 일 공휴일 휴무)</div>
 										</li>
 								  	</ul>
 								</div>
 							</li>
 							<li>
-								<a href="#none">고려 (센텀)</a>
+								<a href="#none">창원지점</a>
 								<div class="shop-cts contents-area">
 								  	<div class="map" id="daumMap"></div>
-								  	<div class="list-tit">고려 (센텀)</div>
+								  	<div class="list-tit">창원지점</div>
 								  	<ul class="define-list">
 										<li>
-											<span class="de-tit">지번주소</span>
-											<div class="de-cts ta-l" id="centerAddress">부산 해운대구 우동 1498</div>
+											<span class="de-tit">주소</span>
+											<div class="de-cts ta-l" id="centerAddress">경상남도 창원시 성산구 용지로 56 1층</div>
 										</li>
 										<li>
-											<span class="de-tit">도로명주소</span>
-											<div class="de-cts ta-l" id="centerPhone">부산 해운대구 센텀동로 9</div>
+											<span class="de-tit">대표전화번호</span>
+											<div class="de-cts ta-l" id="centerPhone">070-4589-5386</div>
 										</li>
 										<li>
-											<span class="de-tit">전화번호</span>
-											<div class="de-cts ta-l" id="">☎  : 051-640-9120</div>
+											<span class="de-tit">대표 FAX번호</span>
+											<div class="de-cts ta-l">055-285-8424  ※ 팩스 발송 후 영업점 내전하여 발송 여부 확인 필수(영업시간 내 처리가능)</div>
+										</li>
+										<li>
+											<span class="de-tit">교통수단</span>
+											<div class="de-cts ta-l">[버스]<br />751, 102, 107, 115, 503, 507<br />창원호텔 정류장 하차 84m 전방에 위치</div>
+										</li>
+										<li>
+											<span class="de-tit">영업점 운영시간</span>
+											<div class="de-cts ta-l">평일 09:00~16:00 (토, 일 공휴일 휴무)</div>
+										</li>
+								  	</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#none">울산지점</a>
+								<div class="shop-cts contents-area">
+								  	<div class="map" id="daumMap"></div>
+								  	<div class="list-tit">울산지점</div>
+								  	<ul class="define-list">
+										<li>
+											<span class="de-tit">주소</span>
+											<div class="de-cts ta-l" id="centerAddress">울산광역시 남구 삼산로 231 울산센트럴자이 상가 401호</div>
+										</li>
+										<li>
+											<span class="de-tit">대표전화번호</span>
+											<div class="de-cts ta-l" id="centerPhone">070-4589-5396</div>
+										</li>
+										<li>
+											<span class="de-tit">대표 FAX번호</span>
+											<div class="de-cts ta-l">052-939-1248  ※ 팩스 발송 후 영업점 내전하여 발송 여부 확인 필수(영업시간 내 처리가능)</div>
+										</li>
+										<li>
+											<span class="de-tit">교통수단</span>
+											<div class="de-cts ta-l">[버스]<br />432, 417, 401, 127, 126<br />뉴코아아울렛에서 현대백화점 방향 50m</div>
+										</li>
+										<li>
+											<span class="de-tit">영업점 운영시간</span>
+											<div class="de-cts ta-l">평일 09:00~16:00 (토, 일 공휴일 휴무)</div>
 										</li>
 								  	</ul>
 								</div>

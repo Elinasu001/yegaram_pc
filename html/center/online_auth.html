@@ -96,12 +96,22 @@
 
             <!-- s:subVisualWrap -->
             <div id="subVisualWrap" class="sub-type03">
+                
+                <!--D: 전체 구조 변경 -->
+				<div id="breadcrumb" class="breadcrumb-renewal">
+					<script>
+						$(document).ready(function(){
+							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
+						});
+					</script>
+				</div>
+
                 <div>
-                    <div class="breadcrumb">
+                    <!-- <div class="breadcrumb">
                         <a href="#none" class="home ir">홈</a>
                         <a href="#none" class="depth1">고객센터</a>
                         <a href="#none" class="depth2">온라인 서류제출</a>
-                    </div>
+                    </div> -->
                     <div class="tit-wrap">
                         <div class="sub-tit">
                             <h2>온라인 서류 제출</h2>
@@ -116,17 +126,45 @@
                 <div class="online-wrap">
                     <ul class="step-wrap">
                         <li class="step01 active"><span>01.<strong>본인인증</strong></span></li>
-                        <li class="step02"><span>02.<strong>확인 및 입력</strong></span></li> <!-- 180612 텍스트변경 -->
-                        <li class="step03"><span>03.<strong>제출 완료</strong></span></li> <!-- 180612 텍스트변경 -->
+                        <li class="step02"><span>02.<strong>확인 및 입력</strong></span></li>
+                        <li class="step03"><span>03.<strong>제출 완료</strong></span></li>
                     </ul>
+
+                    <div class="step-auth">
+						<h3 class="tit">온라인 서류 제출 본인인증</h3>
+						<p class="tit-txt">증빙서류 제출을 위해서는 본인 인증이 필요합니다.<br/>아래 내용을 참고하여 증빙서류 제출 진행해 주시기 바랍니다.</p>
+                        <ul class="auth-list">
+                            <li class="auth1">
+                                <span class="ctm-radio">
+                                    <input type="radio" name="auth" id="auth1" value="">
+                                    <label for="auth1"><span>휴대폰인증</span></label>
+                                </span>
+                            </li>
+                            <li class="auth2">
+                                <span class="ctm-radio">
+                                    <input type="radio" name="auth" id="auth2" value="">
+                                    <label for="auth2"><span>공동인증서</span></label>
+                                </span>
+                            </li>
+                            <li class="auth6">
+                                <span class="ctm-radio">
+                                    <input type="radio" name="auth" id="auth6" value="">
+                                    <label for="auth6"><span>금융인증서</span></label>
+                                </span>
+                            </li><br><br>
+                            <li class="auth7">
+                                <span class="ctm-radio">
+                                    <input type="radio" name="auth" id="auth7" value="">
+                                    <label for="auth7"><span>아이핀인증</span></label>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
 					
-					<!-- s:2023-07-17 구조변경 -->
-					<!-- s:공동인증서, 카카오페이인증 선택 시 노출 -->
 					<form name="frm1" id="frm1">
 						<div class="certificate pt20">
-							<h3 class="tit">온라인 서류 제출 본인인증</h3> <!-- 2023-07-17, text 변경 및 구조 변경 //-->
+							<h3 class="tit">본인인증 정보입력</h3>
 
-							<!-- <div class="list-tit">온라인 서류 제출 본인인증</div> 2023-07-17, 구조삭제 //-->
 							<div class="input-wrap">
 								<div class="grid-wrap">
 									<div class="grid2">
@@ -145,8 +183,8 @@
 											</div>
 										</div>
 									</div>
-									<!-- 카카오페이 인증 선택시에만 노출 -->
-									<div class="grid2">
+
+                                    <div class="grid2">
 										<div class="form-wrap">
 											<label for="phone-button" class="inp-tit req">핸드폰번호</label>
 											<div class="phone-area">
@@ -178,23 +216,20 @@
 												<input type="hidden" id="phone_hidden" name="PHONE_NO" value="010--">
 											</div>
 										</div>
-										<!--s:기획현행화(삭제)-->
-										<!-- <div class="form-wrap">
+										<div class="form-wrap">
 											<label for="certifyNum" class="inp-tit req">인증번호</label>
 											<div class="certify-area">
-												<input type="tel" name="" value="" id="certifyNum" placeholder="" title="핸드폰번호 가운데자리" maxlength="6">
+												<input type="tel" name="" value="" id="certifyNum" placeholder="인증번호 입력" title="핸드폰번호 가운데자리" maxlength="6">
 												<button type="button" name="button" class="btn-normal form" onclick="">인증번호요청</button>
 												<button type="button" name="button" class="btn-normal form" onclick="">확인</button>
 											</div>
-										</div> -->
-										<!--e:기획현행화(삭제)-->
+										</div>
 									</div>
-									<!-- //카카오페이 인증 선택시에만 노출 -->
-								</div>
+
+                                </div>
 							</div>
 						</div>
 					</form>
-					<!-- e:공동인증서, 카카오페이인증 선택 시 노출 -->
 
 
                    <!-- <h3 class="tit">온라인 서류 제출 본인인증</h3>
@@ -203,50 +238,7 @@
                         <p class="tit-txt">증빙서류 제출을 위해서는 본인 인증이 필요합니다.<br/>아래 내용을 참고하여 증빙서류 제출 진행해 주시기 바랍니다.</p>
                     </div> -->
            
-                    <div class="step-auth">
-						<!-- //2023-07-17, 구조 이동 -->
-						<p class="tit-txt">증빙서류 제출을 위해서는 본인 인증이 필요합니다.<br/>아래 내용을 참고하여 증빙서류 제출 진행해 주시기 바랍니다.</p>
-						<!-- //2023-07-17, 구조 이동 -->
-                        <ul class="auth-list">
-                            <li class="auth1">
-                                <span class="ctm-radio">
-                                    <input type="radio" name="auth" id="auth1" value="">
-                                    <label for="auth1"><span>휴대폰인증</span></label>
-                                </span>
-                            </li>
-                            <li class="auth2">
-                                <span class="ctm-radio">
-                                    <input type="radio" name="auth" id="auth2" value="">
-                                    <label for="auth2"><span>공동인증서</span></label>
-                                </span>
-                            </li>
-                            <li class="auth3">
-                                <span class="ctm-radio">
-                                    <input type="radio" name="auth" id="auth3" value="">
-                                    <label for="auth3"><span>아이핀인증</span></label>
-                                </span>
-                            </li>
-							<!-- s : 2023-07-16 , 추가 -->
-							<div class="clear mt30"></div>
-							<!-- e : 2023-07-16 , 추가 -->
-                            <!--s:기획현행화 (텍스트만수정)-->
-                            <li class="auth4">
-                                <span class="ctm-radio">
-                                    <input type="radio" name="auth" id="auth4" value="">
-                                    <label for="auth4"><span>카카오인증</span></label>
-                                </span>
-                            </li>
-                            <li class="auth5">
-                                <span class="ctm-radio">
-                                    <input type="radio" name="auth" id="auth5" value="">
-                                    <label for="auth5"><span>토스인증</span></label>
-                                </span>
-                            </li>
-                            <!--e:기획현행화 (텍스트만수정)-->
-                        </ul>
-						<!-- e:2023-07-17 구조변경 -->
-                        
-                    </div>
+                    
                     <div class="btn-wrap">
 						<!-- s:2023-07-17 수정 -->
                         <button type="button" name="button" class="btn-big navy">본인인증</button>

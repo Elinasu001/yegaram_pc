@@ -88,12 +88,22 @@
         
             <!-- s:subVisualWrap -->
             <div id="subVisualWrap" class="sub-type03">
+
+				<!--D: 전체 구조 변경 -->
+				<div id="breadcrumb" class="breadcrumb-renewal">
+					<script>
+						$(document).ready(function(){
+							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
+						});
+					</script>
+				</div>
+
                 <div>
-                    <div class="breadcrumb">
+                    <!-- <div class="breadcrumb">
                         <a href="#none" class="home ir">홈</a>
                         <a href="#none" class="depth1">고객센터</a>
                         <a href="#none" class="depth2">온라인 서류제출</a>
-                    </div>
+                    </div> -->
                     <div class="tit-wrap">
                         <div class="sub-tit">
                             <h2>온라인 서류 제출</h2>
@@ -108,8 +118,8 @@
                 <div class="online-wrap">
                     <ul class="step-wrap">
                         <li class="step01"><span>01.<strong>본인인증</strong></span></li>
-                        <li class="step02 active"><span>02.<strong>확인 및 입력</strong></span></li> <!-- 180612 텍스트변경 -->
-                        <li class="step03"><span>03.<strong>제출 완료</strong></span></li> <!-- 180612 텍스트변경 -->
+                        <li class="step02 active"><span>02.<strong>확인 및 입력</strong></span></li>
+                        <li class="step03"><span>03.<strong>제출 완료</strong></span></li>
                     </ul>
 
                     <div class="apply-wrap">
@@ -148,7 +158,7 @@
 
 								<div class="grid2 line-box">
 									<div class="form-wrap">
-										<div class="required-wrap"><h3 class="tit">주민등록번호</h3></div>
+										<div class="required-wrap"><h3 class="tit">주민등록번호 입력</h3></div>
 										<div class="form-wrap" id="ssn_form">
 											<label for="jumin1" class="inp-tit req">주민등록번호</label>
 											<div class="jumin-area">
@@ -163,22 +173,17 @@
 
 
 								<div class="grid-wrap" id="buziNoInput">
-									<div class="list-tit">사업자번호 입력</div>
+									<div class="list-tit">사업자등록번호 입력</div>
 									<div class="grid2 address-detail">
 										<div class="form-wrap">
-											<!--s:기획현행화-->
-											<label for="buziNo" class="inp-tit req">사업자번호 입력</label>
-											<input type="text" name="" value="" id="buziNo" placeholder="사업자번호를 입력하세요" title="사업자번호">
-											<!--e:기획현행화-->
+											<label for="buziNo" class="inp-tit req">사업자등록번호</label>
+											<input type="text" name="" value="" id="buziNo" placeholder="사업자등록번호 입력" title="사업자번호">
 										</div>
 									</div>
 								</div>
 
 								<div class="grid-wrap" id="addressInput">
 									<div class="list-tit">주소정보 입력</div>
-
-									<!-- 180703 pm 추가 -->
-									<p class="rice">주민등록 등초본 조회를 위해 주소정보 확인이 필요합니다. 주소정보를 입력해주세요.</p>
 
 									<div class="grid2 address-area">
 										<div class="form-wrap">
@@ -188,6 +193,7 @@
 													<option selected="selected" value="">시/도</option>
 												</select>
 											</div>
+											<p class="rice">주민등록 등초본 조회를 위해 주소정보 확인이 필요합니다. 주소정보를 입력해주세요.</p>
 										</div>
 										<div class="form-wrap">
 											<label for="getAddr2" class="inp-tit req">시/군/구</label>
@@ -200,11 +206,8 @@
 									</div>
 								</div>
 
-								<!--s:디자인현행화-->
 								<div class="grid-wrap" id="addressTaxInput">
 									<div class="list-tit">주소정보 입력</div>
-
-									<p class="rice">지방세 납세 조회를 위해 주소정보 확인이 필요합니다. 주소정보를 입력해주세요.</p>
 
 									<div class="grid2 address-area">
 										<div class="form-wrap">
@@ -223,20 +226,15 @@
 											<input type="text" name="ADDR_DETAIL" value="" id="addr2" readonly placeholder="상세주소를 직접 입력하세요" title="주소 - 상세주소">
 										</div>
 									</div>
-
+									<p class="rice">지방세 납세 조회를 위해 주소정보 확인이 필요합니다. 주소정보를 입력해주세요.</p>
 								</div>
-								<!--e:디자인현행화-->
 
-								<!--s:디자인현행화-->
 								<div class="grid-wrap account-num" id="accountInput">
 									<div class="required-wrap">
-										<div class="list-tit">계좌정보 입력</div>
+										<div class="list-tit">계좌번호 입력</div>
 										<span class="required-txt">* 필수 입력항목 입니다.</span>
 									</div>
-									<p class="rice">계좌 이력 정보 조회를 위해 은행명 및 계좌번호를 입력해야 합니다.
-										<br>기업은행의 평생계좌(핸드폰 번호로 구성)는 계좌 조회서비스의 이용이 불가하오니, 일반 계좌번호를 이용하여 주시기 바랍니다.
-									</p>
-									<!--s:디자인현행화-->
+									
 									<div class="grid2" id="divGrid0">
 										<div class="form-wrap form-banknum">
 											<label for="getBank" class="inp-tit req">은행명</label>
@@ -248,18 +246,18 @@
 											<input type="text" name="" value="" id="account-num" placeholder="(-) 없이 숫자만 입력해 주세요"  title="계좌번호 입력">
 											<a href="#none" id="a_bank_acct" class="btn-normal form">계좌인증</a>
 										</div>
-										<!--s:디자인현행화(file 클래스 추가)-->
+
+										<div class="rice">계좌 이력 정보 조회를 위해 은행명 및 계좌번호를 입력해야 합니다.
+											<br>기업은행의 생성세화(앤드론 법호도구)은 세화 소외시비스의 비용이 올가하보니, 일인 세화민호를 비중하여 주시기 바랍니다
+										</div>
+
 										<div class="form-wrap form-banknum file">
-										<!--s:디자인현행화 (file 클래스 추가)-->
 											<button class="file-add" onclick="" title="계좌 추가 인증 추가">+ 추가</button>
 											<button class="file-delete" onclick="" title="계좌 추가 인증 삭제">- 삭제</button>
 										</div>
 									</div>
-									<!-- e:디자인현행화-->
 								</div>
-								<!--e:디자인현행화-->
 
-								
 								<div class="grid-wrap" id="div_id_file">
 									<div class="required-wrap">
 										<div class="list-tit">신분증 파일 첨부</div>

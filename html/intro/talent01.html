@@ -88,39 +88,24 @@
         <div id="contentsWrap">
         
             <!-- s:subVisualWrap -->
-			<!-- s:디자인현행화 -->
-			<div id="subVisualWrap" class="sub-type01">
-			<!-- e:디자인현행화 -->
-				<div>
-					<div class="breadcrumb">
-						<a href="/" class="home ir">홈</a>
-						<a href="/deposit/submain" class="depth1">고려저축은행소개</a>
-						<!-- <a href="/deposit/register" class="depth2">인재채용</a>
-						<a href="/deposit/register" class="depth3">인재상</a> -->
-					</div>
-					<!-- s:디자인현행화 -->
-					<!-- <div class="tit-wrap">
+			<div id="subVisualWrap" class="sub-type03">
+
+                <!--D: 전체 구조 변경 -->
+				<div id="breadcrumb" class="breadcrumb-renewal">
+					<script>
+						$(document).ready(function () {
+							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
+						});
+					</script>
+				</div>
+
+                <div>
+					<div class="tit-wrap">
 						<div class="sub-tit">
 							<h2>인재상</h2>
-							<p class="desc">고객만족을 위한 고려저축은행의 인재</p>
-						</div>
-					</div> -->
-
-					<div class="prod-main-tit">
-						<div class="sub-tit">
-							<h2>고려저축은행소개</h2>
-						</div>
-						<div class="prod-select">
-							<a href="../intro/intro_greetings.html" title="링크이동">고려저축은행소개</a>
-							<a href="../intro/busi_summary.html" title="링크이동">경영공시</a>
-							<a href="../intro/ethical01.html" title="링크이동">윤리경영</a>
-							<a href="../intro/heungkuk.html" title="링크이동">흥국금융가족</a>
-							<a href="../intro/ci.html" title="링크이동">CI소개</a>
-							<a href="../intro/talent01.html" class="on" title="링크이동">인재채용</a>
-							<!-- <a href="../intro/branchHeadOffice.html" title="링크이동">영업점안내</a> -->
+							<p class="desc">고객만족을 위한 예가람저축은행의 인재</p>
 						</div>
 					</div>
-					<!-- e:디자인현행화 -->
 				</div>
 			</div>
 			<!-- //e:subVisualWrap -->
@@ -128,23 +113,15 @@
             <!-- s:contents -->
             <div class="contents default-wrap">
                 <div class="introduction-wrap">
-					<div class="tab-wrap">
-                        <ul>
-                            <li class="active"><a href="../intro/talent01.html">인재상</a></li>
-                            <!--s:기획현행화 (채용공고 선택 시 태광그룹 URL이동)-->
-                            <li><a href="#none">채용공고</a></li>
-                            <!--s:기획현행화 (채용공고 선택 시 태광그룹 URL이동)-->
-                        </ul>
-                    </div>
-					<!-- //s: 2023-07-13 , 구조 수정 -->
+					
                     <div class="talent-cts">
                         <div class="tit-img">
-							<span>고객에게 행복을 주는</span><span>따뜻한 금융 파트너</span>
+							<span>고객과 함께</span> <span>미래로 나아가는 태광인</span>
                         </div>
                         <ul>
                             <li class="talent1">
                                 <p class="tit">신의<span>Faith</span></p>
-                                <span>함께 일하고 원칙을 준수하며 신뢰를 쌓는 사람</span>
+                                <span>함께 일하고 원칙을 준수하며<br /> 신뢰를 쌓는 사람</span>
                             </li>
                             <li class="talent2">
                                 <p class="tit">변화<span>Change</span></p>
@@ -154,15 +131,13 @@
                                 <p class="tit">실행<span>Execution</span></p>
                                 <span>현장에서 답을 찾고 <br>앞장서 실천하는 사람</span>
                             </li>
-							<li class="talent4">
-                                 <p class="tit">프로의식<span>Professional</span></p>
-                                <span>주어진 업무에 <br>최고가 되는 사람</span>
-                            </li>
                         </ul>
+
+                        <div class="btn-wrap">
+							<a href="#none" class="btn-big navy">채용정보 바로가기</a>
+						</div>
                     </div>
-					<!-- e: 2023-07-13 , 구조 수정 //-->
                     
-                    <!-- //180711 pm 수정 -->                    
                 </div>
             </div>
             <!-- //e:contents -->

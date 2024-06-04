@@ -89,12 +89,22 @@
 		<div id="contentsWrap">
 			<!-- s:subVisualWrap -->
             <div id="subVisualWrap" class="sub-type03">
+
+				<!--D: 전체 구조 변경 -->
+				<div id="breadcrumb" class="breadcrumb-renewal">
+					<script>
+						$(document).ready(function(){
+							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
+						});
+					</script>
+				</div>
+
                 <div>
-                    <div class="breadcrumb">
+                    <!-- <div class="breadcrumb">
                         <a href="#none" class="home ir">홈</a>
                         <a href="#none" class="depth1">고객센터</a>
                         <a href="#none" class="depth2">온라인 서류제출</a>
-                    </div>
+                    </div> -->
                     <div class="tit-wrap">
                         <div class="sub-tit">
                             <h2>온라인 서류 제출</h2>
@@ -109,19 +119,18 @@
 				 <div class="online-wrap">
                     <ul class="step-wrap">
                         <li class="step01 "><span>01.<strong>본인인증</strong></span></li>
-                        <li class="step02"><span>02.<strong>확인 및 입력</strong></span></li> <!-- 180612 텍스트변경 -->
-                        <li class="step03 active"><span>03.<strong>제출 완료</strong></span></li> <!-- 180612 텍스트변경 -->
+                        <li class="step02"><span>02.<strong>확인 및 입력</strong></span></li>
+                        <li class="step03 active"><span>03.<strong>제출 완료</strong></span></li>
                     </ul>
 					
-					<!-- s: 디자인 현행화 -->
 					<div class="comp-wrap">
 						<h3 class="tit">온라인 서류제출 완료</h3>
 
 						<div class="cts-box suc-type">
-							<p class="box-info"><span>김고려</span> 고객님의 <span>증빙서류제출</span>이 <span>완료</span>되었습니다.</p>
+							<p class="box-info"><span>예가람</span> 고객님의 <span>증빙서류제출</span>이 <span>완료</span>되었습니다.</p>
 							<div class="box-txt">
 								<ul class="desc">
-									<li>위 관련된 문의사항은 당행 대표번호 <span class="accent2">대표번호 1877-9900</span>으로 연락부탁드립니다.</li>
+									<li>위 관련된 문의사항은 당행 대표번호 <span class="accent2">대표번호 1877-7788</span>으로 연락부탁드립니다.</li>
 									<li>( 상담가능시간 : 평일 09:00 ~ 18:00 )</li>
 								</ul>
 							</div>
@@ -142,7 +151,7 @@
 								</thead>
 								<tbody id="isSUCCESS">
                                     <tr>
-                                        <th>데이터 영역</th>
+                                        <th>예가람에서 제공하는 보안프로그램을 한번에 다운받기 위한 프로그램입니다.</th>
                                     </tr>
 								</tbody>
 							</table>
@@ -181,7 +190,6 @@
 							<button type="button" name="button" class="btn-big navy" onclick="location.replace('/home')">메인으로</button>
 						</div>
 					</div>
-					<!-- e: 디자인 현행화 -->
 					
                 </div>
 			</div>
