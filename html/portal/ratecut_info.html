@@ -95,75 +95,58 @@
         <div id="contentsWrap">
 
 			<!-- s:subVisualWrap -->
-			<!--s:기획현행화-->
-			<div id="subVisualWrap" class="sub-type01">
+			<div id="subVisualWrap" class="sub-type03">
+
+				<!--D: 전체 구조 변경 -->
+				<div id="breadcrumb" class="breadcrumb-renewal">
+					<script>
+						$(document).ready(function () {
+							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
+						});
+					</script>
+				</div>
+
 				<div>
-					<div class="breadcrumb">
-						<a href="#none" class="home ir">홈</a>
-						<a href="#none" class="depth1">금융소비자보호</a>
-						<a href="#none" class="depth1">금융소비자권리</a>
-						<a href="#none" class="depth2">금리인하요구권</a>
-					</div>
-					<!-- <div class="tit-wrap">
+					<div class="tit-wrap">
 						<div class="sub-tit">
-							<h2>금융소비자 권리</h2>
-                            <p class="desc">자료열람요구권 안내 페이지입니다.</p>
-                        </div>
-					</div> -->
-
-					<div class="prod-main-tit">
-						<div class="sub-tit">
-							<h2>금융소비자보호</h2>
-						</div>
-						<div class="prod-select">
-							<a href="../portal/protection_info.html" title="링크이동">금융소자보호체계</a>
-							<a href="../portal/online_const.html" title="링크이동">민원센터</a>
-							<a href="../portal/civil_apply_exam.html" title="링크이동">금융소비자보호우수사례</a>
-							<a href="../portal/illegal_contract_cancel.html" class="on" title="링크이동">금융소비자권리</a>
-							<a href="../portal/disclosure_civil_complaints.html" title="링크이동">금융소비자보호공시</a>
-							<a href="../portal/collection_bonds_guide.html" title="링크이동">채권추심업무</a>
-							<a href="../portal/fraud_notice.html" title="링크이동">유용한소비자정보</a>
-							<a href="../portal/aptness_confirm.html" title="링크이동">적합성·적정성 조회</a>
+							<h2>금리인하요구권</h2>
+							<p class="desc">약정금리 인하를 요구할 수 있는 권리입니다.</p>
 						</div>
 					</div>
-
 				</div>
 			</div>
-			<!--e:기획현행화-->
 			<!-- //e:subVisualWrap -->
 			<!-- s:contents -->
-			<div class="contents default-wrap"> <!-- border 없는 contents class = contents02 -->
-				<div class="tab-wrap">
+			<div class="contents default-wrap">
+				<!--D: 삭제 <div class="tab-wrap">
 					<ul>
                         <li><a href="../portal/illegal_contract_cancel.html">위법계약 해지권</a></li>
                         <li><a href="../portal/withdrawal.html">청약철회권</a></li>
                         <li class="active"><a href="../portal/ratecut_info.html">금리인하요구권</a></li>
                         <li><a href="../portal/view_data_req.html">자료열람요구권</a></li>
                     </ul>
-				</div>
-				<!--s:기획현행화 (텍스트수정, <strong> 태그 추가, 가계대출 기업대출 th > td로 변경)-->
+				</div> -->
 				<div class="ratecut-info-wrap">
 					<h3 class="tit">금리인하요구권</h3>
 					<p class="list-tit type2">금리인하 요구권(상호저축은행법 제 14조의 2)이란?</p>
 					<ul class="define-list">
 						<li>
 							<span class="de-tit">설명</span>
-
 							<div class="de-cts">
-								금융소비자가 <strong>신용상태의 개선이 있는 경우</strong> 차주가 저축은행에 <strong>금리인하를 요구할 수 있는 법상 권리</strong>를 말한다.
-							</div>
+							대출 등을 이용하는 금융소비자가 재산 증가, 개인신용평점 상승 등 신용상태가 개선되는 경우 약정금리 인하를 요구할 수 있는 상호저축은행법상 권리</div>
 						</li>
 						<li>
-							<span class="de-tit">금리인하요구권 적용대상</span>
-							<div class="de-cts"><strong>차주</strong>(가계,기업) 및 <strong>대출종류</strong>(신용, 담보대출)등에 <strong>관계없이</strong> 금리인하 요구 행사가 가능합니다. 단, 신용상태와 관계없이 금리가 결정되는 대출상품 및 햇살론, BIG3등대론 상품의 경우 적용대상에서 제외됩니다.</div>
+							<span class="de-tit">금리인하요구권<br>적용대상</span>
+							<div class="de-cts">
+							차주의 신용상태가 금리에 영향을 주지 않은 대출을 제외한 모든 대출 상품</div>
 						</li>
 						<li>
-							<span class="de-tit">금리인하 행사(청구) 요건</span>
+							<span class="de-tit">금리인하 요구사유</span>
 							<div class="de-cts">
-								금리인하요구제도에 따라 금리인하를 요구할 수 있는 요건은 다음과 같습니다.
+								금리인하 요구사유는 다음과 같습니다.
 								<div class="table-wrap">
 									<table class="table-style">
-										<caption>금리인하 행사(청구) 요건</caption>
+										<caption>금리인하 요구사유</caption>
 										<thead>
 											<tr>
 												<th scope="col">가계대출</th>
@@ -173,19 +156,17 @@
 											<tr>
 												<td>
 													<ol class="list type4">
-														<li>1. 소득이 증가(취업, 승진, 이직, 전문자격 취득 등)하였거나, 재산증가(자산증가) 등 개인의 재무상태가 개선된 것으로 판단되는 경우</li>
-														<li>2. 신용평가회사의 신용평점이 상승하거나 기타 본인의 신용도가 상승하였다고 판단되는 경우</li>
+														<li>1. 소득 증가 (취업, 승진, 이직, 전문자격 취득 등) 또는 재산 증가(자산 증가, 부채 감소) 등 재무 상태 개선</li>
+														<li>2. 개인신용평점 상승</li>
 														<li>3. 기타 차주가 신용상태 개선으로 판단하는 사항</li>
-														<li>4. 전문자격증 취득 후 관련 직종에 종사하는 경우</li>
-														<li>5. 기타 대표이사가 별도로 정하는 경우</li>
 													</ol>
 												</td>
 											</tr>
 										</tbody>
 									</table>
-
+									
 									<table class="table-style">
-										<caption>금리인하 행사(청구) 요건</caption>
+										<caption>금리인하 요구사유</caption>
 										<thead>
 											<tr>
 												<th scope="col">기업대출</th>
@@ -195,11 +176,11 @@
 											<tr>
 												<td>
 													<ol class="list type4">
-														<li>1. 이익증가 등 재무상태의 개선이 확인되는 경우</li>
-														<li>2. 회사채등급(개인사업자는 신용등급 또는 개인신용평점)상승, 추가담보 제공, 특허권을 취득한 경우 등 신용도가 상승하였다고 판단되는 경우</li>
-														<li>3. 기타 차주가 신용상태 개선으로 판단하는 경우</li>
-														<li>4. 기타 대표이사가 별도로 정하는 경우</li>
-														<li><strong>* 신용상태 개선이 금리 산정에 영향을 주지 않는 경우 등 저축은행의 심사결과에 따라 금리가 인하되지 않을 수도 있습니다.</strong></li>
+														<li>1. 재무상태 개선(이익증가, 부채 감소 등)</li>
+														<li>2. 신용도 상승(회사채 등급상승, 추가담보 제공, 특허권 취득 등)<br>
+															- 개인사업자는 개인신용펑점 상승
+														</li>
+														<li>3. 기타 차주가 신용상태 개선으로 판단하는 사항</li>
 													</ol>
 												</td>
 											</tr>
@@ -211,245 +192,62 @@
 						<li>
 							<span class="de-tit">신청방법</span>
 							<div class="de-cts">
-								<p>행사요건을 증빙할 수 있는 서류를 청부한 금리인하요구 신청서를 작성하여 거래하는 영업점에 제출(유선, SMS, 서면 등) 해야 합니다.</p>
-								<p><strong>* 재직증명서,근로소득원천징수영수증,해당자격증,직위변동 등 차주의 신용상태 변동을 입증할 수 있는 서류</strong></p>
-								<p>고려저축은행 모바일앱<strong> &#60;GO BANK&#62; </strong>을 이용하여 신청할 수 있습니다.</p>
+								<ul class="list type2">
+									<li>① 모바일앱(예스뱅킹) &gt; 고객센터 &gt; 금리인하요구권</li>
+									<li>② 홈페이지 &gt; 소비자정보포털 &gt; 금융소비자 권리 &gt; 금리인하요구권</li>
+									<li>③ 전화(1877-7788) 및 영업점 방문</li>
+									<li>④ 저축은행중앙회 앱 &gt; 메인화면 우측 하단 금리인하요구권</li>
+								</ul>
 							</div>
 						</li>
 						<li>
-							<span class="de-tit">신청시기 및 횟수</span>
+							<span class="de-tit">접수 및 통보절차</span>
 							<div class="de-cts">
-								신용상태 개선이 발생한 경우 신청횟수, 신청시점에 <strong>관계없이</strong> 금리인하요구 행사할 수 있습니다.
+								<ul class="list type2">
+									<li>① 차주의 금리인하 요구가 있을 때에는 금리인하요구 신청서 및 행사요건을 입증할 수 있는 증빙자료 등을 징구하여야 한다.</li>
+									<li>② 신청 접수일로부터 10영업일 이내에 처리 결과를 본인에게 유선(통화내용 기록), 우편, 휴대폰 문자메시지, 이메일 등으로 통지한다.</li>
+									<li>③ 심사결과 금리인하요구가 적정하다고 인정되는 경우에는 차주와 여신조건변경 계약을 체결하여야 한다.</li>
+									<li>④ 금리인하요구권 접수, 심사결과 등 관련 기록을 보관·관리하여야 한다.</li>
+								</ul>
 							</div>
 						</li>
 						<li>
-							<span class="de-tit">심사 및 통보</span>
+							<span class="de-tit">금리인하 요구절차</span>
 							<div class="de-cts">
-								<strong>신청 접수일로부터 10영업일 이내</strong>(단, 금리인하대상 여부 판단 필요자료의 보완에 걸리는 기간은 제외)에 처리 결과를 고객 본인에게 <strong>통지(유선, SMS, E-mail 등)</strong> 합니다.
-							</div>
-						</li>
-						<li>
-							<span class="de-tit">문의사항</span>
-							<div class="de-cts">
-								당행 각 영업점(대표번호 : 051-1877-9900) 및 디지털 뱅킹 고객센터(1544-3637)
-							</div>
-						</li>
-					</ul>
-				</div>
-				<!--e:기획현행화 (텍스트수정, <strong> 태그 추가, 가계대출 기업대출 th > td로 변경)-->
-
-				<!--s:기획현행화 (내용추가)-->
-				<div class="ratecut-info-wrap">
-					<h3 class="tit">비금융정보 신용평가 반영 제도 안내</h3>
-					<p class="list-tit type2">비금융정보 신용평가 반영 제도란?</p>
-					<ul class="define-list">
-						<li>
-							<span class="de-tit">설명</span>
-
-							<div class="de-cts">
-								개인이 직접 비금융정보를 신용조회회사에 제공하고 신용조회회사는 개인이 제공한 정보를 기반으로 개인신용평가에 반영하는 제도입니다.
-							</div>
-						</li>
-						<li>
-							<span class="de-tit">통신·공공요금<br/>
-								성실남부정보 등<br/>
-								개인신용평가 반영 안내</span>
-							<div class="de-cts">
-								<div class="table-wrap">
-									<table class="table-style">
-										<caption>통신·공공요금 성실남부정보 등 개인신용평가 반영 안내</caption>
-										<thead>
-											<tr>
-												<th scope="col">반영대상자</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>
-													<ol class="list type4">
-														<li>CB 신용평가시 비금융거래정보 반영을 희망하는 자로서 최근 6개월 이상의 성실납부실적 제출자</li>
-													</ol>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-
-									<table class="table-style">
-										<caption>통신·공공요금 성실남부정보 등 개인신용평가 반영 안내</caption>
-										<thead>
-											<tr>
-												<th scope="col">반영정보 (증빙자료)</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>
-													<ol class="list type4">
-														<li>- 국민연금 - 건강보험료</li>
-														<li>: 국민연금공단, 건강보험공단에서 발부한 납부실적 자료</li>
-														<li>- 공공요금(도시가스, 수도, 전기)</li>
-														<li>: 해당 기관에서 발부한 납부실적 자료</li>
-														<li>- 통신요금(휴대폰)</li>
-														<li>: 통신회사 등에서 발부한 납부실적 자료</li>
-													</ol>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-
-									<table class="table-style">
-										<caption>통신·공공요금 성실남부정보 등 개인신용평가 반영 안내</caption>
-										<thead>
-											<tr>
-												<th scope="col">증빙자료 제출방법</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>
-													<ol class="list type4">
-														<li>- 해당 공공기관, 통신회사 등 홈페이지나 사무소를 방문, 성실납부실적자료를 발급받아</li>
-														<li>NICE, KCB에 우편 - FAX - 방문 제출</li>
-														<li>- 국민연금 및 건강보험 납부실적은 나이스(나이스지킴이 : http://credit.co.kr) 및</li>
-														<li>KCB(올크레딧 : http://allcredit.co.kr)에 접속하여 웹스크래핑 방식으로 직접 제출 가능</li>
-													</ol>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-
-									<table class="table-style">
-										<caption>통신·공공요금 성실남부정보 등 개인신용평가 반영 안내</caption>
-										<thead>
-											<tr>
-												<th scope="col">반영방법</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>
-													<ol class="list type4">
-														<li>CB의 확인절차를 거쳐 신용평가시 5~15점의 가점 부여</li>
-													</ol>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-
-									<table class="table-style">
-										<caption>통신·공공요금 성실남부정보 등 개인신용평가 반영 안내</caption>
-										<thead>
-											<tr>
-												<th scope="col">유의사항</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>
-													<ol class="list type4">
-														<li>성실납부실적 증빙자료를 매 6개월마다 지속 제출하여야만 가점 효력 유지</li>
-													</ol>
-												</td>
-											</tr>
-										</tbody>
-									</table>
+								금리인하 요구절차는 다음과 같습니다.
+								<p class="noti">※ 금리인하 심사는 행사요건을 증빙할 수 있는 증빙서류 제출 시 확인 가능합니다.<br>(전화접수 및 영업점 방문시 본인확인서류 필수)</p>
+								<img src="../../resources/images/page/img_ratecut_info.png" alt="금리인하요구권 - 요구절차 / 자세한 설명은 아래 내용 참고" class="mt20">
+								<div class="blind">
+									<ol>
+										<li>1.고객:신청서 및 증빙자료 제출</li>
+										<li>2.저축은행:금리인하 적정여부 심사</li>
+										<li>3.저축은행:결과통지</li>
+									</ol>
 								</div>
+							</div>
+						</li>
+						<li>
+							<span class="de-tit">유의사항</span>
+							<div class="de-cts">
+								<ul class="list type2">
+									<li>① 금리인하 요구 사유에 따라 신용정보조회가 진행 될 수 있습니다.</li>
+									<li>② 금리인하 신청요건, 심사를 통해 수용 또는 불수용 될 수 있습니다.</li>
+									<li>③ 신용상태개선이 금리 산정에 영향을 주지 않는 경우 금리인하요구가 거절될 수 있습니다.</li>
+									<li>④ 신용상태 개선이 발생한 경우 신청횟수, 신청시점에 관계없이 금리인하요구 가능합니다.</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<span class="de-tit">금리인하요구 결과통지</span>
+							<div class="de-cts">
+								신청서류 및 관련 서류 접수일로부터 10영업일 이내에 유선 및 문자로 개별 통지합니다.
+								<p class="noti">* 휴대폰인증이 어려운 경우 상담원과의 전화 통화로 접수하실 수 있습니다.</p>
 							</div>
 						</li>
 					</ul>
 				</div>
 
-				<div class="ratecut-info-wrap">
-					<p class="list-tit type2">제출방법</p>
-					<table class="table-style">
-						<caption>제출방법</caption>
-						<colgroup>
-							<col>
-							<col>
-						</colgroup>
-						<thead>
-							<tr>
-								<th scope="col">구분</th>
-								<th scope="col">나이스평가정보</th>
-								<th scope="col">코리아크레딧뷰로</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th>주소</th>
-								<td>서울시 영등포구 국회대로 66길 9 NICE평가정보 고객센터
-									비금융정보 개인신용평가 담당자 앞 (우)07237</td>
-								<td>서울시 종로구 김상옥로 29 서울보증보험 B/D 19층
-									KCB고객센터 비금융정보 개인신용평가 담당자 앞 (우)03128</td>
-							</tr>
-							<tr>
-								<th>전화</th>
-								<td>02-1588-2486</td>
-								<td>02-708-1000</td>
-							</tr>
-							<tr>
-								<th>FAX</th>
-								<td>02-2122-5008</td>
-								<td>02-708-1010</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-
-				<p class="rice">자세한 내용은 NICE평가정보(주) 홈페이지http://credit.co.kr 또는 KCB(코리아크레딧뷰로) 홈페이지http://allcredit.co.kr에서 확인하실 수 있습니다.</p>
-				<!--e:기획현행화 (내용추가)-->
-
-				<!--s:기획현행화 (신청서 다운로드 삭제)-->
-				<!-- <p class="btn-wrap btn-down">
-					<a href="/resources/file/금리인하요구권_신청서.pdf" class="btn-normal btn-ft-dwn" download="">신청서 다운로드</a>
-				</p> -->
-				<!--e:기획현행화 (신청서 다운로드 삭제-->
-
-				<!--s:기획현행화(삭제)-->
-				<!-- <div class="agree-wrap" style="margin-top:20px;">
-					<div class="agree-area">
-						<div class="agree-cts">
-							<div class="agree-box" style="margin-top:0px;padding-top:0px;border-top:0px;">
-								<div class="items-wrap">
-									<div class="items">
-										<div class="item-check">
-											<div>
-												<span class="ctm-check">
-													<input type="checkbox" name="check" id="agree5" value="" title="[필수] 개인(신용)정보 수집·이용 동의서[금리인하요구용]">
-													<label for="agree5"></label>
-												</span>
-												<p class="item-tit">
-													<label for="agree5">
-														<span id="labelTremsName" style="font-size: 16px;">[필수] 개인(신용)정보 수집·이용 동의서[금리인하요구용]</span>
-													</label> 
-													<button type="button" name="button" id="detailViewBtn" class="btn-normal tiny" data-tooltip="manual011-layer" data="agree-more" value="T001400001.pdf">자세히보기</button>
-												</p>
-											</div>
-											<div class="sub_agree_5" id="sub_agree_5" style="margin-left: 25px; display: none;">
-												<span class="ctm-check checked">
-													<input type="checkbox" name="check" id="agree_1" class="agree_1_1" value="" disabled="disabled">
-													<label for="agree_1">위 고유식별정보 수집∙이용에 동의하십니까?</label>
-												</span><br>
-											</div>
-											<div class="sub_agree_5" id="sub_agree_6" style="margin-left: 25px; display: none;">
-												<span class="ctm-check checked">
-													<input type="checkbox" name="check" id="agree_2" class="agree_1_1" value="" disabled="disabled">
-													<label for="agree_2">위 개인(신용)정보 수집∙이용에 동의하십니까?</label>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div> -->
-				<!--e:기획현행화(삭제)-->
-
-				<!--s:기획현행화 (추가)-->
-				<div class="btn-wrap">
-					<button type="button" name="button" class="btn-normal btn-ft-dwn">신청서 다운로드</button>
-				</div>
+				
 
 				<div class="agree-wrap">
 					<div class="agree-area">
@@ -486,20 +284,23 @@
 						</div>
 					</div>
 				</div>
-				<!--e:기획현행화 (추가)-->
+				<!--D: 추가-->
+				<div class="default-wrap02">
+					<p>담당부서 : 준법감시팀 / 담당자 : 최윤정 / 전화번호 : 02-6906-7065</p>
+				</div>
+				<!--D: 추가//-->
+				<!--D: 버튼 수정-->
 				<p class="btn-wrap">
+					<button type="button" name="button" class="btn-normal form">신청서 다운로드</button>
 					<a href="#" class="btn-big navy" id="reqRateCut">신청하기</a>
-					<a href="#" class="btn-big" id="reqRateCutHis">신청 이력조회</a>
+					<a href="#" class="btn-big prod-more" id="reqRateCutHis">신청 이력조회</a>
 				</p>
-				<!--e:2023-07-17 구조변경-->
+				<!--D: 버튼 수정//-->
 			</div>
 			<!-- //e:contents -->
 			<button type="button" name="button" class="btn-circle top ir btn-top">위로</button>
 		</div>
         <!-- //e: contentsWrap -->
-
-		<!--s:기획현행화 레이어팝업 삭제 -->
-		<!--e:기획현행화 레이어팝업 삭제 -->
 
         <!-- ********** Include ********** -->
         <!-- s footerWrap -->
