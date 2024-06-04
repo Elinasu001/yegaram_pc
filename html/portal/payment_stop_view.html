@@ -98,69 +98,60 @@
         <div id="contentsWrap">
 
             <!-- s:subVisualWrap -->
-            <div id="subVisualWrap" class="sub-type01">
+            <div id="subVisualWrap" class="sub-type03">
+
+				<!--D: 전체 구조 변경 -->
+				<div id="breadcrumb" class="breadcrumb-renewal">
+					<script>
+						$(document).ready(function () {
+							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
+						});
+					</script>
+				</div>
+
 				<div>
-					<div class="breadcrumb">
-						<a href="#none" class="home ir">홈</a>
-						<a href="#none" class="depth1">금융소비자보호 공시</a>
-						<a href="#none" class="depth2">지급정지관련 공시</a>
-					</div>
-					<!-- <div class="tit-wrap">
+					<div class="tit-wrap">
 						<div class="sub-tit">
-							<h2>금융소비자보호 공시</h2>
-                            <p class="desc">고려저축은행의 전기통신금융사기공시 안내입니다.</p>
-                        </div>
-					</div> -->
-
-                    <div class="prod-main-tit">
-						<div class="sub-tit">
-							<h2>금융소비자보호</h2>
-						</div>
-						<div class="prod-select">
-							<a href="../portal/protection_info.html" title="링크이동">금융소자보호체계</a>
-							<a href="../portal/online_const.html" title="링크이동">민원센터</a>
-							<a href="../portal/civil_apply_exam.html" title="링크이동">금융소비자보호우수사례</a>
-							<a href="../portal/illegal_contract_cancel.html" title="링크이동">금융소비자권리</a>
-							<a href="../portal/disclosure_civil_complaints.html" class="on" title="링크이동">금융소비자보호공시</a>
-							<a href="../portal/collection_bonds_guide.html" title="링크이동">채권추심업무</a>
-							<a href="../portal/fraud_notice.html" title="링크이동">유용한소비자정보</a>
-							<a href="../portal/aptness_confirm.html" title="링크이동">적합성·적정성 조회</a>
+							<h2>지급정지관련 공시</h2>
+							<p class="desc">예가람저축은행의 전기통신금융사기공시 안내입니다.</p>
 						</div>
 					</div>
-
 				</div>
 			</div>
             <!-- //e:subVisualWrap -->
 			<!-- s:contents -->
 			<div class="contents default-wrap">
-                <div class="tab-wrap">
+                <!--D: 삭제 <div class="tab-wrap">
                     <ul>
                         <li><a href="../portal/disclosure_civil_complaints.html">민원공시</a></li>
                         <li><a href="../portal/evaluation_result_list.html">금융소비자보호 실태평가</a></li>
                         <li class="active"><a href="../portal/payment_stop_list.html">지급정지관련 공시</a></li>
                         <li><a href="../portal/bond_extinction_list.html">채권소멸관련 공시</a></li>
                     </ul>
-                </div>
+                </div> -->
                 <div class="board-view-wrap">
                     <div class="board-tit">
                         <strong id="category_nm" class="divs">민원공시</strong>
                         <h3 id="notice_title">2022년 3분기 민원발생건수</h3>
-                        <!--s:기획현행화 (클래스추가 및 텍스트수정)-->
                         <div class="date">
                             <span id="apply_dt" class="">게시일 : 2022/10/31</span><br>
                             <span id="point_dt" class="">기준일 : 2022/09/30</span>
                         </div>
-                        <!--e:기획현행화 (클래스추가 및 텍스트수정)-->
                     </div>
                     <div class="board-body">
                         <div id="notice_contents" class="board-con"><p><span >2022년 3분기 민원발생건수</span>&nbsp;</p></div>
                     </div>
                     <div id="notice_attachFiles" class="add-file-box"><a href="/common/download/EewO%252Fvuhpnpx0RBAIA40yw%3D%3D" title="민원발생건수 공시(2022년 3분기).pdf 다운로드">민원발생건수 공시(2022년 3분기).pdf</a></div>
-                    <p class="btn-wrap"><a href="../portal/payment_stop_list.html" class="btn-big navy">목록으로</a></p> <!-- s : 2023-07-15, 개발화면 링크 변경 필요 e : -->
+                    <p class="btn-wrap"><a href="../portal/payment_stop_list.html" class="btn-big navy">목록으로</a></p>
                     <div id="notice_nav" class="board-nav">
                         <p id="notice_before" class="nav-prev"><strong>이전글</strong><a href="#none">2022년 2분기 민원발생건수</a></p>
                         <p id="notice_after" class="nav-next"><strong>다음글</strong><a href="#none">2022년 4분기 민원발생건수</a></p>
                     </div>
+                    <!--D: 추가-->
+                    <div class="default-wrap02">
+                        <p>담당부서 : 준법감시팀 / 담당자 : 최윤정 / 전화번호 : 02-6906-7065</p>
+                    </div>
+                    <!--D: 추가//-->
                 </div>
             </div>
 			<!-- //e:contents -->
