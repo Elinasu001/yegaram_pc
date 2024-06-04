@@ -731,7 +731,7 @@ p + ul.list-wrap01 { margin-top:10px; }
 
 /* 팝업호출버튼 ( 약관자세히보기 및 바로가기버튼 등) */
 .tiny,
-.btn-popup { border-radius:45px;padding:0px 40px;height:45px;line-height:47px;font-size:16px;font-weight:500;border:1px solid #BBBBBB;color:#666666;background:#ffffff;/* float:right; */box-shadow:none;}
+.btn-popup { border-radius:45px;padding:0px 40px;height:47px;line-height:47px;font-size:16px;font-weight:500;border:1px solid #BBBBBB;color:#666666;background:#ffffff;/* float:right; */box-shadow:none;}
 .tiny:hover, 
 .tiny:focus,
 .btn-popup:hover, 
