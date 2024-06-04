@@ -97,59 +97,43 @@
         <!-- s contentsWrap -->
         <div id="contentsWrap">
 			<!-- s:subVisualWrap -->
-            <!--s:기획현행화-->
-            <div id="subVisualWrap" class="sub-type01">
+            <div id="subVisualWrap" class="sub-type03">
+
+				<!--D: 전체 구조 변경 -->
+				<div id="breadcrumb" class="breadcrumb-renewal">
+					<script>
+						$(document).ready(function () {
+							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
+						});
+					</script>
+				</div>
+
 				<div>
-					<div class="breadcrumb">
-						<a href="#none" class="home ir">홈</a>
-						<a href="#none" class="depth1">금융소비자보호 공시</a>
-						<a href="#none" class="depth2">실태평가</a>
-					</div>
-					<!-- <div class="tit-wrap">
+					<div class="tit-wrap">
 						<div class="sub-tit">
-							<h2>금융소비자보호 공시</h2>
-                            <p class="desc">고려저축은행의 금융소비자보호 실태평가 안내입니다.</p>
-                        </div>
-					</div> -->
-
-                    <div class="prod-main-tit">
-						<div class="sub-tit">
-							<h2>금융소비자보호</h2>
-						</div>
-						<div class="prod-select">
-							<a href="../portal/protection_info.html" title="링크이동">금융소자보호체계</a>
-							<a href="../portal/online_const.html" title="링크이동">민원센터</a>
-							<a href="../portal/civil_apply_exam.html" title="링크이동">금융소비자보호우수사례</a>
-							<a href="../portal/illegal_contract_cancel.html" title="링크이동">금융소비자권리</a>
-							<a href="../portal/disclosure_civil_complaints.html" class="on" title="링크이동">금융소비자보호공시</a>
-							<a href="../portal/collection_bonds_guide.html" title="링크이동">채권추심업무</a>
-							<a href="../portal/fraud_notice.html" title="링크이동">유용한소비자정보</a>
-							<a href="../portal/aptness_confirm.html" title="링크이동">적합성·적정성 조회</a>
+							<h2>금융소비자보호 실태평가</h2>
+							<p class="desc">예가람저축은행의 금융소비자보호 실태평가 안내입니다.</p>
 						</div>
 					</div>
-
 				</div>
 			</div>
-            <!--e:기획현행화-->
             <!-- //e:subVisualWrap -->
 			<!-- s:contents -->
 			<div class="contents default-wrap">
 				<div class="protection-wrap">
-					<div class="tab-wrap">
+					<!--D: 삭제 <div class="tab-wrap">
 						<ul>
 							<li><a href="../portal/disclosure_civil_complaints.html">민원공시</a></li>
 							<li class="active"><a href="../portal/evaluation_result_list.html">금융소비자보호 실태평가</a></li>
 							<li><a href="../portal/payment_stop_list.html">지급정지관련 공시</a></li>
 							<li><a href="../portal/bond_extinction_list.html">채권소멸관련 공시</a></li>
 						</ul>
-					</div>
+					</div> -->
 					<div class="txt-box bull-type">
 						<div>
 							<p>금융소비자보호모범규준에 따라 금융회사는 금융감독원이 주관하는 '금융소비자보호 실태평가제도'를 통해 소비자 보호 수준을 종합적으로 평가 받음</p>
 							<p>공시 대상 : 금융소비자보호 실태평가제도에 따라 금융감독원이 직접 평가하는 저축은행
-                            <!--s:기획현행화-->
 							<br/>(해당 저축은행 민원건수가 저축은행업권 내 비중의 2%이상이고, 총자산이 1조원 이상인 저축은행)</p>
-                            <!--e:기획현행화-->
 							<p>회사별 평가결과조회는 저축은행중앙회의 공시사이트를 통해 제공</p>
 						</div>
 					</div>
@@ -188,7 +172,13 @@
                         </tr>
                     </tbody>
                 </table>
+                <!--D: 추가-->
+                <div class="default-wrap02">
+                    <p>담당부서 : 준법감시팀 / 담당자 : 최윤정 / 전화번호 : 02-6906-7065</p>
+                </div>
+                <!--D: 추가//-->
                 <div id="paging_div" class="pagination-wrap">
+
                 </div>
 			</div>
 			<!-- //e:contents -->
