@@ -90,15 +90,20 @@
         
 			<!-- s:subVisualWrap -->
 			<div id="subVisualWrap" class="sub-type03">
+
+				<!--D: 전체 구조 변경 -->
+				<div id="breadcrumb" class="breadcrumb-renewal">
+					<script>
+						$(document).ready(function () {
+							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
+						});
+					</script>
+				</div>
+
 				<div>
-					<div class="breadcrumb">
-						<a href="#none" class="home ir">홈</a>
-						<a href="#none" class="depth1">고객센터</a>
-						<a href="#none" class="depth2">ARS구성도</a>
-					</div>
 					<div class="tit-wrap">
 						<div class="sub-tit">
-							<h2>ARS 구성도</h2>
+							<h2>ARS구성도</h2>
 							<p class="desc">빠른상담을 위한 고려저축은행 ARS 구성도 입니다.</p>
 						</div>
 					</div>
@@ -107,17 +112,20 @@
 			<!-- //e:subVisualWrap -->
 
 			<!-- s:contents -->
-			<div class="contents default-wrap"> <!-- border 없는 contents class = contents02 -->
+			<div class="contents default-wrap">
 				<div class="ars-wrap">
 					<h3 class="tit">ARS 구성도 안내</h3>
 					<div class="cts-box">
-						<p class="box-line"><span class="pb10">고려 저축은행 대표전화</span>1877-9900</p>
-						<p class="box-txt">안녕하세요. 고객님과 함께하는 고려 저축은행입니다.<br>( 상담시간 : 평일 09:00 ~ 18:00 )</p>
+                        <!--D: 텍스트 변경-->
+						<p class="box-line"><span class="pb10">예가람 저축은행 대표전화</span>1877-7788</p>
+						<p class="box-txt">안녕하세요. 고객님과 함께하는 예가람 저축은행입니다.<br>( 상담시간 : 평일 09:00 ~ 18:00 )</p>
+                        <!--D: 텍스트 변경//-->
 					</div>
 					<p class="mt80 ta-c"><img src="../../../resources/images/page/img_ars.png" alt="ARS 구성도 안내 - 자세한 설명은 아래 내용 참고"></p>
-					<!-- 180724 pm 내용 수정 -->
+                    <!--D: 일괄 변경-->
                     <div class="blind">
                         <ul>
+                            <li>보이스피싱 사고신고는 9번</li>
                             <li>예적금 금리 및 인터넷 뱅킹 안내는 1번</li>
                             <li>원리금 상환 문의는 2번</li>
                             <li>대출 관련 문의는 3번</li>
@@ -162,7 +170,7 @@
                                 <ol>
                                     <li>2-1 전액상환문의</li>
                                     <li>2-2 원리금상환문의
-                                    	 <ol>
+                                    	<ol>
                                             <li>2-2-1 원리금문자발송</li>
                                             <li>2-2-2 상담원연결</li>
                                         </ol>
@@ -182,7 +190,7 @@
                             <dd>
                                 <ol>
                                     <li>4-1 제증명발급
-                                    	 <ol>
+                                    	<ol>
                                             <li>4-1-1 신청방법문자발송</li>
                                             <li>4-1-2 상담원연결</li>
                                         </ol>
@@ -193,32 +201,23 @@
                             <dt>5번 영업점 안내</dt>
                             <dd>
                                 <ol>
-                                    <li>5-1 본점 안내</li>
-                                    <li>5-2 중앙 안내</li>
-                                    <li>5-3 센텀 안내</li>
+                                    <li>5-1 남대문본점 안내</li>
+                                    <li>5-2 강남지점 안내</li>
+                                    <li>5-3 울산지점 안내</li>
+                                    <li>5-4 창원지점 안내</li>
                                 </ol>
                             </dd>
-                            <!-- <dt>*표 입력 오류 시 또는 다시듣기(3회)</dt> -->
+
+                            <dt>9번 보이스피싱 사고신고</dt>
+                            <dd>
+                                <ol>
+                                    <li>상담원 연결</li>
+                                </ol>
+                            </dd>
                             
-                            <!-- 20220928에 바뀐이미지에서 제거된 내용 -->
-                            <!-- <dt>연계대출 신청문의 1688-5114</dt>
-                            <dd>
-                                <ol>
-                                    <li>1877-78788로 연결</li>
-                                </ol>
-                            </dd>
-                            <dt>추가대출 신청전용 1670-1200</dt>
-                            <dd>
-                                <ol>
-                                    <li>1번 ARS 바로접수</li>
-                                    <li>2번 맴버십 안내</li>
-                                    <li>0번 기타문의 1877-9900로 연결</li>
-                                </ol>
-                            </dd> -->
-                            <!-- 20220928에 바뀐이미지에서 제거된 내용 -->
                         </dl>
                     </div>
-                    <!-- //180724 pm 내용 수정 -->
+                    <!--D: 일괄 변경-->
 				</div>
 			</div>
 			<!-- //e:contents -->
