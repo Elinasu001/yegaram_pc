@@ -878,7 +878,7 @@ table[class^="table-style"] tbody:has(:not(th)) tr td,
 [class^="table-wrap"] table tbody:has(:not(th)) tr td,
 [class^="list-wrap"] table tbody:has(:not(th)) tr td{ border-left: 0; }
 
-table[class^="table-style"] tbody:has(:not(th)) tr td, [class^="table-wrap"] table tbody:has(:not(th)) tr td { border-left:1px solid #DDDDDD; }
+/* table[class^="table-style"] tbody:has(:not(th)) tr td, [class^="table-wrap"] table tbody:has(:not(th)) tr td { border-left:1px solid #DDDDDD; } */
 
 [class^="table-style"] td[rowspan]:last-child,
 [class^="table-type"] td[rowspan]:last-child{ border-left: 1px solid #ddd; }
