@@ -115,15 +115,54 @@
                         <li class="step03"><span>03.<strong>신청 완료</strong></span></li>
                     </ul>
 					
-					<!-- s:2023-07-17 구조변경 -->
-					<!-- s:공동인증서, 카카오페이인증 선택 시 노출 -->
+
+                    <div class="step-auth">
+                        <h3 class="tit">제증명서 발급신청 본인인증</h3>
+                        <p class="tit-txt">
+                            제증명서 발급신청을 위해서는 본인확인이 반드시 필요합니다. <br />
+                            아래의 인증 방식 중 하나를 선택해 인증을 진행해주세요.<br />
+                            <span>※제증명서 발급 후 당일에는 상환처리가 불가합니다.</span>
+                        </p>
+                        <ul class="auth-list">
+                            <li class="auth1">
+								<span class="ctm-radio">
+									<input type="radio" name="auth" id="auth1" value="">
+									<label for="auth1"><span>휴대폰인증</span></label>
+								</span>
+							</li>
+							<li class="auth2">
+								<span class="ctm-radio">
+									<input type="radio" name="auth" id="auth2" value="">
+									<label for="auth2"><span>공동인증서</span></label>
+								</span>
+							</li>
+							<li class="auth6">
+								<span class="ctm-radio">
+									<input type="radio" name="auth" id="auth6" value="">
+									<label for="auth6"><span>금융인증서</span></label>
+								</span>
+							</li><br><br>
+							<!--D: 수정-->
+							<li class="auth7">
+								<span class="ctm-radio">
+									<input type="radio" name="auth" id="auth7" value="">
+									<label for="auth7"><span>아이핀인증</span></label>
+								</span>
+							</li>
+							<li class="auth5">
+								<span class="ctm-radio">
+									<input type="radio" name="auth" id="auth5" value="">
+									<label for="auth5"><span>신용카드인증</span></label>
+								</span>
+							</li>
+                            <!--D: 수정//-->
+                        </ul>
+                    </div>
+				
 					<form name="frm1" id="frm1">
-						<div class="certificate mb80">
+						<div class="certificate"><!--D: mb80 삭제-->
 							<div class="required-wrap">
-								<!--s:기획현행화-->
-								<h3 class="tit">제증명서 발급신청 본인인증</h3>
-								<!--e:기획현행화-->
-								<span class="required-txt">* 필수 입력항목 입니다.</span>
+								<h3 class="tit">본인인증 정보입력</h3>
 							</div>
 							<div class="input-wrap">
 								<div class="grid-wrap mt10">
@@ -177,78 +216,25 @@
 												
 											</div>
 										</div>
-										<!--s:기획현행화 (삭제) -->
-										<!-- <div class="form-wrap">
+										<div class="form-wrap">
 											<label for="certifyNum" class="inp-tit req">인증번호</label>
 											<div class="certify-area">
-												<input type="tel" name="" value="" id="certifyNum" placeholder="" title="핸드폰번호 가운데자리" maxlength="6">
+												<input type="tel" name="" value="" id="certifyNum" placeholder="인증번호 입력" title="핸드폰번호 가운데자리" maxlength="6">
 												<button type="button" name="button" class="btn-normal form" onclick="">인증번호요청</button>
 												<button type="button" name="button" class="btn-normal form" onclick="">확인</button>
 											</div>
-										</div> -->
-										<!--e:기획현행화 (삭제) -->
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</form>
-					<!-- e:공동인증서, 카카오페이인증 선택 시 노출 -->
-
-                    <div class="step-auth">
-						<!--s:기획현행화 (tit-txt 내용 step-auth 구조 안으로 이동 및 h3의 tit 삭제))-->
-						<div>
-							<p class="tit-txt">
-								제증명서 발급신청을 위해서는 본인확인이 반드시 필요합니다. <br />
-								아래의 인증 방식 중 하나를 선택해 인증을 진행해주세요.<br />
-								<span class="accent">※제증명서 발급 후 당일에는 상환처리가 불가합니다.</span>
-							</p>
-						</div>
-						<!--e:기획현행화 (tit-txt 내용 step-auth 구조 안으로 이동 및 h3의 tit 삭제))-->
-                        <ul class="auth-list">
-                            <li class="auth1">
-								<span class="ctm-radio">
-									<input type="radio" name="auth" id="auth1" value="">
-									<label for="auth1"><span>휴대폰인증</span></label>
-								</span>
-							</li>
-							<li class="auth2">
-								<span class="ctm-radio">
-									<input type="radio" name="auth" id="auth2" value="">
-									<label for="auth2"><span>공동인증서</span></label>
-								</span>
-							</li>
-							<li class="auth6">
-								<span class="ctm-radio">
-									<input type="radio" name="auth" id="auth6" value="">
-									<label for="auth6"><span>금융인증서</span></label>
-								</span>
-							</li><br><br>
-							<!--s:기획현행화 (텍스트만수정)-->
-							<li class="auth3">
-								<span class="ctm-radio">
-									<input type="radio" name="auth" id="auth3" value="">
-									<label for="auth3"><span>네이버인증</span></label>
-								</span>
-							</li>
-							<li class="auth4">
-								<span class="ctm-radio">
-									<input type="radio" name="auth" id="auth4" value="">
-									<label for="auth4"><span>카카오인증</span></label>
-								</span>
-							</li>
-							<li class="auth5">
-								<span class="ctm-radio">
-									<input type="radio" name="auth" id="auth5" value="">
-									<label for="auth5"><span>토스인증</span></label>
-								</span>
-							</li>
-							<!--e:기획현행화 (텍스트만수정)-->
-                        </ul>
-                    </div>
-					<!-- e:2023-07-17 구조변경 -->
+                    
+                    <!--D: 구조이동-->
                     <div class="btn-wrap">
                         <button type="button" name="button" class="btn-big navy">다음단계</button>
                     </div>
+                    <!--D: 구조이동//-->
                 </div>
             </div>
             <!-- //e:contents -->

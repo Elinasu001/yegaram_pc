@@ -1010,4 +1010,4 @@ table td[colspan]{ border-top: 1px solid #ddd; }
 .ellip-line { position:relative;overflow:hidden;max-width:100%;}
 
 /* 본인인증 인풋 아래 위치 */
-.step-auth + form .certificate { padding-top:60px;}
+.step-auth + form .certificate { padding-top:60px !important;}
