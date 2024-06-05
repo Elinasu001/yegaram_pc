@@ -411,6 +411,7 @@ div.line-box { padding-top:60px; margin-top:60px; border-top:1px solid #bbb; }
 .input-wrap .grid1 { margin-top:20px; }
 .input-wrap .grid-wrap .grid1:first-child { margin-top:0; }
 .step-auth { padding:60px 0; margin-top:60px; border-top:solid 1px #bbb; border-bottom:solid 1px #bbb; } /* 07 17*/
+.step-wrap + .step-auth { border-top:0; }
 .step-auth .certificate { padding-top:45px; }
 .step-auth .certificate .list-tit { margin-top:0; margin-bottom:30px; }
 .step-auth .tit-txt, .loan-input-wrap .tit-txt { padding-bottom: 30px; line-height: 1.4;}
