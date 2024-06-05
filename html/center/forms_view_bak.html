@@ -90,17 +90,12 @@
         
             <!-- s:subVisualWrap -->
 			<div id="subVisualWrap" class="sub-type03">
-
-				<!--D: 전체 구조 변경 -->
-				<div id="breadcrumb" class="breadcrumb-renewal">
-					<script>
-						$(document).ready(function () {
-							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
-						});
-					</script>
-				</div>
-
 				<div>
+					<div class="breadcrumb">
+						<a href="#none" class="home ir">홈</a>
+						<a href="#none" class="depth1">고객센터</a>
+						<a href="#none" class="depth2">서식 및 약관 자료실</a>
+					</div>
 					<div class="tit-wrap">
 						<div class="sub-tit">
 							<h2>서식 및 약관 자료실</h2>
@@ -113,65 +108,32 @@
 
             <!-- s:contents -->
             <div class="contents default-wrap">
-                <div class="board-list-wrap">
-                    <div class="search-wrap">
-                        <div class="select-wrap">
-                            <select name="" id="searchType" title="검색어 분류선택">
-                                <option value="all">전체</option>
-                                <option value="title">제목</option>
-                                <option value="contents">내용</option>
-                            </select>
-                        </div>
-                        <input type="text" id="searchKeyword" placeholder="검색어를 입력해주세요" title="검색어 입력">
-                        <button type="button" name="button" onclick="pageFunc.selectFormsList()" class="btn-normal form"><span>검색</span></button>
-                    </div>
-                    <table class="table-style all-c list type2">
-                        <caption>서식 및 약관 자료실 - 리스트</caption>
-                        <colgroup>
-                            <col style="width:10%;">
-                            <col style="*">
-                            <col style="width:15%;">
-                            <col style="width:15%;">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th scope="col">종류</th>
-                                <th scope="col" class="title">제목</th>
-                                <th scope="col">다운로드</th>
-                                <th scope="col">등록일</th>
-                            </tr>
-                        </thead>
-                        <tbody id="Forms_tbody">
-							<tr>
-								<th scope="col">서식</th>
-								<td class="title"><a href="../center/form_view.html">(필수)개인(신용)정보 제3자 제공동의서(통신관련정보)</a></td>
-								<td class="file"><a href="#none" title="(필수)개인(신용)정보 제3자 제공동의서(통신관련정보).pdf">다운로드</a></td>
-								<td>2023/05/12</td>
-							</tr>
-							<tr>
-								<th scope="col">서식</th>
-								<td class="title"><a href="#none">(필수)개인(신용)정보 수집·이용·제공·조회 동의서</a></td>
-								<td class="file"><a href="#none" title="(필수)개인(신용)정보 수집·이용·제공·조회 동의서.pdf">다운로드</a></td>
-								<td>2023/05/12</td>
-							</tr>
-							<tr>
-								<th scope="col">서식</th>
-								<td class="title"><a href="#none">(필수)개인(신용)정보 수집·이용·제공 동의서(여신금융거래)</a></td>
-								<td class="file"><a href="#none" title="(필수)개인(신용)정보 수집·이용·제공 동의서(여신금융거래).pdf">다운로드</a></td>
-								<td>2023/05/12</td>
-							</tr>
-							
-                        </tbody>
-                    </table>
-                    <div id="paging_div" class="pagination-wrap">
-						<div class="pagination">
-							<ul>
-								<li><a href="#" onclick="pageFunc.selectNoticeList(1)" class="btn-circle nb active" title="현재페이지">1</a></li>
-							</ul>
-							<a class="btn-circle next nb ir" href="javascript:pageFunc.selectNoticeList(2)">다음</a>
+                <div class="board-view-wrap">
+					<div class="board-tit">
+						<strong id="category_nm" class="divs">서식 및 약관</strong>
+						<h3 id="notice_title">(필수)개인(신용)정보 제3자 제공동의서(통신관련정보)</h3>
+						<!--s:기획현행화 -->
+						<span id="apply_dt" class="date">2023/01/27</span>
+						<!--e:기획현행화 -->
+					</div>
+
+					<!--s:기획현행화-->
+					<div class="board-body">
+						<div id="forms_contents" class="board-con"><p><span>(필수)개인(신용)정보 제3자 제공동의서(통신관련정보)</span>&nbsp;</p></div>
+						<div id="forms_attachFiles" class="add-file-box">
+							<a href="#none" title="(필수)개인(신용)정보 제3자 제공동의서(통신관련정보).pdf 다운로드">(필수)개인(신용)정보 제3자 제공동의서(통신관련정보).pdf</a>
 						</div>
-                    </div>
-                </div>
+						<div id="forms_date" class="date">최종개정일자 : 2023/01/28</div>
+					</div>
+					<!--e:기획현행화-->
+
+					<p class="btn-wrap"><a href="../center/forms_list.html" class="btn-big navy">목록으로</a></p>
+					<div id="notice_nav" class="board-nav">
+						<p id="notice_before" class="nav-prev"><strong>이전글</strong><a href="#none">(필수)개인(신용)정보 수집·이용·제공·조회 동의서</a></p>
+						<p id="notice_after" class="nav-next"><strong>다음글</strong><a href="#none">다음글이 없습니다.</a></p>
+					</div>
+				</div>
+                    
             </div>
             <!-- //e:contents -->
             <button type="button" name="button" class="btn-circle top ir btn-top">위로</button>
