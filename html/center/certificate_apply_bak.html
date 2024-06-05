@@ -1,0 +1,376 @@
+<html lang="ko">
+<head>
+<!-- 헤더 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="예가람저축은행" />
+<meta name="description" content="딴딴해서 믿을 수 있는 예가람저축은행, 예금, 적금, 신용부금, 논스톱 자동대출 등 예금, 대출금융상품 안내" />
+<meta name="viewport" content="width=device-width">
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta property="og:image" content="https://www.yegaramsb.co.kr/resources/images/main/meta-img-square_new.jpg">   
+<link rel="shortcut icon" type="image/x-icon" href="../../../resources/favicon.ico" />
+<link href="../../../resources/css/jquery.bxslider.css" rel="stylesheet" />
+<link href="../../../resources/css/default.css" rel="stylesheet" />
+<link href="../../../resources/css/layout.css" rel="stylesheet" />
+<link href="../../../resources/css/contents.css" rel="stylesheet" />    
+<link href="../../../resources/css/jquery-ui.css" rel="stylesheet" />  
+<script src="../../../resources/js/jquery-1.11.3.min.js"></script>
+<script src="../../../resources/js/TweenMax.min.js"></script>
+<script src="../../../resources/js/jquery.bxslider.min.js"></script>
+<script src="../../../resources/js/placeholders.js"></script> 
+<!--     jquery-ui.js가 default.js보다 먼저 선언되어야 함 -->
+<script src="../../../resources/js/jquery-ui.js" type="text/javascript"></script>        
+<script src="../../../resources/js/default.js"></script>
+<script src="../../../resources/js/ui.js"></script>
+<script src="../../../resources/pub_js/ui_pub.js"></script>
+<script type="text/javascript" src="../../../resources/js/jquery.form.min.js"></script> 
+<script type="text/javascript" src="../../../resources/js/common_ajax.js"></script>
+<script type="text/javascript" src="../../../resources/js/common_bank_calc_util.js"></script> 
+<script type="text/javascript" src="../../../resources/js/common_bank_map_util.js"></script> 
+<script type="text/javascript" src="../../../resources/js/common_layer.js"></script> 
+<script type="text/javascript" src="../../../resources/js/common_pagevalidate.js"></script>
+<script type="text/javascript" src="../../../resources/js/common_util.js"></script> 
+<script type="text/javascript" src="../../../resources/js/iscroll.js"></script> 
+<script type="text/javascript" src="../../../resources/js/jquery.animateSprite.min.js"></script>  
+<script src="../../../resources/js/common_bank_calc_util.js" type="text/javascript"></script>
+<script src="../../../resources/js/hp_common.js" type="text/javascript"></script>
+<script src="../../../resources/js/calculator.js"></script>    
+<script src="../../../resources/js/streamdocs/adapter.js"></script>  	
+<!--     scrap -->
+<!-- <link href="/resources/scrap/css/process_manager.css" rel="stylesheet" /> -->
+<!--     <script src="/resources/scrap/js/jquery-1.9.1.min.js"></script> -->
+
+</head>
+<body>
+<!-- <body class="color-type2"> 타입별 -->
+    <!-- ********** Include ********** -->
+    <!-- s:skipnavi -->
+    <div id="skipnavi">
+        <script>
+		$(document).ready(function(){
+			$("#skipnavi").load("../include/inc_body_skipnavi.html");
+		});
+		</script>
+    </div>
+    <!-- ********** //Include ********** -->
+    <!-- //e:skipnavi -->
+
+    <!-- s:wrap -->
+    <div id="wrap">
+
+        <!-- ********** Include ********** -->
+        <!-- s:header -->
+        <div id="headerWrap">
+           <script>
+			$(document).ready(function(){
+				$("#headerWrap").load("../include/inc_body_header.html");
+			});
+			</script>
+        </div>
+        <!-- //e:header -->
+
+        <!-- s:sitemapWrap -->
+        <div id="sitemapWrap" class="layerpopup sitemap-layer" tabindex="0" data-tooltip-con="sitemap-layer" data-focus="sitemap-layer" data-focus-prev="btn-menu-close">
+			<script>
+			$(document).ready(function(){
+				$("#sitemapWrap").load("../include/inc_body_sitemapWrap.html");
+			});
+			</script>
+        </div>
+        <!-- //e:sitemapWrap -->
+        <!-- ********** //Include ********** -->
+
+        <!-- s contentsWrap -->
+        <div id="contentsWrap">
+        
+            <!-- s:subVisualWrap -->
+			<div id="subVisualWrap" class="sub-type03">
+				<div>
+					<div class="breadcrumb">
+						<a href="#none" class="home ir">홈</a>
+						<a href="#none" class="depth1">고객센터</a>
+						<a href="#none" class="depth2">제증명서 발급신청</a>
+						
+					</div>
+					<div class="tit-wrap">
+						<div class="sub-tit">
+							<h2>제증명서 발급신청</h2>
+							<p class="desc">제증명서 발급신청 안내 페이지입니다.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //e:subVisualWrap -->
+
+            <!-- s:contents -->
+            <div class="contents default-wrap">
+                <div class="certificate-wrap">
+                    <ul class="step-wrap">
+                        <li class="step01"><span>01.<strong>본인인증</strong></span></li>
+                        <li class="step02 active"><span>02.<strong>신청서 작성</strong></span></li>
+                        <li class="step03"><span>03.<strong>신청 완료</strong></span></li>
+                    </ul>
+                    <form id="frm1" name="frm1">
+                    <div class="apply-wrap">
+                        <div class="required-wrap">
+                            <h3 class="tit">제증명서 발급 신청서 작성</h3>
+                            <span class="required-txt">* 필수 입력항목 입니다.</span>
+                        </div>
+                        <div class="input-wrap">
+                            <div class="grid-wrap">
+                                <div class="grid2">
+                                    <div class="form-wrap">
+                                        <label for="select1" class="inp-tit req">증명서 종류</label>
+                                        <div class="select-wrap">
+                                            <select name="RPT_TYPE_CD" class="" id="select1" title="증명서 종류 선택">
+                                                <option selected="selected" value="">증명서종류를 선택해주세요</option>
+                                                <option value="">부채잔액증명서</option>
+                                                <option value="">금융거래확인서</option>
+                                                <option value="">완납증명서</option>
+                                                <option value="">미연체확인서</option>
+                                                <option value="">금융소득원천징수</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-wrap">
+                                        <label for="select2" class="inp-tit req">용도</label>
+                                        <div class="select-wrap">
+                                            <select name="RPT_USE_CD" class="" id="select2" title="용도 선택">
+                                                <option selected="selected" value="">용도를 선택해주세요</option>
+                                                <option value="">개인회생</option>
+                                                <option value="">파산</option>
+                                                <option value="">상속</option>
+                                                <option value="">대환대출</option>
+                                                <option value="">본인확인용</option>
+                                                <option value="">보육/의료지원</option>
+                                                <option value="">금융기관제출</option>
+                                                <option value="">기타</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid2">
+                                    <div class="form-wrap">
+                                        <label for="select3" class="inp-tit req">제출처</label>
+                                        <div class="select-wrap">
+                                            <select name="RPT_SUBMIT" class="" id="select3" title="제출처 선택">
+                                                <option selected="selected" value="">제출처를 선택해주세요</option>
+                                                <option value="">법원</option>
+                                                <option value="">은행</option>
+                                                <option value="">은행외 금융기관</option>
+                                                <option value="">관공서</option>
+                                                <option value="">신용보증기금</option>
+                                                <option value="">자산관리공사</option>
+                                                <option value="">본인확인</option>
+                                                <option value="">기타 광공서</option>
+                                                <option value="">기타</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-wrap">
+                                        <label for="receive" class="inp-tit req">수령방법</label>
+                                        <div class="select-wrap">
+                                            <select name="RECV_TYPE_CD" class="receive" id="receive" title="수령방법 선택">
+                                                <option selected="selected" value="">수령방법을 선택해주세요</option>
+                                                <option value="fax">팩스</option>
+                                                <option value="post">우편</option>
+                                                <option value="visited">방문수령</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- 180720 am 핸드폰번호 추가 -->
+								<div class="grid2" style="display:none;">
+									<div class="form-wrap">
+										<label for="phone" class="inp-tit">핸드폰번호</label>
+										<div class="tel-area">
+											<div class="select-wrap">
+												<select name="" class="" id="phone" title="핸드폰번호 앞자리 선택">
+													<option value="">02</option>
+													<option value="">031</option>
+												</select>
+											</div>
+											<span class="hyphen">-</span>
+											<input type="text" name="" value=""  id="phone1" placeholder="" title="핸드폰번호 가운데자리" maxlength="4">
+											<span class="hyphen">-</span>
+											<input type="text" name="" value=""  id="phone2" placeholder="" title="핸드폰번호 뒷자리" maxlength="4">
+										</div>
+									</div>
+								</div>
+								<!-- 180720 am 핸드폰번호 추가 -->
+                                <input type="hidden" id="phone_hidden" name="PHONE_NO"/>
+                                
+                            </div>
+                            <!-- s:수령방법이 우편 일 시 노출 -->
+                            <div class="grid-wrap receive-cts receive-post">
+                                <div class="grid2 address-area">
+									<div class="form-wrap">
+										<label for="address-code2" class="inp-tit req">주소</label>
+										<div class="zipcode">
+											<input type="text" name="RECV_ZIP_CODE" value="" id="address-code2" placeholder="우편번호를 입력하세요" readonly="readonly"  title="우편번호 입력">
+											<a href="#none" class="btn-normal form" title="새창 열림">우편번호 찾기</a>
+										</div>
+									</div>
+								</div>
+								<div class="grid2 address-detail">
+									<div class="form-wrap">
+										<input type="text" name="RECV_ADDR" value="" id="address3" placeholder="주소를 입력하세요" title="우편물수령지" readonly="readonly">
+									</div>
+									<div class="form-wrap">
+										<input type="text" name="RECV_ADDR_DETAIL" value="" id="address4" placeholder="상세주소를 직접 입력하세요" title="우편물수령지 - 상세주소">
+									</div>
+								</div>
+								
+                            </div>
+                            <!-- e:수령방법이 우편 일 시 노출 -->
+                            <!-- s:수령방법이 팩스 일 시 노출 -->
+                            <div class="grid-wrap receive-cts receive-fax" style="display:none;">
+                                <div class="grid2">
+                                    <div class="form-wrap">
+                                        <label class="inp-tit req">팩스번호</label>
+                                        <div class="tel-area">
+<!--                                             <div class="select-wrap"> -->
+<!--                                                 <select name="" class="" title="팩스 지역번호 선택" id="fax"> -->
+<!--                                                     <option value="">02</option> -->
+<!--                                                     <option value="">031</option> -->
+<!--                                                 </select> -->
+<!--                                             </div> -->
+											<input type="text" name="" value="" style="width:123px !important;"  id="fax" placeholder="" title="팩스 지역번호" maxlength="4">
+                                            <span class="hyphen">-</span>
+                                            <input type="text" name="" value=""  id="fax1" placeholder="" title="팩스번호 앞자리" maxlength="4">
+                                            <span class="hyphen">-</span>
+                                            <input type="text" name="" value=""  id="fax2" placeholder="" title="팩스번호 뒷자리" maxlength="4">
+                                            
+                                            <input type="hidden" id="fax_number_hidden" name="FAX_NO"/>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- e:수령방법이 팩스 일 시 노출 -->
+                            <!-- s:수령방법이 이메일 일 시 노출 -->
+                            <div class="grid-wrap receive-cts receive-email email-area" style="display:none;">
+								<label for="email-id" class="inp-tit req">이메일</label>
+									<div class="email-area">
+										<input type="text" name="" value="" id="email-id"placeholder=""  style="ime-mode:inactive">
+											<span class="at">@</span>
+											<input type="text" class="mailtxt" name="" value="" id="email-domain" placeholder=""  style="ime-mode:inactive">
+										<div class="select-wrap">
+											<select name="" class="" id="email" title="이메일 도메인 선택">
+												<option selected="selected" value="">선택</option>
+												<option value="direct">직접입력</option>
+												<option value="naver.com">naver.com</option>
+												<option value="gmail.com">gmail.com</option>
+											</select>
+										</div>
+									<input type="hidden" id="email_hidden" name="EMAIL" value="" />
+								</div>
+                            </div>
+                            <!-- e:수령방법이 이메일 일 시 노출 -->
+                        </div>
+                        <div class="line-box">
+                            <div class="table-wrap">
+                                <table class="table-style caption-tit">
+                                    <caption class="list-tit">수수료 안내</caption>
+                                    <colgroup>
+                                        <col style="width:40%">
+                                        <col style="width:*">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">안내</th>
+                                            <th scope="col">설명</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">수수료</th>
+                                            <td>부채잔액증명서 및 금융거래확인서 : 5,000원, 완납증명서 : 무료</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">수수료 입금계좌</th>
+                                            <td>신청 후 문자로 계좌번호 전송 (입금시 본인명의로 입금)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+						<!-- s:디자인 현행화 -->
+                        <div class="pt60">
+						<!-- e:디자인 현행화 -->
+                            <div class="table-wrap">
+                                <table class="table-style caption-tit">
+                                    <caption class="list-tit">개인회생용 부채증명서 발급신청시 유의사항 안내</caption>
+                                    <colgroup>
+                                        <col style="width:35%">
+                                        <col style="width:*">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">사항</th>
+                                            <th scope="col">내용</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">개인회생 신청시 별제권에 대한 유의사항</th>
+                                            <td>
+                                                법원에 개인회생절차 개시 신청을 하더라도 담보권을 가진 금융회사는 별제권*을 가지므로 담보권 행사에는 영향이 없습니다.<br>
+                                                따라서 개인회생절차 개시 신청에도 불구하고 담보대출이 변제되지 않을 경우 금융회사는 경매실행 등 법적절차를 진행할 수 있습니다.<br><br>
+                                                《별제권의 내용과 효과》<br>
+                                                - 별제권의 내용 : 유치권, 질권, 저당권, 전세권 등을 가진 자는 그 목적인 재산에 관하여 별제권을 가진다.<br>
+                                                [☞『채무자 회생 및 파산에 관한 법률』제411조, 제586조］ 
+												<br>- 별제권의 행사 : 별제권은 개인회생절차에 의하지 아니하고 행사한다.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">개인회생 신청시 법원의 중지·금지명령에 따른 영향</th>
+                                            <td>
+                                                개인회생절차 개시 신청이 있는 경우 법원은 개인회생절차 개시 결정시까지 개인회생채권을 변제받거나 변제를 요구하는 일체의 행위의 중지 또는 금지를 명할 수 있습니다. 이러한 경우 금융회사는 이자를 수취할 수 없으므로 별제권이 적용되는 담보대출은 연체가 발생할 수 있습니다. ［☞『채무자 회생 및 파산에 관한 법률』제593조］
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">개인회생 개시결정시 변제기 도래 간주</th>
+                                            <td>
+                                                법원의 개인회생절차 개시결정시에 기한부채권(모든 대출금)은 변제기가 도래한 것으로 간주되므로 개인회생절차상 채무조정대상이 아닌 대출금은 상환을 하셔야 하며, 상환하지 아니한 경우 금융 회사는 경매 등 담보권 실행절차를 진행할 수 있습니다. 
+										<br>［☞『채무자 회생 및 파산에 관한 법률』제425조 및 제581조］
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="btn-wrap">
+                            <button type="button" name="button" class="btn-big navy">제증명서 발급신청</button>
+                        </div>
+                    </div>
+                	</form>
+                </div>
+            </div>
+            <!-- //e:contents -->
+            <button type="button" name="button" class="btn-circle top ir btn-top">위로</button>
+        </div>
+        <!-- //e: contentsWrap -->
+
+        <!-- ********** Include ********** -->
+        <!-- s footerWrap -->
+        <div id="footerWrap">
+            <script>
+			$(document).ready(function(){
+				$("#footerWrap").load("../include/inc_body_footer.html");
+			});
+			</script>
+        </div>
+        <!-- //e:footerWrap -->
+        <!-- ********** //Include ********** -->
+    </div>
+    <!-- //e:wrap -->
+
+</body>
+</html>
