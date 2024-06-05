@@ -97,17 +97,21 @@
         
 			<!-- s:subVisualWrap -->
 			<div id="subVisualWrap" class="sub-type03">
+
+				<!--D: 전체 구조 변경 -->
+				<div id="breadcrumb" class="breadcrumb-renewal">
+					<script>
+						$(document).ready(function () {
+							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
+						});
+					</script>
+				</div>
+
 				<div>
-					<div class="breadcrumb">
-						<a href="#none" class="home ir">홈</a>
-						<a href="#none" class="depth1">고객센터</a>
-						<a href="#none" class="depth2">자동이체신청</a>
-						
-					</div>
 					<div class="tit-wrap">
 						<div class="sub-tit">
 							<h2>자동이체신청</h2>
-							<p class="desc">자동이체 조회 및 신청 페이지입니다.</p>
+							<p class="desc">증빙서류 조회 및 제출 기능을 제공합니다.</p>
 						</div>
 					</div>
 				</div>
@@ -119,15 +123,37 @@
 				<div class="online-wrap">
 					<ul class="step-wrap">
 						<li class="step01 active"><span>01.<strong>본인인증</strong></span></li>
-						<li class="step02"><span>02.<strong>확인 및 입력</strong></span></li> <!-- 180612 텍스트변경 -->
-						<li class="step03"><span>03.<strong>제출 완료</strong></span></li> <!-- 180612 텍스트변경 -->
+						<li class="step02"><span>02.<strong>확인 및 입력</strong></span></li>
+						<li class="step03"><span>03.<strong>제출 완료</strong></span></li>
 					</ul>
-					<!-- s:디자인현행화-->
-					<!-- s:공동인증서, 카카오페이인증 선택 시 노출 -->
+
+                    <div class="step-auth" id="auth_input">
+                        <div class="required-wrap">
+                            <h3 class="tit">자동이체신청 본인인증</h3>
+                        </div>
+						<p class="tit-txt">자동이체신청을 위해서는 본인 인증이 필요합니다. <br /> 아래 내용을 참고하여 자동이체신청을 진행해 주시기 바랍니다.</p>
+
+                        <ul class="auth-list">
+							<li class="auth2">
+								<span class="ctm-radio">
+									<input type="radio" name="auth" id="auth2" value="">
+									<label for="auth2"><span>공동인증서</span></label>
+								</span>
+							</li>
+							<li class="auth6">
+								<span class="ctm-radio">
+									<input type="radio" name="auth" id="auth6" value="">
+									<label for="auth6"><span>금융인증서</span></label>
+								</span>
+							</li>
+                        </ul>
+					</div>
+					
+
 					<form name="frm1" id="frm1">
-						<div class="certificate mb80">
+						<div class="certificate"><!--D: mb 삭제-->
 							<div class="required-wrap">
-								<h3 class="tit">자동이체신청 본인인증</h3>
+								<h3 class="tit">본인인증 정보입력</h3>
 							</div>
 							<div class="input-wrap">
 								<div class="grid-wrap">
@@ -147,102 +173,20 @@
 											</div>
 										</div>
 									</div>
-									<!-- 카카오페이 인증 선택시에만 노출 -->
-									<!-- <div class="grid2">
-										<div class="form-wrap">
-											<label for="phone" class="inp-tit req">핸드폰번호</label>
-											<div class="phone-area">
-												<div class="select-wrap agency">
-													<select name="" class="" id="phone" title="핸드폰 통신사 선택">
-														<option selected="selected" value="">통신사</option>
-														<option value="">SKT</option>
-														<option value="">KT</option>
-														<option value="">LG U+</option>
-														<option value="">SKT MVNO</option>
-														<option value="">KT MVNO</option>
-														<option value="">LGU MVNO</option>
-													</select>
-												</div>
-												<div class="select-wrap phone-fst">
-													<select name="" class="" title="핸드폰번호 앞자리 선택" id="phone_front">
-														<option value="">010</option>
-														<option value="">011</option>
-														<option value="">016</option>
-														<option value="">017</option>
-														<option value="">018</option>
-														<option value="">019</option>
-													</select>
-												</div>
-												<span class="hyphen">-</span>
-												<input type="text" name="" value=""  id="phone1" placeholder="" title="핸드폰번호 가운데자리" maxlength="4">
-												<span class="hyphen">-</span>
-												<input type="text" name="" value=""  id="phone2" placeholder="" title="핸드폰번호 뒷자리" maxlength="4">
-												<input type="hidden" id="phone_hidden" name="PHONE_NO"/>
-											</div>
-										</div>
-									</div> -->
-									<!-- //카카오페이 인증 선택시에만 노출 -->
 								</div>
 							</div>
 						</div>
 					</form>
-					<!-- e:공동인증서, 카카오페이인증 선택 시 노출 -->
 
-					<!-- 180611 본인인증 내용 변경 -->
-					<div class="step-auth" id="auth_input">
-						<p class="tit-txt">자동이체신청을 위해서는 본인 인증이 필요합니다. <br /> 아래 내용을 참고하여 자동이체신청을 진행해 주시기 바랍니다.</p>
-
-                        <ul class="auth-list">
-<!--                             <li class="auth1"> -->
-<!-- 								<span class="ctm-radio"> -->
-<!-- 									<input type="radio" name="auth" id="auth1" value=""> -->
-<!-- 									<label for="auth1"><span>휴대폰인증</span></label> -->
-<!-- 								</span> -->
-<!-- 							</li> -->
-							<li class="auth2">
-								<span class="ctm-radio">
-									<input type="radio" name="auth" id="auth2" value="">
-									<label for="auth2"><span>공동인증서</span></label>
-								</span>
-							</li>
-							<li class="auth6">
-								<span class="ctm-radio">
-									<input type="radio" name="auth" id="auth6" value="">
-									<label for="auth6"><span>금융인증서</span></label>
-								</span>
-							</li>
-<!-- 							<li class="auth3"> -->
-<!-- 								<span class="ctm-radio"> -->
-<!-- 									<input type="radio" name="auth" id="auth3" value=""> -->
-<!-- 									<label for="auth3"><span>아이핀인증</span></label> -->
-<!-- 								</span> -->
-<!-- 							</li> -->
-<!-- 							<li class="auth4"> -->
-<!-- 								<span class="ctm-radio"> -->
-<!-- 									<input type="radio" name="auth" id="auth4" value=""> -->
-<!-- 									<label for="auth4"><span>카카오페이인증</span></label> -->
-<!-- 								</span> -->
-<!-- 							</li> -->
-<!-- 							<li class="auth5"> -->
-<!-- 								<span class="ctm-radio"> -->
-<!-- 									<input type="radio" name="auth" id="auth5" value=""> -->
-<!-- 									<label for="auth5"><span>신용카드인증</span></label> -->
-<!-- 								</span> -->
-<!-- 							</li> -->
-                        </ul>
-						<!-- e:디자인현행화-->
-					</div>
-					
-					<!--s:디자인현행화 (mt60 추가) -->
-					<div class="terms-txt mt60" id="bank_list" style="display:block; ">
-					<!--e:디자인현행화 (mt60 추가)-->
+					<!--D: 조회결과 부분 -->
+					<div class="terms-txt" id="bank_list" style="display:block; "><!--D:mt 삭제-->
 						<div>
-							<div class="tab-wrap">
-								<p class="list-tit">대출계좌현황</p>
+							<div class="table-wrap"><!--D: 클래스 table-wrap으로 변견-->
+								<p class="list-tit">계좌정보</p>
 								<div class="table-scroll">
-									<table class="table-style td-r __se_tbl_ext" id="bank_list_table">
+									<table class="table-style td-r __se_tbl_ext caption-tit" id="bank_list_table">
+                                        <caption>조회결과</caption>
 										<colgroup>
-											<!--s:기획현행화-->
 											<col style="width:20%">
 											<col style="width:10%">
 											<col style="width:10%">
@@ -252,7 +196,6 @@
 											<col style="width:10%">
 											<col style="width:10%">
 											<col style="width:10%">
-											<!--e:기획현행화-->
 										</colgroup>
 										<thead>
 											<th class="ta-c" scope="col" style="padding:12px 5px !important;">상품명</th>
@@ -260,20 +203,28 @@
 											<th class="ta-c" scope="col" style="padding:12px 5px !important;">대출잔액</th>
 											<th class="ta-c" scope="col" style="padding:12px 5px !important;">대출상태</th>
 											<th class="ta-c" scope="col" style="padding:12px 5px !important;">실행일자</th>
-											<!--s:기획현행화 (텍스트 수정및 마지막th하나더추가)-->
 											<th class="ta-c" scope="col" style="padding:12px 5px !important;">만기일자</th>
 											<th class="ta-c" scope="col" style="padding:12px 5px !important;">추가한도</th>
 											<th class="ta-c" scope="col" style="padding:12px 5px !important;">적용금리</th>
 											<th class="ta-c" scope="col" style="padding:12px 5px !important;">신청</th>
-											<!--e:기획현행화 (텍스트 수정및 마지막th하나더추가)-->
 										</thead>
 										<tbody id="bank_list_body">
+                                            <th>상품명</th>
+											<th>대출원금</th>
+											<th>대출잔액</th>
+											<th>대출상태</th>
+											<th>실행일자</th>
+											<th>만기일자</th>
+											<th>추가한도</th>
+											<th>적용금리</th>
+											<th><button class="tiny style2">신청</button></th><!--D: 테이블 안에 버튼 클래스 변경-->
 										</tbody>
 									</table>
 								</div>
 							</div>
 						</div>
 					</div>
+                    <!--D: 조회결과 부분 //-->
 					<div class="btn-wrap" id="div_cms_auth">
 						<button type="button" name="button" id="cms_auth" class="btn-big navy">본인인증</button>
 					</div>
