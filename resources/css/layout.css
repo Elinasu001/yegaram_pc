@@ -676,7 +676,7 @@ p + ul.list-wrap01 { margin-top:10px; }
 .btn-wrap button+button { margin-left:20px; }
 
 /* 본인인증 FORM 형식 버튼 추가 */
-.btn-wrap .btn-normal.form { line-height:70px; height:70px; }
+.btn-wrap .btn-normal.form { line-height:70px; height:70px; font-size:25px; }
 
 /* 기본 footer 버튼 */
 /**
