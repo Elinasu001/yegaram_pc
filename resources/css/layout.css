@@ -510,7 +510,7 @@
 /* h3.tit { position:relative; padding:20px 10px 20px 28px; font-weight:600; color:#111; font-size:27px; letter-spacing:-1.8px; text-align:left; } */
 /* h3.tit::before { position:absolute; content:""; width:18px; height:18px; left:3px; top:50%; transform:translate(0, -50%); background:url(../images/common/mask_group_3.png)no-repeat center/100%; } */
 /* e:디자인현행화 */
-.list-tit, h3.tit, [class^="table-style"].caption-tit .list-tit, .info-table-area .sub-title { position:relative; /* padding:0px 10px 0px 30px; */ margin-bottom:20px; letter-spacing:-1.8px; font-size:27px !important; color:#111; font-weight:600; text-align:left; }
+.list-tit, h3.tit, [class^="table-style"].caption-tit .list-tit, .info-table-area .sub-title { position:relative; /* padding:0px 10px 0px 30px; */ margin-bottom:30px; letter-spacing:-1.8px; font-size:27px !important; color:#111; font-weight:600; text-align:left; }
 /* .list-tit::before, h3.tit::before, [class^="table-style"].caption-tit .list-tit::before, .info-table-area .sub-title:before { position:absolute; content:""; width:18px; height:18px; left:3px; top:50%; transform:translate(0, -50%); background:url(../images/common/mask_group_3.png)no-repeat center/100%; } */
 * + .list-tit:not(.tab-wrap+.list-tit),
 * + .info-table-area:not(:first-of-type),
