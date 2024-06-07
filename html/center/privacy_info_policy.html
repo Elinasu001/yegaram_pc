@@ -14,8 +14,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta property="og:image"
-        content="https://www.yegaramsb.co.kr/resources/images/main/meta-img-square_new.jpg">
+    <meta property="og:image" content="https://www.yegaramsb.co.kr/resources/images/main/meta-img-square_new.jpg">
     <link rel="shortcut icon" type="image/x-icon" href="../../../resources/favicon.ico">
     <link href="../../../resources/css/jquery.bxslider.css" rel="stylesheet">
     <link href="../../../resources/css/default.css" rel="stylesheet">
@@ -95,17 +94,26 @@
         <div id="contentsWrap">
             <!-- s:subVisualWrap -->
             <div id="subVisualWrap" class="sub-type03">
+
+                <!--D: 전체 구조 변경 -->
+                <div id="breadcrumb" class="breadcrumb-renewal">
+                    <script>
+                        $(document).ready(function () {
+                            $("#breadcrumb").load("../include/inc_body_breadcrumb.html");
+                        });
+                    </script>
+                </div>
+
                 <div>
-                    <div class="breadcrumb">
+                    <!-- <div class="breadcrumb">
                         <a href="#none" class="home ir">홈</a>
                         <a href="#none" class="depth1">고객센터</a>
-                        <a href="#none" class="depth2">개인정보보호</a>
-                        <a href="#none" class="depth2">개인정보처리방침</a>
-                    </div>
+                        <a href="#none" class="depth2">온라인 서류제출</a>
+                    </div> -->
                     <div class="tit-wrap">
                         <div class="sub-tit">
-                            <h2>개인정보보호</h2>
-                            <p class="desc">고려저축은행의 개인정보보호 안내입니다.</p>
+                            <h2>개인정보처리방침</h2>
+                            <p class="desc">예가람저축은행의 개인정보보호 안내입니다.</p>
                         </div>
                     </div>
                 </div>
@@ -114,28 +122,24 @@
             <!-- s:contents -->
             <div class="contents default-wrap">
                 <div class="privacy-wrap">
-                    <div class="tab-wrap">
+                    <!--D: 삭제 <div class="tab-wrap">
                         <ul>
                             <li><a href="../center/privacy_credit_protect.html">개인신용정보관리 및 보호</a></li>
                             <li><a href="../center/privacy_credit_policy.html">고객권리 안내문</a></li>
-                            <!--s:기획현행화-->
-                            <!--<li><a href="../center/privacy_credit_system.html">개인신용정보관리보호정책</a></li>-->
-                            <!--e:기획현행화-->
                             <li class="active"><a href="../center/privacy_info_policy.html">개인정보처리방침</a></li>
                             <li><a href="../center/privacy_right_guide.html">신용정보활용체제</a></li>
                             <li><a href="../center/privacy_video_manage.html">영상정보처리기기 운영관리방침</a></li>
                         </ul>
-                    </div>
+                    </div> -->
                     <div class="terms-txt em-txt">
-                        <!--s:기획현행화 20230908-->
                         <div class="com-msgbox">
-                            <p class="com-msg01">고려저축은행(이하 `당행')은 ‘개인정보보호법’ 및 ‘정보통신망이용촉진 및 정보보호 등에 관한 법률’에 따라 이용자의 개인정보보호 및 권익을 보호하고 개인정보와 관련한 이용자의 고충을 원활하게 처리할 수 있도록 다음과 같은 개인정보처리방침을 두고 있습니다.</p>
+                            <p class="com-msg01">예가람저축은행(이하 '회사')는 ‘개인정보보호법’ 및 ‘정보통신망 이용촉진 및 정보보호 등에 관한 법률’에 따라 이용자의
+                                개인정보 보호 및 권익을 보호하고 개인정보와 관련한 이용자의 고충을 원활하게 처리할 수 있도록 다음과 같은 개인정보처리방침을 두고 있습니다.</p>
                         </div>
-                        
+
                         <!--S:개발:DB불러오기 -->
                         <div class="terms-dv">
                             <dl>
-                                <!--e:기획현행화 20230908 해당 자리에 있던 dt br 삭제함-->
                                 <dt>제 1조 개인정보의 처리 목적</dt>
                                 <dd> 당 행은 개인정보를 다음의 목적을 위해 처리합니다. <br>처리한 개인정보는 다음의 목적이외의 용도로는 사용되지 않으며 이용 목적이 변경될 시에는
                                     사전 동의를 구할 예정입니다.<br>
@@ -179,8 +183,10 @@
                                 </dd>
                                 <dt>제 3조 처리하는 개인정보의 항목</dt>
                                 <dd> 당 행은 다음과 같이 제1조 개인정보의 처리 목적에 필요한 최소한의 개인정보를 수집하고 있습니다. <ul>
-                                        <li>&lt;보유현황&gt; <ol class="list type4">
-                                                <li>1. 필수적 정보 <ol class="list type3">
+                                        <li>&lt;보유현황&gt;
+                                            <ol class="list type4">
+                                                <li>1. 필수적 정보
+                                                    <ol class="list type3">
                                                         <li>가. 공통정보 : 성명, 고유식별정보, 주소, 연락처, 직업군, 국적</li>
                                                         <li>나. 신용평가를 위한 정보(신용평가를 실시하는 대출에 한함. 예적금담보대출 취급시 제외) : 거주정보,
                                                             연소득정보, 재직(회사),정보, 세금 체납 정보, 신용능력 정보, 공공정보 등</li>
@@ -188,8 +194,77 @@
                                                             및 (금융)거래의 설정ㆍ유지ㆍ이행ㆍ관리를 위한 상담 등을 통해 생성되는 정보</li>
                                                         <li>라. 전자금융거래 : 고객ID, 접속일시, IP주소, 이용 전화번호 등 전자금융거래법에 따른 수집 정보
                                                         </li>
-                                                    </ol>* 본 동의 이전에 발생한 개인정보도 포함됩니다. </li>
-                                                <li>2. 선택적 정보 <ol class="list type3">
+                                                    </ol>* 본 동의 이전에 발생한 개인정보도 포함됩니다.
+                                                    <!--D: 추가-->
+                                                    <div class="table-scroll">
+                                                        <table class="table-style __se_tbl_ext">
+                                                            <caption>처리하는 개인정보의 항목</caption>
+                                                            <colgroup>
+                                                                <col style="width: 10%;">
+                                                                <col style="width: 10%;">
+                                                                <col style="width: 50%;">
+                                                                <col style="width: 30%;">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col" colspan="2"
+                                                                        style="text-align: center; background: #eee;">
+                                                                        접근권한</th>
+                                                                    <th scope="col"
+                                                                        style="text-align: center; background: #eee;">
+                                                                        접근목적</th>
+                                                                    <th scope="col"
+                                                                        style="text-align: center; background: #eee;">
+                                                                        수집항목</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="va-m" rowspan="6">필수</td>
+                                                                    <td class="va-m">저장공간</td>
+                                                                    <td class="va-m">공동인증서 저장, 임시 저장공간 사용</td>
+                                                                    <td class="va-m">인증서정보, 이미지/사진정보</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="va-m">카메라</td>
+                                                                    <td class="va-m">비대면 실명확인을 위한 신분증 촬영</td>
+                                                                    <td class="va-m">이미지</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="va-m">사진</td>
+                                                                    <td class="va-m">신분 확인을 위한 기기 내 저장된 사진 사용</td>
+                                                                    <td class="va-m">이미지</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="va-m">위치</td>
+                                                                    <td class="va-m">영업점 위치 검색</td>
+                                                                    <td class="va-m">위치</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="va-m">전화</td>
+                                                                    <td class="va-m">휴대전화 기기정보를 수집하기 위한 사용, 고객센터 전화연결,
+                                                                        보이는 ARS</td>
+                                                                    <td class="va-m">전화번호, 영상통화 영상정보</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="va-m">SMS</td>
+                                                                    <td class="va-m">이체결과 동의 정보 전송</td>
+                                                                    <td class="va-m">-</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="va-m">선택</td>
+                                                                    <td class="va-m">PUSH</td>
+                                                                    <td class="va-m">PUSH알림발송을 하기위한 기기 ID 확인 및 고객센터 전화
+                                                                        연결</td>
+                                                                    <td class="va-m">-</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!--D: 추가 //-->
+                                                </li>
+                                                <li>2. 선택적 정보 
+                                                    <ol class="list type3">
                                                         <li>가. 필수적정보 외에 거래신청서에 기재된 정보 또는 고객이 제공한 정보 <p>• 가족사항, 세대구성, 결혼
                                                                 여부 등</p>
                                                         </li>
@@ -243,7 +318,7 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-														<!-- s:디자인현행화 -->
+                                                        <!-- s:디자인현행화 -->
                                                         <tr class="bdl-none">
                                                             <td>한국신용정보원</td>
                                                             <td class="va-m">신용정보 집중기관</td>
@@ -267,7 +342,6 @@
                                                             <td class="va-m">국고납부업무</td>
                                                             <td class="va-m">개인식별정보</td>
                                                         </tr>
-														<!-- e:디자인현행화 -->
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -280,9 +354,7 @@
                                         <li>1. 당행은 개인정보의 처리 위탁계약 시 개인정보보호 관련 법규의 준수, 개인정보에 관한 제3자 제공 금지 및 책임부담 등을 명확히
                                             규정하고, 당해 계약내용을 서면 또는 전자 보관하고 있으며, 위탁업무의 내용이나 수탁자가 변경 될 경우에는 본 개인정보 처리방침을 통하여
                                             공개하도록 하겠습니다.
-                                            <a class="accent2"
-                                                href="https://fpadmin.yegaramsb.co.kr/resources/smarteditor/smart_editor2_inputarea.html"
-                                                target="_blank" data-tooltip="popup-layer">☞ 제휴업체 및 수탁업체 현황</a>
+                                            <a class="accent2" href="https://fpadmin.yegaramsb.co.kr/resources/smarteditor/smart_editor2_inputarea.html#none" target="_blank" data-tooltip="popup-layer">☞ 제휴업체 및 수탁업체 현황</a>
                                         </li>
                                     </ol>
                                 </dd>
@@ -419,12 +491,15 @@
                                 <dd>당 행이 개인정보 처리방침을 변경하는 경우에는 변경 및 시행의 시기, 변경된 내용을 지속적으로 공개하여 변경된 내용을 고객이 쉽게 확인할 수 있도록
                                     변경 전ㆍ후를 비교하여 공개합니다.</dd>
                                 <dt>부 칙</dt>
-                                <dd>• 개인정보처리방침 버전번호 : V7.0</dd>
-                                <dd>• 개인정보처리방침 시행일자 : 2023.01.11</dd>
+                                <!--D: 수정-->
+                                <dd>• 개인정보처리방침 버전번호 : V10.0</dd>
+                                <dd>• 개인정보처리방침 시행일자 : 2024.03.20</dd>
+                                <!--D: 수정//-->
                             </dl>
                         </div>
                         <!--E:개발:DB불러오기 -->
-                        <div tabindex="0" class="layerpopup" id="popupLayer" data-focus-prev="btn-menu-close" data-focus="popup-layer" data-tooltip-con="popup-layer">
+                        <div tabindex="0" class="layerpopup" id="popupLayer" data-focus-prev="btn-menu-close"
+                            data-focus="popup-layer" data-tooltip-con="popup-layer">
                             <!-- 180710 pm 팝업 내용 감싸는 div추가 <div class="pop-wrap"> </div> -->
                             <div class="pop-wrap">
                                 <!-- s:con -->
@@ -442,9 +517,9 @@
                                                     <th scope="col">위탁업무</th>
                                                 </tr>
                                             </thead>
-											<!-- s:디자인현행화 -->
+                                            <!-- s:디자인현행화 -->
                                             <tbody class="bdl-none">
-											<!-- e:디자인현행화 -->
+                                                <!-- e:디자인현행화 -->
                                                 <tr>
                                                     <td class="va-m">A&amp;D신용정보㈜</td>
                                                     <td class="va-m">자서대행</td>
@@ -733,19 +808,22 @@
                                     </div>
                                 </div>
                                 <!-- //e:con -->
-                                <button name="button" class="btn-menu-close tooltip-close" type="button" data-focus="btn-menu-close" data-focus-next="popup-layer">닫기</button>
+                                <button name="button" class="btn-menu-close tooltip-close" type="button"
+                                    data-focus="btn-menu-close" data-focus-next="popup-layer">닫기</button>
                             </div>
                             <!-- //180710 pm 팝업 내용 감싸는 div추가 <div class="pop-wrap"></div> -->
-                            <div class="iScrollVerticalScrollbar iScrollLoneScrollbar" >
+                            <div class="iScrollVerticalScrollbar iScrollLoneScrollbar">
                                 <div class="iScrollIndicator"></div>
                             </div>
-                            <div class="iScrollVerticalScrollbar iScrollLoneScrollbar" >
+                            <div class="iScrollVerticalScrollbar iScrollLoneScrollbar">
                                 <div class="iScrollIndicator"></div>
                             </div>
                         </div>
                     </div>
                     <div class="select-wrap">
                         <select name="" id="selectbox" title="개인정보 처리방침 버전 선택" class="privacy04">
+                            <option value="8.0">[개인정보처리방침 버전정보 10]</option>
+                            <option value="8.0">[개인정보처리방침 버전정보 9.0]</option>
                             <option value="8.0">[개인정보처리방침 버전정보 8.0]</option>
                             <option value="7.0">[개인정보처리방침 버전정보 7.0]</option>
                             <option value="6.0">[개인정보처리방침 버전정보 6.0]</option>

@@ -96,26 +96,17 @@
 
             <!-- s:subVisualWrap -->
             <div id="subVisualWrap" class="sub-type03">
-                
-                <!--D: 전체 구조 변경 -->
-				<div id="breadcrumb" class="breadcrumb-renewal">
-					<script>
-						$(document).ready(function(){
-							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
-						});
-					</script>
-				</div>
-
                 <div>
-                    <!-- <div class="breadcrumb">
+                    <div class="breadcrumb">
                         <a href="#none" class="home ir">홈</a>
                         <a href="#none" class="depth1">고객센터</a>
-                        <a href="#none" class="depth2">온라인 서류제출</a>
-                    </div> -->
+                        <a href="#none" class="depth2">개인정보보호</a>
+                        <a href="#none" class="depth2">영상정보처리기기 운영관리방침</a>
+                    </div>
                     <div class="tit-wrap">
                         <div class="sub-tit">
-                            <h2>영상정보처리기기 운영관리방침문</h2>
-                            <p class="desc">예가람저축은행의 개인정보보호 안내입니다.</p>
+                            <h2>개인정보보호</h2>
+                            <p class="desc">고려저축은행의 개인정보보호 안내입니다.</p>
                         </div>
                     </div>
                 </div>
@@ -125,14 +116,20 @@
             <!-- s:contents -->
             <div class="contents default-wrap">
                 <div class="privacy-wrap">
-                    <!--D: 삭제 <div class="tab-wrap">
+                    <div class="tab-wrap">
                         <ul>
                             <li><a href="../center/privacy_credit_protect.html">개인신용정보관리 및 보호</a></li>
                             <li><a href="../center/privacy_credit_policy.html">고객권리 안내문</a></li>
+                            <!--s:기획현행화-->
+                            <!--<li><a href="../center/privacy_credit_system.html">개인신용정보관리보호정책</a></li>-->
+                            <!--e:기획현행화-->
                             <li><a href="../center/privacy_info_policy.html">개인정보처리방침</a></li>
                             <li><a href="../center/privacy_right_guide.html">신용정보활용체제</a></li>
                             <li class="active"><a href="../center/privacy_video_manage.html">영상정보처리기기 운영관리방침</a></li>
                         </ul>
+                    </div>
+                    <!-- <div class="txt-box">
+                        <p>본 예가람저축은행(이하 본 사라 함)은 영상정보처리기기 운영·관리방침을 통해 본 사에서 처리하는 영상정보가 어떠한 용도와 방식으로 이용·관리되고 있는지 알려드립니다. </p>
                     </div> -->
                     <div class="terms-txt">
                         <!--S:개발:DB불러오기 -->
@@ -157,15 +154,16 @@
                                                 <th scope="col">설치 위치 및 촬영범위</th>
                                             </tr>
                                         </thead>
+                                        <!--s: 2023-07-17 구조변경-->
                                         <tbody>
                                             <tr>
                                                 <th>본점</th>
-                                                <td>30</td>
+                                                <td>32</td>
                                                 <td>영업장 내부, 출입구</td>
                                             </tr>
                                             <tr>
-                                                <th>강남지점</th>
-                                                <td>13</td>
+                                                <th>영등포지점</th>
+                                                <td>4</td>
                                                 <td>영업장 내부, 출입구</td>
                                             </tr>
                                             <tr>
@@ -178,12 +176,13 @@
                                                 <td>5</td>
                                                 <td>영업장 내부, 출입구</td>
                                             </tr>
-                                            <!--D:삭제 <tr>
+                                            <tr>
                                                 <th>신용사업본부</th>
                                                 <td>5</td>
                                                 <td>영업장 내부, 출입구</td>
-                                            </tr> -->
+                                            </tr>
                                         </tbody>
+                                        <!--e: 2023-07-17 구조변경-->
                                     </table>
                                 </dd>
                                 <dt>3. 관리책임자 및 접근권한자</dt>
@@ -205,24 +204,25 @@
                                                     <th scope="col">연락처</th>
                                                 </tr>
                                             </thead>
+                                            <!--s: 2023-07-17 구조변경-->
                                             <tbody>
                                                 <tr>
                                                     <th>관리책임자</th>
-                                                    <td>인사팀장</td>
+                                                    <td>경영지원팀장</td>
                                                     <td>본점</td>
                                                     <td>02-6906-7013</td>
                                                 </tr>
                                                 <tr>
                                                     <th>접근권한자</th>
-                                                    <td>인사팀 CCTV담당자</td>
+                                                    <td>경영지원팀 CCTV담당자</td>
                                                     <td>본점</td>
                                                     <td>02-6906-7056</td>
                                                 </tr>
                                                 <tr>
                                                     <th>접근권한자</th>
                                                     <td>지점장</td>
-                                                    <td>강남지점</td>
-                                                    <td>02-6906-7016</td>
+                                                    <td>영등포지점</td>
+                                                    <td>070-4589-5376</td>
                                                 </tr>
                                                 <tr>
                                                     <th>접근권한자</th>
@@ -236,7 +236,7 @@
                                                     <td>울산지점</td>
                                                     <td>070-4589-5390</td>
                                                 </tr>
-                                                <!--D: 삭제 <tr>
+                                                <tr>
                                                     <th>접근권한자</th>
                                                     <td>신용사업본부장</td>
                                                     <td>신용사업본부</td>
@@ -247,8 +247,9 @@
                                                     <td>리테일금융본부장</td>
                                                     <td>신용사업본부</td>
                                                     <td>02-6906-7039</td>
-                                                </tr> -->
+                                                </tr>
                                             </tbody>
+                                            <!--e: 2023-07-17 구조변경-->
                                         </table>
                                     </div>
                                 </dd>
@@ -268,6 +269,7 @@
                                                 <th socpe="col">보관장소</th>
                                             </tr>
                                         </thead>
+                                        <!--s: 2023-07-17 구조변경-->
                                         <tbody>
                                             <tr>
                                                 <th>24시간</th>
@@ -275,6 +277,7 @@
                                                 <td>각 지점</td>
                                             </tr>
                                         </tbody>
+                                        <!--e: 2023-07-17 구조변경-->
                                     </table>
                                     <p class="sub-txt">- 처리방법 : 개인영상정보의 목적외 이용, 제3자 제공,파기,열람 등 요구에 관한 사항을 기록·관리하고 보관 기관 만료시 복원이
                                         불가능한 방법으로 영구 삭제(출력물의 경우 파쇄 또는 소각)합니다.</p>
@@ -285,7 +288,9 @@
                                 <dt>6. 정보주체의 영상정보 열람 등 요구에 대한 조치</dt>
                                 <dd> 귀하는 개인영상정보에 관하여 열람 또는 존재확인· 삭제를 원하는 경우 언제든지 영상정보처리기기 운영자에게 요구(별지 제2호서식)하실 수 있습니다. 단, 귀하가
                                     촬영된 개인영상정보 및 명백히 정보주체의 급박한 생명,신체,재산의 이익을 위하여 필요한 개인영상정보에 한정됩니다. 본사는 개인영상정보에 관하여 열람 또는
-                                    존재확인·삭제를 요구한 경우 지체없이 필요한 조치를 하겠습니다. <a class="accent2" href="../../../resources/mobile/file/yegaram_160118.pdf" target="_blank">[영상정보 열람삭제 신청서 다운로드]</a></dd>
+                                    존재확인·삭제를 요구한 경우 지체없이 필요한 조치를 하겠습니다. <a class="accent2"
+                                        href="../../../resources/mobile/file/yegaram_160118.pdf" target="_blank">[영상정보 열람삭제 신청서
+                                        다운로드]</a> </dd>
                                 <dt>7. 영상정보의 안전성 확보조치</dt>
                                 <dd>본사는 개인 영상정보보호를 위한 관리적 대책으로서 개인정보에 대한 접근 권한을 차등부여 하고 있고, 개인 영상정보의 위변조 방지를 위하여 개인영상정보의 생성 일시,
                                     열람시 열람 목적· 열람자· 열람 일시 등을 기록하여 관리하고 있습니다. 이 외에도 개인영상정보의 안전한 물리적 보관을 위하여 잠금장치를 설치하고 있습니다.</dd>
@@ -293,7 +298,7 @@
                                 <dd>이 영상정보처리기기 운영·관리방침은 2012년 3 월 27 일에 제정되었으며 법령 정책 또는 보안기술이 변경에 따라 내용의 추가 삭제 및 수정이 있을 시에는 시행하기
                                     최소7일전에 본사 홈페이지를 통해 변경사유 및 내용등을 공지하도록 하겠습니다.</dd>
                                 <dt>부 칙</dt>
-                                <dd>영상정보처리기기 운영ㆍ관리 방침 버전번호 : V9.0</dd>
+                                <dd>영상정보처리기기 운영ㆍ관리 방침 버전번호 : V8.0</dd>
                                 <dd>영상정보처리기기 운영ㆍ관리 방침 시행일자 : 2021.08.24</dd>
                             </dl>
                         </div>
@@ -301,7 +306,6 @@
                     </div>
                     <div class="select-wrap">
                         <select name="" id="selectbox" title="영상정보처리기기 운영관리방침 버전 선택" class="privacy06">
-                            <option value="8.0">[영상정보처리기기 운영관리방침 버전정보 9.0]</option>
                             <option value="8.0">[영상정보처리기기 운영관리방침 버전정보 8.0]</option>
                             <option value="7.0">[영상정보처리기기 운영관리방침 버전정보 7.0]</option>
                             <option value="6.0">[영상정보처리기기 운영관리방침 버전정보 6.0]</option>
