@@ -546,7 +546,7 @@ h3.tit + .list-tit.type2,
 /* 2023-07-13 수정 */
 .list.type1 li::before { content:''; position:absolute; top:8px; left:0px; width:6px; height:6px; border-radius:50%; background-color:#C3CED9; }
 .list.type1.color-red li::before { background:#FF0000; }
-.list.type1 li > span{ float:left; display:block; }
+/* .list.type1 li > span{ float:left; display:block; } */
 .list.type1 li .bar { position:relative; width:140px; display:block; float:left; }
 .list.type1 li .bar:after { content:""; width:1px; height:10px; position:absolute; right:20px; top:7px; background-color:#B3BBC0; }
 

@@ -95,40 +95,42 @@
 
             <!-- s:subVisualWrap -->
             <div id="subVisualWrap" class="sub-type03">
-				<div>
-					<div class="breadcrumb">
-						<a href="/" class="home ir">홈</a>
-					<a href="../center/notice_list" class="depth1">고객센터</a>
-					<a href="../center/electric_internetbanking.html" class="depth2">전자금융안내</a>
-					<a href="../center/electric_internetbanking.html" class="depth3">안전한 전자금융</a>
-					</div>
-					<div class="tit-wrap">
-						<div class="sub-tit">
-							<h2>전자금융안내</h2>
+                
+                <!--D: 전체 구조 변경 -->
+				<div id="breadcrumb" class="breadcrumb-renewal">
+					<script>
+						$(document).ready(function(){
+							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
+						});
+					</script>
+				</div>
+
+                <div>
+                    <!-- <div class="breadcrumb">
+                        <a href="#none" class="home ir">홈</a>
+                        <a href="#none" class="depth1">고객센터</a>
+                        <a href="#none" class="depth2">온라인 서류제출</a>
+                    </div> -->
+                    <div class="tit-wrap">
+                        <div class="sub-tit">
+                            <h2>안전한 전자금융</h2>
                             <p class="desc">안전하고 편리하게 이용 가능한 금융서비스입니다.</p>
                         </div>
-					</div>
-				</div>
-			</div>
+                    </div>
+                </div>
+            </div>
             <!-- //e:subVisualWrap -->
 			<!-- s:contents -->
 			<div class="contents default-wrap"> <!-- border 없는 contents class = contents02 -->
 				<div class="fraud-notice-wrap">
-				<div class="tab-wrap">
+				    <!--D: 삭제 <div class="tab-wrap">
                         <ul>
-                            <!--s:기획현행화-->
-                            <!--<li><a href="../center/electric_internetbanking.html">인터넷뱅킹</a></li>
-                            <li><a href="../center/electric_telebanking.html">텔레뱅킹</a></li>-->
-                            <!--e:기획현행화-->
                             <li><a href="../center/electric_transaction_terms.html">전자금융거래약관</a></li>
                             <li><a href="../center/electric_service_terms.html">전자금융서비스이용약관</a></li>
                             <li class="active"><a href="../center/secure_ebanking.html">안전한 전자금융</a></li>
-                        </ul>
+                        </ul> -->
                     </div>
-					<!-- s:디자인현행화 -->
 					<h3 class="list-tit">안전한 전자금융 안내</h3>
-					<!-- e:디자인현행화 -->
-                   <!-- s: 기획현행화 --> 
 					<div class="list-wrap dot02">
                         <ul class="list type1 ">
                             <li>인터넷(메일함, 웹하드 등)상에 보관 중인 공동인증서, 보안카드, 비밀번호 등을 즉시삭제, 거래은행을 방문하여 보안카드를 재발급</li>

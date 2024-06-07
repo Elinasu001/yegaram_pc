@@ -95,26 +95,35 @@
 
             <!-- s:subVisualWrap -->
             <div id="subVisualWrap" class="sub-type03">
-				<div>
-					<div class="breadcrumb">
-						<a href="/" class="home ir">홈</a>
-					<a href="../center/notice_list" class="depth1">고객센터</a>
-					<a href="../center/electric_internetbanking.html" class="depth2">전자금융안내</a>
-					<a href="../center/electric_internetbanking.html" class="depth3">텔레뱅킹</a>
-					</div>
-					<div class="tit-wrap">
-						<div class="sub-tit">
-							<h2>전자금융안내</h2>
+                
+                <!--D: 전체 구조 변경 -->
+				<div id="breadcrumb" class="breadcrumb-renewal">
+					<script>
+						$(document).ready(function(){
+							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
+						});
+					</script>
+				</div>
+
+                <div>
+                    <!-- <div class="breadcrumb">
+                        <a href="#none" class="home ir">홈</a>
+                        <a href="#none" class="depth1">고객센터</a>
+                        <a href="#none" class="depth2">온라인 서류제출</a>
+                    </div> -->
+                    <div class="tit-wrap">
+                        <div class="sub-tit">
+                            <h2>텔레뱅킹</h2>
                             <p class="desc">안전하고 편리하게 이용 가능한 금융서비스입니다.</p>
                         </div>
-					</div>
-				</div>
-			</div>
+                    </div>
+                </div>
+            </div>
             <!-- //e:subVisualWrap -->
 			<!-- s:contents -->
 			<div class="contents default-wrap"> <!-- border 없는 contents class = contents02 -->
 				<div class="efinancial-info-wrap">
-					<div class="tab-wrap">
+					<!--D: 삭제 <div class="tab-wrap">
 						<ul>
 							<li><a href="../center/electric_internetbanking.html">인터넷뱅킹</a></li>
                             <li class="active"><a href="../center/electric_telebanking.html">텔레뱅킹</a></li>
@@ -122,7 +131,7 @@
                             <li><a href="../center/electric_service_terms.html">전자금융서비스이용약관</a></li>
                             <li><a href="../center/secure_ebanking.html">안전한 전자금융</a></li>
 						</ul>
-					</div>
+					</div> -->
 					<div class="prod-cts">
 						<div class="list-tit">텔레뱅킹이란?</div>
 						<ul class="define-list">
@@ -134,7 +143,8 @@
 							</li>
 							<li>
 								<span class="de-tit">텔레뱅킹 수수료</span>
-								<div class="de-cts">텔레뱅킹 수수료는 다음과 같습니다.
+								<div class="de-cts">
+									<P class="tit">텔레뱅킹 수수료는 다음과 같습니다.</P><!--D: P태그 추가-->
 									<div class="table-wrap">
 										<table class="table-style">
 											<caption>텔레뱅킹 수수료</caption>
@@ -148,7 +158,7 @@
 													<th scope="col">수수료</th>
 												</tr>
 											</thead>
-											<tbody class="table-center bdl-none">		<!-- s : 2023-07-16 , 클래스 추가 : e -->
+											<tbody class="table-center bdl-none">
 												<tr>
 													<td>당행이체</td>
 													<td>없음</td>
@@ -164,8 +174,8 @@
 							</li>
 							<li>
 								<span class="de-tit">텔레뱅킹 이용안내</span>
-								<div class="de-cts">텔레뱅킹 이용안내는 다음과 같습니다.
-									<!-- s : 2023-07-16 , 수정 -->
+								<div class="de-cts">
+									<P class="tit">텔레뱅킹 이용안내는 다음과 같습니다.</P><!--D: P태그 추가-->
 									<div class="table-wrap">
 										<table class="table-style">
 											<caption>텔레뱅킹 이용안내</caption>
@@ -220,14 +230,14 @@
 											</tbody>
 										</table>
 									</div>
-									<!-- e : 2023-07-16 , 수정 -->
 								</div>
 							</li>
 							<li>
 								<span class="de-tit">서비스코드 안내</span>
-								<div class="de-cts">서비스코드는 다음과 같습니다.
+								<div class="de-cts">
+									<P class="tit">서비스코드는 다음과 같습니다.</P><!--D: P태그 추가-->
 									<div class="table-wrap">
-										<table class="table-style all-c">	<!-- s : 2023-07-16, 클래스 all-c 추가 : e -->
+										<table class="table-style all-c">
 											<caption>텔레뱅킹 서비스코드 안내</caption>
 											<colgroup>
 												<col style="width:35%">
@@ -305,7 +315,7 @@
 							<li>
 								<span class="de-tit">타행이체시 은행코드</span>
 								<div class="de-cts">
-									타행이체시 은행코드는 다음과 같습니다.
+									<P class="tit">타행이체시 은행코드는 다음과 같습니다.</P><!--D: P태그 추가-->
 									<div class="table-wrap">
 										<table class="table-style">
 											<caption>텔레뱅킹 은행코드 안내</caption>
@@ -327,8 +337,7 @@
 													<th scope="col">코드</th>
 												</tr>
 											</thead>
-											<!-- 180719 pm 텍스트 수정 -->
-											<tbody class="table-center bdl-none"> <!-- s : 2023-07-16 , 클래스 추가 : e -->
+											<tbody class="table-center bdl-none">
 												<tr>
 													<td>상호저축은행</td>
 													<td>050</td>
@@ -394,7 +403,6 @@
 													<td>059</td>
 												</tr>
 											</tbody>
-											<!-- //180719 pm 텍스트 수정 -->
 										</table>
 									</div>
 								</div>
@@ -402,8 +410,7 @@
 							<li>
 								<span class="de-tit">전자자금 이체한도</span>
 								<div class="de-cts">
-									전자자금 이체한도는 다음과 같습니다. <!-- 180625 am 오타수정 한도는는 -> 한도는 -->
-									<!-- s : 2023-07-16 , 수정 -->
+									<P class="tit">전자자금 이체한도는 다음과 같습니다.</P><!--D: P태그 추가-->
 									<span class="unit">(단위: 억원)</span>
 									<div class="table-wrap">
 										<table class="table-style">
@@ -455,10 +462,7 @@
 												</tr>
 											</tbody>
 										</table>
-										<!-- s : 2023-07-16 , 삭제 --
-										<p class="tbl-txt"><span>(단위:억원)</span></p> <!-- 180625 am 추가 -->
 									</div>
-									<!-- e : 2023-07-16 , 수정 -->
 								</div>
 							</li>
 						</ul>

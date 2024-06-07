@@ -95,26 +95,35 @@
 
             <!-- s:subVisualWrap -->
             <div id="subVisualWrap" class="sub-type03">
-				<div>
-					<div class="breadcrumb">
-						<a href="/" class="home ir">홈</a>
-					<a href="../center/notice_list" class="depth1">고객센터</a>
-					<a href="../center/electric_internetbanking.html" class="depth2">전자금융안내</a>
-					<a href="../center/electric_internetbanking.html" class="depth3">인터넷뱅킹</a>
-					</div>
-					<div class="tit-wrap">
-						<div class="sub-tit">
-							<h2>전자금융안내</h2>
+                
+                <!--D: 전체 구조 변경 -->
+				<div id="breadcrumb" class="breadcrumb-renewal">
+					<script>
+						$(document).ready(function(){
+							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
+						});
+					</script>
+				</div>
+
+                <div>
+                    <!-- <div class="breadcrumb">
+                        <a href="#none" class="home ir">홈</a>
+                        <a href="#none" class="depth1">고객센터</a>
+                        <a href="#none" class="depth2">온라인 서류제출</a>
+                    </div> -->
+                    <div class="tit-wrap">
+                        <div class="sub-tit">
+                            <h2>인터넷뱅킹</h2>
                             <p class="desc">안전하고 편리하게 이용 가능한 금융서비스입니다.</p>
                         </div>
-					</div>
-				</div>
-			</div>
+                    </div>
+                </div>
+            </div>
             <!-- //e:subVisualWrap -->
 			<!-- s:contents -->
 			<div class="contents default-wrap"> <!-- border 없는 contents class = contents02 -->
 				<div class="efinancial-info-wrap">
-					<div class="tab-wrap">
+					<!--D: 삭제 <div class="tab-wrap">
 						<ul>
 							<li class="active"><a href="../center/electric_internetbanking.html">인터넷뱅킹</a></li>
                             <li><a href="../center/electric_telebanking.html">텔레뱅킹</a></li>
@@ -122,7 +131,7 @@
                             <li><a href="../center/electric_service_terms.html">전자금융서비스이용약관</a></li>
                             <li><a href="../center/secure_ebanking.html">안전한 전자금융</a></li>
 						</ul>
-					</div>
+					</div> -->
 					<div class="prod-cts">
 						<div class="list-tit">인터넷뱅킹이란?</div>
 						<ul class="define-list">
@@ -141,8 +150,7 @@
 							<li>
 								<span class="de-tit">전자자금 이체한도</span>
 								<div class="de-cts">
-									전자자금 이체한도는 다음과 같습니다.
-									<!-- s : 2023-07-16 , 수정 -->
+									<P clas="tit">전자자금 이체한도는 다음과 같습니다.</P><!--D: P태그 추가-->
 									<span class="unit">(단위: 억원)</span>
 									<div class="table-wrap">
 										<table class="table-style">
@@ -195,13 +203,12 @@
 											</tbody>
 										</table>
 									</div>
-									<!-- e : 2023-07-16 , 수정 -->
 								</div>
 							</li>
 							<li>
 								<span class="de-tit">인터넷뱅킹 가입절차</span>
 								<div class="de-cts">
-									인터넷뱅킹 가입절차는 다음과 같습니다.
+									<p class="tit">인터넷뱅킹 가입절차는 다음과 같습니다.</p><!--D: P태그 추가-->
 									<div class="table-wrap">
 										<table class="table-style">
 											<caption>인터넷뱅킹 가입절차</caption>
