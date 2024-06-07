@@ -35,7 +35,7 @@
 
 .mainWrap > section { position:relative; width:100%; max-width:1200px; margin:0 auto; /*padding:100px 0;*/ }
 .mainWrap > section:not(:first-child){ margin-top: 100px; }
-.mainSec01 { max-width:unset!important; padding:0!important; }
+.mainSec01 { max-width:unset!important; padding:0!important; background-color: #F7F9FC; border-top: 1px solid #EDEDED; }
 .mainSec01 .slideArea img{ width: auto; }
 
 /* slide */
@@ -51,26 +51,30 @@
 .slideArea .infoBox .rate strong { font-size:24px; margin-left:5px; }
 
 /* 바로가기 */
-.shortcut { position:absolute; top:50%; right:0; width:340px; background:linear-gradient(320deg, rgba(38,15,84,1) 0%, rgba(61,18,146,1) 100%); border-radius:12px; transform:translate(0, -50%); }
-.shortcut .list { /*padding:52px 30px 40px;*/ padding:52px 35px 40px; }
-.shortcut .list > li { position:relative; display:inline-block; /*margin:10px 0;*/ }
-.shortcut .list > li + li { margin-top: 20px; }
-.shortcut .list > li > a { position:relative; display:block; padding-left:40px; font-size:22px; font-weight:500; color:#ffffff; line-height: 1.6;}
-.shortcut .list > li > a::before { content:""; position:absolute; top:50%; left:0; width:36px; height:36px; transform:translate(0, -50%); }
-.shortcut .list > li:nth-child(1) > a::before { background:url("../images/main/ico_money2.png") no-repeat center  50%/36px auto; }
-.shortcut .list > li:nth-child(2) > a::before { background:url("../images/main/ico_money1.png") no-repeat center 50%/36px auto; }
-.shortcut .list > li:nth-child(3) > a::before { background:url("../images/main/ico_paper.png") no-repeat center 50%/36px auto; }
+.shortcut { position:absolute; top:50%; right:0; width:340px; background-color: #FFFFFF; border-radius:12px; transform:translate(0, -50%); box-shadow: 0 0 12px rgba(0,0,0,0.3); }
+.shortcut .list { font-size: 0; }
+.shortcut .list > li { position:relative; display:inline-block; width: 50%; text-align: center; }
+.shortcut .list > li > a { position:relative; display:block; font-size:20px; font-weight:500; color:#333333; line-height: 1.6; height: 158px; padding: 40px 0; }
+.shortcut .list > li > a::before { content:""; display: block; width:36px; height:36px; margin: 0 auto 10px; }
+.shortcut .list > li:nth-child(1) { border-right: 1px solid rgba(165, 165, 165, .3); border-bottom: 1px solid rgba(165, 165, 165, .3); }
+.shortcut .list > li:nth-child(1) > a::before { background:url("../images/main/ico_money2.png") no-repeat center  50%/40px auto; }
+.shortcut .list > li:nth-child(2) { border-bottom: 1px solid rgba(165, 165, 165, .3); }
+.shortcut .list > li:nth-child(2) > a::before { background:url("../images/main/ico_money1.png") no-repeat center 50%/40px auto; }
+.shortcut .list > li:nth-child(3) { border-right: 1px solid rgba(165, 165, 165, .3); }
+.shortcut .list > li:nth-child(3) > a::before { background:url("../images/main/ico_paper.png") no-repeat center 50%/40px auto; }
+.shortcut .list > li:nth-child(4) > a::before { background:url("../images/main/ico_paper2.png") no-repeat center 50%/40px auto; }
 .shortcut .list .bedge { position:absolute; top:-10px; margin-left:10px; padding:3px 15px; background:#9F7CE4; border-radius:15px; font-size:14px; color:#ffffff; }
 .shortcut .list .bedge::before { content:''; position:absolute; bottom:2px; left:-7px; border-top:0px solid transparent; border-left:15px solid transparent; border-right: 0px solid transparent; border-bottom: 15px solid #9F7CE4; }
-.shortcut .btnWrap { display:flex; justify-content:space-between; width:100%; /*border-top:1px solid rgba(239,239,239,.3);*/ border-top: 1px solid rgba(228,228,228,0.3); }
-.shortcut .btnWrap > li { flex:1; /*border-right:1px solid rgba(239,239,239,.3);*/ border-right: 1px solid rgba(228,228,228,0.3); text-align:center; }
-.shortcut .btnWrap > li:last-child { border-right:0; }
-.shortcut .btnWrap > li > a { display:block; /*padding:20px 0;*/ padding:24px 0; font-size:18px; color:rgba(239,239,239,.8); }
+.shortcut .btnWrap { display:flex; justify-content:space-between; width:100%; /*border-top:1px solid rgba(239,239,239,.3);*/ border-top: 1px solid rgba(228,228,228,0.3); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; overflow: hidden; }
+.shortcut .btnWrap > li { flex:1; border-right: 1px solid rgba(228,228,228,0.3); text-align:center; background-color: #4E32A5; }
+.shortcut .btnWrap > li:last-child { border-right:0; background-color: #F4F5FB; }
+.shortcut .btnWrap > li > a { display:block; padding:24px 0; font-size:18px; font-weight: 500; color:#FFFFFF; }
+.shortcut .btnWrap > li:last-child > a { color: #2B0F62; }
 .slideArea .btn-link { width:65%; background:#E2D4FF; }
 .slideArea .slideBg { position:absolute; /*right:420px;*/ right: 220px; top:80px; z-index:-1; width:610px; }
 
 /* 빠른 서비스 */
-.quick-service { width:100%; /*height:195px;*/ background:#F6F6F9; /*padding:30px 0;*/ padding:40px 0 35px 0;  }
+.quick-service { width:100%; /*height:195px;*/ background:#F6F6F9; padding:40px 0 35px 0; width: 100%; max-width: 1200px; margin: 0 auto; background: linear-gradient(320deg, rgba(38, 15, 84, 1) 0%, rgba(61, 18, 146, 1) 100%); }
 .quick-service .inner { display:flex; height:100%; }
 .quick-service .secTit { width:230px; margin:0; font-size:20px; font-weight:400; }
 .quick-service ul { display:flex; justify-content:space-between; /*width:calc(100% - 230px);*/ height:100%; }
