@@ -393,9 +393,10 @@
 .grid4 > .form-wrap:first-of-type { margin-left:0px; } */
 
 /******** layerpopup ********/
-.layerpopup { position:absolute; overflow:hidden; display:none; /*width:1328px;*/ width: 980px; z-index:20; background:#fff; }
+.layerpopup { position:absolute; overflow:hidden; display:none; /*width:1328px;*/ /*width: 980px;*/ z-index:20; background:#fff; }
 .layerpopup:active, .layerpopup:focus { -moz-outline:none; outline:none; ie-dummy:expressing(this.hideFocus=true); }
-.layerpopup .pop-wrap { /*padding:130px 70px;*/ padding:90px 70px 70px; }
+/* .layerpopup .pop-wrap { padding:50px; } */
+.layerpopup .pop-wrap {padding:90px 70px 70px; }
 .layerpopup .pop-tit { /*padding-bottom:30px;*/}
 
 .layerpopup .tit-wrap { height:60px; padding:0; margin:0; border-top:2px solid #000000; background:#F8F9FC; line-height:60px; text-align:center; }
@@ -422,7 +423,7 @@
 .layerpopup.small .btn-menu-close { right:25px; }
 .layerpopup .btn-normal:hover, .layerpopup .btn-normal:focus { background:#612885; color:#fff; border:1px solid #612885; }
 .pdfLayerpopup .btn-pdf-close { position:absolute; top:20px; right:20px; z-index:25; width:25px; height:24px; background-image:url(../images/common/btn_close.png); background-size: contain; background-repeat:no-repeat; text-indent:-9999px; }
-.pdfLayerpopup .pop-wrap { /*padding:60px 70px;*/ padding: 40px 10px 0px 10px; }
+/* .pdfLayerpopup .pop-wrap { padding: 40px 10px 0px 10px; } */
 
 @media(min-height:600px){
 .pdfLayerpopup  .iScrollVerticalScrollbar{ display:none; }
