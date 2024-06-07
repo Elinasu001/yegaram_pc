@@ -95,21 +95,30 @@
 
             <!-- s:subVisualWrap -->
             <div id="subVisualWrap" class="sub-type03">
-				<div>
-					<div class="breadcrumb">
-						<a href="/" class="home ir">홈</a>
-					<a href="#none" class="depth1">고객센터</a>
-					<a href="#none" class="depth2">금융계산기</a>
-					<a href="#none" class="depth3">적금계산</a>
-					</div>
-					<div class="tit-wrap">
-						<div class="sub-tit">
-							<h2>금융계산기</h2>
+                
+                <!--D: 전체 구조 변경 -->
+				<div id="breadcrumb" class="breadcrumb-renewal">
+					<script>
+						$(document).ready(function(){
+							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
+						});
+					</script>
+				</div>
+
+                <div>
+                    <!-- <div class="breadcrumb">
+                        <a href="#none" class="home ir">홈</a>
+                        <a href="#none" class="depth1">고객센터</a>
+                        <a href="#none" class="depth2">온라인 서류제출</a>
+                    </div> -->
+                    <div class="tit-wrap">
+                        <div class="sub-tit">
+                            <h2>금융계산기</h2>
                             <p class="desc">예상 예금, 적금, 대출 이자를 금융계산기로 계산해 보세요.</p>
                         </div>
-					</div>
-				</div>
-			</div>
+                    </div>
+                </div>
+            </div>
             <!-- //e:subVisualWrap -->
             <!-- s:contents -->
             <div class="contents default-wrap"> <!-- border 없는 contents class = contents02 -->

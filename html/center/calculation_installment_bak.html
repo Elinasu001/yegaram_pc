@@ -95,33 +95,24 @@
 
             <!-- s:subVisualWrap -->
             <div id="subVisualWrap" class="sub-type03">
-                
-                <!--D: 전체 구조 변경 -->
-				<div id="breadcrumb" class="breadcrumb-renewal">
-					<script>
-						$(document).ready(function(){
-							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
-						});
-					</script>
-				</div>
-
-                <div>
-                    <!-- <div class="breadcrumb">
-                        <a href="#none" class="home ir">홈</a>
-                        <a href="#none" class="depth1">고객센터</a>
-                        <a href="#none" class="depth2">온라인 서류제출</a>
-                    </div> -->
-                    <div class="tit-wrap">
-                        <div class="sub-tit">
-                            <h2>금융계산기</h2>
+				<div>
+					<div class="breadcrumb">
+						<a href="/" class="home ir">홈</a>
+					<a href="#none" class="depth1">고객센터</a>
+					<a href="#none" class="depth2">금융계산기</a>
+					<a href="#none" class="depth3">적금계산</a>
+					</div>
+					<div class="tit-wrap">
+						<div class="sub-tit">
+							<h2>금융계산기</h2>
                             <p class="desc">예상 예금, 적금, 대출 이자를 금융계산기로 계산해 보세요.</p>
                         </div>
-                    </div>
-                </div>
-            </div>
+					</div>
+				</div>
+			</div>
             <!-- //e:subVisualWrap -->
             <!-- s:contents -->
-            <div class="contents default-wrap">
+            <div class="contents default-wrap"> <!-- border 없는 contents class = contents02 -->
                 <div class="calculator-wrap">
                     <div class="tab-wrap">
                         <ul>
@@ -130,7 +121,9 @@
                             <li><a href="../center/calculation_loan.html">대출계산</a></li>
                         </ul>
                     </div>
+                    <!-- s: 2023-07-14 , 태그 수정 -->
 					<p class="cont-tit">목돈을 일정기간 동안 예치 했을때 만기지급액과 이자를 자세히 보실 수 있습니다.</p>
+					<!-- e: 2023-07-14 , 태그 수정 //-->
 
                     <div class="input-wrap">
                         <div class="grid-wrap">
@@ -145,11 +138,13 @@
                                         </div>
                                         <p class="money-btn-wrap">
                                             
+                                             <!-- s : 2023-07-14 , 위치 수정 -->
 											<button type="button" name="button" class="btn-normal tiny" data="100000" gubun="2">+10만</button>
 											<button type="button" name="button" class="btn-normal tiny" data="500000" gubun="2">+50만</button>
 											<button type="button" name="button" class="btn-normal tiny" data="1000000" gubun="2">+100만</button>
 											<button type="button" name="button" class="btn-normal tiny" data="5000000" gubun="2">+500만</button>
 											<button type="button" name="button" class="btn-normal tiny dark">정정</button>
+											 <!-- s : 2023-07-14 , 위치 수정 //-->
                                         </p>
                                         <div class="inp-area">
               
@@ -167,12 +162,16 @@
                                         <input type="button" class="ui-slider-handle ui-corner-all ui-state-default" title="목표기간 수치"></div> 
                                         </div>
                                         <p class="money-btn-wrap">
+											  <!-- s : 2023-07-14 , 위치 수정 -->
+                                           
 											<button type="button" name="button" class="btn-normal tiny" data="6" gubun="1">6개월</button>
 											<button type="button" name="button" class="btn-normal tiny" data="12" gubun="1">12개월</button>
 											<button type="button" name="button" class="btn-normal tiny" data="24" gubun="1">24개월</button>
 											<button type="button" name="button" class="btn-normal tiny" data="30" gubun="1">30개월</button>
 											<button type="button" name="button" class="btn-normal tiny" data="36" gubun="1">36개월</button>
-											<button type="button" name="button" class="btn-normal tiny dark">정정</button>
+											 <button type="button" name="button" class="btn-normal tiny dark">정정</button>
+                                           
+											 <!-- s : 2023-07-14 , 위치 수정 -->
                                         </p>
                                         <div class="inp-area">
                                             <input type="text" name="" value="" id="month" placeholder="개월을 입력하세요" title="목표기간(개월) 입력">
@@ -212,24 +211,29 @@
                     </div>
                     <div class="btn-wrap">
                         <button type="button" name="button" class="btn-big navy btn-inquiry">계산하기</button>
+                        <!-- s : 2023-07-14 ,class 수정 //-->
                         <button type="button" name="button" class="btn-normal btn-ft-dwn" onclick="pageFunc.init()">다시작성</button>
                     </div>
                     <div class="calculator-result line-box">
-						<div class="list-tit mb30">계산결과</div>
-						<table class="table-style">
+						<div class="list-tit mb30">계산결과</div> <!-- 180726 pm 추가 -->
+						<table class="table-style"> <!-- 180726 pm class=" caption-tit" 삭제 -->
+							<!-- s: 20180725 am - 캡션 상세화 -->
 							<caption>계산결과 - 구분, 월납입액 합계(원), 이자(세금납부 전, 원), 이자(세금납부 후, 원), 만기지급액(원)으로 구성</caption>
+							<!-- //e: 20180725 am - 캡션 상세화 -->
+							<!-- 180626 pm colgroup 수정 -->
 							<colgroup>
 								<col style="width:*;">
 								<col style="width:23%;">
 								<col style="width:23%;">
 								<col style="width:23%;">
 								<col style="width:23%;">
+								<!-- //180626 pm colgroup 수정 -->
 							</colgroup>
 							<thead>
 								<tr>
 									<th scope="col">구분</th>
 									<th scope="col">월납입액 합계(원)</th>
-									<th scope="col">이자(세금납부 전, 원)</th>
+									<th scope="col">이자(세금납부 전, 원)</th> <!-- 180723 am 오타수정 -->
 									<th scope="col">이자(세금납부 후, 원)</th>
 									<th scope="col">만기지급액(원)</th>
 								</tr>
