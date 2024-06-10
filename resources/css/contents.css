@@ -506,7 +506,7 @@ div.line-box { padding-top:60px; margin-top:60px; border-top:1px solid #bbb; }
 
 .item-tit label { font-size:18px !important; }
 
-.guide-means { display:none; padding:15px 20px 30px 20px; margin-top: 15px; /*border-radius:15px;*/ border-radius: 7px; background:#FAFAFA; }
+.guide-means { display:none; padding:15px 20px 30px 20px; margin-top: 15px; /*border-radius:15px;*/ border-radius: 7px; }
 .guide-means .ctm-check { margin-top:15px; }
 .guide-means .ctm-check button { /*margin-top:-9px;*/ }
 .agree-wrap .agree-box button.tiny,
