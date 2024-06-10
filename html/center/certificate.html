@@ -90,13 +90,22 @@
 			
 			<!-- s:subVisualWrap -->
 			<div id="subVisualWrap" class="sub-type03">
+
+				<!--D: 전체 구조 변경 -->
+				<div id="breadcrumb" class="breadcrumb-renewal">
+					<script>
+						$(document).ready(function(){
+							$("#breadcrumb").load("../include/inc_body_breadcrumb.html");
+						});
+					</script>
+				</div>
+
 				<div>
-					<div class="breadcrumb">
-						<a href="/" class="home ir">홈</a>
-						<a href="/deposit/submain" class="depth1">고객센터</a>
-						<a href="/deposit/register" class="depth2">인증센터</a>
-						
-					</div>
+					<!-- <div class="breadcrumb">
+						<a href="#" class="home ir">홈</a>
+						<a href="#" class="depth1">금융상품공시실</a>
+						<a href="#" class="depth2">모집인수수료율</a>
+					</div> -->
 					<div class="tit-wrap">
 						<div class="sub-tit">
 							<h2>인증센터</h2>
@@ -108,117 +117,124 @@
 			<!-- //e:subVisualWrap -->
 
 			<!-- s:contents -->
-			<div class="contents default-wrap"> <!-- border 없는 contents class = contents02 -->
-				<div class="auth-wrap">
-
-					<div class="tab-wrap tab-page type2"><!--D:2023-07-12 type2 추가-->
-                        <ul>
-							<li class="active">
-								<!--s:디자인현행화-->
-								<a href="#none">공동인증서 내보내기<span>(PC웹사이트→GOBANK APP)</span></a>
-								<!--e:디자인현행화-->
-								<div class="contents-area" style="display: block;">
-									<div class="cer-txt">
-										<h3 class="list-tit">공동인증서란</h3>
-										<!--s:디자인현행화-->
-										<p class="box-info">공동인증기관에서 발행한 고객님의 전자적 서명을 관리합니다. <br /> 안전한 인터넷뱅킹 서비스를 위해서 반드시 본인 명의의 인증서가 필요합니다.<p>
-										<!--e:디자인현행화-->
-											<dl class="ex-txt">
-											<dt>※ 범용공동인증서 안내</dt>
-											<dd>- 정보통신부의 지침에 의하여 금융결제원(Yessign)의 범용 공동인증서 신규 발급이 중지됨(2006.7.1)에 따라 한국정보인증(signGATE) 범용 공동인증서만 발급이 가능합니다. (단, 금융결제원 범용으로 기 발급 사실이 있는 경우는 발급, 재발급, 갱신이 가능합니다.) 공동인증서에 대한 자세한 내용은 금융결제원 홈페이지에서 정보를 제공하고 있습니다.</dd>
-											<dd>- <span class="accent">증권사, 국세청, 우체국, 카드사, 전자무역 등 에서 발급받은 공동인증서 중 특수용도로 발급받은 인증서는 사용이 불가합니다.</span></dd>
-										</dl>
-									</div>
-									<div>
-										<!-- s:디자인현행화 -->
-										<h3 class="list-tit">PC웹사이트 → GO BANK APP으로 내보내기 절차</h3>
-										<img src="../../../resources/images/page/img-pc_app.png" alt="1단계:스마트기기에서 고려저축은행 논스톱대출 어플리케이션 실행 / 2단계:PC에서 '공동인증서 내보내기(PC웹사이트→예스뱅킹APP)' 선택 / 3단계:PC에서 복사할 인증서 선택 후 '인증번호' 생성 / 4단계:어플리케이션 “인증센터 > 공동인증서 복사 > PC → 스마트폰 복사” 화면에 “인증번호” 입력 후 복사 완료">
-										<!-- e:디자인현행화 -->
-										<h3 class="list-tit">사용가능한 인증서</h3>
-										<!--//s:2023-07-12 구조 변경 -->
-										<ul class="define-list ta-l type2">
-											<li>
-												<span class="de-tit">설명</span> 
-												<div class="de-cts">
-													종류 :  범용개인 인증서 <br />
-													발급대상 : 개인뱅킹 가입고객 <br />
-													용도 : 인증서가 필요한 모든거래
-												</div>
-											</li>
-											<li>
-												<span class="de-tit">기업고객</span>
-												<div class="de-cts">
-													종류 :  저축은행용<br />
-													발급대상 : 기업뱅킹 가입고객<br />
-													용도 : 저축은행 인터넷뱅킹 거래용
-												</div>
-											</li>
-										</ul>
-										<!--s:2023-07-14 구조변경-->
-										<div class="btn-wrap full">
-											<button type="button" name="button" class="btn-normal btn-ft-dwn">공동인증서 내보내기 (PC웹사이트→GO BANK APP)</button>
-										</div>
-										<!--e:2023-07-14 구조변경-->
-									</div>
-								</div>
-			                </li>
-							
-                            <li>
-								<!--s:디자인현행화-->
-                                <a href="#none">공동인증서 가져오기<span>(GOBANK APP→PC웹사이트)</span></a>
-                                <!--e:디자인현행화-->
-								<div class="contents-area">
-									<div class="cer-txt">
-										<h3 class="list-tit">공동인증서란</h3>
-										<!--s:디자인현행화-->
-										<p class="box-info mt10">공동인증기관에서 발행한 고객님의 전자적 서명을 관리합니다. <br /> 안전한 인터넷뱅킹 서비스를 위해서 반드시 본인 명의의 인증서가 필요합니다.</p>
-										<!--e:디자인현행화-->
-										<!--s:기획현행화 (mt30 삭제)-->
-										<dl class="ex-txt">
-										<!--e:기획현행화 (mt30 삭제)-->
-											<dt>※ 범용공동인증서 안내</dt>
-											<dd>- 정보통신부의 지침에 의하여 금융결제원(Yessign)의 범용 공동인증서 신규 발급이 중지됨(2006.7.1)에 따라 한국정보인증(signGATE) 범용 공동인증서만 발급이 가능합니다. (단, 금융결제원 범용으로 기 발급 사실이 있는 경우는 발급, 재발급, 갱신이 가능합니다.) 공동인증서에 대한 자세한 내용은 금융결제원 홈페이지에서 정보를 제공하고 있습니다.</dd>
-											<dd>- <span class="accent">증권사, 국세청, 우체국, 카드사, 전자무역 등 에서 발급받은 공동인증서 중 특수용도로 발급받은 인증서는 사용이 불가합니다.</span></dd>
-										</dl>
-									</div>
-
-									<div>
-										<!-- s:디자인현행화 -->
-										<h3 class="list-tit">GO BANK APP → PC웹사이트로 가져오기 절차</h3>
-										<img src="../../../resources/images/page/img-app_pc.png" alt="1단계:고려저축은행 모바일웹사이트 사이트 접속 / 2단계: 어플리케이션 “인증센터 > 공동인증서 복사 > 스마트폰 → PC 복사” 화면에서 복사할 인증서 선택 후 “인증번호” 생성 / 3단계: PC에서 “공동인증서 가져오기 (예스뱅킹APP → PC웹사이트)” 선택 / 4단계:PC에서 가져오기 화면에 “인증번호” 입력 후 복사 완료">
-										<!-- e:디자인현행화 -->
-										<!-- s:기획현행화 -->
-										<h3 class="list-tit">사용가능한 인증서</h3>
-										<!-- e:기획현행화 -->
-										<!--//s:2023-07-12 구조 변경 -->
-										<ul class="define-list ta-l type2">
-											<li>
-												<span class="de-tit">설명</span> 
-												<div class="de-cts">
-													종류 :  범용개인 인증서 <br />
-													발급대상 : 개인뱅킹 가입고객 <br />
-													용도 : 인증서가 필요한 모든거래
-												</div>
-											</li>
-											<li>
-												<span class="de-tit">기업고객</span>
-												<div class="de-cts">
-													종류 :  저축은행용<br />
-													발급대상 : 기업뱅킹 가입고객<br />
-													용도 : 저축은행 인터넷뱅킹 거래용
-												</div>
-											</li>
-										</ul>
-										<!--s:2023-07-14 구조변경-->
-										<div class="btn-wrap full">
-											<button type="button" name="button" class="btn-normal btn-ft-dwn">공동인증서 가져오기(GO BANK APP→PC웹사이트)</button>
-										</div>
-										<!--e:2023-07-12 구조변경--> 
-									</div>
-                                </div>
-                            </li>
-                        </ul>
+			<div class="contents default-wrap">
+				<h3 class="auth-wrap">
+                    <!--D: 전체 수정-->
+                    <h3 class="list-tit">전자금융서비스이용기관</h3>
+                    <p class="box-info">인터넷상에서 발생하는 모든 전자거래를 안심하고 사용할 수 있도록 해주는 사이버 증명서로 일상생활의 인감증명서에 비유할 수 있습니다.</p>
+                    
+                    <div class="btn-wrap col">
+                    <div class="list-tit">예가람저축은행 인터넷뱅킹을 이용하기 위해서는 인터넷뱅킹용 인증센터에서 서비스를 이용해주세요.</div>    <button type="button" name="button" class="btn-big prod-more">공동인증서 내보내기(PC웹사이트→예스뱅킹APP)</button>
+                        <button type="button" name="button" class="btn-big prod-more">공동인증서 가져오기(예스뱅킹APP→PC웹사이트)</button>
                     </div>
+
+                    <div class="table-wrap">
+						<div class="list-tit">개인고객</div>
+							<table class="table-style">
+								<caption>개인고객 - 공동인증서종류, 발급대상, 용도, 수수료로 구성</caption>
+								<colgroup>
+									<col style="width:30%;">
+									<col style="width:*">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col"></th>
+										<th scope="col"></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>공동인증서 종류</th>
+										<td>범용개인</td>
+									</tr>
+									<tr>
+										<th>발급대상</th>
+										<td>개인뱅킹 가입고객</td>
+									</tr>
+									<tr>
+										<th>용도</th>
+										<td>인증서가 필요한 모든 거래
+											<ul>
+												<li>- 인터넷뱅킹</li>
+												<li>- 온라인 주식거래</li>
+												<li>- 온라인 신용카드 결제</li>
+												<li>- 전자민원서비스 등</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>수수료</th>
+										<td>무료</td>
+									</tr>
+								</tbody>
+							</table>
+						
+						<div class="list-tit">기업고객</div>
+							<table class="table-style">
+								<caption>기업고객 - 공동인증서종류, 발급대상, 용도, 수수료로 구성</caption>
+								<colgroup>
+									<col style="width:30%;">
+									<col style="width:*">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col"></th>
+										<th scope="col"></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>공동인증서 종류</th>
+										<td>저축은행용</td>
+									</tr>
+									<tr>
+										<th>발급대상</th>
+										<td>기업뱅킹 가입고객</td>
+									</tr>
+									<tr>
+										<th>용도</th>
+										<td>저축은행 인터넷뱅킹 거래용</td>
+									</tr>
+									<tr>
+										<th>수수료</th>
+										<td>무료</td>
+									</tr>
+								</tbody>
+							</table>
+					</div>
+
+                    <!--S: 내보내기 절차-->
+                    <div class="auth_type1">
+                        <h3 class="list-tit">PC웹사이트 → GO BANK APP으로 내보내기 절차</h3>
+                        <img src="../../resources/images/page/img-pc_app.png" alt="1단계:스마트기기에서 예가람저축은행 논스톱대출 어플리케이션 실행 / 2단계:PC에서 '공동인증서 내보내기(PC웹사이트→예스뱅킹APP)' 선택 / 3단계:PC에서 복사할 인증서 선택 후 '인증번호' 생성 / 4단계:어플리케이션 “인증센터 > 공동인증서 복사 > PC → 스마트폰 복사” 화면에 “인증번호” 입력 후 복사 완료">
+                    </div>
+                    <!--E: 내보내기 절차-->
+
+                    <!--S: 가져오기 절차-->
+                    <div class="auth_type2">
+                        <h3 class="list-tit">예스뱅킹APP → PC웹사이트로 가져오기 절차</h3>
+                        <img src="../../resources/images/page//img-app_pc.png" alt="1단계:예가람저축은행 모바일웹사이트 사이트 접속 / 2단계: 어플리케이션 “인증센터 > 공동인증서 복사 > 스마트폰 → PC 복사” 화면에서 복사할 인증서 선택 후 “인증번호” 생성 / 3단계: PC에서 “공동인증서 가져오기 (예스뱅킹APP → PC웹사이트)” 선택 / 4단계:PC에서 가져오기 화면에 “인증번호” 입력 후 복사 완료">
+                    </div>
+                    <!--E: 가져오기 절차-->
+
+                    <div class="list-tit">예가람저축은행 인터넷뱅킹을 이용하기 위해서는 인터넷뱅킹용 인증센터에서 서비스를 이용해주세요.</div>
+
+                    <div class="agree-wrap">
+                        <div class="agree-box">
+                            <div class="items-wrap">
+                                <p class="item-tit">
+                                    <span>인터넷뱅킹 공동인증센터</span>
+                                    <a href="https://yegaram.ibs.fsb.or.kr/CerInfoExpl0100.act" target="_blank" title="새창열기" class="btn-normal tiny fl-r" >바로가기</a>
+                                </p>
+                            </div>
+                            <div class="default-wrap02">
+                                <p class="ex-txt">공동인증서 발급방법: 홈페이지 내 메뉴 중 인터넷뱅킹 -> 인증센터 -> 공동인증서발급/재발급 가능</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--D: 전체 수정//-->
+					
 					
 				</div>
 			</div>

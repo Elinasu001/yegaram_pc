@@ -1018,3 +1018,7 @@ table td[colspan]{ border-top: 1px solid #ddd; }
 
 /* 본인인증 인풋 아래 위치 */
 .step-auth + form .certificate { padding-top:60px !important;}
+
+/* 인증센터 */
+.table-wrap + .auth_type1,
+.auth_type1 + .auth_type2 { margin-top:60px; }
