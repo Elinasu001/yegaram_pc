@@ -307,11 +307,13 @@
 #subVisualWrap .prod-tit h2 { letter-spacing:-5px; font-size:48px; font-weight:600; color:#351b6f; }
 #subVisualWrap .prod-tit h2 span { position:relative; bottom:5px; margin-right:15px; padding-bottom:10px; font-size:30px; color:#ec008c; }
 #subVisualWrap .tit-wrap { display:table; width:100%; text-align:center; }
-#subVisualWrap .sub-tit { display:table-cell; height:260px; padding-top:90px; }
+#subVisualWrap .sub-tit { display:table-cell; height:260px; padding-top:90px; padding-bottom:49px; }
 #subVisualWrap .sub-tit h2 { font-size:50px; font-weight:700; color:#260F54; font-family:"Heungkukseed"; line-height:initial; }
 #subVisualWrap .sub-tit h2 span { color:#260F54; }
 #subVisualWrap .sub-tit h2 .point { color:#F10F8E; }
-#subVisualWrap .sub-tit .desc { margin-top:30px; font-size:25px; font-weight: 400; color:#666; /*letter-spacing:-1.5px;*/}
+#subVisualWrap .sub-tit .desc { font-size:25px; font-weight: 400; color:#666; /*letter-spacing:-1.5px;*/}
+#subVisualWrap .sub-tit .desc { margin-top:25px;}
+#subVisualWrap .sub-tit .desc + .desc { margin-top:0; }
 #subVisualWrap .sub-product-wrap .sub-tit { padding-bottom: 100px; width: 776px; }
 
 /* 예가람 subVisual */
@@ -688,7 +690,7 @@ p + ul.list-wrap01 { margin-top:10px; }
 **/
 
 .btn-big,
-.btn-normal { padding:18px 60px; height:70px; line-height:33px; border-radius:45px; font-size:25px; font-weight:500; color:#FFFFFF; background:#666666; border-color:1px solid #666666; }
+.btn-normal { padding:0px 60px; height:70px; line-height:70px; border-radius:45px; font-size:25px; font-weight:500; color:#FFFFFF; background:#666666; border-color:1px solid #666666; }
 .btn-big:hover,
 .btn-big:focus,
 .btn-normal:hover,
