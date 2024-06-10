@@ -141,6 +141,7 @@
 .mainSec02 #tab-cont02 .infoBox.type2::before { background:url("../images/main/img_type2_2.png") no-repeat center center/100%; }
 .mainSec02 #tab-cont02 .infoBox.type3::before { background:url("../images/main/img_type3_2.png") no-repeat center center/100%; }
 
+.pro-slide-box { display: flex; flex-wrap: wrap; }
 
 
 /* .mainSec02 #tab-cont02 .infoBox:nth-child(1) { background:#FFEFF5; }
