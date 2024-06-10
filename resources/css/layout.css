@@ -677,7 +677,7 @@ p + ul.list-wrap01 { margin-top:10px; }
 .btn-wrap a+button, 
 .btn-wrap button+a, 
 .btn-wrap button+button { margin-left:20px; }
-
+.btn-wrap.col button+button  { margin-left:0; margin-top:20px; } /*인증센터 버튼*/
 /* 본인인증 FORM 형식 버튼 추가 */
 .btn-wrap .btn-normal.form { line-height:70px; height:70px; font-size:25px; }
 
