@@ -115,8 +115,7 @@
                     <div class="tit-wrap">
                         <div class="sub-tit">
                             <h2>보안프로그램 설치</h2>
-                            <p class="desc">안전한 서비스 이용을 위해</p>
-                            <p class="desc">보안프로그램을 다운로드 받아 사용하시기 바랍니다.</p>
+                            <p class="desc">안전한 서비스 이용을 위해<br>보안프로그램을 다운로드 받아 사용하시기 바랍니다.</p>
                         </div>
                     </div>
                 </div>
@@ -137,7 +136,7 @@
                     </p>
                     
 					<div class="table-wrap">
-                        <p class="list-tit">필수 프로그램</p>
+                        <p class="list-tit">필수 프로그램 - 프로그램명, 기능, 구분, 설치현황, 다운로드로 구성</p>
 						<table class="table-style all-c">
 							<caption>필수 프로그램 - 프로그램명, 기능, 구분, 설치현황, 다운로드로 구성</caption>
 							<colgroup>
@@ -156,35 +155,50 @@
 									<th scope="col">다운로드</th>
 								</tr>
 							</thead>
+                            <!--D: 수정-->
 							<tbody>
 								<tr>
-									<th>공동인증서 보안<br>(WizIN-Delfino G3)</th>
-									<td class="td-l">공동인증서 로그인과 거래내역에 대한 전자서명을 위한 프로그램입니다</td>
+									<td>예가람 통합설치 프로그램<br>(VeraPort 3.0)</td>
+									<td class="td-l">예가람에서&nbsp;제공하는&nbsp;보안프로그램을&nbsp;한번에&nbsp;다운받기&nbsp;위한&nbsp;프로그램입니다. </td>
 									<td>필수</td>
-									<td id="object_status_Veraport"><span class="install_yes">미설치</span></td>
+									<td><span>미설치</span></td>
 		                            <td class="ta-c va-m">
 		                                <button id="object_download_Veraport" class="btn-normal tiny" onclick="javascript:fn_download_Veraport('');">설치하기</button>
-		                                <span id="status_installed_Veraport"></span>
-		                                <span id="status_unsupported_Veraport"></span>
-		                                <span id="status_checking_Veraport"></span>
 		                            </td>
 								</tr>
 								<tr>
-									<th>키보드보안 / 개인PC방화벽<br>(Ahnlab Safe Transaction)</th>
-									<td class="td-l">키보드로 입력되는 정보가 유출되거나 변조되지 않도록 보호
-                                        하고 비인가된 접근 차단 및 바이러스를 검색하여 치료해 주는 프로그램입니다</td>
+									<td>공동인증서 보안<br>(WizIN-Delfino G3)</td>
+									<td class="td-l">공동인증서&nbsp;로그인과&nbsp;거래내역에&nbsp;대한&nbsp;전자서명을&nbsp;위한&nbsp;프로그램입니다. </td>
 									<td>필수</td>
-									<td id="object_status_DelfinoG3">미설치</td>
+									<td><span>미설치</span></td>
 		                            <td class="ta-c va-m">
 		                                <button id="object_download_DelfinoG3" class="btn-normal tiny" onclick="javascript:fn_download_DelfinoG3('');">설치하기</button>
-		                                <span id="status_installed_DelfinoG3"></span>
-		                                <span id="status_unsupported_DelfinoG3"></span>
-		                                <span id="status_checking_DelfinoG3"></span>
+		                            </td>
+								</tr>
+								<tr>
+									<td>키보드보안&nbsp;/&nbsp;개인PC방화벽<br>(Ahnlab Safe Transaction)</td>
+									<td class="td-l">키보드로&nbsp;입력되는&nbsp;정보가&nbsp;유출되거나&nbsp;변조되지&nbsp;않도록&nbsp;보호하고&nbsp;비인가된&nbsp;접근&nbsp;차단&nbsp;및&nbsp;바이러스를&nbsp;검색하여&nbsp;치료해&nbsp;주는&nbsp;프로그램입니다.</td>
+									<td>필수</td>
+									<td><span>미설치</span></td>
+		                            <td class="ta-c va-m">
+		                                <button id="object_download_ASTx" class="btn-normal tiny" onclick="javascript:fn_download_ASTx('');">설치하기</button>
+		                            </td>
+									
+								</tr>
+								<tr>
+									<td>스크래핑<br>(i-SAS 2.0)</td>
+									<td class="td-l">국민건강보험공단,국세청,민원24,은행에 접속하여 자격득실여부, 소득증명, 각종 민원서류, 계좌 거래내역을 자동 조회할 수 있는 프로그램(금리인하요구권신청, 온라인서류제출을 위해서는 필수 설치입니다.)</td>
+									<td>필수</td>
+									<td id="object_status_NXiBASE">미설치</td>
+		                            <td class="ta-c va-m">
+		                                <button id="object_download_NXiBASE" class="btn-normal tiny" onclick="javascript:fn_download_NXiBASE('');">설치하기</button>
 		                            </td>
 								</tr>
 							</tbody>
+                            <!--D: 수정//-->
 						</table>
-                        <p class="list-tit">선택 프로그램</p>
+
+                        <p class="list-tit">선택 프로그램 - 프로그램명, 기능, 구분, 다운로드로 구성</p>
 						<table class="table-style all-c">
 							<caption>선택 프로그램 - 프로그램명, 기능, 구분, 다운로드로 구성</caption>
 							<colgroup>
@@ -209,11 +223,15 @@
                                         Adobe Acrobat Reader란 프로그램을 설치하면 인터넷 상에서도 PDF첨부파일을 그대로 보거나 출력할 수 있습니다.<br/>한번 설치한 이후, 한번의 클릭으로 PDF파일을 바로 이용할 수 있습니다.
                                     </td>
                                     <td>선택</td>
-                                    <td><button type="button" name="button" class="btn-normal tiny" onclick="javascript:fn_download_PDF_Viewer('');">설치하기</button></td>
+                                    <td>
+                                        <button type="button" name="button" class="btn-normal tiny" onclick="javascript:fn_download_PDF_Viewer('');">설치하기</button>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
-                        <p class="tbl-txt">고려저축은행 ☎ 1877-9900 ( 상담시간 : 평일 09:00 ~ 18:00 )</p>
+                        <!--D: 수정-->
+                        <p class="tbl-txt">예가람 저축은행 ☎ 1877-7788 ( 상담시간 : 평일 09:00 ~ 18:00 )</p>
+                        <!--D: 수정//-->
                     </div>
 				</div>
 			</div>

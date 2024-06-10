@@ -313,7 +313,6 @@
 #subVisualWrap .sub-tit h2 .point { color:#F10F8E; }
 #subVisualWrap .sub-tit .desc { font-size:25px; font-weight: 400; color:#666; /*letter-spacing:-1.5px;*/}
 #subVisualWrap .sub-tit .desc { margin-top:25px;}
-#subVisualWrap .sub-tit .desc + .desc { margin-top:0; }
 #subVisualWrap .sub-product-wrap .sub-tit { padding-bottom: 100px; width: 776px; }
 
 /* 예가람 subVisual */
