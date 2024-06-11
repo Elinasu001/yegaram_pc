@@ -1383,7 +1383,7 @@ div.line-box { padding-top:60px; margin-top:60px; border-top:1px solid #bbb; }
 /* 예가람 240516 */
 #subVisualWrap.border-none { border-bottom: 0; }
 #subVisualWrap.sub-type02 > .sub-product-wrap { height: auto; }
-.sub-info-wrap { background-color: #F5F6FA; border-radius: 20px; padding: 49px 40px; margin-top: 45px; margin-bottom: -40px; }
+.sub-info-wrap { background-color: #F5F6FA; border-radius: 20px; padding: 49px 40px; margin-top: 45px; /*margin-bottom: -40px;*/ }
 .sub-info-txt { float: left; }
 .sub-info-txt strong { font-size: 30px; font-weight: 600; }
 .sub-info-txt p { font-size: 22px; font-weight: 500; color: #666666; margin-top: 15px; }
