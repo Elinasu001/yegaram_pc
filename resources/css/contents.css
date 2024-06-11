@@ -1424,7 +1424,7 @@ div.line-box { padding-top:60px; margin-top:60px; border-top:1px solid #bbb; }
 .parentDiv.bB0 { border-bottom: 0; padding-bottom: 0; }
 .parentDiv p { font-size: 18px; font-weight: 500; }
 .parentDiv .DivInSpanTag { float: right; margin-right: 20px; }
-.subDiv { margin-top: 25px; font-size: 16px; display: block!important; }
+.subDiv { margin-top: 25px; font-size: 16px; display: block;  }
 .subDiv .btn-box{ margin-top: 28px; text-align: center; display: block; }
 .subDiv .btn-box button.tiny { float: none; margin: 0; }
 
