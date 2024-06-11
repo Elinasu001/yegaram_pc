@@ -408,7 +408,7 @@
 .layerpopup .tit-wrap div:first-child p span { padding-left:10px; }
 .layerpopup .tit-wrap div:last-child p { padding-left:10px; }
 
-.layerpopup .tit { padding-right:50px; color:#612885; font-size:40px; line-height:48px; letter-spacing:-3px; }
+.layerpopup .tit { padding-right:50px; color:#111111; font-size:40px; line-height:48px; letter-spacing:-3px; }
 .layerpopup .desc { margin-top:20px; }
 .layerpopup .pop-tit + .pop-cts { margin-top:30px; height: 100%; overflow-y: hidden; }
 .layerpopup .pop-cts .tit-txt { margin-top:40px; padding-bottom:10px; color:#333; line-height:28px; letter-spacing:-1.8px; }
