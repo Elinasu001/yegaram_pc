@@ -71,7 +71,7 @@
 .shortcut .list { font-size: 0; }
 .shortcut .list > li { position:relative; display:inline-block; width: 50%; text-align: center; }
 .shortcut .list > li > a { position:relative; display:block; font-size:20px; font-weight:500; color:#333333; line-height: 1.6; height: 158px; padding: 40px 0; }
-.shortcut .list > li > a::before { content:""; display: block; width:36px; height:36px; margin: 0 auto 10px; }
+.shortcut .list > li > a::before { content:""; display: block; width:40px; height:40px; margin: 0 auto 10px; }
 .shortcut .list > li:nth-child(1) { border-right: 1px solid rgba(165, 165, 165, .3); border-bottom: 1px solid rgba(165, 165, 165, .3); }
 .shortcut .list > li:nth-child(1) > a::before { background:url("../images/main/ico_money2.png") no-repeat center  50%/40px auto; }
 .shortcut .list > li:nth-child(2) { border-bottom: 1px solid rgba(165, 165, 165, .3); }
@@ -98,7 +98,7 @@
 .quick-service ul > li { text-align:center; margin-right: 85px; }
 .quick-service ul > li:last-child { margin-right: 0; }
 .quick-service ul > li > a { /*display:block;*/ display: flex; flex-direction: column; align-items: center; text-align:center; font-size:16px; color:#FFFFFF; }
-.quick-service ul > li > a::before { content:""; display:inline-block; width:56px; height:56px; margin-bottom:10px; border-radius:50px; }
+.quick-service ul > li > a::before { content:""; display:inline-block; width:56px; height:56px; margin-bottom:10px; }
 .quick-service ul > li:nth-child(1) > a::before { background: url("../images/main/ico_card.png") no-repeat center 50%/56px auto; }
 .quick-service ul > li:nth-child(2) > a::before { background: url("../images/main/ico_pc.png") no-repeat center 50%/56px auto; }
 .quick-service ul > li:nth-child(3) > a::before { background: url("../images/main/ico_sms.png") no-repeat center 50%/56px auto; }
@@ -289,6 +289,8 @@
 .down-list li:last-child { padding-right: 0; }
 .down-list li:last-child:after{ display: none; }
 .down-list li > div { font-size: 14px; font-weight: 600; color: #666666; margin-bottom: 8px; line-height: 1.4; }
+.down-list li:nth-child(2) a img { width: 116px; height: 25px; margin-top: 11px; }
+.down-list li:nth-child(3) a img { width: 102px; height: 27px; margin-top: 9px; }
 .down-list .qr img { width: 96px; }
 .down-list a { display: block; box-sizing: border-box; border-radius: 6px; border: 1px solid #E2E2E2; width: 180px; height: 50px; text-align: center; }
 .down-list a img { width: auto; height: 100%; }
@@ -307,6 +309,7 @@
 .service-center .sc-icon-box span { width: 68px; height: 68px; position: absolute; right: 0; bottom: 0; }
 .service-info .sc-icon-box span { background: url("../images/main/ico_service_info.png") no-repeat center 50%/68px auto; }
 .customer-service .sc-icon-box span { background: url("../images/main/ico_customer_service.png") no-repeat center 50%/68px auto; }
+.service-center .customer-service .sc-icon-box { margin-top: 45px; }
 
 .sc-tit { display: block; font-size: 16px; padding-bottom: 20px; border-bottom: 1px solid #E1E1E1; margin-bottom: 20px; }
 .sc-txt { font-size: 21px; font-weight: 500; color: #333333; line-height: 1.4; }

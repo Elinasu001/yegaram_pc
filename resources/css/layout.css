@@ -115,9 +115,9 @@
 .right-menu .btnMenu { background:url("../../../resources/images/main/icon_menu.png") no-repeat 0 50%/16px auto; padding-left: 25px; width: auto !important; }
 
 /* #headerWrap .btm-header .center-menu > li > a:hover + .gnb-sub-inner { display:flex; } */
-.gnb-sub-inner { display:none; position:fixed; top:149px; left:0; width:100%; background:#fff; box-shadow:0px 6px 12px rgba(0,0,0,0.05); z-index:9; }
+.gnb-sub-inner { display:none; position:fixed; top:149px; left:0; width:100%; background:#fff; box-shadow:0px 6px 12px rgba(0,0,0,0.05); z-index:9; border-top: 1px solid #DDDDDD; }
 .center-menu > li.active .gnb-sub-inner { display:block; }
-.gnb-sub-inner > ul { display:flex; flex-wrap:wrap; justify-content:flex-start; text-align:left;/* display:flex; justify-content:space-between; */ width:1200px; padding:40px 30px 60px; margin:0 auto; border-top: 1px solid #DDDDDD;  }
+.gnb-sub-inner > ul { display:flex; flex-wrap:wrap; justify-content:flex-start; text-align:left;/* display:flex; justify-content:space-between; */ width:1200px; padding:40px 30px 60px; margin:0 auto;  }
 .gnb-sub-inner > ul > li { width:calc(100% / 5); position:relative; }
 .gnb-sub-inner > ul > li:nth-child(n+6) { padding-top:40px; }
 .gnb-sub-inner > ul > li::before { position:absolute; top:0; left:0; content:""; display:block; width:1px; height:100%; background:#eee; }
@@ -134,7 +134,7 @@
 .gnb-3dep > li:not(:first-child) {margin-top: 18px;}
 .gnb-2dep > li a, .gnb-3dep > li a { display:inline-block; width:100%; font-size:16px; font-weight:500; }
 .gnb-2dep > li a{ color: #333333; font-weight: 600; }
-.gnb-3dep > li a{ color: #333333; font-weight: 500; }
+.gnb-3dep > li a{ color: #666666; font-weight: 500; }
 .gnb-4dep > li { margin-top: 10px; }
 .gnb-4dep > li a{ color: #999999; }
 
@@ -337,6 +337,8 @@
 .depth-menu li:last-child { margin-bottom: 0; }
 .depth-menu a { display: block; font-size: 18px; font-weight: 400; color: #333333; }
 .depth-menu a:hover { font-weight: 500; color: #4E32A5; }
+
+#subVisualWrap:has(.prod-select) + .default-wrap { margin-top: 95px; }
 
 
 /*============================= footer =============================*/
