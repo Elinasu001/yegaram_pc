@@ -523,7 +523,7 @@
 /*.prod-info .define-list + * + **/ 
 #rateDiv + #notice { margin-top : 60px;}
 /* .list-tit.type2 { padding-left:0px; font-size:22px !important; background-image: none; } */
-.list-tit + .list-tit.type2, 
+/* .list-tit + .list-tit.type2, 타이틀 끼리의 마진 수정으로 주석처리 240617 */
 h3.tit + .list-tit.type2,
 .tit + .table-wrap { margin-top: 20px; }
 .list-tit.type2::before { display:none; }
