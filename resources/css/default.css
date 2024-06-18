@@ -571,6 +571,7 @@ input[type="password"]:disabled { background-color:#F2F2F2; border:1px solid #BB
 .ellipsis{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 .bar-list > li { padding-left: 13px; box-sizing: border-box; position: relative;}
 .bar-list > li::before { content: '-'; display: inline-block; position: absolute; top:0; left:0; }
+.grid1.address-detail .form-wrap:has(.btn-normal) input { width: 580px; margin-right: 8px; }
 
 /* 셀렉트 관련 - 개발 협의중 */
 .select-wrap select {
