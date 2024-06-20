@@ -156,12 +156,16 @@
 .mainSec02 #tab-cont02 .infoBox.type2::before { background:url("../images/main/img_type2_2.png") no-repeat center center/100%; }
 .mainSec02 #tab-cont02 .infoBox.type3::before { background:url("../images/main/img_type3_2.png") no-repeat center center/100%; }
 
-.pro-slide-box { display: flex; flex-wrap: wrap; position: relative; width: 100%; }
-.pro-slide-box .swiper-slide { opacity: 0.7; height: 330px; margin-top: 12px; background-color: #FFFFFF; }
-.pro-slide-box .swiper-slide-active { opacity: 1; height: 352px!important; margin-top: 0; z-index: 1; }
+/* 슬라이드 개발 추가 css */
+.pro-slide-box { display: flex; flex-wrap: wrap; position: relative; width: 100%; height: 400px; }
+.pro-slide-box .swiper-slide { opacity:0.7; height: 330px; margin-top: 12px; background: #FFFFFF; }
+.pro-slide-box .swiper-slide-active { opacity : 1; height : 352px!important; margin-top:0; z-index: 1; }
+.pro-slide-box .ln-pagination { position: absolute; left: 0; z-index: 1; bottom: 0; text-align: center; }
+.pro-slide-box .ln-pagination .swiper-pagination-bullet { width: 12px; height: 12px; display: inline-block; background: #E3E3E3; border-radius: 50%; margin: 0 4px; }
+.pro-slide-box .ln-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active { background: #263FC7; }
 
 /* .arrow-box { position: absolute; z-index: 1; width: 394px; top: 50%; left: 50%; transform: translate(-50%, -50%); } */
-.arrow-box a { width: 78px; height: 78px; display: inline-block; position: absolute; z-index: 1; top: 50%; transform: translate(-50%, -50%); }
+.arrow-box a { width: 78px; height: 78px; display: inline-block; position: absolute; z-index: 1; top: 44%; transform: translate(-50%, -50%); }
 .left-arrow { background:url("../images/main/left_arrow.png") no-repeat center 50%/78px auto; float: left; left: 33%; }
 .right-arrow { background:url("../images/main/right_arrow.png") no-repeat center 50%/78px auto; float: right; right: 26.5%; }
 
