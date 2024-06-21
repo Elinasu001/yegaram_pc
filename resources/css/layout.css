@@ -879,8 +879,11 @@ p + ul.list-wrap01 { margin-top:10px; }
 [class^="table-wrap"] table thead tr th:first-child,
 [class^="list-wrap"] table thead tr th:first-child { border-left:none; border-right: 0; }
 
+[class^="table-style"] td.bo-r:last-child { border-right:1px solid #E1E1E1; }
+
 [class^="table-wrap"] table tbody tr th:first-child,
 [class^="list-wrap"] table tbody tr th:first-child { border-left:none; }
+[class^="table-wrap"] table tbody tr th:first-child {  border-right:1px solid #E1E1E1; }
 
 [class^="table-style"] tbody tr th:first-child,
 table[class^="table-style"] tbody:has(:not(th)) tr td,
@@ -898,6 +901,7 @@ table td[colspan]{ border-top: 1px solid #ddd; }
 .table-type04 tbody tr:first-child td{border-top: 2px solid #000;}
 .table-type04 tbody tr th:first-child { background: #F8F9FC; border-right: 0; }
 .table-type04 tbody tr td{ border-right: 0; }
+
 
 /* 7월 13일 */
 
