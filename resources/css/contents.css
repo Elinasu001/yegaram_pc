@@ -734,6 +734,8 @@ div.line-box { padding-top:60px; margin-top:60px; border-top:1px solid #bbb; }
 .search-wrap .select-wrap .ui-selectmenu-button[aria-expanded="false"] span:last-child { font-weight:500; color:#666!important; } /* 07 14*/
 .search-wrap .ui-selectmenu-button.ui-selectmenu-button-open { color: #000 !important; }
 
+.search-wrap .select-wrap select { border: none!important; border-radius: 10px; }
+
 /* 0717 */
 .search-wrap.type { margin-bottom:60px; }
 .search-wrap.type input[type="text"] { width:calc(100% - 90px); }
