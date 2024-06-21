@@ -112,7 +112,7 @@
 .mainSec02 .infoBox::before { content:""; position:absolute; bottom:100px; right:10px; width:175px; height:175px; background-size:100%; }
 
 .mainSec02 .infoBox > dt { font-size: 22px; }
-.mainSec02 .infoBox dt > span { margin-bottom: 7px; font-size: 16px; }
+.mainSec02 .infoBox dt > span { margin-bottom: 7px; font-size: 16px; height: 33px; overflow: hidden; }
 .mainSec02 .infoBox dd{ margin-top: 10px; }
 .mainSec02 .infoBox dd.rate{ margin-top: 120px; }
 .mainSec02 .infoBox dd:has(.btn-link){padding-left: 0; margin-top: 20px; }
