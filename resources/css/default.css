@@ -586,8 +586,9 @@ input[type="password"]:disabled { background-color:#F2F2F2; border:1px solid #BB
     font-weight: 400 !important;
     /* display: block; */
     cursor: pointer;
-    border: 1px solid #BBBBBB !important;
+    border: none;
     background: #FFFFFF url(../images/common/bg_select_arrow_up.png) no-repeat right 20px center !important;
+    border-radius: 10px;
 }
 
 
