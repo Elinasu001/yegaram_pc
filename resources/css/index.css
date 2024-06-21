@@ -156,6 +156,18 @@
 .mainSec02 #tab-cont02 .infoBox.type2::before { background:url("../images/main/img_type2_2.png") no-repeat center center/100%; }
 .mainSec02 #tab-cont02 .infoBox.type3::before { background:url("../images/main/img_type3_2.png") no-repeat center center/100%; }
 
+/* 버튼 수정 240621 */
+.mainSec02 #tab-cont01 .infoBox .rate { color:#EC8813 }
+.mainSec02 #tab-cont01 .infoBox .btn-link { color:#EC8813; border: 1px solid #F4F4F4; }
+.mainSec02 #tab-cont01 .infoBox .btn-link::after { background:url("../images/main/btn_yellow.png") no-repeat center 50%/27px auto; }
+.mainSec02 #tab-cont01 .infoBox.active .btn-link { border: 1px solid #EC8813; }
+
+.mainSec02 #tab-cont02 .infoBox .rate { color:#5493EC }
+.mainSec02 #tab-cont02 .infoBox .btn-link { color:#5493EC; border: 1px solid #F4F4F4; }
+.mainSec02 #tab-cont02 .infoBox .btn-link::after { background:url("../images/main/btn_blue.png") no-repeat center 50%/27px auto; }
+.mainSec02 #tab-cont02 .infoBox.active .btn-link { border: 1px solid #5493EC; }
+
+
 /* 슬라이드 개발 추가 css */
 .pro-slide-box { display: flex; flex-wrap: wrap; position: relative; width: 100%; height: 400px; }
 .pro-slide-box .swiper-slide { opacity:0.7; height: 330px; margin-top: 12px; background: #FFFFFF; }
