@@ -435,15 +435,16 @@
 /* :e// 20211224 약관 PDF 팝업관련작업*/
 
 /* 알럿 0717 */
-.alert-layer { position:fixed; width:32%; min-width:294px; text-align:center; top:50%; left:50%; z-index:99999; background-color:#fff; box-shadow:0 4px 8px 0 rgba(0,0,0,0.50); /*transform:translate(-50%, -50%);*/ padding:30px 50px; }
-.alert-layer .title { font-size:25px; font-weight:500; color:#4E32A5; padding-bottom:10px; border-bottom:2px solid #BBBBBB; }
-.alert-layer .message { font-size:16px; color:#232549; margin:30px 0; }
+.alert-layer { position:fixed; width:43%; min-width:294px; text-align:center; top:50%; left:50%; z-index:99999; background-color:#fff; box-shadow:0 4px 8px 0 rgba(0,0,0,0.50); /*transform:translate(-50%, -50%);*/ padding:30px 45px; }
+.alert-layer .title { font-size:25px; font-weight:600; color:#4E32A5; padding-bottom:18px; border-bottom:2px solid #BBBBBB; }
+.alert-layer .message { font-size:16px; color:#232549; margin:30px 0; font-weight: 500; list-style: 1.5; }
 .alert-layer .btn-wrap { margin:0;}
 .alert-layer .btn-normal.form { padding:0px 60px;  border-radius:45px; font-size:18px; height:50px; line-height:48px; color:#fff!important; border:1px solid #666666; background:#4E32A5; }
 .alert-layer .btn-normal.form:hover,
 .alert-layer .btn-normal.form:focus,
 .alert-layer .btn-normal:hover,
 .alert-layer .btn-normal:focus { background: #4E32A5 !important; border:1px solid #4E32A5!important; }
+.alert-layer .btn-wrap .btn-normal.form { font-size: 18px; font-weight: 500; height: 54px; line-height: 54px; padding: 0 50px; }
 
 .agreementall-layer > .pop-wrap { padding-left:10px; padding-right:10px; padding-bottom:10px; }
 .agreementall-layer > .pop-wrap .pop-wrap { padding-top:0; padding-bottom:0; }
