@@ -346,6 +346,9 @@ div.line-box { padding-top:60px; margin-top:60px; border-top:1px solid #bbb; }
 .agree-wrap .agree-box { border-top:2px solid #000!important; }
 * + .agree-box, .agree-wrap .agree-box + .agree-box { margin-top:30px; }
 .agree-wrap .agree-box label { /*font-size:1rem; color:#666; padding-left:35px; */ /*display: table-cell; vertical-align: middle;*/ display: flex; align-items: center; }
+.agree-wrap .agree-box .radio-area { display: flex; margin-top: 15px; }
+.form-wrap:has(.inp-txt_cnt) > span { display: flex; }
+.form-wrap:has(.inp-txt_cnt) .inp-txt_cnt { margin-left: 10px; line-height: normal; }
 
 /*자세히보기 동의*/
 .agree-wrap .agree-box.type2 .agree-cts { padding:0px; }
