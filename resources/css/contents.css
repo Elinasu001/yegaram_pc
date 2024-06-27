@@ -165,7 +165,7 @@
 .prod-info table, .list-item-txt * + table { margin-top:10px; }
 .prod-info table li { line-height:26px; }
 .prod-info table tbody tr, .list-item-txt table { border-top: 1px solid #E1E1E1; }
-
+ 
 .prod-box { display:flex; align-items:center; width:100%; gap:20px; margin-top:60px; border:1px solid #dddddd; padding:30px 40px; }
 .prod-box .prod-txt { width:90%; }
 .prod-box .prod-txt dl dt { font-size:22px; font-weight:600; }

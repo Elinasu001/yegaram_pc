@@ -92,7 +92,7 @@ strong { font-weight:bold; }
 a { color:#626c74; text-decoration:none;}
 /* a:focus { outline:1px solid #0087D4; } */
 *:focus{outline:none}
-*:focus:focus-visible{outline:1px solid #0087D4}
+*:focus:focus-visible{outline:2px solid #0087D4}
 
 hr { border:0; background:#B3BBC0; margin:0; height:1px; }
 button { padding:0; border:none; cursor:pointer; font-family:inherit; background:none; border-radius:0;}

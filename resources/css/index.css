@@ -81,9 +81,9 @@
 .shortcut .list > li:nth-child(4) > a::before { background:url("../images/main/ico_paper2.png") no-repeat center 50%/40px auto; }
 .shortcut .list .bedge { position:absolute; top:-10px; margin-left:10px; padding:3px 15px; background:#9F7CE4; border-radius:15px; font-size:14px; color:#ffffff; }
 .shortcut .list .bedge::before { content:''; position:absolute; bottom:2px; left:-7px; border-top:0px solid transparent; border-left:15px solid transparent; border-right: 0px solid transparent; border-bottom: 15px solid #9F7CE4; }
-.shortcut .btnWrap { display:flex; justify-content:space-between; width:100%; /*border-top:1px solid rgba(239,239,239,.3);*/ border-top: 1px solid rgba(228,228,228,0.3); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; overflow: hidden; }
-.shortcut .btnWrap > li { flex:1; border-right: 1px solid rgba(228,228,228,0.3); text-align:center; background-color: #4E32A5; }
-.shortcut .btnWrap > li:last-child { border-right:0; background-color: #F4F5FB; }
+.shortcut .btnWrap { display:flex; justify-content:space-between; width:100%; /*border-top:1px solid rgba(239,239,239,.3);*/ border-top: 1px solid rgba(228,228,228,0.3); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; }
+.shortcut .btnWrap > li { flex:1; border-right: 1px solid rgba(228,228,228,0.3); text-align:center; background-color: #4E32A5; border-bottom-left-radius: 12px; }
+.shortcut .btnWrap > li:last-child { border-right:0; background-color: #F4F5FB; border-bottom-left-radius: inherit; border-bottom-right-radius: 12px; }
 .shortcut .btnWrap > li > a { display:block; padding:24px 0; font-size:18px; font-weight: 500; color:#FFFFFF; }
 .shortcut .btnWrap > li:last-child > a { color: #2B0F62; }
 .slideArea .btn-link { width:65%; background:#E2D4FF; }
