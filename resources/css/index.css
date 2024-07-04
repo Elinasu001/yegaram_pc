@@ -59,7 +59,7 @@
 .slide-txt-box .percentage span { font-size: 30px; font-weight: 600; }
 .slide-Bg { display: inline-block; vertical-align: top; }
 .slide-Bg img { width: auto; }
-.pagination-box { position: absolute; bottom: 150px; width: 100%; }
+.pagination-box { position: absolute; bottom: 150px; width: 265px; }
 .page-bar { width: 196px; height: 5px; border-radius: 10px; font-size: 0; display: inline-block; }
 .page-bar li { background-color: #FFFFFF; display: inline-block; width: 20%; height: 100%; }
 .page-bar li.on { border-radius: 10px; background-color: #8B65CC; }
@@ -301,7 +301,7 @@
 .bx-wrapper .bx-controls-auto { position:static; }
 .bx-wrapper .bx-controls-auto .bx-start { display:none; }
 .bx-wrapper .bx-controls-auto .bx-stop { position:relative; display:block; width:10px; height:10px; cursor:pointer; }
-.bx-wrapper .bx-controls-auto .bx-stop:hover, .bx-wrapper .bx-controls-auto .bx-stop.active { background-position:0; }
+/* .bx-wrapper .bx-controls-auto .bx-stop:hover, .bx-wrapper .bx-controls-auto .bx-stop.active { background-position:-86px -33px; } */
 
 /* 예가람 240607 */
 .mainWrap .mainSec02 { margin-top: 174px!important; }

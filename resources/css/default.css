@@ -539,6 +539,8 @@ input[type="password"]:disabled { background-color:#F2F2F2; border:1px solid #BB
 .nice-auth-num-area .btn-nice-auth-num,
 .certify-area button { margin-left:10px; }
 
+.nice-auth-num-area input[type="text"] { width: 225px; }
+
 
 /**07 15 */
 .rice { position:relative; margin-top:10px; padding-left:20px; line-height:1.6; font-size:16px; letter-spacing:-0.7px; color:#999;} 
