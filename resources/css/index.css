@@ -77,8 +77,8 @@
 .shortcut .list > li:nth-child(2) { border-bottom: 1px solid rgba(165, 165, 165, .3); }
 .shortcut .list > li:nth-child(2) > a::before { background:url("../images/main/ico_money1.png") no-repeat center 50%/40px auto; }
 .shortcut .list > li:nth-child(3) { border-right: 1px solid rgba(165, 165, 165, .3); }
-.shortcut .list > li:nth-child(3) > a::before { background:url("../images/main/ico_paper.png") no-repeat center 50%/40px auto; }
-.shortcut .list > li:nth-child(4) > a::before { background:url("../images/main/ico_paper2.png") no-repeat center 50%/40px auto; }
+.shortcut .list > li:nth-child(3) > a::before { background:url("../images/main/ico_paper2.png") no-repeat center 50%/40px auto; }
+.shortcut .list > li:nth-child(4) > a::before { background:url("../images/main/ico_paper.png") no-repeat center 50%/40px auto; }
 .shortcut .list .bedge { position:absolute; top:-10px; margin-left:10px; padding:3px 15px; background:#9F7CE4; border-radius:15px; font-size:14px; color:#ffffff; }
 .shortcut .list .bedge::before { content:''; position:absolute; bottom:2px; left:-7px; border-top:0px solid transparent; border-left:15px solid transparent; border-right: 0px solid transparent; border-bottom: 15px solid #9F7CE4; }
 .shortcut .btnWrap { display:flex; justify-content:space-between; width:100%; /*border-top:1px solid rgba(239,239,239,.3);*/ border-top: 1px solid rgba(228,228,228,0.3); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; }
