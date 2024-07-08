@@ -309,9 +309,9 @@
 .mainWrap .tab-item > li.on { border-bottom: 2px solid #4818AB;}
 .mainWrap .tab-item > li:first-child::after { content: ''; display: inline-block; width: 1px; height: 14px; background-color: #555555; position: absolute; right: -17px; top: 6px; }
 .pro-info-list { text-align: center; width: 100%; margin-bottom: 40px; }
-.pro-info-list li { display: inline-block; vertical-align: top; }
-.pro-info-list a { font-size: 14px; color: #260F54; border: 1px solid #EEEEEE; height: 32px; display: block; line-height: 32px; box-sizing: border-box; border-radius: 20px; padding: 0 20px; }
-.pro-info-list .active a { border: 0; background-color: #4E32A5; color: #FFFFFF; }
+.pro-info-list li { display: inline-block; vertical-align: top; font-size: 14px; color: #260F54; border: 1px solid #EEEEEE; height: 32px; line-height: 32px; box-sizing: border-box; border-radius: 20px; padding: 0 20px; }
+/* .pro-info-list a { font-size: 14px; color: #260F54; border: 1px solid #EEEEEE; height: 32px; display: block; line-height: 32px; box-sizing: border-box; border-radius: 20px; padding: 0 20px; } */
+.pro-info-list .active { border: 0; background-color: #4E32A5; color: #FFFFFF; }
 .down-list li { display: inline-block; vertical-align: top; box-sizing: border-box; position: relative; padding: 0 30px; }
 .down-list li::after{ content: ''; display: inline-block; width: 1px; height: 99px; background-color: #E1E1E1; position: absolute; top:0; right: 0; }
 .down-list li:first-child { padding-left: 0; }
