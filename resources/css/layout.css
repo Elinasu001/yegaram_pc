@@ -100,7 +100,7 @@
 
 #headerWrap .btm-header { /*border-bottom:1px solid #ddd;*/  }
 #headerWrap .btm-header > div { position:relative; display:flex; /*justify-content:space-between;*/ justify-content:flex-end; align-items:center; margin:0 auto; width:1200px; height:79px; }
-#headerWrap .btm-header h1 { margin-right:192px; display:inline-block; width:180px; height:40px; }
+#headerWrap .btm-header h1 { margin-right:192px; display:inline-block; width:180px; height:40px; width:210px; }
 #headerWrap .btm-header h1 > img { width:100%; }
 #headerWrap .btm-header .center-menu { display:flex; justify-content:space-around; width:60%; }
 #headerWrap .btm-header .center-menu > li { position: relative; }
