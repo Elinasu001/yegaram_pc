@@ -1084,6 +1084,8 @@ div.line-box { padding-top:60px; margin-top:60px; border-top:1px solid #bbb; }
 .nonfacingt-wrap .qr-list li img { width:160px; height:160px; border:solid 2px #ccc; padding: 15px; border-radius:10px; }
 .nonfacingt-wrap .qr-list span { display:block; margin-top:10px; color: #666666}
 
+.qr-loansign { width: 686px; }
+
 /* 저축은행소개 */
 
 /* s:디자인현행화 */

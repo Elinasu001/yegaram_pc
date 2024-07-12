@@ -115,14 +115,36 @@
                         <li class="step03"><span>03.<strong>신청 완료</strong></span></li>
                     </ul>
 					
+					<!-- [퍼블-1] 추가 -->
+					<div class="nonfacingt-wrap">
+						<div class="list-tit">이용안내</div>
+						<ul class="list type1">
+							<li>예금잔액증명서/금융소득종합과세/원천징수영수증은 모바일웹/앱에서 발급이 가능합니다.
+							</li>
+							<li>고객님의 휴대폰으로 아래 QR코드를 촬영하여 접속 후 발급하시기 바랍니다.</li>
+						</ul>
+						<div class="img-cts">
+							<ul class="qr-list">
+								<li>
+									<img src="../../../resources/images/page/img_certificate_qr.png" alt="예가람저축은행 제증명서 발급신청 qr코드">
+									<span>제증명서 발급신청</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- //[퍼블-1] 추가 -->
 
                     <div class="step-auth">
                         <h3 class="tit">제증명서 발급신청 본인인증</h3>
+
+						<!-- [퍼블-1] 텍스트 수정 -->
                         <p class="tit-txt">
-                            제증명서 발급신청을 위해서는 본인확인이 반드시 필요합니다. <br />
-                            아래의 인증 방식 중 하나를 선택해 인증을 진행해주세요.<br />
+                            제증명서 발급신청을 위해서는 본인확인이 반드시 필요합니다.<br />
                             <span>※제증명서 발급 후 당일에는 상환처리가 불가합니다.</span>
                         </p>
+						<!-- //[퍼블-1] 텍스트 수정 -->
+
+						<!-- [퍼블-1] 휴대폰인증 외에 주석처리, 휴대폰인증 아이콘 교체 -->
                         <ul class="auth-list">
                             <li class="auth1">
 								<span class="ctm-radio">
@@ -130,7 +152,7 @@
 									<label for="auth1"><span>휴대폰인증</span></label>
 								</span>
 							</li>
-							<li class="auth2">
+							<!-- <li class="auth2">
 								<span class="ctm-radio">
 									<input type="radio" name="auth" id="auth2" value="">
 									<label for="auth2"><span>공동인증서</span></label>
@@ -142,7 +164,7 @@
 									<label for="auth6"><span>금융인증서</span></label>
 								</span>
 							</li><br><br>
-							<!--D: 수정-->
+							D: 수정
 							<li class="auth7">
 								<span class="ctm-radio">
 									<input type="radio" name="auth" id="auth7" value="">
@@ -155,8 +177,10 @@
 									<label for="auth5"><span>신용카드인증</span></label>
 								</span>
 							</li>
-                            <!--D: 수정//-->
+                            D: 수정// -->
                         </ul>
+						<!-- //[퍼블-1] 휴대폰인증 외에 주석처리, 휴대폰인증 아이콘 교체 -->
+
                     </div>
 				
 					<form name="frm1" id="frm1">
