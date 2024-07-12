@@ -51,6 +51,7 @@
 .slideArea .infoBox .rate strong { font-size:24px; margin-left:5px; }
 
 .mainSec01 .slide-Wrap { padding: 40px 0 0 0; height: 612px; position: relative; }
+.mainSec01 .slide-info-box div > a { display: block; width: 100%; height: 100%; }
 .slide-txt-box { display: inline-block; margin-top: 47px; width: 450px; }
 .slide-txt-box .link-btn { font-size: 20px; color: #333333; background:url("../images/main/ico_link_btn.png") no-repeat 100% 4px/17px auto; padding-right: 22px; }
 .slide-txt-box .txt { font-size: 40px; color: #030303; line-height: 1.35; margin: 15px 0 24px; }
@@ -59,10 +60,11 @@
 .slide-txt-box .percentage span { font-size: 30px; font-weight: 600; }
 .slide-Bg { display: inline-block; vertical-align: top; }
 .slide-Bg img { width: auto; }
-.pagination-box { position: absolute; bottom: 150px; width: 265px; }
+.pagination-box { position: absolute; bottom: 150px; width: 265px; z-index: 1; }
 .page-bar { width: 196px; height: 5px; border-radius: 10px; font-size: 0; display: inline-block; }
 .page-bar li { background-color: #FFFFFF; display: inline-block; width: 20%; height: 100%; }
 .page-bar li.on { border-radius: 10px; background-color: #8B65CC; }
+.page-bar li a { display: block; width: 100%; height: 100%; }
 .page-num { display: inline-block; vertical-align: top; font-size: 18px; font-weight: 500; color: #999999; margin-left: 27px; }
 .page-num .currpage { color: #333333; }
 
@@ -339,6 +341,7 @@
 .service-info .sc-icon-box span { background: url("../images/main/ico_service_info.png") no-repeat center 50%/68px auto; }
 .customer-service .sc-icon-box span { background: url("../images/main/ico_customer_service.png") no-repeat center 50%/68px auto; }
 .service-center .customer-service .sc-icon-box { margin-top: 45px; }
+.service-info a { display: block; }
 
 .sc-tit { display: block; font-size: 16px; padding-bottom: 20px; border-bottom: 1px solid #E1E1E1; margin-bottom: 20px; }
 .sc-txt { font-size: 21px; font-weight: 500; color: #333333; line-height: 1.4; }

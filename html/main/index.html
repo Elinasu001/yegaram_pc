@@ -118,36 +118,41 @@
 						<!--D: 슬라이드 영역 -->
 						<div class="slide-info-box">
 							<div>
-								<div class="slide-txt-box">
-									<a href="javascript:void(0);" class="link-btn" title="파킹통장 바로가기"><span>파킹통장 바로가기</span></a>
-									<div class="txt">
-										<span>예가람저축은행</span><br />
-										하루만 맡겨도 이자가<br />
-										쌓이는 입출금 통장
+								<!-- [퍼블-7] 웹접근성 수정, 구조 변경 :: .link-btn a태그를 span으로 바꾸고 감싸는 a태그 추가  -->
+								<a href="javascript:void(0);">
+									<div class="slide-txt-box">
+										<span class="link-btn" title="파킹통장 바로가기"><span>파킹통장 바로가기</span></span>
+										<div class="txt">
+											<span>예가람저축은행</span><br />
+											하루만 맡겨도 이자가<br />
+											쌓이는 입출금 통장
+										</div>
+										<div class="percentage">최고 <span>2.00%</span></div>
 									</div>
-									<div class="percentage">최고 <span>2.00%</span></div>
-								</div>
-
-								<!-- [퍼블-2] 아이콘 추가  -->
-								<div class="slide-Bg">
-									<img src="../../../resources/images/main/img_main_01.png" alt="" />
-									<img src="../../../resources/images/main/img_main_02.png" alt="" style="display: none;"/>
-								</div>
-								<!-- //[퍼블-2] 아이콘 추가  -->
-
+	
+									<!-- [퍼블-2] 아이콘 추가  -->
+									<div class="slide-Bg">
+										<img src="../../../resources/images/main/img_main_01.png" alt="" />
+										<img src="../../../resources/images/main/img_main_02.png" alt="" style="display: none;"/>
+									</div>
+									<!-- //[퍼블-2] 아이콘 추가  -->
+								</a>
+								<!-- [퍼블-7] 웹접근성 수정, 구조 변경 :: a태그를 span으로 바꾸고 감싸는 a태그 추가  -->
 							</div>
 						</div>
-
+						
+						<!-- [퍼블-7] 웹접근성 수정, 구조 변경 :: a태그 추가  -->
 						<div class="pagination-box">
 							<ul class="page-bar">
-								<li class="on"><span class="blind">슬라이드1</span></li>
-								<li><span class="blind">슬라이드2</span></li>
-								<li><span class="blind">슬라이드3</span></li>
-								<li><span class="blind">슬라이드4</span></li>
-								<li><span class="blind">슬라이드5</span></li>
+								<li class="on"><a href="javascript:void(0);"><span class="blind">슬라이드1</span></a></li>
+								<li><a href="javascript:void(0);"><span class="blind">슬라이드2</span></a></li>
+								<li><a href="javascript:void(0);"><span class="blind">슬라이드3</span></a></li>
+								<li><a href="javascript:void(0);"><span class="blind">슬라이드4</span></a></li>
+								<li><a href="javascript:void(0);"><span class="blind">슬라이드5</span></a></li>
 							</ul>
 							<div class="page-num"><span class="currpage">1 </span> /5</div>
 						</div>
+						<!-- //[퍼블-7] 웹접근성 수정, 구조 변경 :: a태그 추가  -->
 
 					</div>
 
@@ -323,14 +328,20 @@
 							<a class="btn-arrow" href="#none">보안프로그램 설치</a>
 						</div>
 					</li>
+
+					<!--D: 퍼블 소스에 a태그 없었는데 개발쪽에서 a태그 추가해서 현행화 240712 -->
 					<li class="service-info">
-						<strong class="sc-tit">금융주의사항 안내</strong>
-						<div class="sc-txt">전화대출사기<br /><span>주의 안내</span></div>
-						<div class="sc-icon-box">
-							<p>전화로 대출권유 시 입금을 요구하면<br />100% 사기이오니 유의 바랍니다</p>
-							<span><span class="blind">금융주의사항 안내 아이콘</span></span>
-						</div>
+						<a href="javascript:void(0);">
+							<strong class="sc-tit">금융주의사항 안내</strong>
+							<div class="sc-txt">전화대출사기<br /><span>주의 안내</span></div>
+							<div class="sc-icon-box">
+								<p>전화로 대출권유 시 입금을 요구하면<br />100% 사기이오니 유의 바랍니다</p>
+								<span><span class="blind">금융주의사항 안내 아이콘</span></span>
+							</div>
+						</a>
 					</li>
+					<!--D: 퍼블 소스에 a태그 없었는데 개발쪽에서 a태그 추가해서 현행화 240712 -->
+
 					<li class="customer-service">
 						<strong class="sc-tit">고객센터 전화번호 안내</strong><!-- [퍼블-1] 텍스트 수정 -->
 						<div class="sc-txt">통합 대표번호<br /><span>1877-7788</span></div><!-- [퍼블-1] 텍스트 수정 -->
