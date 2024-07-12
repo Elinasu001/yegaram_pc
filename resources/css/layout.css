@@ -179,7 +179,7 @@
 .search-con .search-item-result .menu-con .menu-inner { gap: 24px; max-height: 300px; overflow-y: auto;}
 .search-con .search-item-result .menu-con .menu-inner > li { width: 100%; }
 .search-con .search-item-result .menu-con .menu-inner > li:nth-child(n+5) { margin-top:0px; }
-.search-con .search-item-result .menu-con .menu-inner li a { font-size: 18px !important; color: #666666; font-weight: 400;}
+.search-con .search-item-result .menu-con .menu-inner li a { line-height: 1; font-size: 18px !important; color: #666666; font-weight: 400;}
 .search-con .search-item-result .menu-con .gnb-2dep > li .gnb-3dep,
 .search-con .search-item-result .menu-con .gnb-2dep > li .gnb-3dep > li:not(:first-child) {margin-top: 20px;}
 .search-con .search-item-result .menu-con .branch {padding: 0;}
