@@ -329,8 +329,8 @@
 .depth-box > a { font-size: 18px; font-weight: 500; color: #333333; padding: 20px 15px 20px 20px; display: block; background: url(../images/common/ico_depth_arrow.png) no-repeat 93%/20px auto;}
 .depth-box.on > a { background-image: url(../images/common/ico_depth_arrow_on.png); }
 .depth-box.on .depth-menu-box { display: block; }
-.depth-menu-box { display: none; box-sizing: border-box; position: absolute; left: 0; top: 62.85px; width: 100%; background-color: #FFFFFF; border: 1px solid #EDEDED; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; padding: 24px 10px 20px 20px; }
-.depth-menu { height: 237px; overflow: auto; }
+.depth-menu-box { display: none; box-sizing: border-box; position: absolute; left: 0; top: 62.85px; width: 100%; background-color: #FFFFFF; border: 1px solid #EDEDED; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;  }
+.depth-menu { height: 237px; overflow: auto; padding: 24px 10px 20px 20px; }
 .depth-menu::-webkit-scrollbar { width: 4px; border-radius: 2px;  }
 .depth-menu::-webkit-scrollbar-thumb { background-color:#DDDDDD; }
 .depth-menu li { margin-bottom: 20px; }
