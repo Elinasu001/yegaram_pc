@@ -659,10 +659,8 @@ p + ul.list-wrap01 { margin-top:10px; }
 .tab-wrap > ul { /*overflow:hidden;*/ /*line-height:65px;*/  width:100%; height:auto; margin-bottom:40px; /*padding:0 65px;*/ text-align:center; border-radius:10px; background:#F7F9FC; }
 /* .tab-wrap.type2 > ul { margin-bottom:90px; } */
 .tab-wrap li { position:relative; display:inline-block; margin:0px 18px 0px; }
-.tab-wrap li > a,
-.tab-wrap li > h4 > a { display:block; position:relative; height:65px; line-height:65px; font-size:22px; font-weight:400; color:#999; }
-.tab-wrap li.active > a,
-.tab-wrap li.active > h4 > a { color:#260F54; font-weight:500; }
+.tab-wrap li > a { display:block; position:relative; height:65px; line-height:65px; font-size:22px; font-weight:400; color:#999; }
+.tab-wrap li.active > a { color:#260F54; font-weight:500; }
 .tab-wrap li.active a::after { position:absolute; content:""; height:3px; bottom:-1.5px; right:-8px; left:-8px; border-radius: 50px; background-color:#4E32A5; }
 .cts-box a:after { display:none; }
 
