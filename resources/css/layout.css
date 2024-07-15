@@ -52,7 +52,8 @@
 
   --text01-color:#111111;
   --text02-color:#666666;
-  --text03-color:#999999;
+  /* --text03-color:#999999; 웹접근성:: 757575로 수정 */
+  --text03-color:#757575;
 
   --text-red-color:#FF0000;
   --text-white-color:#FFFFFF;
@@ -93,7 +94,7 @@
 /* #headerWrap .top-header li::after { content:''; position:absolute; top:50%; right:0; transform:translate(0, -50%); height:60%; border:1px solid #eee; }  */
 #headerWrap .top-header li:last-child { padding-right:0; }
 #headerWrap .top-header li:last-child::after { content:none; }
-#headerWrap .top-header li a { color: #999999; font-weight: 500; }
+#headerWrap .top-header li a { color: #757575; font-weight: 500; }
 #headerWrap .top-header .login { padding:5px 10px; margin-right:8px; background:#fff; border:1px solid #ddd; border-radius:4px; } 
 #headerWrap .top-header .login::after { display:none; }
 #headerWrap .top-header .login > a { font-weight:500; color:#260F54; }
@@ -361,7 +362,7 @@
 
 .footer { /*padding:30px 0 40px;*/ padding:13px 0 0px; /*border-top:1px solid #ccc;*/ color:#4d4d4d; line-height:16px; }
 .footer:after {  content:""; display:block; clear:both; }
-.footer .ft-cts > p { margin-bottom:6px; font-size:14px; color:#999; }
+.footer .ft-cts > p { margin-bottom:6px; font-size:14px; color:#757575; }
 .footer .ft-cts > p:last-child { margin-top:26px; margin-bottom: 0px; }
 .footer .ft-logo a img { margin: auto; }
 .footer .ft-logo { display: flex; justify-content: center; align-items: center; gap: 30px; max-height: 52px; margin-top: 7px; }

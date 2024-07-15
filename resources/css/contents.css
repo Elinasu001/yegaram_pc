@@ -830,7 +830,7 @@ div.line-box { padding-top:60px; margin-top:60px; border-top:1px solid #bbb; }
 .step-wrap + *{margin-top: 20px;}
 
 /* 단계 진행 완료 */
-.step-wrap > li { display:inline-block; position:relative; /*padding-top:40px;*/ padding-top:44px; color:#999999; }
+.step-wrap > li { display:inline-block; position:relative; /*padding-top:40px;*/ padding-top:44px; color:#757575; }
 .step-wrap > li:first-child { margin-left:0; }
 .step-wrap > li::before { content:""; position:absolute; top:17px; right:50%; width:100%; height:3px; background:#4E32A5; transform:translate(0,-50%); }
 .step-wrap > li::after { content:""; position:absolute; top:10px; left:50%; z-index:2; width:12px; height:12px; background:#4E32A5; transform:translate(-50%,0) rotate(45deg); }
@@ -843,7 +843,7 @@ div.line-box { padding-top:60px; margin-top:60px; border-top:1px solid #bbb; }
 .step-wrap > li.active > span::before { content:""; position:absolute; top:4px; left:50%; z-index:1; width:25px; height:25px; background:#260F54; transform:translate(-50%,0) rotate(45deg); }
 
 /* 단계 진행 전 */
-.step-wrap > li.active ~ li { color:#BBBBBB; }
+.step-wrap > li.active ~ li { color:#757575; }
 .step-wrap > li.active ~ li::before,
 .step-wrap > li.active ~ li::after { background:#BBBBBB; }
 
@@ -1406,7 +1406,7 @@ div.line-box { padding-top:60px; margin-top:60px; border-top:1px solid #bbb; }
 .scroll-focus::before { content: ''; width: 2px; height: 28px; background-color: #E1E1E1; position: absolute; top:50%; left: 33.2%; transform: translateY(-50%); }
 .scroll-focus::after { content: ''; width: 2px; height: 28px; background-color: #E1E1E1; position: absolute; top:50%; left: 66.5%; transform: translateY(-50%); }
 .scroll-focus li { flex: 1; position: relative; z-index: 1; }
-.scroll-focus a { display: block; box-sizing: border-box; text-align: center; box-sizing: border-box; font-size: 22px; font-weight: 400; color: #999999; height: 82px; line-height: 82px; }
+.scroll-focus a { display: block; box-sizing: border-box; text-align: center; box-sizing: border-box; font-size: 22px; font-weight: 400; color: #666666; height: 82px; line-height: 82px; }
 .scroll-focus .active a { background-color: #FFFFFF; font-weight: 600; color: #4E32A5; border: 2px solid #4E32A5; border-radius: 15px; }
 .scroll-focus + .prod-info { margin-top: 85px;}
 .scroll-focus.type02::before,

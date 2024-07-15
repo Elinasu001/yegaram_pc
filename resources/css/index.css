@@ -14,7 +14,7 @@
 /* tab */
 .tab-item { display:flex; justify-content:center; }
 .tab-item > li { margin:0 15px; font-size: 18px; color: #666666; font-weight: 500; }
-.tab-item > li > a { color:#999999; }
+.tab-item > li > a { color:#666666; }
 .tab-item > li.on { /*padding-bottom:8px;*/ padding-bottom:6px; border-bottom:4px solid #8052DC; }
 .tab-item > li.on > a { font-weight:500; color:#333333; }
 .tab-cont { display:none; justify-content:space-between; margin-top:30px; }
@@ -159,11 +159,11 @@
 .mainSec02 #tab-cont02 .infoBox.type3::before { background:url("../images/main/img_type3_2.png") no-repeat center center/100%; }
 
 /* 버튼 수정 240621 */
-.mainSec02 #tab-cont01 .infoBox .rate { color:#EC8813 }
-.mainSec02 #tab-cont01 .infoBox .btn-link { color:#EC8813; border: 1px solid #F4F4F4; }
+.mainSec02 #tab-cont01 .infoBox .rate { color:#E2135B }
+.mainSec02 #tab-cont01 .infoBox .btn-link { color:#E2135B; border: 1px solid #F4F4F4; }
 .mainSec02 #tab-cont01 .infoBox .btn-link::after { background:url("../images/main/btn_yellow.png") no-repeat center 50%/27px auto; }
-.mainSec02 #tab-cont01 .infoBox.active .btn-link { border: 1px solid #EC8813; }
-.mainSec02 #tab-cont01 .infoBox.swiper-slide-active .btn-link { border: 1px solid #EC8813; }
+.mainSec02 #tab-cont01 .infoBox.active .btn-link { border: 1px solid #E2135B; }
+.mainSec02 #tab-cont01 .infoBox.swiper-slide-active .btn-link { border: 1px solid #E2135B; }
 
 .mainSec02 #tab-cont02 .infoBox .rate { color:#5493EC }
 .mainSec02 #tab-cont02 .infoBox .btn-link { color:#5493EC; border: 1px solid #F4F4F4; }
@@ -331,7 +331,7 @@
 .mainSec03 .noticeWrap ul li { margin-bottom: 26px; }
 .mainSec03 .noticeWrap ul a {display: flex; gap: 60px; justify-content: space-between; font-size: 16px; line-height: 1; color: #333333; }
 .mainSec03 .noticeWrap ul a span:nth-child(1) { width: 85%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; letter-spacing: -0.5px; }
-.mainSec03 .noticeWrap ul a span:nth-child(2) { font-size: 14px; color: #999999; }
+.mainSec03 .noticeWrap ul a span:nth-child(2) { font-size: 14px; color: #757575; }
 
 .service-center > li { display: inline-block; width: 365px; height: 300px; margin-right: 48px; padding: 23px 30px 30px; vertical-align: top; box-sizing: border-box; border:1px solid #E1E1E1; border-radius: 20px; }
 .service-center > li:last-child { margin-right: 0; }
