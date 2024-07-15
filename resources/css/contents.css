@@ -349,6 +349,7 @@ div.line-box { padding-top:60px; margin-top:60px; border-top:1px solid #bbb; }
 .agree-wrap .agree-box .radio-area { display: flex; margin-top: 15px; }
 .form-wrap:has(.inp-txt_cnt) > span { display: flex; }
 .form-wrap:has(.inp-txt_cnt) .inp-txt_cnt { margin-left: 10px; line-height: normal; }
+.agree-wrap .agree-box .guide-means { background-color: #FAFAFA; }
 
 /*자세히보기 동의*/
 .agree-wrap .agree-box.type2 .agree-cts { padding:0px; }
