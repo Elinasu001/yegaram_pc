@@ -323,11 +323,12 @@
 #subVisualWrap.sub-type01 > .breadcrumb-renewal { padding-top: 0; }
 .breadcrumb-renewal .container { max-width: 1200px; margin: 0 auto; }
 .home-box, .depth-box { display: inline-block; vertical-align: top; }
+.home-box { vertical-align: middle; }
 .home-box > a, .depth-box >a { position: relative; }
 .home-box > a::after, .depth-box >a::after { content: ''; display: inline-block; width: 1px; height: 22px; background-color: #EDEDED; position: absolute; right: 0; top: 50%; transform: translateY(-50%); }
-.home-box .home{ display: inline-block; width: 40px; height: 21px; background: url(../images/common/ico_home_new.png) no-repeat 0/30px auto; margin: 20px 0 0 10px; padding-right: 20px; text-indent: -99999px; }
-.depth-box { width: 216px; box-sizing: border-box; position: relative; }
-.depth-box > a { font-size: 18px; font-weight: 500; color: #333333; padding: 20px 15px 20px 20px; display: block; background: url(../images/common/ico_depth_arrow.png) no-repeat 93%/20px auto;}
+.home-box .home{ display: inline-block; width: 40px; height: 21px; background: url(../images/common/ico_home_new.png) no-repeat 0/30px auto; margin: 4px 0 0 10px; padding-right: 20px; text-indent: -99999px; }
+.depth-box { width: 216px; box-sizing: border-box; position: relative; vertical-align: middle; }
+.depth-box > a { font-size: 18px; font-weight: 500; color: #333333; padding: 20px 35px 20px 20px; display: block; background: url(../images/common/ico_depth_arrow.png) no-repeat 93%/20px auto;}
 .depth-box.on > a { background-image: url(../images/common/ico_depth_arrow_on.png); }
 .depth-box.on .depth-menu-box { display: block; }
 .depth-menu-box { display: none; box-sizing: border-box; position: absolute; left: 0; top: 62.85px; width: 100%; background-color: #FFFFFF; border: 1px solid #EDEDED; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;  }
