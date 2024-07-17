@@ -1071,3 +1071,5 @@ section.left.ng-star-inserted:focus { outline: 2px solid #0087D4; }
 section.left.ng-star-inserted:focus:focus-visible { outline: 2px solid #0087D4; }
 section.left .download:focus { outline: 2px solid #0087D4; }
 section.left .download:focus:focus-visible { outline: 2px solid #0087D4; }
+.layerpopup .file { margin-bottom: -20px; }
+.layerpopup .file a { width: 55px; height: 55px; }
