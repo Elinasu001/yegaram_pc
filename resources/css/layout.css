@@ -1065,3 +1065,9 @@ table td[colspan]{ border-top: 1px solid #ddd; }
 @keyframes l26 {
   100% {transform:rotate(1turn)}
 }
+
+/* 웹접근성 관련 */
+section.left.ng-star-inserted:focus { outline: 2px solid #0087D4; }
+section.left.ng-star-inserted:focus:focus-visible { outline: 2px solid #0087D4; }
+section.left .download:focus { outline: 2px solid #0087D4; }
+section.left .download:focus:focus-visible { outline: 2px solid #0087D4; }
