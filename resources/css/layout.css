@@ -1071,5 +1071,6 @@ section.left.ng-star-inserted:focus { outline: 2px solid #0087D4; }
 section.left.ng-star-inserted:focus:focus-visible { outline: 2px solid #0087D4; }
 section.left .download:focus { outline: 2px solid #0087D4; }
 section.left .download:focus:focus-visible { outline: 2px solid #0087D4; }
-.layerpopup .file { margin-bottom: -20px; }
+.layerpopup .file { margin-top:70px; margin-bottom: -70px; text-align: right; margin-right: 50px; }
 .layerpopup .file a { width: 55px; height: 55px; }
+.layerpopup .file.file02 { margin-top:90px; margin-bottom: -90px; text-align: right; margin-right: 20px; }
