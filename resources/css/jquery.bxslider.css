@@ -30,7 +30,7 @@
 ===================================*/
 
 .bx-wrapper .bx-viewport {
-	background: #fff;
+	
 
 	/*fix other elements on the page moving (on Chrome)*/
 	-webkit-transform: translatez(0);
@@ -136,19 +136,25 @@
 	text-align: center;
 }
 
+.bx-wrapper .bx-controls-auto:has(.bx-start) { margin-bottom: -5px; }
 .bx-wrapper .bx-controls-auto .bx-start {
 	display: block;
 	text-indent: -9999px;
 	width: 10px;
 	height: 11px;
 	background: url(images/controls.png) -86px -11px no-repeat;
-	margin: 0 3px;
+	margin: 0 3px -5px;
+	background-position: -86px -11px;
+    padding: 5px;
+    font-size: 0;
 }
 
-.bx-wrapper .bx-controls-auto .bx-start:hover,
+/*.bx-wrapper .bx-controls-auto .bx-start:hover,
 .bx-wrapper .bx-controls-auto .bx-start.active {
-	background-position: -86px 0;
-}
+	    background-position: -86px -12px;
+	    padding: 5px;
+	    font-size: 0;
+}*/
 
 .bx-wrapper .bx-controls-auto .bx-stop {
 	display: block;
@@ -156,13 +162,13 @@
 	width: 9px;
 	height: 11px;
 	background: url(images/controls.png) -86px -44px no-repeat;
-	margin: 0 3px;
+	margin: 0 3px -5px;
 }
 
-.bx-wrapper .bx-controls-auto .bx-stop:hover,
+/*.bx-wrapper .bx-controls-auto .bx-stop:hover,
 .bx-wrapper .bx-controls-auto .bx-stop.active {
 	background-position: -86px -33px;
-}
+}*/
 
 /* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT *
 
