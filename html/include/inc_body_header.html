@@ -5,7 +5,7 @@
 		<li><a href="javascript:void(0);">인증센터</a></li>
 		<!-- <li><a href="javascript:void(0);">금융소비자보호</a></li> -->
 		<li><a href="javascript:void(0);">저축은행소개</a></li>
-		<li><a href="javascript:void(0);">전체메뉴</a></li>
+		<li><a href="javascript:void(0);" class="all btnMenu">전체메뉴</a></li>
 	   </ul>
 	</div>
 </div>
@@ -591,7 +591,7 @@
 				<div class="menu-part-header-inner">
 					<p>전체메뉴</p>
 					<div class="close">
-						<button class="close_btn"><img src="../../../resources/images/main/icon_close_w.png" alt="닫기" /></button>
+						<button class="close_btn"><img src="../../../resources/images/main/icon_close_w.png" alt="닫기" id="menu_close_btn" /></button>
 					</div>
 				</div>
 			</div>
@@ -947,6 +947,21 @@ $(document).ready(function(){
 	$(".menu-con > .close").click(function(){
 		$(".menu-part").hide();
 		$("body").css("overflow", "");
+	});
+
+	// 메뉴 닫기
+	$('#menu_close_btn').click(function(){
+		$(".right-menu > div").hide();
+		$(".menu-part").hide();
+		$("body").css("overflow","visible");
+	});
+
+	$('.close_btn').keydown(function(e){
+		if(e.keyCode == 13) {
+			$(".right-menu > div").hide();
+			$(".menu-part").hide();
+			$("body").css("overflow","visible");
+		}
 	});
 
 	
