@@ -762,6 +762,10 @@ p + ul.list-wrap01 { margin-top:10px; }
 
 
 /* 팝업 내 닫기버튼 */
+.btn-normal.tooltip-btn { font-size:18px !important; padding:0px 50px !important; height:50px; line-height:33px; font-weight:500; color: #4E32A5!important; border:1px solid#4E32A5; background: #FFF;}
+.btn-normal.tooltip-btn:hover,
+.btn-normal.tooltip-btn:focus { background: #FFFFFF !important; border: 1px solid #260F54 !important; color: #260F54; box-shadow: 0px 6px 12px rgb(128, 134, 201, 0.6); }
+
 .btn-normal.tooltip-close { font-size:18px !important; padding:0px 50px !important; height:50px; line-height:33px; font-weight:500; color:#FFFFFF!important; border:1px solid#4E32A5; background:#4E32A5;  }
 .btn-normal.tooltip-close:hover,
 .btn-normal.tooltip-close:focus { border:1px solid #260F54;  background:#260F54 !important; color:FFFFFF!important; box-shadow: 0px 6px 12px rgba(128,134,201, 0.6);}
