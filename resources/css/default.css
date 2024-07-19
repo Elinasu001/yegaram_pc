@@ -257,6 +257,7 @@ button { padding:0; border:none; cursor:pointer; font-family:inherit; background
 .ctm-radio.checked label:before { background: url('../images/common/btn_radio_on.png') no-repeat 100%/25px auto;}
 
 .prod-select span:first-child label { padding-right:0!important;}
+.prod-select span.ctm-radio:first-child label { padding-right: 20px!important; }
 .check-line { content:""; display:inline-block; width:12px; height:1px; background:1px #999999; vertical-align:middle; margin-right:12px; }
 .pl-round:first-child { padding:0 25px; }
 .pl-round:last-child { padding-right:25px; }
