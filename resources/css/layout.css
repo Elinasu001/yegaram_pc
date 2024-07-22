@@ -370,7 +370,7 @@
 .footer .ft-logo .ft-logo-item { display: flex; align-items: center; justify-content: center; max-width: 182px; }
 .footer .ft-logo .ft-logo-item img { width: auto; width: -webkit-fill-available; max-height: 52px; margin: auto; }
 
-.footer .ft-logo .ft-logo-item.ft-goryo-logo{ padding: 0 20px; }
+.footer .ft-logo .ft-logo-item.ft-yegaram-logo{ padding: 0 15px; }
 
 /* 예가람 footer */
 #footerWrap { border-top: 1px solid #D2D2D2; }
