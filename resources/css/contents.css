@@ -949,6 +949,28 @@ div.line-box { padding-top:60px; margin-top:60px; border-top:1px solid #bbb; }
 .calculator-wrap .table-style tbody td { text-align:right;}
 .calculator-wrap .table-style th:first-child, .calculator-wrap .table-style tbody td:first-child { text-align:center;}
 
+/* 금융계산기 웹접근성 추가 css 240722 */
+.calculator-wrap .calculator .slider-wrap { padding:10px 0 35px 0 !important; }
+.slider-wrap input[type="range"] { appearance:none; overflow:visible; height:5px; border-radius:8px; background:#e5e5e5; inline-size:100%; border:0; animation:--range-observer linear reverse; animation-timeline:--range-thumb; timeline-scope: --range-thumb;
+    &::-webkit-slider-thumb { appearance:none; position:relative; cursor:pointer; width:25px; height:25px; border-radius:50%; background-color:#ffffff; border:3px solid #4E32A5; view-timeline:--range-thumb inline; }
+    &::-webkit-slider-runnable-track { overflow-x:auto; overflow-y:visible; background:linear-gradient(to right, #4E32A5 var(--range-value, 50%), #e5e5e5 0); background-size:100% 5px; background-position-y:10px; background-repeat:no-repeat; }
+    &::-moz-range-track { background: linear-gradient(to right, #4E32A5 var(--range-value, 50%), #e5e5e5 0); border-radius:0; }
+    &::-moz-range-thumb { appearance:none; width:25px; height:25px; border-radius:50%; background-color:#ffffff; border:3px solid #4E32A5; }
+}
+
+@property --range-value {
+    syntax: "<percentage>";
+    initial-value: 0%;
+    inherits: true;
+}
+
+@keyframes --range-observer {
+    to {
+        --range-value: 100%;
+    }
+}
+
+
 /* ARS 구성도 */
 .ars-wrap .cts-box .table-wrap { margin-top:30px; }
 

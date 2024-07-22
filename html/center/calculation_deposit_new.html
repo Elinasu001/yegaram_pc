@@ -9,7 +9,7 @@
     <meta http-equiv="Content-Script-Type" content="text/javascript">
     <meta http-equiv="Content-Style-Type" content="text/css">
     <meta name="keywords" content="예가람저축은행">
-    <meta name="description" content="딴딴해서 믿을 수 있는 예가람저축은행, 예금, 적금, 신용부금, 논스톱 자동대출 등 예금, 대출금융상품 안내">
+    <meta name="description" content="딴딴해서 믿을 수 있는 고려저축은행, 예금, 적금, 신용부금, 논스톱 자동대출 등 예금, 대출금융상품 안내">
     <meta name="viewport" content="width=device-width">
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -46,13 +46,34 @@
     <!--     scrap -->
     <!-- <link href="/resources/scrap/css/process_manager.css" rel="stylesheet" /> -->
     <!--     <script src="/resources/scrap/js/jquery-1.9.1.min.js"></script> -->
+    <style>
+    .calculator-wrap .calculator .slider-wrap { padding:10px 0 35px 0 !important; }
+    .slider-wrap input[type="range"] { appearance:none; overflow:visible; height:5px; border-radius:8px; background:#e5e5e5; inline-size:100%; border:0; animation:--range-observer linear reverse; animation-timeline:--range-thumb; timeline-scope: --range-thumb;
+        &::-webkit-slider-thumb { appearance:none; position:relative; cursor:pointer; width:25px; height:25px; border-radius:50%; background-color:#ffffff; border:3px solid #4E32A5; view-timeline:--range-thumb inline; }
+        &::-webkit-slider-runnable-track { overflow-x:auto; overflow-y:visible; background:linear-gradient(to right, #4E32A5 var(--range-value, 50%), #e5e5e5 0); background-size:100% 5px; background-position-y:10px; background-repeat:no-repeat; }
+        &::-moz-range-track { background: linear-gradient(to right, #4E32A5 var(--range-value, 50%), #e5e5e5 0); border-radius:0; }
+        &::-moz-range-thumb { appearance:none; width:25px; height:25px; border-radius:50%; background-color:#ffffff; border:3px solid #4E32A5; }
+    }
 
+    @property --range-value {
+        syntax: "<percentage>";
+        initial-value: 0%;
+        inherits: true;
+    }
+
+    @keyframes --range-observer {
+        to {
+            --range-value: 100%;
+        }
+    }
+
+</style>     
 </head>
 
 <body>
     <!-- <body class="color-type2"> 타입별 -->
     <!-- ********** Include ********** -->
-    <!-- s:skipnavi -->
+    <!-- s:skipnavi -->10
     <div id="skipnavi">
         <script>
             $(document).ready(function () {
@@ -120,86 +141,60 @@
                 </div>
             </div>
             <!-- //e:subVisualWrap -->
+
             <!-- s:contents -->
-            <div class="contents default-wrap"> <!-- border 없는 contents class = contents02 -->
+            <div class="contents default-wrap">
                 <div class="calculator-wrap">
                     <div class="tab-wrap">
                         <ul>
-                            <li><a href="../center/calculation_deposit.html">예금계산</a></li>
+                            <li class="active"><a href="../center/calculation_deposit.html">예금계산</a></li>
                             <li><a href="../center/calculation_installment.html">적금계산</a></li>
-                            <li class="active"><a href="../center/calculation_loan.html">대출계산</a></li>
+                            <li><a href="../center/calculation_loan.html">대출계산</a></li>
                         </ul>
                     </div>
 
-                    <h4 class="blind">대출 계산</h4><!--[퍼블-1] : 웹접근성 제목추가-->
+                    <h4 class="blind">예금 계산</h4><!--[퍼블-1] : 웹접근성 제목추가-->
+					<p class="cont-tit">목돈을 일정기간 동안 예치 했을때 만기지급액과 이자를 자세히 보실 수 있습니다.</p>
+
                     <div class="input-wrap">
                         <div class="grid-wrap">
-							<div class="form-wrap">
-								<p class="inp-tit">상환방법</p>
-								<div class="calculator inradio">
-									<span class="ctm-radio checked">
-										<input type="radio" name="radio" id="radio1" value="1" checked="">
-										<label for="radio1">원금균등상환</label>
-									</span>
-									<span class="ctm-radio">
-										<input type="radio" name="radio" id="radio2" value="2">
-										<label for="radio2">원리금균등상환</label>
-									</span>
-									<span class="ctm-radio">
-										<input type="radio" name="radio" id="radio3" value="0">
-										<label for="radio3">원금만기일시상환</label>
-									</span>
-								</div>
-							</div>
                             <div class="grid2">
                                 <div class="form-wrap">
-                                    <p class="inp-tit">대출금액</p>
+                                    <p class="inp-tit">예치금액</p>
                                     <div class="calculator">
-
-                                        <!-- [퍼블-2] 웹접근성 수정 (기존 bar 주석처리, input 추가) -->
                                         <div class="slider-wrap">
-                                            <input id="" type="range" min="0" max="100000000" value="0" title="대출금액 수치">
-
-                                            <!-- <div id="monthMoneySlider" class="slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" max="1000000000"><div class="ui-slider-range ui-corner-all ui-widget-header ui-slider-range-min"></div><input type="button" class="ui-slider-handle ui-corner-all ui-state-default" title="대출금액 수치"></div> 180622 pm max값 수정 -->
+                                            <input id="" type="range" min="0" max="100000000" value="0" title="예치금액 수치">
                                         </div>
-                                        <!-- //[퍼블-2] 웹접근성 수정 (기존 bar 주석처리, input 추가) -->
-                                        
                                         <p class="money-btn-wrap">
-                                            <button type="button" name="button" class="btn-normal tiny dark">정정</button>
-                                            <button type="button" name="button" class="btn-normal tiny" data="1000000" gubun="2">+100만</button>
-                                            <button type="button" name="button" class="btn-normal tiny" data="5000000" gubun="2">+500만</button>
-                                            <button type="button" name="button" class="btn-normal tiny" data="10000000" gubun="2">+1000만</button>
-                                            <button type="button" name="button" class="btn-normal tiny" data="50000000" gubun="2">+5000만</button>
                                             
+											<button type="button" name="button" class="btn-normal tiny" data="1000000" gubun="2">+100만</button>
+											<button type="button" name="button" class="btn-normal tiny" data="5000000" gubun="2">+500만</button>
+											<button type="button" name="button" class="btn-normal tiny" data="10000000" gubun="2">+1000만</button>
+											<button type="button" name="button" class="btn-normal tiny" data="50000000" gubun="2">+5000만</button>
+											<button type="button" name="button" class="btn-normal tiny dark">정정</button>
                                         </p>
                                         <div class="inp-area">
-                                            <input type="text" name="" value="" id="money" placeholder="대출금액을 입력하세요" title="대출금액 입력">
+                                            <input type="text" name="" value="" id="money" placeholder="예치금액을 입력하세요" title="예치금액 입력">
                                             <div class="unit-txt">원</div><!--단위 텍스트가 있을때-->
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-wrap">
-                                    <p class="inp-tit">대출기간</p>
+                                    <p class="inp-tit">예치기간</p>
                                     <div class="calculator">
-
-                                        <!-- [퍼블-2] 웹접근성 수정 (기존 bar 주석처리, input 추가) -->
                                         <div class="slider-wrap">
-                                            <input id="" type="range" min="0" max="100000000" value="0" title="대출기간 수치">
-
-                                            <!-- <div id="paymentSlider" class="slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" max="60"><div class="ui-slider-range ui-corner-all ui-widget-header ui-slider-range-min"></div><input type="button" class="ui-slider-handle ui-corner-all ui-state-default" title="대출기간 수치"></div> -->
+                                            <input id="" type="range" min="0" max="60" value="0" title="예치기간 수치">
                                         </div>
-                                        <!-- //[퍼블-2] 웹접근성 수정 (기존 bar 주석처리, input 추가) -->
-
                                         <p class="money-btn-wrap">
-                                            <button type="button" name="button" class="btn-normal tiny dark">정정</button>
-                                            <button type="button" name="button" class="btn-normal tiny" data="12" gubun="1">12개월</button>
-                                            <button type="button" name="button" class="btn-normal tiny" data="24" gubun="1">24개월</button>
-                                            <button type="button" name="button" class="btn-normal tiny" data="36" gubun="1">36개월</button>
-                                            <button type="button" name="button" class="btn-normal tiny" data="48" gubun="1">48개월</button>
-                                            <button type="button" name="button" class="btn-normal tiny" data="60" gubun="1">60개월</button>
+											<button type="button" name="button" class="btn-normal tiny" data="6" gubun="1">6개월</button>
+											<button type="button" name="button" class="btn-normal tiny" data="12" gubun="1">12개월</button>
+											<button type="button" name="button" class="btn-normal tiny" data="24" gubun="1">24개월</button>
+											<button type="button" name="button" class="btn-normal tiny" data="30" gubun="1">30개월</button>
+											<button type="button" name="button" class="btn-normal tiny" data="36" gubun="1">36개월</button>
+											<button type="button" name="button" class="btn-normal tiny dark">정정</button>
                                         </p>
                                         <div class="inp-area">
-                                            <input type="text" name="" value="" id="month" placeholder="개월을 입력하세요" title="대출기간(개월) 입력">
+                                            <input type="text" name="" value="" id="month" placeholder="개월을 입력하세요" title="예치기간(개월) 입력">
                                             <div class="unit-txt">개월</div><!--단위 텍스트가 있을때-->
                                         </div>
                                     </div>
@@ -209,77 +204,66 @@
                                 <div class="form-wrap">
                                     <p class="inp-tit">이자율</p>
                                     <div class="calculator">
-
-                                        <!-- [퍼블-2] 웹접근성 수정 (기존 bar 주석처리, input 추가) -->
                                         <div class="slider-wrap">
-                                            <input id="" type="range" min="0" max="100000000" value="0" title="이자율 수치">
-
-                                            <!-- <div id="interestSlider" class="slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" max="30"><div class="ui-slider-range ui-corner-all ui-widget-header ui-slider-range-min"></div><input type="button" class="ui-slider-handle ui-corner-all ui-state-default" title="이자율 수치"></div> -->
+                                            <input id="" type="range" min="0" max="20" value="0" title="이자율 수치">
                                         </div>
-                                        <!-- //[퍼블-2] 웹접근성 수정 (기존 bar 주석처리, input 추가) -->
-
-                                        <div class="inp-area inradio">
-                                            <input type="text" name="" value="" id="interest" placeholder="이자율을 입력하세요" title="이자율 입력">
-                                            <div class="unit-txt">%</div><!--단위 텍스트가 있을때-->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-wrap" id="div_disabled">
-                                    <p class="inp-tit">거치기간</p>
-                                    <div class="calculator">
-
-                                        <!-- [퍼블-2] 웹접근성 수정 (기존 bar 주석처리, input 추가) -->
-                                        <div class="slider-wrap">
-                                            <input id="" type="range" min="0" max="100000000" value="0" title="거치기간 수치">
-
-                                            <!-- <div id="paymentSlider2" class="slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" max="60"><div class="ui-slider-range ui-corner-all ui-widget-header ui-slider-range-min"></div><input type="button" class="ui-slider-handle ui-corner-all ui-state-default" title="거치기간 수치"></div> -->
-                                        </div>
-                                        <!-- //[퍼블-2] 웹접근성 수정 (기존 bar 주석처리, input 추가) -->
-
                                         <div class="inp-area">
-                                            <input type="text" name="" value="" id="month2" placeholder="개월을 입력하세요" title="거치기간(개월) 입력">
-                                            <div class="unit-txt">개월</div><!--단위 텍스트가 있을때-->
+                                            <div class="input-area">
+                                                <input type="text" name="" value="" id="interest" placeholder="이자율을 입력하세요" title="이자율 입력">
+                                                <div class="unit-txt">%</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="form-wrap">
+                                    <p class="inp-tit">기준</p>
+                                    <div class="calculator inradio">
+                                    	<span class="ctm-radio checked">
+                                        	<input type="radio" name="radio" id="radio1" value="1" checked="">
+                                        	<label for="radio1">단리</label>
+                                        </span>
+                                        <span class="ctm-radio">
+                                        	<input type="radio" name="radio" id="radio2" value="0">
+                                        	<label for="radio2">월 복리</label>
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- //180711 pm 추가 -->
                             </div>
                         </div>
                     </div>
                     <div class="btn-wrap">
                         <button type="button" name="button" class="btn-big navy btn-inquiry">계산하기</button>
-                         <!-- s : 2023-07-14 ,class 수정 //-->
                         <button type="button" name="button" class="btn-normal btn-ft-dwn" onclick="pageFunc.init()">다시작성</button>
                     </div>
                     <div class="calculator-result line-box">
-                        <h4 class="list-tit mb30">계산결과</h4><!--[퍼블-1] : 웹접근성 h4로 수정-->
-						<table class="table-style">
+						<h4 class="list-tit mb30">계산결과</h4><!--[퍼블-1] : 웹접근성 h4로 수정-->
+					
+						<table class="table-style"> 
 						
-							<caption>계산결과 - 회차, 상환금(원), 납입원금(원), 이자(원), 납입원금합계(원), 대출잔액(원)으로 구성</caption>
-		
+							<caption>계산결과 - 구분, 월납입액 합계(원), 이자(세금납부 전, 원), 이자(세금납부 후, 원), 만기지급액(원)으로 구성</caption> 
 							<colgroup>
-								<col style="width:8%;">
-								<col style="width:17%;">
-								<col style="width:17%;">
-								<col style="width:16%;">
-								<col style="width:18%;">
 								<col style="width:*;">
+								<col style="width:23%;">
+								<col style="width:23%;">
+								<col style="width:23%;">
+								<col style="width:23%;">
 							</colgroup>
 						
-                            <thead>
-                                <tr>
-                                    <th scope="col">회차</th>
-                                    <th scope="col">상환금(원)</th>
-                                    <th scope="col">납입원금(원)</th>
-                                    <th scope="col">이자(원)</th>
-                                    <th scope="col">납입원금합계(원)</th>
-                                    <th scope="col">대출잔액(원)</th>
-                                </tr>
-                            </thead>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">월납입액 합계(원)</th>
+									<th scope="col">이자(세금납부 전, 원)</th>
+									<th scope="col">이자(세금납부 후, 원)</th>
+									<th scope="col">만기지급액(원)</th>
+								</tr>
+							</thead>
                             <tbody id="cal_tbody">
                             </tbody>
                         </table>
                         <div class="btn-wrap">
-                            <button type="button" name="button" class="btn-big btn-reinquiry" onclick="pageFunc.init()">다시 계산하기</button>
+                            <button type="button" name="button" class="btn-big btn-reinquiry " onclick="pageFunc.init()">다시 계산하기</button>
                         </div>
                     </div>
                 </div>
@@ -306,7 +290,6 @@
 </body>
 
 </html>
-
 <script>
     $( function() {
         $('.calculator-wrap .btn-inquiry').on('click',function(){
@@ -369,3 +352,5 @@
         });
     } );
 </script>
+
+

@@ -140,13 +140,18 @@
                                 <div class="form-wrap">
                                     <p class="inp-tit">월납입액</p>
                                     <div class="calculator">
+
+                                        <!-- [퍼블-2] 웹접근성 수정 (기존 bar 주석처리, input 추가) -->
                                         <div class="slider-wrap">
-                                            <div id="monthMoneySlider" class="slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" max="100000000">
+                                            <input id="" type="range" min="0" max="100000000" value="0" title="월납입액 수치">
+
+                                            <!-- <div id="monthMoneySlider" class="slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" max="100000000">
                                             <div class="ui-slider-range ui-corner-all ui-widget-header ui-slider-range-min"></div>
-                                            <input type="button" class="ui-slider-handle ui-corner-all ui-state-default" title="월납입액 수치"></div>
+                                            <input type="button" class="ui-slider-handle ui-corner-all ui-state-default" title="월납입액 수치"></div> -->
                                         </div>
+                                        <!-- //[퍼블-2] 웹접근성 수정 (기존 bar 주석처리, input 추가) -->
+
                                         <p class="money-btn-wrap">
-                                            
 											<button type="button" name="button" class="btn-normal tiny" data="100000" gubun="2">+10만</button>
 											<button type="button" name="button" class="btn-normal tiny" data="500000" gubun="2">+50만</button>
 											<button type="button" name="button" class="btn-normal tiny" data="1000000" gubun="2">+100만</button>
@@ -163,11 +168,17 @@
                                 <div class="form-wrap">
                                     <p class="inp-tit">목표기간</p> 
                                     <div class="calculator">
+
+                                        <!-- [퍼블-2] 웹접근성 수정 (기존 bar 주석처리, input 추가) -->
                                         <div class="slider-wrap">
-                                            <div id="paymentSlider" class="slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" max="60">
+                                            <input id="" type="range" min="0" max="100000000" value="0" title="목표기간 수치">
+
+                                            <!-- <div id="paymentSlider" class="slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" max="60">
                                             <div class="ui-slider-range ui-corner-all ui-widget-header ui-slider-range-min"></div>
-                                        <input type="button" class="ui-slider-handle ui-corner-all ui-state-default" title="목표기간 수치"></div> 
+                                            <input type="button" class="ui-slider-handle ui-corner-all ui-state-default" title="목표기간 수치"></div>  -->
                                         </div>
+                                        <!-- //[퍼블-2] 웹접근성 수정 (기존 bar 주석처리, input 추가) -->
+
                                         <p class="money-btn-wrap">
 											<button type="button" name="button" class="btn-normal tiny" data="6" gubun="1">6개월</button>
 											<button type="button" name="button" class="btn-normal tiny" data="12" gubun="1">12개월</button>
@@ -187,9 +198,14 @@
                                 <div class="form-wrap">
                                     <p class="inp-tit">이자율</p>
                                     <div class="calculator">
+
+                                        <!-- [퍼블-2] 웹접근성 수정 (기존 bar 주석처리, input 추가) -->
                                         <div class="slider-wrap">
-                                            <div id="interestSlider" class="slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" max="20"><div class="ui-slider-range ui-corner-all ui-widget-header ui-slider-range-min"></div><input type="button" class="ui-slider-handle ui-corner-all ui-state-default" title="이자율 수치"></div> 
+                                            <input id="" type="range" min="0" max="100000000" value="0" title="이자율 수치">
+                                            <!-- <div id="interestSlider" class="slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" max="20"><div class="ui-slider-range ui-corner-all ui-widget-header ui-slider-range-min"></div><input type="button" class="ui-slider-handle ui-corner-all ui-state-default" title="이자율 수치"></div>  -->
                                         </div>
+                                        <!-- //[퍼블-2] 웹접근성 수정 (기존 bar 주석처리, input 추가) -->
+
                                         <div class="inp-area">
                                             <input type="text" name="" value="" id="interest" placeholder="이자율을 입력하세요" title="이자율 입력">
                                             <div class="unit-txt">%</div><!--단위 텍스트가 있을때-->
