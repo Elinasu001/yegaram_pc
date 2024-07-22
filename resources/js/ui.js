@@ -7,7 +7,7 @@ $(document).ready(function() {
     // header / based on sitemapWrap
 	
 	/***
-	* 예가람저축은행 금플개편사업 신규 추가
+	* 고려저축은행 금플개편사업 신규 추가
 	***/
 	// 탭
 	$(".tab-item > li").click(function(){
@@ -657,7 +657,7 @@ $(document).ready(function() {
 });
 
 /***
-* 예가람저축은행 금플개편사업 신규 추가
+* 고려저축은행 금플개편사업 신규 추가
 ***/
 function gnbShow(e) {
 	$(".center-menu > li").removeClass("active");
