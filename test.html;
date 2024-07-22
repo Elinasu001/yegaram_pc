@@ -1,0 +1,2289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Connected Care | LG</title>
+  <link rel="stylesheet" type="text/css" href="assets/default/reset.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico"/>
+  <script type="text/javascript" src="assets/lib/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="assets/js/common.js"></script>
+  <style type="text/css">
+    #wrap {
+      min-width: 1280px;
+    }
+
+    #header {
+      color: #000;
+      font-size: 18px;
+      text-align: center;
+      text-transform: uppercase;
+      height: 60px;
+      line-height: 60px;
+    }
+
+    #container {
+      height: 100%;
+    }
+
+    #container>.contents {
+      margin: 2% 0;
+      padding-bottom: 50px;
+    }
+
+    #container>.contents table {
+      width: 90%;
+      border-collapse: collapse;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    #container>.contents table thead {
+      border-top: 2px solid #333;
+      border-bottom: 1px solid #ddd;
+    }
+
+    #container>.contents table thead tr th {
+      background: #f6f6f6;
+      height: 36px;
+      vertical-align: middle;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #333;
+    }
+
+    #container>.contents table tbody tr td {
+      height: 36px;
+      vertical-align: middle;
+      color: #333;
+      font-size: 1.3rem;
+      line-height: normal;
+      border-bottom: 1px solid #ddd;
+    }
+
+    #container>.contents table tbody tr .link {
+      text-align: center;
+      padding: 0 1.4rem;
+    }
+
+    .info_msg {
+      color: #fc6e2e;
+      font-size: 0.7em;
+      padding-left: 1.4rem;
+    }
+
+    .progress {
+      border-left: 1px solid #ddd;
+    }
+
+    .ok {
+      background-color: #a50034;
+      color: #fff !important;
+    }
+
+    .ok:before {
+      content: "완료";
+      font-size: 1.4rem;
+    }
+
+    .ing {
+      background-color: rgba(72, 72, 223, 0.322);
+      color: #fff !important;
+    }
+
+    .ing:before {
+      content: "진행중";
+      font-size: 1.4rem;
+    }
+
+    .new {
+      background-color: #6d0022;
+      color: #fff !important;
+    }
+
+    .new:before {
+      content: "NEW";
+      font-size: 1.4rem;
+    }
+
+    .disabled {
+      background-color: #ccc;
+      color: #fff !important;
+    }
+
+    .disabled:before {
+      content: "보류";
+      font-size: 1.4rem;
+    }
+
+    #tabs ul:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    #tabs ul {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    #tabs ul li {
+      float: left;
+      margin-left: 10px;
+    }
+
+    #tabs ul li:first-child {
+      margin-left: 0;
+    }
+
+    .btn_set {
+      width: 120px;
+      height: 36px;
+      line-height: 36px;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+      text-align: center;
+      cursor: pointer;
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #fff;
+      background-color: #ffb9ab;
+    }
+
+    .btn_set.on {
+      background-color: #a50034;
+    }
+
+    .first_line {
+      border-top: 2px solid #333;
+    }
+
+    .top_btn {
+      opacity: 0;
+      transition: all 0.5s ease;
+      position: fixed;
+      right: 25px;
+      bottom: 10px;
+      height: 50px;
+      color: white;
+      border: none;
+      background: black;
+      cursor: pointer;
+    }
+
+    .top_btn.show {
+      opacity: 1;
+    }
+
+    .tab_content {
+      display: none;
+    }
+
+    .tab_content.on {
+      display: block;
+    }
+
+    td.link a {
+      display: block;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    td.link a:hover {
+      text-decoration: underline;
+      font-weight: bold;
+      color: #a50034;
+    }
+
+    .category {
+      background: #fafafa;
+    }
+
+    .depth1,
+    .depth2,
+    .depth3 {
+      padding-left: 10px;
+      text-align: left;
+    }
+
+    td.link,
+    .category,
+    .depth1,
+    .depth2,
+    .depth3 {
+      border-left: 1px solid #ddd;
+    }
+
+    tr.del {
+      text-decoration: line-through;
+    }
+
+    td>sup {
+      color: #ea00ff;
+      font-weight: 400;
+      font-size: 0.9rem;
+      vertical-align: super;
+      opacity: 0.8;
+      letter-spacing: 1px;
+    }
+
+    td>sup:before {
+      content: 'Guide';
+    }
+
+    /* 테블릿 세로 (해상도 768px ~ 1023px)*/
+    @media all and (min-width:768px) and (max-width:1024px) {
+      #wrap {
+        min-width: auto;
+      }
+
+      #input-form {
+        margin: 30px 15px;
+      }
+
+      .tab_content {
+        padding: 0 15px;
+      }
+
+      #container>.contents table {
+        width: 100%;
+        table-layout: fixed;
+      }
+
+      th,
+      td,
+      col {
+        display: none;
+      }
+
+      .category,
+      .depth1,
+      .link {
+        display: table-cell;
+      }
+    }
+
+    /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
+    @media all and (min-width:480px) and (max-width:767px) {
+      #wrap {
+        min-width: auto;
+      }
+
+      #input-form {
+        margin: 30px 15px;
+      }
+
+      .tab_content {
+        padding: 0 15px;
+      }
+
+      #container>.contents table {
+        width: 100%;
+        table-layout: fixed;
+      }
+
+      th,
+      td,
+      col {
+        display: none;
+      }
+
+      .category,
+      .depth1,
+      .link {
+        display: table-cell;
+      }
+    }
+
+    /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
+    @media all and (max-width:479px) {
+      #wrap {
+        min-width: auto;
+      }
+
+      #input-form {
+        margin: 30px 15px;
+      }
+
+      .tab_content {
+        padding: 0 15px;
+      }
+
+      #container>.contents table {
+        width: 100%;
+        table-layout: fixed;
+      }
+
+      th,
+      td,
+      col {
+        display: none;
+      }
+
+      .depth1,
+      .link {
+        display: table-cell;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="header">
+      <div class="header_in">
+        <h1><span> LG전자 - Connected Care 2.0 웹접근성 개선 프로젝트 코딩리스트</span></h1>
+      </div>
+    </div>
+
+    <div id="container">
+      <div class="contents">
+        <div id="tabs">
+          <ul>
+            <li class="btn_set on" data-tab="tab_1">코딩리스트</li>
+            <!--<li class="btn_set" data-tab="tab_2">Admin</li>-->
+          </ul>
+
+          <div class="tab_content on" id="tab_1">
+            <table class="coding_list_table">
+              <colgroup>
+                <col class="num" width="5%" />
+                <col class="category" width="15%" />
+                <col class="depth1" width="*" />
+                <col class="depth2" width="*" />
+                <col class="depth3" width="*" />
+                <col class="link" width="25%" />
+                <col class="progress" width="7%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th class="num first">NUM</th>
+                  <th class="category">카테고리</th>
+                  <th class="depth1">Depth1</th>
+                  <th class="depth2">Depth2</th>
+                  <th class="depth3">Depth3</th>
+                  <th class="link">링크<br /><span class="info_msg">&#45; 아래 링크를 클릭하시면 해당 페이지로 이동합니다.</span></th>
+                  <th class="progress">진행</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Guide -->
+                <tr>
+                  <td class="num"></td>
+                  <td class="category" rowspan="4">Guide</td>
+                  <td class="depth1">Form 가이드입니다.</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/guide/form.html" target="_blank"></a>
+                  </td>
+                  <td class="ing"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1">layout 가이드입니다.</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/guide/layout.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1">Table 가이드입니다.</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/guide/table.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1">loading</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/guide/loading.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+
+                <!-- Global Menu -->
+                <tr>
+                  <td class="num"></td>
+                  <td class="category" rowspan="10">Global Menu</td>
+                  <td class="depth1"></td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/global/global_Menu.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1" rowspan="7">Alert Message</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/global/pop_alert-message.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Send Message</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/global/pop2_send-message.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Set Target</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/global/pop2_set-target.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Set Target2</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/global/pop2_set-target2.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Preview</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/global/pop2_preview.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Add Template</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/global/pop2_add-template.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Select File</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/global/pop2_select-file.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">File box</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/global/pop2_file-box.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1">Sitemap</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/global/sitemap.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+
+                <!-- Dashboard -->
+                <tr>
+                  <td class="num"></td>
+                  <td class="category">DashBoard</td>
+                  <td class="depth1"></td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/dashboard/dashboard.html" target="_blank"></a>
+                  </td>
+                  <td class="ing">11.30</td>
+                </tr>
+
+                <!-- Device Management -->
+                <tr>
+                  <td class="num"></td>
+                  <td class="category" rowspan="48">Device Management</td>
+                  <td class="depth1" rowspan="5">List & Grid</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/device_manage_list.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Assign License</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_assign-license.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.22</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Un-assign License</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_un-assign-license.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.22</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Quick Controller</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_quick-controller.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.22</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Model Selection</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_model-selection.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.22</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1" rowspan="5">Monitoring Settings</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop_monitoring-settings.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.22</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Add E-Mail</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_add-email.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.22</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Edit Threshold Settings</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_edit-threshold-settings.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.22</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Group</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_group.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.22</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Register</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_register.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.22</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1" rowspan="1">Reboot Scheduler</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop_reboot-scheduler.html" target="_blank"></a>
+                  </td>
+                  <td class="disabled"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1" rowspan="2">Uni Controller</td>
+                  <td class="depth2">Set Target</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_set-target.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.22</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Inform</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_inform.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.22</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1" rowspan="3">Auto Cloning Data</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop_auto-cloning-data.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.22</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Result list</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_result-list.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.22</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Result</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_result.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.22</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1" rowspan="2">Energy Saving Mode</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop_energy-saving-mode.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.22</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Register</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_register.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.22</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1" rowspan="1">Compare Settings Data</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/device_compare-settings-data.html" target="_blank"></a>
+                  </td>
+                  <td class="disabled"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1" rowspan="9">Details</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/device_manage_details.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Change Group</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_change-group.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Edit Device Name</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_edit-device-name.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Full Screen</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_full-screen.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Remote Control</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_remote-control.html" target="_blank"></a>
+                  </td>
+                  <td class="disabled"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Remote Access</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_remote-access.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Add Displays</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_add-displays.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Add by Selecting from the Device List</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_device-list.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Network Details</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_network-details.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1" rowspan="1">Details-Open Issue</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/details_open-issue.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1" rowspan="7">Details-Control</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/details_control.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.28</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Add Schedule</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_add-schedule.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.28</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Check Response</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_add-check-response.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.28</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Screen Lock</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_screen-lock.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.28</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Edit Daylight Saving Time</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_saving-time.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.28</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Picture Detail Settings</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_picture-detail-settings.html" target="_blank"></a>
+                  </td>
+                  <td class="ing"> mirae</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Change Wall Paper</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_change-wall-paper.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.28</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1" rowspan="3">Details-EZ Settings</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/details_ez-settings.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.28</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Proxy Server Settings</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_proxy-server-settings.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.28</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Edit Input Priority</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_edit-input-priority.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.28</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1" rowspan="1">Details-Usage</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/details_usage.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.28</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1" rowspan="1">Details-Diagnostics</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/details_diagnostics.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1" rowspan="6">Details-Broadcast</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/details_broadcast.html" target="_blank"></a>
+                  </td>
+                  <td class="ing"> mirae</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Register(Video)</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_register-video.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.28</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Register(Select Radio)</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_register-select-radio.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.28</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Register(Select Check)</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_register-select-check.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.28</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Register(Image)</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_register-image.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.28</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Register(Message)</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/pop2_register-message.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.28</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1" rowspan="1">Details-App</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/details_app.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.28</td>
+                </tr>
+
+                <!-- History -->
+                <tr>
+                  <td class="num"></td>
+                  <td class="category" rowspan="">History</td>
+                  <td class="depth1">List & Grid</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/history/history_list.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+
+                <!-- Report -->
+                <tr>
+                  <td class="num"></td>
+                  <td class="category" rowspan="4">Report</td>
+                  <td class="depth1" rowspan="4">List & Grid</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/report/report_list.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">E-Mail Recipients</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/report/pop2_email-recipients.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Report Receive Settings</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/report/pop2_report-receive-settings.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Receive Cycle</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/report/pop2_receive-cycle.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+
+                <!-- Administration -->
+                <tr>
+                  <td class="num"></td>
+                  <td class="category" rowspan="8">Administration</td>
+                  <td class="depth1" rowspan="6">List & Grid</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/administration_list.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">View [Role name]</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/pop2_view.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.28</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Assigned User</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/pop2_assigned-user.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.28</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Modify</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/pop2_modify.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.28</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Create Role</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/pop2_create-role.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.28</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Create Role2</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/pop2_create-role2.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.28</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1">Profile</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/administration_profile.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1">User Role</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/administration_user-role.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+
+                <!-- Schedule -->
+                <tr>
+                  <td class="num"></td>
+                  <td class="category" rowspan="10">Schedule</td>
+                  <td class="depth1" rowspan="3">List & Grid</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/schedule/schedule_list.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Register(Image)</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/schedule/pop2_register-image.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.30</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Register(Message)</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/schedule/pop2_register-message.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.30</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1" rowspan="6">Command</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/schedule/schedule_command.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Register(Screen)</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/schedule/pop2_register-screen.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.30</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Register(Input)</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/schedule/pop2_register-input.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.30</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Register(Touch Lock)</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/schedule/pop2_register-touch-lock.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.30</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Register(Screen Lock)</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/schedule/pop2_register-screen-lock.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.30</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">Register(Brightness Control)</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/schedule/pop2_register-brightness-control.html" target="_blank"></a>
+                  </td>
+                  <td class="">11.30</td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1" rowspan="1">App Management</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/schedule/schedule_app-management.html" target="_blank"></a>
+                  </td>
+                  <td class="ok"></td>
+                </tr>
+
+              </tbody>
+            </table>
+
+
+
+
+
+
+
+
+
+            <table class="coding_list_table" style="margin-top: 50px;">
+              <colgroup>
+                <col class="num" width="5%" />
+                <col class="category" width="15%" />
+                <col class="depth1" width="*" />
+                <col class="depth2" width="*" />
+                <col class="depth3" width="*" />
+                <col class="link" width="25%" />
+                <col class="progress" width="7%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th class="num first">NUM</th>
+                  <th class="category">카테고리</th>
+                  <th class="depth1">Depth1</th>
+                  <th class="depth2">Depth2</th>
+                  <th class="depth3">Depth3</th>
+                  <th class="link">링크<br /><span class="info_msg">&#45; 아래 링크를 클릭하시면 해당 페이지로 이동합니다.</span></th>
+                  <th class="progress">진행</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <!-- 1차 참고용 -->
+                <tr>
+                  <td class="num"></td>
+                  <td class="category" colspan="4">1차 참고용</td>
+                  <td class="link">
+                    <a href="./html/index.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+
+                <!-- Dashboard -->
+                <tr>
+                  <td class="num"></td>
+                  <td class="category">DashBoard</td>
+                  <td class="depth1"></td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/dashboard/dashboard.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="category">Device List type 01 팝업</td>
+                  <td class="depth1"></td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/dashboard/popup_dashboard_device_list_01.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="category">Device List type 02 팝업</td>
+                  <td class="depth1"></td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/dashboard/popup_dashboard_device_list_02.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+
+                <!-- Device Management -->
+                <tr>
+                  <td class="num"></td>
+                  <td class="category" rowspan="42">Device Management</td>
+                  <td class="depth1" rowspan="2">Site - List & Grid</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/device_manage_list.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth2">empty</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/device_manage_list_empty.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">Delete Device</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_delete_device.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">Attach License</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_attach_license.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">Total License Status</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_total_license_status.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">Edit Site</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_edit_site.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">Main Device Selection 팝업</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_main_device_selection.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+
+                
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2"></td>
+                  <td class="depth3">Complete Inform</td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_complete_inform.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">Popup Move</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_move.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">popup_move_group</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_move_group.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">Filter</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/device_manage_list.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2"></td>
+                  <td class="depth3">Device Model Select</td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_model_selection.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1">Site - Grid</td>
+                  <td class="depth2">Image view</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_image_view.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2"></td>
+                  <td class="depth3">Add Site 외 다수</td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_add_site.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr class="del">
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2"></td>
+                  <td class="depth3">Change Parent Group</td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_change_parent_group.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">상세보기 - Overview(Media Player) > <br /> (Device Status, Device Issue Status, Device
+                    Information) </td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/device_manage_overview_media.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2"></td>
+                  <td class="depth3">History : Disk Usage</td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_disk_usage.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">상세보기 - Overview(webOS, Display) > <br />(Device Status, Device Issue Status, Device
+                    Information) </td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/device_manage_overview.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2"></td>
+                  <td class="depth3">Add displays</td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_add_displays.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2"></td>
+                  <td class="depth3">Add Automatically via IP Search</td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_add_auto_ip.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2"></td>
+                  <td class="depth3">Add by Selecting from the Device List</td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_add_selecting_form.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2"></td>
+                  <td class="depth3">FPGA Version</td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_fpga.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2"></td>
+                  <td class="depth3">PSU Version</td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_psu.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2"></td>
+                  <td class="depth3">View Current State</td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_current_state.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">상세보기 - Remote Control(webOS, Display)</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/device_manage_remote_control.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">상세보기 - Display(WebOS, Display)</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/device_manage_display.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2"></td>
+                  <td class="depth3">Picture_detail settings 팝업</td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_picture_detail_settings.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">상세보기 - Audio(WebOS, Display)</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/device_manage_audio.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">상세보기 - General(webOS, Display) > <br />(Time & Schedule, Power, Support)</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/device_manage_general.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2"></td>
+                  <td class="depth3">Edit Daylight Saving Time</td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_edit_daylight.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2"></td>
+                  <td class="depth3">Add Power On/off Schedule</td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_add_power_schedule.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2"></td>
+                  <td class="depth3">Power_on/off hsitory</td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_power_history.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2"></td>
+                  <td class="depth3">Check Response 팝업</td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_check_response.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">상세보기 - videowall (Display)</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/device_manage_display_videowall.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">상세보기 - EZ Setting (webOS) > <br />(SI Server Setting , Fail Over , Play via URL,
+                    Setting Data Cloning)</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/device_manage_ez_setting.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2"></td>
+                  <td class="depth3">Proxy Server Settings 팝업</td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_set_proxy_server.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2"></td>
+                  <td class="depth3">Edit Input Priority 팝업</td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_edit_input_priority.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">상세보기 - Update(webOS, Display)</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/device_manage_update.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">상세보기 - Diagnostics(함체특정모델) (webOS, Display)</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/device_manage_diagnostics.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">상세보기 - Diagnostics(LED 3세대) (webOS, Display) > <br />(Cell / Line Defeat, Anomaly
+                    Temperature, Cabinet Connection)</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/device_manage_diagnostics_led.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">상세보기 - History (webOS, Display) > <br />(Historical View, Support History)</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/device_manage_history.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">Time & Schedule (webOS, Display)_webOS 3.2 모델</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/device_manage_general_webOS_3.2.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+
+                <tr>
+                  <td class="num"></td>
+                  <td class="category" rowspan="17">Device management<br />(Group Selected)</td>
+                  <td class="depth1">Group name</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/device_manage_group_name.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">Edit Group</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_edit_group.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">Edit Group Name 외 다수</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_edit_group_name.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">Move Group</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_move_group.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1">Operation Settings</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/device_manage_operation_setting.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2"></td>
+                  <td class="depth3">Edit Operation Time 팝업</td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_edit_operation_time.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2"></td>
+                  <td class="depth3">Edit Trouble Notice 팝업 == Add Trouble Notice 팝업</td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_edit_trouble_notice.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2"></td>
+                  <td class="depth3">Threshold settings edit 팝업</td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_edit_threshold_settings.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2"></td>
+                  <td class="depth3">Auto cloning history 팝업 = popup_auto_update 팝업</td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_auto_cloning_history.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2"></td>
+                  <td class="depth3">popup_auto_update 팝업</td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_auto_update.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2"></td>
+                  <td class="depth3">Model Selection 팝업</td>
+                  <td class="link">
+                    <a href="./html/device_management/popup_model_selection_group.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1">Multi-Control</td>
+                  <td class="depth2">상세보기 - overview</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/device_manage_multi_control_overview.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">상세보기 - Remote Control</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/device_manage_multi_control_remote_control.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">상세보기 - Display</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/device_manage_multi_control_display.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">상세보기 - Audio</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/device_manage_multi_control_audio.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">상세보기 - General</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/device_management/device_manage_multi_control_general.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+
+               
+                <td class="num"></td>
+                <td class="depth1"> Compare Settings Data</td>
+                <td class="depth2"></td>
+                <td class="depth3"></td>
+                <td class="link">
+                  <a href="./html/device_management/device_manage_sync_settings_data.html" target="_blank"></a>
+                </td>
+                <td class=""></td>
+                </tr>
+
+                <!-- Issue Management -->
+                <tr>
+                  <td class="num"></td>
+                  <td class="category" rowspan="2">Issue Management</td>
+                  <td class="depth1">Issue Dashboard</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/issue_management/issue_dashboard.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">Error Popup</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/issue_management/popup_issue_error.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+
+                <!-- Administration -->
+                <tr>
+                  <td class="num"></td>
+                  <td class="category" rowspan="27">Administration</td>
+                  <td class="depth1">Profile edit</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/admin_profile.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1">Profile view</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/admin_profile_view.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1">Change Password</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/sign_in/popup_change_password.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1">Admin Management</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/admin_management.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">popup Edit</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/popup_edit.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">popup Create New == Modify</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/popup_admin_create_new.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+              
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">Details</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/admin_management_detail.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">Assigned Group Edit팝업 = Edit Manager Assignment 팝업</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/popup_assigned_group.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">edit Manager Assignment 팝업</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/popup_edit_manager_assignment.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">popup Edit Role == Account Manager</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/popup_edit_role_assignment.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1">Account Management</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/admin_account_management.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">Details</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/admin_account_details.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">License</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/admin_account_license.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">License_admin</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/admin_account_license_admin.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1">User Management</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/admin_user_management.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">Details</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/admin_user_management_details.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">User Group Settings</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/admin_user_management_user.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">Invite user 팝업</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/popup_invite_user.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">popup Create New == Modeify</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/popup_admin_create_user_group.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1">License</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/admin_license.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1">Delete Devices</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/admin_delete_devices.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1">History</td>
+                  <td class="depth2">(Access History, Supoort History)</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/admin_history.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1">Notice Board</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/admin_notice_board.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">popup Create New == Modeify</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/popup_admin_notice_modify.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1">Registration Request</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/admin_registration_reguest.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+        
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">Account Manager/Administration 계정 권한 생성 요청의 popup Decline & Accept</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/popup_decline.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1">License List</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/administration/admin_license_list.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+
+                <!-- Setting -->
+                <tr>
+                  <td class="num"></td>
+                  <td class="category" rowspan="3">Settings</td>
+                  <td class="depth1">Settings</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/settings/settings.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">Terms of use</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/settings/popup_terms_of_use.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="depth1"></td>
+                  <td class="depth2">Privacy Terms and Conditions</td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/settings/popup_privacy_terms.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="category">General</td>
+                  <td class="depth1">Popup Conform</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/guide/popup_confirm.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+                <tr>
+                  <td class="num"></td>
+                  <td class="category">General</td>
+                  <td class="depth1"> Internet Explorer 미 지원 관련 팝업</td>
+                  <td class="depth2"></td>
+                  <td class="depth3"></td>
+                  <td class="link">
+                    <a href="./html/guide/popup_ie_error.html" target="_blank"></a>
+                  </td>
+                  <td class=""></td>
+                </tr>
+               
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button type="button" class="top_btn">UP</button>
+  </div>
+  <script>
+    var $tr = $('tbody > tr');
+    $(function () {
+      var tds = $(".coding_list_table tr td:first-child");
+      for (var i = 0; i < tds.length; i++) {
+        $(tds[i]).html(i + 1);
+        var $link = $tr.eq(i).find('td.link > a');
+        var linkVal = $link.attr('href');
+        linkVal = linkVal.split('/');
+        linkVal = linkVal[linkVal.length - 1];
+        $link.text(linkVal);
+      }
+    });
+    $(function () {
+      var tds = $(".admin_coding_list_table tr td:first-child");
+      for (var i = 0; i < tds.length; i++) {
+        $(tds[i]).html(i + 1);
+        var $link = $tr.eq(i).find('td.link > a');
+        var linkVal = $link.attr('href');
+        linkVal = linkVal.split('/');
+        linkVal = linkVal[linkVal.length - 1];
+        $link.text(linkVal);
+      }
+    });
+
+    function tab() {
+      $("#tabs .btn_set").click("on", function () {
+        var tab_id = $(this).attr("data-tab");
+
+        $("#tabs .btn_set").removeClass("on");
+        $(".tab_content").removeClass("on");
+        $(this).addClass("on");
+        $("#" + tab_id).addClass("on");
+      });
+    }
+
+    tab();
+  </script>
+</body>
+
+</html>
