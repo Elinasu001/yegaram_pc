@@ -130,14 +130,15 @@
 /* .gnb-2dep:has(.gnb-3dep) li:last-child {margin-bottom: 20px}
 .gnb-2dep > li:last-child { margin-bottom:0; }
 .gnb-2dep > li a, .gnb-3dep > li a {margin-bottom:10px; } */
-.gnb-2dep > li:not(:first-child){ margin-top:20px;}
-.gnb-2dep > li .gnb-3dep {margin-top:20px}
-.gnb-3dep > li:not(:first-child) {margin-top: 18px;}
+.gnb-2dep > li:not(:first-child){ margin-top:23px;}
+.gnb-2dep > li .gnb-3dep {margin-top:15px}
+.gnb-3dep > li:not(:first-child) {margin-top: 15px;}
+/* .gnb-3dep > li + li { margin-top: 22px; } */
 .gnb-2dep > li a, .gnb-3dep > li a { display:inline-block; width:100%; font-size:16px; font-weight:500; }
-.gnb-2dep > li a{ color: #333333; font-weight: 600; }
-.gnb-3dep > li a{ color: #666666; font-weight: 500; }
+.gnb-2dep > li > a{ color: #333333; font-weight: 600; font-size: 22px; }
+.gnb-3dep > li a{ color: #333333; font-weight: 500; font-size: 16px; }
 .gnb-4dep > li { margin-top: 10px; }
-.gnb-4dep > li a{ color: #999999; }
+.gnb-4dep > li > a{ color: #666666; font-weight: 400; }
 
 .menu-part-header{ position: relative; padding: 30px 0px; background: #4E32A5; color: #fff; }
 .menu-part-header .menu-part-header-inner { position: relative; width: 1200px; padding: 0px 40px; margin: 0 auto; font-size: 35px; font-weight: 500; }
@@ -148,8 +149,8 @@
 .menu-inner { display:flex; flex-wrap:wrap; justify-content:space-between; text-align:left; }
 .menu-inner > li { width:calc(100% / 4); }
 .menu-inner > li:nth-child(n+5) { margin-top:80px; }
-.menu-inner > li > a { display:inline-block; width:100%; /*margin-bottom:20px;*/ font-size:22px; color:#333; font-weight:600; }
-.menu-inner > li > a + ul { margin-top:15px; }
+.menu-inner > li > a { display:inline-block; width:100%; /*margin-bottom:20px;*/ font-size:26px; color:#333; font-weight:600; }
+.menu-inner > li > a + ul { margin-top:28px; }
 .menu-tit { margin-top: 80px; }
 .menu-inner .gnb-sub-tit { margin-top:20px; /*color:#111;*/ color:#333333; font-weight:600; font-size:22px;  }
 .menu-inner .gnb-sub-tit:first-child{ margin-top: 0;}
