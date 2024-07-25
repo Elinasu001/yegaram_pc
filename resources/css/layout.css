@@ -1090,3 +1090,45 @@ section.left .download:focus:focus-visible { outline: 2px solid #0087D4; }
 .layerpopup .file { margin-top:70px; margin-bottom: -70px; text-align: right; margin-right: 50px; }
 .layerpopup .file a { width: 55px; height: 55px; }
 .layerpopup .file.file02 { margin-top:90px; margin-bottom: -90px; text-align: right; margin-right: 20px; }
+
+/* 우편번호 찾기 팝업 */
+#srchJusoRoad.laypop-all .pop-header { position: fixed; top: 0; left: 0; right: 0; height: 50px; border-bottom: 1px solid #EEEEEE; background: #fff; font-size: 18px; font-weight: 500; text-align: center; line-height: 50px; z-index: 3; }
+#srchJusoRoad.laypop-all .pop-con-area { padding-bottom: 70px; }
+#srchJusoRoad.laypop-all .pop-con-area .default-wrap { padding: 20px; }
+#srchJusoRoad.laypop-all .pop-con-area .default-wrap.pt30  { margin-top: 10px; }
+#srchJusoRoad.laypop-all .pop-con-area .default-wrap .s-tit { font-size: 16px; font-weight: 500; }
+#srchJusoRoad.laypop-all .pop-con-area .warning-info { margin-top: 8px; font-size: 14px; color: #666666; font-weight: 400; background:url('/resources/images/common/ico_warning2.png') no-repeat left 2px; background-size:14px; padding-left: 18px; }
+#srchJusoRoad.laypop-all .pop-con-area .default-wrap .list-bull li { position: relative; padding-left: 10px; font-size: 14px; margin-bottom: 8px; }
+
+#srchJusoRoad.laypop-all .pop-con-area .default-wrap .list-bull li:before { content: ""; position: absolute; left: 0px; top: 7px; background: #CCCCCC; width: 4px; height: 4px; border-radius: 3px; }
+#srchJusoRoad.laypop-all .pop-con-area .default-wrap .form-wrap.search input { padding-right: 45px; }
+#srchJusoRoad.laypop-all .pop-con-area .btn-search { position: absolute; top: 50%; right: 0; padding: 10px; transform: translateY(-50%); }
+#srchJusoRoad.laypop-all .pop-con-area .btn-search img { width: 25px; }
+#srchJusoRoad.laypop-all .addr-list-wrap { padding-bottom: 30px; }
+#srchJusoRoad.laypop-all .addr-list-wrap .addr-list { margin-left: 20px; }
+#srchJusoRoad.laypop-all .addr-list-wrap .addr-list li { padding: 20px 10px; border-bottom: 1px solid #ddd; }
+#srchJusoRoad.laypop-all .addr-list-wrap .addr-list li a { cursor: pointer; }
+#srchJusoRoad.laypop-all .addr-list-wrap .addr-list .address-num { margin-bottom: 0; font-size: 12px; color: #666666; }
+#srchJusoRoad.laypop-all .addr-list-wrap .addr-list p.color-464646 { font-size: 16px; font-weight: 500; margin: 2px 0 1px; }
+#srchJusoRoad.laypop-all .addr-list-wrap .addr-list p.address { font-size: 14px; color: #999999; }
+#srchJusoRoad.laypop-all .addr-list-wrap #inspectListDiv.addr-list .default-wrap { margin-top: 0; }
+#srchJusoRoad.laypop-all .addr-list-wrap .addr-list .default-wrap .font15 { font-size: 15px; }
+#srchJusoRoad.laypop-all .addr-list-wrap .addr-list .default-wrap .font12 { font-size: 12px; }
+#srchJusoRoad.laypop-all .addr-list-wrap .addr-list .address-num + p.color-464646 { font-size: 15px; font-weight: 400; }
+
+#srchJusoRoad.laypop-all .addr-list-wrap .addr-list .list{padding:20px 0 10px;}
+#srchJusoRoad.laypop-all .addr-list-wrap .addr-list .list .radio{display:block; width:100%; margin-bottom:10px; padding-left:0; padding-bottom:30px; border-bottom:1px solid #ddd; background-position:right; color:#333333; font-weight: 500; font-size: 16px; line-height: 2; }
+#srchJusoRoad.laypop-all .addr-list-wrap .no-data .no-data-con:before{display:none;}
+
+#srchJusoRoad.laypop-all .pop-con-area .default-wrap:has(.input-tit) { margin-top: 20px; }
+#srchJusoRoad.laypop-all .pop-con-area .default-wrap .form-wrap:has(.input-tit):first-child { margin-bottom: 20px!important; }
+#srchJusoRoad.laypop-all .pop-con-area .default-wrap .form-wrap .input-tit { font-size: 16px; margin-bottom: 5px; }
+#srchJusoRoad.laypop-all .btm-btn-wrap{display:block;width:100%;}
+#srchJusoRoad.laypop-all .btm-btn-wrap > div{float:left;}
+#srchJusoRoad.laypop-all .btm-btn-wrap > div:first-child{width:40%;}
+#srchJusoRoad.laypop-all .btm-btn-wrap > div:last-child{width:60%;}
+#srchJusoRoad.laypop-all .btm-btn-wrap > div:first-child:last-child{width:100%;}
+#srchJusoRoad.laypop-all .fixed-btn-wrap { position: fixed !important; bottom: 0; left: 0px; width: 100%; z-index: 20; }
+#srchJusoRoad.laypop-all .btm-btn-wrap .btn.lg { width: 100%; line-height: 53px; font-size: 16px; text-align: center; cursor: pointer; }
+#srchJusoRoad.laypop-all .btm-btn-wrap .btn.darkgray { background: #666666; border: 1px solid #666666; color: #fff; }
+#srchJusoRoad.laypop-all .btm-btn-wrap .btn.gray.active { background: #4E32A5; border: 1px solid #4E32A5; color: #fff; }
