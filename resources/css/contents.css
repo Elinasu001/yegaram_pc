@@ -451,6 +451,7 @@ div.line-box { padding-top:60px; margin-top:60px; border-top:1px solid #bbb; }
 .auth-list li.auth8 label:after { background:url("../images/page/img_auth8.png") no-repeat 50% / 84px 84px; }
 .auth-list li.auth9 label:after { background:url("../images/page/img_auth9.png") no-repeat 50% / 84px 84px; }
 .auth-list li.auth10 label:after { background:url("../images/page/img_auth10.png") no-repeat 50% / 84px 84px; }
+.auth-list li.auth11 label:after { background:url("../images/page/img_auth1_back.png") no-repeat 50% / 84px 84px; }
 /*.auth-list li:hover span, .auth-list li label.r-on span { color:#ec008c; }
 .auth-list li.auth1:hover label:after, .auth-list li.auth1 label.r-on:after { background:url("../images/page/img_auth1_on.png") no-repeat center 0; }
 .auth-list li.auth2:hover label:after, .auth-list li.auth2 label.r-on:after { background:url("../images/page/img_auth2_on.png") no-repeat center 0; }
