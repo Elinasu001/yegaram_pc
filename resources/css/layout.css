@@ -109,6 +109,7 @@
 #headerWrap .btm-header .center-menu>li.active_here>a{color:#260F54;font-weight:500;}
 #headerWrap .btm-header .center-menu>li.active_here>a:after,
 #headerWrap .btm-header .center-menu>li.active>a:after{ position:absolute; content:""; width:100%; height:13px; /*bottom:-1.5px;*/ top:50%; right:-8px; left:0px; /*border-radius:50px;*/ background:rgb(78,50,1650,0.15);}
+#headerWrap .btm-header .center-menu .gnb-2dep > li > a { font-size: 16px; font-weight: 600; }
 #headerWrap .btm-header .right-menu { display:flex; }
 #headerWrap .btm-header .right-menu > button { width:24px; height:24px; margin-left:20px; }
 .right-menu .btnSearch { background:url("../../../resources/images/main/icon_search.png") no-repeat center 50%/18px auto; }
