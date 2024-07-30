@@ -1210,6 +1210,7 @@ div.line-box { padding-top:60px; margin-top:60px; border-top:1px solid #bbb; }
 .summary-cts .select-wrap { width:500px; float:right; margin-top:30px; }
 .summary-cts .table-style tfoot { background:#f9f9f9; font-weight:600; }
 .summary-cts .table-style tfoot th, .summary-cts .table-style tfoot td { color:#4E32A5; }
+.summary-cts .table-style tfoot th:first-child { border-left: 0; }
 .summary-cts .table-style .total-txt th, .summary-cts .table-style .total-txt td { color:#1095E1; font-weight:600; }
 
 /* 윤리경영 - 0715 수정 */
