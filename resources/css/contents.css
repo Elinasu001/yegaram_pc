@@ -420,6 +420,9 @@ div.line-box { padding-top:60px; margin-top:60px; border-top:1px solid #bbb; }
 .step-auth .certificate { padding-top:45px; }
 .step-auth .certificate .list-tit { margin-top:0; margin-bottom:30px; }
 .step-auth .tit-txt, .loan-input-wrap .tit-txt { padding-bottom: 30px; line-height: 1.4;}
+
+.step-wrap + .auth-wrap.line-box { border-top: 0; margin-top: 20px; border-bottom: 1px solid #bbb; padding-bottom: 60px; }
+
 .auth-list { width:100%; text-align:center; }
 .auth-list .ctm-radio { width:100%; border:2px solid #E1E1E1; border-radius:15px; background:#FAFAFA; }
 .auth-list .ctm-radio label:before { width:100%; height:100%; background:none; }
