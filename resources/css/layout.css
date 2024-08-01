@@ -1138,3 +1138,13 @@ section.left .download:focus:focus-visible { outline: 2px solid #0087D4; }
 #srchJusoRoad.laypop-all .btm-btn-wrap .btn.lg { width: 100%; line-height: 53px; font-size: 16px; text-align: center; cursor: pointer; }
 #srchJusoRoad.laypop-all .btm-btn-wrap .btn.darkgray { background: #666666; border: 1px solid #666666; color: #fff; }
 #srchJusoRoad.laypop-all .btm-btn-wrap .btn.gray.active { background: #4E32A5; border: 1px solid #4E32A5; color: #fff; }
+
+/* 여백 관련 추가, 현행화 css */
+h3.tit + .table-wrap:has(.caption-tit),
+h3.tit + .table-style.caption-tit,
+h3.tit + .input-wrap:has(.tit),
+.terms-txt .list-tit + dl,
+h3.tit + .list-tit.type2 { margin-top: 60px; }
+
+h3.tit:has(.tbl-txt) + .table-style.caption-tit { margin-top: 60px!important; }
+.introduction-wrap .summary-cts .terms-txt h3.tit + .tab-wrap:has(.list-tit) { margin-top: 60px; }
