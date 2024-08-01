@@ -579,7 +579,7 @@ h3.tit + .list-tit.type2,
 .list-item .list-item-txt { position:relative; display:table-cell; line-height: 1.45; font-size: 18px; }
 .list-item .list-item-txt .list-item-box { border:0; padding: 0;}
 .define-list .de-tit, .list-item .list-item-tit { width:20%; padding:20px; font-weight:600; vertical-align:middle; background:#FAFAFA; font-size:16px; text-align:center; }
-.define-list .de-tit.type2 { text-align:left; padding:30px 20px 10px 0px; font-weight:600; background:#fff; }
+.define-list .de-tit.type2 { text-align:left; padding:60px 20px 15px 0px; font-weight:600; background:#fff; font-size: 22px; }
 .define-list .de-stit { display:block; font-size: 15px; }
 .define-list .de-cts, .list-item .list-item-txt { width:80%; padding:20px; color:#666666;}
 .define-list .de-cts *, .list-item .list-item-txt * { line-height: 1.6; }
