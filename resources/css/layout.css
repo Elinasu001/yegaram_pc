@@ -1144,7 +1144,11 @@ h3.tit + .table-wrap:has(.caption-tit),
 h3.tit + .table-style.caption-tit,
 h3.tit + .input-wrap:has(.tit),
 .terms-txt .list-tit + dl,
-h3.tit + .list-tit.type2 { margin-top: 60px; }
-
+h3.tit + .list-tit.type2,
+h3.tit + .required-wrap:has(.list-tit.type2) { margin-top: 60px; }
 h3.tit:has(.tbl-txt) + .table-style.caption-tit { margin-top: 60px!important; }
 .introduction-wrap .summary-cts .terms-txt h3.tit + .tab-wrap:has(.list-tit) { margin-top: 60px; }
+
+.list-tit + .sms-app-wrap,
+.list-tit + .tab-wrap [class^="table-style"] { margin-top: 0; }
+.disclosure-wrap:has(.accordion-wrap) h3.list-tit { margin-bottom: -10px; }
