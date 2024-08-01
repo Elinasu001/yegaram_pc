@@ -425,6 +425,10 @@
 .layerpopup .pop-cts .txt-box2 { width:50%; float:right; padding:10px; border-top:1px solid #E1E1E1; color:#666666; }
 .layerpopup .pop-cts .txt-box2 .terms-txt2 { padding:10px; text-align:left; }
 
+.layerpopup.noti-layer .tit { margin-bottom: 10px; }
+.layerpopup.noti-layer .accordion-wrap { height: 340px; overflow: auto; }
+.layerpopup.noti-layer .pagination-wrap { margin: 20px auto 0;}
+
 .layerpopup.noti-layer .btn-wrap { position: relative; }
 .layerpopup.noti-layer .btn-wrap .noti-cookie { position: absolute; right: 0; bottom: 12px; }
 
