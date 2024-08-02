@@ -1145,7 +1145,8 @@ h3.tit + .table-style.caption-tit,
 h3.tit + .input-wrap:has(.tit),
 .terms-txt .list-tit + dl,
 h3.tit + .list-tit.type2,
-h3.tit + .required-wrap:has(.list-tit.type2) { margin-top: 60px; }
+h3.tit + .required-wrap:has(.list-tit.type2),
+h3.list-tit + .table-style.caption-tit { margin-top: 60px; }
 h3.tit:has(.tbl-txt) + .table-style.caption-tit { margin-top: 60px!important; }
 .introduction-wrap .summary-cts .terms-txt h3.tit + .tab-wrap:has(.list-tit) { margin-top: 60px; }
 
