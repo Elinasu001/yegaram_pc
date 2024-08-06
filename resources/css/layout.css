@@ -415,9 +415,9 @@
 .layerpopup .tit-wrap div:first-child p span { padding-left:10px; }
 .layerpopup .tit-wrap div:last-child p { padding-left:10px; }
 
-.layerpopup .tit { padding-right:50px; color:#111111; font-size:40px; line-height:48px; letter-spacing:-3px; }
+.layerpopup .tit { padding-right:50px; color:#111111; font-size:34px; font-weight: 600; line-height:48px; letter-spacing:-3px; }
 .layerpopup .desc { margin-top:20px; }
-.layerpopup .pop-tit + .pop-cts { margin-top:30px; height: 100%; overflow-y: hidden; }
+.layerpopup .pop-tit + .pop-cts { margin-top:30px; height: 100%; overflow-y: hidden; padding-bottom: 15px; }
 .layerpopup .pop-cts .tit-txt { margin-top:40px; padding-bottom:10px; color:#333; line-height:28px; letter-spacing:-1.8px; }
 
 .layerpopup .pop-cts .txt-box1 { width:50%; float:left; padding:10px; border-top:1px solid #E1E1E1; border-right:1px solid #E1E1E1; color:#666666; }
@@ -446,6 +446,11 @@
 .pdfLayerpopup  .iScrollVerticalScrollbar{ display:none; }
 }
 /* :e// 20211224 약관 PDF 팝업관련작업*/
+
+/* 예스뱅킹 앱 설치 안내 팝업 */
+.layerpopup.yesbanking-app { width: 1320px; }
+.layerpopup.yesbanking-app .sms-app-wrap { margin-top: 10px; }
+.layerpopup.yesbanking-app .point { text-decoration: underline; }
 
 /* 알럿 0717 */
 .alert-layer { position:fixed; width:43%; min-width:294px; text-align:center; top:50%; left:50%; z-index:99999; background-color:#fff; box-shadow:0 4px 8px 0 rgba(0,0,0,0.50); /*transform:translate(-50%, -50%);*/ padding:30px 45px; }
