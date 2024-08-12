@@ -427,11 +427,11 @@
 
 .layerpopup.noti-layer .pop-wrap { padding: 25px 100px; }
 .layerpopup.noti-layer .tit { margin-bottom: 10px; }
-.layerpopup.noti-layer .accordion-wrap { height: 440px; overflow: auto; }
+/* .layerpopup.noti-layer .accordion-wrap { height: 440px; overflow: auto; } */
 .layerpopup.noti-layer .pagination-wrap { margin: 20px auto 0; height: auto; }
 
-.layerpopup.noti-layer .btn-wrap { position: relative; margin-top: 20px; }
-.layerpopup.noti-layer .btn-wrap .noti-cookie { position: absolute; right: 0; bottom: 12px; }
+/* .layerpopup.noti-layer .btn-wrap { position: relative; margin-top: 20px; }
+.layerpopup.noti-layer .btn-wrap .noti-cookie { position: absolute; right: 0; bottom: 12px; } */
 
 /* s:// 20211224 약관 PDF 팝업관련작업*/
 .layerpopup .btn-menu-close,
