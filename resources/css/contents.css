@@ -121,6 +121,7 @@
 .prod-main .rate span { font-size:22px; font-weight:500; color:#111111; letter-spacing:-1px; }
 .prod-main .rate p { font-size:25px; font-weight:600; color:#F1108E; /*letter-spacing:-0.05em;*/ margin-top: 8px; }
 .prod-main .rate p strong { position:relative; /*bottom:-4px;*/ /*margin:0 5px;*/ font-size:25px;  vertical-align: baseline; }
+.prod-main .rate .ex { font-size:18px; margin-left:7px; color:#666666; }
 
 .prod-main li button { position: absolute; top: 50%; right: 40px; transform: translate(0,-50%); width: 128px; padding-left: 10px; padding-right: 10px; }
 
