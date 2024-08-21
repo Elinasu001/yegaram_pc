@@ -257,11 +257,15 @@ button { padding:0; border:none; cursor:pointer; font-family:inherit; background
 .ctm-radio.checked label:before { background: url('../images/common/btn_radio_on.png') no-repeat 100%/25px auto;}
 
 .prod-select span:first-child label { padding-right:0!important;}
-.prod-select span.ctm-radio:first-child label { padding-right: 20px!important; }
 .check-line { content:""; display:inline-block; width:12px; height:1px; background:1px #999999; vertical-align:middle; margin-right:12px; }
 .pl-round:first-child { padding:0 25px; }
 .pl-round:last-child { padding-right:25px; }
 .items .ctm-check { /*position:absolute !important;*/ }
+
+.prod-select span.ctm-radio:first-child label { padding-right: 20px!important; }
+
+/* 온라인서류제출  - 증비서류 목록*/
+.evi-list .radio-area .ctm-check { line-height:2; }
 
 /********radio, checkbox custom style********/
 .check,
@@ -540,8 +544,7 @@ input[type="password"]:disabled { background-color:#F2F2F2; border:1px solid #BB
 .nice-auth-num-area .btn-nice-auth-num,
 .certify-area button { margin-left:10px; }
 
-.nice-auth-num-area input[type="text"] { width: 225px; }
-
+.nice-auth-num-area input[type="text"] { width:225px; }
 
 /**07 15 */
 .rice { position:relative; margin-top:10px; padding-left:20px; line-height:1.6; font-size:16px; letter-spacing:-0.7px; color:#999;} 

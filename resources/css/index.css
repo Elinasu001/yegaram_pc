@@ -51,7 +51,7 @@
 .slideArea .infoBox .rate strong { font-size:24px; margin-left:5px; }
 
 .mainSec01 .slide-Wrap { padding: 40px 0 0 0; height: 612px; position: relative; }
-.mainSec01 .slide-info-box div > a { display: block; width: 100%; height: 430px;display: inline-block; margin: 2px; }
+.mainSec01 .slide-info-box div > a { display: block; width: 100%; height: 430px; display: inline-block; margin: 2px; }
 .slide-txt-box { display: inline-block; margin-top: 47px; width: 450px; }
 .slide-txt-box .link-btn { font-size: 20px; color: #333333; background:url("../images/main/ico_link_btn.png") no-repeat 100% 4px/17px auto; padding-right: 22px; }
 .slide-txt-box .txt { font-size: 40px; color: #030303; line-height: 1.35; margin: 15px 0 24px; }

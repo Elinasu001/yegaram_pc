@@ -369,7 +369,7 @@
 .footer .ft-cts > p { margin-bottom:6px; font-size:14px; color:#757575; }
 .footer .ft-cts > p:last-child { margin-top:26px; margin-bottom: 0px; }
 .footer .ft-logo a img { margin: auto; }
-.footer .ft-logo { display: flex; justify-content: center; align-items: center; gap: 30px; max-height: 52px; margin-top: 7px; }
+.footer .ft-logo { display: flex; justify-content: center; align-items: center; gap: 20px; max-height: 52px; margin-top: 7px; }
 .footer .ft-logo .ft-logo-item { display: flex; align-items: center; justify-content: center; max-width: 182px; }
 .footer .ft-logo .ft-logo-item img { width: auto; width: -webkit-fill-available; max-height: 52px; margin: auto; }
 
