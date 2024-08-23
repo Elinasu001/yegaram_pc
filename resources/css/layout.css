@@ -684,7 +684,7 @@ p + ul.list-wrap01 { margin-top:10px; }
 .tab-wrap li { position:relative; display:inline-block; margin:0px 18px 0px; }
 .tab-wrap li > a { display:block; position:relative; height:65px; line-height:65px; font-size:22px; font-weight:400; color:#666666; }
 .tab-wrap li.active > a { color:#260F54; font-weight:500; }
-.tab-wrap li.active a::after { position:absolute; content:""; height:3px; bottom:-1.5px; right:-8px; left:-8px; border-radius: 50px; background-color:#4E32A5; }
+.tab-wrap li.active > a::after { position:absolute; content:""; height:3px; bottom:-1.5px; right:-8px; left:-8px; border-radius: 50px; background-color:#4E32A5; }
 .cts-box a:after { display:none; }
 
 .tab-page { position:relative; }
