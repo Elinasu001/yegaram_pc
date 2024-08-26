@@ -245,6 +245,78 @@
 							</li>
 						</ul>
 
+						<div class="list-tit mt60">금융계산기</div>
+						<div class="de-cts">
+							<div class="input-wrap">
+								<div class="grid-wrap">
+									<div class="grid2">
+										<div class="form-wrap">
+											<label for="money" class="inp-tit">예치금액</label>
+											<input type="tel" name="" value="" id="money" placeholder="숫자로 입력하세요" style="padding-right: 43px;">
+											<div class="unit-txt">원</div>
+										</div>
+										<div class="form-wrap">
+											<label for="month" class="inp-tit">예치기간</label>
+											<input type="tel" name="" value="" id="month" placeholder="개월을 입력하세요" style="padding-right: 58px;">
+											<div class="unit-txt">개월</div>
+										</div>
+									</div>
+									<div class="grid2">
+										<div class="form-wrap in-select">
+											<label for="interest" class="inp-tit">이자율</label>
+											<input type="tel" name="" value="" id="interest" placeholder="숫자로 입력하세요" style="padding-right: 40px;">
+											<div class="unit-txt">%</div>
+										</div>
+										<div class="form-wrap in-select">
+											<label for="selectType" class="inp-tit">이자율 선택</label>
+											<div class="select-wrap" >
+												<select id="selectType" name="" class="" title="이자율 선택" style="display: none;">
+													<option selected="selected" value="">선택하세요</option>
+													<option value="1">단리</option>
+													<option value="0">복리</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="btn-wrap">
+								<button type="button" name="button" class="btn-big pink btn-inquiry">계산하기</button>
+							</div>
+
+							<div class="calculator-result line-box">
+								<div class="list-tit mb30">계산결과</div> <!-- 180726 pm 추가 -->
+								<!-- 180622 pm 테이블 수정 -->
+								<table class="table-style"> <!-- 180726 pm class=" caption-tit" 삭제 -->
+									<!-- s: 20180725 am - 캡션 상세화 -->
+									<caption>계산결과 - 구분, 월납입액 합계(원), 이자(세금납부 전, 원), 이자(세금납부 후, 원), 만기지급액(원)으로 구성</caption> <!-- 180726 pm 텍스트 수정 -->
+									
+									<!-- //e: 20180725 am - 캡션 상세화 -->
+									<!-- 180626 pm colgroup 수정 -->
+									<colgroup>
+										<col style="width:*;">
+										<col style="width:30%;">
+										<col style="width:30%;">
+										<col style="width:30%;">
+									</colgroup>
+									<!-- //180626 pm colgroup 수정 -->
+									<thead>
+										<tr>
+											<th scope="col">구분</th>
+											<th scope="col">월납입액 합계(원)</th>
+											<th scope="col">이자(세금납부 후, 원)</th>
+											<th scope="col">만기지급액(원)</th>
+										</tr>
+									</thead>
+									<tbody id="cal_tbody">
+									</tbody>
+								</table>
+								<div class="btn-wrap">
+									<button type="button" name="button" class="btn-big btn-reinquiry" onclick="PageFunc.calculatorReset()">다시 계산하기</button>
+								</div>
+							</div>
+						</div>
+
 						<div class="de-cts view-de-cts">
 							<div id="depositProAll"  class="mark-kdic">
 								<p><img src="../../../resources/images/page/img_kdic.jpg" alt="예금보험공사  보호금융상품 1인당 최고 5천만원 (예금보험공사  보호금융상품 마크)"></p>
